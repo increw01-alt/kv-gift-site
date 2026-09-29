@@ -148,14 +148,32 @@
   if ($('#main_business_list').length || $('#recent_business_list').length) {
     $.ajax({ url: '/data/businesses.json', dataType: 'json', timeout: 8000 })
       .done(function (data) {
-        var list = (data.businesses || []).slice(0, 10);
-        $('#main_business_list').html(list.map(function (b, i) {
+        var all = (data.businesses || []).slice();
+        /* 원본과 동일: 메인 카드는 랜덤 순서로 10곳 노출 */
+        for (var i = all.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var t = all[i]; all[i] = all[j]; all[j] = t;
+        }
+        var random10 = all.slice(0, 10);
+        $('#main_business_list').html(random10.map(function (b, i) {
+          var btns = '';
+          if (b.phone) {
+            btns += '<p onclick="event.stopPropagation();location.href=\'tel:' + esc(b.phone) + '\'" title="' + esc(b.phone) + '">' +
+              '<img src="/img/phone-solid.svg" alt="">전화번호</p>';
+          }
+          if (b.homepage) {
+            btns += '<p onclick="event.stopPropagation();window.open(\'' + esc(b.homepage) + '\')">' +
+              '<img src="/img/internet-explorer.svg" alt="">홈페이지</p>';
+          }
           return '<li class="kv" onclick="location.href=\'/business.html\'">' +
             '<span></span><span></span><span></span><span></span>' +
             '<div class="name" style="background-image:url(&quot;/img/kv_random' + ((i % 32) + 1) + '.jpg&quot;)"><p>' + esc(b.name) + '</p></div>' +
-            '<div class="text"><p>' + esc(b.desc) + '</p></div></li>';
+            '<div class="text"><p>' + esc(b.desc) + '</p></div>' +
+            (btns ? '<div class="btn_wrap flex">' + btns + '</div>' : '') +
+            '</li>';
         }).join(''));
-        $('#recent_business_list').html(list.map(function (b) {
+        /* 최근등록업체 플로팅: 최신 등록순 10곳 */
+        $('#recent_business_list').html((data.businesses || []).slice(0, 10).map(function (b) {
           return '<li class="new_busi" onclick="location.href=\'/business.html\'"><span>N</span>' + esc(b.name) + '</li>';
         }).join(''));
       })
