@@ -117,18 +117,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								</li>
 								<li>
 									<p class="menu_4">커뮤니티</p>
-									<span class="menu_4-1" onclick="window.open('https://cafe.naver.com/koreagiftclub');">상품권 구매게시판</span>
-									<span class="menu_4-2" onclick="window.open('https://cafe.naver.com/koreagiftclub');">상품권 판매게시판</span>
-									<span class="menu_4-3" onclick="window.open('https://cafe.naver.com/koreagiftclub');">자유게시판</span>
+									<span class="menu_4-1" onclick="location.href='/board/purchase/';">상품권 구매게시판</span>
+									<span class="menu_4-2" onclick="location.href='/board/sale/';">상품권 판매게시판</span>
+									<span class="menu_4-3" onclick="location.href='/board/free/';">자유게시판</span>
 									<span class="menu_4-4" onclick="window.open('https://cafe.naver.com/koreagiftclub');">상품권카페</span>
-									<span class="menu_4-5" onclick="window.open('https://cafe.naver.com/koreagiftclub');">일반상식</span>
+									<span class="menu_4-5" onclick="location.href='/board/sense/';">일반상식</span>
 								</li>
 								<li>
 									<p class="menu_5">상품권 정보</p>
-									<span class="menu_5-1" onclick="window.open('http://www.vipvip.or.kr');">상품권 정보</span>
-									<span class="menu_5-2" onclick="window.open('http://www.vipvip.or.kr');">상품권TIP</span>
+									<span class="menu_5-1" onclick="location.href='/board/gc_information/';">상품권 정보</span>
+									<span class="menu_5-2" onclick="location.href='/board/gc_tip/';">상품권TIP</span>
 									<span class="menu_5-3" onclick="window.open('http://www.vipvip.or.kr');">상품권뉴스</span>
-									<span class="menu_5-4" onclick="window.open('https://www.koreagiftcard.co.kr/');">한국상품권협회 소식</span>
+									<span class="menu_5-4" onclick="location.href='/board/gc_word/';">한국상품권협회 소식</span>
 								</li>
 								<li>
 									<p class="menu_6">안내사항</p>
@@ -139,7 +139,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								</li>
 								<li>
 									<p class="menu_7">고객센터</p>
-									<span class="menu_7-1" onclick="location.href='/#notice';">공지사항</span>
+									<span class="menu_7-1" onclick="location.href='/board/general_notice/';">공지사항</span>
 									<span class="menu_7-2" onclick="location.href='/faq.html';">자주 묻는 질문</span>
 																			<span class="menu_7-3" onclick="window.open('https://koreagiftcard.channel.io/home?page=https://kv-gift.co.kr/');">1:1 문의</span>
 																	</li>
@@ -198,11 +198,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="arrow normal"></div>
 						</div>
 						<ul class="nav_inner">
-							<li onclick="window.open('https://cafe.naver.com/koreagiftclub');">상품권 구매게시판</li>
-							<li onclick="window.open('https://cafe.naver.com/koreagiftclub');">상품권 판매게시판</li>
-							<li onclick="window.open('https://cafe.naver.com/koreagiftclub');">자유게시판</li>
+							<li onclick="location.href='/board/purchase/';">상품권 구매게시판</li>
+							<li onclick="location.href='/board/sale/';">상품권 판매게시판</li>
+							<li onclick="location.href='/board/free/';">자유게시판</li>
 							<li onclick="window.open('https://cafe.naver.com/koreagiftclub');">상품권카페</li>
-							<li onclick="window.open('https://cafe.naver.com/koreagiftclub');">일반상식</li>
+							<li onclick="location.href='/board/sense/';">일반상식</li>
 						</ul>
 					</li>
 					<li class="normal nav_list sub">
@@ -211,10 +211,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="arrow normal"></div>
 						</div>
 						<ul class="nav_inner">
-							<li onclick="window.open('http://www.vipvip.or.kr');">상품권 정보</li>
-							<li onclick="window.open('http://www.vipvip.or.kr');">상품권TIP</li>
+							<li onclick="location.href='/board/gc_information/';">상품권 정보</li>
+							<li onclick="location.href='/board/gc_tip/';">상품권TIP</li>
 							<li onclick="window.open('http://www.vipvip.or.kr');">상품권뉴스</li>
-							<li onclick="window.open('https://www.koreagiftcard.co.kr/');">한국상품권협회 소식</li>
+							<li onclick="location.href='/board/gc_word/';">한국상품권협회 소식</li>
 						</ul>
 					</li>
 					<li class="normal nav_list sub">
@@ -235,7 +235,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="arrow normal"></div>
 						</div>
 						<ul class="nav_inner">
-							<li onclick="location.href='/#notice';">공지사항</li>
+							<li onclick="location.href='/board/general_notice/';">공지사항</li>
 							<li onclick="location.href='/faq.html';">자주 묻는 질문</li>
 															<li onclick="window.open('https://koreagiftcard.channel.io/home?page=https://kv-gift.co.kr/');">1:1 문의</li>
 													</ul>
@@ -346,7 +346,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div class="content2">
                 <div class="notice flex" style="cursor: pointer"
-            onclick="location.href='#notice';">
+            onclick="location.href='/board/general_notice/';">
             <b>공지사항</b>
             <p>📢 상품권 할부 구입 찾으시는 분들, 레드핀에서 안내받아보세요!</p>
             <span>26.01.30</span>
@@ -618,7 +618,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="left">
 					<div class="title flex">
 						<p>상품권 구매게시판</p>
-						<div class="flex" onclick="window.open('https://cafe.naver.com/koreagiftclub');">
+						<div class="flex" onclick="location.href='/board/purchase/';">
 							<p>더보기</p>
 							<div class="more_btn">
 								<span class="bar1"></span>
@@ -668,7 +668,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="right">
 					<div class="title flex">
 						<p>상품권 판매게시판</p>
-						<div class="flex" onclick="window.open('https://cafe.naver.com/koreagiftclub');">
+						<div class="flex" onclick="location.href='/board/sale/';">
 							<p>더보기</p>
 							<div class="more_btn">
 								<span class="bar1"></span>
@@ -721,7 +721,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="title flex">
 						<b>자유게시판</b>
 						<div>
-							<div class="more_btn" onclick="window.open('https://cafe.naver.com/koreagiftclub');">
+							<div class="more_btn" onclick="location.href='/board/free/';">
 								<span class="bar1"></span>
 								<span class="bar2"></span>
 							</div>
@@ -766,7 +766,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="title flex">
 						<b>상품권 Tip</b>
 						<div>
-							<div class="more_btn" onclick="window.open('http://www.vipvip.or.kr');">
+							<div class="more_btn" onclick="location.href='/board/gc_tip/';">
 								<span class="bar1"></span>
 								<span class="bar2"></span>
 							</div>
@@ -794,7 +794,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="title flex">
 						<b>공지사항</b>
 						<div>
-							<div class="more_btn" onclick="location.href='#notice';">
+							<div class="more_btn" onclick="location.href='/board/general_notice/';">
 								<span class="bar1"></span>
 								<span class="bar2"></span>
 							</div>

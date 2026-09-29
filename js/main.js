@@ -162,6 +162,55 @@
       .fail(function () { console.error('등록업체 데이터(data/businesses.json) 로드 실패'); });
   }
 
+  /* ---------- 메인 게시판 요약: data/latest_posts.json 렌더링 ---------- */
+  if ($('.board1').length) {
+    var postUrl = function (bo, id) { return '/board/' + bo + '/' + id + '.html'; };
+    $.ajax({ url: '/data/latest_posts.json', dataType: 'json', timeout: 8000 })
+      .done(function (d) {
+        function fill4(sel, bo, items) {
+          var $ul = $(sel);
+          if (!$ul.length || !items) return;
+          $ul.find('li').not('.board_title').remove();
+          items.forEach(function (r) {
+            $ul.append('<li class="flex" onclick="location.href=\'' + postUrl(bo, r.id) + '\'">' +
+              '<p>' + esc(r.cat || '-') + '</p><p>' + esc(r.title) + '</p>' +
+              '<p>' + esc(r.author) + '</p><p>' + esc(r.date) + '</p></li>');
+          });
+        }
+        fill4('.board1 .left ul', 'purchase', d.purchase);
+        fill4('.board1 .right ul', 'sale', d.sale);
+        var $f = $('.board2 .free_board ul');
+        if ($f.length && d.free) {
+          $f.empty();
+          d.free.forEach(function (r) {
+            $f.append('<li class="flex" onclick="location.href=\'' + postUrl('free', r.id) + '\'">' +
+              '<p>' + esc(r.title) + '</p><span>' + esc(r.date) + '</span></li>');
+          });
+        }
+        var $t = $('.board2 .tip_board ul');
+        if ($t.length && d.gc_tip) {
+          $t.empty();
+          d.gc_tip.forEach(function (r) {
+            $t.append('<li onclick="location.href=\'' + postUrl('gc_tip', r.id) + '\'">' +
+              '<p>' + esc(r.title) + '</p></li>');
+          });
+        }
+        var $n = $('.board2 .add_board > ul');
+        if ($n.length && d.general_notice) {
+          $n.empty();
+          d.general_notice.forEach(function (r) {
+            $n.append('<li class="flex" onclick="location.href=\'' + postUrl('general_notice', r.id) + '\'">' +
+              '<p>' + esc(r.title) + '</p><span>' + esc(r.date) + '</span></li>');
+          });
+        }
+        if (d.general_notice && d.general_notice[0]) {
+          $('.content2 .notice p').text(d.general_notice[0].title);
+          $('.content2 .notice span').text(d.general_notice[0].date);
+        }
+      })
+      .fail(function () { console.error('최근 글 데이터(data/latest_posts.json) 로드 실패'); });
+  }
+
   /* ---------- 슬라이더 ---------- */
   try {
     if ($('.goto_slider').length) {
