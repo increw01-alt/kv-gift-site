@@ -84,7 +84,7 @@
   var path = location.pathname;
   var menuActive = {
     '/intro.html': ['menu_6', 'menu_6-4'], '/guide.html': ['menu_6', 'menu_6-1'],
-    '/faq.html': ['menu_7', 'menu_7-2']
+    '/faq.html': ['menu_7', 'menu_7-2'], '/business.html': ['menu_2']
   };
   if (menuActive[path]) menuActive[path].forEach(function (c) { $('.' + c).addClass('atv'); });
 
@@ -142,6 +142,24 @@
     $.ajax({ url: '/data/prices.json', dataType: 'json', timeout: 8000 })
       .done(renderPrices)
       .fail(function () { console.error('시세 데이터(data/prices.json) 로드 실패'); });
+  }
+
+  /* ---------- 등록업체: data/businesses.json 렌더링 (메인 섹션 + 최근등록업체 플로팅) ---------- */
+  if ($('#main_business_list').length || $('#recent_business_list').length) {
+    $.ajax({ url: '/data/businesses.json', dataType: 'json', timeout: 8000 })
+      .done(function (data) {
+        var list = (data.businesses || []).slice(0, 10);
+        $('#main_business_list').html(list.map(function (b, i) {
+          return '<li class="kv" onclick="location.href=\'/business.html\'">' +
+            '<span></span><span></span><span></span><span></span>' +
+            '<div class="name" style="background-image:url(&quot;/img/kv_random' + ((i % 32) + 1) + '.jpg&quot;)"><p>' + esc(b.name) + '</p></div>' +
+            '<div class="text"><p>' + esc(b.desc) + '</p></div></li>';
+        }).join(''));
+        $('#recent_business_list').html(list.map(function (b) {
+          return '<li class="new_busi" onclick="location.href=\'/business.html\'"><span>N</span>' + esc(b.name) + '</li>';
+        }).join(''));
+      })
+      .fail(function () { console.error('등록업체 데이터(data/businesses.json) 로드 실패'); });
   }
 
   /* ---------- 슬라이더 ---------- */

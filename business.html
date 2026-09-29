@@ -11,16 +11,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<title>이용안내 | 한국상품권거래소</title>
-<meta name="description" content="한국상품권거래소 사이트 이용안내와 거래 시 유의사항.">
+<title>거래소 등록업체 | 한국상품권거래소</title>
+<meta name="description" content="한국상품권거래소 인증 등록업체 목록. 지역별·상품권별로 상품권 매입·판매 업체를 찾아보세요.">
 <meta name="keywords" content="한국상품권거래소, 상품권시세, 상품권매입, 상품권매매, 상품권거래, 문화상품권 현금화, 컬쳐랜드, 백화점상품권">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://kv-gift.co.kr/guide.html">
+<link rel="canonical" href="https://kv-gift.co.kr/business.html">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://kv-gift.co.kr/guide.html">
+<meta property="og:url" content="https://kv-gift.co.kr/business.html">
 <meta property="og:site_name" content="한국상품권거래소">
-<meta property="og:title" content="이용안내 | 한국상품권거래소">
-<meta property="og:description" content="한국상품권거래소 사이트 이용안내와 거래 시 유의사항.">
+<meta property="og:title" content="거래소 등록업체 | 한국상품권거래소">
+<meta property="og:description" content="한국상품권거래소 인증 등록업체 목록. 지역별·상품권별로 상품권 매입·판매 업체를 찾아보세요.">
 <meta property="og:image" content="https://kv-gift.co.kr/img/og_img.png"><!-- TODO: img/og_img.png (1200x630) 추가 필요 — 원본 서버에 없던 파일 -->
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
@@ -229,65 +229,135 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</div>
 		</div>
 	</div>
-<div class="at-body"  style="width:100%">
-<div class="page-wrap">
-<div id="site_guide">
+<div class="at-body" style="width:100%">
+<style>
+/* ===== 등록업체 페이지 전용 스타일 ===== */
+#biz_page .title{width:100%;height:fit-content;background-image:url('/img/post_bg.jpg');background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px !important;}
+#biz_page .title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#biz_page .title .wrap p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px !important;position:relative;}
+#biz_page .title .wrap p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#biz_page .title .wrap span{font-size:15px;color:#fff;}
+#biz_page .biz_filter{width:calc(100% - 40px);max-width:1200px;margin:0 auto 30px;}
+#biz_page .biz_filter .f_group{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:10px;}
+#biz_page .biz_filter .f_group>b{font-size:14px;color:#000;min-width:80px;}
+#biz_page .biz_filter .chip{cursor:pointer;border:1px solid #ddd;padding:4px 12px;font-size:13px;color:#333;border-radius:20px;transition:.2s;margin:0 !important;}
+#biz_page .biz_filter .chip:hover{border-color:var(--color-orange);color:var(--color-orange);}
+#biz_page .biz_filter .chip.atv{background:var(--color-orange);border-color:var(--color-orange);color:#fff;font-weight:bold;}
+#biz_page .biz_count{width:calc(100% - 40px);max-width:1200px;margin:0 auto 20px;font-size:14px;color:#666;}
+#biz_page .biz_count em{color:var(--color-orange);font-weight:bold;font-style:normal;}
+#biz_page .biz_empty{width:calc(100% - 40px);max-width:1200px;margin:0 auto 100px;text-align:center;padding:80px 0;color:#999;border:1px dashed #ddd;}
+#biz_page #general_main{margin-bottom:100px;}
+#biz_page .content4>ul li{cursor:default;}
+#biz_page .content4>ul li .btn_wrap a{width:48%;text-align:center;color:#000;border:1px solid #ddd;height:30px;line-height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;text-decoration:none;transition:.3s;}
+#biz_page .content4>ul li .btn_wrap a img{width:10px;height:10px;margin-right:5px;filter:brightness(0.1);}
+#biz_page .content4>ul li .btn_wrap a.home{background:var(--color-orange);color:#fff;border-color:var(--color-orange);}
+#biz_page .content4>ul li .btn_wrap a.home img{filter:unset;}
+#biz_page .content4>ul li .btn_wrap a:hover{border-color:#000;}
+</style>
+<div id="biz_page">
 	<div class="title">
 		<div class="wrap">
-			<p>상품권거래소 이용안내</p>
-			<span>상품권거래소 사이트 이용에대해 안내드립니다.</span>
+			<p>거래소 등록업체</p>
+			<span>한국상품권거래소가 인증한 상품권 매입·판매 업체를 확인해보세요.</span>
 		</div>
 	</div>
-	<img src="/img/guide.png" alt="">
-	<ul>
-		<li>
-			<span>01</span>
-			<div class="text">
-				<b>상품권 중개 플랫폼, 한국상품권거래소</b>
-				<p>한국상품권거래소는 광고 플랫폼만 제공할 뿐 직접적인 판매/매입 거래에 대한 중개 및 개입은 하지 않습니다. 한국상품권거래소는 정식 상품권 매매업 등록된 개인 및 법인사업자만 광고 등록이 가능합니다. 한국상품권거래소에 기재된 광고 내용은 상품권 매매업 등록 업체가 제공하는 정보로서 사용자가 이를 신뢰하여 취한 조치에 대하여 어떠한 책임도 지지 않습니다.</p>
-			</div>
-		</li>
-		<li>
-			<span>02</span>
-			<div class="text">
-				<b>다른 안내사항</b>
-				<p>다양한 상품권 구입 및 판매 시 보이스피싱 또는 3자 사기에 각별한 주의가 필요하며, 상품권을 대면하여 소량/대량 판매 시 소매치기, 날치기 등의 사고에 유의하시길 바랍니다. 한국 상품권 거래소는 플랫폼만 제공할 뿐 상품권 거래 시 발생하는 피해는 본인이 해결하셔야 합니다</p>
-			</div>
-		</li>
-	</ul>
-	<div class="add">
-		<b>[ 게시물 규제정책 ]</b>
-		<p>본 사이트의 각종 게시판에 게시자가 올린 게시물이 아래과 같은 게시물에 해당되는 경우 관리자는 사전 통지 없이 해당 게시물을 삭제할 수 있으며, 이를 작성한 게시자는 웹사이트의 이용이 차단될 수 있습니다. 또한, 명예훼손 및 저작권침해에 해당 되는 내용에 대해서는 사이버 명예 훼손 분쟁 조정부(<a href="http://www.bj.or.kr" target="_blank">http://www.bj.or.kr</a>) 또는 저작권 보호센터(<a href="http://www.cleancopyright.or.kr" target="_blank">http://www.cleancopyright.or.kr</a>)에 신고될 수 있습니다.</p>
-		<span class="add_btn">자세히 보기</span>
-		<ul class="add_content">
-			<li>˚ 인종이나 성(性), 국적, 종교적, 정치적 분쟁 등 사회문화적 편견에 기반을 둔 내용의 글</li>
-			<li>˚ 자신 또는 타인의 전화번호, 주민등록번호, 실명등의 개인정보를 포함하고 있는 글</li>
-			<li>˚ 회사가 인정하지 않는 프로그램, 부적절한 파일 등의 유포나 사용을 유도하는 글</li>
-			<li>˚ 회사에서 규정한 게시물 원칙에 어긋나거나, 게시판 성격에 부합하지 않는 글</li>
-			<li>˚ 와레즈사이트, 토렌트사이트 또는 이와 유사한 사이트를 소개, 권유하는 글</li>
-			<li>˚ 회사 또는 회사 임직원을 사칭하거나 회사 및 회사 임직원을 비방하는 글</li>
-			<li>˚ 회사에서 판매하였거나 판매하는 제품을 허락없이 재판매하는 글</li>
-			<li>˚ 같은 내용을 의도적으로 수 차례에 걸쳐 반복적으로 게재한 글</li>
-			<li>˚ 도배 또는 욕설, 음란한 단어 및 표현을 포함한 글</li>
-			<li>˚ 이용약관 및 관련법령에 위배되는 내용의 글</li>
-			<li>˚ 현행법상 처벌의 근거가 되는 글</li>
-			<li>˚ 관계법령에 위배된다고 판단되는 글</li>
-			<li>˚ 불법복제 또는 해킹을 조장하는 내용의 글</li>
-			<li>˚ 저작권 침해 및 이와 유사한 내용을 담은 글</li>
-			<li>˚ 타인에게 불쾌감이나 혐오감을 줄 수 있는 글</li>
-			<li>˚ 기타 게시판의 성격에 맞지 않는다고 판단되는 글</li>
-			<li>˚ 기타 정당한 권한 없이 타인의 권리를 침해하는 내용</li>
-			<li>˚ 공공질서 및 미풍양속에 위반되는 내용이나 링크를 포함한 글</li>
-			<li>˚ 회사의 자산을 악의적으로 평가 저하시키려는 내용이 포함된 글</li>
-			<li>˚ 계정거래, 현금거래 등 불법적인 시도 또는 타 고객들을 선동하는 글</li>
-			<li>˚ 허위사실을 유포하거나 다수의 고객에게 오해를 불러일으킬 수 있는 내용의 글</li>
-			<li>˚ 다른 회원 또는 제3자에게 불쾌감을 주거나 비방함으로써 명예를 손상시키는 글</li>
-			<li>˚ 회사 또는 타인을 비방하거나 중상 모략으로 명예를 훼손시키거나 모욕을 주는 글</li>
-			<li>˚ 회사에서 인정하지 않은 영리를 목적으로 하거나 광고 및 홍보 또는 그와 유사한 내용임이 객관적으로 확인되는 글</li>
-		</ul>
+	<div class="biz_filter">
+		<div class="f_group" data-group="cert">
+			<b>구분</b>
+			<p class="chip atv" data-v="">전체</p>
+			<p class="chip" data-v="1">인증업체</p>
+		</div>
+		<div class="f_group" data-group="region">
+			<b>지역</b>
+			<p class="chip atv" data-v="">전체</p>
+		</div>
+		<div class="f_group" data-group="product">
+			<b>취급 상품권</b>
+			<p class="chip atv" data-v="">전체</p>
+		</div>
+	</div>
+	<p class="biz_count">전체 <em>0</em>개 업체</p>
+	<div id="general_main">
+		<div class="content4 one">
+			<b>등록업체 목록 <p><span></span><span></span><span></span><span></span><span></span><img src="/img/logo_slim_c.svg" alt=""> 인증업체</p> </b>
+			<ul class="flex" id="biz_list"></ul>
+			<p class="biz_empty" style="display:none">조건에 맞는 업체가 없습니다.</p>
+		</div>
 	</div>
 </div>
-</div>
+<script>
+/* 등록업체 목록: /data/businesses.json 렌더링 + 필터 (jQuery 로드 후 실행) */
+document.addEventListener('DOMContentLoaded', function () {
+	'use strict';
+	var REGIONS = ['서울','경기','인천','대전','대구','부산','광주','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주'];
+	var PRODUCTS = ['백화점','국민관광','농협','홈플러스','주유','컬쳐랜드','해피머니','온라인문화','북앤라이프','구글기프트','에그머니','틴캐시','외식'];
+	var ALL = [];
+	var state = { cert: '', region: '', product: '' };
+
+	function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+	function makeChips(group, values) {
+		var $g = $('.f_group[data-group="' + group + '"]');
+		values.forEach(function (v) {
+			$g.append('<p class="chip" data-v="' + esc(v) + '">' + esc(v) + '</p>');
+		});
+	}
+	makeChips('region', REGIONS);
+	makeChips('product', PRODUCTS);
+
+	/* URL 파라미터로 초기 필터 설정 (예: /business.html?region=서울) */
+	var q = new URLSearchParams(location.search);
+	state.cert = q.get('cert') || '';
+	state.region = q.get('region') || '';
+	state.product = q.get('product') || '';
+
+	function syncChips() {
+		$('.f_group').each(function () {
+			var g = $(this).data('group');
+			$(this).find('.chip').removeClass('atv')
+				.filter(function () { return String($(this).data('v') || '') === String(state[g] || ''); })
+				.addClass('atv');
+		});
+	}
+
+	function render() {
+		var rows = ALL.filter(function (b) {
+			if (state.cert && !b.certified) return false;
+			if (state.region && (b.regions || []).indexOf(state.region) < 0) return false;
+			if (state.product && (b.products || []).indexOf(state.product) < 0) return false;
+			return true;
+		});
+		$('.biz_count em').text(rows.length);
+		$('.biz_empty').toggle(rows.length === 0);
+		$('#biz_list').html(rows.map(function (b, i) {
+			var btns = '';
+			if (b.phone) btns += '<a href="tel:' + esc(b.phone) + '" title="전화걸기"><img src="/img/phone-solid.svg" alt="">' + esc(b.phone) + '</a>';
+			if (b.homepage) btns += '<a class="home" href="' + esc(b.homepage) + '" target="_blank" rel="noopener nofollow"><img src="/img/internet-explorer.svg" alt="">홈페이지</a>';
+			return '<li class="kv">' +
+				'<span></span><span></span><span></span><span></span>' +
+				'<div class="name" style="background-image:url(&quot;/img/kv_random' + ((i % 32) + 1) + '.jpg&quot;)"><p>' + esc(b.name) + '</p></div>' +
+				'<div class="text"><p title="' + esc(b.desc) + '">' + esc(b.desc) + '</p></div>' +
+				(btns ? '<div class="btn_wrap flex">' + btns + '</div>' : '') +
+				'</li>';
+		}).join(''));
+	}
+
+	$(document).on('click', '.biz_filter .chip', function () {
+		var g = $(this).closest('.f_group').data('group');
+		state[g] = $(this).data('v') || '';
+		var p = new URLSearchParams();
+		if (state.cert) p.set('cert', state.cert);
+		if (state.region) p.set('region', state.region);
+		if (state.product) p.set('product', state.product);
+		history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p.toString() : ''));
+		syncChips(); render();
+	});
+
+	$.ajax({ url: '/data/businesses.json', dataType: 'json', timeout: 8000 })
+		.done(function (data) { ALL = data.businesses || []; syncChips(); render(); })
+		.fail(function () { $('.biz_empty').show().text('업체 정보를 불러오지 못했습니다.'); });
+});
+</script>
 <footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>

@@ -14,7 +14,9 @@ kv-gift-site/
 ├─ privacy.html               개인정보처리방침
 ├─ noemail.html               이메일 무단수집거부
 ├─ disclaimer.html            책임의 한계와 법적고지
+├─ business.html              거래소 등록업체 (필터: 인증/지역/취급상품권)
 ├─ data/prices.json           ★ 시세표 데이터 — 이 파일만 고치면 메인 시세가 바뀜
+├─ data/businesses.json       ★ 등록업체 데이터 — 이 파일만 고치면 업체 목록이 바뀜
 ├─ css/  colorset.css(사이트 커스텀) · default/apms/basic/bootstrap · swiper · font-awesome
 ├─ js/   main.js(사이트 스크립트) · jquery · swiper · bootstrap
 ├─ img/  로고·아이콘·배경 / img/banner/(하단 배너, 아래 스크립트로 채움) / img/editor/(팝업 이미지)
@@ -34,6 +36,25 @@ ls img/banner | wc -l      # 10 이면 완료
 `data/prices.json` 을 열어 `updated` 날짜와 각 행의 `buy`/`buy_rate`/`sell`/`sell_rate` 를 수정한 뒤 `git push` 하면 됩니다.
 행 추가/삭제도 같은 형식으로 하면 되고, `paper`(지류) / `mobile`(모바일) 두 배열로 나뉩니다.
 
+## 2-1. 등록업체 추가/수정 방법
+`data/businesses.json` 을 열어 `businesses` 배열 **맨 앞에** 아래 형식으로 추가하고 `git push` 하면 됩니다.
+(GitHub 웹사이트에서 파일을 직접 편집·커밋해도 자동 배포됩니다)
+```json
+{
+  "name": "업체명",
+  "desc": "업체 한 줄 소개",
+  "phone": "010-0000-0000",
+  "homepage": "https://example.com/",
+  "certified": true,
+  "regions": ["서울"],
+  "products": ["컬쳐랜드", "백화점"]
+}
+```
+- `phone` / `homepage` 는 없으면 `""` 로 두면 해당 버튼이 숨겨집니다.
+- `certified: true` 면 "인증업체" 필터에 포함됩니다.
+- `regions`(지역) / `products`(취급 상품권) 는 business.html 필터에 쓰입니다. 온라인 전용 업체는 `regions: []`.
+- 메인 화면의 "거래소 등록업체" 카드와 "최근등록업체" 플로팅 목록은 이 파일의 **앞 10개**가 자동 표시됩니다.
+
 ## 3. 로컬 확인
 ```bash
 python3 -m http.server 8080     # http://localhost:8080  (file:// 로 열면 스타일이 안 붙음)
@@ -51,8 +72,8 @@ Cloudflare Pages: Connect to Git → `kv-gift-site` → Framework **None**, Buil
 ## 원본 대비 변경 사항
 - 로그인·회원가입·검색·MY·사이드바·접속자 통계 제거
 - **시세표**: 서버 렌더링 → `data/prices.json` + JS 렌더링 (2026-09-29 기준 값 수록)
-- **거래소 등록업체**: 원본은 AJAX로 DB에서 불러옴 → 원본 '최근등록업체' 10곳 이름으로 정적 카드 구성(클릭 시 채널톡). 실제 업체 목록·설명으로 교체 필요
-- **지역별/상품권별 검색**: 서버 검색 불가 → 버튼 클릭 시 채널톡 상담
+- **거래소 등록업체**: 원본 DB 대신 `data/businesses.json` + JS 렌더링. 원본 사이트에 공개된 업체 38곳(업체명·소개·전화·홈페이지·인증·지역·취급상품권) 수록. 전용 페이지 `business.html`(인증/지역/상품권 필터) 신설, 메인 카드 10개·최근등록업체 플로팅도 같은 데이터로 자동 표시
+- **지역별/상품권별 검색**: 메인 빠른검색·메뉴에서 `business.html?region=…` / `?product=…` 필터 링크로 연결
 - **게시판(구매·판매·자유·TIP·공지)**: 메인의 최근 글 제목은 당시 스냅샷 그대로, 클릭 없음 / "더보기"는 네이버 카페·상품권뉴스(vipvip.or.kr)·공지 앵커로 연결
 - **메뉴**: 커뮤니티 → 네이버 카페, 상품권 정보 → 상품권뉴스, 협회 소식 → koreagiftcard.co.kr, 1:1문의 → 채널톡
 - jQuery 1.8/3.7 이중 로딩, Swiper 이중 로딩 정리, 라이브러리 로컬 번들화, Pretendard 웹폰트 CDN 적용
@@ -62,7 +83,6 @@ Cloudflare Pages: Connect to Git → `kv-gift-site` → Framework **None**, Buil
 ## 배포 전 확인
 - [ ] `img/og_img.png` (1200×630) 추가 — 원본 서버에 없던 파일
 - [ ] 푸터 사업자 정보(대표자·개인정보책임자·주소·번호)가 현재 기준으로 맞는지 확인
-- [ ] `index.html` 거래소 등록업체 카드(TODO 주석)를 실제 업체로 교체
 - [ ] 게시판 최근 글 목록이 오래되어 보이면 해당 블록 삭제 또는 갱신
 - [ ] 네이버 서치어드바이저 kv-gift.co.kr 재등록 후 `naver-site-verification` 교체
 - [ ] 팝업 이미지(`img/editor/popup-20260731.png`) 내용이 현재 유효한지 확인
