@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://kv-gift.co.kr/</loc><lastmod>2026-09-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://kv-gift.co.kr/business.html</loc><lastmod>2026-09-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kv-gift.co.kr/intro.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kv-gift.co.kr/guide.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kv-gift.co.kr/faq.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kv-gift.co.kr/provision.html</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://kv-gift.co.kr/privacy.html</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://kv-gift.co.kr/noemail.html</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
-  <url><loc>https://kv-gift.co.kr/disclaimer.html</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://kv-gift.co.kr/business</loc><lastmod>2026-09-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kv-gift.co.kr/intro</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kv-gift.co.kr/guide</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kv-gift.co.kr/faq</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://kv-gift.co.kr/provision</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://kv-gift.co.kr/privacy</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://kv-gift.co.kr/noemail</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://kv-gift.co.kr/disclaimer</loc><lastmod>2026-09-29</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
 </urlset>
