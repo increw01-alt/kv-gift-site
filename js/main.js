@@ -1,0 +1,184 @@
+/* kv-gift.co.kr 한국상품권거래소 — 정적 사이트 메인 스크립트 (원본 인라인 스크립트 정리·통합) */
+(function () {
+  'use strict';
+
+  /* ---------- 팝업 레이어 (24시간 다시 보지 않기) ---------- */
+  function getCookie(n) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + n + '=([^;]*)'));
+    return m ? m[1] : null;
+  }
+  function setCookie(n, v, hours) {
+    var d = new Date(); d.setTime(d.getTime() + hours * 3600 * 1000);
+    document.cookie = n + '=' + v + '; expires=' + d.toUTCString() + '; path=/';
+  }
+  $('.hd_pops').each(function () {
+    if (getCookie(this.id)) $(this).hide();
+  });
+  $('.hd_pops_reject').on('click', function () {
+    var c = $(this).attr('class').split(' ');
+    setCookie(c[1], 1, parseInt(c[2], 10) || 24);
+    $('#' + c[1]).hide();
+  });
+  $('.hd_pops_close').on('click', function () {
+    var c = $(this).attr('class').split(' ');
+    $('#' + c[1]).hide();
+  });
+
+  /* ---------- 모바일 헤더 ---------- */
+  $('#general_toggle').on('click', function () {
+    $('.mo_wrap').css('display', 'block').removeClass('close').addClass('open');
+    $('.nav_content').removeClass('close').addClass('open');
+  });
+  $('.menu_close').on('click', function () {
+    $('.mo_wrap').removeClass('open').addClass('close');
+    $('.nav_content').removeClass('open').addClass('close');
+    $('.nav_inner').slideUp(100);
+    $('.nav_list').removeClass('atv');
+    setTimeout(function () { $('.mo_wrap').css('display', 'none'); }, 500);
+  });
+  $('.nav_list').on('click', function () {
+    var inner = $(this).children('.nav_inner');
+    $('.nav_inner').not(inner).slideUp(100);
+    inner.is(':visible') ? inner.slideUp(100) : inner.slideDown(100);
+    var wasActive = $(this).hasClass('atv');
+    $('.nav_list').removeClass('atv');
+    if (!wasActive) $(this).addClass('atv');
+  });
+  $(window).on('pageshow', function () {
+    $('.mo_wrap').removeClass('open').addClass('close');
+    $('.nav_content').removeClass('open').addClass('close');
+    $('.nav_inner').slideUp(100);
+    $('.nav_list').removeClass('atv');
+  });
+
+  /* ---------- 헤더 고정 여부 (브라우저 폭) ---------- */
+  function applyHeadMode() {
+    if (window.innerWidth > 1200) {
+      $('#general_head').css({ position: 'relative', background: '', 'border-bottom': '' });
+    } else {
+      $('#general_head').css('position', 'fixed');
+      applyHeadScroll();
+    }
+  }
+  function applyHeadScroll() {
+    if (window.innerWidth > 1200) return;
+    if (window.scrollY > 1) $('#general_head').css({ background: '#fff', 'border-bottom': '1px solid #ddd' });
+    else $('#general_head').css({ background: 'unset', 'border-bottom': 'unset' });
+  }
+  applyHeadMode();
+  $(window).on('resize', applyHeadMode);
+
+  /* ---------- 스크롤: TOP 버튼 / 플로팅 ---------- */
+  $(window).on('scroll', function () {
+    var y = window.scrollY;
+    applyHeadScroll();
+    $('#top_btn').toggleClass('fixation', y > 509);
+    $('.floating_left, .floating_right').toggleClass('atv', y > 730);
+  });
+  $('#top_btn').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+    return false;
+  });
+
+  /* ---------- 현재 페이지 메뉴 활성화 ---------- */
+  var path = location.pathname;
+  var menuActive = {
+    '/intro.html': ['menu_6', 'menu_6-4'], '/guide.html': ['menu_6', 'menu_6-1'],
+    '/faq.html': ['menu_7', 'menu_7-2']
+  };
+  if (menuActive[path]) menuActive[path].forEach(function (c) { $('.' + c).addClass('atv'); });
+
+  /* ---------- 등록업체 빠른검색 탭 ---------- */
+  function resetSearch() {
+    $('.search_btn1, .search_btn2, .search_con1, .search_con2').removeClass('atv');
+    $('.search_content').hide();
+    $('.content3').removeClass('bt');
+    $('.search_btn1, .search_btn2').css('border-bottom', 'none');
+  }
+  resetSearch();
+  $('.search_con_close').on('click', resetSearch);
+  $('.search_btn1').on('click', function () {
+    $('.search_content').show(); $('.content3').addClass('bt'); $(this).addClass('atv');
+    if (window.innerWidth > 800) { $('.search_btn2, .search_con1, .search_con2').addClass('atv'); }
+    else { $('.search_btn2, .search_con2').removeClass('atv'); $('.search_con1').addClass('atv'); $('.search_btn2').css('border-bottom', '1px solid #ddd'); }
+  });
+  $('.search_btn2').on('click', function () {
+    $('.search_content').show(); $('.content3').addClass('bt'); $(this).addClass('atv');
+    if (window.innerWidth > 800) { $('.search_btn1, .search_con1, .search_con2').addClass('atv'); }
+    else { $('.search_btn1, .search_con1').removeClass('atv'); $('.search_con2').addClass('atv'); $('.search_btn1').css('border-bottom', '1px solid #ddd'); }
+  });
+
+  /* ---------- 시세표: data/prices.json 렌더링 ---------- */
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function renderPrices(data) {
+    if (data.updated) {
+      var d = data.updated.split('-');
+      $('.price-updated').text(d.length === 3 ? d[0].slice(2) + '. ' + d[1] + '. ' + d[2] : data.updated);
+    }
+    $('[data-price-table]').each(function () {
+      var rows = data[$(this).data('price-table')] || [];
+      var html = rows.map(function (r) {
+        return '<div class="swiper-slide"><div class="wrap flex">' +
+          '<p>' + esc(r.name) + '</p><p>' + esc(r.face) + '</p>' +
+          '<p>' + esc(r.buy) + '<span>' + esc(r.buy_rate) + '</span></p>' +
+          '<p>' + esc(r.sell) + '<span>' + esc(r.sell_rate) + '</span></p>' +
+          '</div></div>';
+      }).join('');
+      $(this).find('.swiper-wrapper').html(html);
+    });
+    initPriceSliders();
+  }
+  function initPriceSliders() {
+    $('.market_price_slide').each(function () {
+      if (this.swiper) this.swiper.destroy(true, true);
+      var sw = new Swiper(this, {
+        direction: 'vertical', slidesPerView: 5, mousewheel: true, spaceBetween: 3,
+        autoplay: { delay: 2500, disableOnInteraction: false }
+      });
+      $(this).hover(function () { sw.autoplay.stop(); }, function () { sw.autoplay.start(); });
+    });
+  }
+  if ($('[data-price-table]').length) {
+    $.ajax({ url: '/data/prices.json', dataType: 'json', timeout: 8000 })
+      .done(renderPrices)
+      .fail(function () { console.error('시세 데이터(data/prices.json) 로드 실패'); });
+  }
+
+  /* ---------- 슬라이더 ---------- */
+  try {
+    if ($('.goto_slider').length) {
+      var goto = new Swiper('.goto_slider', {
+        breakpoints: {
+          0: { slidesPerView: 1.5, spaceBetween: 15 }, 600: { slidesPerView: 2.5, spaceBetween: 20 },
+          801: { slidesPerView: 3.5, spaceBetween: 20 }, 1000: { slidesPerView: 4.5, spaceBetween: 20 },
+          1201: { slidesPerView: 2.5, spaceBetween: 30 }
+        },
+        autoplay: { delay: 2500, disableOnInteraction: false }, loop: true, loopAdditionalSlides: 1,
+        pagination: { el: '.goto_slider .swiper-pagination', type: 'fraction' },
+        navigation: { nextEl: '.goto_slider .swiper-button-next', prevEl: '.goto_slider .swiper-button-prev' }
+      });
+      $('.goto_slider').hover(function () { goto.autoplay.stop(); }, function () { goto.autoplay.start(); });
+    }
+    if ($('.premium_slide').length) {
+      var prem = new Swiper('.premium_slide', {
+        breakpoints: { 0: { slidesPerView: 2 }, 600: { slidesPerView: 3 }, 801: { slidesPerView: 4 }, 1001: { slidesPerView: 5 } },
+        pagination: { el: '.premium_slide .swiper-pagination', clickable: true },
+        autoplay: { delay: 2500, disableOnInteraction: false }
+      });
+      $('.premium_slide').hover(function () { prem.autoplay.stop(); }, function () { prem.autoplay.start(); });
+    }
+  } catch (e) { console.error('Swiper init error:', e); }
+
+  /* ---------- 회사소개: 약속 3가지 토글 ---------- */
+  $('.promise_btn').on('click', function () {
+    $('.promise_btn').removeClass('atv');
+    $(this).addClass('atv');
+  });
+  $('.promise_btn.trigger').trigger('click');
+
+  /* ---------- 이용안내: 게시물 규제정책 펼치기 ---------- */
+  $('.add_btn').on('click', function () {
+    $('.add_content').slideToggle();
+    $(this).toggleClass('atv');
+  });
+})();

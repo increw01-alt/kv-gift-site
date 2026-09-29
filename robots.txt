@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kv-gift.co.kr/sitemap.xml
