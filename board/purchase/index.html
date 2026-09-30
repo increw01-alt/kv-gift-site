@@ -241,6 +241,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 #list .list-pc tbody tr{cursor:pointer}
 #list .list-pc .list-subject a{color:inherit;text-decoration:none}
+/* 본문 콘텐츠를 원본처럼 1200px로 제한 (넓은 화면에서 표가 퍼지고 플로팅 위젯과 겹치는 문제 방지) */
+#list .visual,#list .table-responsive,#list .list-page{width:calc(100% - 40px);max-width:1200px;margin-left:auto;margin-right:auto;}
+#list .visual{margin-top:30px;}
+#list .list-pc td.list-subject{text-align:left;}
 /* 분류 버튼: 전체 폭 + 항상 표시 (메인 스크립트의 hide와 무관하게) */
 #list .visual{display:block;}
 #list .visual .search_content{width:100%;height:auto;border:1px solid #ddd;border-bottom:none;}
