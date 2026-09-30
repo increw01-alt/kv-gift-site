@@ -184,6 +184,10 @@ LIST_EXTRA_CSS = """
 }
 #list .list-pc tbody tr{cursor:pointer}
 #list .list-pc .list-subject a{color:inherit;text-decoration:none}
+/* 분류 버튼: 전체 폭 + 항상 표시 (메인 스크립트의 hide와 무관하게) */
+#list .visual{display:block;}
+#list .visual .search_content{width:100%%;height:auto;border:1px solid #ddd;border-bottom:none;}
+#list #quick_btn_wrap{display:flex !important;flex-wrap:wrap;}
 #list .list-page{margin:30px 0}
 #board_search{display:flex;gap:6px;margin-top:20px;max-width:360px}
 #board_search input{flex:1;height:32px;border:1px solid #ddd;padding:0 10px;font-size:13px}
@@ -233,13 +237,9 @@ def render_list_page(bo, cfg, header, footer, rows, cat_counts):
                 f'<div id="card_rows">{cards}</div></section></div>')
         return head + body + footer
 
-    # 테이블형
+    # 테이블형 — 분류 버튼만 전체 폭으로 (쇼핑몰 슬라이더는 좁은 영역에서 깨져 제외)
     visual = ""
     if cfg["has_cat"]:
-        shop_slides = "".join(
-            f'<div class="swiper-slide" onclick="window.open(\'{u}\');">'
-            f'<img src="/img/logo_slim_c.svg" alt=""><div class="text_box"><p>{esc(n)}</p>'
-            f"<span>쇼핑몰 바로가기</span></div></div>" for n, u in SHOPS)
         cats = [c for c in CAT_ORDER if cat_counts.get(c)]
         btns = (f'<li onclick="setCat(\'\')"><img src="/img/{CAT_ICONS[0]}" alt="">'
                 f"<p>전체</p><span>{len(rows)}</span></li>")
@@ -247,8 +247,7 @@ def render_list_page(bo, cfg, header, footer, rows, cat_counts):
             icon = CAT_ICONS[(i + 1) % len(CAT_ICONS)]
             btns += (f'<li data-cat="{esc(c)}" onclick="setCat(\'{esc(c)}\')">'
                      f'<img src="/img/{icon}" alt=""><p>{esc(c)}</p><span>{cat_counts[c]}</span></li>')
-        visual = (f'<div class="visual"><b>상품권 구매 쇼핑몰 추천</b>'
-                  f'<div class="premium_slide"><div class="swiper-wrapper">{shop_slides}</div></div>'
+        visual = (f'<div class="visual">'
                   f'<ul class="search_content flex" id="quick_btn_wrap">{btns}</ul></div>')
 
     # 첫 페이지 20행은 정적으로 삽입 — 자바스크립트를 못 읽는 검색봇(네이버 등)도 글 링크 수집 가능

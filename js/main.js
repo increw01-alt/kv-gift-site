@@ -88,7 +88,8 @@
   };
   if (menuActive[path]) menuActive[path].forEach(function (c) { $('.' + c).addClass('atv'); });
 
-  /* ---------- 등록업체 빠른검색 탭 ---------- */
+  /* ---------- 등록업체 빠른검색 탭 (메인 전용 — 게시판의 분류 버튼과 클래스가 겹치므로 격리) ---------- */
+  if ($('.quick2').length) {
   function resetSearch() {
     $('.search_btn1, .search_btn2, .search_con1, .search_con2').removeClass('atv');
     $('.search_content').hide();
@@ -107,6 +108,7 @@
     if (window.innerWidth > 800) { $('.search_btn1, .search_con1, .search_con2').addClass('atv'); }
     else { $('.search_btn1, .search_con1').removeClass('atv'); $('.search_con2').addClass('atv'); $('.search_btn1').css('border-bottom', '1px solid #ddd'); }
   });
+  }
 
   /* ---------- 시세표: data/prices.json 렌더링 ---------- */
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
