@@ -245,6 +245,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #list .visual,#list .table-responsive,#list .list-page{width:calc(100% - 40px);max-width:1200px;margin-left:auto;margin-right:auto;}
 #list .visual{margin-top:30px;}
 #list .list-pc td.list-subject{text-align:left;}
+/* 스킨이 표를 flex 행으로 바꾸므로, 열 너비를 고정해 모든 행을 같은 격자에 정렬 */
+#list .list-pc thead tr th:nth-child(1),#list .list-pc tbody tr td:nth-child(1){width:8%;}#list .list-pc thead tr th:nth-child(2),#list .list-pc tbody tr td:nth-child(2){width:56%;}#list .list-pc thead tr th:nth-child(3),#list .list-pc tbody tr td:nth-child(3){width:14%;}#list .list-pc thead tr th:nth-child(4),#list .list-pc tbody tr td:nth-child(4){width:13%;}#list .list-pc thead tr th:nth-child(5),#list .list-pc tbody tr td:nth-child(5){width:9%;}@media (max-width:768px){#list .list-pc thead tr th:nth-child(2),#list .list-pc tbody tr td:nth-child(2){flex:1 1 auto;width:auto;}}
+#list .list-pc thead tr th,#list .list-pc tbody tr td{flex:0 0 auto;box-sizing:border-box;padding-left:6px;padding-right:6px;}
+#list .list-pc tbody tr td{border-top:none !important;padding-top:13px;padding-bottom:13px;line-height:20px;height:auto;}
+#list .list-pc tbody tr{border-bottom:1px solid #eee;}
+#list .list-pc td .count{display:inline;}
 /* 분류 버튼: 전체 폭 + 항상 표시 (메인 스크립트의 hide와 무관하게) */
 #list .visual{display:block;}
 #list .visual .search_content{width:100%;height:auto;border:1px solid #ddd;border-bottom:none;}

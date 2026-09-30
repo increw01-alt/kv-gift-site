@@ -188,6 +188,12 @@ LIST_EXTRA_CSS = """
 #list .visual,#list .table-responsive,#list .list-page{width:calc(100%% - 40px);max-width:1200px;margin-left:auto;margin-right:auto;}
 #list .visual{margin-top:30px;}
 #list .list-pc td.list-subject{text-align:left;}
+/* 스킨이 표를 flex 행으로 바꾸므로, 열 너비를 고정해 모든 행을 같은 격자에 정렬 */
+%(colcss)s
+#list .list-pc thead tr th,#list .list-pc tbody tr td{flex:0 0 auto;box-sizing:border-box;padding-left:6px;padding-right:6px;}
+#list .list-pc tbody tr td{border-top:none !important;padding-top:13px;padding-bottom:13px;line-height:20px;height:auto;}
+#list .list-pc tbody tr{border-bottom:1px solid #eee;}
+#list .list-pc td .count{display:inline;}
 /* 분류 버튼: 전체 폭 + 항상 표시 (메인 스크립트의 hide와 무관하게) */
 #list .visual{display:block;}
 #list .visual .search_content{width:100%%;height:auto;border:1px solid #ddd;border-bottom:none;}
@@ -220,6 +226,15 @@ def render_list_page(bo, cfg, header, footer, rows, cat_counts):
     head = page_head(header, f"{cfg['name']} | 한국상품권거래소",
                      f"{cfg['sub']} 총 {len(rows)}건.", url)
     skin = f'<link rel="stylesheet" href="/css/board/{cfg["skin"]}.css">'
+
+    # 열 너비: 분류 있는 게시판 6열 / 없는 게시판 5열
+    widths = [7, 9, 50, 14, 12, 8] if cfg["has_cat"] else [8, 56, 14, 13, 9]
+    colcss = "".join(
+        f"#list .list-pc thead tr th:nth-child({i}),#list .list-pc tbody tr td:nth-child({i})"
+        f"{{width:{w}%;}}" for i, w in enumerate(widths, 1))
+    subject_n = 3 if cfg["has_cat"] else 2
+    colcss += (f"@media (max-width:768px){{#list .list-pc thead tr th:nth-child({subject_n}),"
+               f"#list .list-pc tbody tr td:nth-child({subject_n}){{flex:1 1 auto;width:auto;}}}}")
 
     search_html = (
         '<div id="board_search">'
@@ -278,7 +293,8 @@ def render_list_page(bo, cfg, header, footer, rows, cat_counts):
              f'<tbody id="board_rows">{static_rows}</tbody></table></div>')
     pager = '<div class="list-page text-center"><ul class="pagination pagination-sm en" id="board_pager"></ul></div>'
 
-    body = (f'<div class="at-body" style="width:100%">{skin}{LIST_EXTRA_CSS % cfg}'
+    list_css = LIST_EXTRA_CSS % {"bg": cfg["bg"], "colcss": colcss}
+    body = (f'<div class="at-body" style="width:100%">{skin}{list_css}'
             f'<section id="list" class="board-list">{title_html}{visual}{table}{pager}</section>'
             f"{table_list_script(bo, cfg)}</div>")
     return head + body + footer
