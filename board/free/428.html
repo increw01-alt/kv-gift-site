@@ -258,6 +258,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
 /* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_title{width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px;}
+#view_wrap .view_title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#view_wrap .view_title .wrap>p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+#view_wrap .view_title .wrap>p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#view_wrap .view_title .wrap>span{font-size:15px;color:#fff;}
+#view_wrap .view_content{width:calc(100% - 40px);margin:0 auto;max-width:1200px;}
+#view_wrap .view_content>.wrap{background:#fff;border:1px solid #eee;padding:50px 20px;}
 #view_wrap .view_content .board_title{width:100%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
 #view_wrap .view_content .heading span{color:var(--color-blue);}
@@ -276,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="view_title"><div class="wrap"><p>자유게시판</p><span>한국상품권거래소 회원분들이 자유롭게 소통하는 공간입니다.</span></div></div>
 	<div class="view_content">
 		<h1 class="board_title">핸드폰 소액결제 현금화, 한국상품권협회 이용 후기입니다 ✅</h1>
-		<div class="heading"><span class="sv_member">KvGift최고관리자</span><span>26.06.03</span><span>조회 225</span></div>
+		<div class="heading"><span class="sv_member">KvGift최고관리자</span><span>26.06.03</span><span>조회 <em id="hit_view" data-base="225" style="font-style:normal">225</em></span></div>
 		<div class="wrap"><div class="view-content"><p>갑작스러운 자금 필요로 인해 핸드폰 소액결제를 활용하여 도움을 받을 수 있는 곳을 알아보던 중, 한국상품권협회를 알게 되어 이용하게 되었습니다. 급한 상황에서 소액결제 한국상품권협회를 통해 어떻게 진행되는지 궁금증이 많았는데, 저와 비슷한 고민을 하는 분들을 위해 직접 경험한 한국상품권협회 이용 후기를 공유해 봅니다. 처음에는 정보가 많아 혼란스러웠지만, 법인으로 운영되는 신뢰할 수 있는 곳이라는 점에 이끌렸습니다.</p>
 <p> </p>
 <p><a class="view_image" href="/board-img/free/20260603204002_d7a02e49f4da08e6a73b9e069726d20d_wnw9.png" target="_blank"><img alt="2026-06-03_11-39-48_핸드폰 소액결제 전문기업 한국상품권협회.png" class="img-tag" itemprop="image" src="/board-img/free/20260603204002_d7a02e49f4da08e6a73b9e069726d20d_wnw9.png" style="width:640px;"/></a></p>
@@ -293,6 +300,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="view-nav"><a href="/board/free/427.html">&laquo; 이전글</a><a class="list-btn" href="/board/free/">목록</a><a href="/board/free/429.html">다음글 &raquo;</a></div>
 	</div>
 </div>
+<script>
+/* 조회수 +1 (Cloudflare KV — 바인딩 전에는 조용히 기본값 유지) */
+fetch('/api/views/free/428').then(function(r){return r.json();}).then(function(d){
+	if (d && typeof d.n === 'number') {
+		var el = document.getElementById('hit_view');
+		el.textContent = (parseInt(el.dataset.base, 10) + d.n).toLocaleString();
+	}
+}).catch(function(){});
+</script>
 </div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>

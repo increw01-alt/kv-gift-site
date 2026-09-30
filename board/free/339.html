@@ -258,6 +258,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
 /* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_title{width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px;}
+#view_wrap .view_title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#view_wrap .view_title .wrap>p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+#view_wrap .view_title .wrap>p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#view_wrap .view_title .wrap>span{font-size:15px;color:#fff;}
+#view_wrap .view_content{width:calc(100% - 40px);margin:0 auto;max-width:1200px;}
+#view_wrap .view_content>.wrap{background:#fff;border:1px solid #eee;padding:50px 20px;}
 #view_wrap .view_content .board_title{width:100%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
 #view_wrap .view_content .heading span{color:var(--color-blue);}
@@ -276,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="view_title"><div class="wrap"><p>자유게시판</p><span>한국상품권거래소 회원분들이 자유롭게 소통하는 공간입니다.</span></div></div>
 	<div class="view_content">
 		<h1 class="board_title">주말 내내 강한 비, 돌풍 예보</h1>
-		<div class="heading"><span class="sv_member">상품권다모아</span><span>24.09.20</span><span>조회 120</span></div>
+		<div class="heading"><span class="sv_member">상품권다모아</span><span>24.09.20</span><span>조회 <em id="hit_view" data-base="120" style="font-style:normal">120</em></span></div>
 		<div class="wrap"><div class="view-content"><p><img alt="주석 2024-09-20 172645.png" class="img-tag" itemprop="image" src="/board-img/free/20240920172705_eaea12c7935191aa1f55cdaac03ebfa8_rbdn.png" style="width:497px;"/></p>
 <p>추석이 끝나마자 비가 엄청 쏱아지네요. 모두들 비 피해없게 조심하지구요!!</p></div></div>
 		<h3 class="view-comment">댓글 0</h3>
@@ -284,6 +291,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="view-nav"><a href="/board/free/338.html">&laquo; 이전글</a><a class="list-btn" href="/board/free/">목록</a><a href="/board/free/342.html">다음글 &raquo;</a></div>
 	</div>
 </div>
+<script>
+/* 조회수 +1 (Cloudflare KV — 바인딩 전에는 조용히 기본값 유지) */
+fetch('/api/views/free/339').then(function(r){return r.json();}).then(function(d){
+	if (d && typeof d.n === 'number') {
+		var el = document.getElementById('hit_view');
+		el.textContent = (parseInt(el.dataset.base, 10) + d.n).toLocaleString();
+	}
+}).catch(function(){});
+</script>
 </div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>

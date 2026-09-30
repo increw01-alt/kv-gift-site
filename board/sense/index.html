@@ -302,12 +302,12 @@ function render(){
   slice.forEach(function(r){
     var num = r.notice ? '<span class="wr-icon wr-notice"></span>' : '<span class="en">'+r.num+'</span>';
     var cmt = r.cmt>0 ? ' <span class="count orangered">+<span class="cnt_cmt">'+r.cmt+'</span></span>' : '';
-    out += '<tr onclick="goPost('+r.id+')"><td class="text-center font-11">'+num+'</td>'+
+    out += '<tr onclick="goPost('+r.id+')" data-vid="'+r.id+'"><td class="text-center font-11">'+num+'</td>'+
       (HAS_CAT?'<td class="text-center">'+esch(r.cat||'')+'</td>':'')+
       '<td class="list-subject'+(r.notice?' notice':'')+'"><a href="/board/sense/'+r.id+'.html">'+esch(r.title)+'</a>'+cmt+'</td>'+
       '<td><b><span class="sv_member">'+esch(r.author||'')+'</span></b></td>'+
       '<td class="text-center en font-11">'+esch(r.date||'')+'</td>'+
-      '<td class="text-center en font-11">'+(r.hit||0)+'</td></tr>';
+      '<td class="text-center en font-11 hitc" data-base="'+(r.hit||0)+'">'+(r.hit||0)+'</td></tr>';
   });
   document.getElementById('board_rows').innerHTML = out ||
     '<tr><td colspan="6" class="text-center" style="padding:60px 0;color:#999">게시물이 없습니다.</td></tr>';
@@ -315,6 +315,18 @@ function render(){
   document.querySelectorAll('#quick_btn_wrap li').forEach(function(li){
     li.classList.toggle('atv',(li.getAttribute('data-cat')||'')===state.sca);
   });
+  updateViews(slice.map(function(r){return r.id;}));
+}
+/* KV 조회수 증가분을 목록에 반영 (바인딩 전에는 조용히 생략) */
+function updateViews(ids){
+  if(!ids.length) return;
+  fetch('/api/views/sense?ids='+ids.join(',')).then(function(r){return r.json();}).then(function(d){
+    if(!d||!d.counts) return;
+    document.querySelectorAll('#board_rows tr[data-vid]').forEach(function(tr){
+      var n=d.counts[tr.getAttribute('data-vid')];
+      if(n){var td=tr.querySelector('.hitc');td.textContent=(parseInt(td.getAttribute('data-base'),10)+n).toLocaleString();}
+    });
+  }).catch(function(){});
 }
 function renderPager(pages){
   var p=state.page, out='';

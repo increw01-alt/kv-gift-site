@@ -324,12 +324,12 @@ function render(){
   slice.forEach(function(r){
     var num = r.notice ? '<span class="wr-icon wr-notice"></span>' : '<span class="en">'+r.num+'</span>';
     var cmt = r.cmt>0 ? ' <span class="count orangered">+<span class="cnt_cmt">'+r.cmt+'</span></span>' : '';
-    out += '<tr onclick="goPost('+r.id+')"><td class="text-center font-11">'+num+'</td>'+
+    out += '<tr onclick="goPost('+r.id+')" data-vid="'+r.id+'"><td class="text-center font-11">'+num+'</td>'+
       (HAS_CAT?'<td class="text-center">'+esch(r.cat||'')+'</td>':'')+
       '<td class="list-subject'+(r.notice?' notice':'')+'"><a href="/board/%(bo)s/'+r.id+'.html">'+esch(r.title)+'</a>'+cmt+'</td>'+
       '<td><b><span class="sv_member">'+esch(r.author||'')+'</span></b></td>'+
       '<td class="text-center en font-11">'+esch(r.date||'')+'</td>'+
-      '<td class="text-center en font-11">'+(r.hit||0)+'</td></tr>';
+      '<td class="text-center en font-11 hitc" data-base="'+(r.hit||0)+'">'+(r.hit||0)+'</td></tr>';
   });
   document.getElementById('board_rows').innerHTML = out ||
     '<tr><td colspan="6" class="text-center" style="padding:60px 0;color:#999">게시물이 없습니다.</td></tr>';
@@ -337,6 +337,18 @@ function render(){
   document.querySelectorAll('#quick_btn_wrap li').forEach(function(li){
     li.classList.toggle('atv',(li.getAttribute('data-cat')||'')===state.sca);
   });
+  updateViews(slice.map(function(r){return r.id;}));
+}
+/* KV 조회수 증가분을 목록에 반영 (바인딩 전에는 조용히 생략) */
+function updateViews(ids){
+  if(!ids.length) return;
+  fetch('/api/views/%(bo)s?ids='+ids.join(',')).then(function(r){return r.json();}).then(function(d){
+    if(!d||!d.counts) return;
+    document.querySelectorAll('#board_rows tr[data-vid]').forEach(function(tr){
+      var n=d.counts[tr.getAttribute('data-vid')];
+      if(n){var td=tr.querySelector('.hitc');td.textContent=(parseInt(td.getAttribute('data-base'),10)+n).toLocaleString();}
+    });
+  }).catch(function(){});
 }
 function renderPager(pages){
   var p=state.page, out='';
@@ -380,6 +392,13 @@ VIEW_EXTRA_CSS = """
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
 /* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_title{width:100%%;background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px;}
+#view_wrap .view_title .wrap{width:calc(100%% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#view_wrap .view_title .wrap>p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+#view_wrap .view_title .wrap>p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#view_wrap .view_title .wrap>span{font-size:15px;color:#fff;}
+#view_wrap .view_content{width:calc(100%% - 40px);margin:0 auto;max-width:1200px;}
+#view_wrap .view_content>.wrap{background:#fff;border:1px solid #eee;padding:50px 20px;}
 #view_wrap .view_content .board_title{width:100%%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
 #view_wrap .view_content .heading span{color:var(--color-blue);}
@@ -429,7 +448,8 @@ def render_view_page(bo, cfg, header, footer, post, meta, prev_id, next_id):
     ld_html = ('<script type="application/ld+json">'
                + json.dumps(ld, ensure_ascii=False) + "</script>")
 
-    hit_html = f"<span>조회 {meta['hit']}</span>" if meta and meta.get("hit") else ""
+    base_hit = (meta or {}).get("hit", 0) or 0
+    hit_html = f'<span>조회 <em id="hit_view" data-base="{base_hit}" style="font-style:normal">{base_hit}</em></span>'
     author = esc(post.get("author") or "한국상품권거래소")
     date = esc(post.get("date") or "")
 
@@ -459,6 +479,15 @@ def render_view_page(bo, cfg, header, footer, post, meta, prev_id, next_id):
 		{nav}
 	</div>
 </div>
+<script>
+/* 조회수 +1 (Cloudflare KV — 바인딩 전에는 조용히 기본값 유지) */
+fetch('/api/views/{bo}/{pid}').then(function(r){{return r.json();}}).then(function(d){{
+	if (d && typeof d.n === 'number') {{
+		var el = document.getElementById('hit_view');
+		el.textContent = (parseInt(el.dataset.base, 10) + d.n).toLocaleString();
+	}}
+}}).catch(function(){{}});
+</script>
 </div>'''
     return head + body + footer
 

@@ -55,6 +55,14 @@ ls img/banner | wc -l      # 10 이면 완료
 - `regions`(지역) / `products`(취급 상품권) 는 business.html 필터에 쓰입니다. 온라인 전용 업체는 `regions: []`.
 - 메인 화면의 "거래소 등록업체" 카드와 "최근등록업체" 플로팅 목록은 이 파일의 **앞 10개**가 자동 표시됩니다.
 
+## 2-2. 게시글 조회수 카운터 활성화 (1회 설정)
+글을 열 때마다 조회수가 +1 되는 기능은 Cloudflare Workers KV를 씁니다. 대시보드에서 한 번만 설정하면 켜집니다:
+1. Cloudflare 대시보드 → **Workers & Pages → KV** → "Create namespace" → 이름 `kv_gift_views`
+2. **Workers & Pages → kv-gift-site(Pages 프로젝트) → Settings → Functions → KV namespace bindings** → "Add binding"
+   - Variable name: `VIEWS` (정확히 이 이름), KV namespace: `kv_gift_views` → Save
+3. 저장 후 다음 배포부터(또는 Retry deployment) 카운터가 작동합니다.
+설정 전에는 오류 없이 크롤 시점의 기본 조회수만 표시됩니다. 코드: `functions/api/views/`.
+
 ## 3. 로컬 확인
 ```bash
 python3 -m http.server 8080     # http://localhost:8080  (file:// 로 열면 스타일이 안 붙음)

@@ -258,6 +258,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
 /* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_title{width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px;}
+#view_wrap .view_title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#view_wrap .view_title .wrap>p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+#view_wrap .view_title .wrap>p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#view_wrap .view_title .wrap>span{font-size:15px;color:#fff;}
+#view_wrap .view_content{width:calc(100% - 40px);margin:0 auto;max-width:1200px;}
+#view_wrap .view_content>.wrap{background:#fff;border:1px solid #eee;padding:50px 20px;}
 #view_wrap .view_content .board_title{width:100%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
 #view_wrap .view_content .heading span{color:var(--color-blue);}
@@ -276,13 +283,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="view_title"><div class="wrap"><p>자유게시판</p><span>한국상품권거래소 회원분들이 자유롭게 소통하는 공간입니다.</span></div></div>
 	<div class="view_content">
 		<h1 class="board_title">이번에 공개된 신형 포르쉐 전기차 모델 ...jpg</h1>
-		<div class="heading"><span class="sv_member">상품권다모아</span><span>23.11.15</span><span>조회 217</span></div>
+		<div class="heading"><span class="sv_member">상품권다모아</span><span>23.11.15</span><span>조회 <em id="hit_view" data-base="217" style="font-style:normal">217</em></span></div>
 		<div class="wrap"><div class="view-content"><p><a class="view_image" href="/board-img/free/20231115142222_4e268540564a0fdaf43b315585a9c5b5_y7b5.png" target="_blank"><img alt="포르쉐 신형 전기차 ㅋ.png" class="img-tag" itemprop="image" src="/board-img/free/20231115142222_4e268540564a0fdaf43b315585a9c5b5_y7b5.png" style="width:694px;"/></a></p></div></div>
 		<h3 class="view-comment">댓글 0</h3>
 		<section id="bo_vc" class="comment-media"></section>
 		<div class="view-nav"><a href="/board/free/203.html">&laquo; 이전글</a><a class="list-btn" href="/board/free/">목록</a><a href="/board/free/250.html">다음글 &raquo;</a></div>
 	</div>
 </div>
+<script>
+/* 조회수 +1 (Cloudflare KV — 바인딩 전에는 조용히 기본값 유지) */
+fetch('/api/views/free/204').then(function(r){return r.json();}).then(function(d){
+	if (d && typeof d.n === 'number') {
+		var el = document.getElementById('hit_view');
+		el.textContent = (parseInt(el.dataset.base, 10) + d.n).toLocaleString();
+	}
+}).catch(function(){});
+</script>
 </div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>

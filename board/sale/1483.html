@@ -258,6 +258,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
 /* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_title{width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px;}
+#view_wrap .view_title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#view_wrap .view_title .wrap>p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+#view_wrap .view_title .wrap>p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#view_wrap .view_title .wrap>span{font-size:15px;color:#fff;}
+#view_wrap .view_content{width:calc(100% - 40px);margin:0 auto;max-width:1200px;}
+#view_wrap .view_content>.wrap{background:#fff;border:1px solid #eee;padding:50px 20px;}
 #view_wrap .view_content .board_title{width:100%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
 #view_wrap .view_content .heading span{color:var(--color-blue);}
@@ -276,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="view_title"><div class="wrap"><p>상품권 판매게시판</p><span>모든 상품권 판매는 상품권 판매게시판에서 거래되고 있습니다.</span></div></div>
 	<div class="view_content">
 		<h1 class="board_title">현대백화점상품권 13만원판매</h1>
-		<div class="heading"><span class="sv_member">jiman22</span><span>24.09.30</span><span>조회 153</span></div>
+		<div class="heading"><span class="sv_member">jiman22</span><span>24.09.30</span><span>조회 <em id="hit_view" data-base="153" style="font-style:normal">153</em></span></div>
 		<div class="wrap"><div class="view-content"><p style="margin-bottom: 50px; color: var(--color-orange); font-weight: bold;">&lt; 백화점 상품권 &gt;</p>
 <p><b><span style="font-family:'맑은 고딕', 'malgun gothic';color:#666666;">대한민국 상품권의 기준 "한국상품권협회"에서 운영하는 상품권 중개플랫폼 1위 한국상품권거래소입니다.</span></b></p>
 <br/>
@@ -309,6 +316,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="view-nav"><a href="/board/sale/1482.html">&laquo; 이전글</a><a class="list-btn" href="/board/sale/">목록</a><a href="/board/sale/1484.html">다음글 &raquo;</a></div>
 	</div>
 </div>
+<script>
+/* 조회수 +1 (Cloudflare KV — 바인딩 전에는 조용히 기본값 유지) */
+fetch('/api/views/sale/1483').then(function(r){return r.json();}).then(function(d){
+	if (d && typeof d.n === 'number') {
+		var el = document.getElementById('hit_view');
+		el.textContent = (parseInt(el.dataset.base, 10) + d.n).toLocaleString();
+	}
+}).catch(function(){});
+</script>
 </div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>

@@ -258,6 +258,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
 /* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_title{width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;margin-bottom:50px;}
+#view_wrap .view_title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;position:relative;}
+#view_wrap .view_title .wrap>p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+#view_wrap .view_title .wrap>p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+#view_wrap .view_title .wrap>span{font-size:15px;color:#fff;}
+#view_wrap .view_content{width:calc(100% - 40px);margin:0 auto;max-width:1200px;}
+#view_wrap .view_content>.wrap{background:#fff;border:1px solid #eee;padding:50px 20px;}
 #view_wrap .view_content .board_title{width:100%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
 #view_wrap .view_content .heading span{color:var(--color-blue);}
@@ -276,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="view_title"><div class="wrap"><p>상품권 구매게시판</p><span>모든 상품권 구매는 상품권 구매게시판에서 거래되고 있습니다.</span></div></div>
 	<div class="view_content">
 		<h1 class="board_title">신용카드 상품권 할부 구매 즉시판매 가능한 한국상품권 협회</h1>
-		<div class="heading"><span class="sv_member">jsmin52778</span><span>26.02.09</span><span>조회 155</span></div>
+		<div class="heading"><span class="sv_member">jsmin52778</span><span>26.02.09</span><span>조회 <em id="hit_view" data-base="155" style="font-style:normal">155</em></span></div>
 		<div class="wrap"><div class="view-content"><p style="margin-bottom: 50px; color: var(--color-orange); font-weight: bold;">&lt; 컬쳐랜드 상품권 &gt;</p>
 <p class="isSelectedEnd"><span style="font-size:14px;">신용카드 한도를 활용해서 상품권 구매 후 즉시판매까지 가능한 곳을 찾다가</span><br/><span style="font-size:14px;"><a href="http://koreagiftcard.channel.io" rel="nofollow noreferrer noopener" target="_blank"><span style="font-size:16px;color:#ff0000;">한국상품권협회</span></a>를 알게 되어 이용해봤습니다 😊</span></p>
 <p class="isSelectedEnd"><span style="font-size:14px;">✔️ </span><strong><span style="font-size:14px;">신용카드 일시불뿐 아니라 할부 결제까지 가능했고</span></strong><br/><span style="font-size:14px;">✔️ 구매한 상품권은 </span><strong><span style="font-size:14px;">문자로 URL이 발송되어 바로 확인 가능했습니다.</span></strong></p>
@@ -290,6 +297,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="view-nav"><a href="/board/purchase/2542.html">&laquo; 이전글</a><a class="list-btn" href="/board/purchase/">목록</a><a href="/board/purchase/2544.html">다음글 &raquo;</a></div>
 	</div>
 </div>
+<script>
+/* 조회수 +1 (Cloudflare KV — 바인딩 전에는 조용히 기본값 유지) */
+fetch('/api/views/purchase/2543').then(function(r){return r.json();}).then(function(d){
+	if (d && typeof d.n === 'number') {
+		var el = document.getElementById('hit_view');
+		el.textContent = (parseInt(el.dataset.base, 10) + d.n).toLocaleString();
+	}
+}).catch(function(){});
+</script>
 </div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>
