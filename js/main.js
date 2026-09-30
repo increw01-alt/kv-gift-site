@@ -118,8 +118,11 @@
     $('[data-price-table]').each(function () {
       var rows = data[$(this).data('price-table')] || [];
       var html = rows.map(function (r) {
-        return '<div class="swiper-slide"><div class="wrap flex">' +
-          '<p>' + esc(r.name) + '</p><p>' + esc(r.face) + '</p>' +
+        var click = r._slug ? ' onclick="location.href=\'/price/' + r._slug + '.html\'" style="cursor:pointer"' : '';
+        var liveDot = r._live ? ' <i style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#2ecc71;vertical-align:2px" title="실시간 반영"></i>' : '';
+        var arrow = r._slug ? ' <span style="color:var(--color-orange);font-size:11px">시세보기 ›</span>' : '';
+        return '<div class="swiper-slide"' + click + '><div class="wrap flex">' +
+          '<p>' + esc(r.name) + liveDot + arrow + '</p><p>' + esc(r.face) + '</p>' +
           '<p>' + esc(r.buy) + '<span>' + esc(r.buy_rate) + '</span></p>' +
           '<p>' + esc(r.sell) + '<span>' + esc(r.sell_rate) + '</span></p>' +
           '</div></div>';
@@ -138,10 +141,43 @@
       $(this).hover(function () { sw.autoplay.stop(); }, function () { sw.autoplay.start(); });
     });
   }
+  /* 협회(koreagiftcard.co.kr) 실시간 집계를 받아 백화점 10만원권 행에 반영 */
+  var LIVE_BRANDS = {
+    '신세계 상품권': 'shinsegae', '롯데 상품권': 'lotte', '현대 상품권': 'hyundai',
+    '갤러리아 상품권': null, 'AK 상품권': null
+  };
+  function mergeLive(prices, live) {
+    if (!live || !live.summary) return prices;
+    var byBrand = {};
+    live.summary.forEach(function (s) { byBrand[s.brand + ' 상품권'] = s; });
+    (prices.paper || []).forEach(function (row) {
+      var s = byBrand[row.name];
+      if (s && row.face === '100,000') {
+        row.buy = s.bestBuy.price.toLocaleString('ko-KR');
+        row.buy_rate = s.bestBuy.rate + '%';
+        row.sell = s.bestSell.price.toLocaleString('ko-KR');
+        row.sell_rate = s.bestSell.rate + '%';
+        row._live = true;
+      }
+      if (row.name in LIVE_BRANDS && LIVE_BRANDS[row.name]) row._slug = LIVE_BRANDS[row.name];
+    });
+    if (live.updated_at) prices._live_at = live.updated_at;
+    return prices;
+  }
   if ($('[data-price-table]').length) {
-    $.ajax({ url: '/data/prices.json', dataType: 'json', timeout: 8000 })
-      .done(renderPrices)
-      .fail(function () { console.error('시세 데이터(data/prices.json) 로드 실패'); });
+    var pPrices = $.ajax({ url: '/data/prices.json', dataType: 'json', timeout: 8000 });
+    var pLive = fetch('https://koreagiftcard.co.kr/rates.json', { cache: 'no-store' })
+      .then(function (r) { return r.json(); }).catch(function () { return null; });
+    pPrices.done(function (prices) {
+      pLive.then(function (live) {
+        renderPrices(mergeLive(prices, live));
+        if (prices._live_at) {
+          $('.price-updated').each(function () {
+            $(this).text($(this).text() + ' · 실시간 ' + prices._live_at.slice(11));
+          });
+        }
+      });
+    }).fail(function () { console.error('시세 데이터(data/prices.json) 로드 실패'); });
   }
 
   /* ---------- 등록업체: data/businesses.json 렌더링 (메인 섹션 + 최근등록업체 플로팅) ---------- */
