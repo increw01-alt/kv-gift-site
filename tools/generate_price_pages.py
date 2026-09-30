@@ -16,8 +16,10 @@ BRANDS = [
     dict(slug="shinsegae", brand="신세계", price_name="신세계 상품권", ticker="SHINSEGAE"),
     dict(slug="lotte", brand="롯데", price_name="롯데 상품권", ticker="LOTTE"),
     dict(slug="hyundai", brand="현대", price_name="현대 상품권", ticker="HYUNDAI"),
+    dict(slug="galleria", brand="갤러리아", price_name="갤러리아 상품권", ticker="GALLERIA"),
+    dict(slug="ak", brand="AK", price_name="AK 상품권", ticker="AK PLAZA"),
 ]
-COMING = [dict(brand="갤러리아"), dict(brand="AK")]
+COMING = []
 
 
 def load_shell():
@@ -29,8 +31,10 @@ def load_shell():
     return header, footer
 
 
-def page_head(header, title, desc, url):
+def page_head(header, title, desc, url, image=None):
     h = re.sub(r"<title>[^<]*</title>", f"<title>{title}</title>", header)
+    if image:
+        h = re.sub(r'(<meta property="og:image" content=")[^"]*(")', rf"\g<1>{image}\g<2>", h)
     h = re.sub(r'(<meta name="description" content=")[^"]*(")', rf"\g<1>{desc}\g<2>", h)
     h = re.sub(r'(<link rel="canonical" href=")[^"]*(")', rf"\g<1>{url}\g<2>", h)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*(")', rf"\g<1>{url}\g<2>", h)
@@ -63,6 +67,13 @@ CSS = """
 .px-big .diff{font-size:16px;font-weight:bold;padding-bottom:5px;}
 .px-big .diff.up{color:var(--px-up);} .px-big .diff.down{color:var(--px-down);} .px-big .diff.flat{color:var(--px-dim);}
 .px-sub{font-size:12px;color:var(--px-dim);}
+/* 히어로 좌우 배치 + 상품권 실물 이미지 */
+.px-hero-flex{display:flex;justify-content:space-between;align-items:center;gap:30px;}
+.px-hero-left{min-width:0;}
+.px-gift-img{max-width:320px;width:34%;border-radius:10px;transform:rotate(-4deg);
+box-shadow:0 18px 45px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);transition:.3s;}
+.px-gift-img:hover{transform:rotate(0deg) scale(1.03);}
+@media(max-width:800px){.px-gift-img{display:none;}}
 /* 브랜드 탭 */
 .px-tabs{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap;}
 .px-tabs a,.px-tabs span{font-size:13px;padding:7px 16px;border:1px solid var(--px-line);border-radius:20px;text-decoration:none;color:var(--px-dim);}
@@ -244,10 +255,11 @@ CSS_C = """
 def render_page(header, footer, cfg, css=None, banner="", noindex=False):
     brand, slug, ticker, price_name = cfg["brand"], cfg["slug"], cfg["ticker"], cfg["price_name"]
     css = css or CSS
+    gift_img = f"/img/price/{cfg['slug'] if not cfg['slug'].startswith('sample') else 'shinsegae'}.png"
     url = f"{DOMAIN}/price/{slug}"
     title = cfg.get("title") or f"{price_name} 실시간 시세 | 한국상품권거래소"
     desc = f"{price_name} 오늘 매입가·판매가 실시간 시세와 추이 그래프, 거래소 인증 업체별 호가를 한눈에 확인하세요."
-    head = page_head(header, title, desc, url)
+    head = page_head(header, title, desc, url, image=DOMAIN + gift_img)
     if noindex:
         head = head.replace("</title>", "</title>\n<meta name=\"robots\" content=\"noindex\">")
 
@@ -262,17 +274,22 @@ def render_page(header, footer, cfg, css=None, banner="", noindex=False):
 <div id="px_page">{banner}
 	<div class="px-hero"><div class="wrap">
 		<p class="px-crumb"><a href="/">홈</a> &rsaquo; <a href="/#price">상품권 시세</a> &rsaquo; {price_name}</p>
-		<div class="px-name-row">
-			<h1>{price_name}</h1>
-			<span class="px-ticker">{ticker} · 10만원권</span>
-			<span class="px-live" id="px_live" style="display:none"><i></i>LIVE</span>
+		<div class="px-hero-flex">
+			<div class="px-hero-left">
+				<div class="px-name-row">
+					<h1>{price_name}</h1>
+					<span class="px-ticker">{ticker} · 10만원권</span>
+					<span class="px-live" id="px_live" style="display:none"><i></i>LIVE</span>
+				</div>
+				<p class="px-sub" style="margin:14px 0 0">최고 매입가 (내가 팔 때 받는 금액)</p>
+				<div class="px-big">
+					<b id="px_price">-</b>
+					<span class="diff flat" id="px_diff">시세 불러오는 중…</span>
+				</div>
+				<p class="px-sub" id="px_updated">한국상품권협회 실시간 집계 기준</p>
+			</div>
+			<img class="px-gift-img" src="{gift_img}" alt="{price_name} 실물 이미지">
 		</div>
-		<p class="px-sub" style="margin:14px 0 0">최고 매입가 (내가 팔 때 받는 금액)</p>
-		<div class="px-big">
-			<b id="px_price">-</b>
-			<span class="diff flat" id="px_diff">시세 불러오는 중…</span>
-		</div>
-		<p class="px-sub" id="px_updated">한국상품권협회 실시간 집계 기준</p>
 		<div class="px-tabs">{tabs}</div>
 	</div></div>
 	<div class="wrap">
@@ -283,7 +300,7 @@ def render_page(header, footer, cfg, css=None, banner="", noindex=False):
 			<div class="px-stat"><p>액면가 대비 할인율</p><b id="st_rate">-</b><span>10만원권 매입 기준</span></div>
 		</div>
 		<div class="px-sec">
-			<div class="px-sec-title"><b>📈 시세 추이</b><span>2026-09-30부터 하루 4회 자동 기록</span></div>
+			<div class="px-sec-title"><b>📈 시세 추이</b><span>한국상품권협회 · 매시간 자동 수집</span></div>
 			<div class="px-chart-box"><canvas id="px_chart"></canvas></div>
 			<p class="px-chart-note" id="px_chart_note"></p>
 		</div>
@@ -349,40 +366,36 @@ def render_page(header, footer, cfg, css=None, banner="", noindex=False):
 			document.getElementById("px_diff").textContent = "실시간 시세 연결 실패 — 아래 공시가를 참고하세요";
 		}});
 
-	/* ---- 시세 추이 그래프 (자체 축적 히스토리) ---- */
-	fetch("/data/price-history.json", {{ cache: "no-store" }})
+	/* ---- 시세 추이 그래프 (협회 축적 히스토리 — 2026-09-16부터 매시간 수집) ---- */
+	fetch("https://koreagiftcard.co.kr/rates_market_history.json", {{ cache: "no-store" }})
 		.then(function (r) {{ return r.json(); }})
 		.then(function (h) {{
-			var arr = (h.series || {{}})[BRAND] || [];
-			var labels = arr.map(function (p) {{ return p.t.slice(5); }});
-			var buys = arr.map(function (p) {{ return p.buy; }});
-			var sells = arr.map(function (p) {{ return p.sell; }});
-			/* 전일(직전 기록) 대비 등락 */
+			var pts = (h.points || []).filter(function (p) {{ return typeof p[BRAND] === "number"; }});
+			var labels = pts.map(function (p) {{ return p.t.slice(5); }});
+			var buys = pts.map(function (p) {{ return p[BRAND]; }});
+			/* 직전 기록 대비 등락 */
 			var diffEl = document.getElementById("px_diff");
-			if (arr.length >= 2) {{
-				var d = buys[buys.length - 1] - buys[buys.length - 2];
-				var pct = (d / buys[buys.length - 2] * 100).toFixed(2);
+			if (buys.length >= 2) {{
+				var prev = buys[buys.length - 2], d = buys[buys.length - 1] - prev;
+				var pct = (d / prev * 100).toFixed(2);
 				diffEl.className = "diff " + (d > 0 ? "up" : d < 0 ? "down" : "flat");
-				diffEl.textContent = (d > 0 ? "▲ +" : d < 0 ? "▼ " : "— ") + Math.abs(d).toLocaleString() + "원 (" + (d >= 0 ? "+" : "") + pct + "%)";
+				diffEl.textContent = (d > 0 ? "▲ +" : d < 0 ? "▼ -" : "— ") + Math.abs(d).toLocaleString() + "원 (" + (d >= 0 ? "+" : "") + pct + "%)";
 			}} else {{
 				diffEl.className = "diff flat";
-				diffEl.textContent = "— 기록 축적 중";
+				diffEl.textContent = "";
 			}}
-			if (arr.length < 3) {{
-				document.getElementById("px_chart_note").textContent =
-					"시세 기록을 " + (arr.length ? arr[0].t : "오늘") + "부터 축적하기 시작했습니다. 하루 4회 자동 기록되어 그래프가 채워집니다.";
-			}}
+			document.getElementById("px_chart_note").textContent =
+				"한국상품권협회가 " + (pts.length ? pts[0].t.slice(0, 10) : "") + "부터 수집한 최고 매입가 추이입니다.";
 			new Chart(document.getElementById("px_chart"), {{
 				type: "line",
 				data: {{ labels: labels, datasets: [
-					{{ label: "최고 매입가", data: buys, borderColor: "#f0426b", backgroundColor: "rgba(240,66,107,.12)", fill: true, tension: .3, pointRadius: 4, borderWidth: 2 }},
-					{{ label: "최저 판매가", data: sells, borderColor: "#3e7bfa", backgroundColor: "transparent", tension: .3, pointRadius: 4, borderWidth: 2 }}
+					{{ label: "최고 매입가", data: buys, borderColor: "#f0426b", backgroundColor: "rgba(240,66,107,.12)", fill: true, tension: .3, pointRadius: 0, pointHitRadius: 8, borderWidth: 2 }}
 				] }},
 				options: {{
 					responsive: true, maintainAspectRatio: false,
 					interaction: {{ mode: "index", intersect: false }},
-					plugins: {{ legend: {{ labels: {{ color: "#8b97c0", boxWidth: 12 }} }},
-						tooltip: {{ callbacks: {{ label: function (c) {{ return c.dataset.label + ": " + won(c.parsed.y); }} }} }} }},
+					plugins: {{ legend: {{ display: false }},
+						tooltip: {{ callbacks: {{ label: function (c) {{ return "최고 매입가: " + won(c.parsed.y); }} }} }} }},
 					scales: {{
 						x: {{ ticks: {{ color: "#8b97c0", maxTicksLimit: 8 }}, grid: {{ color: "rgba(38,50,90,.4)" }} }},
 						y: {{ ticks: {{ color: "#8b97c0", callback: function (v) {{ return v.toLocaleString(); }} }}, grid: {{ color: "rgba(38,50,90,.4)" }} }}
@@ -436,15 +449,10 @@ def main():
         io.open(out / f"{cfg['slug']}.html", "w", encoding="utf-8", newline="\n").write(
             render_page(header, footer, cfg))
         print(f"price/{cfg['slug']}.html 생성")
-    # 디자인 시안 비교용 샘플 3종 (신세계 데이터, noindex)
-    for letter, label, css_name in SAMPLES:
-        css = globals()[css_name] if css_name else None
-        cfg = dict(BRANDS[0])
-        cfg["slug"] = f"sample-{letter}"
-        cfg["title"] = f"시세 페이지 디자인 시안 {letter.upper()} · {label} | 한국상품권거래소"
-        io.open(out / f"sample-{letter}.html", "w", encoding="utf-8", newline="\n").write(
-            render_page(header, footer, cfg, css=css, banner=sample_banner(letter), noindex=True))
-        print(f"price/sample-{letter}.html 생성 ({label})")
+    # 디자인 시안 A 확정(2026-09-30) — 샘플 페이지는 더 이상 생성하지 않음
+    for f in out.glob("sample-*.html"):
+        f.unlink()
+        print(f"{f.name} 삭제 (시안 확정)")
 
 
 if __name__ == "__main__":

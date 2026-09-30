@@ -144,7 +144,7 @@
   /* 협회(koreagiftcard.co.kr) 실시간 집계를 받아 백화점 10만원권 행에 반영 */
   var LIVE_BRANDS = {
     '신세계 상품권': 'shinsegae', '롯데 상품권': 'lotte', '현대 상품권': 'hyundai',
-    '갤러리아 상품권': null, 'AK 상품권': null
+    '갤러리아 상품권': 'galleria', 'AK 상품권': 'ak'
   };
   function mergeLive(prices, live) {
     if (!live || !live.summary) return prices;

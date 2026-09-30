@@ -21,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="한국상품권거래소">
 <meta property="og:title" content="현대 상품권 실시간 시세 | 한국상품권거래소">
 <meta property="og:description" content="현대 상품권 오늘 매입가·판매가 실시간 시세와 추이 그래프, 거래소 인증 업체별 호가를 한눈에 확인하세요.">
-<meta property="og:image" content="https://kv-gift.co.kr/img/og_img.png">
+<meta property="og:image" content="https://kv-gift.co.kr/img/price/hyundai.png">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <!-- 네이버 서치어드바이저 소유확인 (기존 값 유지 — kv-gift.co.kr 재등록 시 교체) -->
@@ -252,6 +252,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .px-big .diff{font-size:16px;font-weight:bold;padding-bottom:5px;}
 .px-big .diff.up{color:var(--px-up);} .px-big .diff.down{color:var(--px-down);} .px-big .diff.flat{color:var(--px-dim);}
 .px-sub{font-size:12px;color:var(--px-dim);}
+/* 히어로 좌우 배치 + 상품권 실물 이미지 */
+.px-hero-flex{display:flex;justify-content:space-between;align-items:center;gap:30px;}
+.px-hero-left{min-width:0;}
+.px-gift-img{max-width:320px;width:34%;border-radius:10px;transform:rotate(-4deg);
+box-shadow:0 18px 45px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);transition:.3s;}
+.px-gift-img:hover{transform:rotate(0deg) scale(1.03);}
+@media(max-width:800px){.px-gift-img{display:none;}}
 /* 브랜드 탭 */
 .px-tabs{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap;}
 .px-tabs a,.px-tabs span{font-size:13px;padding:7px 16px;border:1px solid var(--px-line);border-radius:20px;text-decoration:none;color:var(--px-dim);}
@@ -301,18 +308,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="px_page">
 	<div class="px-hero"><div class="wrap">
 		<p class="px-crumb"><a href="/">홈</a> &rsaquo; <a href="/#price">상품권 시세</a> &rsaquo; 현대 상품권</p>
-		<div class="px-name-row">
-			<h1>현대 상품권</h1>
-			<span class="px-ticker">HYUNDAI · 10만원권</span>
-			<span class="px-live" id="px_live" style="display:none"><i></i>LIVE</span>
+		<div class="px-hero-flex">
+			<div class="px-hero-left">
+				<div class="px-name-row">
+					<h1>현대 상품권</h1>
+					<span class="px-ticker">HYUNDAI · 10만원권</span>
+					<span class="px-live" id="px_live" style="display:none"><i></i>LIVE</span>
+				</div>
+				<p class="px-sub" style="margin:14px 0 0">최고 매입가 (내가 팔 때 받는 금액)</p>
+				<div class="px-big">
+					<b id="px_price">-</b>
+					<span class="diff flat" id="px_diff">시세 불러오는 중…</span>
+				</div>
+				<p class="px-sub" id="px_updated">한국상품권협회 실시간 집계 기준</p>
+			</div>
+			<img class="px-gift-img" src="/img/price/hyundai.png" alt="현대 상품권 실물 이미지">
 		</div>
-		<p class="px-sub" style="margin:14px 0 0">최고 매입가 (내가 팔 때 받는 금액)</p>
-		<div class="px-big">
-			<b id="px_price">-</b>
-			<span class="diff flat" id="px_diff">시세 불러오는 중…</span>
-		</div>
-		<p class="px-sub" id="px_updated">한국상품권협회 실시간 집계 기준</p>
-		<div class="px-tabs"><a href="/price/shinsegae.html">신세계</a><a href="/price/lotte.html">롯데</a><a href="/price/hyundai.html" class="on">현대</a><span title="준비중">갤러리아</span><span title="준비중">AK</span></div>
+		<div class="px-tabs"><a href="/price/shinsegae.html">신세계</a><a href="/price/lotte.html">롯데</a><a href="/price/hyundai.html" class="on">현대</a><a href="/price/galleria.html">갤러리아</a><a href="/price/ak.html">AK</a></div>
 	</div></div>
 	<div class="wrap">
 		<div class="px-stats">
@@ -322,7 +334,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<div class="px-stat"><p>액면가 대비 할인율</p><b id="st_rate">-</b><span>10만원권 매입 기준</span></div>
 		</div>
 		<div class="px-sec">
-			<div class="px-sec-title"><b>📈 시세 추이</b><span>2026-09-30부터 하루 4회 자동 기록</span></div>
+			<div class="px-sec-title"><b>📈 시세 추이</b><span>한국상품권협회 · 매시간 자동 수집</span></div>
 			<div class="px-chart-box"><canvas id="px_chart"></canvas></div>
 			<p class="px-chart-note" id="px_chart_note"></p>
 		</div>
@@ -388,40 +400,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			document.getElementById("px_diff").textContent = "실시간 시세 연결 실패 — 아래 공시가를 참고하세요";
 		});
 
-	/* ---- 시세 추이 그래프 (자체 축적 히스토리) ---- */
-	fetch("/data/price-history.json", { cache: "no-store" })
+	/* ---- 시세 추이 그래프 (협회 축적 히스토리 — 2026-09-16부터 매시간 수집) ---- */
+	fetch("https://koreagiftcard.co.kr/rates_market_history.json", { cache: "no-store" })
 		.then(function (r) { return r.json(); })
 		.then(function (h) {
-			var arr = (h.series || {})[BRAND] || [];
-			var labels = arr.map(function (p) { return p.t.slice(5); });
-			var buys = arr.map(function (p) { return p.buy; });
-			var sells = arr.map(function (p) { return p.sell; });
-			/* 전일(직전 기록) 대비 등락 */
+			var pts = (h.points || []).filter(function (p) { return typeof p[BRAND] === "number"; });
+			var labels = pts.map(function (p) { return p.t.slice(5); });
+			var buys = pts.map(function (p) { return p[BRAND]; });
+			/* 직전 기록 대비 등락 */
 			var diffEl = document.getElementById("px_diff");
-			if (arr.length >= 2) {
-				var d = buys[buys.length - 1] - buys[buys.length - 2];
-				var pct = (d / buys[buys.length - 2] * 100).toFixed(2);
+			if (buys.length >= 2) {
+				var prev = buys[buys.length - 2], d = buys[buys.length - 1] - prev;
+				var pct = (d / prev * 100).toFixed(2);
 				diffEl.className = "diff " + (d > 0 ? "up" : d < 0 ? "down" : "flat");
-				diffEl.textContent = (d > 0 ? "▲ +" : d < 0 ? "▼ " : "— ") + Math.abs(d).toLocaleString() + "원 (" + (d >= 0 ? "+" : "") + pct + "%)";
+				diffEl.textContent = (d > 0 ? "▲ +" : d < 0 ? "▼ -" : "— ") + Math.abs(d).toLocaleString() + "원 (" + (d >= 0 ? "+" : "") + pct + "%)";
 			} else {
 				diffEl.className = "diff flat";
-				diffEl.textContent = "— 기록 축적 중";
+				diffEl.textContent = "";
 			}
-			if (arr.length < 3) {
-				document.getElementById("px_chart_note").textContent =
-					"시세 기록을 " + (arr.length ? arr[0].t : "오늘") + "부터 축적하기 시작했습니다. 하루 4회 자동 기록되어 그래프가 채워집니다.";
-			}
+			document.getElementById("px_chart_note").textContent =
+				"한국상품권협회가 " + (pts.length ? pts[0].t.slice(0, 10) : "") + "부터 수집한 최고 매입가 추이입니다.";
 			new Chart(document.getElementById("px_chart"), {
 				type: "line",
 				data: { labels: labels, datasets: [
-					{ label: "최고 매입가", data: buys, borderColor: "#f0426b", backgroundColor: "rgba(240,66,107,.12)", fill: true, tension: .3, pointRadius: 4, borderWidth: 2 },
-					{ label: "최저 판매가", data: sells, borderColor: "#3e7bfa", backgroundColor: "transparent", tension: .3, pointRadius: 4, borderWidth: 2 }
+					{ label: "최고 매입가", data: buys, borderColor: "#f0426b", backgroundColor: "rgba(240,66,107,.12)", fill: true, tension: .3, pointRadius: 0, pointHitRadius: 8, borderWidth: 2 }
 				] },
 				options: {
 					responsive: true, maintainAspectRatio: false,
 					interaction: { mode: "index", intersect: false },
-					plugins: { legend: { labels: { color: "#8b97c0", boxWidth: 12 } },
-						tooltip: { callbacks: { label: function (c) { return c.dataset.label + ": " + won(c.parsed.y); } } } },
+					plugins: { legend: { display: false },
+						tooltip: { callbacks: { label: function (c) { return "최고 매입가: " + won(c.parsed.y); } } } },
 					scales: {
 						x: { ticks: { color: "#8b97c0", maxTicksLimit: 8 }, grid: { color: "rgba(38,50,90,.4)" } },
 						y: { ticks: { color: "#8b97c0", callback: function (v) { return v.toLocaleString(); } }, grid: { color: "rgba(38,50,90,.4)" } }
