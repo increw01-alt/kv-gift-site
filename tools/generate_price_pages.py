@@ -119,6 +119,29 @@ box-shadow:0 18px 45px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);transition
 .px-actions a.buy-link{background:var(--px-accent);color:#fff;}
 .px-actions a.sell-link{background:transparent;border:1px solid var(--px-accent);color:var(--px-accent);}
 @media(max-width:600px){.px-big b{font-size:34px;}.px-quotes .area{display:none;}}
+/* 시세 전체 페이지: 브랜드 실시간 카드 */
+.px-brand-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px auto;}
+.px-bcard{background:var(--px-card);border:1px solid var(--px-line);border-radius:10px;padding:16px 18px;cursor:pointer;transition:.2s;text-decoration:none;display:block;}
+.px-bcard:hover{border-color:var(--px-accent);transform:translateY(-2px);}
+.px-bcard .bname{font-size:13px;color:var(--px-dim);display:flex;justify-content:space-between;align-items:center;}
+.px-bcard .bname em{font-style:normal;font-size:10px;letter-spacing:1px;}
+.px-bcard .bprice{font-size:21px;font-weight:800;margin:8px 0 4px;}
+.px-bcard .bmeta{font-size:11px;color:var(--px-dim);}
+.px-bcard .bdir{font-size:11px;font-weight:bold;}
+.px-bcard .bdir.up{color:var(--px-up);} .px-bcard .bdir.down{color:var(--px-down);} .px-bcard .bdir.flat{color:var(--px-dim);}
+@media(max-width:900px){.px-brand-cards{grid-template-columns:repeat(2,1fr);}}
+/* 시세 전체 페이지: 전체 시세표 */
+.px-table table{width:100%;border-collapse:collapse;font-size:13px;}
+.px-table th{font-size:11px;color:var(--px-dim);font-weight:normal;text-align:right;padding:8px 10px;border-bottom:1px solid var(--px-line);}
+.px-table th:first-child,.px-table td:first-child{text-align:left;}
+.px-table td{padding:11px 10px;border-bottom:1px solid rgba(38,50,90,.5);text-align:right;font-family:'Pretendard',sans-serif;}
+.px-table td:first-child{font-weight:bold;}
+.px-table tr.link{cursor:pointer;}
+.px-table tr.link:hover td{background:rgba(240,66,107,.06);}
+.px-table td .rate{font-size:11px;color:var(--px-dim);margin-left:5px;}
+.px-table .buy{color:#ffb3c4;} .px-table .sell{color:#a9c4ff;}
+.px-table td .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#37e0a1;margin-left:6px;vertical-align:2px;}
+.px-table td .goto{font-size:11px;color:var(--px-accent);margin-left:6px;}
 </style>"""
 
 # ===== 시안 B: 라이트 클린형 (기존 사이트 톤과 이어지는 밝은 대시보드) =====
@@ -263,7 +286,7 @@ def render_page(header, footer, cfg, css=None, banner="", noindex=False):
     if noindex:
         head = head.replace("</title>", "</title>\n<meta name=\"robots\" content=\"noindex\">")
 
-    tabs = ""
+    tabs = '<a href="/price/">전체 시세</a>'
     for b in BRANDS:
         cls = ' class="on"' if b["slug"] == slug else ""
         tabs += f'<a href="/price/{b["slug"]}.html"{cls}>{b["brand"]}</a>'
@@ -419,6 +442,110 @@ def render_page(header, footer, cfg, css=None, banner="", noindex=False):
     return head + body + footer
 
 
+def render_index_page(header, footer):
+    """시세 전체 페이지(/price/): 브랜드 실시간 카드 + 지류·모바일 전체 시세표"""
+    url = f"{DOMAIN}/price/"
+    title = "상품권 실시간 시세 | 한국상품권거래소"
+    desc = "백화점·문화·주유·모바일 상품권 오늘 매입가와 판매가를 실시간으로 확인하세요. 신세계·롯데·현대·갤러리아·AK는 인증 거래소 호가와 추이 그래프도 제공합니다."
+    head = page_head(header, title, desc, url)
+
+    tabs = '<a class="on" href="/price/">전체 시세</a>'
+    for b in BRANDS:
+        tabs += f'<a href="/price/{b["slug"]}.html">{b["brand"]}</a>'
+
+    slug_json = "{" + ",".join(f'"{b["price_name"]}":"{b["slug"]}"' for b in BRANDS) + "}"
+
+    body = f'''<div class="at-body" style="width:100%">{CSS}
+<div id="px_page">
+	<div class="px-hero"><div class="wrap">
+		<p class="px-crumb"><a href="/">홈</a> &rsaquo; 상품권 시세</p>
+		<div class="px-name-row">
+			<h1>상품권 실시간 시세</h1>
+			<span class="px-live" id="px_live" style="display:none"><i></i>LIVE</span>
+		</div>
+		<p class="px-sub" id="px_updated" style="margin-top:12px">한국상품권협회 제공 · 백화점 상품권은 인증 거래소 실시간 집계</p>
+		<div class="px-tabs">{tabs}</div>
+	</div></div>
+	<div class="wrap">
+		<div class="px-brand-cards" id="brand_cards"></div>
+		<div class="px-sec px-table" id="paper">
+			<div class="px-sec-title"><b>📄 지류(종이) 상품권 시세</b><span id="paper_updated"></span></div>
+			<table><thead><tr><th>상품권</th><th>액면가 (원)</th><th>매입가 (원)</th><th>판매가 (원)</th></tr></thead>
+			<tbody id="paper_rows"><tr><td colspan="4" style="text-align:center;color:var(--px-dim);padding:30px">시세 불러오는 중…</td></tr></tbody></table>
+		</div>
+		<div class="px-sec px-table" id="mobile">
+			<div class="px-sec-title"><b>📱 모바일 상품권 시세</b><span id="mobile_updated"></span></div>
+			<table><thead><tr><th>상품권</th><th>액면가 (원)</th><th>매입가 (원)</th><th>판매가 (원)</th></tr></thead>
+			<tbody id="mobile_rows"><tr><td colspan="4" style="text-align:center;color:var(--px-dim);padding:30px">시세 불러오는 중…</td></tr></tbody></table>
+		</div>
+		<div class="px-actions">
+			<a class="buy-link" href="/board/purchase/">상품권 구매 문의 게시판 →</a>
+			<a class="sell-link" href="/board/sale/">보유 상품권 판매 문의 게시판 →</a>
+		</div>
+		<p class="px-note">※ 시세는 참고 정보이며 실제 거래 가격은 수량·권종·상품권 상태에 따라 다를 수 있습니다. 신세계·롯데·현대·갤러리아·AK 10만원권은 인증 거래소 공시를 실시간 반영하며, 그 외는 한국상품권거래소 공시 기준입니다.</p>
+	</div>
+</div>
+<script>
+(function () {{
+	var SLUGS = {slug_json};
+	function esc(s) {{ return String(s).replace(/[&<>"']/g, function (c) {{ return {{ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }}[c]; }}); }}
+	function won(n) {{ return Number(n).toLocaleString('ko-KR'); }}
+
+	var pPrices = fetch('/data/prices.json').then(function (r) {{ return r.json(); }});
+	var pLive = fetch('https://koreagiftcard.co.kr/rates.json', {{ cache: 'no-store' }})
+		.then(function (r) {{ return r.json(); }}).catch(function () {{ return null; }});
+
+	Promise.all([pPrices, pLive]).then(function (res) {{
+		var prices = res[0], live = res[1];
+		var liveMap = {{}};
+		if (live && live.summary) {{
+			live.summary.forEach(function (s) {{ liveMap[s.brand + ' 상품권'] = s; }});
+			document.getElementById('px_live').style.display = 'flex';
+			document.getElementById('px_updated').textContent =
+				'갱신 ' + live.updated_at + ' · 백화점 상품권은 인증 거래소 실시간 집계, 그 외 한국상품권거래소 공시(' + (prices.updated || '') + ') 기준';
+			/* 브랜드 실시간 카드 */
+			document.getElementById('brand_cards').innerHTML = live.summary.map(function (s) {{
+				var slug = SLUGS[s.brand + ' 상품권'] || '';
+				var dir = s.dir === 'up' ? '<span class="bdir up">▲ 상승</span>' : s.dir === 'down' ? '<span class="bdir down">▼ 하락</span>' : '<span class="bdir flat">— 보합</span>';
+				return '<a class="px-bcard" href="/price/' + slug + '.html">' +
+					'<p class="bname">' + esc(s.brand) + ' 상품권 <em>10만원권</em></p>' +
+					'<p class="bprice">' + won(s.bestBuy.price) + '원</p>' +
+					'<p class="bmeta">최고 매입 · ' + esc(s.bestBuy.shop) + ' ' + dir + '</p></a>';
+			}}).join('');
+		}}
+		function renderTable(rows, tbodyId) {{
+			document.getElementById(tbodyId).innerHTML = rows.map(function (r) {{
+				var s = liveMap[r.name];
+				var isLive = false, buy = r.buy, buyRate = r.buy_rate, sell = r.sell, sellRate = r.sell_rate;
+				if (s && r.face === '100,000' && tbodyId === 'paper_rows') {{
+					isLive = true;
+					buy = won(s.bestBuy.price); buyRate = s.bestBuy.rate + '%';
+					sell = won(s.bestSell.price); sellRate = s.bestSell.rate + '%';
+				}}
+				var slug = tbodyId === 'paper_rows' ? SLUGS[r.name] : null;
+				var attrs = slug ? ' class="link" onclick="location.href=\\'/price/' + slug + '.html\\'"' : '';
+				var extra = (isLive ? '<span class="live-dot" title="실시간"></span>' : '') + (slug ? '<span class="goto">상세 ›</span>' : '');
+				return '<tr' + attrs + '><td>' + esc(r.name) + extra + '</td><td>' + esc(r.face) + '</td>' +
+					'<td class="buy">' + esc(buy) + '<span class="rate">' + esc(buyRate) + '</span></td>' +
+					'<td class="sell">' + esc(sell) + '<span class="rate">' + esc(sellRate) + '</span></td></tr>';
+			}}).join('');
+		}}
+		renderTable(prices.paper || [], 'paper_rows');
+		renderTable(prices.mobile || [], 'mobile_rows');
+		document.getElementById('paper_updated').textContent = '매입가·판매가 / 괄호 % = 액면가 대비 할인율';
+		document.getElementById('mobile_updated').textContent = '한국상품권거래소 공시 ' + (prices.updated || '');
+		/* 앵커 이동 보정 (표가 채워진 뒤 다시 스크롤) */
+		if (location.hash) {{
+			var el = document.querySelector(location.hash);
+			if (el) el.scrollIntoView();
+		}}
+	}});
+}})();
+</script>
+</div>'''
+    return head + body + footer
+
+
 SAMPLES = [
     ("a", "다크 거래소형", None),      # None → 기본 CSS(시안 A)
     ("b", "라이트 클린형", "CSS_B"),
@@ -444,6 +571,10 @@ def main():
     header, footer = load_shell()
     out = SITE / "price"
     out.mkdir(exist_ok=True)
+    # 시세 전체 페이지 (/price/)
+    io.open(out / "index.html", "w", encoding="utf-8", newline="\n").write(
+        render_index_page(header, footer))
+    print("price/index.html 생성 (전체 시세표)")
     # 브랜드별 실제 페이지 (현재 시안 A 적용 — 시안 확정 시 교체)
     for cfg in BRANDS:
         io.open(out / f"{cfg['slug']}.html", "w", encoding="utf-8", newline="\n").write(

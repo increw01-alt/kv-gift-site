@@ -109,8 +109,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<ul class="flex">
 								<li>
 									<p class="menu_1">상품권 시세</p>
-									<span class="menu_1-1" onclick="location.href='/#price';">지류(종이) 상품권</span>
-									<span class="menu_1-2" onclick="location.href='/#price';">모바일상품권</span>
+									<span class="menu_1-1" onclick="location.href='/price/#paper';">지류(종이) 상품권</span>
+									<span class="menu_1-2" onclick="location.href='/price/#mobile';">모바일상품권</span>
 								</li>
 								<li>
 									<p class="menu_2">거래소 등록업체</p>
@@ -175,8 +175,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<div class="arrow normal"></div>
 						</div>
 						<ul class="nav_inner">
-							<li onclick="location.href='/#price';">지류(종이) 상품권</li>
-							<li onclick="location.href='/#price';">모바일 상품권</li>
+							<li onclick="location.href='/price/#paper';">지류(종이) 상품권</li>
+							<li onclick="location.href='/price/#mobile';">모바일 상품권</li>
 						</ul>
 					</li>
 					<li class="normal nav_list sub">
@@ -361,7 +361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="quick_view flex" id="price">
             <div class="quick1">
                 <div class="title">
-                                        <b  style="cursor:pointer;">지류(종이) 상품권 시세</b>
+                                        <b style="cursor:pointer;" onclick="location.href='/price/#paper';">지류(종이) 상품권 시세 <span style="font-size:12px;color:var(--color-orange);font-weight:normal">실시간 전체시세 ›</span></b>
                     <!-- <div class="more_btn">
                         <p>
                             <span class="bar1"></span>
@@ -382,7 +382,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="quick1">
                 <div class="title">
-                    <b  style="cursor:pointer;">모바일 상품권 시세</b>
+                    <b style="cursor:pointer;" onclick="location.href='/price/#mobile';">모바일 상품권 시세 <span style="font-size:12px;color:var(--color-orange);font-weight:normal">실시간 전체시세 ›</span></b>
                 </div>
                 <span>※ 한국상품권협회 제공 자료 [ <em class="price-updated"></em> ]</span>
                 <div class="market_price">
@@ -1000,7 +1000,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/swiper-bundle.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/main.js?v=20260930"></script>
 <!-- 네이버 애널리틱스 (기존 코드 유지) -->
 <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
 <script type="text/javascript">
