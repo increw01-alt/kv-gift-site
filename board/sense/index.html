@@ -232,18 +232,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="at-body" style="width:100%"><link rel="stylesheet" href="/css/board/free.css">
 <style>
 #list .list_title{background-image:url('/img/free_bg.jpg');}
+#list .list_title .wrap h1{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding:0 0 20px;margin:0 0 20px;position:relative;}
+#list .list_title .wrap h1:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
 #list{margin-bottom:100px;}
 @media (max-width:768px){
   #list .list-pc th:nth-child(1),#list .list-pc td:nth-child(1),
   #list .list-pc th:last-child,#list .list-pc td:last-child{display:none}
 }
 #list .list-pc tbody tr{cursor:pointer}
+#list .list-pc .list-subject a{color:inherit;text-decoration:none}
 #list .list-page{margin:30px 0}
 #board_search{display:flex;gap:6px;margin-top:20px;max-width:360px}
 #board_search input{flex:1;height:32px;border:1px solid #ddd;padding:0 10px;font-size:13px}
 #board_search button{height:32px;padding:0 14px;background:var(--color-orange);border:none}
 #board_search button img{width:14px;height:14px}
-</style><section id="list" class="board-list"><div class="list_title"><div class="wrap"><p>일반상식</p><span>한국상품권거래소 회원분들이 알고계시는 여러가지 상식들로 소통하는 공간입니다.</span><div id="board_search"><input type="text" id="stx" placeholder="검색어를 입력해 주세요." maxlength="20"><button type="button" onclick="doSearch()"><img src="/img/search_icon_w.svg" alt="검색"></button></div></div></div><div class="table-responsive"><table class="table div-table list-pc bg-white"><thead><tr><th scope="col">번호</th><th scope="col">제목</th><th scope="col">작성자</th><th scope="col">작성일</th><th scope="col"><nobr>조회수</nobr></th></tr></thead><tbody id="board_rows"></tbody></table></div><div class="list-page text-center"><ul class="pagination pagination-sm en" id="board_pager"></ul></div></section>
+</style><section id="list" class="board-list"><div class="list_title"><div class="wrap"><h1>일반상식</h1><span>한국상품권거래소 회원분들이 알고계시는 여러가지 상식들로 소통하는 공간입니다.</span><div id="board_search"><input type="text" id="stx" placeholder="검색어를 입력해 주세요." maxlength="20"><button type="button" onclick="doSearch()"><img src="/img/search_icon_w.svg" alt="검색"></button></div></div></div><div class="table-responsive"><table class="table div-table list-pc bg-white"><thead><tr><th scope="col">번호</th><th scope="col">제목</th><th scope="col">작성자</th><th scope="col">작성일</th><th scope="col"><nobr>조회수</nobr></th></tr></thead><tbody id="board_rows"><tr onclick="goPost(5)"><td class="text-center font-11"><span class="en">2</span></td><td class="list-subject"><a href="/board/sense/5.html">추석이 코앞인데요. 간단히 추석에 대해 알아볼까요~~</a></td><td><b><span class="sv_member">상품권다모아</span></b></td><td class="text-center en font-11">24.09.11</td><td class="text-center en font-11">38</td></tr><tr onclick="goPost(4)"><td class="text-center font-11"><span class="en">1</span></td><td class="list-subject"><a href="/board/sense/4.html">추석 귀성길 유의할 &quot;지정차로&quot;에 대한 상식</a></td><td><b><span class="sv_member">nearhwang1</span></b></td><td class="text-center en font-11">23.09.27</td><td class="text-center en font-11">38</td></tr></tbody></table></div><div class="list-page text-center"><ul class="pagination pagination-sm en" id="board_pager"></ul></div></section>
 <script>
 var ROWS = [], PAGE_SIZE = 20, HAS_CAT = false;
 var state = { page: 1, sca: '', stx: '' };
@@ -267,7 +270,7 @@ function render(){
     var cmt = r.cmt>0 ? ' <span class="count orangered">+<span class="cnt_cmt">'+r.cmt+'</span></span>' : '';
     out += '<tr onclick="goPost('+r.id+')"><td class="text-center font-11">'+num+'</td>'+
       (HAS_CAT?'<td class="text-center">'+esch(r.cat||'')+'</td>':'')+
-      '<td class="list-subject'+(r.notice?' notice':'')+'">'+esch(r.title)+cmt+'</td>'+
+      '<td class="list-subject'+(r.notice?' notice':'')+'"><a href="/board/sense/'+r.id+'.html">'+esch(r.title)+'</a>'+cmt+'</td>'+
       '<td><b><span class="sv_member">'+esch(r.author||'')+'</span></b></td>'+
       '<td class="text-center en font-11">'+esch(r.date||'')+'</td>'+
       '<td class="text-center en font-11">'+(r.hit||0)+'</td></tr>';

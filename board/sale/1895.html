@@ -234,10 +234,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #view_wrap .view_title{background-image:url('/img/sale_bg.jpg');}
 #view_wrap{margin-bottom:100px;}
 #view_wrap .view-content img{max-width:100%;height:auto;}
-#view_wrap .view_content>.wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;}
-#view_wrap .board_title{width:calc(100% - 40px);max-width:1200px;margin:0 auto 15px;font-size:22px;font-weight:bold;line-height:1.5;word-break:keep-all;}
-#view_wrap .heading{width:calc(100% - 40px);max-width:1200px;margin:0 auto 30px;padding-bottom:20px;border-bottom:1px solid #ddd;font-size:13px;color:#666;display:flex;gap:15px;}
-#view_wrap .heading .sv_member{font-weight:bold;color:#000;}
+/* 제목을 h1로 쓰되 디자인은 스킨(파란 바) 그대로 — 브라우저 기본 h1 여백만 제거 */
+#view_wrap .view_content h1.board_title{margin:0;}
+#view_wrap .heading span+span{margin-left:15px;}
 #view_wrap .view-comment{width:calc(100% - 40px);max-width:1200px;margin:60px auto 15px;font-size:16px;}
 #bo_vc{width:calc(100% - 40px);max-width:1200px;margin:0 auto;}
 #bo_vc .media{border:1px solid #eee;padding:15px;margin-bottom:10px;font-size:14px;}
@@ -248,11 +247,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .view-nav a{display:inline-block;padding:9px 22px;border:1px solid #ddd;color:#000;font-size:13px;text-decoration:none;transition:.2s;}
 .view-nav a:hover{border-color:var(--color-orange);color:var(--color-orange);}
 .view-nav a.list-btn{background:var(--color-orange);color:#fff;border-color:var(--color-orange);}
-</style>
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GS25 모바일상품권 5천원 판매합니다.", "description": "< 기타 상품권 > 대한민국 상품권의 기준 \"한국상품권협회\"에서 운영하는 상품권 중개플랫폼 1위 한국상품권거래소입니다. ▼ 아래 내용에 따라 판매글 작성 부탁드립니다. 1. 상품권 권종 : 5000 2. 상품권 금액", "image": ["https://kv-gift.co.kr/img/og_img.png"], "author": {"@type": "Person", "name": "majh0506"}, "publisher": {"@type": "Organization", "name": "한국상품권거래소", "logo": {"@type": "ImageObject", "url": "https://kv-gift.co.kr/img/og_img.png"}}, "mainEntityOfPage": "https://kv-gift.co.kr/board/sale/1895", "datePublished": "2024-11-12"}</script>
 <div id="view_wrap" class="view-wrap">
 	<div class="view_title"><div class="wrap"><p>상품권 판매게시판</p><span>모든 상품권 판매는 상품권 판매게시판에서 거래되고 있습니다.</span></div></div>
 	<div class="view_content">
-		<div class="board_title">GS25 모바일상품권 5천원 판매합니다.</div>
+		<h1 class="board_title">GS25 모바일상품권 5천원 판매합니다.</h1>
 		<div class="heading"><span class="sv_member">majh0506</span><span>24.11.12</span><span>조회 175</span></div>
 		<div class="wrap"><div class="view-content"><p style="margin-bottom: 50px; color: var(--color-orange); font-weight: bold;">&lt; 기타 상품권 &gt;</p>
 <p><b><span style="font-family:'맑은 고딕', 'malgun gothic';color:#666666;">대한민국 상품권의 기준 "한국상품권협회"에서 운영하는 상품권 중개플랫폼 1위 한국상품권거래소입니다.</span></b></p>

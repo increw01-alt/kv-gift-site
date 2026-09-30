@@ -77,14 +77,22 @@ def load_shell():
     return header, footer
 
 
-def page_head(header, title, desc, url):
+def page_head(header, title, desc, url, image=None):
     h = re.sub(r"<title>[^<]*</title>", f"<title>{esc(title)}</title>", header)
     h = re.sub(r'(<meta name="description" content=")[^"]*(")', rf"\g<1>{esc(desc)}\g<2>", h)
     h = re.sub(r'(<link rel="canonical" href=")[^"]*(")', rf"\g<1>{url}\g<2>", h)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*(")', rf"\g<1>{url}\g<2>", h)
     h = re.sub(r'(<meta property="og:title" content=")[^"]*(")', rf"\g<1>{esc(title)}\g<2>", h)
     h = re.sub(r'(<meta property="og:description" content=")[^"]*(")', rf"\g<1>{esc(desc)}\g<2>", h)
+    if image:
+        h = re.sub(r'(<meta property="og:image" content=")[^"]*(")', rf"\g<1>{image}\g<2>", h)
     return h
+
+
+def iso_date(d):
+    """'26.09.05' → '2026-09-05' (형식이 다르면 None)"""
+    m = re.match(r"^(\d{2})\.(\d{2})\.(\d{2})$", d or "")
+    return f"20{m.group(1)}-{m.group(2)}-{m.group(3)}" if m else None
 
 
 # ---------- 본문 정리 ----------
@@ -161,15 +169,21 @@ def parse_comment(raw):
 
 
 # ---------- 목록 페이지 ----------
+HERO_H1_CSS = ("{font-size:30px;font-weight:bold;color:#fff;line-height:40px;"
+               "padding:0 0 20px;margin:0 0 20px;position:relative;}")
+
 LIST_EXTRA_CSS = """
 <style>
 #list .list_title{background-image:url('%(bg)s');}
+#list .list_title .wrap h1""" + HERO_H1_CSS + """
+#list .list_title .wrap h1:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
 #list{margin-bottom:100px;}
 @media (max-width:768px){
   #list .list-pc th:nth-child(1),#list .list-pc td:nth-child(1),
   #list .list-pc th:last-child,#list .list-pc td:last-child{display:none}
 }
 #list .list-pc tbody tr{cursor:pointer}
+#list .list-pc .list-subject a{color:inherit;text-decoration:none}
 #list .list-page{margin:30px 0}
 #board_search{display:flex;gap:6px;margin-top:20px;max-width:360px}
 #board_search input{flex:1;height:32px;border:1px solid #ddd;padding:0 10px;font-size:13px}
@@ -180,6 +194,8 @@ LIST_EXTRA_CSS = """
 CARD_LIST_CSS = """
 <style>
 #list .list_title{background-image:url('%(bg)s');}
+#list .list_title .wrap h1""" + HERO_H1_CSS + """
+#list .list_title .wrap h1:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
 #list{margin-bottom:100px;}
 #card_rows{width:calc(100%% - 40px);max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px}
 #card_rows a{display:block;width:calc(25%% - 15px);border:1px solid #ddd;padding:25px 20px;color:#000;text-decoration:none;transition:.2s}
@@ -205,13 +221,16 @@ def render_list_page(bo, cfg, header, footer, rows, cat_counts):
 
     title_html = (
         f'<div class="list_title"><div class="wrap">'
-        f"<p>{esc(cfg['name'])}</p><span>{esc(cfg['sub'])}</span>{search_html}</div></div>")
+        f"<h1>{esc(cfg['name'])}</h1><span>{esc(cfg['sub'])}</span>{search_html}</div></div>")
 
     if cfg["layout"] == "card":
+        # 카드형(소형 게시판)은 전체를 정적 렌더링 — 검색봇이 바로 읽음
+        cards = "".join(
+            f'<a href="/board/{bo}/{r["id"]}.html"><strong>{esc(r["title"])}</strong>'
+            f'<span>{esc(r["date"] or "")}</span></a>' for r in rows)
         body = (f'<div class="at-body" style="width:100%">{skin}{CARD_LIST_CSS % cfg}'
                 f'<section id="list" class="board-list">{title_html}'
-                f'<div id="card_rows"></div></section>'
-                f"{card_list_script(bo)}</div>")
+                f'<div id="card_rows">{cards}</div></section></div>')
         return head + body + footer
 
     # 테이블형
@@ -232,12 +251,28 @@ def render_list_page(bo, cfg, header, footer, rows, cat_counts):
                   f'<div class="premium_slide"><div class="swiper-wrapper">{shop_slides}</div></div>'
                   f'<ul class="search_content flex" id="quick_btn_wrap">{btns}</ul></div>')
 
+    # 첫 페이지 20행은 정적으로 삽입 — 자바스크립트를 못 읽는 검색봇(네이버 등)도 글 링크 수집 가능
+    static_rows = ""
+    for r in rows[:20]:
+        num = ('<span class="wr-icon wr-notice"></span>' if r["notice"]
+               else f'<span class="en">{r["num"]}</span>')
+        cmt = (f' <span class="count orangered">+<span class="cnt_cmt">{r["cmt"]}</span></span>'
+               if r["cmt"] else "")
+        cat_td = f'<td class="text-center">{esc(r["cat"] or "")}</td>' if cfg["has_cat"] else ""
+        static_rows += (
+            f'<tr onclick="goPost({r["id"]})"><td class="text-center font-11">{num}</td>{cat_td}'
+            f'<td class="list-subject{" notice" if r["notice"] else ""}">'
+            f'<a href="/board/{bo}/{r["id"]}.html">{esc(r["title"])}</a>{cmt}</td>'
+            f'<td><b><span class="sv_member">{esc(r["author"] or "")}</span></b></td>'
+            f'<td class="text-center en font-11">{esc(r["date"] or "")}</td>'
+            f'<td class="text-center en font-11">{r["hit"] or 0}</td></tr>')
+
     cat_th = "<th scope=\"col\">분류</th>" if cfg["has_cat"] else ""
     table = (f'<div class="table-responsive"><table class="table div-table list-pc bg-white">'
              f"<thead><tr><th scope=\"col\">번호</th>{cat_th}<th scope=\"col\">제목</th>"
              f"<th scope=\"col\">작성자</th><th scope=\"col\">작성일</th>"
              f"<th scope=\"col\"><nobr>조회수</nobr></th></tr></thead>"
-             f'<tbody id="board_rows"></tbody></table></div>')
+             f'<tbody id="board_rows">{static_rows}</tbody></table></div>')
     pager = '<div class="list-page text-center"><ul class="pagination pagination-sm en" id="board_pager"></ul></div>'
 
     body = (f'<div class="at-body" style="width:100%">{skin}{LIST_EXTRA_CSS % cfg}'
@@ -272,7 +307,7 @@ function render(){
     var cmt = r.cmt>0 ? ' <span class="count orangered">+<span class="cnt_cmt">'+r.cmt+'</span></span>' : '';
     out += '<tr onclick="goPost('+r.id+')"><td class="text-center font-11">'+num+'</td>'+
       (HAS_CAT?'<td class="text-center">'+esch(r.cat||'')+'</td>':'')+
-      '<td class="list-subject'+(r.notice?' notice':'')+'">'+esch(r.title)+cmt+'</td>'+
+      '<td class="list-subject'+(r.notice?' notice':'')+'"><a href="/board/%(bo)s/'+r.id+'.html">'+esch(r.title)+'</a>'+cmt+'</td>'+
       '<td><b><span class="sv_member">'+esch(r.author||'')+'</span></b></td>'+
       '<td class="text-center en font-11">'+esch(r.date||'')+'</td>'+
       '<td class="text-center en font-11">'+(r.hit||0)+'</td></tr>';
@@ -316,30 +351,15 @@ document.addEventListener('DOMContentLoaded',function(){
 </script>""" % {"bo": bo, "has_cat": has_cat}
 
 
-def card_list_script(bo):
-    return """
-<script>
-function esch(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-document.addEventListener('DOMContentLoaded',function(){
-  fetch('/board/%(bo)s/list.json').then(function(r){return r.json();}).then(function(d){
-    document.getElementById('card_rows').innerHTML = d.map(function(r){
-      return '<a href="/board/%(bo)s/'+r.id+'.html"><strong>'+esch(r.title)+'</strong><span>'+esch(r.date||'')+'</span></a>';
-    }).join('') || '<p style="color:#999">게시물이 없습니다.</p>';
-  });
-});
-</script>""" % {"bo": bo}
-
-
 # ---------- 글 페이지 ----------
 VIEW_EXTRA_CSS = """
 <style>
 #view_wrap .view_title{background-image:url('%(bg)s');}
 #view_wrap{margin-bottom:100px;}
 #view_wrap .view-content img{max-width:100%%;height:auto;}
-#view_wrap .view_content>.wrap{width:calc(100%% - 40px);max-width:1200px;margin:0 auto;}
-#view_wrap .board_title{width:calc(100%% - 40px);max-width:1200px;margin:0 auto 15px;font-size:22px;font-weight:bold;line-height:1.5;word-break:keep-all;}
-#view_wrap .heading{width:calc(100%% - 40px);max-width:1200px;margin:0 auto 30px;padding-bottom:20px;border-bottom:1px solid #ddd;font-size:13px;color:#666;display:flex;gap:15px;}
-#view_wrap .heading .sv_member{font-weight:bold;color:#000;}
+/* 제목을 h1로 쓰되 디자인은 스킨(파란 바) 그대로 — 브라우저 기본 h1 여백만 제거 */
+#view_wrap .view_content h1.board_title{margin:0;}
+#view_wrap .heading span+span{margin-left:15px;}
 #view_wrap .view-comment{width:calc(100%% - 40px);max-width:1200px;margin:60px auto 15px;font-size:16px;}
 #bo_vc{width:calc(100%% - 40px);max-width:1200px;margin:0 auto;}
 #bo_vc .media{border:1px solid #eee;padding:15px;margin-bottom:10px;font-size:14px;}
@@ -355,10 +375,36 @@ VIEW_EXTRA_CSS = """
 
 def render_view_page(bo, cfg, header, footer, post, meta, prev_id, next_id):
     pid = post["wr_id"]
-    url = f"{DOMAIN}/board/{bo}/{pid}.html"
+    url = f"{DOMAIN}/board/{bo}/{pid}"
     desc = re.sub(r"\s+", " ", post.get("content_text", ""))[:120] or cfg["sub"]
-    head = page_head(header, f"{post['title']} | {cfg['name']}", desc, url)
+
+    # og:image / JSON-LD 이미지: 본문 첫 로컬 이미지 우선
+    first_img = None
+    m = re.search(r'src="(/board-img/[^"]+)"', post["_clean_html"])
+    if m:
+        first_img = DOMAIN + m.group(1)
+    og_image = first_img or f"{DOMAIN}/img/og_img.png"
+
+    head = page_head(header, f"{post['title']} | {cfg['name']}", desc, url, image=og_image)
     skin = f'<link rel="stylesheet" href="/css/board/{cfg["skin"]}.css">'
+
+    # Article 구조화 데이터 (검색 노출 강화)
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post["title"],
+        "description": desc,
+        "image": [og_image],
+        "author": {"@type": "Person", "name": post.get("author") or "한국상품권거래소"},
+        "publisher": {"@type": "Organization", "name": "한국상품권거래소",
+                      "logo": {"@type": "ImageObject", "url": f"{DOMAIN}/img/og_img.png"}},
+        "mainEntityOfPage": url,
+    }
+    pub = iso_date(post.get("date"))
+    if pub:
+        ld["datePublished"] = pub
+    ld_html = ('<script type="application/ld+json">'
+               + json.dumps(ld, ensure_ascii=False) + "</script>")
 
     hit_html = f"<span>조회 {meta['hit']}</span>" if meta and meta.get("hit") else ""
     author = esc(post.get("author") or "한국상품권거래소")
@@ -378,11 +424,11 @@ def render_view_page(bo, cfg, header, footer, post, meta, prev_id, next_id):
     nav += (f'<a href="/board/{bo}/{next_id}.html">다음글 &raquo;</a>' if next_id else "<span></span>")
     nav += "</div>"
 
-    body = f'''<div class="at-body" style="width:100%">{skin}{VIEW_EXTRA_CSS % cfg}
+    body = f'''<div class="at-body" style="width:100%">{skin}{VIEW_EXTRA_CSS % cfg}{ld_html}
 <div id="view_wrap" class="view-wrap">
 	<div class="view_title"><div class="wrap"><p>{esc(cfg["name"])}</p><span>{esc(cfg["sub"])}</span></div></div>
 	<div class="view_content">
-		<div class="board_title">{esc(post["title"])}</div>
+		<h1 class="board_title">{esc(post["title"])}</h1>
 		<div class="heading"><span class="sv_member">{author}</span><span>{date}</span>{hit_html}</div>
 		<div class="wrap"><div class="view-content">{post["_clean_html"]}</div></div>
 		<h3 class="view-comment">댓글 {n_cmt}</h3>
@@ -446,7 +492,8 @@ def main():
         # 목록 페이지
         io.open(out_dir / "index.html", "w", encoding="utf-8", newline="\n").write(
             render_list_page(bo, cfg, header, footer, rows, cat_counts))
-        sitemap_urls.append(f"{DOMAIN}/board/{bo}/")
+        board_lastmod = max((iso_date(r["date"]) or "" for r in rows), default="") or None
+        sitemap_urls.append((f"{DOMAIN}/board/{bo}/", board_lastmod))
 
         # 글 페이지 (이전/다음: 목록 순서 기준)
         order = [r["id"] for r in rows]
@@ -461,7 +508,7 @@ def main():
             html_out = render_view_page(bo, cfg, header, footer, p,
                                         meta.get(str(p["wr_id"])), prev_id, next_id)
             io.open(out_dir / f"{p['wr_id']}.html", "w", encoding="utf-8", newline="\n").write(html_out)
-            sitemap_urls.append(f"{DOMAIN}/board/{bo}/{p['wr_id']}.html")
+            sitemap_urls.append((f"{DOMAIN}/board/{bo}/{p['wr_id']}", iso_date(p.get("date"))))
             total_pages += 1
 
         # 메인 요약용 최근 글
@@ -477,8 +524,9 @@ def main():
     # 사이트맵
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in sitemap_urls:
-        sm.append(f"  <url><loc>{u}</loc></url>")
+    for u, lastmod in sitemap_urls:
+        lm = f"<lastmod>{lastmod}</lastmod>" if lastmod else ""
+        sm.append(f"  <url><loc>{u}</loc>{lm}</url>")
     sm.append("</urlset>")
     io.open(SITE / "sitemap-boards.xml", "w", encoding="utf-8").write("\n".join(sm))
 

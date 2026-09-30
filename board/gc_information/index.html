@@ -232,6 +232,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="at-body" style="width:100%"><link rel="stylesheet" href="/css/board/notice.css">
 <style>
 #list .list_title{background-image:url('/img/notice_bg.jpg');}
+#list .list_title .wrap h1{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding:0 0 20px;margin:0 0 20px;position:relative;}
+#list .list_title .wrap h1:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
 #list{margin-bottom:100px;}
 #card_rows{width:calc(100% - 40px);max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px}
 #card_rows a{display:block;width:calc(25% - 15px);border:1px solid #ddd;padding:25px 20px;color:#000;text-decoration:none;transition:.2s}
@@ -240,17 +242,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #card_rows span{font-size:12px;color:#999}
 @media (max-width:1000px){#card_rows a{width:calc(50% - 10px)}}
 @media (max-width:600px){#card_rows a{width:100%}}
-</style><section id="list" class="board-list"><div class="list_title"><div class="wrap"><p>상품권 정보</p><span>한국상품권거래소에서 알고있는 모든 상품권 정보를 회원분들께 공유합니다.</span><div id="board_search"><input type="text" id="stx" placeholder="검색어를 입력해 주세요." maxlength="20"><button type="button" onclick="doSearch()"><img src="/img/search_icon_w.svg" alt="검색"></button></div></div></div><div id="card_rows"></div></section>
-<script>
-function esch(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-document.addEventListener('DOMContentLoaded',function(){
-  fetch('/board/gc_information/list.json').then(function(r){return r.json();}).then(function(d){
-    document.getElementById('card_rows').innerHTML = d.map(function(r){
-      return '<a href="/board/gc_information/'+r.id+'.html"><strong>'+esch(r.title)+'</strong><span>'+esch(r.date||'')+'</span></a>';
-    }).join('') || '<p style="color:#999">게시물이 없습니다.</p>';
-  });
-});
-</script></div><footer id="general_tail">
+</style><section id="list" class="board-list"><div class="list_title"><div class="wrap"><h1>상품권 정보</h1><span>한국상품권거래소에서 알고있는 모든 상품권 정보를 회원분들께 공유합니다.</span><div id="board_search"><input type="text" id="stx" placeholder="검색어를 입력해 주세요." maxlength="20"><button type="button" onclick="doSearch()"><img src="/img/search_icon_w.svg" alt="검색"></button></div></div></div><div id="card_rows"><a href="/board/gc_information/2.html"><strong>상품권에도 유효기간이 존재할까?</strong><span>23.09.21</span></a><a href="/board/gc_information/1.html"><strong>test</strong><span>23.09.12</span></a></div></section></div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>
 	#nviwkmulthgjospeqfr .item { background-size:cover; background-position:center center; background-repeat:no-repeat; }

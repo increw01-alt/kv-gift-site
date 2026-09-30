@@ -232,6 +232,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="at-body" style="width:100%"><link rel="stylesheet" href="/css/board/notice.css">
 <style>
 #list .list_title{background-image:url('/img/notice_bg.jpg');}
+#list .list_title .wrap h1{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding:0 0 20px;margin:0 0 20px;position:relative;}
+#list .list_title .wrap h1:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
 #list{margin-bottom:100px;}
 #card_rows{width:calc(100% - 40px);max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px}
 #card_rows a{display:block;width:calc(25% - 15px);border:1px solid #ddd;padding:25px 20px;color:#000;text-decoration:none;transition:.2s}
@@ -240,17 +242,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #card_rows span{font-size:12px;color:#999}
 @media (max-width:1000px){#card_rows a{width:calc(50% - 10px)}}
 @media (max-width:600px){#card_rows a{width:100%}}
-</style><section id="list" class="board-list"><div class="list_title"><div class="wrap"><p>상품권 TIP</p><span>한국상품권거래소에서 알고있는 모든 상품권 TIP을 회원분들께 공유합니다.</span><div id="board_search"><input type="text" id="stx" placeholder="검색어를 입력해 주세요." maxlength="20"><button type="button" onclick="doSearch()"><img src="/img/search_icon_w.svg" alt="검색"></button></div></div></div><div id="card_rows"></div></section>
-<script>
-function esch(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-document.addEventListener('DOMContentLoaded',function(){
-  fetch('/board/gc_tip/list.json').then(function(r){return r.json();}).then(function(d){
-    document.getElementById('card_rows').innerHTML = d.map(function(r){
-      return '<a href="/board/gc_tip/'+r.id+'.html"><strong>'+esch(r.title)+'</strong><span>'+esch(r.date||'')+'</span></a>';
-    }).join('') || '<p style="color:#999">게시물이 없습니다.</p>';
-  });
-});
-</script></div><footer id="general_tail">
+</style><section id="list" class="board-list"><div class="list_title"><div class="wrap"><h1>상품권 TIP</h1><span>한국상품권거래소에서 알고있는 모든 상품권 TIP을 회원분들께 공유합니다.</span><div id="board_search"><input type="text" id="stx" placeholder="검색어를 입력해 주세요." maxlength="20"><button type="button" onclick="doSearch()"><img src="/img/search_icon_w.svg" alt="검색"></button></div></div></div><div id="card_rows"><a href="/board/gc_tip/28.html"><strong>신용카드 할부 상품권, 한국상품권협회 이용으로 현명하게 해결한 후기</strong><span>26.06.04</span></a><a href="/board/gc_tip/27.html"><strong>상품권 할부 구입 쇼핑몰 레드핀</strong><span>26.01.30</span></a><a href="/board/gc_tip/24.html"><strong>컬쳐랜드 컬쳐캐쉬 제휴 OPEN [플러스존] 91.5% 현금화</strong><span>25.05.26</span></a><a href="/board/gc_tip/22.html"><strong>컬쳐랜드 신용카드 소액결제 구입 쇼핑몰 안내</strong><span>25.03.31</span></a><a href="/board/gc_tip/21.html"><strong>문화상품권 할부 구입 -한국상품권협회-</strong><span>25.02.13</span></a><a href="/board/gc_tip/18.html"><strong>상품권 메신저 피싱 피해 예방안내</strong><span>23.11.08</span></a><a href="/board/gc_tip/16.html"><strong>코스트코 회원권없이 이용하기 !</strong><span>23.10.31</span></a><a href="/board/gc_tip/14.html"><strong>컬쳐랜드 사용처 정리!</strong><span>23.10.19</span></a><a href="/board/gc_tip/13.html"><strong>KB체크카드 포인트리 실적을 상품권으로 달성해봅시다</strong><span>23.10.17</span></a><a href="/board/gc_tip/12.html"><strong>북앤라이프 도서문화상품권 사용처에 대해서 알아보아요</strong><span>23.10.11</span></a><a href="/board/gc_tip/9.html"><strong>백화점 상품권 유효기간 지났다면 사용이 가능할까?</strong><span>23.10.04</span></a><a href="/board/gc_tip/8.html"><strong>홈플러스 상품권 교환 및 사용방법 !</strong><span>23.10.04</span></a><a href="/board/gc_tip/6.html"><strong>컬쳐랜드 상품권 환불 하는 방법!</strong><span>23.09.26</span></a><a href="/board/gc_tip/5.html"><strong>롯데상품권 사용처 정리!</strong><span>23.09.21</span></a><a href="/board/gc_tip/4.html"><strong>상품권 금액에 맞춰 사용해야 할까?</strong><span>23.09.21</span></a><a href="/board/gc_tip/3.html"><strong>상품권 카드로 구매 가능한가요?</strong><span>23.09.21</span></a></div></section></div><footer id="general_tail">
 			<div class="visual_bn pc">
 								<style>
 	#nviwkmulthgjospeqfr .item { background-size:cover; background-position:center center; background-repeat:no-repeat; }
