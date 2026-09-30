@@ -42,6 +42,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @media screen and (max-width:500px){ #hd_pop .hd_pops_con{width: 300px !important;} }
 #general_head .mo_wrap .nav_content>ul{height: calc(100% - 200px);}
 
+/* ===== FAQ 페이지 스타일 (원본 faq 스킨 대체 — 옛 서버 종료로 재작성) ===== */
+.faq_wrap .title{width:100%;background:url('/img/faq_bg.jpg') center/cover no-repeat;margin-bottom:50px;}
+.faq_wrap .title .wrap{width:calc(100% - 40px);max-width:1200px;margin:0 auto;padding:100px 0;}
+.faq_wrap .title .wrap p{font-size:30px;font-weight:bold;color:#fff;line-height:40px;padding-bottom:20px;margin-bottom:20px;position:relative;}
+.faq_wrap .title .wrap p:after{content:"";display:block;position:absolute;bottom:0;left:0;width:30px;height:2px;background:var(--color-orange);}
+.faq_wrap .title .wrap span{font-size:15px;color:#fff;}
+.faq-category{width:calc(100% - 40px);max-width:1200px;margin:0 auto 20px;}
+.faq-category .nav-tabs{border:none;}
+.faq-category .nav-tabs li{display:inline-block;padding:9px 22px;border:1px solid var(--color-orange);background:var(--color-orange);color:#fff;font-weight:bold;font-size:14px;border-radius:20px;}
+.faq-content{width:calc(100% - 40px);max-width:1200px;margin:0 auto 100px;}
+.faq-content .panel{border:1px solid #e5e5e5;margin-bottom:10px;border-radius:6px;overflow:hidden;box-shadow:none;}
+.faq-content .panel-heading{padding:0;background:#fff;}
+.faq-content .panel-heading a{display:flex;align-items:center;gap:12px;padding:17px 20px;font-size:15px;color:#000;text-decoration:none;}
+.faq-content .panel-heading a:hover{background:#fafafa;}
+.faq-content .panel-heading a span{color:var(--color-orange);font-weight:800;font-size:16px;}
+.faq-content .panel-heading a b{font-weight:600;flex:1;line-height:1.5;word-break:keep-all;}
+.faq-content .panel-body{display:flex;gap:12px;padding:18px 20px;background:#f8f9fc;border-top:1px solid #eee;}
+.faq-content .panel-body>span{color:var(--color-blue);font-weight:800;font-size:16px;}
+.faq-content .panel-body .right{flex:1;}
+.faq-content .panel-body .right p{margin:0 0 6px;line-height:1.75;font-size:14px;color:#333;word-break:keep-all;}
 </style>
 <!-- Google tag (gtag.js) (기존 코드 유지) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8CXQD45G3"></script>
@@ -237,6 +257,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* 제목을 h1로 쓰되 디자인은 스킨(파란 바) 그대로 — 브라우저 기본 h1 여백만 제거 */
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
+/* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_content .board_title{width:100%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
+#view_wrap .view_content .heading span{color:var(--color-blue);}
 #view_wrap .view-comment{width:calc(100% - 40px);max-width:1200px;margin:60px auto 15px;font-size:16px;}
 #bo_vc{width:calc(100% - 40px);max-width:1200px;margin:0 auto;}
 #bo_vc .media{border:1px solid #eee;padding:15px;margin-bottom:10px;font-size:14px;}

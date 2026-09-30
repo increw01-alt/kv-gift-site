@@ -379,6 +379,10 @@ VIEW_EXTRA_CSS = """
 /* 제목을 h1로 쓰되 디자인은 스킨(파란 바) 그대로 — 브라우저 기본 h1 여백만 제거 */
 #view_wrap .view_content h1.board_title{margin:0;}
 #view_wrap .heading span+span{margin-left:15px;}
+/* notice 스킨은 #notice_view 기준이라 규칙이 비므로 동일 디자인을 보강 (다른 스킨엔 같은 값이라 무해) */
+#view_wrap .view_content .board_title{width:100%%;height:50px;line-height:50px;font-size:15px;background:var(--color-blue);color:#fff;padding:0 20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#view_wrap .view_content .heading{background:#eee;padding:5px 20px;border-left:1px solid #eee;border-right:1px solid #eee;font-size:13px;}
+#view_wrap .view_content .heading span{color:var(--color-blue);}
 #view_wrap .view-comment{width:calc(100%% - 40px);max-width:1200px;margin:60px auto 15px;font-size:16px;}
 #bo_vc{width:calc(100%% - 40px);max-width:1200px;margin:0 auto;}
 #bo_vc .media{border:1px solid #eee;padding:15px;margin-bottom:10px;font-size:14px;}

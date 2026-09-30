@@ -119,6 +119,11 @@ box-shadow:0 18px 45px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);transition
 .px-actions a.buy-link{background:var(--px-accent);color:#fff;}
 .px-actions a.sell-link{background:transparent;border:1px solid var(--px-accent);color:var(--px-accent);}
 @media(max-width:600px){.px-big b{font-size:34px;}.px-quotes .area{display:none;}}
+/* 모바일: 고정 헤더가 다크 페이지와 겹치지 않게 (헤더 흰 배경 + 히어로 상단 여백) */
+@media(max-width:1200px){
+#general_head{background:#fff !important;border-bottom:1px solid #ddd !important;}
+#px_page .px-hero{padding-top:95px;}
+}
 /* 시세 전체 페이지: 브랜드 실시간 카드 */
 .px-brand-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px auto;}
 .px-bcard{background:var(--px-card);border:1px solid var(--px-line);border-radius:10px;padding:16px 18px;cursor:pointer;transition:.2s;text-decoration:none;display:block;}
