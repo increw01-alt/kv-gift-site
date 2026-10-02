@@ -1,0 +1,7 @@
+# kv-gift.com(+www) → kv-gift.co.kr 301 (저장소에서 관리 — Cloudflare 대시보드 규칙 대체)
+# 네이버 소유확인 파일만 리디렉션 예외로 그 자리에서 서빙
+https://kv-gift.com/naver28518f62c67d06e013be49e3326aaa33.html /naver28518f62c67d06e013be49e3326aaa33.html 200
+https://www.kv-gift.com/naver28518f62c67d06e013be49e3326aaa33.html /naver28518f62c67d06e013be49e3326aaa33.html 200
+https://kv-gift.com/* https://kv-gift.co.kr/:splat 301
+https://www.kv-gift.com/* https://kv-gift.co.kr/:splat 301
+https://www.kv-gift.co.kr/* https://kv-gift.co.kr/:splat 301
