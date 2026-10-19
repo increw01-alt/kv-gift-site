@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* 메인 추천 쇼핑몰 아래: 쿠팡 파트너스 상품 1개 */
+.affiliate-product {
+    --affiliate-ink: #1a264c;
+    --affiliate-body: #4b5563;
+    --affiliate-line: #e3e7ed;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    color: var(--affiliate-ink);
+    scroll-margin-top: 100px;
+}
+.affiliate-product__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-bottom: 12px;
+}
+.affiliate-product__heading h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--affiliate-ink);
+}
+.affiliate-product__label {
+    padding: 5px 9px;
+    border: 1px solid var(--affiliate-line);
+    border-radius: 4px;
+    color: var(--affiliate-body);
+    background: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.affiliate-product .affiliate-product__disclosure {
+    margin: 0 0 16px;
+    color: var(--affiliate-body);
+    font-size: 14px;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+.affiliate-product__card {
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+    border: 1px solid var(--affiliate-line);
+    border-radius: 12px;
+    background: #f8f9fb;
+}
+.affiliate-product__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid var(--affiliate-line);
+    border-radius: 8px;
+    background: #fff;
+}
+.affiliate-product__image img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+.affiliate-product__content { min-width: 0; }
+.affiliate-product .affiliate-product__eyebrow {
+    margin: 0 0 8px;
+    color: var(--affiliate-body);
+    font-size: 14px;
+    line-height: 1.6;
+}
+.affiliate-product__content h3 {
+    margin: 0 0 8px;
+    color: var(--affiliate-ink);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+.affiliate-product .affiliate-product__option {
+    margin: 0 0 16px;
+    color: var(--affiliate-body);
+    font-size: 14px;
+    line-height: 1.6;
+}
+.affiliate-product .affiliate-product__description {
+    margin: 0 0 20px;
+    color: var(--affiliate-body);
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+.affiliate-product .affiliate-product__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 18px;
+    border: 2px solid var(--affiliate-ink);
+    border-radius: 6px;
+    background: var(--affiliate-ink);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: background-color .18s ease, color .18s ease;
+}
+.affiliate-product .affiliate-product__cta:hover,
+.affiliate-product .affiliate-product__cta:focus-visible {
+    background: #fff;
+    color: var(--affiliate-ink);
+    text-decoration: none;
+}
+.affiliate-product .affiliate-product__cta:focus-visible {
+    outline: 3px solid var(--affiliate-ink);
+    outline-offset: 4px;
+}
+.affiliate-product .affiliate-product__note {
+    margin: 12px 0 0;
+    color: var(--affiliate-body);
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+@media (min-width: 700px) {
+    .affiliate-product__card {
+        grid-template-columns: 240px minmax(0, 1fr);
+        align-items: center;
+        gap: 32px;
+        padding: 32px;
+    }
+    .affiliate-product__image { min-height: 240px; }
+    .affiliate-product .affiliate-product__cta { width: auto; }
+}
+@media (max-width: 359px) {
+    .affiliate-product__card { padding: 18px; }
+    .affiliate-product__content h3 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .affiliate-product .affiliate-product__cta { transition: none; }
+}
