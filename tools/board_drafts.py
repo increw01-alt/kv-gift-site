@@ -50,7 +50,7 @@ def validate(data):
             raise ValueError('본문 구조 오류')
         if not isinstance(section['heading'], str) or not 3 <= len(section['heading']) <= 45:
             raise ValueError('소제목 길이 오류')
-        if not isinstance(section['body'], str) or not 100 <= len(section['body']) <= 650:
+        if not isinstance(section['body'], str) or not 60 <= len(section['body']) <= 650:
             raise ValueError('본문 길이 오류')
         strings.extend([section['heading'], section['body']])
     if not isinstance(data['checks'], list) or len(data['checks']) != 3:
@@ -81,8 +81,13 @@ def generate(topic, model):
 최신 정책이나 법률을 아는 것처럼 쓰지 않는다. 발행사·판매처·매입처에 각각 무엇을 확인할지 구분한다.
 수치, 숫자, 금액, 비율, 할인율, 처리 기간, 보장, 공식 인증, 현금화, 카드깡, 급전 표현은 쓰지 않는다.
 개인정보나 상품권 전체 번호를 공개 게시판에 쓰도록 유도하지 않는다. HTML, 마크다운, URL 없이 평문으로만 작성한다.
-summary는 한국어 30~180자, sections는 정확히 세 개로 heading 3~45자와 body 100~650자,
-checks는 구체적 확인 사항 세 개로 각각 10~130자. 비슷한 주의 문구를 반복하지 말고 질문에 직접 답한다.'''
+말투는 상담 담당자가 옆에서 설명하듯 자연스러운 해요체로 쓴다. 가상의 경험담은 만들지 않는다.
+'주요 사항을 안내합니다', '정확히 파악하여', '중요합니다', '꼼꼼히 확인하세요' 같은 추상적 문구를 반복하지 않는다.
+summary는 질문에 바로 답하는 도입 30~120자. sections는 정확히 세 개, heading은 독자의 짧은 질문 3~45자.
+body는 60~350자, 두세 개의 짧은 문단을 빈 줄(\\n\\n)로 구분한다. 문단마다 한두 문장만 쓴다.
+독자가 그대로 물어볼 수 있는 질문을 따옴표로 한 번 제시해도 좋다. 질문 예시는 실제 고객 발언처럼 소개하지 않는다.
+checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 본문에 같은 설명을 반복하지 않는다.
+특수기호와 번호는 템플릿에서 붙이므로 직접 넣지 않는다. 장식보다 쉬운 표현과 문단 구분에 집중한다.'''
     payload = {'model': model, 'store': False, 'max_output_tokens': 2600,
                'instructions': instructions, 'input': topic,
                'text': {'format': {'type': 'json_schema', 'name': 'board_guide', 'strict': True, 'schema': schema}}}
@@ -105,6 +110,51 @@ def replace_one(pattern, replacement, text):
     if n != 1:
         raise ValueError('사이트 템플릿이 변경되었습니다: ' + pattern[:70])
     return text
+
+
+def paragraphs(text):
+    """빈 줄을 의미 있는 문단으로 렌더링. 모델 텍스트는 항상 escape."""
+    chunks = [part.strip() for part in re.split(r'\n\s*\n', text) if part.strip()]
+    if len(chunks) == 1:
+        # 빈 줄을 놓친 응답도 두 문장마다 나눕니다.
+        sentences = re.split(r'(?<=[.!?。])\s+', text.strip())
+        chunks = [' '.join(sentences[i:i+2]) for i in range(0, len(sentences), 2)]
+    return ''.join('<p>'+html.escape(part)+'</p>' for part in chunks)
+
+
+EDITORIAL_CSS = '''<style>
+.editorial-guide{font-size:16px;line-height:1.85;overflow-wrap:anywhere;color:#26354a}
+.editorial-guide .editorial-label{font-size:13px;color:#627087;margin:0 0 18px}
+.editorial-guide .editorial-intro{background:#f3f6fa;border-left:3px solid #c4a466;padding:18px 22px;border-radius:0 10px 10px 0;margin:0 0 32px}
+.editorial-guide p{margin:0 0 16px;font-weight:400}
+.editorial-guide .editorial-intro p:last-child{margin-bottom:0}
+.editorial-guide section{margin:0 0 32px}
+.editorial-guide h2{font-size:21px;line-height:1.5;margin:0 0 14px;font-weight:700;color:#15243b}
+.editorial-guide .editorial-number{color:#907039;margin-right:9px;font-size:16px}
+.editorial-guide .editorial-checks{padding:22px;background:#f7f8fa;border:1px solid #e4e9ef;border-radius:12px}
+.editorial-guide .editorial-checks ul{padding:0;margin:0;list-style:none}
+.editorial-guide .editorial-checks li{list-style:none;display:flex;gap:10px;margin:10px 0;line-height:1.65}
+.editorial-guide .editorial-checks li span{color:#287460;font-weight:700;flex-shrink:0}
+.editorial-guide .editorial-note{font-size:13px;color:#687487;margin:20px 0}
+.editorial-guide .editorial-links{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0}
+.editorial-guide .editorial-links a{display:inline;width:auto;text-decoration:underline}
+.editorial-guide .editorial-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;background:#13233e;color:#fff;border-radius:8px;font-weight:600;width:auto}
+@media(max-width:500px){.editorial-guide h2{font-size:19px}.editorial-guide .editorial-intro,.editorial-guide .editorial-checks{padding:16px}.editorial-guide .editorial-cta{width:100%}}
+</style>'''
+
+
+def article_body(data):
+    body = '<p class="editorial-label">상품권 이용 가이드 · 운영팀 답변</p>'
+    body += '<div class="editorial-intro">'+paragraphs(data['summary'])+'</div>'
+    for number, section in enumerate(data['sections'], 1):
+        body += f'<section><h2><span class="editorial-number">{number:02d}</span>'+html.escape(section['heading'])+'</h2>'+paragraphs(section['body'])+'</section>'
+    body += '<section class="editorial-checks"><h2>문의 전, 이것만 챙겨두세요</h2><ul>'
+    body += ''.join('<li><span aria-hidden="true">✓</span><div>'+html.escape(x)+'</div></li>' for x in data['checks'])+'</ul></section>'
+    body += '<p class="editorial-note">※ 취급 여부와 거래 조건은 해당 판매처·매입처에 확인해 주세요. 상품권 전체 번호와 개인정보는 공개 게시판에 올리지 마세요.</p>'
+    body += '<nav class="editorial-links" aria-label="관련 안내"><a href="/guide.html">이용 안내 →</a><a href="/faq.html">자주 묻는 질문 →</a></nav>'
+    body += f'<a class="editorial-cta" href="{CHAT}" target="_blank" rel="nofollow noopener noreferrer">궁금한 점, 채널톡으로 물어보세요 →</a>'
+    body += '<p class="editorial-note">운영팀이 정리한 자주 묻는 질문 안내입니다.<br>실제 고객 후기나 접수된 문의가 아닙니다.</p>'
+    return body
 
 
 def render(board, topic, data, day, root=ROOT):
@@ -130,14 +180,7 @@ def render(board, topic, data, day, root=ROOT):
               'author':{'@type':'Organization','name':AUTHOR},'publisher':{'@type':'Organization','name':'한국상품권거래소'},
               'mainEntityOfPage':url,'datePublished':day.isoformat(),'image':DOMAIN+'/img/og_img.png'}
     source = replace_one(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')+'</script>', source)
-    body = '<p><strong>운영팀이 정리한 자주 묻는 질문 안내입니다. 실제 고객 후기나 접수된 문의가 아닙니다.</strong></p>'
-    body += '<p>'+esc(data['summary'])+'</p>'
-    for section in data['sections']:
-        body += '<h2>'+esc(section['heading'])+'</h2><p>'+esc(section['body'])+'</p>'
-    body += '<h2>상담 전 확인 사항</h2><ul>'+''.join('<li>'+esc(x)+'</li>' for x in data['checks'])+'</ul>'
-    body += '<p>취급 여부와 거래 조건은 해당 판매처·매입처에 확인해 주세요. 상품권 전체 번호와 개인정보는 공개 게시판에 올리지 마세요.</p>'
-    body += '<p><a href="/guide.html">이용 안내</a> · <a href="/faq.html">자주 묻는 질문</a></p>'
-    body += f'<p><a class="editorial-cta" href="{CHAT}" target="_blank" rel="nofollow noopener noreferrer">채널톡으로 문의하기</a></p>'
+    body = article_body(data)
     fragment = f'''<div id="view_wrap" class="view-wrap">
 <div class="view_title"><div class="wrap"><p>{name}</p><span>상품권 이용 전 궁금한 내용을 확인해 보세요.</span></div></div>
 <div class="view_content"><h1 class="board_title">{esc(title)}</h1>
@@ -149,8 +192,7 @@ def render(board, topic, data, day, root=ROOT):
     start = source.index('<div id="view_wrap"')
     end = source.index('</div><footer id="general_tail">', start)
     source = source[:start] + fragment + source[end:]
-    css = '<style>.editorial-guide{font-size:16px;line-height:1.85;overflow-wrap:anywhere}.editorial-guide h2{font-size:22px;margin:30px 0 12px}.editorial-guide p{margin:16px 0}.editorial-guide ul{padding-left:24px;list-style:disc}.editorial-guide li{list-style:disc;margin:8px 0}.editorial-guide .editorial-cta{display:inline-block;padding:14px 22px;background:#13233e;color:#fff;border-radius:8px}</style>'
-    source = source.replace('</head>', css+'</head>', 1)
+    source = source.replace('</head>', EDITORIAL_CSS+'</head>', 1)
     source = source.replace('width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0','width=device-width, initial-scale=1.0')
     entry = {'id':post_id,'num':max(x['num'] for x in rows)+1,'cat':'기타','title':title,'author':AUTHOR,'date':day.strftime('%y.%m.%d'),'hit':0,'cmt':0,'notice':False}
     rows.insert(0,entry)
@@ -180,6 +222,6 @@ def render(board, topic, data, day, root=ROOT):
     review = f'# {title}\n\n작성자: {AUTHOR}\n\n{data["summary"]}\n\n'
     for section in data['sections']:
         review += f'## {section["heading"]}\n\n{section["body"]}\n\n'
-    review += '## 상담 전 확인 사항\n\n'+'\n'.join('- '+x for x in data['checks'])
+    review += '## 문의 전, 이것만 챙겨두세요\n\n'+'\n'.join('- ✓ '+x for x in data['checks'])
     review += '\n\n---\nAI가 작성한 운영팀 안내 초안입니다. 실제 고객 후기가 아닙니다.\n\n- [ ] 내용과 사업 조건 확인\n- [ ] 실제 고객 후기처럼 보이는 표현이 없는지 확인\n- [ ] 게시할 준비가 되면 **Merge pull request** 실행\n\n승인 리뷰만으로는 게시되지 않습니다. main에 병합해야 배포됩니다.\n'
     return title, review, [str(p.relative_to(root)) for p in updates]
