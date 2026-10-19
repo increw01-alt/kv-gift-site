@@ -28,6 +28,10 @@ class DraftTests(unittest.TestCase):
         data=example();data['sections']=[]
         with self.assertRaises(ValueError): draft.validate(data)
 
+    def test_payment_words_are_not_first_person_testimonials(self):
+        data=example();data['sections'][0]['body']+=' 결제가 진행되기 전 문제가 있는지 확인하세요.'
+        draft.validate(data)
+
     def test_both_boards_render_without_losing_other_posts(self):
         for board in draft.BOARDS:
             with self.subTest(board=board), tempfile.TemporaryDirectory() as temp:

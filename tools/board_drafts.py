@@ -59,9 +59,10 @@ def validate(data):
         raise ValueError('확인 사항 길이 오류')
     strings.extend(data['checks'])
     text = '\n'.join(strings)
-    forbidden = r'https?://|www\.|[<>]|\d|[%％]|현금화|카드깡|급전|무조건|신용\s*무관|최저가|공식\s*인증|안전한\s*거래|제가|저는|제\s*경험|실제\s*고객|고객님께서|당일\s*입금|즉시\s*입금'
-    if re.search(forbidden, text, re.I):
-        raise ValueError('자동 검수에서 금액/수치/후기/금지 표현이 발견되어 게시를 중단했습니다.')
+    forbidden = r'https?://|www\.|[<>]|\d|[%％]|현금화|카드깡|급전|무조건|신용\s*무관|최저가|공식\s*인증|안전한\s*거래|(?<![가-힣])제가|(?<![가-힣])저는|(?<![가-힣])제\s*경험|실제\s*고객|고객님께서|당일\s*입금|즉시\s*입금'
+    match = re.search(forbidden, text, re.I)
+    if match:
+        raise ValueError('자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: ' + match.group(0))
     return data
 
 
