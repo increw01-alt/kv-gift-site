@@ -1,0 +1,46 @@
+/* 승인된 네이비·골드 상담 팝업. 본문과 상담 액션을 분리합니다. */
+html.consult-popup-open { overflow: hidden; }
+#consult-popup, #consult-popup * { box-sizing: border-box; }
+#consult-popup {
+  position: fixed; inset: 0; width: 400px; max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px);
+  margin: auto; padding: 0; border: 0; border-radius: 22px;
+  background: #13233e; color: #fff; overflow: hidden;
+  font-family: Pretendard, '맑은 고딕', sans-serif;
+  box-shadow: 0 22px 65px #15243b55; text-align: left;
+}
+#consult-popup[open] { display: flex; flex-direction: column; }
+#consult-popup::backdrop { background: rgba(15, 25, 43, .5); }
+#consult-popup .consult-close {
+  position: absolute; z-index: 1; top: 12px; right: 12px; width: 44px; height: 44px;
+  border: 0; border-radius: 50%; background: #24334c; color: #fff;
+  font-size: 25px; line-height: 1; cursor: pointer;
+}
+#consult-popup .consult-content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 26px 28px 22px; }
+#consult-popup .consult-brand { margin: 0 36px 25px 0; font-size: 13px; font-weight: 600; color: #e0c382; }
+#consult-popup .consult-eyebrow { margin: 0 0 10px; font-size: 12px; color: #c8d3e4; letter-spacing: 1px; }
+#consult-popup h2 { position: static; margin: 0 0 13px; font-size: 32px; font-weight: 750; line-height: 1.3; letter-spacing: -1px; color: #fff; }
+#consult-popup h2 em { font-style: normal; color: #e6c98b; }
+#consult-popup .consult-desc { margin: 0; font-size: 15px; line-height: 1.65; color: #d2d9e5; }
+#consult-popup .consult-ticket { margin: 24px 0 0; border: 1px solid #ffffff25; border-radius: 12px; padding: 17px; background: linear-gradient(110deg,#ffffff0b,#ffffff02); }
+#consult-popup .consult-ticket span { display: block; margin-bottom: 10px; font-size: 11px; color: #d9bf86; letter-spacing: 1.5px; }
+#consult-popup .consult-ticket strong { font-size: 16px; font-weight: 600; }
+#consult-popup .consult-ticket p { margin: 7px 0 0; font-size: 12px; line-height: 1.6; color: #b8c4d5; }
+#consult-popup .consult-actions { flex-shrink: 0; background: #fff; padding: 20px 24px 0; }
+#consult-popup .consult-cta { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 12px 8px; border-radius: 12px; background: #dabe7f; color: #15243b; font-size: 17px; line-height: 1.4; font-weight: 700; text-decoration: none; }
+#consult-popup .consult-cta svg { flex-shrink: 0; }
+#consult-popup .consult-cta:hover { background: #e5ca92; }
+#consult-popup .consult-hint { text-align: center; font-size: 12px; line-height: 1.5; color: #697282; margin: 10px 0 14px; }
+#consult-popup .consult-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid #e8ebf0; }
+#consult-popup .consult-footer button { min-height: 48px; min-width: 44px; padding: 0 3px; border: 0; background: none; color: #626b79; font: inherit; font-size: 12px; cursor: pointer; }
+#consult-popup :focus-visible { outline: 3px solid #4386df; outline-offset: -3px; }
+@media (max-width: 500px) {
+  #consult-popup { width: 340px; border-radius: 18px; }
+  #consult-popup .consult-content { padding: 22px 22px 20px; }
+  #consult-popup .consult-brand { margin-bottom: 23px; font-size: 12px; }
+  #consult-popup h2 { font-size: 28px; }
+  #consult-popup .consult-desc { font-size: 14px; }
+  #consult-popup .consult-ticket { margin-top: 18px; padding: 14px; }
+  #consult-popup .consult-actions { padding: 16px 18px 0; }
+  #consult-popup .consult-hint { font-size: 11px; }
+}

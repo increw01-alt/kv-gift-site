@@ -24,6 +24,26 @@
     $('#' + c[1]).hide();
   });
 
+  /* 상담 팝업: 기존 24시간 숨김 설정을 유지합니다. */
+  var consultPopup = document.getElementById('consult-popup');
+  if (consultPopup) {
+    function closeConsultPopup() { consultPopup.close(); }
+    consultPopup.querySelectorAll('[data-consult-close]').forEach(function (button) {
+      button.addEventListener('click', closeConsultPopup);
+    });
+    consultPopup.querySelector('[data-consult-hide]').addEventListener('click', function () {
+      setCookie('hd_pops_15', 1, 24);
+      closeConsultPopup();
+    });
+    consultPopup.addEventListener('close', function () {
+      document.documentElement.classList.remove('consult-popup-open');
+    });
+    if (!getCookie('hd_pops_15')) {
+      consultPopup.showModal();
+      document.documentElement.classList.add('consult-popup-open');
+    }
+  }
+
   /* ---------- 모바일 헤더 ---------- */
   $('#general_toggle').on('click', function () {
     $('.mo_wrap').css('display', 'block').removeClass('close').addClass('open');

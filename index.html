@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>한국상품권거래소 - 상품권 시세·매입·매매 중개플랫폼</title>
 <meta name="description" content="상품권 시세, 상품권 매입·판매 업체, 문화상품권 현금화 정보를 한 곳에서 확인하는 한국상품권협회 운영 상품권 중개플랫폼.">
 <meta name="keywords" content="한국상품권거래소, 상품권시세, 상품권매입, 상품권매매, 상품권거래, 문화상품권 현금화, 컬쳐랜드, 백화점상품권">
@@ -37,16 +37,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/css/basic.css">
 <link rel="stylesheet" href="/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="/css/consult-popup.css">
 <style>
-#hd_pop{z-index: 999999 !important;}
-#hd_pop .hd_pops_con{padding: 20px;height: fit-content !important;width: 400px !important;background:#1a264c;color: #fff;}
-#hd_pop .hd_pops_con .logo{ height: 30px; margin: 50px auto 0;}
-#hd_pop .hd_pops_con p{margin:0;}
-#hd_pop .hd_pops_con img:not(.logo){width:100%;height:auto;display:block;}
-@media screen and (max-width:500px){
-	#hd_pop .hd_pops_con{width: min(300px, calc(100vw - 30px)) !important;max-height: calc(100vh - 90px);overflow-y: auto;padding: 12px;}
-	#hd_pop .hd_pops_con .logo{margin: 15px auto 0;}
-}
 #general_head .mo_wrap .nav_content>ul{height: calc(100% - 200px);}
 .at-body{position:absolute;top:0;left:0;width:100%;height:fit-content;} #general_head{background:unset;}
 </style>
@@ -70,21 +62,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRDLP9JG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- 팝업레이어 시작 { -->
-<div id="hd_pop">
-    <h2>팝업레이어 알림</h2>
-    <div id="hd_pops_15" class="hd_pops" style="top:10px;left:10px">
-        <div class="hd_pops_con" style="width:300px;height:0px">
-            <p><a href="https://koreagiftcard.channel.io/home?page=%EA%B1%B0%EB%9E%98%EC%86%8C%ED%8C%9D%EC%97%85" target="_blank" rel="nofollow noreferrer noopener"><img src="/img/editor/popup-20260731.png" alt="한국상품권거래소 안내 팝업" /></a></p>
-            <img src="/img/logo_h.svg" alt="" class="logo">
-        </div>
-        <div class="hd_pops_footer">
-            <button class="hd_pops_reject hd_pops_15 24"><strong>24</strong>시간 동안 다시 열람하지 않습니다.</button>
-            <button class="hd_pops_close hd_pops_15">닫기 <i class="fa fa-times" aria-hidden="true"></i></button>
+<!-- 상담 팝업 -->
+<dialog id="consult-popup" aria-labelledby="consult-popup-title">
+    <button type="button" class="consult-close" data-consult-close aria-label="상담 팝업 닫기">×</button>
+    <div class="consult-content">
+        <p class="consult-brand">한국상품권거래소</p>
+        <p class="consult-eyebrow">한국상품권협회 상담 안내</p>
+        <h2 id="consult-popup-title">상품권 구입·판매,<br><em>궁금한 점을 물어보세요.</em></h2>
+        <p class="consult-desc">상품권 종류부터 이용 절차까지<br>채널톡에서 편하게 문의하세요.</p>
+        <div class="consult-ticket">
+            <span>GIFT CERTIFICATE GUIDE</span>
+            <strong>구입 문의 · 판매 문의 · 이용 안내</strong>
+            <p>취급 상품권과 이용 가능 여부는<br>상담을 통해 확인해 주세요.</p>
         </div>
     </div>
-</div>
-<!-- } 팝업레이어 끝 -->
+    <div class="consult-actions">
+        <a class="consult-cta" href="https://koreagiftcard.channel.io/home?page=%EA%B1%B0%EB%9E%98%EC%86%8C%ED%8C%9D%EC%97%85" target="_blank" rel="nofollow noreferrer noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-8 8H5l-3 2v-10a9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.7"/><path d="M7 11h.01M11 11h.01M15 11h.01" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>
+            <span>채널톡 상담 신청하기</span><span aria-hidden="true">→</span>
+        </a>
+        <p class="consult-hint">버튼을 누르면 채널톡 상담이 새 창으로 열립니다.</p>
+        <div class="consult-footer">
+            <button type="button" data-consult-hide>24시간 보지 않기</button>
+            <button type="button" data-consult-close>닫기</button>
+        </div>
+    </div>
+</dialog>
 <div id="thema_wrapper" class="wrapper ko">
 <div id="general_head">
 		<div class="top flex">
