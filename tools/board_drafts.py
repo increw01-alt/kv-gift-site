@@ -124,9 +124,9 @@ def paragraphs(text):
 
 EDITORIAL_CSS = '''<style>
 .editorial-guide{font-size:16px;line-height:1.85;overflow-wrap:anywhere;color:#26354a}
-.editorial-guide .editorial-label{font-size:13px;color:#627087;margin:0 0 18px}
+#view_wrap .editorial-guide p.editorial-label{font-size:13px !important;color:#627087;margin:0 0 18px}
 .editorial-guide .editorial-intro{background:#f3f6fa;border-left:3px solid #c4a466;padding:18px 22px;border-radius:0 10px 10px 0;margin:0 0 32px}
-.editorial-guide p{margin:0 0 16px;font-weight:400}
+#view_wrap .editorial-guide p{margin:0 0 18px !important;font-size:16px !important;line-height:1.85 !important;font-weight:400;word-break:keep-all}
 .editorial-guide .editorial-intro p:last-child{margin-bottom:0}
 .editorial-guide section{margin:0 0 32px}
 .editorial-guide h2{font-size:21px;line-height:1.5;margin:0 0 14px;font-weight:700;color:#15243b}
@@ -135,7 +135,7 @@ EDITORIAL_CSS = '''<style>
 .editorial-guide .editorial-checks ul{padding:0;margin:0;list-style:none}
 .editorial-guide .editorial-checks li{list-style:none;display:flex;gap:10px;margin:10px 0;line-height:1.65}
 .editorial-guide .editorial-checks li span{color:#287460;font-weight:700;flex-shrink:0}
-.editorial-guide .editorial-note{font-size:13px;color:#687487;margin:20px 0}
+#view_wrap .editorial-guide p.editorial-note{font-size:13px !important;color:#687487;margin:20px 0 !important}
 .editorial-guide .editorial-links{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0}
 .editorial-guide .editorial-links a{display:inline;width:auto;text-decoration:underline}
 .editorial-guide .editorial-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;background:#13233e;color:#fff;border-radius:8px;font-weight:600;width:auto}
