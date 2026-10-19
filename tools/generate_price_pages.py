@@ -453,6 +453,7 @@ def render_index_page(header, footer):
     title = "상품권 실시간 시세 | 한국상품권거래소"
     desc = "백화점·문화·주유·모바일 상품권 오늘 매입가와 판매가를 실시간으로 확인하세요. 신세계·롯데·현대·갤러리아·AK는 인증 거래소 호가와 추이 그래프도 제공합니다."
     head = page_head(header, title, desc, url)
+    head = head.replace('</head>', '<link rel="stylesheet" href="/css/price-affiliate.css?v=20261019-1">\n</head>')
 
     tabs = '<a class="on" href="/price/">전체 시세</a>'
     for b in BRANDS:
@@ -475,13 +476,34 @@ def render_index_page(header, footer):
 		<div class="px-brand-cards" id="brand_cards"></div>
 		<div class="px-sec px-table" id="paper">
 			<div class="px-sec-title"><b>📄 지류(종이) 상품권 시세</b><span id="paper_updated"></span></div>
+			<div class="px-table-scroll" role="region" aria-label="지류 상품권 시세표, 작은 화면에서는 좌우로 스크롤할 수 있습니다" tabindex="0">
 			<table><thead><tr><th>상품권</th><th>액면가 (원)</th><th>매입가 (원)</th><th>판매가 (원)</th></tr></thead>
 			<tbody id="paper_rows"><tr><td colspan="4" style="text-align:center;color:var(--px-dim);padding:30px">시세 불러오는 중…</td></tr></tbody></table>
+			</div>
 		</div>
+		<aside class="px-gift" id="gift-preparation" aria-labelledby="gift-preparation-title">
+			<div class="px-gift__disclosure">
+				<span class="px-gift__ad">광고 · 쿠팡 파트너스</span>
+				<p>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+			</div>
+			<div class="px-gift__body">
+				<img class="px-gift__image" src="https://t3a.coupangcdn.com/thumbnails/remote/212x212ex/image/vendor_inventory/1850/6705d11e4fbecc64d839a448b3095a19ed2f3716ed1aeb222bd5c01f9ff5.png" alt="반다이크 브라운 색상의 티켓·상품권용 갈색 봉투" width="84" height="84" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+				<div class="px-gift__content">
+					<h2 id="gift-preparation-title">지류 상품권을 선물하신다면</h2>
+					<p>갈색 상품권 봉투 50매 · 반다이크 브라운<br>구매 전 상품권과 봉투의 규격을 확인해 주세요.</p>
+				</div>
+				<div class="px-gift__action">
+					<a class="px-gift__cta" href="https://link.coupang.com/a/hYk3JZV4XQ" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="strict-origin-when-cross-origin" aria-label="갈색 상품권 봉투 50매, 쿠팡에서 보기 (새 창)">쿠팡에서 보기 <span aria-hidden="true">↗</span></a>
+					<p>가격·배송비는 쿠팡에서 확인</p>
+				</div>
+			</div>
+		</aside>
 		<div class="px-sec px-table" id="mobile">
 			<div class="px-sec-title"><b>📱 모바일 상품권 시세</b><span id="mobile_updated"></span></div>
+			<div class="px-table-scroll" role="region" aria-label="모바일 상품권 시세표, 작은 화면에서는 좌우로 스크롤할 수 있습니다" tabindex="0">
 			<table><thead><tr><th>상품권</th><th>액면가 (원)</th><th>매입가 (원)</th><th>판매가 (원)</th></tr></thead>
 			<tbody id="mobile_rows"><tr><td colspan="4" style="text-align:center;color:var(--px-dim);padding:30px">시세 불러오는 중…</td></tr></tbody></table>
+			</div>
 		</div>
 		<div class="px-actions">
 			<a class="buy-link" href="/board/purchase/">상품권 구매 문의 게시판 →</a>

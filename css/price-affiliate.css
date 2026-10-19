@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/* 긴 시세표가 모바일 페이지 전체를 가로로 밀어내지 않도록 제한 */
+#px_page .px-table-scroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+#px_page .px-table-scroll table { min-width: 480px; }
+#px_page .px-table-scroll:focus-visible {
+    outline: 2px solid var(--px-text);
+    outline-offset: 4px;
+}
+@media (max-width: 600px) {
+    #px_page .px-table .px-sec-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+/* 지류 시세표 다음에 배치하는 보조 상품 안내 */
+#px_page .px-gift {
+    --gift-muted: #b7c1de;
+    --gift-border: #52648e;
+    margin: 0 0 26px;
+    padding: 20px;
+    border: 1px solid var(--px-line);
+    border-radius: 10px;
+    background: var(--px-card);
+    color: var(--px-text);
+    scroll-margin-top: 100px;
+}
+.px-gift__disclosure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 14px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--px-line);
+    color: var(--gift-muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+.px-gift__ad {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+.px-gift__disclosure p { margin: 0; }
+.px-gift__body {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+}
+.px-gift__image {
+    display: block;
+    width: 76px;
+    height: 76px;
+    border-radius: 6px;
+    object-fit: contain;
+    background: #fff;
+}
+.px-gift__content { min-width: 0; }
+.px-gift__content h2 {
+    margin: 0 0 7px;
+    color: var(--px-text);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+.px-gift__content p {
+    margin: 0;
+    color: var(--gift-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+.px-gift__action { grid-column: 1 / -1; }
+#px_page .px-gift__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--gift-border);
+    border-radius: 6px;
+    color: var(--px-text);
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: background-color .18s ease, border-color .18s ease;
+}
+#px_page .px-gift__cta:hover,
+#px_page .px-gift__cta:focus-visible {
+    border-color: var(--gift-muted);
+    background: #26325a;
+    text-decoration: none;
+}
+#px_page .px-gift__cta:focus-visible {
+    outline: 2px solid var(--px-text);
+    outline-offset: 3px;
+}
+.px-gift__action p {
+    margin: 8px 0 0;
+    color: var(--gift-muted);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+@media (min-width: 800px) {
+    .px-gift__body {
+        grid-template-columns: 84px minmax(0, 1fr) 188px;
+        gap: 20px;
+    }
+    .px-gift__image { width: 84px; height: 84px; }
+    .px-gift__action { grid-column: auto; }
+}
+@media (max-width: 359px) {
+    #px_page .px-gift { padding: 16px; }
+    .px-gift__body { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+    .px-gift__image { width: 64px; height: 64px; }
+    .px-gift__content h2 { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #px_page .px-gift__cta { transition: none; }
+}
