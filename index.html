@@ -41,7 +41,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #hd_pop{z-index: 999999 !important;}
 #hd_pop .hd_pops_con{padding: 20px;height: fit-content !important;width: 400px !important;background:#1a264c;color: #fff;}
 #hd_pop .hd_pops_con .logo{ height: 30px; margin: 50px auto 0;}
-@media screen and (max-width:500px){ #hd_pop .hd_pops_con{width: 300px !important;} }
+#hd_pop .hd_pops_con p{margin:0;}
+#hd_pop .hd_pops_con img:not(.logo){width:100%;height:auto;display:block;}
+@media screen and (max-width:500px){
+	#hd_pop .hd_pops_con{width: min(300px, calc(100vw - 30px)) !important;max-height: calc(100vh - 90px);overflow-y: auto;padding: 12px;}
+	#hd_pop .hd_pops_con .logo{margin: 15px auto 0;}
+}
 #general_head .mo_wrap .nav_content>ul{height: calc(100% - 200px);}
 .at-body{position:absolute;top:0;left:0;width:100%;height:fit-content;} #general_head{background:unset;}
 </style>
@@ -70,7 +75,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2>팝업레이어 알림</h2>
     <div id="hd_pops_15" class="hd_pops" style="top:10px;left:10px">
         <div class="hd_pops_con" style="width:300px;height:0px">
-            <p><a href="https://koreagiftcard.channel.io/home?page=%EA%B1%B0%EB%9E%98%EC%86%8C%ED%8C%9D%EC%97%85" target="_blank" rel="nofollow noreferrer noopener"><img src="/img/editor/popup-20260731.png" alt="한국상품권거래소 안내 팝업" style="width:400px;height:601px;" /></a></p>
+            <p><a href="https://koreagiftcard.channel.io/home?page=%EA%B1%B0%EB%9E%98%EC%86%8C%ED%8C%9D%EC%97%85" target="_blank" rel="nofollow noreferrer noopener"><img src="/img/editor/popup-20260731.png" alt="한국상품권거래소 안내 팝업" /></a></p>
             <img src="/img/logo_h.svg" alt="" class="logo">
         </div>
         <div class="hd_pops_footer">
