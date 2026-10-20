@@ -94,5 +94,14 @@
     "id": 3689,
     "topic": "상품권 판매 상담 전에 어떤 정보를 준비하면 되나요?",
     "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "gc_tip",
+    "id": 31,
+    "topic": "여러 앱에 흩어진 상품권을 한눈에 정리하려면 어떻게 할까요?",
+    "drafted_at": "2026-10-20",
+    "automation": true,
+    "publication_mode": "user_approved",
+    "usage_file": "data/editorial_usage/approved-gc-tip-20261020.json"
   }
 ]
