@@ -103,5 +103,15 @@
     "automation": true,
     "publication_mode": "user_approved",
     "usage_file": "data/editorial_usage/approved-gc-tip-20261020.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2563,
+    "topic": "상품권 이름이 비슷할 때 사용처를 어떻게 구분하나요?",
+    "drafted_at": "2026-10-20",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39403765145",
+    "usage_file": "data/editorial_runs/2026-10-20/39403765145.json"
   }
 ]
