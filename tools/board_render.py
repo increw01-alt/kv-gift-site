@@ -180,21 +180,22 @@ def render_post(board, topic, data, day, root, banner, brief):
     return title, review, [p.relative_to(root).as_posix() for p in updates]
 
 
-def save_preview(folder, board, topic, data, day, raw, root, brief=None):
+def save_preview(folder, board, topic, data, day, raw, root, brief=None, approval_required=True):
     """운영 파일이나 PR을 변경하지 않는 검토 전용 미리보기."""
     folder = Path(folder)
     folder.mkdir(parents=True, exist_ok=True)
     (folder / 'banner.png').write_bytes(raw)
     css = (root / 'css/board/approved-tip.css').read_text(encoding='utf-8')
+    note = '게시 전 검토본 · 운영 사이트 미게시' if approval_required else '자동 게시 검수본 · 게시 결과는 result.json에서 확인'
     value = ('<!doctype html><html lang="ko"><head><meta charset="utf-8">'
              '<meta name="viewport" content="width=device-width, initial-scale=1">'
              '<meta name="robots" content="noindex,nofollow">'
              f'<title>{html.escape(title_for(board, topic))} | 게시 전 검토</title>'
              f'<style>{css}</style></head><body style="margin:0;background:#f5f6f8">'
-             '<main id="approved-tip"><p class="note">게시 전 검토본 · 운영 사이트 미게시</p>'
+             f'<main id="approved-tip"><p class="note">{note}</p>'
              + article_html(board, topic, data, day, 'banner.png', brief) + '</main></body></html>')
     (folder / 'index.html').write_text(value, encoding='utf-8', newline='\n')
     (folder / 'draft.json').write_text(json.dumps({
         'board': board, 'topic': topic, 'data': data, 'date': day.isoformat(), 'brief': brief,
-        'published': False, 'requires_user_approval': True,
+        'published': False, 'requires_user_approval': approval_required,
     }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')

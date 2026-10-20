@@ -18,7 +18,7 @@ def estimate(kind, model, usage):
                             for k in ('input_tokens', 'output_tokens')):
         return None
     details = usage.get('input_tokens_details') or {}
-    if kind == 'text' and model == 'gpt-4.1-mini':
+    if kind in ('text', 'topic', 'editing', 'review') and model == 'gpt-4.1-mini':
         cached = details.get('cached_tokens', 0)
         if not isinstance(cached, int) or not 0 <= cached <= usage['input_tokens']:
             return None
@@ -72,7 +72,8 @@ class UsageLog:
         for r in self.records:
             u = r['usage']
             cost = '확인 불가' if r['estimated_usd'] is None else f"${r['estimated_usd']:.6f}"
-            lines.append(f"| {'글' if r['kind'] == 'text' else '본문 상단 이미지'} | {r['model']} | {u.get('input_tokens', '미제공')} | {u.get('output_tokens', '미제공')} | {cost} |")
+            label = {'text':'글 초안','topic':'새 주제','editing':'문장 편집','review':'글·이미지 검수','image':'본문 상단 이미지'}.get(r['kind'],r['kind'])
+            lines.append(f"| {label} | {r['model']} | {u.get('input_tokens', '미제공')} | {u.get('output_tokens', '미제공')} | {cost} |")
         subtotal = sum(r['estimated_usd'] or 0 for r in self.records)
         lines += ['', f'계산 가능한 요청 합계: **${subtotal:.6f}**',
                   f'\n단가 기준일: {PRICE_DATE}. 실제 청구액이 아닌 예상 비용이며 세금·환전은 제외합니다.',

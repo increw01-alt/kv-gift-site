@@ -1,8 +1,8 @@
-name: 게시판 안내 글 자동 작성
+name: 게시판 글·이미지 자동 게시
 on:
   schedule:
-    - cron: '0 1 * * 2'
-    - cron: '0 1 * * 5'
+    # KST 09:17~18:17, 하루 10회. GitHub 사정에 따라 지연될 수 있습니다.
+    - cron: '17 0-9 * * *'
   workflow_dispatch:
     inputs:
       board:
@@ -11,12 +11,11 @@ on:
         options: [auto, gc_tip, purchase, gc_information, sale, general_notice, sense, free, gc_word]
         default: auto
       preview_only:
-        description: 검토 전용 생성 (글·배너 Artifact만 저장, PR·운영 사이트 변경 없음)
+        description: 검토 전용 생성 (켜면 글·배너·검수 Artifact만 저장하고 게시하지 않음)
         type: boolean
         default: false
 permissions:
   contents: write
-  pull-requests: write
 concurrency:
   group: board-editorial-drafts
   cancel-in-progress: false
@@ -24,7 +23,7 @@ jobs:
   draft:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -34,16 +33,22 @@ jobs:
           python-version: '3.12'
       - name: 생성기 검증
         run: python -m unittest discover -s tools/tests -v
-      - name: 안내 글 작성 및 검토 요청
+      - name: 글·이미지 생성 및 자동 검수 후 게시
+        id: publish
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL || 'gpt-image-2' }}
           OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY || 'medium' }}
-          GH_TOKEN: ${{ github.token }}
           REQUESTED_BOARD: ${{ inputs.board }}
           PREVIEW_ONLY: ${{ inputs.preview_only || 'false' }}
-        run: python tools/run_board_draft.py
+        run: python tools/run_board_publish.py
+      - name: 공개 게시글과 배너 확인
+        if: steps.publish.outputs.post_url != ''
+        env:
+          POST_URL: ${{ steps.publish.outputs.post_url }}
+          POST_BANNER: ${{ steps.publish.outputs.banner }}
+        run: python tools/verify_board_publication.py
       - name: API 사용량과 비용 기록 보관
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
