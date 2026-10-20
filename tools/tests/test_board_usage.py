@@ -27,12 +27,12 @@ class UsageTests(unittest.TestCase):
 
     def test_failure_keeps_text_cost_without_complete_total(self):
         with tempfile.TemporaryDirectory() as temp:
-            def generated(topic, model, on_usage):
+            def generated(topic, model, on_usage, **kwargs):
                 on_usage('text', model, {'input_tokens': 1000, 'output_tokens': 1000})
                 return example()
             with patch.dict('os.environ', {'RUNNER_TEMP': temp, 'GITHUB_STEP_SUMMARY': '', 'OPENAI_MODEL': 'gpt-4.1-mini'}), \
                  patch.object(runner, 'run', side_effect=['[]', '']), \
-                 patch.object(runner, 'pick_topic', return_value='topic'), \
+                 patch.object(runner, 'select_board', return_value=('purchase','topic')), \
                  patch.object(runner, 'generate', side_effect=generated), \
                  patch.object(runner, 'generate_banner', side_effect=RuntimeError('failed')), \
                  patch.object(runner, 'render') as render:

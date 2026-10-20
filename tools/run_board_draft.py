@@ -5,7 +5,10 @@ import os
 from pathlib import Path
 import subprocess
 import tempfile
-from board_drafts import ROOT, KST, pick_topic, generate, render
+import shutil
+from board_drafts import ROOT, KST, BOARDS, NoTopic, select_board, news_brief, generate, render
+from board_profiles import PROFILES
+from board_render import save_preview
 from board_banner import generate_banner
 from board_usage import UsageLog
 
@@ -23,27 +26,38 @@ def report_skip(message):
 
 
 def main():
-    board = os.getenv('REQUESTED_BOARD') or ('sale' if os.getenv('EVENT_SCHEDULE') == '0 1 * * 5' else 'purchase')
-    if board not in ('purchase','sale'):
+    requested = os.getenv('REQUESTED_BOARD') or 'auto'
+    preview_only = os.getenv('PREVIEW_ONLY', 'false').lower() == 'true'
+    if requested != 'auto' and requested not in BOARDS:
         raise ValueError('게시판 선택 오류')
-    prs = json.loads(run('gh','pr','list','--state','open','--limit','100','--json','headRefName,url'))
-    pending = [p for p in prs if p['headRefName'].startswith('auto/board-')]
-    if pending:
-        report_skip('검토 대기 글이 있어 추가 생성을 건너뜁니다: '+pending[0]['url'])
-        return
+    if preview_only and os.getenv('GITHUB_EVENT_NAME') != 'workflow_dispatch':
+        raise ValueError('검토 전용 생성은 수동 실행에서만 사용할 수 있습니다.')
+    if not preview_only:
+        prs = json.loads(run('gh','pr','list','--state','open','--limit','100','--json','headRefName,url'))
+        pending = [p for p in prs if p['headRefName'].startswith('auto/board-')]
+        if pending:
+            report_skip('검토 대기 글이 있어 추가 생성을 건너뜁니다: '+pending[0]['url'])
+            return
     day = dt.datetime.now(KST).date()
+    try:
+        board, topic = select_board(requested, day=day)
+    except NoTopic as error:
+        report_skip(str(error))
+        return
     branch = f'auto/board-{day.isoformat()}-{board}'
-    if run('git','ls-remote','--heads','origin',branch):
+    if not preview_only and run('git','ls-remote','--heads','origin',branch):
         report_skip('오늘 생성한 브랜치가 이미 있습니다. 재생성과 중복 과금을 방지합니다: '+branch)
         return
-    topic = pick_topic(board)
-    usage_path = Path(os.getenv('RUNNER_TEMP', tempfile.gettempdir())) / 'board-api-usage.json'
-    usage = UsageLog(usage_path)
+    brief = news_brief(topic, day=day) if PROFILES[board].get('requires_brief') else None
+    output_dir = Path(os.getenv('RUNNER_TEMP', tempfile.gettempdir()))
+    usage_path = output_dir / 'board-api-usage.json'
+    usage = UsageLog(usage_path, {'board': board, 'board_name': BOARDS[board], 'topic': topic,
+                                 'mode': 'preview_only' if preview_only else 'review_pr'})
     status = 'failed'
     try:
-        data = generate(topic, os.getenv('OPENAI_MODEL','gpt-4.1-mini'), on_usage=usage.record)
+        data = generate(topic, os.getenv('OPENAI_MODEL','gpt-4.1-mini'), on_usage=usage.record, board=board, day=day)
         # 두 API가 모두 성공한 뒤에만 게시판 파일을 변경합니다.
-        raw, image_info = generate_banner(topic, data, on_usage=usage.record)
+        raw, image_info = generate_banner(topic, data, on_usage=usage.record, board=board)
         status = 'completed'
     finally:
         usage.save(status)
@@ -51,6 +65,17 @@ def main():
         if os.getenv('GITHUB_STEP_SUMMARY'):
             with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
                 f.write(usage.markdown() + '\n\n생성 상태: ' + status + '\n')
+    preview_dir = output_dir / 'board-review'
+    save_preview(preview_dir, board, topic, data, day, raw, ROOT, brief)
+    shutil.copyfile(usage_path, preview_dir / 'board-api-usage.json')
+    if preview_only:
+        print('검토 전용 글·이미지를 생성했습니다. Artifact: board-review. PR과 운영 사이트는 변경하지 않았습니다.')
+        if os.getenv('GITHUB_STEP_SUMMARY'):
+            with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+                f.write(f'\n## 검토 전용 미리보기\n\n게시판: {BOARDS[board]}\n\n주제: {topic}\n\n'
+                        'Artifacts의 board-review 파일에서 글·배너·비용을 확인하세요. '
+                        'PR을 만들거나 운영 사이트에 게시하지 않았습니다.\n')
+        return
     banner = f'board-img/{board}/guide-{day.isoformat()}-{board}.png'
     image_path = ROOT / banner
     if image_path.exists():

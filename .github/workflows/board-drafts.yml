@@ -8,8 +8,12 @@ on:
       board:
         description: 작성할 게시판
         type: choice
-        options: [purchase, sale]
-        default: purchase
+        options: [auto, gc_tip, purchase, gc_information, sale, general_notice, sense, free, gc_word]
+        default: auto
+      preview_only:
+        description: 검토 전용 생성 (글·배너 Artifact만 저장, PR·운영 사이트 변경 없음)
+        type: boolean
+        default: false
 permissions:
   contents: write
   pull-requests: write
@@ -38,7 +42,7 @@ jobs:
           OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY || 'medium' }}
           GH_TOKEN: ${{ github.token }}
           REQUESTED_BOARD: ${{ inputs.board }}
-          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          PREVIEW_ONLY: ${{ inputs.preview_only || 'false' }}
         run: python tools/run_board_draft.py
       - name: API 사용량과 비용 기록 보관
         if: always()
@@ -46,5 +50,13 @@ jobs:
         with:
           name: board-api-usage-${{ github.run_id }}-${{ github.run_attempt }}
           path: ${{ runner.temp }}/board-api-usage.json
+          if-no-files-found: ignore
+          retention-days: 90
+      - name: 글과 배너 검토본 보관
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: board-review-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/board-review/
           if-no-files-found: ignore
           retention-days: 90

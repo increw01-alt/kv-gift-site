@@ -37,9 +37,10 @@ def estimate(kind, model, usage):
 
 
 class UsageLog:
-    def __init__(self, path):
+    def __init__(self, path, context=None):
         self.path = Path(path)
         self.records = []
+        self.context = context or {}
 
     def record(self, kind, model, usage):
         self.records.append({
@@ -57,6 +58,7 @@ class UsageLog:
         self.path.write_text(json.dumps({
             'run_id': os.getenv('GITHUB_RUN_ID'),
             'run_attempt': os.getenv('GITHUB_RUN_ATTEMPT'),
+            'context': self.context,
             'status': status, 'records': self.records,
             'known_subtotal_usd': round(sum(x for x in costs if x is not None), 8),
             'estimated_total_usd': round(sum(costs), 8) if costs and None not in costs and status == 'completed' else None,

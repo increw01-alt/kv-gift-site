@@ -8,13 +8,20 @@ from pathlib import Path
 import re
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit
+from board_profiles import PROFILES, ROTATION
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = '한국상품권거래소 운영팀'
 DOMAIN = 'https://kv-gift.co.kr'
 CHAT = 'https://koreagiftcard.channel.io/home?page=board-guide'
-BOARDS = {'purchase': ('상품권 구매게시판', 2560), 'sale': ('상품권 판매게시판', 3688)}
+BOARDS = {key: value['name'] for key, value in PROFILES.items()}
+TEMPLATE = 'board/general_notice/42.html'
 KST = dt.timezone(dt.timedelta(hours=9))
+
+
+class NoTopic(ValueError):
+    """유효한 주제가 없으면 API 호출 전에 정상적으로 건너뜁니다."""
 
 
 def read_json(path):
@@ -25,16 +32,65 @@ def normalized(text):
     return re.sub(r'[^가-힣a-z0-9]', '', text.lower())
 
 
-def pick_topic(board, root=ROOT):
-    topics = read_json(root / 'tools/board_topics.json')[board]
+def news_brief(topic, root=ROOT, day=None):
+    day = day or dt.datetime.now(KST).date()
+    for brief in read_json(root / 'tools/board_news_briefs.json'):
+        if brief.get('topic') != topic:
+            continue
+        if not dt.date.fromisoformat(brief['verified_on']) <= day <= dt.date.fromisoformat(brief['expires_on']):
+            continue
+        if not brief.get('facts') or not all(isinstance(x, str) and x.strip() for x in brief['facts']):
+            continue
+        if not brief.get('sources'):
+            continue
+        for source in brief['sources']:
+            parsed = urlsplit(source['url'])
+            if parsed.scheme != 'https' or parsed.netloc != 'kv-gift.co.kr' or not source.get('title'):
+                raise ValueError('협회 소식은 확인된 운영 사이트 자료를 사용해야 합니다.')
+            path = root / parsed.path.lstrip('/')
+            if not path.is_file() and not path.with_suffix('.html').is_file():
+                raise ValueError('협회 소식의 확인 자료가 저장소에 없습니다.')
+        return brief
+    raise NoTopic('사용 가능한 확인 자료가 없습니다. 협회 소식은 자료 확인 후 작성합니다.')
+
+
+def pick_topic(board, root=ROOT, day=None):
+    if board not in BOARDS:
+        raise ValueError('게시판 선택 오류')
+    topics = read_json(root / 'tools/board_topics.json').get(board, [])
+    if PROFILES[board].get('requires_brief'):
+        topics = [b['topic'] for b in read_json(root / 'tools/board_news_briefs.json')]
     rows = read_json(root / f'board/{board}/list.json')
     history = read_json(root / 'data/editorial_history.json') if (root / 'data/editorial_history.json').exists() else []
-    used = {x['topic'] for x in history if x['board'] == board}
-    titles = [normalized(x['title']) for x in rows]
+    # 게시판을 바꾸어 같은 주제를 재생산하지 않습니다.
+    used = {normalized(x['topic']) for x in history}
+    titles = [normalized(x['title']) for x in rows] + list(used)
     for topic in topics:
-        if topic not in used and all(difflib.SequenceMatcher(None, normalized(topic), t).ratio() < .88 for t in titles):
-            return topic
-    raise ValueError('미사용 주제가 없습니다. tools/board_topics.json에 새 질문을 추가하세요.')
+        if normalized(topic) in used or any(difflib.SequenceMatcher(None, normalized(topic), t).ratio() >= .82 for t in titles):
+            continue
+        if PROFILES[board].get('requires_brief'):
+            try:
+                news_brief(topic, root, day)
+            except NoTopic:
+                continue
+        return topic
+    raise NoTopic('미사용 주제 또는 유효한 확인 자료가 없습니다.')
+
+
+def select_board(requested='auto', root=ROOT, day=None):
+    if requested != 'auto':
+        return requested, pick_topic(requested, root, day)
+    history_path = root / 'data/editorial_history.json'
+    history = read_json(history_path) if history_path.exists() else []
+    last = next((x['board'] for x in reversed(history) if x.get('automation') and x['board'] in ROTATION), None)
+    start = (ROTATION.index(last) + 1) % len(ROTATION) if last else 0
+    for offset in range(len(ROTATION)):
+        board = ROTATION[(start + offset) % len(ROTATION)]
+        try:
+            return board, pick_topic(board, root, day)
+        except NoTopic:
+            continue
+    raise NoTopic('모든 게시판의 준비된 주제가 소진되었습니다. 새 주제 또는 확인 자료가 필요합니다.')
 
 
 def validate(data):
@@ -66,7 +122,9 @@ def validate(data):
     return data
 
 
-def generate(topic, model, on_usage=None):
+def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None):
+    profile = PROFILES[board]
+    brief = news_brief(topic, root, day) if profile.get('requires_brief') else None
     key = os.environ.get('OPENAI_API_KEY')
     if not key:
         raise ValueError('GitHub Secret OPENAI_API_KEY가 없습니다.')
@@ -88,8 +146,13 @@ body는 60~350자, 두세 개의 짧은 문단을 빈 줄(\\n\\n)로 구분한�
 독자가 그대로 물어볼 수 있는 질문을 따옴표로 한 번 제시해도 좋다. 질문 예시는 실제 고객 발언처럼 소개하지 않는다.
 checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 본문에 같은 설명을 반복하지 않는다.
 특수기호와 번호는 템플릿에서 붙이므로 직접 넣지 않는다. 장식보다 쉬운 표현과 문단 구분에 집중한다.'''
+    instructions += ('\n이 글을 넣을 게시판: ' + profile['name']
+                     + '\n게시판 편집 기준: ' + profile['purpose']
+                     + '\n세 절의 역할: ' + profile['outline']
+                     + '\n각 절은 서로 다른 구체적 내용을 설명한다. 모든 절을 문의하라는 말로 끝내지 않는다.'
+                     + '\n협회 소식의 확인 자료가 주어지면 그 안의 사실만 사용하고 새로운 사건이나 성과를 덧붙이지 않는다.')
     payload = {'model': model, 'store': False, 'max_output_tokens': 2600,
-               'instructions': instructions, 'input': topic,
+               'instructions': instructions, 'input': json.dumps({'topic': topic, 'verified_brief': brief}, ensure_ascii=False),
                'text': {'format': {'type': 'json_schema', 'name': 'board_guide', 'strict': True, 'schema': schema}}}
     request = urllib.request.Request('https://api.openai.com/v1/responses',
         data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
@@ -124,123 +187,8 @@ def paragraphs(text):
     return ''.join('<p>'+html.escape(part)+'</p>' for part in chunks)
 
 
-EDITORIAL_CSS = '''<style>
-.editorial-guide{font-size:16px;line-height:1.85;overflow-wrap:anywhere;color:#26354a}
-#view_wrap .editorial-guide p.editorial-label{font-size:13px !important;color:#627087;margin:0 0 18px}
-.editorial-guide .editorial-intro{background:#f3f6fa;border-left:3px solid #c4a466;padding:18px 22px;border-radius:0 10px 10px 0;margin:0 0 32px}
-#view_wrap .editorial-guide p{margin:0 0 18px !important;font-size:16px !important;line-height:1.85 !important;font-weight:400;word-break:keep-all}
-.editorial-guide .editorial-intro p:last-child{margin-bottom:0}
-.editorial-guide section{margin:0 0 32px}
-.editorial-guide h2{font-size:21px;line-height:1.5;margin:0 0 14px;font-weight:700;color:#15243b}
-.editorial-guide .editorial-number{color:#907039;margin-right:9px;font-size:16px}
-.editorial-guide .editorial-checks{padding:22px;background:#f7f8fa;border:1px solid #e4e9ef;border-radius:12px}
-.editorial-guide .editorial-checks ul{padding:0;margin:0;list-style:none}
-.editorial-guide .editorial-checks li{list-style:none;display:flex;gap:10px;margin:10px 0;line-height:1.65}
-.editorial-guide .editorial-checks li span{color:#287460;font-weight:700;flex-shrink:0}
-#view_wrap .editorial-guide p.editorial-note{font-size:13px !important;color:#687487;margin:20px 0 !important}
-.editorial-guide .editorial-links{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0}
-.editorial-guide .editorial-links a{display:inline;width:auto;text-decoration:underline}
-.editorial-guide .editorial-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;background:#13233e;color:#fff;border-radius:8px;font-weight:600;width:auto}
-@media(max-width:500px){.editorial-guide h2{font-size:19px}.editorial-guide .editorial-intro,.editorial-guide .editorial-checks{padding:16px}.editorial-guide .editorial-cta{width:100%}}
-</style>'''
-
-
-def article_body(data):
-    body = '<p class="editorial-label">상품권 이용 가이드 · 운영팀 답변</p>'
-    body += '<div class="editorial-intro">'+paragraphs(data['summary'])+'</div>'
-    for number, section in enumerate(data['sections'], 1):
-        body += f'<section><h2><span class="editorial-number">{number:02d}</span>'+html.escape(section['heading'])+'</h2>'+paragraphs(section['body'])+'</section>'
-    body += '<section class="editorial-checks"><h2>문의 전, 이것만 챙겨두세요</h2><ul>'
-    body += ''.join('<li><span aria-hidden="true">✓</span><div>'+html.escape(x)+'</div></li>' for x in data['checks'])+'</ul></section>'
-    body += '<p class="editorial-note">※ 취급 여부와 거래 조건은 해당 판매처·매입처에 확인해 주세요. 상품권 전체 번호와 개인정보는 공개 게시판에 올리지 마세요.</p>'
-    body += '<nav class="editorial-links" aria-label="관련 안내"><a href="/guide.html">이용 안내 →</a><a href="/faq.html">자주 묻는 질문 →</a></nav>'
-    body += f'<a class="editorial-cta" href="{CHAT}" target="_blank" rel="nofollow noopener noreferrer">궁금한 점, 채널톡으로 물어보세요 →</a>'
-    body += '<p class="editorial-note">운영팀이 정리한 자주 묻는 질문 안내입니다.<br>실제 고객 후기나 접수된 문의가 아닙니다.</p>'
-    return body
-
-
 def render(board, topic, data, day, root=ROOT, banner=None):
+    from board_render import render_post
     validate(data)
-    if banner and not re.fullmatch(r'board-img/(purchase|sale)/[a-zA-Z0-9-]+\.png', banner):
-        raise ValueError('잘못된 배너 경로입니다.')
-    name, sample = BOARDS[board]
-    rows_path = root / f'board/{board}/list.json'
-    rows = read_json(rows_path)
-    post_id = max(x['id'] for x in rows) + 1
-    path = root / f'board/{board}/{post_id}.html'
-    if path.exists():
-        raise ValueError('이미 존재하는 글 번호입니다.')
-    title = '[이용 안내] ' + topic
-    url = f'{DOMAIN}/board/{board}/{post_id}'
-    image_url = f'{DOMAIN}/{banner}' if banner else DOMAIN+'/img/og_img.png'
-    esc = html.escape
-    source = (root / f'board/{board}/{sample}.html').read_text(encoding='utf-8')
-    source = replace_one(r'<title>.*?</title>', f'<title>{esc(title)} | {name}</title>', source)
-    for attr, field, value in [('name','description',data['summary']), ('property','og:description',data['summary']),
-                               ('property','og:title',title), ('property','og:url',url),
-                               ('property','og:image',image_url)]:
-        source = replace_one(f'<meta {attr}="{field}" content="[^"]*"[^>]*>', f'<meta {attr}="{field}" content="{esc(value)}">', source)
-    source = replace_one(r'<link rel="canonical" href="[^"]*"[^>]*>', f'<link rel="canonical" href="{url}">', source)
-    if banner:
-        # 공유 미리보기에도 해당 글의 배너를 사용합니다.
-        for attr, field, value in [('name', 'twitter:image', image_url),
-                                   ('property', 'og:image:alt', topic+' 안내 배너')]:
-            tag = f'<meta {attr}="{field}" content="{esc(value)}">'
-            pattern = f'<meta {attr}="{field}" content="[^"]*"[^>]*>'
-            source = (replace_one(pattern, tag, source) if re.search(pattern, source)
-                      else source.replace('</head>', tag+'\n</head>', 1))
-    schema = {'@context':'https://schema.org','@type':'Article','headline':title,'description':data['summary'],
-              'author':{'@type':'Organization','name':AUTHOR},'publisher':{'@type':'Organization','name':'한국상품권거래소'},
-              'mainEntityOfPage':url,'datePublished':day.isoformat(),'image':image_url}
-    source = replace_one(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')+'</script>', source)
-    body = article_body(data)
-    if banner:
-        body = (f'<figure style="margin:0 0 28px"><img src="/{banner}" width="1536" height="1024" '
-                f'alt="{esc(topic)} 안내 배너" decoding="async" '
-                'style="display:block;width:100%;height:auto;border-radius:12px" />'
-                '<figcaption style="font-size:12px;color:#687487;margin-top:8px">'
-                '글의 이해를 돕기 위한 AI 생성 안내 이미지</figcaption></figure>') + body
-    fragment = f'''<div id="view_wrap" class="view-wrap">
-<div class="view_title"><div class="wrap"><p>{name}</p><span>상품권 이용 전 궁금한 내용을 확인해 보세요.</span></div></div>
-<div class="view_content"><h1 class="board_title">{esc(title)}</h1>
-<div class="heading"><span class="sv_member">{AUTHOR}</span><span>{day.strftime('%y.%m.%d')}</span><span>조회 <em id="hit_view" data-base="0" style="font-style:normal">0</em></span></div>
-<div class="wrap"><article class="view-content editorial-guide">{body}</article></div>
-<div class="view-nav"><a class="list-btn" href="/board/{board}/">목록으로</a></div></div></div>
-<script>fetch('/api/views/{board}/{post_id}').then(function(r){{return r.json();}}).then(function(d){{if(d && typeof d.n === 'number')document.getElementById('hit_view').textContent=d.n.toLocaleString();}}).catch(function(){{}});</script>
-'''
-    start = source.index('<div id="view_wrap"')
-    end = source.index('</div><footer id="general_tail">', start)
-    source = source[:start] + fragment + source[end:]
-    source = source.replace('</head>', EDITORIAL_CSS+'</head>', 1)
-    source = source.replace('width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0','width=device-width, initial-scale=1.0')
-    entry = {'id':post_id,'num':max(x['num'] for x in rows)+1,'cat':'기타','title':title,'author':AUTHOR,'date':day.strftime('%y.%m.%d'),'hit':0,'cmt':0,'notice':False}
-    rows.insert(0,entry)
-    index_path = root / f'board/{board}/index.html'
-    index = index_path.read_text(encoding='utf-8')
-    table = ''
-    for row in rows[:20]:
-        table += f'<tr onclick="goPost({row["id"]})"><td class="text-center font-11">{row["num"]}</td><td class="text-center">{esc(row["cat"])}</td><td class="list-subject"><a href="/board/{board}/{row["id"]}.html">{esc(row["title"])}</a></td><td>{esc(row["author"])}</td><td class="text-center">{esc(row["date"])}</td><td class="text-center">{row["hit"]}</td></tr>'
-    index = replace_one(r'<tbody[^>]*>.*?</tbody>', '<tbody id="board_rows">'+table+'</tbody>', index)
-    # 기존 렌더러가 사용하는 tbody ID를 그대로 보존합니다.
-    original = re.search(r'<tbody([^>]*)>', index_path.read_text(encoding='utf-8')).group(1)
-    index = index.replace('<tbody id="board_rows">','<tbody'+original+'>',1)
-    index = re.sub(r'총 \d+건\.',f'총 {len(rows)}건.',index)
-    latest_path = root / 'data/latest_posts.json'
-    latest = read_json(latest_path)
-    latest[board] = [{k:x[k] for k in ('id','cat','title','author','date')} for x in rows[:5]]
-    sitemap_path = root / 'sitemap-boards.xml'
-    sitemap = sitemap_path.read_text(encoding='utf-8').replace('</urlset>',f'  <url><loc>{url}</loc><lastmod>{day.isoformat()}</lastmod></url>\n</urlset>')
-    history_path = root / 'data/editorial_history.json'
-    history = read_json(history_path) if history_path.exists() else []
-    history.append({'board':board,'id':post_id,'topic':topic,'drafted_at':day.isoformat()})
-    updates = {path:source, rows_path:json.dumps(rows,ensure_ascii=False), index_path:index,
-               latest_path:json.dumps(latest,ensure_ascii=False,indent=1)+'\n',sitemap_path:sitemap,
-               history_path:json.dumps(history,ensure_ascii=False,indent=2)+'\n'}
-    for file, content in updates.items():
-        file.write_text(content,encoding='utf-8')
-    review = f'# {title}\n\n작성자: {AUTHOR}\n\n{data["summary"]}\n\n'
-    for section in data['sections']:
-        review += f'## {section["heading"]}\n\n{section["body"]}\n\n'
-    review += '## 문의 전, 이것만 챙겨두세요\n\n'+'\n'.join('- ✓ '+x for x in data['checks'])
-    review += '\n\n---\nAI가 작성한 운영팀 안내 초안입니다. 실제 고객 후기가 아닙니다.\n\n- [ ] 내용과 사업 조건 확인\n- [ ] 실제 고객 후기처럼 보이는 표현이 없는지 확인\n- [ ] 게시할 준비가 되면 **Merge pull request** 실행\n\n승인 리뷰만으로는 게시되지 않습니다. main에 병합해야 배포됩니다.\n'
-    return title, review, [str(p.relative_to(root)) for p in updates]
+    brief = news_brief(topic, root, day) if PROFILES[board].get('requires_brief') else None
+    return render_post(board, topic, data, day, root, banner, brief)

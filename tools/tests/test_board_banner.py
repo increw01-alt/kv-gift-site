@@ -57,7 +57,7 @@ class BannerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp, \
              patch.dict(os.environ, {'RUNNER_TEMP': temp, 'GITHUB_STEP_SUMMARY': ''}), \
              patch.object(runner,'run',side_effect=['[]','']) as command, \
-             patch.object(runner,'pick_topic',return_value='topic'), \
+             patch.object(runner,'select_board',return_value=('purchase','topic')), \
              patch.object(runner,'generate',return_value=example()), \
              patch.object(runner,'generate_banner',side_effect=RuntimeError('image unavailable')), \
              patch.object(runner,'render') as render:
@@ -76,3 +76,28 @@ class BannerTests(unittest.TestCase):
             summary = (Path(temp)/'summary.md').read_text(encoding='utf-8')
             self.assertIn('https://example.test/review/3', summary)
             self.assertIn('API를 호출하지 않았습니다', summary)
+
+    def test_manual_preview_never_runs_git_or_changes_site(self):
+        with tempfile.TemporaryDirectory() as temp, \
+             patch.dict(os.environ, {'RUNNER_TEMP':temp,'GITHUB_STEP_SUMMARY':'',
+                                    'PREVIEW_ONLY':'true','GITHUB_EVENT_NAME':'workflow_dispatch'}), \
+             patch.object(runner,'run') as command, \
+             patch.object(runner,'select_board',return_value=('gc_tip','topic')), \
+             patch.object(runner,'generate',return_value=example()), \
+             patch.object(runner,'generate_banner',return_value=(b'image',{})), \
+             patch.object(runner,'save_preview',side_effect=lambda folder,*args: folder.mkdir()), \
+             patch.object(runner,'render') as render:
+            runner.main()
+            command.assert_not_called()
+            render.assert_not_called()
+            self.assertTrue((Path(temp)/'board-review/board-api-usage.json').exists())
+
+    def test_no_topic_does_not_call_apis(self):
+        with patch.dict(os.environ,{'GITHUB_STEP_SUMMARY':'','PREVIEW_ONLY':'false'}), \
+             patch.object(runner,'run',return_value='[]'), \
+             patch.object(runner,'select_board',side_effect=runner.NoTopic('주제 소진')), \
+             patch.object(runner,'generate') as text_api, \
+             patch.object(runner,'generate_banner') as image_api:
+            runner.main()
+            text_api.assert_not_called()
+            image_api.assert_not_called()

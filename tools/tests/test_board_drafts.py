@@ -1,15 +1,35 @@
 import datetime as dt
-import importlib.util
+import io
 import json
+import os
 from pathlib import Path
+import re
 import shutil
 import sys
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import board_drafts as draft
+from board_profiles import PROFILES, ROTATION
+from board_render import ASSOCIATION, save_preview
+
+DAY = dt.date(2026, 10, 20)
+
+
+def fixture(root):
+    files = [draft.TEMPLATE, 'board/general_notice/43.html', 'board/general_notice/50.html',
+             'data/latest_posts.json', 'data/editorial_history.json', 'sitemap-boards.xml',
+             'tools/board_topics.json', 'tools/board_news_briefs.json', 'index.html',
+             'css/board/approved-tip.css']
+    for board in PROFILES:
+        files.extend([f'board/{board}/index.html', f'board/{board}/list.json'])
+    for name in files:
+        dest = root/name
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(draft.ROOT/name, dest)
 
 
 def example():
@@ -32,38 +52,130 @@ class DraftTests(unittest.TestCase):
         data=example();data['sections'][0]['body']+=' 결제가 진행되기 전 문제가 있는지 확인하세요.'
         draft.validate(data)
 
-    def test_both_boards_render_without_losing_other_posts(self):
+    def test_all_boards_preserve_posts_lists_metadata_and_homepage(self):
         for board in draft.BOARDS:
             with self.subTest(board=board), tempfile.TemporaryDirectory() as temp:
                 root=Path(temp)
-                sample=draft.BOARDS[board][1]
-                files=[f'board/{board}/{sample}.html',f'board/{board}/index.html',f'board/{board}/list.json','data/latest_posts.json','sitemap-boards.xml','tools/board_topics.json']
-                for name in files:
-                    dest=root/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(draft.ROOT/name,dest)
+                fixture(root)
                 old=draft.read_json(root/f'board/{board}/list.json')
-                topic=draft.pick_topic(board,root)
+                old_latest=draft.read_json(root/'data/latest_posts.json')
+                old_history=draft.read_json(root/'data/editorial_history.json')
+                old_sitemap=ET.fromstring((root/'sitemap-boards.xml').read_text(encoding='utf-8'))
+                topic=draft.pick_topic(board,root,DAY)
                 banner=f'board-img/{board}/guide-test.png'
-                title,review,changed=draft.render(board,topic,example(),dt.date(2026,10,19),root,banner=banner)
+                title,review,changed=draft.render(board,topic,example(),DAY,root,banner=banner)
                 rows=draft.read_json(root/f'board/{board}/list.json')
                 self.assertEqual(rows[1:],old)
                 self.assertEqual(rows[0]['author'],draft.AUTHOR)
-                self.assertNotEqual(draft.pick_topic(board,root),topic)
+                if board == 'gc_word':
+                    with self.assertRaises(draft.NoTopic): draft.pick_topic(board,root,DAY)
+                else:
+                    self.assertNotEqual(draft.pick_topic(board,root,DAY),topic)
                 page=(root/f'board/{board}/{rows[0]["id"]}.html').read_text(encoding='utf-8')
                 self.assertIn('실제 고객 후기나 접수된 문의가 아닙니다.',page)
-                self.assertIn(draft.CHAT,page)
+                if board in ('sense','free'):
+                    self.assertNotIn('class="cta"',page)
+                else:
+                    self.assertIn('href="'+ASSOCIATION+'"',page)
                 self.assertIn('src="/'+banner+'"',page)
                 self.assertIn('width="1536" height="1024"',page)
                 self.assertIn(f'<meta property="og:image" content="{draft.DOMAIN}/{banner}">',page)
                 self.assertIn(f'<meta name="twitter:image" content="{draft.DOMAIN}/{banner}">',page)
                 self.assertIn('"image": "'+draft.DOMAIN+'/'+banner+'"',page)
-                self.assertEqual(page.count('<h1 '),1)
+                self.assertEqual(len(re.findall(r'<h1[ >]',page)),1)
+                self.assertIn(f'href="/board/{board}/"',page)
                 self.assertIn(title,review)
                 self.assertIn('Merge pull request',review)
-                self.assertEqual(draft.read_json(root/'data/latest_posts.json')[board][0]['id'],rows[0]['id'])
-                ET.fromstring((root/'sitemap-boards.xml').read_text(encoding='utf-8'))
+                latest=draft.read_json(root/'data/latest_posts.json')
+                self.assertEqual(latest[board][0]['id'],rows[0]['id'])
+                for other in old_latest:
+                    if other != board: self.assertEqual(latest[other],old_latest[other])
+                history=draft.read_json(root/'data/editorial_history.json')
+                self.assertEqual(history[:-1],old_history)
+                self.assertTrue(history[-1]['automation'])
+                sitemap=ET.fromstring((root/'sitemap-boards.xml').read_text(encoding='utf-8'))
+                self.assertEqual(len(sitemap),len(old_sitemap)+1)
                 index=(root/f'board/{board}/index.html').read_text(encoding='utf-8')
-                self.assertIn(f'/{rows[0]["id"]}.html',index)
+                self.assertIn(f'/board/{board}/{rows[0]["id"]}',index)
                 self.assertIn(f'총 {len(rows)}건.',index)
+                if PROFILES[board]['list'] == 'table':
+                    tbody=re.search(r'<tbody[^>]*>.*?</tbody>',index,re.S).group()
+                    self.assertIn('id="board_rows"',tbody)
+                    first=re.search(r'<tr.*?</tr>',tbody,re.S).group()
+                    self.assertEqual(first.count('<td'),6 if PROFILES[board].get('category') else 5)
+                else:
+                    cards=re.search(r'<div id="card_rows">(.*?)</div>',index,re.S).group(1)
+                    self.assertEqual(cards.count('<a '),len(rows))
+                if board == 'free': self.assertGreater(rows[0]['id'],465)
+                if board in ('purchase','sale','free','gc_tip','general_notice'):
+                    self.assertIn('index.html',changed)
+                    self.assertIn(title,(root/'index.html').read_text(encoding='utf-8'))
+                if board == 'gc_word': self.assertIn('확인 자료',page)
+
+    def test_rotation_ignores_manual_posts_and_deduplicates_across_boards(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);fixture(root)
+            path=root/'data/editorial_history.json'
+            path.write_text('[]',encoding='utf-8')
+            board,topic=draft.select_board('auto',root,DAY)
+            self.assertEqual(board,ROTATION[0])
+            history=[{'board':'free','topic':topic,'automation':False}]
+            path.write_text(json.dumps(history),encoding='utf-8')
+            self.assertNotEqual(draft.pick_topic(board,root,DAY),topic)
+            self.assertEqual(draft.select_board('auto',root,DAY)[0],board)
+            history.append({'board':board,'topic':topic,'automation':True})
+            path.write_text(json.dumps(history),encoding='utf-8')
+            self.assertEqual(draft.select_board('auto',root,DAY)[0],ROTATION[1])
+
+    def test_missing_or_expired_news_skips_to_another_board(self):
+        for expired in (False,True):
+            with self.subTest(expired=expired),tempfile.TemporaryDirectory() as temp:
+                root=Path(temp);fixture(root)
+                path=root/'tools/board_news_briefs.json'
+                briefs=draft.read_json(path)
+                if expired: briefs[0]['expires_on']='2026-10-19'
+                else: briefs=[]
+                path.write_text(json.dumps(briefs),encoding='utf-8')
+                with self.assertRaises(draft.NoTopic): draft.pick_topic('gc_word',root,DAY)
+                (root/'data/editorial_history.json').write_text(
+                    json.dumps([{'board':'free','topic':'used','automation':True}]),encoding='utf-8')
+                self.assertEqual(draft.select_board('auto',root,DAY)[0],'gc_tip')
+
+    def test_invalid_template_or_banner_does_not_partially_write_lists(self):
+        for invalid in ('banner','template'):
+            with self.subTest(invalid=invalid),tempfile.TemporaryDirectory() as temp:
+                root=Path(temp);fixture(root)
+                path=root/'board/gc_tip/list.json'
+                before=path.read_bytes()
+                banner='board-img/gc_tip/test.png'
+                if invalid == 'banner': banner='board-img/sale/test.png'
+                else: (root/draft.TEMPLATE).write_text('<html></html>',encoding='utf-8')
+                with self.assertRaises(ValueError):
+                    draft.render('gc_tip','검토 주제',example(),DAY,root,banner)
+                self.assertEqual(path.read_bytes(),before)
+
+    @patch.dict(os.environ,{'OPENAI_API_KEY':'test-only'})
+    def test_requests_include_selected_board_editorial_direction(self):
+        for board in ('gc_tip','free','sense'):
+            response={'status':'completed','output':[{'content':[{'type':'output_text','text':json.dumps(example())}]}]}
+            with self.subTest(board=board),patch.object(draft.urllib.request,'urlopen',
+                    return_value=io.BytesIO(json.dumps(response).encode())) as api:
+                draft.generate('검토 주제','gpt-4.1-mini',board=board)
+                payload=json.loads(api.call_args.args[0].data)
+                self.assertIn(PROFILES[board]['purpose'],payload['instructions'])
+                self.assertIn(PROFILES[board]['outline'],payload['instructions'])
+
+    def test_standalone_preview_is_unpublished_and_does_not_edit_site(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);fixture(root)
+            path=root/'board/gc_tip/list.json'
+            before=path.read_bytes()
+            save_preview(root/'review','gc_tip','검토 주제',example(),DAY,b'image',root)
+            page=(root/'review/index.html').read_text(encoding='utf-8')
+            self.assertIn('noindex,nofollow',page)
+            self.assertIn('src="banner.png"',page)
+            self.assertFalse(draft.read_json(root/'review/draft.json')['published'])
+            self.assertEqual(path.read_bytes(),before)
 
 
 if __name__=='__main__': unittest.main()
