@@ -11,6 +11,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import board_editor as editor
 import run_board_publish as publish
+import verify_board_publication as public
 from board_drafts import ROOT, KST, NoTopic, read_json
 from board_usage import estimate
 from test_board_drafts import fixture, example, DAY
@@ -165,6 +166,43 @@ class PublishingTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 self.run_case(root,output,push_error=True)
             self.assertEqual(read_json(output/'board-review/result.json')['status'],'push_failed')
+
+    def test_later_day_rerun_only_outputs_existing_publication_without_api(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            url='https://kv-gift.co.kr/board/purchase/2563'
+            banner='board-img/purchase/guide-2026-10-20-100.png'
+            (root/banner).parent.mkdir(parents=True);(root/banner).write_bytes(b'png')
+            publish.write_json(root/'data/editorial_runs/2026-10-20/100.json',
+                {'status':'published','board':'purchase','date_kst':'2026-10-20','url':url})
+            output=Path(temp)/'github-output'
+            with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',
+                 'GITHUB_RUN_ID':'100','GITHUB_RUN_ATTEMPT':'2','PREVIEW_ONLY':'false',
+                 'GITHUB_STEP_SUMMARY':'','GITHUB_OUTPUT':str(output)}), \
+                 patch.object(publish,'sync_main'),patch.object(publish,'select_topic') as api:
+                self.assertEqual(publish.main(root,lambda *a:'',NOW),0)
+                api.assert_not_called()
+            self.assertIn('post_url='+url,output.read_text(encoding='utf-8'))
+            self.assertIn('banner='+banner,output.read_text(encoding='utf-8'))
+
+
+class PublicVerificationTests(unittest.TestCase):
+    def test_both_requests_identify_checker_and_match_original_banner(self):
+        banner='board-img/gc_tip/organize-vouchers-20261020.png'
+        url='https://kv-gift.co.kr/board/gc_tip/31'
+        page=f'<link rel="canonical" href="{url}"><img src="/{banner}">'
+        replies=[io.BytesIO(page.encode()),io.BytesIO((ROOT/banner).read_bytes())]
+        with patch.object(public.urllib.request,'urlopen',side_effect=replies) as call:
+            public.verify(url,banner,attempts=1)
+        self.assertEqual(call.call_count,2)
+        for invocation in call.call_args_list:
+            self.assertEqual(invocation.args[0].get_header('User-agent'),'KV-Publication-Check/1.0')
+
+    def test_old_page_without_new_banner_is_not_publication_success(self):
+        with patch.object(public.urllib.request,'urlopen',return_value=io.BytesIO(b'<html>old</html>')):
+            with self.assertRaisesRegex(RuntimeError,'이전 페이지'):
+                public.verify('https://kv-gift.co.kr/board/gc_tip/31',
+                              'board-img/gc_tip/organize-vouchers-20261020.png',attempts=1)
 
 
 if __name__ == '__main__':

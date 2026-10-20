@@ -19,7 +19,9 @@ def verify(url, banner, attempts=9, interval=20):
                 page = response.read().decode('utf-8')
             if f'href="{url}"' not in page or '/'+banner not in page:
                 raise ValueError('이전 페이지 또는 새 배너가 없는 응답')
-            with urllib.request.urlopen(DOMAIN+'/'+banner, timeout=15) as response:
+            image_request = urllib.request.Request(DOMAIN+'/'+banner,
+                headers={'Cache-Control':'no-cache', 'User-Agent':'KV-Publication-Check/1.0'})
+            with urllib.request.urlopen(image_request, timeout=15) as response:
                 raw = response.read()
             validate_png(raw)
             if hashlib.sha256(raw).digest() != expected:
@@ -30,9 +32,10 @@ def verify(url, banner, attempts=9, interval=20):
                 with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
                     out.write('\n\n'+message+'\n')
             return
-        except (urllib.error.URLError, ValueError, TimeoutError):
+        except (urllib.error.URLError, ValueError, TimeoutError) as error:
             if attempt+1 == attempts:
-                raise RuntimeError('제한 시간 안에 공개 배포를 확인하지 못했습니다. main 반영과 Cloudflare 상태를 확인하세요.') from None
+                raise RuntimeError('공개 배포 확인 실패: '+str(error)
+                                   + '. main 반영과 Cloudflare 상태를 확인하세요.') from None
             time.sleep(interval)
 
 

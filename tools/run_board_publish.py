@@ -32,6 +32,30 @@ def summary(text):
             output.write(text+'\n\n')
 
 
+def emit_publication(url, banner):
+    if os.getenv('GITHUB_OUTPUT'):
+        with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+            out.write(f'post_url={url}\nbanner={banner}\n')
+
+
+def recover_publication(root, run_id):
+    """실패 단계 재실행은 기존 게시글만 확인합니다. 날짜가 바뀌어도 재생성하지 않습니다."""
+    matches = list((root/'data/editorial_runs').glob(f'*/{run_id}.json'))
+    if not matches:
+        return False
+    if len(matches) != 1:
+        raise ValueError('동일 실행의 게시 기록이 여러 개입니다.')
+    record = read_json(matches[0])
+    if record.get('status') != 'published' or not record.get('url'):
+        return False
+    banner = f'board-img/{record["board"]}/guide-{record["date_kst"]}-{run_id}.png'
+    if not (root/banner).is_file():
+        raise ValueError('기존 게시 배너 파일을 찾을 수 없습니다.')
+    emit_publication(record['url'], banner)
+    summary('기존 게시글을 재생성하지 않고 공개 상태만 확인합니다: '+record['url'])
+    return True
+
+
 def guard(root, day, run_id, attempt):
     if attempt != '1':
         return '재실행은 중복 과금을 막기 위해 생성하지 않습니다. 이전 실행 기록을 확인하세요.'
@@ -96,6 +120,8 @@ def main(root=ROOT, command=None, now=None):
         '검토 전용 재실행도 중복 과금을 막기 위해 생성하지 않습니다.' if attempt != '1' else None)
     if reason:
         summary(reason+'\n\nAPI를 호출하지 않았습니다.')
+        if not preview:
+            recover_publication(root, run_id)
         return 0
     output = Path(os.getenv('RUNNER_TEMP', tempfile.gettempdir()))
     preview_dir = output/'board-review'
@@ -183,9 +209,7 @@ def main(root=ROOT, command=None, now=None):
                              'publication': 'main 반영 완료, 공개 배포는 다음 단계에서 확인'})
         write_json(draft_path, draft_record)
         summary('자동 검수를 통과하여 main에 반영했습니다: '+url+'\n\n다음 단계에서 공개 배포를 확인합니다.')
-        if os.getenv('GITHUB_OUTPUT'):
-            with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
-                out.write(f'post_url={url}\nbanner={banner}\n')
+        emit_publication(url, banner)
     else:
         summary('이번 글은 게시하지 않았습니다. 사유: '+' / '.join(report.get('issues', [])))
     return 1 if error else 0
