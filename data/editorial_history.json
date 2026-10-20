@@ -12,6 +12,84 @@
     "drafted_at": "2026-10-20"
   },
   {
+    "board": "gc_tip",
+    "id": 29,
+    "topic": "상품권 구매, 카드 실적과 포인트 적립은 같은 기준일까요?",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "gc_tip",
+    "id": 30,
+    "topic": "컬쳐랜드 충전이 안 된다면? 상품권 이름부터 확인해 보세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 42,
+    "topic": "상품권 사진을 올리기 전, PIN번호와 바코드를 가려 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 43,
+    "topic": "상품권 문의 전, 상품명·구매처·현재 상태를 먼저 알려 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 44,
+    "topic": "모바일상품권 문자가 안 왔나요? 재구매 전에 발송 상태를 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 45,
+    "topic": "상품권 유효기간이 다가온다면, 교환 기한과 사용 기한을 구분해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 46,
+    "topic": "상품권 취소·환불을 원한다면, 먼저 사용 상태를 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 47,
+    "topic": "상품권을 쓰고 금액이 남았나요? 잔액 사용과 반환을 따로 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 48,
+    "topic": "백화점 모바일 교환권, 방문 전에 교환처와 준비물을 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 49,
+    "topic": "‘이미 사용된 상품권’이라고 나오면, 사용내역부터 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 50,
+    "topic": "상품권 지급·환불 문자에 낯선 링크가 있다면, 먼저 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 51,
+    "topic": "취소 신청을 했는데 결제내역이 남아 있나요? 처리 단계를 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
+    "board": "general_notice",
+    "id": 52,
+    "topic": "할인·적립 정보를 보고 구매하기 전, 행사 기간과 제외 조건을 확인해 주세요",
+    "drafted_at": "2026-10-20"
+  },
+  {
     "board": "sale",
     "id": 3689,
     "topic": "상품권 판매 상담 전에 어떤 정보를 준비하면 되나요?",

@@ -1,0 +1,67 @@
+#approved-tip{--navy:#162943;--gold:#bd985d;--ink:#263449;--muted:#647185;--line:#e1e5eb}
+#approved-tip *{box-sizing:border-box}
+#approved-tip{margin:0;background:#f5f6f8;color:var(--ink);font-family:Pretendard,"Malgun Gothic",sans-serif;line-height:1.85}
+#approved-tip a{color:inherit}
+#approved-tip a:focus-visible{outline:3px solid #deaf58;outline-offset:5px}
+#approved-tip{max-width:900px;margin:36px auto 70px;padding:48px 66px;background:white;border:1px solid var(--line);border-radius:12px}
+#approved-tip .crumb{color:var(--muted);font-size:13px}
+#approved-tip .tag{display:inline-block;font-size:12px;letter-spacing:.1em;font-weight:800;color:#8a642a;margin:30px 0 12px}
+#approved-tip h1{font-size:36px;line-height:1.4;letter-spacing:-1.4px;margin:0 0 18px;color:var(--navy);word-break:keep-all}
+#approved-tip .meta{font-size:13px;color:var(--muted);padding-bottom:28px;border-bottom:1px solid var(--line)}
+#approved-tip .lead{font-size:19px;line-height:1.85;margin:28px 0}
+#approved-tip figure{margin:28px 0 36px}
+#approved-tip figure img{display:block;width:100%;height:auto;border-radius:10px;background:#f4eee2}
+#approved-tip figcaption{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+#approved-tip .takeaway{background:#f5f1e9;border-left:3px solid var(--gold);padding:22px 26px;margin:28px 0}
+#approved-tip .takeaway b{display:block;color:var(--navy);font-size:18px}
+#approved-tip .section{margin:44px 0}
+#approved-tip .num{color:#ac8246;font-size:13px;letter-spacing:.1em;font-weight:800}
+#approved-tip h2{font-size:24px;line-height:1.5;margin:6px 0 18px;letter-spacing:-.5px;word-break:keep-all}
+#approved-tip p{font-size:17px;margin:14px 0}
+#approved-tip .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+#approved-tip .card{border:1px solid var(--line);border-radius:10px;padding:22px}
+#approved-tip .card h3{margin:0 0 8px;font-size:18px;color:var(--navy)}
+#approved-tip .card p{font-size:15px;margin:0}
+#approved-tip .card small{display:block;color:#8c6a39;margin-top:14px;font-size:13px}
+#approved-tip blockquote{margin:22px 0;padding:22px 26px;background:#f3f6fa;border-radius:8px;font-size:17px;color:var(--navy)}
+#approved-tip ul{padding:0;list-style:none}
+#approved-tip li{position:relative;padding:8px 0 8px 26px;font-size:16px}
+#approved-tip li:before{content:"✓";position:absolute;left:0;color:#97703a;font-weight:700}
+#approved-tip .note{font-size:14px;color:var(--muted);background:#f7f8fa;padding:16px 20px;border-radius:8px}
+#approved-tip .cta{display:block;text-decoration:none;color:white;background:var(--navy);padding:30px 32px;border-radius:12px;margin-top:38px;position:relative;overflow:hidden}
+#approved-tip .cta:after{content:"";position:absolute;width:160px;height:160px;border:1px solid #ffffff16;border-radius:50%;right:-60px;top:-60px;pointer-events:none}
+#approved-tip .cta small{color:#d6b985;font-weight:700;letter-spacing:.04em}
+#approved-tip .cta h2{color:white;margin:10px 0;font-size:25px}
+#approved-tip .cta p{font-size:15px;color:#d2dce8;margin:0 0 20px}
+#approved-tip .cta .button{display:inline-block;background:#e6c899;color:#172841;padding:11px 19px;border-radius:6px;font-size:15px;font-weight:800}
+#approved-tip .cta:hover .button{background:#f0d9b7}
+#approved-tip .sources{border-top:1px solid var(--line);margin-top:32px;padding-top:22px;font-size:13px;color:var(--muted)}
+#approved-tip .sources p{font-size:13px}
+#approved-tip .sources a{text-underline-offset:3px}
+#approved-tip .foot{font-size:12px;color:var(--muted);margin:26px 0 0}
+@media(max-width:640px){#approved-tip{margin:0;border:0;border-radius:0;padding:28px 22px 48px}
+#approved-tip h1{font-size:28px;letter-spacing:-1px}
+#approved-tip .lead{font-size:17px}
+#approved-tip .tag{margin-top:24px}
+#approved-tip h2{font-size:21px}
+#approved-tip .compare{grid-template-columns:1fr}
+#approved-tip .section{margin:34px 0}
+#approved-tip .cta{padding:25px 22px}
+#approved-tip .cta h2{font-size:22px}
+#approved-tip .cta .button{display:block;text-align:center}
+#approved-tip blockquote{padding:18px 20px}
+#approved-tip .takeaway{padding:18px 20px}
+}
+
+
+.at-body{background:#f5f6f8}
+
+#approved-tip{font-size:16px;font-weight:400;overflow-wrap:break-word}
+
+#approved-tip h1,#approved-tip h2,#approved-tip h3{font-family:inherit;font-weight:700}
+
+#approved-tip .lead{font-weight:400}
+
+#approved-tip .tip-nav{display:flex;justify-content:space-between;gap:16px;margin-top:32px;border-top:1px solid var(--line);padding-top:20px;font-size:14px}
+
+#approved-tip .tip-nav a{padding:10px 0;text-decoration:underline;text-underline-offset:4px}

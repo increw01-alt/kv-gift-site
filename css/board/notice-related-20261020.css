@@ -1,0 +1,4 @@
+#approved-tip .related{padding:20px 24px;background:#f5f7fa;border-radius:8px;margin-top:32px}
+#approved-tip .related strong{display:block;margin-bottom:8px}
+#approved-tip .related a{display:block;font-size:14px;padding:6px 0;text-underline-offset:4px}
+@media(max-width:640px){#approved-tip .related{padding:18px}}

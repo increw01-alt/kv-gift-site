@@ -1,0 +1,6 @@
+#approved-tip .types{display:grid;gap:14px;margin:24px 0}
+#approved-tip .types>div{padding:20px 22px;border:1px solid var(--line);border-radius:10px}
+#approved-tip .types dt{font-size:18px;font-weight:750;color:var(--navy);margin-bottom:7px}
+#approved-tip .types dd{margin:0;font-size:16px}
+#approved-tip .types .caution{border-color:#d7c6a7;background:#faf6ee}
+@media(max-width:640px){#approved-tip .types>div{padding:18px}}
