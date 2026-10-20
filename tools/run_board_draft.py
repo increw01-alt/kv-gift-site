@@ -54,9 +54,11 @@ def main():
     repo = os.environ['GITHUB_REPOSITORY']
     image_url = f'https://github.com/{repo}/blob/{branch}/{banner}?raw=true'
     review = (usage.markdown() + '\n\n## 배너 미리보기\n\n![글 내용에 맞춘 자동 생성 배너]('+image_url+')\n\n'
-              '- [ ] 배너의 한글 오탈자·문구·그림과 본문의 일치 여부 확인\n\n' + review)
+              '- [ ] 네이비·골드·아이보리 일러스트가 글 내용과 어울리는지 확인\n'
+              '- [ ] 드라이브 원본 KV 로고의 형태·색상·비율과 모바일 가독성 확인\n\n' + review)
     review += ('\n\n<details><summary>이미지 생성 설정과 프롬프트</summary>\n\n'
                f'모델: `{image_info["model"]}` / 품질: `{image_info["quality"]}` / 한 장\n\n'
+               '참고 이미지: 승인된 일러스트 + 드라이브 KV 로고 원본 (`tools/assets/board-banner/`)\n\n'
                '```text\n'+image_info['prompt']+'\n```\n</details>\n')
     run('git','diff','--check')
     run('git','switch','-c',branch)

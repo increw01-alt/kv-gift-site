@@ -29,11 +29,29 @@ class BannerTests(unittest.TestCase):
             result, info = banner.generate_banner('선물용 상품권 선택',example())
         self.assertEqual(result,raw)
         self.assertEqual(call.call_count,1)
-        payload = json.loads(call.call_args.args[0].data)
+        request = call.call_args.args[0]
+        self.assertEqual(request.full_url, 'https://api.openai.com/v1/images/edits')
+        payload = json.loads(request.data)
         self.assertEqual(payload['n'],1)
         self.assertIn('선물용 상품권 선택',payload['prompt'])
         self.assertIn(example()['summary'],payload['prompt'])
         self.assertEqual(payload['output_format'],'png')
+        self.assertNotIn('input_fidelity', payload)
+        self.assertEqual(len(payload['images']), 2)
+        for item, name in zip(payload['images'], banner.REFERENCE_FILES):
+            prefix, encoded = item['image_url'].split(',', 1)
+            self.assertEqual(prefix, 'data:image/png;base64')
+            self.assertEqual(base64.b64decode(encoded), (banner.REFERENCE_DIR/name).read_bytes())
+        self.assertEqual(info['references'], list(banner.REFERENCE_FILES))
+
+    @patch.dict(os.environ, {'OPENAI_API_KEY': 'test-only'})
+    def test_missing_references_never_calls_api(self):
+        with tempfile.TemporaryDirectory() as temp, \
+             patch.object(banner, 'REFERENCE_DIR', Path(temp)), \
+             patch.object(banner.urllib.request, 'urlopen') as call:
+            with self.assertRaises(FileNotFoundError):
+                banner.generate_banner('topic', example())
+            call.assert_not_called()
 
     def test_image_failure_never_renders_or_pushes(self):
         with tempfile.TemporaryDirectory() as temp, \
