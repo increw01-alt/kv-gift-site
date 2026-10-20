@@ -9,7 +9,7 @@ import urllib.request
 import zlib
 
 REFERENCE_DIR = Path(__file__).resolve().parent / 'assets' / 'board-banner'
-REFERENCE_FILES = ('approved-style.png', 'kv-symbol.png')
+REFERENCE_FILES = ('approved-notice-style-20261020.png', 'kv-symbol.png')
 
 
 def build_prompt(topic, data):
@@ -19,13 +19,19 @@ def build_prompt(topic, data):
 The FIRST reference is the approved visual style: warm ivory paper texture, deep navy,
 muted gold, softly lit tactile paper-cut objects, calm spacing and restrained depth.
 Keep this style, but choose simple objects and a new composition relevant to the article.
-Do not repeat the calendar, star or arrows unless they actually suit this article.
+The first reference is a STYLE example, not a layout or topic to duplicate.
+Illustrate the specific problem and useful action described in this article.
+Do not repeat the headset, folders, calendar, star or arrows unless they suit this article.
 The SECOND reference is the owner's approved KV symbol from 한국상품권협회.
 Faithfully include this exact navy/red/blue symbol once, small but clearly recognizable,
-on the face of a gift certificate or an appropriate card in the scene, as in the style reference.
+as a standalone publisher mark in the bottom-right corner with generous clear space.
+Do not put the logo on a voucher, product, receipt or payment card:
+the logo identifies the publisher of this guide, not the issuer of an illustrated voucher.
 Preserve its shape, colors and proportions. Do not invent, rename or replace the logo.
-Do not add any headline, caption, label, lettering, watermark or pseudo-text.
-Use clean shapes to convey meaning; the actual headline and explanation are in the HTML.
+Add one concise Korean headline of at most eighteen Korean characters at the top,
+summarizing this article's practical question or action. Use large navy text and one
+muted-gold emphasis as in the approved example. Do not copy the reference headline.
+No other caption, labels, tiny text, pseudo-text or additional brand names.
 Make objects clear at mobile size and keep every element inside generous safe margins.
 No seals, QR codes, contact details, discounts, prices, guarantees, cash imagery or customer claims.
 Do not invent financial terms or depict loan services. This is an information guide.

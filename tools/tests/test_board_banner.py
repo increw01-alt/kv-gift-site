@@ -66,8 +66,13 @@ class BannerTests(unittest.TestCase):
             self.assertEqual(command.call_count,2)
 
     def test_pending_review_does_not_call_either_api(self):
-        with patch.object(runner,'run',return_value='[{"headRefName":"auto/board-test","url":"test"}]'), \
+        with tempfile.TemporaryDirectory() as temp, \
+             patch.dict(os.environ, {'GITHUB_STEP_SUMMARY': str(Path(temp)/'summary.md')}), \
+             patch.object(runner,'run',return_value='[{"headRefName":"auto/board-test","url":"https://example.test/review/3"}]'), \
              patch.object(runner,'generate') as text_api, patch.object(runner,'generate_banner') as image_api:
             runner.main()
             text_api.assert_not_called()
             image_api.assert_not_called()
+            summary = (Path(temp)/'summary.md').read_text(encoding='utf-8')
+            self.assertIn('https://example.test/review/3', summary)
+            self.assertIn('API를 호출하지 않았습니다', summary)

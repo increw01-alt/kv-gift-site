@@ -14,6 +14,14 @@ def run(*args):
     return subprocess.check_output(args, cwd=ROOT, text=True, encoding='utf-8').strip()
 
 
+def report_skip(message):
+    print(message)
+    if os.getenv('GITHUB_STEP_SUMMARY'):
+        with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as f:
+            f.write('## 이번 실행은 생성하지 않았습니다\n\n' + message
+                    + '\n\n글·이미지 API를 호출하지 않았습니다. 새 API 비용은 발생하지 않습니다.\n')
+
+
 def main():
     board = os.getenv('REQUESTED_BOARD') or ('sale' if os.getenv('EVENT_SCHEDULE') == '0 1 * * 5' else 'purchase')
     if board not in ('purchase','sale'):
@@ -21,12 +29,12 @@ def main():
     prs = json.loads(run('gh','pr','list','--state','open','--limit','100','--json','headRefName,url'))
     pending = [p for p in prs if p['headRefName'].startswith('auto/board-')]
     if pending:
-        print('검토 대기 글이 있어 추가 생성을 건너뜁니다: '+pending[0]['url'])
+        report_skip('검토 대기 글이 있어 추가 생성을 건너뜁니다: '+pending[0]['url'])
         return
     day = dt.datetime.now(KST).date()
     branch = f'auto/board-{day.isoformat()}-{board}'
     if run('git','ls-remote','--heads','origin',branch):
-        print('오늘 생성한 브랜치가 이미 있습니다. 재생성과 중복 과금을 방지합니다: '+branch)
+        report_skip('오늘 생성한 브랜치가 이미 있습니다. 재생성과 중복 과금을 방지합니다: '+branch)
         return
     topic = pick_topic(board)
     usage_path = Path(os.getenv('RUNNER_TEMP', tempfile.gettempdir())) / 'board-api-usage.json'
@@ -55,7 +63,8 @@ def main():
     image_url = f'https://github.com/{repo}/blob/{branch}/{banner}?raw=true'
     review = (usage.markdown() + '\n\n## 배너 미리보기\n\n![글 내용에 맞춘 자동 생성 배너]('+image_url+')\n\n'
               '- [ ] 네이비·골드·아이보리 일러스트가 글 내용과 어울리는지 확인\n'
-              '- [ ] 드라이브 원본 KV 로고의 형태·색상·비율과 모바일 가독성 확인\n\n' + review)
+              '- [ ] 짧은 한글 제목의 오탈자와 모바일 가독성 확인\n'
+              '- [ ] 하단 KV 로고가 원본과 같고 상품권 발행사 표시처럼 보이지 않는지 확인\n\n' + review)
     review += ('\n\n<details><summary>이미지 생성 설정과 프롬프트</summary>\n\n'
                f'모델: `{image_info["model"]}` / 품질: `{image_info["quality"]}` / 한 장\n\n'
                '참고 이미지: 승인된 일러스트 + 드라이브 KV 로고 원본 (`tools/assets/board-banner/`)\n\n'

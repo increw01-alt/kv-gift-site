@@ -161,6 +161,8 @@ def article_body(data):
 
 def render(board, topic, data, day, root=ROOT, banner=None):
     validate(data)
+    if banner and not re.fullmatch(r'board-img/(purchase|sale)/[a-zA-Z0-9-]+\.png', banner):
+        raise ValueError('잘못된 배너 경로입니다.')
     name, sample = BOARDS[board]
     rows_path = root / f'board/{board}/list.json'
     rows = read_json(rows_path)
@@ -170,25 +172,34 @@ def render(board, topic, data, day, root=ROOT, banner=None):
         raise ValueError('이미 존재하는 글 번호입니다.')
     title = '[이용 안내] ' + topic
     url = f'{DOMAIN}/board/{board}/{post_id}'
+    image_url = f'{DOMAIN}/{banner}' if banner else DOMAIN+'/img/og_img.png'
     esc = html.escape
     source = (root / f'board/{board}/{sample}.html').read_text(encoding='utf-8')
     source = replace_one(r'<title>.*?</title>', f'<title>{esc(title)} | {name}</title>', source)
     for attr, field, value in [('name','description',data['summary']), ('property','og:description',data['summary']),
                                ('property','og:title',title), ('property','og:url',url),
-                               ('property','og:image',DOMAIN+'/img/og_img.png')]:
+                               ('property','og:image',image_url)]:
         source = replace_one(f'<meta {attr}="{field}" content="[^"]*"[^>]*>', f'<meta {attr}="{field}" content="{esc(value)}">', source)
     source = replace_one(r'<link rel="canonical" href="[^"]*"[^>]*>', f'<link rel="canonical" href="{url}">', source)
+    if banner:
+        # 공유 미리보기에도 해당 글의 배너를 사용합니다.
+        for attr, field, value in [('name', 'twitter:image', image_url),
+                                   ('property', 'og:image:alt', topic+' 안내 배너')]:
+            tag = f'<meta {attr}="{field}" content="{esc(value)}">'
+            pattern = f'<meta {attr}="{field}" content="[^"]*"[^>]*>'
+            source = (replace_one(pattern, tag, source) if re.search(pattern, source)
+                      else source.replace('</head>', tag+'\n</head>', 1))
     schema = {'@context':'https://schema.org','@type':'Article','headline':title,'description':data['summary'],
               'author':{'@type':'Organization','name':AUTHOR},'publisher':{'@type':'Organization','name':'한국상품권거래소'},
-              'mainEntityOfPage':url,'datePublished':day.isoformat(),'image':DOMAIN+'/img/og_img.png'}
+              'mainEntityOfPage':url,'datePublished':day.isoformat(),'image':image_url}
     source = replace_one(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')+'</script>', source)
     body = article_body(data)
     if banner:
-        if not re.fullmatch(r'board-img/(purchase|sale)/[a-zA-Z0-9-]+\.png', banner):
-            raise ValueError('잘못된 배너 경로입니다.')
         body = (f'<figure style="margin:0 0 28px"><img src="/{banner}" width="1536" height="1024" '
                 f'alt="{esc(topic)} 안내 배너" decoding="async" '
-                'style="display:block;width:100%;height:auto;border-radius:12px" /></figure>') + body
+                'style="display:block;width:100%;height:auto;border-radius:12px" />'
+                '<figcaption style="font-size:12px;color:#687487;margin-top:8px">'
+                '글의 이해를 돕기 위한 AI 생성 안내 이미지</figcaption></figure>') + body
     fragment = f'''<div id="view_wrap" class="view-wrap">
 <div class="view_title"><div class="wrap"><p>{name}</p><span>상품권 이용 전 궁금한 내용을 확인해 보세요.</span></div></div>
 <div class="view_content"><h1 class="board_title">{esc(title)}</h1>
