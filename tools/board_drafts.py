@@ -66,7 +66,7 @@ def validate(data):
     return data
 
 
-def generate(topic, model):
+def generate(topic, model, on_usage=None):
     key = os.environ.get('OPENAI_API_KEY')
     if not key:
         raise ValueError('GitHub Secret OPENAI_API_KEY가 없습니다.')
@@ -99,6 +99,8 @@ checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 �
     except urllib.error.HTTPError as error:
         # 응답 본문이나 인증 헤더는 로그에 출력하지 않습니다.
         raise RuntimeError(f'OpenAI API HTTP {error.code}. 결제/모델 접근/키 권한을 확인하세요.') from None
+    if on_usage:
+        on_usage('text', model, result.get('usage') or {})
     if result.get('status') != 'completed':
         raise ValueError('API 생성 미완료: 파일을 변경하지 않습니다.')
     output = ''.join(c['text'] for item in result.get('output', []) for c in item.get('content', []) if c.get('type') == 'output_text')

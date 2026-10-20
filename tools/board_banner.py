@@ -53,7 +53,7 @@ def validate_png(raw):
     return dimensions
 
 
-def generate_banner(topic, data):
+def generate_banner(topic, data, on_usage=None):
     key = os.environ.get('OPENAI_API_KEY')
     if not key:
         raise ValueError('OPENAI_API_KEY가 없습니다.')
@@ -71,6 +71,8 @@ def generate_banner(topic, data):
             result = json.load(response)
     except urllib.error.HTTPError as error:
         raise RuntimeError(f'이미지 API HTTP {error.code}. 이미지 모델 접근/조직 인증/잔액을 확인하세요. 글은 게시하지 않습니다.') from None
+    if on_usage:
+        on_usage('image', model, result.get('usage') or {})
     items = result.get('data', [])
     if len(items) != 1 or not items[0].get('b64_json'):
         raise ValueError('이미지 결과가 없습니다. 글만 등록하지 않습니다.')

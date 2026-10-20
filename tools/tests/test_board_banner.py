@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -35,7 +36,9 @@ class BannerTests(unittest.TestCase):
         self.assertEqual(payload['output_format'],'png')
 
     def test_image_failure_never_renders_or_pushes(self):
-        with patch.object(runner,'run',side_effect=['[]','']) as command, \
+        with tempfile.TemporaryDirectory() as temp, \
+             patch.dict(os.environ, {'RUNNER_TEMP': temp, 'GITHUB_STEP_SUMMARY': ''}), \
+             patch.object(runner,'run',side_effect=['[]','']) as command, \
              patch.object(runner,'pick_topic',return_value='topic'), \
              patch.object(runner,'generate',return_value=example()), \
              patch.object(runner,'generate_banner',side_effect=RuntimeError('image unavailable')), \

@@ -40,3 +40,11 @@ jobs:
           REQUESTED_BOARD: ${{ inputs.board }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: python tools/run_board_draft.py
+      - name: API 사용량과 비용 기록 보관
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: board-api-usage-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/board-api-usage.json
+          if-no-files-found: ignore
+          retention-days: 90
