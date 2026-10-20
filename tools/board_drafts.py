@@ -157,7 +157,7 @@ def article_body(data):
     return body
 
 
-def render(board, topic, data, day, root=ROOT):
+def render(board, topic, data, day, root=ROOT, banner=None):
     validate(data)
     name, sample = BOARDS[board]
     rows_path = root / f'board/{board}/list.json'
@@ -181,6 +181,12 @@ def render(board, topic, data, day, root=ROOT):
               'mainEntityOfPage':url,'datePublished':day.isoformat(),'image':DOMAIN+'/img/og_img.png'}
     source = replace_one(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('<','\\u003c')+'</script>', source)
     body = article_body(data)
+    if banner:
+        if not re.fullmatch(r'board-img/(purchase|sale)/[a-zA-Z0-9-]+\.png', banner):
+            raise ValueError('잘못된 배너 경로입니다.')
+        body = (f'<figure style="margin:0 0 28px"><img src="/{banner}" width="1536" height="1024" '
+                f'alt="{esc(topic)} 안내 배너" decoding="async" '
+                'style="display:block;width:100%;height:auto;border-radius:12px" /></figure>') + body
     fragment = f'''<div id="view_wrap" class="view-wrap">
 <div class="view_title"><div class="wrap"><p>{name}</p><span>상품권 이용 전 궁금한 내용을 확인해 보세요.</span></div></div>
 <div class="view_content"><h1 class="board_title">{esc(title)}</h1>

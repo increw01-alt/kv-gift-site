@@ -6,6 +6,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 from board_drafts import ROOT, KST, pick_topic, generate, render
+from board_banner import generate_banner
 
 
 def run(*args):
@@ -28,7 +29,23 @@ def main():
         return
     topic = pick_topic(board)
     data = generate(topic, os.getenv('OPENAI_MODEL','gpt-4.1-mini'))
-    title, review, files = render(board,topic,data,day)
+    # 두 API가 모두 성공한 뒤에만 게시판 파일을 변경합니다.
+    raw, image_info = generate_banner(topic, data)
+    banner = f'board-img/{board}/guide-{day.isoformat()}-{board}.png'
+    image_path = ROOT / banner
+    if image_path.exists():
+        raise ValueError('동일 배너가 이미 있습니다. 덮어쓰지 않습니다.')
+    title, review, files = render(board,topic,data,day,banner=banner)
+    image_path.parent.mkdir(parents=True,exist_ok=True)
+    image_path.write_bytes(raw)
+    files.append(banner)
+    repo = os.environ['GITHUB_REPOSITORY']
+    image_url = f'https://github.com/{repo}/blob/{branch}/{banner}?raw=true'
+    review = ('## 배너 미리보기\n\n![글 내용에 맞춘 자동 생성 배너]('+image_url+')\n\n'
+              '- [ ] 배너의 한글 오탈자·문구·그림과 본문의 일치 여부 확인\n\n' + review)
+    review += ('\n\n<details><summary>이미지 생성 설정과 프롬프트</summary>\n\n'
+               f'모델: `{image_info["model"]}` / 품질: `{image_info["quality"]}` / 한 장\n\n'
+               '```text\n'+image_info['prompt']+'\n```\n</details>\n')
     run('git','diff','--check')
     run('git','switch','-c',branch)
     run('git','config','user.name','github-actions[bot]')
@@ -44,6 +61,7 @@ def main():
     if os.getenv('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
             f.write('검토할 글: '+url+'\n\nmain에 병합하기 전에는 운영 사이트에 게시되지 않습니다.\n')
+            f.write('배너: '+image_url+'\n\n이미지 API 사용량: '+json.dumps(image_info['usage'])+'\n')
 
 
 if __name__ == '__main__':

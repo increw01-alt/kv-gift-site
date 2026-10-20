@@ -42,7 +42,8 @@ class DraftTests(unittest.TestCase):
                     dest=root/name;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(draft.ROOT/name,dest)
                 old=draft.read_json(root/f'board/{board}/list.json')
                 topic=draft.pick_topic(board,root)
-                title,review,changed=draft.render(board,topic,example(),dt.date(2026,10,19),root)
+                banner=f'board-img/{board}/guide-test.png'
+                title,review,changed=draft.render(board,topic,example(),dt.date(2026,10,19),root,banner=banner)
                 rows=draft.read_json(root/f'board/{board}/list.json')
                 self.assertEqual(rows[1:],old)
                 self.assertEqual(rows[0]['author'],draft.AUTHOR)
@@ -50,6 +51,8 @@ class DraftTests(unittest.TestCase):
                 page=(root/f'board/{board}/{rows[0]["id"]}.html').read_text(encoding='utf-8')
                 self.assertIn('실제 고객 후기나 접수된 문의가 아닙니다.',page)
                 self.assertIn(draft.CHAT,page)
+                self.assertIn('src="/'+banner+'"',page)
+                self.assertIn('width="1536" height="1024"',page)
                 self.assertEqual(page.count('<h1 '),1)
                 self.assertIn(title,review)
                 self.assertIn('Merge pull request',review)
