@@ -30,6 +30,20 @@ def fixture(root):
         dest = root/name
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(draft.ROOT/name, dest)
+    # 운영 글이 늘어나거나 준비 주제가 소진되어도 CI 테스트 자료는 소진되지 않습니다.
+    topics = {board: [
+        f'{profile["name"]}의 검증용 원문과 목록을 함께 연결하려면 무엇을 살펴볼까요?',
+        f'보관해 둔 이전 글을 지키는 테스트 절차를 {profile["name"]}에서 어떻게 확인할까요?',
+    ] for board, profile in PROFILES.items()}
+    (root/'tools/board_topics.json').write_text(json.dumps(topics,ensure_ascii=False),encoding='utf-8')
+    briefs=[{'topic':'검증용 운영 안내 자료를 정리한 소식을 함께 확인해 보세요',
+             'verified_on':'2026-10-20','expires_on':'2026-11-20',
+             'facts':['문의 준비 안내 문서가 있다.'],
+             'sources':[{'title':'문의 준비 안내','url':'https://kv-gift.co.kr/board/general_notice/43'}]}]
+    (root/'tools/board_news_briefs.json').write_text(json.dumps(briefs,ensure_ascii=False),encoding='utf-8')
+    (root/'data/editorial_history.json').write_text(json.dumps([
+        {'board':'purchase','id':1,'topic':'이미 정리한 검증용 안내 자료','drafted_at':'2026-10-01'}
+    ],ensure_ascii=False),encoding='utf-8')
 
 
 def example():
