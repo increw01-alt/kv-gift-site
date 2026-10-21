@@ -163,5 +163,15 @@
     "publication_mode": "automatic",
     "run_id": "39551602129",
     "usage_file": "data/editorial_runs/2026-10-21/39551602129.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 3,
+    "topic": "금액형 상품권과 물품 교환형 쿠폰은 어떻게 다른가요?",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39552082455",
+    "usage_file": "data/editorial_runs/2026-10-21/39552082455.json"
   }
 ]
