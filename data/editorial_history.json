@@ -203,5 +203,15 @@
     "publication_mode": "automatic",
     "run_id": "39568217712",
     "usage_file": "data/editorial_runs/2026-10-21/39568217712.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 33,
+    "topic": "가족에게 받은 상품권을 중복 사용하지 않도록 관리하는 방법",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39575868207",
+    "usage_file": "data/editorial_runs/2026-10-21/39575868207.json"
   }
 ]
