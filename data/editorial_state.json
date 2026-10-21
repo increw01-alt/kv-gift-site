@@ -1,5 +1,11 @@
 {
-  "held_topics": [],
-  "last_board": "purchase",
-  "last_run_id": "39403765145"
+  "held_topics": [
+    {
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처는 각각 어떤 역할을 하나요?",
+      "run_id": "39523709944"
+    }
+  ],
+  "last_board": "gc_information",
+  "last_run_id": "39523709944"
 }

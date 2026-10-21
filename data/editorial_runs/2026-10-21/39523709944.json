@@ -1,14 +1,26 @@
 {
   "run_id": "39523709944",
   "date_kst": "2026-10-21",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "발행사·판매처·사용처는 각각 어떤 역할을 하나요?",
+  "status": "held",
   "url": null,
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": false
+    },
+    "issues": [
+      "로고 색상과 형태가 원본과 다릅니다. 원본은 네이비/레드/블루 그라데이션인데 배너에서는 원본과 달라 보입니다."
+    ]
   },
   "api_usage": {
     "run_id": "39523709944",
@@ -17,12 +29,116 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처는 각각 어떤 역할을 하나요?"
     },
-    "status": "in_progress",
-    "records": [],
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "status": "completed",
+    "records": [
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 835,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 299,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1134
+        },
+        "estimated_usd": 0.0008124,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-21T00:50:44.026427+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 1228,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 349,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1577
+        },
+        "estimated_usd": 0.0010496,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-21T00:50:46.988709+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3275,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 779
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4647
+        },
+        "estimated_usd": 0.065023,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-21T00:51:18.071961+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4275,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 99,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4374
+        },
+        "estimated_usd": 0.0018684,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-21T00:51:23.303158+00:00"
+      }
+    ],
+    "known_subtotal_usd": 0.0687534,
+    "estimated_total_usd": 0.0687534,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
