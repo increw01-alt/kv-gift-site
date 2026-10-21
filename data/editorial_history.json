@@ -183,5 +183,15 @@
     "publication_mode": "automatic",
     "run_id": "39555056967",
     "usage_file": "data/editorial_runs/2026-10-21/39555056967.json"
+  },
+  {
+    "board": "sense",
+    "id": 6,
+    "topic": "선물을 고르기 전에 상대방의 취향을 자연스럽게 알아보는 방법",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39561007262",
+    "usage_file": "data/editorial_runs/2026-10-21/39561007262.json"
   }
 ]
