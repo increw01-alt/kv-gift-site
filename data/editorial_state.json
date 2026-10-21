@@ -4,8 +4,13 @@
       "board": "gc_information",
       "topic": "발행사·판매처·사용처는 각각 어떤 역할을 하나요?",
       "run_id": "39523709944"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 액면가와 실제 정산 예정 금액은 어떻게 구분하나요?",
+      "run_id": "39523951923"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "39523709944"
+  "last_board": "sale",
+  "last_run_id": "39523951923"
 }
