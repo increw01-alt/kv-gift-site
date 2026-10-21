@@ -173,5 +173,15 @@
     "publication_mode": "automatic",
     "run_id": "39552082455",
     "usage_file": "data/editorial_runs/2026-10-21/39552082455.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 54,
+    "topic": "공용 기기에서 상품권을 확인했다면 로그아웃과 다운로드 파일을 점검해 주세요",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39555056967",
+    "usage_file": "data/editorial_runs/2026-10-21/39555056967.json"
   }
 ]
