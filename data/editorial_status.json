@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T06:18:21.415874+00:00",
+  "generatedAt": "2026-10-21T06:18:32.049263+00:00",
   "dateKst": "2026-10-21",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,8 +8,8 @@
   "verified": 6,
   "attempts": 10,
   "held": 2,
-  "errors": 1,
-  "knownSubtotalUsd": 0.5751957,
+  "errors": 2,
+  "knownSubtotalUsd": 0.5770933,
   "estimatedTotalUsd": null,
   "records": [
     {
@@ -131,16 +131,16 @@
     },
     {
       "runId": "39554556958",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "sale",
+      "topic": "상품권 번호를 전달하기 전에 상대방을 어떻게 확인하나요?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-21T06:17:58.440Z",
       "publicVerifiedAt": null,
       "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "knownSubtotalUsd": 0.0018976
     }
   ]
 }

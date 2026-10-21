@@ -14,8 +14,13 @@
       "board": "sense",
       "topic": "온라인에서 정보를 읽을 때 게시일과 수정일을 함께 보는 이유",
       "run_id": "39549707629"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 번호를 전달하기 전에 상대방을 어떻게 확인하나요?",
+      "run_id": "39554556958"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "39552082455"
+  "last_board": "sale",
+  "last_run_id": "39554556958"
 }
