@@ -153,5 +153,15 @@
     "publication_mode": "automatic",
     "run_id": "39551126799",
     "usage_file": "data/editorial_runs/2026-10-21/39551126799.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2564,
+    "topic": "모바일상품권 구매 전에 수신 연락처를 확인해야 하는 이유는 무엇인가요?",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39551602129",
+    "usage_file": "data/editorial_runs/2026-10-21/39551602129.json"
   }
 ]
