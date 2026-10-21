@@ -143,5 +143,15 @@
     "publication_mode": "automatic",
     "run_id": "39550653054",
     "usage_file": "data/editorial_runs/2026-10-21/39550653054.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 32,
+    "topic": "상품권 사용 계획을 세울 때 필요한 것부터 고르는 방법",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39551126799",
+    "usage_file": "data/editorial_runs/2026-10-21/39551126799.json"
   }
 ]
