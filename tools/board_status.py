@@ -12,6 +12,9 @@ def build_status(root, day, now=None):
         item = json.loads(path.read_text(encoding='utf-8'))
         usage = item.get('api_usage', {})
         complete = item.get('status') != 'generating' and usage.get('estimated_total_usd') is not None
+        known_cost = usage.get('known_subtotal_usd')
+        if known_cost is None and complete:
+            known_cost = usage['estimated_total_usd']
         records.append({
             'runId': item.get('run_id', path.stem), 'status': item['status'],
             'board': item.get('board'), 'topic': item.get('topic'), 'url': item.get('url'),
@@ -19,6 +22,7 @@ def build_status(root, day, now=None):
             'scheduledAt': item.get('scheduled_at'),
             'publicVerifiedAt': item.get('public_verified_at'),
             'estimatedUsd': usage.get('estimated_total_usd') if complete else None,
+            'knownSubtotalUsd': known_cost,
         })
     costs = [r['estimatedUsd'] for r in records]
     return {
@@ -28,7 +32,7 @@ def build_status(root, day, now=None):
         'verified': sum(r['status'] == 'published' and bool(r['publicVerifiedAt']) for r in records),
         'attempts': len(records), 'held': sum(r['status'] == 'held' for r in records),
         'errors': sum(r['status'] in ('error', 'push_failed') for r in records),
-        'knownSubtotalUsd': round(sum(c for c in costs if c is not None), 8),
+        'knownSubtotalUsd': round(sum(r['knownSubtotalUsd'] for r in records if r['knownSubtotalUsd'] is not None), 8),
         'estimatedTotalUsd': round(sum(costs), 8) if all(c is not None for c in costs) else None,
         'records': records,
     }

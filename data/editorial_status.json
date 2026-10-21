@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T05:39:42.338828+00:00",
+  "generatedAt": "2026-10-21T05:41:21.930275+00:00",
   "dateKst": "2026-10-21",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -9,7 +9,7 @@
   "attempts": 6,
   "held": 2,
   "errors": 1,
-  "knownSubtotalUsd": 0.35577735,
+  "knownSubtotalUsd": 0.35665375,
   "estimatedTotalUsd": null,
   "records": [
     {
@@ -22,7 +22,8 @@
       "triggerSource": null,
       "scheduledAt": null,
       "publicVerifiedAt": null,
-      "estimatedUsd": 0.0687534
+      "estimatedUsd": 0.0687534,
+      "knownSubtotalUsd": 0.0687534
     },
     {
       "runId": "39523951923",
@@ -34,7 +35,8 @@
       "triggerSource": null,
       "scheduledAt": null,
       "publicVerifiedAt": null,
-      "estimatedUsd": 0.0695066
+      "estimatedUsd": 0.0695066,
+      "knownSubtotalUsd": 0.0695066
     },
     {
       "runId": "39524493676",
@@ -46,7 +48,8 @@
       "triggerSource": null,
       "scheduledAt": null,
       "publicVerifiedAt": "2026-10-21T01:30:54.104963+00:00",
-      "estimatedUsd": 0.0718608
+      "estimatedUsd": 0.0718608,
+      "knownSubtotalUsd": 0.0718608
     },
     {
       "runId": "39549707629",
@@ -58,7 +61,8 @@
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-21T05:27:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null
+      "estimatedUsd": null,
+      "knownSubtotalUsd": 0.0008764
     },
     {
       "runId": "39550180718",
@@ -70,7 +74,8 @@
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-21T05:32:58.440Z",
       "publicVerifiedAt": "2026-10-21T05:34:39.410632+00:00",
-      "estimatedUsd": 0.07273215
+      "estimatedUsd": 0.07273215,
+      "knownSubtotalUsd": 0.07273215
     },
     {
       "runId": "39550653054",
@@ -82,7 +87,8 @@
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-21T05:37:58.440Z",
       "publicVerifiedAt": "2026-10-21T05:39:42.335499+00:00",
-      "estimatedUsd": 0.0729244
+      "estimatedUsd": 0.0729244,
+      "knownSubtotalUsd": 0.0729244
     }
   ]
 }
