@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T09:19:04.377733+00:00",
+  "generatedAt": "2026-10-21T09:19:48.041624+00:00",
   "dateKst": "2026-10-21",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 10,
-  "verified": 9,
+  "verified": 10,
   "attempts": 14,
   "held": 2,
   "errors": 2,
@@ -190,7 +190,7 @@
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-21T09:17:58.440Z",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-21T09:19:48.037345+00:00",
       "estimatedUsd": 0.07276685,
       "knownSubtotalUsd": 0.07276685
     }
