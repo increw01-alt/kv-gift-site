@@ -8,6 +8,7 @@ PRICE_DATE = '2026-10-20'
 PRICE_SOURCE = 'https://developers.openai.com/api/docs/pricing'
 RATES = {
     'gpt-4.1-mini': {'input': 0.40, 'cached': 0.10, 'output': 1.60},
+    'gpt-5.4-mini': {'input': 0.75, 'cached': 0.075, 'output': 4.50},
     'gpt-image-2': {'text_input': 5.00, 'image_input': 8.00, 'output': 30.00},
 }
 
@@ -18,7 +19,7 @@ def estimate(kind, model, usage):
                             for k in ('input_tokens', 'output_tokens')):
         return None
     details = usage.get('input_tokens_details') or {}
-    if kind in ('text', 'topic', 'editing', 'review') and model == 'gpt-4.1-mini':
+    if kind in ('text', 'topic', 'editing', 'review') and model in ('gpt-4.1-mini', 'gpt-5.4-mini'):
         cached = details.get('cached_tokens', 0)
         if not isinstance(cached, int) or not 0 <= cached <= usage['input_tokens']:
             return None
@@ -47,7 +48,8 @@ class UsageLog:
             'kind': kind, 'model': model, 'usage': usage,
             'estimated_usd': estimate(kind, model, usage),
             'rates_usd_per_million_tokens': RATES.get(model),
-            'price_checked_on': PRICE_DATE, 'price_source': PRICE_SOURCE,
+            'price_checked_on': '2026-10-21' if model == 'gpt-5.4-mini' else PRICE_DATE,
+            'price_source': 'https://developers.openai.com/api/docs/models/gpt-5.4-mini' if model == 'gpt-5.4-mini' else PRICE_SOURCE,
             'recorded_at_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
         })
         self.save('in_progress')
@@ -76,7 +78,7 @@ class UsageLog:
             lines.append(f"| {label} | {r['model']} | {u.get('input_tokens', '미제공')} | {u.get('output_tokens', '미제공')} | {cost} |")
         subtotal = sum(r['estimated_usd'] or 0 for r in self.records)
         lines += ['', f'계산 가능한 요청 합계: **${subtotal:.6f}**',
-                  f'\n단가 기준일: {PRICE_DATE}. 실제 청구액이 아닌 예상 비용이며 세금·환전은 제외합니다.',
+                  '\n단가 기준일과 출처는 단계별 JSON의 price_checked_on/price_source를 확인하세요. 실제 청구액이 아닌 예상 비용이며 세금·환전은 제외합니다.',
                   '단가 미등록 모델·사용량 누락·응답 없는 실패 요청은 비용 확인 불가입니다.',
                   f'[단가 출처]({PRICE_SOURCE})']
         return '\n'.join(lines)

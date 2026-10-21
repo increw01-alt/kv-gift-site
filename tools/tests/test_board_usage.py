@@ -25,6 +25,12 @@ class UsageTests(unittest.TestCase):
         self.assertIsNone(estimate('image', 'gpt-image-2', {}))
         self.assertIsNone(estimate('image', 'gpt-image-2', {'input_tokens': 10, 'output_tokens': 10}))
 
+    def test_review_cost_includes_cached_input_and_reasoning_output_tokens(self):
+        self.assertAlmostEqual(estimate('review','gpt-5.4-mini',{
+            'input_tokens':1000,'output_tokens':1000,
+            'input_tokens_details':{'cached_tokens':200},
+            'output_tokens_details':{'reasoning_tokens':800}}),.005115)
+
     def test_failure_keeps_text_cost_without_complete_total(self):
         with tempfile.TemporaryDirectory() as temp:
             def generated(topic, model, on_usage, **kwargs):

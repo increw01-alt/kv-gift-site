@@ -72,8 +72,21 @@ class EditorialTests(unittest.TestCase):
                     self.assertFalse(report['approved'])
                 payload=json.loads(api.call_args.args[0].data)
                 images=[x for x in payload['input'][0]['content'] if x['type']=='input_image']
-                self.assertEqual(len(images),2)
+                self.assertEqual(len(images),3)
                 self.assertTrue(payload['text']['format']['strict'])
+
+    @patch.dict(os.environ,{'OPENAI_API_KEY':'test-only'})
+    def test_review_model_uses_bounded_reasoning_and_records_its_usage(self):
+        costs=[]
+        with patch.object(editor.urllib.request,'urlopen',return_value=response(approved())) as api, \
+             patch.object(editor,'related_titles',return_value=[]):
+            report=editor.review_article('gc_tip','샘플 주제',example(),b'image',None,
+                                         'gpt-5.4-mini',lambda *args:costs.append(args))
+        payload=json.loads(api.call_args.args[0].data)
+        self.assertTrue(report['approved'])
+        self.assertEqual(payload['reasoning'],{'effort':'low'})
+        self.assertEqual(payload['max_output_tokens'],4000)
+        self.assertEqual(costs[0][:2],('review','gpt-5.4-mini'))
 
     def test_editor_and_review_usage_is_charged_at_text_model_rates(self):
         for kind in ('topic','editing','review'):

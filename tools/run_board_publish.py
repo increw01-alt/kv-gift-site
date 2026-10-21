@@ -166,6 +166,7 @@ def main(root=ROOT, command=None, now=None):
     preview_dir = output/'board-review'
     preview_dir.mkdir(parents=True, exist_ok=True)
     model = os.getenv('OPENAI_MODEL', 'gpt-4.1-mini')
+    review_model = os.getenv('OPENAI_REVIEW_MODEL', 'gpt-5.4-mini')
     usage = UsageLog(output/'board-api-usage.json',
                      {'mode': 'preview_only' if preview else 'automatic_publish',
                       'daily_limit': DAILY_LIMIT, 'daily_attempt_limit': DAILY_ATTEMPT_LIMIT,
@@ -189,7 +190,7 @@ def main(root=ROOT, command=None, now=None):
         raw, image_info = generate_banner(topic, data, usage.record, board=board)
         save_preview(preview_dir, board, topic, data, day, raw, root, brief, approval_required=preview)
         write_json(preview_dir/'image-generation.json', image_info)
-        report = review_article(board, topic, data, raw, brief, model, usage.record, root)
+        report = review_article(board, topic, data, raw, brief, review_model, usage.record, root)
         api_status = 'completed'
         if report['approved']:
             status = 'ready'

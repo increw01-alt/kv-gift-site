@@ -45,7 +45,7 @@
 - 이미지 모델 `gpt-image-2`, 품질 `medium`, 1536×1024 PNG가 기본입니다. 이미지 생성은 한 편당 한 번이며 자동 재시도하지 않습니다.
 - 배너는 `board-img/게시판/guide-날짜-실행번호.png`로 저장합니다. 하루에 같은 게시판에 여러 편이 생겨도 파일이 겹치지 않습니다.
 - 모바일에서 이미지를 자르지 않고 비율대로 표시합니다. OG/Twitter 이미지와 Article 구조화 데이터에도 같은 배너를 연결합니다.
-- 글 초안·편집·최종 검수에는 기본 `gpt-4.1-mini`를 사용합니다. `OPENAI_MODEL`, `OPENAI_IMAGE_MODEL`, `OPENAI_IMAGE_QUALITY` Actions 변수로 변경할 수 있습니다. 다른 모델의 비용은 단가 등록 전까지 확인 불가로 남습니다.
+- 글 초안·편집은 기본 `gpt-4.1-mini`, 최종 글·이미지 검수는 `gpt-5.4-mini`의 low reasoning을 사용합니다. 검수 시 후보 배너·원본 로고·승인된 스타일 이미지를 함께 비교합니다. `OPENAI_MODEL`, `OPENAI_REVIEW_MODEL`, `OPENAI_IMAGE_MODEL`, `OPENAI_IMAGE_QUALITY` Actions 변수로 변경할 수 있습니다. 다른 모델의 비용은 단가 등록 전까지 확인 불가로 남습니다.
 
 ## 실행, 검토, 중지
 
