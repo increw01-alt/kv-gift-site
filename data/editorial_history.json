@@ -193,5 +193,15 @@
     "publication_mode": "automatic",
     "run_id": "39561007262",
     "usage_file": "data/editorial_runs/2026-10-21/39561007262.json"
+  },
+  {
+    "board": "free",
+    "id": 467,
+    "topic": "디지털 선물에 짧은 메시지를 덧붙인다면 어떤 말을 전하고 싶나요?",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39568217712",
+    "usage_file": "data/editorial_runs/2026-10-21/39568217712.json"
   }
 ]
