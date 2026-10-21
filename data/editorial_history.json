@@ -133,5 +133,15 @@
     "publication_mode": "automatic",
     "run_id": "39550180718",
     "usage_file": "data/editorial_runs/2026-10-21/39550180718.json"
+  },
+  {
+    "board": "gc_word",
+    "id": 3,
+    "topic": "상품권 이용 안내를 찾기 쉽도록 공지사항 콘텐츠를 보강했어요",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39550653054",
+    "usage_file": "data/editorial_runs/2026-10-21/39550653054.json"
   }
 ]
