@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "initial",
+  "revision": "ee3a61df-f53c-4067-b05e-acad41a37110",
   "enabled": true,
   "dailyTarget": 10,
   "startTime": "09:17",
@@ -8,5 +8,5 @@
   "timezone": "Asia/Seoul",
   "attemptLimit": 15,
   "catchUpUntil": "23:00",
-  "updatedAt": null
+  "updatedAt": "2026-10-21T07:53:46.037292+00:00"
 }
