@@ -14,6 +14,7 @@ from board_render import save_preview
 from board_usage import UsageLog
 
 DAILY_LIMIT = 10
+DAILY_ATTEMPT_LIMIT = 15
 
 
 def run(*args, root=ROOT):
@@ -56,18 +57,37 @@ def recover_publication(root, run_id):
     return True
 
 
-def guard(root, day, run_id, attempt):
-    if attempt != '1':
-        return '재실행은 중복 과금을 막기 위해 생성하지 않습니다. 이전 실행 기록을 확인하세요.'
-    records = root/'data/editorial_runs'/day.isoformat()
-    if (records/f'{run_id}.json').exists():
-        return '이미 처리한 실행입니다. 중복 게시하지 않습니다.'
-    runs = list(records.glob('*.json')) if records.exists() else []
+def daily_counts(root, day):
+    directory = root/'data/editorial_runs'/day.isoformat()
+    records = [read_json(path) for path in directory.glob('*.json')]
     history = read_json(root/'data/editorial_history.json')
     published = [x for x in history if x.get('publication_mode') == 'automatic'
                  and x.get('drafted_at') == day.isoformat()]
-    if len(runs) >= DAILY_LIMIT or len(published) >= DAILY_LIMIT:
-        return '오늘 자동 작성 한도 10회에 도달했습니다. 추가 생성·게시하지 않습니다.'
+    return max(len(published), sum(x.get('status') == 'published' for x in records)), len(records)
+
+
+def scheduled_target(now):
+    """09:17부터 시간당 1편. 18:17 이후에는 23시 전까지 부족분을 보충합니다."""
+    local = now.astimezone(KST)
+    start = local.replace(hour=9, minute=17, second=0, microsecond=0)
+    if local < start or local.hour >= 23:
+        return 0
+    return min(DAILY_LIMIT, int((local-start).total_seconds() // 3600) + 1)
+
+
+def guard(root, day, run_id, attempt, allow_reserved=False):
+    if attempt != '1':
+        return '재실행은 중복 과금을 막기 위해 생성하지 않습니다. 이전 실행 기록을 확인하세요.'
+    records = root/'data/editorial_runs'/day.isoformat()
+    current = records/f'{run_id}.json'
+    reserved = current.exists() and read_json(current).get('status') == 'generating'
+    if current.exists() and not (allow_reserved and reserved):
+        return '이미 처리한 실행입니다. 중복 게시하지 않습니다.'
+    published, attempts = daily_counts(root, day)
+    if published >= DAILY_LIMIT:
+        return '오늘 자동 게시 목표 10편을 완료했습니다. 추가 생성·게시하지 않습니다.'
+    if attempts - int(allow_reserved and reserved) >= DAILY_ATTEMPT_LIMIT:
+        return '오늘 생성 시도 상한 15회에 도달했습니다. 비용 보호를 위해 원인을 확인해야 합니다.'
     return None
 
 
@@ -80,12 +100,22 @@ def sync_main(command, root):
     command('git', 'merge', '--ff-only', 'origin/main')
 
 
+def commit_files(command, files, message):
+    command('git', 'diff', '--check')
+    command('git', 'config', 'user.name', 'github-actions[bot]')
+    command('git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
+    command('git', 'add', '--', *files)
+    command('git', 'commit', '-m', message)
+    command('git', 'push', 'origin', 'HEAD:refs/heads/main')
+
+
 def record_outcome(root, day, run_id, board, topic, status, review, usage, url=None):
     ledger = root/'data/editorial_runs'/day.isoformat()/f'{run_id}.json'
     outcome = {
         'run_id': run_id, 'date_kst': day.isoformat(), 'board': board, 'topic': topic,
         'status': status, 'url': url,
-        'publication': 'main 반영 후 Cloudflare 배포 확인 필요' if url else '게시하지 않음',
+        'publication': ('main 반영 후 Cloudflare 배포 확인 필요' if url else
+                        '생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인' if status == 'generating' else '게시하지 않음'),
         'review': review, 'api_usage': read_json(usage.path),
     }
     write_json(ledger, outcome)
@@ -112,12 +142,21 @@ def main(root=ROOT, command=None, now=None):
     run_id = os.getenv('GITHUB_RUN_ID', '')
     if not re.fullmatch(r'\d+', run_id):
         raise ValueError('GitHub 실행 번호가 없습니다.')
-    day = (now or dt.datetime.now(KST)).astimezone(KST).date()
+    instant = (now or dt.datetime.now(KST)).astimezone(KST)
+    day = instant.date()
+    scheduled = (os.getenv('GITHUB_EVENT_NAME') == 'schedule'
+                 or os.getenv('FOLLOW_SCHEDULE', 'false').lower() == 'true')
     if not preview:
         sync_main(command, root)
     attempt = os.getenv('GITHUB_RUN_ATTEMPT', '1')
     reason = guard(root, day, run_id, attempt) if not preview else (
         '검토 전용 재실행도 중복 과금을 막기 위해 생성하지 않습니다.' if attempt != '1' else None)
+    if not reason and not preview and scheduled:
+        target = scheduled_target(instant)
+        published, _ = daily_counts(root, day)
+        summary(f'한국 시간 {instant:%Y-%m-%d %H:%M}: 현재 목표 {target}편 / 게시 {published}편 / 하루 목표 {DAILY_LIMIT}편')
+        if published >= target:
+            reason = '현재 시간대의 게시 목표를 충족했거나 운영 시간 밖입니다. 다음 점검에서 부족분을 확인합니다.'
     if reason:
         summary(reason+'\n\nAPI를 호출하지 않았습니다.')
         if not preview:
@@ -128,7 +167,15 @@ def main(root=ROOT, command=None, now=None):
     preview_dir.mkdir(parents=True, exist_ok=True)
     model = os.getenv('OPENAI_MODEL', 'gpt-4.1-mini')
     usage = UsageLog(output/'board-api-usage.json',
-                     {'mode': 'preview_only' if preview else 'automatic_publish', 'daily_limit': DAILY_LIMIT})
+                     {'mode': 'preview_only' if preview else 'automatic_publish',
+                      'daily_limit': DAILY_LIMIT, 'daily_attempt_limit': DAILY_ATTEMPT_LIMIT,
+                      'follow_schedule': scheduled})
+    if not preview:
+        # 유료 요청 전에 시도를 main에 예약해 강제 종료나 연결 끊김도 횟수에 포함합니다.
+        usage.save('in_progress')
+        reserved_files, _ = record_outcome(root, day, run_id, None, None, 'generating',
+                                          {'approved': False, 'issues': []}, usage)
+        commit_files(command, reserved_files, '[자동 작성 시작] '+run_id)
     board = topic = brief = data = raw = None
     report = {'approved': False, 'issues': []}
     status, api_status, error = 'held', 'failed', None
@@ -164,10 +211,10 @@ def main(root=ROOT, command=None, now=None):
 
     # 생성 도중 사람이 올린 변경을 먼저 반영하고 최신 목록에서 번호와 중복을 다시 확인합니다.
     sync_main(command, root)
-    reason = guard(root, day, run_id, '1')
+    reason = guard(root, day, run_id, '1', allow_reserved=True)
     if reason:
-        summary(reason+' 생성 결과는 검토 Artifact에 보관했습니다.')
-        return 0
+        status = 'held'
+        report = {'approved': False, 'issues': [reason]}
     files, url = [], None
     if status == 'ready' and not fresh_topic(topic, prior_titles(root)):
         status = 'held'
@@ -190,14 +237,9 @@ def main(root=ROOT, command=None, now=None):
     audit_files, outcome = record_outcome(root, day, run_id, board, topic, status, report, usage, url)
     files.extend(audit_files)
     write_json(preview_dir/'result.json', outcome)
-    command('git', 'diff', '--check')
-    command('git', 'config', 'user.name', 'github-actions[bot]')
-    command('git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
-    command('git', 'add', '--', *files)
-    command('git', 'commit', '-m', ('[자동 게시] '+topic) if url else '[자동 작성 기록] '+run_id+' '+status)
     # main 이동 시 일반 push가 거절됩니다. 강제 push나 임의 덮어쓰기는 하지 않습니다.
     try:
-        command('git', 'push', 'origin', 'HEAD:refs/heads/main')
+        commit_files(command, files, ('[자동 게시] '+topic) if url else '[자동 작성 기록] '+run_id+' '+status)
     except Exception:
         outcome.update({'status': 'push_failed', 'publication': 'main 반영 실패, 운영 게시 미확인'})
         write_json(preview_dir/'result.json', outcome)
@@ -212,6 +254,8 @@ def main(root=ROOT, command=None, now=None):
         emit_publication(url, banner)
     else:
         summary('이번 글은 게시하지 않았습니다. 사유: '+' / '.join(report.get('issues', [])))
+    published, attempts = daily_counts(root, day)
+    summary(f'오늘 자동 게시 **{published}/{DAILY_LIMIT}편**, 생성 시도 **{attempts}/{DAILY_ATTEMPT_LIMIT}회**')
     return 1 if error else 0
 
 

@@ -81,20 +81,27 @@ class EditorialTests(unittest.TestCase):
 
 
 class PublishingTests(unittest.TestCase):
-    def run_case(self, root, output, review=None, image_error=False, preview=False, push_error=False):
+    def run_case(self, root, output, review=None, image_error=False, preview=False, push_error=False,
+                 event='workflow_dispatch', follow=False, now=NOW, reservation_error=False):
         topic='지인과 함께 고를 선물의 취향 질문을 정리하는 방법은 무엇인가요?'
         calls=[]
         def command(*args):
             calls.append(args)
             if args == ('git','branch','--show-current'): return 'main'
-            if args[:2] == ('git','push') and push_error: raise RuntimeError('push rejected')
+            pushes=sum(call[:2] == ('git','push') for call in calls)
+            if args[:2] == ('git','push') and (reservation_error or (push_error and pushes == 2)):
+                raise RuntimeError('push rejected')
             return ''
         def text(topic,model,on_usage,**kwargs):
+            if not preview:
+                reservation=read_json(root/f'data/editorial_runs/{now.date()}/123456.json')
+                self.assertEqual(reservation['status'],'generating')
+                self.assertTrue(any(call[:2] == ('git','push') for call in calls))
             on_usage('text',model,{'input_tokens':1000,'output_tokens':1000})
             return example()
         raw=(ROOT/'board-img/gc_tip/organize-vouchers-20261020.png').read_bytes()
         env={'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main','GITHUB_RUN_ID':'123456',
-             'GITHUB_RUN_ATTEMPT':'1','GITHUB_EVENT_NAME':'workflow_dispatch',
+             'GITHUB_RUN_ATTEMPT':'1','GITHUB_EVENT_NAME':event,'FOLLOW_SCHEDULE':str(follow).lower(),
              'RUNNER_TEMP':str(output),'GITHUB_STEP_SUMMARY':'','GITHUB_OUTPUT':'',
              'PREVIEW_ONLY':str(preview).lower(),'REQUESTED_BOARD':'auto'}
         with patch.dict(os.environ,env), \
@@ -104,7 +111,7 @@ class PublishingTests(unittest.TestCase):
              patch.object(publish,'generate_banner',side_effect=RuntimeError('image failure') if image_error else None,
                           return_value=(raw,{'model':'gpt-image-2'})), \
              patch.object(publish,'review_article',return_value=review or approved()):
-            code=publish.main(root,command,NOW)
+            code=publish.main(root,command,now)
         return code,calls
 
     def test_success_updates_site_and_persists_audit_before_regular_push(self):
@@ -150,7 +157,7 @@ class PublishingTests(unittest.TestCase):
             root=Path(temp)/'repo';fixture(root)
             day=NOW.date()
             self.assertIsNotNone(publish.guard(root,day,'100','2'))
-            for index in range(10):
+            for index in range(15):
                 publish.write_json(root/f'data/editorial_runs/{day}/{index}.json',{'status':'held'})
             self.assertIsNotNone(publish.guard(root,day,'100','1'))
             with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',
@@ -158,6 +165,76 @@ class PublishingTests(unittest.TestCase):
                  patch.object(publish,'sync_main'),patch.object(publish,'select_topic') as api:
                 self.assertEqual(publish.main(root,lambda *a:'',NOW),0)
                 api.assert_not_called()
+
+    def test_ten_held_attempts_can_be_replaced_but_ten_posts_stop_generation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            for index in range(10):
+                publish.write_json(root/f'data/editorial_runs/{NOW.date()}/{index}.json',{'status':'held'})
+            self.assertIsNone(publish.guard(root,NOW.date(),'100','1'))
+            history=[{'publication_mode':'automatic','drafted_at':str(NOW.date())} for _ in range(10)]
+            publish.write_json(root/'data/editorial_history.json',history)
+            with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',
+                 'GITHUB_RUN_ID':'100','GITHUB_RUN_ATTEMPT':'1','PREVIEW_ONLY':'false','GITHUB_STEP_SUMMARY':''}), \
+                 patch.object(publish,'sync_main'),patch.object(publish,'select_topic') as api:
+                self.assertEqual(publish.main(root,lambda *a:'',NOW),0)
+                api.assert_not_called()
+
+    def test_schedule_target_uses_korean_time_and_evening_catchup(self):
+        for hour,minute,target in [(9,2,0),(9,16,0),(9,17,1),(10,16,1),(10,17,2),
+                                   (16,52,8),(18,17,10),(22,59,10),(23,0,0)]:
+            with self.subTest(hour=hour,minute=minute):
+                moment=NOW.replace(hour=hour,minute=minute)
+                self.assertEqual(publish.scheduled_target(moment),target)
+                self.assertEqual(publish.scheduled_target(moment.astimezone(dt.timezone.utc)),target)
+
+    def test_scheduled_and_recovery_checks_skip_filled_slot_without_paid_requests(self):
+        for event,follow in [('schedule',False),('workflow_dispatch',True)]:
+            with self.subTest(event=event),tempfile.TemporaryDirectory() as temp:
+                root=Path(temp)/'repo';fixture(root)
+                publish.write_json(root/'data/editorial_history.json',[
+                    {'publication_mode':'automatic','drafted_at':str(NOW.date())}])
+                with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',
+                     'GITHUB_RUN_ID':'100','GITHUB_RUN_ATTEMPT':'1','PREVIEW_ONLY':'false',
+                     'GITHUB_STEP_SUMMARY':'','GITHUB_EVENT_NAME':event,'FOLLOW_SCHEDULE':str(follow).lower()}), \
+                     patch.object(publish,'sync_main'),patch.object(publish,'select_topic') as api:
+                    self.assertEqual(publish.main(root,lambda *a:'',NOW),0)
+                    api.assert_not_called()
+                self.assertFalse((root/f'data/editorial_runs/{NOW.date()}/100.json').exists())
+
+    def test_held_slot_is_filled_on_next_scheduled_check(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            publish.write_json(root/f'data/editorial_runs/{NOW.date()}/100.json',{'status':'held'})
+            code,calls=self.run_case(root,Path(temp)/'out',event='schedule')
+            self.assertEqual(code,0)
+            self.assertEqual(publish.daily_counts(root,NOW.date()),(1,2))
+
+    def test_interrupted_reservation_counts_toward_cap_and_cannot_regenerate(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            for index in range(15):
+                publish.write_json(root/f'data/editorial_runs/{NOW.date()}/{index}.json',{'status':'generating'})
+            self.assertIsNotNone(publish.guard(root,NOW.date(),'14','1'))
+            self.assertIsNotNone(publish.guard(root,NOW.date(),'100','1'))
+            self.assertIsNone(publish.guard(root,NOW.date(),'14','1',allow_reserved=True))
+
+    def test_reservation_push_failure_stops_before_any_paid_generation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            before=(root/'data/editorial_history.json').read_bytes()
+            with patch.object(publish,'select_topic') as api:
+                with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',
+                     'GITHUB_RUN_ID':'100','GITHUB_RUN_ATTEMPT':'1','PREVIEW_ONLY':'false',
+                     'GITHUB_STEP_SUMMARY':'','GITHUB_EVENT_NAME':'workflow_dispatch','FOLLOW_SCHEDULE':'false',
+                     'RUNNER_TEMP':str(Path(temp)/'out')}),patch.object(publish,'sync_main'):
+                    def command(*args):
+                        if args[:2] == ('git','push'): raise RuntimeError('push rejected')
+                        return ''
+                    with self.assertRaisesRegex(RuntimeError,'push rejected'):
+                        publish.main(root,command,NOW)
+                    api.assert_not_called()
+            self.assertEqual((root/'data/editorial_history.json').read_bytes(),before)
 
     def test_push_failure_is_not_reported_as_publication(self):
         with tempfile.TemporaryDirectory() as temp:

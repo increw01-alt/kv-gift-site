@@ -5,6 +5,7 @@ GitHub → Cloudflare Pages 자동 배포용. 원본에서 서버(DB·로그인)
 
 ## 최신 운영 기록
 
+- [2026-10-21 예약 실행 지연 복구 · 하루 10편 부족분 보충](docs/AUTOMATION_RECOVERY_2026-10-21.md)
 - [2026-10-20 작업 기록 · 하루 10회 자동 게시 · 사용량과 비용 확인](docs/WORK_LOG_2026-10-20.md)
 - [게시판 글·이미지 자동 게시 상세 안내](tools/BOARD_AUTOMATION.md)
 
