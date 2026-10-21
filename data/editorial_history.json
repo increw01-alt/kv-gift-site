@@ -123,5 +123,15 @@
     "publication_mode": "automatic",
     "run_id": "39524493676",
     "usage_file": "data/editorial_runs/2026-10-21/39524493676.json"
+  },
+  {
+    "board": "free",
+    "id": 466,
+    "topic": "선물할 때 직접 고르는 즐거움과 선택권 중 무엇을 더 생각하시나요?",
+    "drafted_at": "2026-10-21",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39550180718",
+    "usage_file": "data/editorial_runs/2026-10-21/39550180718.json"
   }
 ]

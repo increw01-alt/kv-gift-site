@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T05:33:16.820096+00:00",
+  "generatedAt": "2026-10-21T05:33:56.359360+00:00",
   "dateKst": "2026-10-21",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 5,
   "held": 2,
   "errors": 1,
-  "knownSubtotalUsd": 0.2101208,
+  "knownSubtotalUsd": 0.28285295,
   "estimatedTotalUsd": null,
   "records": [
     {
@@ -62,15 +62,15 @@
     },
     {
       "runId": "39550180718",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "선물할 때 직접 고르는 즐거움과 선택권 중 무엇을 더 생각하시나요?",
+      "url": "https://kv-gift.co.kr/board/free/466",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-21T05:32:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null
+      "estimatedUsd": 0.07273215
     }
   ]
 }
