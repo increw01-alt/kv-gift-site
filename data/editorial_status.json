@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-21T01:30:33.008876+00:00",
+  "dateKst": "2026-10-21",
+  "dailyTarget": 10,
+  "attemptLimit": 15,
+  "published": 1,
+  "verified": 0,
+  "attempts": 3,
+  "held": 2,
+  "errors": 0,
+  "knownSubtotalUsd": 0.2101208,
+  "estimatedTotalUsd": 0.2101208,
+  "records": [
+    {
+      "runId": "39523709944",
+      "status": "held",
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처는 각각 어떤 역할을 하나요?",
+      "url": null,
+      "triggerEvent": null,
+      "triggerSource": null,
+      "scheduledAt": null,
+      "publicVerifiedAt": null,
+      "estimatedUsd": 0.0687534
+    },
+    {
+      "runId": "39523951923",
+      "status": "held",
+      "board": "sale",
+      "topic": "상품권 액면가와 실제 정산 예정 금액은 어떻게 구분하나요?",
+      "url": null,
+      "triggerEvent": null,
+      "triggerSource": null,
+      "scheduledAt": null,
+      "publicVerifiedAt": null,
+      "estimatedUsd": 0.0695066
+    },
+    {
+      "runId": "39524493676",
+      "status": "published",
+      "board": "general_notice",
+      "topic": "문의 답변이 서로 다를 때는 같은 주문과 상품인지 먼저 확인해 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/53",
+      "triggerEvent": null,
+      "triggerSource": null,
+      "scheduledAt": null,
+      "publicVerifiedAt": null,
+      "estimatedUsd": 0.0718608
+    }
+  ]
+}

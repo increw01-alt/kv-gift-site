@@ -1,5 +1,7 @@
 """Cloudflare 반영 뒤 게시글 본문과 배너가 실제 공개되는지 확인합니다."""
 import hashlib
+import datetime as dt
+import json
 import os
 import time
 import urllib.error
@@ -41,3 +43,21 @@ def verify(url, banner, attempts=9, interval=20):
 
 if __name__ == '__main__':
     verify(os.environ['POST_URL'], os.environ['POST_BANNER'])
+    if os.getenv('GITHUB_ACTIONS') == 'true':
+        from run_board_publish import run, sync_main, commit_files, write_json
+        from board_status import write_status
+        run_id = os.environ['GITHUB_RUN_ID']
+        sync_main(run, ROOT)
+        ledgers = list((ROOT/'data/editorial_runs').glob(f'*/{run_id}.json'))
+        if len(ledgers) != 1:
+            raise ValueError('공개 확인을 기록할 실행이 유일하지 않습니다.')
+        ledger = ledgers[0]
+        record = json.loads(ledger.read_text(encoding='utf-8'))
+        if record.get('status') != 'published' or record.get('url') != os.environ['POST_URL']:
+            raise ValueError('공개 확인 주소와 게시 기록이 다릅니다.')
+        record['public_verified_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
+        record['publication'] = '공개 게시글과 원본 PNG 확인 완료'
+        record['banner_sha256'] = hashlib.sha256((ROOT/os.environ['POST_BANNER']).read_bytes()).hexdigest()
+        write_json(ledger, record)
+        status_file = write_status(ROOT, dt.date.fromisoformat(record['date_kst']))
+        commit_files(run, [ledger.relative_to(ROOT).as_posix(), status_file], '[공개 게시 확인] '+run_id)

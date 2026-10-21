@@ -12,6 +12,7 @@ from board_editor import select_topic, edit_article, review_article, fresh_topic
 from board_banner import generate_banner
 from board_render import save_preview
 from board_usage import UsageLog
+from board_status import write_status
 
 DAILY_LIMIT = 10
 DAILY_ATTEMPT_LIMIT = 15
@@ -114,6 +115,10 @@ def record_outcome(root, day, run_id, board, topic, status, review, usage, url=N
     outcome = {
         'run_id': run_id, 'date_kst': day.isoformat(), 'board': board, 'topic': topic,
         'status': status, 'url': url,
+        'trigger_event': os.getenv('GITHUB_EVENT_NAME'),
+        'trigger_source': ('github_schedule' if os.getenv('GITHUB_EVENT_NAME') == 'schedule'
+                           else os.getenv('SCHEDULER_SOURCE') or 'manual'),
+        'scheduled_at': os.getenv('SCHEDULED_AT') or None,
         'publication': ('main 반영 후 Cloudflare 배포 확인 필요' if url else
                         '생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인' if status == 'generating' else '게시하지 않음'),
         'review': review, 'api_usage': read_json(usage.path),
@@ -129,6 +134,7 @@ def record_outcome(root, day, run_id, board, topic, status, review, usage, url=N
             state.setdefault('held_topics', []).append({'board': board, 'topic': topic, 'run_id': run_id})
         write_json(path, state)
         files.append(path.relative_to(root).as_posix())
+    files.append(write_status(root, day))
     return files, outcome
 
 
