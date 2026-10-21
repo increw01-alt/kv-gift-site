@@ -9,8 +9,13 @@
       "board": "sale",
       "topic": "상품권 액면가와 실제 정산 예정 금액은 어떻게 구분하나요?",
       "run_id": "39523951923"
+    },
+    {
+      "board": "sense",
+      "topic": "온라인에서 정보를 읽을 때 게시일과 수정일을 함께 보는 이유",
+      "run_id": "39549707629"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "39524493676"
+  "last_board": "sense",
+  "last_run_id": "39549707629"
 }

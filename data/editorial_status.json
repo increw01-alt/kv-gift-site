@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T05:28:20.570932+00:00",
+  "generatedAt": "2026-10-21T05:28:25.909204+00:00",
   "dateKst": "2026-10-21",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,7 +8,7 @@
   "verified": 1,
   "attempts": 4,
   "held": 2,
-  "errors": 0,
+  "errors": 1,
   "knownSubtotalUsd": 0.2101208,
   "estimatedTotalUsd": null,
   "records": [
@@ -50,9 +50,9 @@
     },
     {
       "runId": "39549707629",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "sense",
+      "topic": "온라인에서 정보를 읽을 때 게시일과 수정일을 함께 보는 이유",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
