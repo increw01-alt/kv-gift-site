@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "revision": "initial",
+  "enabled": true,
+  "dailyTarget": 10,
+  "startTime": "09:17",
+  "endTime": "18:17",
+  "timezone": "Asia/Seoul",
+  "attemptLimit": 15,
+  "catchUpUntil": "23:00",
+  "updatedAt": null
+}

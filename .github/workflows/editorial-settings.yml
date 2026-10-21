@@ -1,0 +1,34 @@
+name: 자동 게시 설정 저장
+run-name: 게시 설정 · ${{ inputs.request_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: 대시보드 저장 요청 번호
+        type: string
+        required: true
+      settings_json:
+        description: 검증할 게시 설정
+        type: string
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: board-editorial-drafts
+  cancel-in-progress: false
+jobs:
+  save:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: main
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: 설정 검증과 저장 (콘텐츠 생성 없음)
+        env:
+          SETTINGS_JSON: ${{ inputs.settings_json }}
+        run: python tools/update_editorial_settings.py

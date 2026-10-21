@@ -2,11 +2,13 @@
 import datetime as dt
 import json
 from pathlib import Path
+from editorial_settings import load_settings
 
 KST = dt.timezone(dt.timedelta(hours=9))
 
 
 def build_status(root, day, now=None):
+    settings = load_settings(root)
     records = []
     for path in sorted((Path(root)/'data/editorial_runs'/day.isoformat()).glob('*.json')):
         item = json.loads(path.read_text(encoding='utf-8'))
@@ -27,7 +29,7 @@ def build_status(root, day, now=None):
     costs = [r['estimatedUsd'] for r in records]
     return {
         'schemaVersion': 1, 'generatedAt': (now or dt.datetime.now(dt.timezone.utc)).isoformat(),
-        'dateKst': day.isoformat(), 'dailyTarget': 10, 'attemptLimit': 15,
+        'dateKst': day.isoformat(), 'dailyTarget': settings['dailyTarget'], 'attemptLimit': 15,
         'published': sum(r['status'] == 'published' for r in records),
         'verified': sum(r['status'] == 'published' and bool(r['publicVerifiedAt']) for r in records),
         'attempts': len(records), 'held': sum(r['status'] == 'held' for r in records),

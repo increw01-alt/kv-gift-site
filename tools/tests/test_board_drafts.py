@@ -31,6 +31,8 @@ def fixture(root):
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(draft.ROOT/name, dest)
     # 운영 글이 늘어나거나 준비 주제가 소진되어도 CI 테스트 자료는 소진되지 않습니다.
+    from editorial_settings import DEFAULT
+    (root/'data/editorial_settings.json').write_text(json.dumps(DEFAULT),encoding='utf-8')
     topics = {board: [
         f'{profile["name"]}의 검증용 원문과 목록을 함께 연결하려면 무엇을 살펴볼까요?',
         f'보관해 둔 이전 글을 지키는 테스트 절차를 {profile["name"]}에서 어떻게 확인할까요?',

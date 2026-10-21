@@ -13,6 +13,7 @@ from board_banner import generate_banner
 from board_render import save_preview
 from board_usage import UsageLog
 from board_status import write_status
+from editorial_settings import load_settings, target_at
 
 DAILY_LIMIT = 10
 DAILY_ATTEMPT_LIMIT = 15
@@ -67,16 +68,14 @@ def daily_counts(root, day):
     return max(len(published), sum(x.get('status') == 'published' for x in records)), len(records)
 
 
-def scheduled_target(now):
-    """09:17부터 시간당 1편. 18:17 이후에는 23시 전까지 부족분을 보충합니다."""
-    local = now.astimezone(KST)
-    start = local.replace(hour=9, minute=17, second=0, microsecond=0)
-    if local < start or local.hour >= 23:
-        return 0
-    return min(DAILY_LIMIT, int((local-start).total_seconds() // 3600) + 1)
+def scheduled_target(now, settings=None):
+    return target_at(now, settings or load_settings(ROOT))
 
 
 def guard(root, day, run_id, attempt, allow_reserved=False):
+    settings = load_settings(root)
+    if not settings['enabled']:
+        return '대시보드에서 자동 게시가 꺼져 있습니다.'
     if attempt != '1':
         return '재실행은 중복 과금을 막기 위해 생성하지 않습니다. 이전 실행 기록을 확인하세요.'
     records = root/'data/editorial_runs'/day.isoformat()
@@ -85,8 +84,8 @@ def guard(root, day, run_id, attempt, allow_reserved=False):
     if current.exists() and not (allow_reserved and reserved):
         return '이미 처리한 실행입니다. 중복 게시하지 않습니다.'
     published, attempts = daily_counts(root, day)
-    if published >= DAILY_LIMIT:
-        return '오늘 자동 게시 목표 10편을 완료했습니다. 추가 생성·게시하지 않습니다.'
+    if published >= settings['dailyTarget']:
+        return f"오늘 자동 게시 목표 {settings['dailyTarget']}편을 완료했습니다. 추가 생성·게시하지 않습니다."
     if attempts - int(allow_reserved and reserved) >= DAILY_ATTEMPT_LIMIT:
         return '오늘 생성 시도 상한 15회에 도달했습니다. 비용 보호를 위해 원인을 확인해야 합니다.'
     return None
@@ -154,13 +153,14 @@ def main(root=ROOT, command=None, now=None):
                  or os.getenv('FOLLOW_SCHEDULE', 'false').lower() == 'true')
     if not preview:
         sync_main(command, root)
+    settings = load_settings(root, required=not preview)
     attempt = os.getenv('GITHUB_RUN_ATTEMPT', '1')
     reason = guard(root, day, run_id, attempt) if not preview else (
         '검토 전용 재실행도 중복 과금을 막기 위해 생성하지 않습니다.' if attempt != '1' else None)
     if not reason and not preview and scheduled:
-        target = scheduled_target(instant)
+        target = scheduled_target(instant, settings)
         published, _ = daily_counts(root, day)
-        summary(f'한국 시간 {instant:%Y-%m-%d %H:%M}: 현재 목표 {target}편 / 게시 {published}편 / 하루 목표 {DAILY_LIMIT}편')
+        summary(f"한국 시간 {instant:%Y-%m-%d %H:%M}: 현재 목표 {target}편 / 게시 {published}편 / 하루 목표 {settings['dailyTarget']}편")
         if published >= target:
             reason = '현재 시간대의 게시 목표를 충족했거나 운영 시간 밖입니다. 다음 점검에서 부족분을 확인합니다.'
     if reason:
@@ -175,7 +175,7 @@ def main(root=ROOT, command=None, now=None):
     review_model = os.getenv('OPENAI_REVIEW_MODEL', 'gpt-5.4-mini')
     usage = UsageLog(output/'board-api-usage.json',
                      {'mode': 'preview_only' if preview else 'automatic_publish',
-                      'daily_limit': DAILY_LIMIT, 'daily_attempt_limit': DAILY_ATTEMPT_LIMIT,
+                      'daily_limit': settings['dailyTarget'], 'daily_attempt_limit': DAILY_ATTEMPT_LIMIT,
                       'follow_schedule': scheduled})
     if not preview:
         # 유료 요청 전에 시도를 main에 예약해 강제 종료나 연결 끊김도 횟수에 포함합니다.
@@ -219,6 +219,10 @@ def main(root=ROOT, command=None, now=None):
     # 생성 도중 사람이 올린 변경을 먼저 반영하고 최신 목록에서 번호와 중복을 다시 확인합니다.
     sync_main(command, root)
     reason = guard(root, day, run_id, '1', allow_reserved=True)
+    final_instant = (now or dt.datetime.now(KST)).astimezone(KST)
+    final_target = scheduled_target(final_instant, load_settings(root, required=True))
+    if final_instant.date() != day or (scheduled and daily_counts(root, day)[0] >= final_target):
+        reason = '게시 가능 시간이 지나 공개를 보류했습니다.'
     if reason:
         status = 'held'
         report = {'approved': False, 'issues': [reason]}
@@ -262,7 +266,7 @@ def main(root=ROOT, command=None, now=None):
     else:
         summary('이번 글은 게시하지 않았습니다. 사유: '+' / '.join(report.get('issues', [])))
     published, attempts = daily_counts(root, day)
-    summary(f'오늘 자동 게시 **{published}/{DAILY_LIMIT}편**, 생성 시도 **{attempts}/{DAILY_ATTEMPT_LIMIT}회**')
+    summary(f"오늘 자동 게시 **{published}/{load_settings(root)['dailyTarget']}편**, 생성 시도 **{attempts}/{DAILY_ATTEMPT_LIMIT}회**")
     return 1 if error else 0
 
 
