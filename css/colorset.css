@@ -423,8 +423,8 @@ input:focus{outline: none;}
 #general_tail .board1>div>ul li.board_title{border-top: 1px solid var(--color-blue);border-bottom: 1px solid var(--color-blue);cursor: default;}
 #general_tail .board1>div>ul li.board_title p{font-weight: bold;color: #000;text-align: center;}
 #general_tail .board1>div>ul li.board_title p:nth-child(1){font-size: 13px; border: unset;border-radius: unset;color: #000;}
-#general_tail .board2{max-width: 1200px; width: calc(100% - 40px);margin: 0 auto; border-top: 1px solid #333;border-bottom: 1px solid #ddd;}
-#general_tail .board2>div{width: 33.333333%;border-right: 1px solid #ddd;padding: 20px;}
+#general_tail .board2{display: grid;grid-template-columns: repeat(3,minmax(0,1fr));align-items: stretch;max-width: 1200px; width: calc(100% - 40px);margin: 0 auto; border-top: 1px solid #333;border-bottom: 1px solid #ddd;}
+#general_tail .board2>div{width: 100%;min-width: 0;border-right: 1px solid #ddd;padding: 20px;}
 #general_tail .board2>div:last-child{border-right:none;}
 #general_tail .board2>div>.title{margin-bottom: 20px !important;}
 #general_tail .board2>div>.title b{font-size: 17px; color: #000; display: block;}
@@ -435,29 +435,33 @@ input:focus{outline: none;}
 #general_tail .board2>div>.title>div:hover{background:var(--color-blue);}
 #general_tail .board2>div>.title>div:hover .more_btn{transform: rotate(180deg);}
 #general_tail .board2>div>.title>div:hover .more_btn span{background: #fff;}
-#general_tail .board2>div.free_board ul{min-height: 315px}
+#general_tail .board2>div.free_board ul{min-height: 0;}
 #general_tail .board2>div.free_board ul li{padding:5px 10px 5px 0px;cursor: pointer;}
 #general_tail .board2>div.free_board ul li:hover{background:#eee ;}
 #general_tail .board2>div.free_board ul li:hover p:after{content: "-";}
 #general_tail .board2>div.free_board ul li p{font-size: 15px;width: calc(100% - 80px);white-space: nowrap; overflow: hidden; text-overflow: ellipsis;position: relative;top: 0;left: 0; padding-left: 10px;}
 #general_tail .board2>div.free_board ul li p:after{position: absolute;content: "·";font-weight: 15px;margin-right: 5px;top: 50%;left: 0;transform: translateY(-50%)}
 #general_tail .board2>div.free_board ul li span{font-size: 13px; color: #777;width: 50px;}
-#general_tail .board2>div.tip_board ul{min-height: 157px;}
+#general_tail .board2>div.tip_board ul{min-height: 0;}
 #general_tail .board2>div.tip_board ul li{padding: 5px 10px;cursor: pointer;}
-#general_tail .board2>div.tip_board ul li p{font-size: 15px; width: 100%;text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+#general_tail .board2>div.tip_board ul li p{font-size: 15px; width: 100%;text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 #general_tail .board2>div.tip_board ul li:hover{background:#eee ;}
 #general_tail .board2>div>.title.total_title{padding-top: 20px;margin-top: 20px;}
 #general_tail .board2>div.tip_board .total_user{}
 #general_tail .board2>div.tip_board .total_user p{font-size: 15px; line-height: 23px; border-bottom: 1px solid #eee;}
 #general_tail .board2>div.tip_board .total_user p span{}
 #general_tail .board2>div.tip_board .total_user p span b{color: var(--color-orange);}
-#general_tail .board2>div.add_board ul{margin-bottom: 38px !important;min-height: 157.11px !important;}
+#general_tail .board2>div.add_board ul{margin-bottom: 28px !important;min-height: 0 !important;}
 #general_tail .board2>div.add_board ul li{padding:5px 10px 5px 0px;cursor: pointer;}
 #general_tail .board2>div.add_board ul li:hover{background:#eee ;}
 #general_tail .board2>div.add_board ul li:hover p:after{content: "-";}
 #general_tail .board2>div.add_board ul li p{font-size: 15px;width: calc(100% - 80px);white-space: nowrap; overflow: hidden; text-overflow: ellipsis;position: relative;top: 0;left: 0; padding-left: 10px;}
 #general_tail .board2>div.add_board ul li p:after{position: absolute;content: "·";font-weight: 15px;margin-right: 5px;top: 50%;left: 0;transform: translateY(-50%)}
 #general_tail .board2>div.add_board ul li span{font-size: 13px; color: #777;width: 50px;}
+#general_tail .board2>div>ul>li{display: flex;align-items: center;flex-wrap: nowrap;gap: 12px;min-height: 32px;}
+#general_tail .board2>div:is(.free_board,.tip_board,.add_board)>ul>li{padding: 5px 0;}
+#general_tail .board2>div:is(.free_board,.tip_board,.add_board)>ul>li>p{flex: 1;min-width: 0;width: auto;line-height: 22px;}
+#general_tail .board2>div:is(.free_board,.add_board)>ul>li>span{flex: 0 0 60px;width: 60px;line-height: 22px;text-align: right;white-space: nowrap;}
 #general_tail .board2>div.add_board .goto{width: 100%;}
 #general_tail .board2>div.add_board .goto p{width: 33.333333%;text-align: center;cursor: pointer;}
 #general_tail .board2>div.add_board .goto p:hover span{color: var(--color-orange);}
@@ -931,9 +935,10 @@ input:focus{outline: none;}
 		#general_tail .board1>div .title>p{font-size: 15px;}
 		#general_tail .board1>div .title>div{width: 90px;}
 		#general_tail .board1>div .title>div>p{font-size: 11px;}
-		#general_tail .board2{border-top:unset;border-bottom: unset;}
+		#general_tail .board2{grid-template-columns: minmax(0,1fr);border-top:unset;border-bottom: unset;}
 		#general_tail .board2>div{width: 100%;border-right: unset;border-top: 1px solid #6b6b6b;padding: 20px 0;}
 		#general_tail .board2>div>.title b{font-size: 15px;}
+		#general_tail .board2>div>.title>div{width: 44px;height: 44px;}
 		#general_tail .board2>div.free_board ul{min-height:unset;}
 		#general_tail .board2>div.tip_board ul{min-height: unset;}
 		#general_tail .board2>div.tip_board ul li{padding: 5px 0;}
