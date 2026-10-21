@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T01:30:33.008876+00:00",
+  "generatedAt": "2026-10-21T01:30:54.108010+00:00",
   "dateKst": "2026-10-21",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
-  "verified": 0,
+  "verified": 1,
   "attempts": 3,
   "held": 2,
   "errors": 0,
@@ -45,7 +45,7 @@
       "triggerEvent": null,
       "triggerSource": null,
       "scheduledAt": null,
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-21T01:30:54.104963+00:00",
       "estimatedUsd": 0.0718608
     }
   ]
