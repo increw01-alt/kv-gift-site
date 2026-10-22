@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T01:18:22.233767+00:00",
+  "generatedAt": "2026-10-22T01:19:07.180170+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 2,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.07220165,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.14489845,
+  "estimatedTotalUsd": 0.14489845,
   "records": [
     {
       "runId": "39698860844",
@@ -27,16 +27,16 @@
     },
     {
       "runId": "39704873000",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "주문번호와 상품권 번호는 왜 서로 다른가요?",
+      "url": "https://kv-gift.co.kr/board/gc_information/4",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T01:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0726968,
+      "knownSubtotalUsd": 0.0726968
     }
   ]
 }

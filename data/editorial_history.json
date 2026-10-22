@@ -223,5 +223,15 @@
     "publication_mode": "automatic",
     "run_id": "39698860844",
     "usage_file": "data/editorial_runs/2026-10-22/39698860844.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 4,
+    "topic": "주문번호와 상품권 번호는 왜 서로 다른가요?",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39704873000",
+    "usage_file": "data/editorial_runs/2026-10-22/39704873000.json"
   }
 ]
