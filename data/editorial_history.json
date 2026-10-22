@@ -283,5 +283,15 @@
     "publication_mode": "automatic",
     "run_id": "39733080965",
     "usage_file": "data/editorial_runs/2026-10-22/39733080965.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 5,
+    "topic": "모바일 교환권과 지류상품권의 관계를 이해해 보세요",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39739532668",
+    "usage_file": "data/editorial_runs/2026-10-22/39739532668.json"
   }
 ]

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T07:18:21.169072+00:00",
+  "generatedAt": "2026-10-22T07:19:04.431291+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 7,
+  "published": 8,
   "verified": 7,
   "attempts": 9,
   "held": 1,
   "errors": 0,
-  "knownSubtotalUsd": 0.58179495,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.6550012,
+  "estimatedTotalUsd": 0.6550012,
   "records": [
     {
       "runId": "39698860844",
@@ -118,16 +118,16 @@
     },
     {
       "runId": "39739532668",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "모바일 교환권과 지류상품권의 관계를 이해해 보세요",
+      "url": "https://kv-gift.co.kr/board/gc_information/5",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T07:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.07320625,
+      "knownSubtotalUsd": 0.07320625
     }
   ]
 }
