@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T03:18:19.813221+00:00",
+  "generatedAt": "2026-10-22T03:19:00.055185+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 4,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.21784225,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2898749,
+  "estimatedTotalUsd": 0.2898749,
   "records": [
     {
       "runId": "39698860844",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "39716071439",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "상품권 안내를 공유할 때는 원문 링크와 확인 날짜를 함께 남겨 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/55",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T03:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.07203265,
+      "knownSubtotalUsd": 0.07203265
     }
   ]
 }

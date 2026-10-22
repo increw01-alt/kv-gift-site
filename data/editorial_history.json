@@ -243,5 +243,15 @@
     "publication_mode": "automatic",
     "run_id": "39710610461",
     "usage_file": "data/editorial_runs/2026-10-22/39710610461.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 55,
+    "topic": "상품권 안내를 공유할 때는 원문 링크와 확인 날짜를 함께 남겨 주세요",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39716071439",
+    "usage_file": "data/editorial_runs/2026-10-22/39716071439.json"
   }
 ]
