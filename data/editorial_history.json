@@ -253,5 +253,15 @@
     "publication_mode": "automatic",
     "run_id": "39716071439",
     "usage_file": "data/editorial_runs/2026-10-22/39716071439.json"
+  },
+  {
+    "board": "free",
+    "id": 468,
+    "topic": "처음 쓰는 서비스를 고를 때 가장 먼저 살펴보는 정보는 무엇인가요?",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39722064057",
+    "usage_file": "data/editorial_runs/2026-10-22/39722064057.json"
   }
 ]
