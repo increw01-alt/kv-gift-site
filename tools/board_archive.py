@@ -16,17 +16,20 @@ def amount(value):
     return value if type(value) in (int, float) and math.isfinite(value) and value >= 0 else None
 
 
+def charge_date(at, fallback):
+    try:
+        instant = dt.datetime.fromisoformat(at.replace('Z', '+00:00'))
+        if instant.tzinfo is None:
+            raise ValueError('timezone required')
+        return at, instant.astimezone(KST).date().isoformat()
+    except (ValueError, AttributeError, TypeError):
+        return None, fallback
+
+
 def usage_charges(entry, usage):
     rows = []
-    for index, item in enumerate(usage.get('records', [])):
-        at = item.get('recorded_at_utc')
-        try:
-            instant = dt.datetime.fromisoformat(at.replace('Z', '+00:00'))
-            if instant.tzinfo is None:
-                raise ValueError('timezone required')
-            day = instant.astimezone(KST).date().isoformat()
-        except (ValueError, AttributeError, TypeError):
-            at, day = None, entry['dateKst']
+    for item in usage.get('records', []):
+        at, day = charge_date(item.get('recorded_at_utc'), entry['dateKst'])
         cost = amount(item.get('estimated_usd'))
         tokens = item.get('usage') or {}
         rows.append({'entryId': entry['id'], 'dateKst': day, 'recordedAt': at,
@@ -34,6 +37,14 @@ def usage_charges(entry, usage):
                      'knownSubtotalUsd': cost or 0, 'requests': 1,
                      'inputTokens': tokens.get('input_tokens') if type(tokens.get('input_tokens')) is int else None,
                      'outputTokens': tokens.get('output_tokens') if type(tokens.get('output_tokens')) is int else None})
+    for request in usage.get('requests', []):
+        if request.get('usage_record_index') is not None:
+            continue
+        at, day = charge_date(request.get('started_at_utc'), entry['dateKst'])
+        rows.append({'entryId': entry['id'], 'dateKst': day, 'recordedAt': at,
+                     'kind': request.get('kind', 'unknown'), 'estimatedUsd': None,
+                     'knownSubtotalUsd': 0, 'requests': 1,
+                     'inputTokens': None, 'outputTokens': None})
     total = amount(usage.get('estimated_total_usd'))
     known = amount(usage.get('known_subtotal_usd'))
     if not rows:

@@ -1,4 +1,5 @@
 import json
+import io
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,10 +9,85 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from board_usage import UsageLog, estimate
 import run_board_draft as runner
+import board_drafts
+import board_editor
+import board_banner
 from test_board_drafts import example
 
 
 class UsageTests(unittest.TestCase):
+    def response(self, data, usage=None):
+        return io.StringIO(json.dumps({'status': 'completed',
+            'usage': usage if usage is not None else {'input_tokens': 1000, 'output_tokens': 1000},
+            'output': [{'content': [{'type': 'output_text', 'text': json.dumps(data)}]}]}))
+
+    def test_local_validation_failure_has_complete_metered_cost(self):
+        with tempfile.TemporaryDirectory() as temp:
+            log = UsageLog(Path(temp)/'usage.json')
+            invalid = example()
+            invalid['sections'][0]['body'] += ' 2'
+            def respond(*args, **kwargs):
+                before = json.loads(log.path.read_text(encoding='utf-8'))
+                self.assertIsNone(before['requests'][0]['usage_record_index'])
+                self.assertEqual(before['accounting_status'], 'in_progress')
+                self.assertNotIn('test-secret', log.path.read_text(encoding='utf-8'))
+                return self.response(invalid)
+            with patch.dict('os.environ', {'OPENAI_API_KEY': 'test-secret'}), \
+                 patch('urllib.request.urlopen', side_effect=respond):
+                with self.assertRaisesRegex(ValueError, '금지 표현'):
+                    board_drafts.generate('topic', 'gpt-4.1-mini', log.record)
+            log.save('failed')
+            saved = json.loads(log.path.read_text(encoding='utf-8'))
+            self.assertEqual(saved['status'], 'failed')
+            self.assertEqual(saved['accounting_status'], 'complete')
+            self.assertEqual(saved['estimated_total_usd'], .002)
+            self.assertEqual(saved['requests'][0]['usage_record_index'], 0)
+
+    def test_editing_validation_failure_keeps_both_metered_calls(self):
+        with tempfile.TemporaryDirectory() as temp:
+            log = UsageLog(Path(temp)/'usage.json')
+            invalid = example()
+            invalid['sections'][0]['body'] += ' 안전한 거래'
+            with patch.dict('os.environ', {'OPENAI_API_KEY': 'test-secret'}), \
+                 patch('urllib.request.urlopen', side_effect=[self.response(example()), self.response(invalid)]), \
+                 patch.object(board_editor, 'related_titles', return_value=[]):
+                data = board_drafts.generate('topic', 'gpt-4.1-mini', log.record)
+                with self.assertRaisesRegex(ValueError, '금지 표현'):
+                    board_editor.edit_article('sale', 'topic', data, None, 'gpt-4.1-mini', log.record)
+            log.save('failed')
+            saved = json.loads(log.path.read_text(encoding='utf-8'))
+            self.assertEqual(saved['estimated_total_usd'], .004)
+            self.assertEqual([r['kind'] for r in saved['requests']], ['text', 'editing'])
+
+    def test_image_timeout_keeps_unmetered_request_unknown(self):
+        with tempfile.TemporaryDirectory() as temp:
+            log = UsageLog(Path(temp)/'usage.json')
+            with patch.dict('os.environ', {'OPENAI_API_KEY': 'test-secret'}), \
+                 patch('urllib.request.urlopen', side_effect=[self.response(example()), TimeoutError()]), \
+                 patch.object(board_banner, 'reference_images', return_value=[]):
+                data = board_drafts.generate('topic', 'gpt-4.1-mini', log.record)
+                with self.assertRaises(TimeoutError):
+                    board_banner.generate_banner('topic', data, log.record)
+            log.save('failed')
+            saved = json.loads(log.path.read_text(encoding='utf-8'))
+            self.assertEqual(saved['known_subtotal_usd'], .002)
+            self.assertIsNone(saved['estimated_total_usd'])
+            self.assertEqual(saved['accounting_status'], 'partial')
+            self.assertIsNone(saved['requests'][1]['usage_record_index'])
+            self.assertEqual(saved['requests'][1]['kind'], 'image')
+
+    def test_missing_usage_or_unknown_model_is_not_complete(self):
+        with tempfile.TemporaryDirectory() as temp:
+            for model, usage in [('gpt-4.1-mini', {}), ('unknown', {'input_tokens': 10, 'output_tokens': 20})]:
+                with self.subTest(model=model):
+                    log = UsageLog(Path(temp)/'usage.json')
+                    log.begin_request('text', model)
+                    log.record('text', model, usage)
+                    log.save('failed')
+                    saved = json.loads(log.path.read_text(encoding='utf-8'))
+                    self.assertIsNone(saved['estimated_total_usd'])
+                    self.assertNotEqual(saved['accounting_status'], 'complete')
+
     def test_cached_text_and_image_costs(self):
         self.assertAlmostEqual(estimate('text', 'gpt-4.1-mini', {
             'input_tokens': 2000, 'output_tokens': 1000,

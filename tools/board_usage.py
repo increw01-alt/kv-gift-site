@@ -37,13 +37,36 @@ def estimate(kind, model, usage):
     return round(amount / 1_000_000, 8)
 
 
+def begin_request(on_usage, kind, model):
+    """Track the existing bound usage callback before sending an API request."""
+    owner = getattr(on_usage, '__self__', None)
+    if isinstance(owner, UsageLog):
+        owner.begin_request(kind, model)
+
+
 class UsageLog:
     def __init__(self, path, context=None):
         self.path = Path(path)
         self.records = []
+        self.requests = []
+        self.untracked_records = False
         self.context = context or {}
 
+    def begin_request(self, kind, model):
+        # Persist before sending; timeouts and unreadable responses remain unknown.
+        self.requests.append({'kind': kind, 'model': model,
+                              'started_at_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
+                              'usage_record_index': None})
+        self.save('in_progress')
+
     def record(self, kind, model, usage):
+        pending = next((r for r in reversed(self.requests)
+                        if r['kind'] == kind and r['model'] == model
+                        and r['usage_record_index'] is None), None)
+        if pending is not None:
+            pending['usage_record_index'] = len(self.records)
+        else:
+            self.untracked_records = True
         self.records.append({
             'kind': kind, 'model': model, 'usage': usage,
             'estimated_usd': estimate(kind, model, usage),
@@ -56,14 +79,22 @@ class UsageLog:
 
     def save(self, status):
         costs = [r['estimated_usd'] for r in self.records]
+        pending = any(r['usage_record_index'] is None for r in self.requests)
+        tracked = bool(self.requests) and not self.untracked_records
+        # A local validation failure does not invalidate already metered calls.
+        # Legacy callbacks on failed runs remain conservative without request tracking.
+        complete = (bool(costs) and None not in costs and not pending
+                    and (status == 'completed' or (status == 'failed' and tracked)))
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.path.write_text(json.dumps({
             'run_id': os.getenv('GITHUB_RUN_ID'),
             'run_attempt': os.getenv('GITHUB_RUN_ATTEMPT'),
             'context': self.context,
             'status': status, 'records': self.records,
+            'request_tracking_version': 1, 'requests': self.requests,
+            'accounting_status': 'complete' if complete else 'in_progress' if status == 'in_progress' else 'partial' if costs else 'unknown',
             'known_subtotal_usd': round(sum(x for x in costs if x is not None), 8),
-            'estimated_total_usd': round(sum(costs), 8) if costs and None not in costs and status == 'completed' else None,
+            'estimated_total_usd': round(sum(costs), 8) if complete else None,
             'note': '단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가.',
         }, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 

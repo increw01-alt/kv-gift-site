@@ -8,6 +8,7 @@ import urllib.error
 import urllib.request
 import zlib
 from board_profiles import PROFILES
+from board_usage import begin_request
 
 REFERENCE_DIR = Path(__file__).resolve().parent / 'assets' / 'board-banner'
 REFERENCE_FILES = ('approved-notice-style-20261020.png', 'kv-symbol.png')
@@ -94,6 +95,7 @@ def generate_banner(topic, data, on_usage=None, board='purchase'):
                'quality': quality, 'output_format': 'png', 'images': reference_images()}
     req = urllib.request.Request('https://api.openai.com/v1/images/edits',
         data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json'})
+    begin_request(on_usage, 'image', model)
     try:
         with urllib.request.urlopen(req, timeout=300) as response:
             result = json.load(response)

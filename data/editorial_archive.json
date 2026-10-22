@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T03:29:16.285473+00:00",
+  "generatedAt": "2026-10-22T04:14:17.970433+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -71,7 +71,7 @@
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
+      "estimatedUsd": 0.0008764,
       "knownSubtotalUsd": 0.0008764
     },
     {
@@ -155,7 +155,7 @@
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
+      "estimatedUsd": 0.0018976,
       "knownSubtotalUsd": 0.0018976
     },
     {
@@ -698,17 +698,6 @@
       "outputTokens": 336
     },
     {
-      "entryId": "run:39549707629",
-      "dateKst": "2026-10-21",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
-    },
-    {
       "entryId": "run:39550180718",
       "dateKst": "2026-10-21",
       "recordedAt": "2026-10-21T05:33:20.841245+00:00",
@@ -949,17 +938,6 @@
       "requests": 1,
       "inputTokens": 1275,
       "outputTokens": 317
-    },
-    {
-      "entryId": "run:39554556958",
-      "dateKst": "2026-10-21",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
     },
     {
       "entryId": "run:39555056967",

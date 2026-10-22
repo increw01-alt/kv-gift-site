@@ -9,6 +9,7 @@ import urllib.request
 from board_drafts import ROOT, NoTopic, news_brief, normalized, read_json, validate
 from board_profiles import PROFILES, ROTATION
 from board_banner import REFERENCE_DIR
+from board_usage import begin_request
 
 ARTICLE_SCHEMA = {
     'type': 'object', 'additionalProperties': False, 'required': ['summary', 'sections', 'checks'],
@@ -38,6 +39,7 @@ def ask_json(instructions, content, schema, name, stage, model, on_usage, max_to
         payload['reasoning'] = {'effort': 'low'}
     request = urllib.request.Request('https://api.openai.com/v1/responses',
         data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json'})
+    begin_request(on_usage, stage, model)
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             result = json.load(response)

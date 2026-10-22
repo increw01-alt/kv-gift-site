@@ -5,11 +5,36 @@ import tempfile
 import unittest
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from board_archive import build_archive
+from board_archive import build_archive, usage_charges
 from board_status import write_status
 
 
 class ArchiveTests(unittest.TestCase):
+    def test_known_cost_on_validation_error_has_no_unknown_placeholder(self):
+        rows = usage_charges({'id':'run:1', 'dateKst':'2026-10-21'}, {
+            'status':'failed', 'accounting_status':'complete', 'estimated_total_usd':.002,
+            'known_subtotal_usd':.002, 'records':[{'kind':'text', 'estimated_usd':.002,
+                'recorded_at_utc':'2026-10-21T05:28:25Z',
+                'usage':{'input_tokens':1000, 'output_tokens':1000}}],
+            'requests':[{'kind':'text', 'usage_record_index':0}]})
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['estimatedUsd'], .002)
+
+    def test_unmetered_request_uses_its_own_kst_day_without_duplicate_cost(self):
+        rows = usage_charges({'id':'run:1', 'dateKst':'2026-10-20'}, {
+            'estimated_total_usd':None, 'known_subtotal_usd':.002,
+            'records':[{'kind':'text', 'estimated_usd':.002,
+                'recorded_at_utc':'2026-10-20T14:59:59Z',
+                'usage':{'input_tokens':1000, 'output_tokens':1000}}],
+            'requests':[{'kind':'text', 'usage_record_index':0},
+                {'kind':'image', 'usage_record_index':None, 'started_at_utc':'2026-10-20T15:00:01Z'}]})
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0]['dateKst'], '2026-10-20')
+        self.assertEqual(rows[1]['dateKst'], '2026-10-21')
+        self.assertIsNone(rows[1]['estimatedUsd'])
+        self.assertEqual(sum(row['requests'] for row in rows), 2)
+        self.assertEqual(sum(row['knownSubtotalUsd'] for row in rows), .002)
+
     def put(self, root, path, data):
         dest=root/path;dest.parent.mkdir(parents=True,exist_ok=True)
         dest.write_text(json.dumps(data),encoding='utf-8')

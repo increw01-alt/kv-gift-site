@@ -10,6 +10,7 @@ import urllib.error
 import urllib.request
 from urllib.parse import urlsplit
 from board_profiles import PROFILES, ROTATION
+from board_usage import begin_request
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = '한국상품권거래소 운영팀'
@@ -163,6 +164,7 @@ checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 �
                'text': {'format': {'type': 'json_schema', 'name': 'board_guide', 'strict': True, 'schema': schema}}}
     request = urllib.request.Request('https://api.openai.com/v1/responses',
         data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
+    begin_request(on_usage, 'text', model)
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             result = json.load(response)
