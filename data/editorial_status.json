@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T08:18:22.110062+00:00",
+  "generatedAt": "2026-10-22T08:18:27.545147+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 8,
   "attempts": 10,
   "held": 1,
-  "errors": 0,
-  "knownSubtotalUsd": 0.6550012,
-  "estimatedTotalUsd": null,
+  "errors": 1,
+  "knownSubtotalUsd": 0.6560144,
+  "estimatedTotalUsd": 0.6560144,
   "records": [
     {
       "runId": "39698860844",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "39746707331",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "sale",
+      "topic": "여러 종류의 상품권을 판매 문의할 때 어떻게 정리하나요?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T08:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0010132,
+      "knownSubtotalUsd": 0.0010132
     }
   ]
 }

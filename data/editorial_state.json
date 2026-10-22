@@ -24,8 +24,13 @@
       "board": "sense",
       "topic": "즐겨찾기와 스크린샷은 언제 나눠 사용하면 편할까요?",
       "run_id": "39721600274"
+    },
+    {
+      "board": "sale",
+      "topic": "여러 종류의 상품권을 판매 문의할 때 어떻게 정리하나요?",
+      "run_id": "39746707331"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "39739532668"
+  "last_board": "sale",
+  "last_run_id": "39746707331"
 }

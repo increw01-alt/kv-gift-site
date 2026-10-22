@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T08:18:22.116504+00:00",
+  "generatedAt": "2026-10-22T08:18:27.549113+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -345,14 +345,14 @@
       "runId": "39746707331",
       "dateKst": "2026-10-22",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "sale",
+      "topic": "여러 종류의 상품권을 판매 문의할 때 어떻게 정리하나요?",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0010132,
+      "knownSubtotalUsd": 0.0010132
     },
     {
       "id": "post:purchase:2561",
@@ -1598,13 +1598,13 @@
     {
       "entryId": "run:39746707331",
       "dateKst": "2026-10-22",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-22T08:18:27.354652+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0010132,
+      "knownSubtotalUsd": 0.0010132,
+      "requests": 1,
+      "inputTokens": 1305,
+      "outputTokens": 307
     },
     {
       "entryId": "post:purchase:2561",
