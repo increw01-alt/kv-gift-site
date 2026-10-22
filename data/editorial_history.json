@@ -273,5 +273,15 @@
     "publication_mode": "automatic",
     "run_id": "39727221948",
     "usage_file": "data/editorial_runs/2026-10-22/39727221948.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2566,
+    "topic": "상품권 결제 전 최종 결제 금액을 어떻게 확인하나요?",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39733080965",
+    "usage_file": "data/editorial_runs/2026-10-22/39733080965.json"
   }
 ]

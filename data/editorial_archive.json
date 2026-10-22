@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T06:18:25.526338+00:00",
+  "generatedAt": "2026-10-22T06:19:08.891676+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -317,14 +317,14 @@
       "runId": "39733080965",
       "dateKst": "2026-10-22",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "상품권 결제 전 최종 결제 금액을 어떻게 확인하나요?",
+      "url": "https://kv-gift.co.kr/board/purchase/2566",
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0729507,
+      "knownSubtotalUsd": 0.0729507
     },
     {
       "id": "post:purchase:2561",
@@ -1482,13 +1482,46 @@
     {
       "entryId": "run:39733080965",
       "dateKst": "2026-10-22",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-22T06:18:31.698835+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0011328,
+      "knownSubtotalUsd": 0.0011328,
+      "requests": 1,
+      "inputTokens": 1292,
+      "outputTokens": 385
+    },
+    {
+      "entryId": "run:39733080965",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T06:18:35.345503+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0013904,
+      "knownSubtotalUsd": 0.0013904,
+      "requests": 1,
+      "inputTokens": 1780,
+      "outputTokens": 424
+    },
+    {
+      "entryId": "run:39733080965",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T06:19:05.137360+00:00",
+      "kind": "image",
+      "estimatedUsd": 0.065398,
+      "knownSubtotalUsd": 0.065398,
+      "requests": 1,
+      "inputTokens": 3350,
+      "outputTokens": 1372
+    },
+    {
+      "entryId": "run:39733080965",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T06:19:08.465377+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0050295,
+      "knownSubtotalUsd": 0.0050295,
+      "requests": 1,
+      "inputTokens": 5620,
+      "outputTokens": 181
     },
     {
       "entryId": "post:purchase:2561",
