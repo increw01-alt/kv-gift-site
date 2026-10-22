@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T02:18:20.224236+00:00",
+  "generatedAt": "2026-10-22T02:19:00.853524+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 3,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.14489845,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.21784225,
+  "estimatedTotalUsd": 0.21784225,
   "records": [
     {
       "runId": "39698860844",
@@ -40,16 +40,16 @@
     },
     {
       "runId": "39710610461",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sale",
+      "topic": "상품권 판매 전 사용 여부는 어디에서 확인하나요?",
+      "url": "https://kv-gift.co.kr/board/sale/3690",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T02:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0729438,
+      "knownSubtotalUsd": 0.0729438
     }
   ]
 }

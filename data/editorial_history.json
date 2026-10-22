@@ -233,5 +233,15 @@
     "publication_mode": "automatic",
     "run_id": "39704873000",
     "usage_file": "data/editorial_runs/2026-10-22/39704873000.json"
+  },
+  {
+    "board": "sale",
+    "id": 3690,
+    "topic": "상품권 판매 전 사용 여부는 어디에서 확인하나요?",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39710610461",
+    "usage_file": "data/editorial_runs/2026-10-22/39710610461.json"
   }
 ]
