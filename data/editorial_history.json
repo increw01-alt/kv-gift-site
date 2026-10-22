@@ -263,5 +263,15 @@
     "publication_mode": "automatic",
     "run_id": "39722064057",
     "usage_file": "data/editorial_runs/2026-10-22/39722064057.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 34,
+    "topic": "상품권 알림을 놓치지 않게 개인 일정에 정리하는 방법",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39727221948",
+    "usage_file": "data/editorial_runs/2026-10-22/39727221948.json"
   }
 ]
