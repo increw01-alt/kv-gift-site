@@ -23,6 +23,11 @@ def apply_update(root, payload, now=None):
         raise ValueError('다른 설정이 먼저 저장됐습니다. 새로고침 후 다시 저장하세요.')
     instant = now or dt.datetime.now(dt.timezone.utc)
     value = {**DEFAULT, **values, 'revision': payload['requestId'], 'updatedAt': instant.isoformat()}
+    # Each committed revision has a new URL, so readers never wait for main's CDN cache.
+    snapshot = root / 'data/editorial_settings_versions' / f"{payload['requestId']}.json"
+    if snapshot.exists():
+        raise ValueError('이미 사용한 설정 요청 번호입니다.')
+    write_json(snapshot, value)
     write_json(root/'data/editorial_settings.json', value)
     write_status(root, instant.astimezone(KST).date())
     return True
@@ -34,10 +39,15 @@ def main():
     raw = os.environ.get('SETTINGS_JSON', '')
     if len(raw.encode()) > 2048:
         raise ValueError('설정 요청이 너무 큽니다.')
+    payload = json.loads(raw)
+    if not isinstance(payload, dict) or payload.get('requestId') != os.getenv('SETTINGS_REQUEST_ID'):
+        raise ValueError('워크플로와 설정 요청 번호가 다릅니다.')
     sync_main(run, ROOT)
-    changed = apply_update(ROOT, json.loads(raw))
+    changed = apply_update(ROOT, payload)
     if changed:
-        commit_files(run, ['data/editorial_settings.json', 'data/editorial_status.json'], '[자동 게시 설정] 대시보드 변경 적용')
+        commit_files(run, ['data/editorial_settings.json', 'data/editorial_status.json',
+                          f"data/editorial_settings_versions/{payload['requestId']}.json"],
+                     '[자동 게시 설정] 대시보드 변경 적용')
     print('설정 반영 완료. 글이나 이미지를 생성하지 않았습니다.')
 
 

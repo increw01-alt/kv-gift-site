@@ -1,5 +1,12 @@
 # 2026-10-21 자동 게시 예약 지연 복구
 
+## 2026-10-22 설정 저장 캐시 지연 개선
+
+- 설정 저장 시 `data/editorial_settings.json`과 요청별 `data/editorial_settings_versions/<requestId>.json`을 같은 커밋에 기록합니다. 같은 요청 번호를 다른 값으로 재사용하지 않습니다.
+- `editorial-settings.yml`의 `게시 설정 v2 · <requestId>`가 성공하면 Site Desk와 예약기는 요청별 확정 파일을 즉시 읽습니다. 변경 가능한 main 설정 파일의 5분 CDN 캐시를 기다리지 않습니다.
+- 요청 번호 일치, revision 충돌 방지, 기존 게시 작업과의 직렬 실행, 하루 10편·생성 15회 제한은 유지합니다. 저장 작업은 콘텐츠를 생성하지 않습니다.
+- Python 설정·게시 관련 47개 테스트 통과. 실제 배포/화면 확인은 인접 Site Desk의 `docs/PUBLISHING_SCHEDULER.md`에 기록합니다.
+
 ## 최신 상태: 2026-10-21 17:25 KST
 
 - 오늘 게시 9/10편, 공개 확인 9편, 생성 시도 13/15회입니다. 실제 Cloudflare 예약 [39568217712](https://github.com/increw01-alt/kv-gift-site/actions/runs/39568217712)이 [자유게시판 467번](https://kv-gift.co.kr/board/free/467)을 게시했고 17:20:11 KST 공개 HTML/원본 PNG 검증을 완료했습니다. PNG SHA256은 `44bec7f71c6d2d9576bd409be35f9f09d0bd37555d3ede6fe5017f56150804a9`입니다.

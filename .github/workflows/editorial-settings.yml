@@ -1,5 +1,5 @@
 name: 자동 게시 설정 저장
-run-name: 게시 설정 · ${{ inputs.request_id }}
+run-name: 게시 설정 v2 · ${{ inputs.request_id }}
 on:
   workflow_dispatch:
     inputs:
@@ -31,4 +31,5 @@ jobs:
       - name: 설정 검증과 저장 (콘텐츠 생성 없음)
         env:
           SETTINGS_JSON: ${{ inputs.settings_json }}
+          SETTINGS_REQUEST_ID: ${{ inputs.request_id }}
         run: python tools/update_editorial_settings.py

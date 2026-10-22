@@ -37,9 +37,13 @@ class SettingsTests(unittest.TestCase):
             payload={'enabled':True,'dailyTarget':3,'startTime':'10:30','endTime':'12:00','requestId':REQUEST,'expectedRevision':'initial'}
             self.assertTrue(apply_update(root,payload,dt.datetime(2026,10,21,10,tzinfo=KST)))
             self.assertEqual(load_settings(root)['dailyTarget'],3)
+            saved = root / 'data/editorial_settings_versions' / f'{REQUEST}.json'
+            self.assertEqual(json.loads(saved.read_text()), load_settings(root))
+            original = saved.read_bytes()
             self.assertEqual(json.loads((root/'data/editorial_status.json').read_text())['dailyTarget'],3)
             self.assertEqual((root/'data/editorial_history.json').read_bytes(),before)
             self.assertFalse(apply_update(root,payload))
+            self.assertEqual(saved.read_bytes(), original)
             with self.assertRaises(ValueError):apply_update(root,{**payload,'requestId':'22345678-1234-4234-8234-123456789012'})
             with self.assertRaises(ValueError):apply_update(root,{**payload,'dailyTarget':4})
             with self.assertRaises(ValueError):apply_update(root,{**payload,'attemptLimit':100})
