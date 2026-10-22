@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T07:19:04.435408+00:00",
+  "generatedAt": "2026-10-22T07:20:07.431536+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -335,7 +335,7 @@
       "board": "gc_information",
       "topic": "모바일 교환권과 지류상품권의 관계를 이해해 보세요",
       "url": "https://kv-gift.co.kr/board/gc_information/5",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-22T07:20:07.423305+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.07320625,
       "knownSubtotalUsd": 0.07320625
