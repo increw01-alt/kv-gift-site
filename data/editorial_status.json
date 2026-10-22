@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T03:19:43.454070+00:00",
+  "generatedAt": "2026-10-22T03:23:08.113241+00:00",
   "dateKst": "2026-10-22",
-  "dailyTarget": 10,
+  "dailyTarget": 9,
   "attemptLimit": 15,
   "published": 4,
   "verified": 4,
