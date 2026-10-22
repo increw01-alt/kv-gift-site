@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T04:24:01.533319+00:00",
+  "generatedAt": "2026-10-22T04:24:45.009366+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -293,7 +293,7 @@
       "board": "free",
       "topic": "처음 쓰는 서비스를 고를 때 가장 먼저 살펴보는 정보는 무엇인가요?",
       "url": "https://kv-gift.co.kr/board/free/468",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-22T04:24:45.002024+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.07310405,
       "knownSubtotalUsd": 0.07310405
