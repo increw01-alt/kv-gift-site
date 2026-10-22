@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T08:23:22.169395+00:00",
+  "generatedAt": "2026-10-22T08:24:02.423311+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -359,14 +359,14 @@
       "runId": "39747315436",
       "dateKst": "2026-10-22",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "문의 화면을 캡처할 때는 오류 문구와 개인정보를 구분해 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/56",
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.07266625,
+      "knownSubtotalUsd": 0.07266625
     },
     {
       "id": "post:purchase:2561",
@@ -1623,13 +1623,46 @@
     {
       "entryId": "run:39747315436",
       "dateKst": "2026-10-22",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-22T08:23:28.031943+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0011028,
+      "knownSubtotalUsd": 0.0011028,
+      "requests": 1,
+      "inputTokens": 1301,
+      "outputTokens": 364
+    },
+    {
+      "entryId": "run:39747315436",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T08:23:31.398836+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0013652,
+      "knownSubtotalUsd": 0.0013652,
+      "requests": 1,
+      "inputTokens": 1857,
+      "outputTokens": 389
+    },
+    {
+      "entryId": "run:39747315436",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T08:23:59.340809+00:00",
+      "kind": "image",
+      "estimatedUsd": 0.065288,
+      "knownSubtotalUsd": 0.065288,
+      "requests": 1,
+      "inputTokens": 3328,
+      "outputTokens": 1372
+    },
+    {
+      "entryId": "run:39747315436",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T08:24:02.090661+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00491025,
+      "knownSubtotalUsd": 0.00491025,
+      "requests": 1,
+      "inputTokens": 5683,
+      "outputTokens": 144
     },
     {
       "entryId": "post:purchase:2561",

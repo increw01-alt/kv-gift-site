@@ -293,5 +293,15 @@
     "publication_mode": "automatic",
     "run_id": "39739532668",
     "usage_file": "data/editorial_runs/2026-10-22/39739532668.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 56,
+    "topic": "문의 화면을 캡처할 때는 오류 문구와 개인정보를 구분해 주세요",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39747315436",
+    "usage_file": "data/editorial_runs/2026-10-22/39747315436.json"
   }
 ]
