@@ -14,6 +14,7 @@ import run_board_publish as publish
 import verify_board_publication as public
 from board_drafts import ROOT, KST, NoTopic, read_json
 from board_usage import estimate
+from editorial_settings import DEFAULT
 from test_board_drafts import fixture, example, DAY
 
 NOW = dt.datetime(2026, 10, 21, 10, tzinfo=KST)
@@ -198,8 +199,18 @@ class PublishingTests(unittest.TestCase):
                                    (16,52,8),(18,17,10),(22,59,10),(23,0,0)]:
             with self.subTest(hour=hour,minute=minute):
                 moment=NOW.replace(hour=hour,minute=minute)
-                self.assertEqual(publish.scheduled_target(moment),target)
-                self.assertEqual(publish.scheduled_target(moment.astimezone(dt.timezone.utc)),target)
+                self.assertEqual(publish.scheduled_target(moment, DEFAULT),target)
+                self.assertEqual(publish.scheduled_target(moment.astimezone(dt.timezone.utc), DEFAULT),target)
+
+    def test_schedule_target_reads_saved_quantity_and_times(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            config={**DEFAULT,'dailyTarget':9,'startTime':'09:18','endTime':'18:18'}
+            publish.write_json(root/'data/editorial_settings.json',config)
+            with patch.object(publish,'ROOT',root):
+                for hour,minute,target in [(9,17,0),(9,18,1),(12,27,3),(18,18,9),(22,59,9)]:
+                    with self.subTest(hour=hour,minute=minute):
+                        self.assertEqual(publish.scheduled_target(NOW.replace(hour=hour,minute=minute)),target)
 
     def test_scheduled_and_recovery_checks_skip_filled_slot_without_paid_requests(self):
         for event,follow in [('schedule',False),('workflow_dispatch',True)]:
@@ -214,6 +225,18 @@ class PublishingTests(unittest.TestCase):
                     self.assertEqual(publish.main(root,lambda *a:'',NOW),0)
                     api.assert_not_called()
                 self.assertFalse((root/f'data/editorial_runs/{NOW.date()}/100.json').exists())
+
+    def test_preflight_failure_rerun_does_not_start_any_paid_generation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);fixture(root)
+            with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',
+                 'GITHUB_RUN_ID':'100','GITHUB_RUN_ATTEMPT':'2','PREVIEW_ONLY':'false',
+                 'GITHUB_STEP_SUMMARY':'','GITHUB_EVENT_NAME':'schedule'}), \
+                 patch.object(publish,'sync_main'),patch.object(publish,'select_topic') as topic, \
+                 patch.object(publish,'generate') as text,patch.object(publish,'generate_banner') as image:
+                self.assertEqual(publish.main(root,lambda *a:'',NOW),0)
+                topic.assert_not_called();text.assert_not_called();image.assert_not_called()
+            self.assertFalse((root/f'data/editorial_runs/{NOW.date()}/100.json').exists())
 
     def test_held_slot_is_filled_on_next_scheduled_check(self):
         with tempfile.TemporaryDirectory() as temp:
