@@ -213,5 +213,15 @@
     "publication_mode": "automatic",
     "run_id": "39575868207",
     "usage_file": "data/editorial_runs/2026-10-21/39575868207.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2565,
+    "topic": "모바일상품권이 도착하지 않았을 때 어떤 정보를 준비해 문의하나요?",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39698860844",
+    "usage_file": "data/editorial_runs/2026-10-22/39698860844.json"
   }
 ]

@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T00:18:20.399982+00:00",
+  "generatedAt": "2026-10-22T00:18:58.602093+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 1,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.07220165,
+  "estimatedTotalUsd": 0.07220165,
   "records": [
     {
       "runId": "39698860844",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "모바일상품권이 도착하지 않았을 때 어떤 정보를 준비해 문의하나요?",
+      "url": "https://kv-gift.co.kr/board/purchase/2565",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T00:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.07220165,
+      "knownSubtotalUsd": 0.07220165
     }
   ]
 }
