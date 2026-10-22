@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T09:18:22.526418+00:00",
+  "generatedAt": "2026-10-22T09:19:04.994777+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -373,14 +373,14 @@
       "runId": "39754338337",
       "dateKst": "2026-10-22",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "중요한 메시지를 나중에 쉽게 찾도록 정리하는 방법",
+      "url": "https://kv-gift.co.kr/board/sense/7",
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0724786,
+      "knownSubtotalUsd": 0.0724786
     },
     {
       "id": "post:purchase:2561",
@@ -1681,13 +1681,46 @@
     {
       "entryId": "run:39754338337",
       "dateKst": "2026-10-22",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-22T09:18:28.478517+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0010484,
+      "knownSubtotalUsd": 0.0010484,
+      "requests": 1,
+      "inputTokens": 1309,
+      "outputTokens": 328
+    },
+    {
+      "entryId": "run:39754338337",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T09:18:31.781885+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0012872,
+      "knownSubtotalUsd": 0.0012872,
+      "requests": 1,
+      "inputTokens": 1806,
+      "outputTokens": 353
+    },
+    {
+      "entryId": "run:39754338337",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T09:19:00.836811+00:00",
+      "kind": "image",
+      "estimatedUsd": 0.065118,
+      "knownSubtotalUsd": 0.065118,
+      "requests": 1,
+      "inputTokens": 3294,
+      "outputTokens": 1372
+    },
+    {
+      "entryId": "run:39754338337",
+      "dateKst": "2026-10-22",
+      "recordedAt": "2026-10-22T09:19:04.649324+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.005025,
+      "knownSubtotalUsd": 0.005025,
+      "requests": 1,
+      "inputTokens": 5632,
+      "outputTokens": 178
     },
     {
       "entryId": "post:purchase:2561",

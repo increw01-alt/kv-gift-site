@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T09:18:22.522256+00:00",
+  "generatedAt": "2026-10-22T09:19:04.990796+00:00",
   "dateKst": "2026-10-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 9,
+  "published": 10,
   "verified": 9,
   "attempts": 12,
   "held": 1,
   "errors": 1,
-  "knownSubtotalUsd": 0.72868065,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.80115925,
+  "estimatedTotalUsd": 0.80115925,
   "records": [
     {
       "runId": "39698860844",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "39754338337",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "중요한 메시지를 나중에 쉽게 찾도록 정리하는 방법",
+      "url": "https://kv-gift.co.kr/board/sense/7",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-22T09:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0724786,
+      "knownSubtotalUsd": 0.0724786
     }
   ]
 }

@@ -303,5 +303,15 @@
     "publication_mode": "automatic",
     "run_id": "39747315436",
     "usage_file": "data/editorial_runs/2026-10-22/39747315436.json"
+  },
+  {
+    "board": "sense",
+    "id": 7,
+    "topic": "중요한 메시지를 나중에 쉽게 찾도록 정리하는 방법",
+    "drafted_at": "2026-10-22",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39754338337",
+    "usage_file": "data/editorial_runs/2026-10-22/39754338337.json"
   }
 ]
