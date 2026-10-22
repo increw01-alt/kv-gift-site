@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T05:19:00.257761+00:00",
+  "generatedAt": "2026-10-22T05:19:44.180501+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -307,7 +307,7 @@
       "board": "gc_tip",
       "topic": "상품권 알림을 놓치지 않게 개인 일정에 정리하는 방법",
       "url": "https://kv-gift.co.kr/board/gc_tip/34",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-22T05:19:44.174720+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.07263025,
       "knownSubtotalUsd": 0.07263025
