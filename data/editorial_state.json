@@ -19,8 +19,13 @@
       "board": "sale",
       "topic": "상품권 번호를 전달하기 전에 상대방을 어떻게 확인하나요?",
       "run_id": "39554556958"
+    },
+    {
+      "board": "sense",
+      "topic": "즐겨찾기와 스크린샷은 언제 나눠 사용하면 편할까요?",
+      "run_id": "39721600274"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "39716071439"
+  "last_board": "sense",
+  "last_run_id": "39721600274"
 }
