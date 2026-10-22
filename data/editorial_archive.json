@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T08:24:02.423311+00:00",
+  "generatedAt": "2026-10-22T08:25:05.502043+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -363,7 +363,7 @@
       "board": "general_notice",
       "topic": "문의 화면을 캡처할 때는 오류 문구와 개인정보를 구분해 주세요",
       "url": "https://kv-gift.co.kr/board/general_notice/56",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-22T08:25:05.494240+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.07266625,
       "knownSubtotalUsd": 0.07266625
