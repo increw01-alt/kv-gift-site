@@ -45,7 +45,7 @@ def main():
     sync_main(run, ROOT)
     changed = apply_update(ROOT, payload)
     if changed:
-        commit_files(run, ['data/editorial_settings.json', 'data/editorial_status.json',
+        commit_files(run, ['data/editorial_settings.json', 'data/editorial_status.json', 'data/editorial_archive.json',
                           f"data/editorial_settings_versions/{payload['requestId']}.json"],
                      '[자동 게시 설정] 대시보드 변경 적용')
     print('설정 반영 완료. 글이나 이미지를 생성하지 않았습니다.')

@@ -3,6 +3,7 @@ import datetime as dt
 import json
 from pathlib import Path
 from editorial_settings import load_settings
+from board_archive import write_archive
 
 KST = dt.timezone(dt.timedelta(hours=9))
 
@@ -43,4 +44,5 @@ def build_status(root, day, now=None):
 def write_status(root, day):
     path = Path(root)/'data/editorial_status.json'
     path.write_text(json.dumps(build_status(root, day), ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')
+    write_archive(root)
     return path.relative_to(root).as_posix()

@@ -60,4 +60,4 @@ if __name__ == '__main__':
         record['banner_sha256'] = hashlib.sha256((ROOT/os.environ['POST_BANNER']).read_bytes()).hexdigest()
         write_json(ledger, record)
         status_file = write_status(ROOT, dt.date.fromisoformat(record['date_kst']))
-        commit_files(run, [ledger.relative_to(ROOT).as_posix(), status_file], '[공개 게시 확인] '+run_id)
+        commit_files(run, [ledger.relative_to(ROOT).as_posix(), status_file, 'data/editorial_archive.json'], '[공개 게시 확인] '+run_id)

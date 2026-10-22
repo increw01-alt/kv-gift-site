@@ -134,6 +134,7 @@ def record_outcome(root, day, run_id, board, topic, status, review, usage, url=N
         write_json(path, state)
         files.append(path.relative_to(root).as_posix())
     files.append(write_status(root, day))
+    files.append('data/editorial_archive.json')
     return files, outcome
 
 
