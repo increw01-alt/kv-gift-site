@@ -34,8 +34,13 @@
       "board": "sale",
       "topic": "상품권 교환 후 확인해야 할 핵심 정보",
       "run_id": "39899582979"
+    },
+    {
+      "board": "general_notice",
+      "topic": "환불 요청 전 주문 내역과 사용 상태 구분하기",
+      "run_id": "39900020589"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "39899582979"
+  "last_board": "general_notice",
+  "last_run_id": "39900020589"
 }
