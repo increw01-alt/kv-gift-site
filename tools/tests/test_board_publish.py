@@ -15,6 +15,7 @@ import verify_board_publication as public
 from board_drafts import ROOT, KST, NoTopic, read_json
 from board_usage import estimate
 from editorial_settings import DEFAULT
+from board_planner import PlanningHeld
 from test_board_drafts import fixture, example, DAY
 
 NOW = dt.datetime(2026, 10, 21, 10, tzinfo=KST)
@@ -96,7 +97,8 @@ class EditorialTests(unittest.TestCase):
 
 class PublishingTests(unittest.TestCase):
     def run_case(self, root, output, review=None, image_error=False, preview=False, push_error=False,
-                 event='workflow_dispatch', follow=False, now=NOW, reservation_error=False, preflight_error=False):
+                 event='workflow_dispatch', follow=False, now=NOW, reservation_error=False, preflight_error=False,
+                 planning_error=False):
         topic='지인과 함께 고를 선물의 취향 질문을 정리하는 방법은 무엇인가요?'
         calls=[]
         def command(*args):
@@ -119,7 +121,9 @@ class PublishingTests(unittest.TestCase):
              'RUNNER_TEMP':str(output),'GITHUB_STEP_SUMMARY':'','GITHUB_OUTPUT':'',
              'PREVIEW_ONLY':str(preview).lower(),'REQUESTED_BOARD':'auto'}
         with patch.dict(os.environ,env), \
-             patch.object(publish,'select_topic',return_value=('purchase',topic,None)), \
+             patch.object(publish,'select_topic',return_value=('purchase',topic,None),
+                          side_effect=PlanningHeld('purchase',['기존 글과 질문·해결 절차가 중복됩니다.'],
+                            [{'topic':topic,'source_id':'gift-choice'}]) if planning_error else None), \
              patch.object(publish,'generate',side_effect=text), \
              patch.object(publish,'edit_article',return_value=example()), \
              patch.object(publish,'preflight',side_effect=NoTopic('기존 본문과 같은 질문') if preflight_error else None,
@@ -147,6 +151,20 @@ class PublishingTests(unittest.TestCase):
             self.assertEqual(read_json(root/history[-1]['usage_file'])['status'],'published')
             self.assertEqual(calls[-1],('git','push','origin','HEAD:refs/heads/main'))
             self.assertFalse(any('--force' in command for command in calls))
+
+    def test_duplicate_plan_stops_before_text_and_image_and_advances_board(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'site';fixture(root)
+            code,_=self.run_case(root,Path(temp)/'out',planning_error=True,image_error=True)
+            self.assertEqual(code,0)
+            record=read_json(root/f'data/editorial_runs/{NOW.date()}/123456.json')
+            self.assertEqual(record['status'],'held')
+            self.assertEqual(record['board'],'purchase')
+            self.assertEqual(record['api_usage']['records'],[])
+            state=read_json(root/'data/editorial_state.json')
+            self.assertEqual(state['last_board'],'purchase')
+            self.assertEqual(state['source_topic_attempts'][-1]['source_id'],'gift-choice')
+            self.assertEqual(publish.daily_counts(root,NOW.date()),(0,1))
 
     def test_duplicate_body_preflight_stops_before_paid_image_and_publication(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -56,9 +56,16 @@ class SourcesTests(unittest.TestCase):
             shutil.copyfile(ROOT/'tools/editorial_source_catalog.json',root/'tools/editorial_source_catalog.json')
             apply_update(root,signals())
             title='상품권 구입 전 카드 실적 제외 안내를 어떻게 따로 확인할까요?'
-            with patch.object(board_editor,'ask_json',return_value={'topics':[title]}) as api:
+            proposed={'candidates':[{'topic':title,'source_id':'card-performance',
+                       'reader_problem':'상품권 구매 전 카드 조건을 구분하고 싶은 독자',
+                       'distinct_angle':'카드 상품설명서의 제외 항목을 비교하는 과정',
+                       'outline':['카드 상품설명서를 준비하는 단계','실적 제외 항목을 구분하는 단계','행사 안내와 별도로 비교하는 단계']}]}
+            screen={'selected_index':0,'reason':'기존 안내와 구분되는 질문과 절차입니다.','rejections':[]}
+            with patch.object(board_editor,'ask_json',side_effect=[proposed,screen]) as api:
                 self.assertEqual(board_editor.select_topic('purchase',DAY,'model',lambda *x:None,root)[1],title)
-            self.assertIn('reader_questions', api.call_args.args[1][0]['text'])
+            self.assertEqual(api.call_count,2)
+            self.assertIn('reader_questions', api.call_args_list[0].args[1][0]['text'])
+            self.assertIn('comparisons', api.call_args_list[1].args[1][0]['text'])
 
     def test_near_copy_is_held_before_any_image_or_review_request(self):
         with tempfile.TemporaryDirectory() as temp:

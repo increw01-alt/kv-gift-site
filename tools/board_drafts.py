@@ -145,8 +145,8 @@ def validate(data):
     return data
 
 
-def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None):
-    from board_sources import source_context
+def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None, topic_plan=None):
+    from board_sources import source_context, planned_source_context
     profile = PROFILES[board]
     brief = news_brief(topic, root, day) if profile.get('requires_brief') else None
     key = os.environ.get('OPENAI_API_KEY')
@@ -179,11 +179,12 @@ checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 �
                      + '\n각 절은 서로 다른 구체적 내용을 설명한다. 모든 절을 문의하라는 말로 끝내지 않는다.'
                      + '\n협회 소식의 확인 자료가 주어지면 그 안의 사실만 사용하고 새로운 사건이나 성과를 덧붙이지 않는다.')
     instructions += '\n\n' + ARTICLE_TEXT_RULES
+    instructions += '\n검수된 topic_plan이 주어지면 reader_problem과 distinct_angle에 답하고 outline의 세 절을 따른다. 기존 글의 보편적 메모·상태 확인·문의 안내로 주제를 되돌리지 않는다.'
     payload = {'model': model, 'store': False, 'max_output_tokens': 2600,
                'instructions': instructions + '\n관심 질문 자료는 독자가 궁금해하는 주제를 고르기 위한 참고이며 사실의 근거가 아니다. '
                    '대화나 고객을 인용하지 않는다. 제목의 질문에 직접 답하고 검색어를 억지로 반복하지 않는다.',
-               'input': json.dumps({'topic': topic, 'verified_brief': brief,
-                                    'reader_questions': source_context(board, root)}, ensure_ascii=False),
+               'input': json.dumps({'topic': topic, 'verified_brief': brief, 'topic_plan': topic_plan,
+                                    'reader_questions': planned_source_context(source_context(board, root), topic_plan)}, ensure_ascii=False),
                'text': {'format': {'type': 'json_schema', 'name': 'board_guide', 'strict': True, 'schema': schema}}}
     request = urllib.request.Request('https://api.openai.com/v1/responses',
         data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})

@@ -133,6 +133,15 @@ def record_outcome(root, day, run_id, board, topic, status, review, usage, url=N
         state['last_run_id'] = run_id
         if status != 'published' and topic:
             state.setdefault('held_topics', []).append({'board': board, 'topic': topic, 'run_id': run_id})
+        topic_plan = usage.context.get('topic_plan') or {}
+        attempted_plans = ([topic_plan] if topic_plan else []) + usage.context.get('rejected_topic_plans', [])
+        for attempted_plan in attempted_plans:
+            if not attempted_plan.get('source_id'):
+                continue
+            state.setdefault('source_topic_attempts', []).append({
+                'source_id': attempted_plan['source_id'], 'board': board, 'topic': attempted_plan['topic'],
+                'date_kst': day.isoformat(), 'run_id': run_id, 'status': status})
+        state['source_topic_attempts'] = state.get('source_topic_attempts', [])[-100:]
         write_json(path, state)
         files.append(path.relative_to(root).as_posix())
     files.append(write_status(root, day))
@@ -190,14 +199,19 @@ def main(root=ROOT, command=None, now=None):
     report = {'approved': False, 'issues': []}
     status, api_status, error = 'held', 'failed', None
     try:
-        board, topic, brief = select_topic(os.getenv('REQUESTED_BOARD') or 'auto', day, model, usage.record, root)
+        def remember_plan(value):
+            usage.context['topic_plan'] = value
+            write_json(preview_dir/'topic-plan.json', value)
+        board, topic, brief = select_topic(os.getenv('REQUESTED_BOARD') or 'auto', day, model, usage.record, root,
+                                          on_plan=remember_plan, review_model=review_model)
         usage.context.update({'board': board, 'topic': topic})
         context = source_context(board, root)
         if context:
             usage.context['source_reference'] = {k: context[k] for k in ('kind', 'checked_at', 'source_modified_at', 'source_sha256')}
-        data = generate(topic, model, usage.record, board=board, root=root, day=day)
+        topic_plan = usage.context.get('topic_plan')
+        data = generate(topic, model, usage.record, board=board, root=root, day=day, topic_plan=topic_plan)
         write_json(preview_dir/'draft.api-original.json', data)
-        data = edit_article(board, topic, data, brief, model, usage.record, root)
+        data = edit_article(board, topic, data, brief, model, usage.record, root, topic_plan=topic_plan)
         write_json(preview_dir/'edited-text.json', data)
         plan = preflight(board, topic, data, review_model, usage.record, root)
         usage.context['search_intent'] = plan['search_intent']
@@ -210,6 +224,10 @@ def main(root=ROOT, command=None, now=None):
         if report['approved']:
             status = 'ready'
     except NoTopic as exc:
+        # No candidate may be selected, but the attempted board still advances.
+        board = board or getattr(exc, 'board', None)
+        if getattr(exc, 'candidates', None):
+            usage.context['rejected_topic_plans'] = exc.candidates
         report = {'approved': False, 'issues': [str(exc)]}
         api_status = 'completed'
     except Exception as exc:

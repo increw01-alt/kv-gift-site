@@ -7,6 +7,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def planned_source_context(context, plan):
+    if not context or plan is None:
+        return context
+    return {**context, 'questions': [q for q in context['questions'] if q['id'] == plan.get('source_id')]}
+
+
 def catalog(root=ROOT):
     return json.loads((root/'tools/editorial_source_catalog.json').read_text(encoding='utf-8'))
 
