@@ -14,11 +14,13 @@ REFERENCE_DIR = Path(__file__).resolve().parent / 'assets' / 'board-banner'
 REFERENCE_FILES = ('approved-notice-style-20261020.png', 'kv-symbol.png')
 
 
-def build_prompt(topic, data, board='purchase'):
+def build_prompt(topic, data, board='purchase', plan=None):
     profile = PROFILES[board]
     context = json.dumps({'board': profile['name'], 'visual_direction': profile['visual'],
                           'question': topic, 'summary': data['summary'],
-                          'sections': data['sections'], 'checks': data['checks']}, ensure_ascii=False)
+                          'sections': data['sections'], 'checks': data['checks'],
+                          'specific_scene': (plan or {}).get('image_scene'),
+                          'intended_alt_description': (plan or {}).get('image_alt')}, ensure_ascii=False)
     return '''Create a new editorial illustration for 한국상품권거래소, landscape 1536x1024.
 The FIRST reference is the approved visual style: warm ivory paper texture, deep navy,
 muted gold, softly lit tactile paper-cut objects, calm spacing and restrained depth.
@@ -82,7 +84,7 @@ def validate_png(raw):
     return dimensions
 
 
-def generate_banner(topic, data, on_usage=None, board='purchase'):
+def generate_banner(topic, data, on_usage=None, board='purchase', plan=None):
     key = os.environ.get('OPENAI_API_KEY')
     if not key:
         raise ValueError('OPENAI_API_KEY가 없습니다.')
@@ -90,7 +92,7 @@ def generate_banner(topic, data, on_usage=None, board='purchase'):
     quality = os.getenv('OPENAI_IMAGE_QUALITY', 'medium')
     if quality not in ('low', 'medium', 'high'):
         raise ValueError('이미지 품질은 low, medium, high 중 하나여야 합니다.')
-    prompt = build_prompt(topic, data, board)
+    prompt = build_prompt(topic, data, board, plan=plan)
     payload = {'model': model, 'prompt': prompt, 'n': 1, 'size': '1536x1024',
                'quality': quality, 'output_format': 'png', 'images': reference_images()}
     req = urllib.request.Request('https://api.openai.com/v1/images/edits',

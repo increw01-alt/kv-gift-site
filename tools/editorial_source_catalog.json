@@ -1,0 +1,20 @@
+[
+  {"id":"card-performance","terms":["실적"],"question":"상품권 결제의 카드 실적 인정 범위와 이벤트 실적은 어떻게 구분할까요?","boards":["purchase","gc_information","gc_tip"],"keywords":["상품권 카드 실적","실적 제외 항목"]},
+  {"id":"cancel-performance","terms":["취소","실적"],"question":"상품권 결제를 취소한 뒤 실적 반영 내역을 확인하려면 어떤 기록이 필요할까요?","boards":["gc_tip","gc_information"],"keywords":["상품권 결제 취소","카드 실적 확인"]},
+  {"id":"coupon-exclusion","terms":["쿠폰","상품권"],"question":"쿠폰 적용 대상과 상품권 제외 조건은 구매 전에 어디서 구분해 볼까요?","boards":["purchase","gc_tip"],"keywords":["상품권 할인쿠폰","쿠폰 제외 상품"]},
+  {"id":"refund-benefit","terms":["취소","할인"],"question":"할인 혜택을 받은 결제를 취소할 때 혜택과 주문 내역을 어떻게 따로 확인할까요?","boards":["gc_information","gc_tip"],"keywords":["상품권 취소","할인 혜택 반환 확인"]},
+  {"id":"voucher-limit","terms":["상품권","한도"],"question":"상품권 구매 한도와 카드 이용 한도를 혼동하지 않으려면 무엇을 확인할까요?","boards":["purchase","gc_information"],"keywords":["상품권 구매 한도","카드 이용 한도"]},
+  {"id":"voucher-expiry","terms":["유효기간"],"question":"모바일상품권의 표시 기한과 실제 이용 안내를 함께 확인하려면 어떻게 정리할까요?","boards":["gc_tip","sale","purchase"],"keywords":["모바일상품권 유효기간","상품권 사용 기한"]},
+  {"id":"culture-product","terms":["컬쳐"],"question":"컬쳐랜드 관련 상품을 고를 때 상품명과 발행사, 사용 안내를 어떻게 구분할까요?","boards":["gc_information","purchase"],"keywords":["컬쳐랜드 상품권","상품권 종류 확인"]},
+  {"id":"point-payment","terms":["포인트","결제"],"question":"포인트로 결제하는 것과 결제 후 포인트를 적립받는 것은 어떻게 구분할까요?","boards":["gc_information","purchase","gc_tip"],"keywords":["포인트 결제","포인트 적립 조건"]},
+  {"id":"exchange-state","terms":["교환"],"question":"상품권을 교환한 뒤 원래 쿠폰과 교환 결과가 함께 보이면 무엇을 확인할까요?","boards":["gc_tip","sale","gc_information"],"keywords":["상품권 교환","모바일 쿠폰 상태"]},
+  {"id":"sale-fee","terms":["수수료"],"question":"매입 상담에서 제시받은 금액과 공제 항목을 비교하려면 무엇을 따로 적어야 할까요?","boards":["sale","gc_information"],"keywords":["상품권 매입 문의","정산 내역 확인"]},
+  {"id":"barcode-privacy","terms":["바코드"],"question":"사용 상태를 문의할 때 바코드와 상품권 번호를 드러내지 않고 상황을 어떻게 설명할까요?","boards":["general_notice","sale","gc_tip"],"keywords":["상품권 바코드 보호","상품권 문의 방법"]},
+  {"id":"phishing-message","terms":["피싱"],"question":"상품권 관련 메시지의 링크를 열기 전에 발신 경로를 어떻게 다시 확인할까요?","boards":["general_notice","sense","free"],"keywords":["상품권 문자 확인","개인정보 보호"]},
+  {"id":"payment-name","terms":["명의"],"question":"주문자와 결제 정보가 다를 때 어떤 정보를 공개하지 않고 담당자에게 확인해야 할까요?","boards":["purchase","general_notice"],"keywords":["상품권 주문 정보","결제 정보 확인"]},
+  {"id":"installment-record","terms":["할부"],"question":"상품권 결제 전에 할부 선택과 카드 청구 안내를 어떻게 각각 확인할까요?","boards":["purchase","gc_information"],"keywords":["상품권 할부 확인","카드 결제 안내"]},
+  {"id":"refund-record","terms":["환불"],"question":"환불 문의 전 주문, 사용 여부, 답변 이력을 어떻게 나누어 정리할까요?","boards":["gc_tip","general_notice","sale"],"keywords":["상품권 환불 문의","주문 기록 정리"]},
+  {"id":"gift-choice","terms":["선물"],"question":"선물로 보낼 상품권을 고를 때 받는 사람의 사용 환경을 어떻게 배려할까요?","boards":["sense","free","purchase"],"keywords":["모바일상품권 선물","선물 상품권 선택"]},
+  {"id":"payment-date","terms":["결제일"],"question":"결제한 날짜와 청구서에 나타난 날짜가 다를 때 어떤 기록을 비교해 볼까요?","boards":["gc_tip","gc_information"],"keywords":["상품권 결제 내역","카드 청구 확인"]},
+  {"id":"partial-use","terms":["잔액"],"question":"사용 뒤 남은 금액을 확인할 때 상품권 종류와 사용 이력을 어떻게 함께 볼까요?","boards":["gc_tip","sale","gc_information"],"keywords":["상품권 잔액 확인","상품권 사용 이력"]}
+]

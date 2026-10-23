@@ -13,7 +13,7 @@ def title_for(board, topic):
     return PROFILES[board]['prefix'] + ' ' + topic
 
 
-def article_html(board, topic, data, day, banner, brief=None):
+def article_html(board, topic, data, day, banner, brief=None, plan=None, related=None):
     profile, esc = PROFILES[board], html.escape
     title = title_for(board, topic)
     result = (f'<article data-editorial-board="{board}"><span class="tag">{esc(profile["label"])}</span>'
@@ -21,7 +21,7 @@ def article_html(board, topic, data, day, banner, brief=None):
               f'<p class="lead">{esc(data["summary"])}</p>')
     if banner:
         result += (f'<figure><img src="{esc(banner, quote=True)}" width="1536" height="1024" '
-                   f'alt="{esc(topic, quote=True)} 안내 이미지" decoding="async" fetchpriority="high">'
+                   f'alt="{esc((plan or {}).get("image_alt") or topic+" 안내 이미지", quote=True)}" decoding="async" fetchpriority="high">'
                    '<figcaption>글의 이해를 돕기 위한 AI 생성 안내 이미지</figcaption></figure>')
     for number, section in enumerate(data['sections'], 1):
         result += (f'<section class="section"><span class="num">{number:02d} / {esc(profile["label"])}</span>'
@@ -34,6 +34,10 @@ def article_html(board, topic, data, day, banner, brief=None):
         result += '<aside class="sources"><strong>확인 자료</strong><p>'
         result += '<br>'.join(f'<a href="{esc(x["url"], quote=True)}">{esc(x["title"])}</a>' for x in brief['sources'])
         result += f'</p><p>자료 확인일: {esc(brief["verified_on"])} · 위 자료에 확인된 소식을 정리했습니다.</p></aside>'
+    if related:
+        result += '<aside class="takeaway" aria-label="관련 글"><h2>함께 읽으면 좋은 글</h2><ul>'
+        result += ''.join(f'<li><a href="{esc(x["path"], quote=True)}">{esc(x["title"])}</a></li>' for x in related)
+        result += '</ul></aside>'
     if board not in ('sense', 'free'):
         result += (f'<a class="cta" href="{ASSOCIATION}" target="_blank" rel="noopener">'
                    '<small>한국상품권협회</small><h2>상품권 이용, 더 궁금한 점이 있나요?</h2>'
@@ -99,7 +103,21 @@ def update_home(board, homepage, rows):
     return homepage
 
 
-def render_post(board, topic, data, day, root, banner, brief):
+def related_links(root, plan):
+    result = []
+    for path in (plan or {}).get('related_paths', [])[:3]:
+        match = re.fullmatch(r'/board/([a-z_]+)/(\d+)', path)
+        if not match or match[1] not in PROFILES:
+            raise ValueError('관련 글 경로 오류')
+        rows = read_json(root/f'board/{match[1]}/list.json')
+        row = next((x for x in rows if x['id'] == int(match[2])), None)
+        if not row or not (root/(path.lstrip('/')+'.html')).is_file():
+            continue
+        result.append({'path': path, 'title': row['title']})
+    return result
+
+
+def render_post(board, topic, data, day, root, banner, brief, plan=None):
     profile, esc = PROFILES[board], html.escape
     if banner and not re.fullmatch(rf'board-img/{re.escape(board)}/[a-zA-Z0-9_-]+\.png', banner):
         raise ValueError('잘못된 배너 경로입니다.')
@@ -116,7 +134,7 @@ def render_post(board, topic, data, day, root, banner, brief):
         ('name', 'description', data['summary']), ('name', 'keywords', profile['name']+', '+topic),
         ('property', 'og:type', 'article'), ('property', 'og:description', data['summary']),
         ('property', 'og:title', title), ('property', 'og:url', url), ('property', 'og:image', image_url),
-        ('property', 'og:image:alt', topic+' 안내 이미지'), ('name', 'twitter:image', image_url),
+        ('property', 'og:image:alt', (plan or {}).get('image_alt') or topic+' 안내 이미지'), ('name', 'twitter:image', image_url),
     ]:
         source = replace_one(f'<meta {attr}="{field}" content="[^"]*"[^>]*>',
                              f'<meta {attr}="{field}" content="{esc(value, quote=True)}">', source)
@@ -130,7 +148,8 @@ def render_post(board, topic, data, day, root, banner, brief):
                          '<script type="application/ld+json">'+json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c')+'</script>', source)
     fragment = (f'<main id="approved-tip"><nav class="crumb" aria-label="현재 위치">'
                 f'<a href="/">홈</a> / <a href="/board/{board}/">{esc(profile["name"])}</a></nav>'
-                + article_html(board, topic, data, day, '/'+banner if banner else None, brief)
+                + article_html(board, topic, data, day, '/'+banner if banner else None, brief,
+                               plan=plan, related=related_links(root, plan))
                 + f'<nav class="tip-nav" aria-label="게시글 이동"><a href="/board/{board}/">목록으로</a>'
                 '<a href="/board/gc_information/">상품권 정보 보기</a></nav></main>')
     source = replace_one(r'<main id="approved-tip">.*?</main>', fragment, source)
@@ -151,10 +170,17 @@ def render_post(board, topic, data, day, root, banner, brief):
     sitemap = replace_one(
         rf'<url><loc>{re.escape(DOMAIN)}/board/{board}/</loc><lastmod>[^<]+</lastmod></url>',
         f'<url><loc>{DOMAIN}/board/{board}/</loc><lastmod>{day.isoformat()}</lastmod></url>', sitemap)
-    sitemap = sitemap.replace('</urlset>', f'  <url><loc>{url}</loc><lastmod>{day.isoformat()}</lastmod></url>\n</urlset>')
+    image_entry = ''
+    if banner:
+        if 'xmlns:image=' not in sitemap:
+            sitemap = sitemap.replace('<urlset ', '<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" ', 1)
+        image_entry = f'<image:image><image:loc>{esc(image_url)}</image:loc></image:image>'
+    sitemap = sitemap.replace('</urlset>', f'  <url><loc>{url}</loc><lastmod>{day.isoformat()}</lastmod>{image_entry}</url>\n</urlset>')
     history_path = root / 'data/editorial_history.json'
     history = read_json(history_path) if history_path.exists() else []
     history.append({'board': board, 'id': post_id, 'topic': topic, 'drafted_at': day.isoformat(), 'automation': True})
+    if plan:
+        history[-1].update({key: plan[key] for key in ('search_intent', 'image_scene', 'image_alt')})
     updates = {path: source, folder / 'list.json': json.dumps(rows, ensure_ascii=False)+'\n',
                index_path: index, latest_path: json.dumps(latest, ensure_ascii=False, indent=1)+'\n',
                sitemap_path: sitemap, history_path: json.dumps(history, ensure_ascii=False, indent=2)+'\n'}
@@ -180,7 +206,7 @@ def render_post(board, topic, data, day, root, banner, brief):
     return title, review, [p.relative_to(root).as_posix() for p in updates]
 
 
-def save_preview(folder, board, topic, data, day, raw, root, brief=None, approval_required=True):
+def save_preview(folder, board, topic, data, day, raw, root, brief=None, approval_required=True, plan=None):
     """운영 파일이나 PR을 변경하지 않는 검토 전용 미리보기."""
     folder = Path(folder)
     folder.mkdir(parents=True, exist_ok=True)
@@ -193,9 +219,10 @@ def save_preview(folder, board, topic, data, day, raw, root, brief=None, approva
              f'<title>{html.escape(title_for(board, topic))} | 게시 전 검토</title>'
              f'<style>{css}</style></head><body style="margin:0;background:#f5f6f8">'
              f'<main id="approved-tip"><p class="note">{note}</p>'
-             + article_html(board, topic, data, day, 'banner.png', brief) + '</main></body></html>')
+             + article_html(board, topic, data, day, 'banner.png', brief, plan=plan,
+                            related=related_links(root, plan)) + '</main></body></html>')
     (folder / 'index.html').write_text(value, encoding='utf-8', newline='\n')
     (folder / 'draft.json').write_text(json.dumps({
-        'board': board, 'topic': topic, 'data': data, 'date': day.isoformat(), 'brief': brief,
+        'board': board, 'topic': topic, 'data': data, 'date': day.isoformat(), 'brief': brief, 'image_plan': plan,
         'published': False, 'requires_user_approval': approval_required,
     }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')

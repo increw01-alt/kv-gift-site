@@ -137,6 +137,7 @@ def validate(data):
 
 
 def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None):
+    from board_sources import source_context
     profile = PROFILES[board]
     brief = news_brief(topic, root, day) if profile.get('requires_brief') else None
     key = os.environ.get('OPENAI_API_KEY')
@@ -170,7 +171,10 @@ checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 �
                      + '\n협회 소식의 확인 자료가 주어지면 그 안의 사실만 사용하고 새로운 사건이나 성과를 덧붙이지 않는다.')
     instructions += '\n\n' + ARTICLE_TEXT_RULES
     payload = {'model': model, 'store': False, 'max_output_tokens': 2600,
-               'instructions': instructions, 'input': json.dumps({'topic': topic, 'verified_brief': brief}, ensure_ascii=False),
+               'instructions': instructions + '\n관심 질문 자료는 독자가 궁금해하는 주제를 고르기 위한 참고이며 사실의 근거가 아니다. '
+                   '대화나 고객을 인용하지 않는다. 제목의 질문에 직접 답하고 검색어를 억지로 반복하지 않는다.',
+               'input': json.dumps({'topic': topic, 'verified_brief': brief,
+                                    'reader_questions': source_context(board, root)}, ensure_ascii=False),
                'text': {'format': {'type': 'json_schema', 'name': 'board_guide', 'strict': True, 'schema': schema}}}
     request = urllib.request.Request('https://api.openai.com/v1/responses',
         data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
@@ -206,8 +210,8 @@ def paragraphs(text):
     return ''.join('<p>'+html.escape(part)+'</p>' for part in chunks)
 
 
-def render(board, topic, data, day, root=ROOT, banner=None):
+def render(board, topic, data, day, root=ROOT, banner=None, plan=None):
     from board_render import render_post
     validate(data)
     brief = news_brief(topic, root, day) if PROFILES[board].get('requires_brief') else None
-    return render_post(board, topic, data, day, root, banner, brief)
+    return render_post(board, topic, data, day, root, banner, brief, plan=plan)

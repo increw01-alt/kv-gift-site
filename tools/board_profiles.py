@@ -62,5 +62,5 @@ PROFILES = {
     },
 }
 
-# 기존 화·금 주 2회, 매회 한 편이라는 생성량을 유지합니다.
+# 게시판 순환 순서. 하루 수량과 시간은 editorial_settings에서 관리합니다.
 ROTATION = tuple(PROFILES)

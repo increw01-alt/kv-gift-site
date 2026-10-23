@@ -11,6 +11,8 @@ from board_drafts import ROOT, KST, NoTopic, generate, read_json, render
 from board_editor import select_topic, edit_article, review_article, fresh_topic, prior_titles
 from board_banner import generate_banner
 from board_render import save_preview
+from board_sources import source_context
+from board_originality import preflight, reject_copy
 from board_usage import UsageLog
 from board_status import write_status
 from editorial_settings import load_settings, target_at
@@ -184,20 +186,26 @@ def main(root=ROOT, command=None, now=None):
         reserved_files, _ = record_outcome(root, day, run_id, None, None, 'generating',
                                           {'approved': False, 'issues': []}, usage)
         commit_files(command, reserved_files, '[자동 작성 시작] '+run_id)
-    board = topic = brief = data = raw = None
+    board = topic = brief = data = raw = plan = None
     report = {'approved': False, 'issues': []}
     status, api_status, error = 'held', 'failed', None
     try:
         board, topic, brief = select_topic(os.getenv('REQUESTED_BOARD') or 'auto', day, model, usage.record, root)
         usage.context.update({'board': board, 'topic': topic})
+        context = source_context(board, root)
+        if context:
+            usage.context['source_reference'] = {k: context[k] for k in ('kind', 'checked_at', 'source_modified_at', 'source_sha256')}
         data = generate(topic, model, usage.record, board=board, root=root, day=day)
         write_json(preview_dir/'draft.api-original.json', data)
         data = edit_article(board, topic, data, brief, model, usage.record, root)
         write_json(preview_dir/'edited-text.json', data)
-        raw, image_info = generate_banner(topic, data, usage.record, board=board)
-        save_preview(preview_dir, board, topic, data, day, raw, root, brief, approval_required=preview)
+        plan = preflight(board, topic, data, review_model, usage.record, root)
+        usage.context['search_intent'] = plan['search_intent']
+        write_json(preview_dir/'originality-image-plan.json', plan)
+        raw, image_info = generate_banner(topic, data, usage.record, board=board, plan=plan)
+        save_preview(preview_dir, board, topic, data, day, raw, root, brief, approval_required=preview, plan=plan)
         write_json(preview_dir/'image-generation.json', image_info)
-        report = review_article(board, topic, data, raw, brief, review_model, usage.record, root)
+        report = review_article(board, topic, data, raw, brief, review_model, usage.record, root, plan=plan)
         api_status = 'completed'
         if report['approved']:
             status = 'ready'
@@ -231,11 +239,14 @@ def main(root=ROOT, command=None, now=None):
     if status == 'ready' and not fresh_topic(topic, prior_titles(root)):
         status = 'held'
         report = {'approved': False, 'issues': ['생성 중 같은 주제가 게시되어 중복 게시를 보류합니다.']}
+    if status == 'ready' and reject_copy(data, root):
+        status = 'held'
+        report = {'approved': False, 'issues': ['최신 글 본문과 겹쳐 중복 게시를 보류합니다.']}
     if status == 'ready':
         banner = f'board-img/{board}/guide-{day.isoformat()}-{run_id}.png'
         if (root/banner).exists():
             raise ValueError('배너 파일이 이미 있습니다. 덮어쓰지 않습니다.')
-        title, _, files = render(board, topic, data, day, root, banner)
+        title, _, files = render(board, topic, data, day, root, banner, plan=plan)
         (root/banner).parent.mkdir(parents=True, exist_ok=True)
         (root/banner).write_bytes(raw)
         files.append(banner)

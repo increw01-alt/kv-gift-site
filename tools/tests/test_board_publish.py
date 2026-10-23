@@ -96,7 +96,7 @@ class EditorialTests(unittest.TestCase):
 
 class PublishingTests(unittest.TestCase):
     def run_case(self, root, output, review=None, image_error=False, preview=False, push_error=False,
-                 event='workflow_dispatch', follow=False, now=NOW, reservation_error=False):
+                 event='workflow_dispatch', follow=False, now=NOW, reservation_error=False, preflight_error=False):
         topic='지인과 함께 고를 선물의 취향 질문을 정리하는 방법은 무엇인가요?'
         calls=[]
         def command(*args):
@@ -122,6 +122,11 @@ class PublishingTests(unittest.TestCase):
              patch.object(publish,'select_topic',return_value=('purchase',topic,None)), \
              patch.object(publish,'generate',side_effect=text), \
              patch.object(publish,'edit_article',return_value=example()), \
+             patch.object(publish,'preflight',side_effect=NoTopic('기존 본문과 같은 질문') if preflight_error else None,
+                          return_value={'unique':True, 'issues':[],
+                          'search_intent':'지인에게 선물할 때 물어볼 취향을 정리한다.',
+                          'image_scene':'선물을 고르는 두 사람과 서로 다른 포장 색상의 선물 상자',
+                          'image_alt':'취향에 맞는 선물을 고르는 사람과 선물 상자', 'related_paths':[]}), \
              patch.object(publish,'generate_banner',side_effect=RuntimeError('image failure') if image_error else None,
                           return_value=(raw,{'model':'gpt-image-2'})), \
              patch.object(publish,'review_article',return_value=review or approved()):
@@ -142,6 +147,17 @@ class PublishingTests(unittest.TestCase):
             self.assertEqual(read_json(root/history[-1]['usage_file'])['status'],'published')
             self.assertEqual(calls[-1],('git','push','origin','HEAD:refs/heads/main'))
             self.assertFalse(any('--force' in command for command in calls))
+
+    def test_duplicate_body_preflight_stops_before_paid_image_and_publication(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            old=(root/'board/purchase/list.json').read_bytes()
+            code,_=self.run_case(root,Path(temp)/'out',preflight_error=True,image_error=True)
+            self.assertEqual(code,0)
+            ledger=read_json(root/'data/editorial_runs/2026-10-21/123456.json')
+            self.assertEqual(ledger['status'],'held')
+            self.assertIn('기존 본문',ledger['review']['issues'][0])
+            self.assertEqual((root/'board/purchase/list.json').read_bytes(),old)
 
     def test_rejected_text_or_image_never_changes_public_posts(self):
         for failure in ('review','image'):
