@@ -333,5 +333,15 @@
     "publication_mode": "automatic",
     "run_id": "39883204556",
     "usage_file": "data/editorial_runs/2026-10-23/39883204556.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2567,
+    "topic": "상품권을 여러 장 구입할 때 주문 내역은 어떻게 정리하나요?",
+    "drafted_at": "2026-10-23",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39888810533",
+    "usage_file": "data/editorial_runs/2026-10-23/39888810533.json"
   }
 ]
