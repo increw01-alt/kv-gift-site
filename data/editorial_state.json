@@ -44,8 +44,13 @@
       "board": "sense",
       "topic": "받는 사람의 라이프스타일에 맞는 상품권 종류 선택법",
       "run_id": "39900465139"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 결제 시 카드 실적과 이벤트 실적 구분하는 방법",
+      "run_id": "39904985910"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "39900911553"
+  "last_board": "gc_tip",
+  "last_run_id": "39904985910"
 }

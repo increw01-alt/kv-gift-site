@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T05:18:26.049960+00:00",
+  "generatedAt": "2026-10-23T05:18:43.470859+00:00",
   "dateKst": "2026-10-23",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 5,
   "verified": 5,
   "attempts": 9,
-  "held": 3,
+  "held": 4,
   "errors": 0,
-  "knownSubtotalUsd": 0.43464515,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.45182015,
+  "estimatedTotalUsd": 0.45182015,
   "records": [
     {
       "runId": "39877286311",
@@ -118,16 +118,16 @@
     },
     {
       "runId": "39904985910",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "상품권 결제 시 카드 실적과 이벤트 실적 구분하는 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-23T05:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.017175,
+      "knownSubtotalUsd": 0.017175
     }
   ]
 }
