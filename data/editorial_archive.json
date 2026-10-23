@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T05:38:27.797685+00:00",
+  "generatedAt": "2026-10-23T05:38:44.333751+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -555,14 +555,14 @@
       "runId": "39906834918",
       "dateKst": "2026-10-23",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "환불 문의 시 주문 내역과 사용 여부 구분하는 방법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01487855,
+      "knownSubtotalUsd": 0.01487855
     },
     {
       "id": "post:purchase:2561",
@@ -2479,13 +2479,46 @@
     {
       "entryId": "run:39906834918",
       "dateKst": "2026-10-23",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-23T05:38:30.406033+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0024904,
+      "knownSubtotalUsd": 0.0024904,
+      "requests": 1,
+      "inputTokens": 5846,
+      "outputTokens": 95
+    },
+    {
+      "entryId": "run:39906834918",
+      "dateKst": "2026-10-23",
+      "recordedAt": "2026-10-23T05:38:33.831333+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.00153,
+      "knownSubtotalUsd": 0.00153,
+      "requests": 1,
+      "inputTokens": 2001,
+      "outputTokens": 456
+    },
+    {
+      "entryId": "run:39906834918",
+      "dateKst": "2026-10-23",
+      "recordedAt": "2026-10-23T05:38:38.556960+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0031084,
+      "knownSubtotalUsd": 0.0031084,
+      "requests": 1,
+      "inputTokens": 6143,
+      "outputTokens": 407
+    },
+    {
+      "entryId": "run:39906834918",
+      "dateKst": "2026-10-23",
+      "recordedAt": "2026-10-23T05:38:44.136535+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00774975,
+      "knownSubtotalUsd": 0.00774975,
+      "requests": 1,
+      "inputTokens": 7915,
+      "outputTokens": 403
     },
     {
       "entryId": "post:purchase:2561",

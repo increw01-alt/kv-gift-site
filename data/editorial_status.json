@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T05:38:27.791376+00:00",
+  "generatedAt": "2026-10-23T05:38:44.328263+00:00",
   "dateKst": "2026-10-23",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 5,
   "verified": 5,
   "attempts": 13,
-  "held": 7,
+  "held": 8,
   "errors": 0,
-  "knownSubtotalUsd": 0.4928576,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.50773615,
+  "estimatedTotalUsd": 0.50773615,
   "records": [
     {
       "runId": "39877286311",
@@ -170,16 +170,16 @@
     },
     {
       "runId": "39906834918",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "환불 문의 시 주문 내역과 사용 여부 구분하는 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-23T05:37:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01487855,
+      "knownSubtotalUsd": 0.01487855
     }
   ]
 }
