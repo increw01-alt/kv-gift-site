@@ -49,8 +49,13 @@
       "board": "gc_tip",
       "topic": "상품권 결제 시 카드 실적과 이벤트 실적 구분하는 방법",
       "run_id": "39904985910"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 카드 결제 시 실적 인정 여부와 확인 방법",
+      "run_id": "39905445974"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "39904985910"
+  "last_board": "purchase",
+  "last_run_id": "39905445974"
 }
