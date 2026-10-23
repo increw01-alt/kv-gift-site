@@ -74,8 +74,13 @@
       "board": "sense",
       "topic": "상품권 선물 시 받는 사람의 기기 호환성 점검 방법",
       "run_id": "39907300265"
+    },
+    {
+      "board": "free",
+      "topic": "선물용 상품권 고를 때 받는 사람 사용 환경 체크 방법",
+      "run_id": "39907764428"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "39907300265"
+  "last_board": "free",
+  "last_run_id": "39907764428"
 }

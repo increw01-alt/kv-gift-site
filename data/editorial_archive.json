@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T05:48:28.738088+00:00",
+  "generatedAt": "2026-10-23T05:48:45.848370+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -583,14 +583,14 @@
       "runId": "39907764428",
       "dateKst": "2026-10-23",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "free",
+      "topic": "선물용 상품권 고를 때 받는 사람 사용 환경 체크 방법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0139576,
+      "knownSubtotalUsd": 0.0139576
     },
     {
       "id": "post:purchase:2561",
@@ -2595,13 +2595,46 @@
     {
       "entryId": "run:39907764428",
       "dateKst": "2026-10-23",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-23T05:48:31.593581+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0024456,
+      "knownSubtotalUsd": 0.0024456,
+      "requests": 1,
+      "inputTokens": 5750,
+      "outputTokens": 91
+    },
+    {
+      "entryId": "run:39907764428",
+      "dateKst": "2026-10-23",
+      "recordedAt": "2026-10-23T05:48:35.130524+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0014732,
+      "knownSubtotalUsd": 0.0014732,
+      "requests": 1,
+      "inputTokens": 1911,
+      "outputTokens": 443
+    },
+    {
+      "entryId": "run:39907764428",
+      "dateKst": "2026-10-23",
+      "recordedAt": "2026-10-23T05:48:39.625729+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0026108,
+      "knownSubtotalUsd": 0.0026108,
+      "requests": 1,
+      "inputTokens": 4683,
+      "outputTokens": 461
+    },
+    {
+      "entryId": "run:39907764428",
+      "dateKst": "2026-10-23",
+      "recordedAt": "2026-10-23T05:48:45.569300+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.007428,
+      "knownSubtotalUsd": 0.007428,
+      "requests": 1,
+      "inputTokens": 6934,
+      "outputTokens": 495
     },
     {
       "entryId": "post:purchase:2561",

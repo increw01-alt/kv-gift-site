@@ -1,17 +1,19 @@
 {
   "run_id": "39907764428",
   "date_kst": "2026-10-23",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "free",
+  "topic": "선물용 상품권 고를 때 받는 사람 사용 환경 체크 방법",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-23T05:47:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 '[운영팀 질문] 선물용 상품권 선택 시 받는 사람의 기기와 사용환경 점검 방법'과 핵심 질문이 같습니다. 받는 사람의 사용 환경을 확인해 상품권을 고르는 방법을 안내하는 점에서 독자 상황과 해결 방법이 거의 동일합니다. / 기존 글 '[이용 안내] 선물받을 사람에게 맞는 상품권을 고르려면 무엇을 물어봐야 하나요?'와도 주제가 겹칩니다. 상대의 사용 조건을 미리 확인하는 질문형 안내로 표현만 달라졌습니다. / 상품권 안내 메시지의 발신자 확인과 링크 주의는 기존 글들에도 반복되어 있어, 새 문제 해결 절차로 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "39907764428",
@@ -20,15 +22,149 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "board": "free",
+      "topic": "선물용 상품권 고를 때 받는 사람 사용 환경 체크 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-23T03:19:28Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5750,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 91,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5841
+        },
+        "estimated_usd": 0.0024456,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-23T05:48:31.593581+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 1911,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 443,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2354
+        },
+        "estimated_usd": 0.0014732,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-23T05:48:35.130524+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4683,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 461,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5144
+        },
+        "estimated_usd": 0.0026108,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-23T05:48:39.625729+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6934,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 495,
+          "output_tokens_details": {
+            "reasoning_tokens": 146
+          },
+          "total_tokens": 7429
+        },
+        "estimated_usd": 0.007428,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-23T05:48:45.569300+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-23T05:48:29.965195+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-23T05:48:31.712369+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-23T05:48:36.366420+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-23T05:48:41.592452+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0139576,
+    "estimated_total_usd": 0.0139576,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
