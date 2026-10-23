@@ -323,5 +323,15 @@
     "publication_mode": "automatic",
     "run_id": "39877286311",
     "usage_file": "data/editorial_runs/2026-10-23/39877286311.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 35,
+    "topic": "상품권을 사용한 뒤 기록을 정리하면 어떤 점이 편할까요?",
+    "drafted_at": "2026-10-23",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39883204556",
+    "usage_file": "data/editorial_runs/2026-10-23/39883204556.json"
   }
 ]
