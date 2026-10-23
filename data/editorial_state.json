@@ -29,8 +29,13 @@
       "board": "sale",
       "topic": "여러 종류의 상품권을 판매 문의할 때 어떻게 정리하나요?",
       "run_id": "39746707331"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 교환 후 확인해야 할 핵심 정보",
+      "run_id": "39899582979"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "39894262893"
+  "last_board": "sale",
+  "last_run_id": "39899582979"
 }
