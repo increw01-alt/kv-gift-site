@@ -313,5 +313,15 @@
     "publication_mode": "automatic",
     "run_id": "39754338337",
     "usage_file": "data/editorial_runs/2026-10-22/39754338337.json"
+  },
+  {
+    "board": "free",
+    "id": 469,
+    "topic": "필요한 안내를 찾을 때 검색과 목록 중 어느 쪽이 편한가요?",
+    "drafted_at": "2026-10-23",
+    "automation": true,
+    "publication_mode": "automatic",
+    "run_id": "39877286311",
+    "usage_file": "data/editorial_runs/2026-10-23/39877286311.json"
   }
 ]

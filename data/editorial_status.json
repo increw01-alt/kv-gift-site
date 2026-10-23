@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T00:18:25.889629+00:00",
+  "generatedAt": "2026-10-23T00:19:06.835495+00:00",
   "dateKst": "2026-10-23",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 1,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.0728148,
+  "estimatedTotalUsd": 0.0728148,
   "records": [
     {
       "runId": "39877286311",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "필요한 안내를 찾을 때 검색과 목록 중 어느 쪽이 편한가요?",
+      "url": "https://kv-gift.co.kr/board/free/469",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-23T00:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0728148,
+      "knownSubtotalUsd": 0.0728148
     }
   ]
 }
