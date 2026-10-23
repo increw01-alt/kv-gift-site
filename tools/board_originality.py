@@ -96,7 +96,7 @@ def validate_plan(value, related):
 
 
 def preflight(board, topic, data, model, on_usage, root):
-    from board_drafts import NoTopic
+    from board_drafts import NoTopic, CARD_FACT_RULES
     from board_editor import ask_json, text_input, prior_titles
     duplicate = reject_copy(data, root)
     if duplicate:
@@ -121,7 +121,8 @@ image_scene은 본문 핵심 행동을 나타내는 구체적인 사물과 구�
 가짜 대화 캡처, 실제 고객, 수익, 현금, 개인정보, 기관 인증, 수수료나 약관 확정 표현은 제외한다.
 image_alt는 그 장면을 묘사한 자연스러운 한국어 문장이다. '이미지'만 붙인 제목이나 검색어 나열로 만들지 않는다.
 related_paths는 주제상 다음 읽을거리로 도움이 되는 실제 제공 경로만 최대 세 개, 없으면 빈 배열이다.
-자료에 있는 업체 조건을 현재 사실로 단정하지 않는다. 기존 제목과 본문은 검토 자료이지 출처 검증이 아니다.''',
+자료에 있는 업체 조건을 현재 사실로 단정하지 않는다. 기존 제목과 본문은 검토 자료이지 출처 검증이 아니다.'''
+        + '\n다음 기준 위반도 issues에 기록하고 unique=false로 보류한다.\n' + CARD_FACT_RULES,
         [text_input({'board': PROFILES[board], 'title': topic, 'article': data,
                      'related_existing_articles': related, 'other_existing_titles': prior_titles(root)[-220:],
                      'previous_reader_intents_and_scenes': previous_plans})],

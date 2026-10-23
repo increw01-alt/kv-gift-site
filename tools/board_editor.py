@@ -6,7 +6,7 @@ import os
 import re
 import urllib.error
 import urllib.request
-from board_drafts import ROOT, NoTopic, news_brief, normalized, read_json, validate, ARTICLE_TEXT_RULES
+from board_drafts import ROOT, NoTopic, news_brief, normalized, read_json, validate, ARTICLE_TEXT_RULES, CARD_FACT_RULES
 from board_profiles import PROFILES, ROTATION
 from board_banner import REFERENCE_DIR
 from board_usage import begin_request
@@ -211,7 +211,8 @@ logo_matches: 하단의 독립된 KV 심벌이 원본과 색/형태가 유사하
 로고가 상품권이나 종이 소품과 떨어진 배너 바깥 여백에 있다면 상품권 위에 찍힌 것으로 판단하지 않는다.
 색상·위치·모양 문제는 실제 보이는 근거로만 적고, 이미지에 없는 문제를 추측하지 않는다.
 판단이 불확실하거나 문제가 있으면 해당 항목은 false, approved는 false로 표시하고 issues에 짧은 이유를 적는다.
-모든 항목을 통과해야 approved=true, issues=[]다. 자동 검사가 완전하다고 주장하지 않는다.''',
+모든 항목을 통과해야 approved=true, issues=[]다. 자동 검사가 완전하다고 주장하지 않는다.'''
+        + '\n다음 기준에 어긋나면 no_unverified_claims=false로 보류한다.\n' + CARD_FACT_RULES,
         [text_input({'profile': PROFILES[board], 'topic': topic, 'article': data,
                      'verified_brief': brief, 'nearby_existing_titles': related_titles(topic, root),
                      'nearby_existing_articles': related_articles(topic, data, root), 'image_plan': plan}),
