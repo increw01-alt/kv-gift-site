@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T04:34:15.121143+00:00",
+  "generatedAt": "2026-10-23T04:35:18.984757+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -489,7 +489,7 @@
       "board": "free",
       "topic": "선물용 상품권 선택 시 받는 사람의 기기와 사용환경 점검 방법",
       "url": "https://kv-gift.co.kr/board/free/470",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-23T04:35:18.976027+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.08478635,
       "knownSubtotalUsd": 0.08478635
