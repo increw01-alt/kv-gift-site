@@ -69,8 +69,13 @@
       "board": "general_notice",
       "topic": "환불 문의 시 주문 내역과 사용 여부 구분하는 방법",
       "run_id": "39906834918"
+    },
+    {
+      "board": "sense",
+      "topic": "상품권 선물 시 받는 사람의 기기 호환성 점검 방법",
+      "run_id": "39907300265"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "39906834918"
+  "last_board": "sense",
+  "last_run_id": "39907300265"
 }
