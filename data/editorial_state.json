@@ -54,8 +54,13 @@
       "board": "purchase",
       "topic": "상품권 카드 결제 시 실적 인정 여부와 확인 방법",
       "run_id": "39905445974"
+    },
+    {
+      "board": "gc_information",
+      "topic": "교환 후 상품권 및 쿠폰 상태 확인 절차",
+      "run_id": "39905904140"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "39905445974"
+  "last_board": "gc_information",
+  "last_run_id": "39905904140"
 }
