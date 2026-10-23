@@ -343,5 +343,18 @@
     "publication_mode": "automatic",
     "run_id": "39888810533",
     "usage_file": "data/editorial_runs/2026-10-23/39888810533.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 6,
+    "topic": "상품권 결제 시 카드 실적과 이벤트 실적의 차이와 확인 방법",
+    "drafted_at": "2026-10-23",
+    "automation": true,
+    "search_intent": "상품권 결제에서 카드 실적과 이벤트 실적이 무엇이 다른지 알고, 결제 전 확인 항목과 조회 방법을 정리하려는 독자의 질문",
+    "image_scene": "책상 위에 카드 명세서와 행사 안내문이 나란히 놓여 있고, 한쪽에는 체크 표시가 있는 계산 메모, 다른 쪽에는 달력 아이콘이 보이는 구도로 두 실적의 확인 경로를 비교하는 장면",
+    "image_alt": "카드 명세서와 행사 안내문을 나란히 두고 실적 확인 항목을 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "39894262893",
+    "usage_file": "data/editorial_runs/2026-10-23/39894262893.json"
   }
 ]
