@@ -59,8 +59,13 @@
       "board": "gc_information",
       "topic": "교환 후 상품권 및 쿠폰 상태 확인 절차",
       "run_id": "39905904140"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 교환 후 상태 확인 요령",
+      "run_id": "39906373277"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "39905904140"
+  "last_board": "sale",
+  "last_run_id": "39906373277"
 }
