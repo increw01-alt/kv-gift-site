@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T04:33:27.181884+00:00",
+  "generatedAt": "2026-10-23T04:34:15.116888+00:00",
   "dateKst": "2026-10-23",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 4,
+  "published": 5,
   "verified": 4,
   "attempts": 8,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.3498588,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.43464515,
+  "estimatedTotalUsd": 0.43464515,
   "records": [
     {
       "runId": "39877286311",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "39900911553",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "선물용 상품권 선택 시 받는 사람의 기기와 사용환경 점검 방법",
+      "url": "https://kv-gift.co.kr/board/free/470",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-23T04:32:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.08478635,
+      "knownSubtotalUsd": 0.08478635
     }
   ]
 }

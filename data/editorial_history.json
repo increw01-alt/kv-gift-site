@@ -356,5 +356,18 @@
     "publication_mode": "automatic",
     "run_id": "39894262893",
     "usage_file": "data/editorial_runs/2026-10-23/39894262893.json"
+  },
+  {
+    "board": "free",
+    "id": 470,
+    "topic": "선물용 상품권 선택 시 받는 사람의 기기와 사용환경 점검 방법",
+    "drafted_at": "2026-10-23",
+    "automation": true,
+    "search_intent": "받는 사람의 기기 종류와 사용환경을 미리 점검해 선물용 상품권이 실제로 잘 작동하는지 판단하려는 질문",
+    "image_scene": "책상 위에 스마트폰, 태블릿, 충전 케이블, 상품권 안내 카드가 놓여 있고, 가운데에는 호환 여부를 적어 넣는 체크리스트 메모지가 펼쳐진 구도",
+    "image_alt": "스마트폰과 태블릿 옆에 상품권 안내 카드와 체크리스트 메모를 두고 사용 가능 조건을 확인하는 장면입니다.",
+    "publication_mode": "automatic",
+    "run_id": "39900911553",
+    "usage_file": "data/editorial_runs/2026-10-23/39900911553.json"
   }
 ]
