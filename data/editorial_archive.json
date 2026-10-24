@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T02:19:37.089037+00:00",
+  "generatedAt": "2026-10-24T02:20:21.308512+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -643,7 +643,7 @@
       "board": "gc_information",
       "topic": "상품권 취소 후 카드 실적 및 혜택 반영 확인하기",
       "url": "https://kv-gift.co.kr/board/gc_information/7",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-24T02:20:21.300460+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10108395,
       "knownSubtotalUsd": 0.10108395
