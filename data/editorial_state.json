@@ -104,10 +104,15 @@
       "board": "sale",
       "topic": "상품권 문의 시 개인정보 노출 없이 정보 정리하는 법",
       "run_id": "40069653691"
+    },
+    {
+      "board": "general_notice",
+      "topic": "상품권 환불 문의 위한 이력 관리법",
+      "run_id": "40069987669"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "40069653691",
+  "last_board": "general_notice",
+  "last_run_id": "40069987669",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -180,6 +185,14 @@
       "date_kst": "2026-10-24",
       "run_id": "40066033975",
       "status": "published"
+    },
+    {
+      "source_id": "refund-record",
+      "board": "general_notice",
+      "topic": "상품권 환불 문의 위한 이력 관리법",
+      "date_kst": "2026-10-24",
+      "run_id": "40069987669",
+      "status": "error"
     }
   ]
 }
