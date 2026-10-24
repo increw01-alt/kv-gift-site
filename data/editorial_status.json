@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T05:18:35.979021+00:00",
+  "generatedAt": "2026-10-24T05:19:04.082918+00:00",
   "dateKst": "2026-10-24",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 5,
   "attempts": 10,
   "held": 0,
-  "errors": 4,
-  "knownSubtotalUsd": 0.54593485,
-  "estimatedTotalUsd": null,
+  "errors": 5,
+  "knownSubtotalUsd": 0.566871,
+  "estimatedTotalUsd": 0.566871,
   "records": [
     {
       "runId": "40044281317",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "40065706646",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "purchase",
+      "topic": "상품권 구매 한도와 카드 이용 한도 혼동 방지법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-24T05:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02093615,
+      "knownSubtotalUsd": 0.02093615
     }
   ]
 }

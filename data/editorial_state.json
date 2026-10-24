@@ -94,10 +94,15 @@
       "board": "free",
       "topic": "상품권 관련 의심 메시지 식별 노하우",
       "run_id": "40062444564"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 구매 한도와 카드 이용 한도 혼동 방지법",
+      "run_id": "40065706646"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "40062781855",
+  "last_board": "purchase",
+  "last_run_id": "40065706646",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -154,6 +159,14 @@
       "date_kst": "2026-10-24",
       "run_id": "40062781855",
       "status": "published"
+    },
+    {
+      "source_id": "voucher-limit",
+      "board": "purchase",
+      "topic": "상품권 구매 한도와 카드 이용 한도 혼동 방지법",
+      "date_kst": "2026-10-24",
+      "run_id": "40065706646",
+      "status": "error"
     }
   ]
 }
