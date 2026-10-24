@@ -408,5 +408,18 @@
     "publication_mode": "automatic",
     "run_id": "40053590736",
     "usage_file": "data/editorial_runs/2026-10-24/40053590736.json"
+  },
+  {
+    "board": "sale",
+    "id": 3691,
+    "topic": "매입 상담 시 제시 금액과 공제내역 따로 정리요령",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "상품권 매입 상담에서 제시 금액과 공제 항목을 분리해 기록하고 여러 조건을 비교하려는 독자의 질문",
+    "image_scene": "책상 위에 노트와 계산기가 놓여 있고, 노트에는 ‘제시 금액 / 공제 항목 / 메모’ 세 칸 표가 적혀 있으며 옆에서 펜으로 항목별 금액을 옮겨 적는 구도",
+    "image_alt": "책상 위 노트에 제시 금액과 공제 항목을 표로 나눠 적고 계산기로 금액을 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40057734631",
+    "usage_file": "data/editorial_runs/2026-10-24/40057734631.json"
   }
 ]

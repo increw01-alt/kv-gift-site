@@ -81,8 +81,8 @@
       "run_id": "39907764428"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "40053590736",
+  "last_board": "sale",
+  "last_run_id": "40057734631",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -106,6 +106,14 @@
       "topic": "상품권 취소 후 카드 실적 및 혜택 반영 확인하기",
       "date_kst": "2026-10-24",
       "run_id": "40053590736",
+      "status": "published"
+    },
+    {
+      "source_id": "sale-fee",
+      "board": "sale",
+      "topic": "매입 상담 시 제시 금액과 공제내역 따로 정리요령",
+      "date_kst": "2026-10-24",
+      "run_id": "40057734631",
       "status": "published"
     }
   ]

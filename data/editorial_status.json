@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T03:18:30.327538+00:00",
+  "generatedAt": "2026-10-24T03:19:32.870120+00:00",
   "dateKst": "2026-10-24",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 5,
   "held": 0,
   "errors": 1,
-  "knownSubtotalUsd": 0.29175955,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3893363,
+  "estimatedTotalUsd": 0.3893363,
   "records": [
     {
       "runId": "40044281317",
@@ -66,16 +66,16 @@
     },
     {
       "runId": "40057734631",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sale",
+      "topic": "매입 상담 시 제시 금액과 공제내역 따로 정리요령",
+      "url": "https://kv-gift.co.kr/board/sale/3691",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-24T03:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09757675,
+      "knownSubtotalUsd": 0.09757675
     }
   ]
 }
