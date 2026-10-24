@@ -395,5 +395,18 @@
     "publication_mode": "automatic",
     "run_id": "40049153450",
     "usage_file": "data/editorial_runs/2026-10-24/40049153450.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 7,
+    "topic": "상품권 취소 후 카드 실적 및 혜택 반영 확인하기",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "상품권 결제 취소 뒤 카드 실적과 혜택이 실제로 어떻게 반영됐는지 확인하고, 카드사와 판매처에 무엇을 따로 물어봐야 하는지 알고 싶은 질문",
+    "image_scene": "책상 위에 카드사 앱 화면을 띄운 태블릿과 취소 영수증, 옆에 혜택 반환 확인용 메모지가 함께 놓여 있고 한 사람이 항목별로 표시를 대조하는 구도",
+    "image_alt": "책상 위 태블릿의 카드사 취소 내역과 영수증을 나란히 두고 혜택 반영 여부를 메모지에 항목별로 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40053590736",
+    "usage_file": "data/editorial_runs/2026-10-24/40053590736.json"
   }
 ]

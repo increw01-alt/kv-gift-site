@@ -81,8 +81,8 @@
       "run_id": "39907764428"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "40049153450",
+  "last_board": "gc_information",
+  "last_run_id": "40053590736",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -98,6 +98,14 @@
       "topic": "컬쳐랜드 상품권 종류별 명칭과 발행사 구분법",
       "date_kst": "2026-10-24",
       "run_id": "40049153450",
+      "status": "published"
+    },
+    {
+      "source_id": "cancel-performance",
+      "board": "gc_information",
+      "topic": "상품권 취소 후 카드 실적 및 혜택 반영 확인하기",
+      "date_kst": "2026-10-24",
+      "run_id": "40053590736",
       "status": "published"
     }
   ]
