@@ -84,10 +84,15 @@
       "board": "general_notice",
       "topic": "결제자와 주문자가 다를 때 정보 보호하며 사실 확인하는 방안",
       "run_id": "40061793912"
+    },
+    {
+      "board": "sense",
+      "topic": "상품권 발송 후 수신 확인과 재전송 절차",
+      "run_id": "40062118640"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "40061793912",
+  "last_board": "sense",
+  "last_run_id": "40062118640",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

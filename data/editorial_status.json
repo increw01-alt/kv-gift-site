@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T04:23:35.152226+00:00",
+  "generatedAt": "2026-10-24T04:24:05.588477+00:00",
   "dateKst": "2026-10-24",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 4,
   "attempts": 7,
   "held": 0,
-  "errors": 2,
-  "knownSubtotalUsd": 0.4019764,
-  "estimatedTotalUsd": null,
+  "errors": 3,
+  "knownSubtotalUsd": 0.4267865,
+  "estimatedTotalUsd": 0.4267865,
   "records": [
     {
       "runId": "40044281317",
@@ -92,16 +92,16 @@
     },
     {
       "runId": "40062118640",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "sense",
+      "topic": "상품권 발송 후 수신 확인과 재전송 절차",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-24T04:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0248101,
+      "knownSubtotalUsd": 0.0248101
     }
   ]
 }
