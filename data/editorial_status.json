@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T06:33:31.644736+00:00",
+  "generatedAt": "2026-10-24T06:34:34.170682+00:00",
   "dateKst": "2026-10-24",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 6,
+  "published": 7,
   "verified": 6,
   "attempts": 15,
   "held": 1,
   "errors": 7,
-  "knownSubtotalUsd": 0.7379142,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.83745705,
+  "estimatedTotalUsd": 0.83745705,
   "records": [
     {
       "runId": "40044281317",
@@ -196,16 +196,16 @@
     },
     {
       "runId": "40070646720",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "해외 거주자에게 보낼 상품권 선택 시 고려사항",
+      "url": "https://kv-gift.co.kr/board/free/471",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-24T06:32:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09954285,
+      "knownSubtotalUsd": 0.09954285
     }
   ]
 }

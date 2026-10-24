@@ -447,5 +447,18 @@
     "publication_mode": "automatic",
     "run_id": "40066033975",
     "usage_file": "data/editorial_runs/2026-10-24/40066033975.json"
+  },
+  {
+    "board": "free",
+    "id": 471,
+    "topic": "해외 거주자에게 보낼 상품권 선택 시 고려사항",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "해외에 거주하는 사람에게 줄 상품권을 고를 때 사용 가능 지역, 배송 방식, 전자 상품권 호환 조건을 함께 확인하려는 질문",
+    "image_scene": "책상 위에 세계 지도 옆으로 지류 상품권 봉투와 휴대폰 화면이 놓여 있고, 체크리스트 메모지에 ‘사용 지역·배송 방법·유효기간’ 항목을 적어가며 대조하는 장면",
+    "image_alt": "책상 위에서 해외 거주자에게 보낼 상품권의 사용 지역과 배송 방식, 유효기간을 체크리스트로 함께 확인하는 모습이다.",
+    "publication_mode": "automatic",
+    "run_id": "40070646720",
+    "usage_file": "data/editorial_runs/2026-10-24/40070646720.json"
   }
 ]
