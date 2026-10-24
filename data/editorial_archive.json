@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T06:34:34.178719+00:00",
+  "generatedAt": "2026-10-24T06:35:17.028926+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -797,7 +797,7 @@
       "board": "free",
       "topic": "해외 거주자에게 보낼 상품권 선택 시 고려사항",
       "url": "https://kv-gift.co.kr/board/free/471",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-24T06:35:17.015508+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09954285,
       "knownSubtotalUsd": 0.09954285
