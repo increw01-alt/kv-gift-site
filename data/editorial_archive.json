@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T00:24:27.708532+00:00",
+  "generatedAt": "2026-10-24T00:25:11.917161+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -615,7 +615,7 @@
       "board": "gc_tip",
       "topic": "비밀번호·바코드 노출 없이 상품권 사용 상태 문의하는 안전 절차",
       "url": "https://kv-gift.co.kr/board/gc_tip/36",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-24T00:25:11.909754+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09547215,
       "knownSubtotalUsd": 0.09547215
