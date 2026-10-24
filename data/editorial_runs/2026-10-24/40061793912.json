@@ -1,17 +1,19 @@
 {
   "run_id": "40061793912",
   "date_kst": "2026-10-24",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "결제자와 주문자가 다를 때 정보 보호하며 사실 확인하는 방안",
+  "status": "error",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-24T04:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: 1"
+    ]
   },
   "api_usage": {
     "run_id": "40061793912",
@@ -20,15 +22,136 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "결제자와 주문자가 다를 때 정보 보호하며 사실 확인하는 방안",
+        "source_id": "payment-name",
+        "reader_problem": "주문자와 결제 정보가 다를 때, 어떤 정보를 어떻게 보호하면서 담당자에게 확인해야 할지 구체적으로 알고 싶어요.",
+        "distinct_angle": "단순 정보 확인 넘어 개인정보 노출 없이 담당자와 소통하는 구체 절차를 제시합니다.",
+        "outline": [
+          "결제자와 주문자 정보 차이 이해 및 확인 절차 익히기",
+          "중요 개인정보 비공개 원칙과 문의 시 안전한 정보 전달법",
+          "담당자와 신속하고 정확한 사실 확인을 위한 커뮤니케이션 방법"
+        ],
+        "novelty_reason": "주문자와 결제자가 다를 때의 사실 확인을 다루지만, 단순 환불·주문 정리나 금액 확인이 아니라 개인정보를 어떻게 나누어 전달하고 담당자와 어떤 절차로 확인할지에 초점을 둡니다. 기존 글들에는 주문 내역 준비, 미도착 문의, 수신 연락처 확인이 있으나, 결제자·주문자 불일치 상황에서 정보 보호를 전제로 소통하는 구체 절차는 겹치지 않습니다. 최근 보류된 ‘선물용 상품권 고를 때 받는 사람 사용 환경 점검’류와도 문제 상황이 달라 중복으로 보지 않습니다.",
+        "screen_rejections": [
+          "0: 환불 문의 전 주문 내역·사용 여부·이전 답변을 분류하는 내용이 기존의 환불/주문 정리 안내와 거의 같고, 민감도에 따른 공개 범위라는 차별점도 구체 절차로 충분히 드러나지 않습니다.",
+          "2: 상품권 메시지의 발신 경로 확인과 링크 주의는 기존의 링크 검증·공식 채널 재확인 안내와 중복되며, 별도의 새 해결 흐름이 없습니다.",
+          "3: ‘환불 문의 전 필요한 정보 종류와 우선순위’는 기존의 환불 문의 준비, 주문 내역 정리, 사용 상태 확인 글과 핵심 질문·절차가 겹칩니다.",
+          "4: 링크 열기 전 확인 체크리스트는 최근 보류된 메시지 발신 경로 확인/링크 안전 점검 주제와 사실상 같은 문제 해결 절차로 보입니다."
+        ]
+      },
+      "board": "general_notice",
+      "topic": "결제자와 주문자가 다를 때 정보 보호하며 사실 확인하는 방안",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-23T11:39:41Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4401,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 713,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5114
+        },
+        "estimated_usd": 0.0029012,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-24T04:18:36.775281+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7410,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 542,
+          "output_tokens_details": {
+            "reasoning_tokens": 169
+          },
+          "total_tokens": 7952
+        },
+        "estimated_usd": 0.0079965,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-24T04:18:42.836924+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2420,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 484,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2904
+        },
+        "estimated_usd": 0.0017424,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-24T04:18:46.794675+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-24T04:18:31.018974+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-24T04:18:38.073208+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-24T04:18:42.838846+00:00",
+        "usage_record_index": 2
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0126401,
+    "estimated_total_usd": 0.0126401,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

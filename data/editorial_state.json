@@ -79,10 +79,15 @@
       "board": "free",
       "topic": "선물용 상품권 고를 때 받는 사람 사용 환경 체크 방법",
       "run_id": "39907764428"
+    },
+    {
+      "board": "general_notice",
+      "topic": "결제자와 주문자가 다를 때 정보 보호하며 사실 확인하는 방안",
+      "run_id": "40061793912"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "40057734631",
+  "last_board": "general_notice",
+  "last_run_id": "40061793912",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -115,6 +120,14 @@
       "date_kst": "2026-10-24",
       "run_id": "40057734631",
       "status": "published"
+    },
+    {
+      "source_id": "payment-name",
+      "board": "general_notice",
+      "topic": "결제자와 주문자가 다를 때 정보 보호하며 사실 확인하는 방안",
+      "date_kst": "2026-10-24",
+      "run_id": "40061793912",
+      "status": "error"
     }
   ]
 }
