@@ -1,0 +1,34 @@
+{
+  "run_id": "40053590736",
+  "date_kst": "2026-10-24",
+  "board": null,
+  "topic": null,
+  "status": "generating",
+  "url": null,
+  "trigger_event": "workflow_dispatch",
+  "trigger_source": "cloudflare_cron",
+  "scheduled_at": "2026-10-24T02:17:58.440Z",
+  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "review": {
+    "approved": false,
+    "issues": []
+  },
+  "api_usage": {
+    "run_id": "40053590736",
+    "run_attempt": "1",
+    "context": {
+      "mode": "automatic_publish",
+      "daily_limit": 10,
+      "daily_attempt_limit": 15,
+      "follow_schedule": true
+    },
+    "status": "in_progress",
+    "records": [],
+    "request_tracking_version": 1,
+    "requests": [],
+    "accounting_status": "in_progress",
+    "known_subtotal_usd": 0,
+    "estimated_total_usd": null,
+    "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
+  }
+}
