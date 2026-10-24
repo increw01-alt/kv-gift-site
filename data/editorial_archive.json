@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T05:24:33.365854+00:00",
+  "generatedAt": "2026-10-24T05:25:36.175564+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -741,7 +741,7 @@
       "board": "gc_information",
       "topic": "상품권 결제 전 할부와 청구 안내별로 확인하기",
       "url": "https://kv-gift.co.kr/board/gc_information/8",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-24T05:25:36.163506+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10154355,
       "knownSubtotalUsd": 0.10154355
