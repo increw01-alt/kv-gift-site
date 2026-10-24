@@ -81,8 +81,8 @@
       "run_id": "39907764428"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "40044702433",
+  "last_board": "purchase",
+  "last_run_id": "40049153450",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -90,6 +90,14 @@
       "topic": "비밀번호·바코드 노출 없이 상품권 사용 상태 문의하는 안전 절차",
       "date_kst": "2026-10-24",
       "run_id": "40044702433",
+      "status": "published"
+    },
+    {
+      "source_id": "culture-product",
+      "board": "purchase",
+      "topic": "컬쳐랜드 상품권 종류별 명칭과 발행사 구분법",
+      "date_kst": "2026-10-24",
+      "run_id": "40049153450",
       "status": "published"
     }
   ]

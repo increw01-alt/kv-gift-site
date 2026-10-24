@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T01:18:34.209620+00:00",
+  "generatedAt": "2026-10-24T01:19:42.728379+00:00",
   "dateKst": "2026-10-24",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 3,
   "held": 0,
   "errors": 1,
-  "knownSubtotalUsd": 0.09862455,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1906756,
+  "estimatedTotalUsd": 0.1906756,
   "records": [
     {
       "runId": "40044281317",
@@ -40,16 +40,16 @@
     },
     {
       "runId": "40049153450",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "컬쳐랜드 상품권 종류별 명칭과 발행사 구분법",
+      "url": "https://kv-gift.co.kr/board/purchase/2568",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-24T01:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09205105,
+      "knownSubtotalUsd": 0.09205105
     }
   ]
 }

@@ -382,5 +382,18 @@
     "publication_mode": "automatic",
     "run_id": "40044702433",
     "usage_file": "data/editorial_runs/2026-10-24/40044702433.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2568,
+    "topic": "컬쳐랜드 상품권 종류별 명칭과 발행사 구분법",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "컬쳐랜드 상품권을 사기 전에 발행사와 제휴사, 명칭과 코드를 어떻게 구분해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 서로 다른 이름표가 붙은 상품권 카드 여러 장과 돋보기, 옆에는 발행사별 비교표가 펼쳐져 있고 한 사람이 코드를 대조하며 확인하는 구도",
+    "image_alt": "책상 위에 여러 종류의 상품권과 발행사 비교표가 놓여 있고, 돋보기로 명칭과 코드를 대조하는 장면입니다.",
+    "publication_mode": "automatic",
+    "run_id": "40049153450",
+    "usage_file": "data/editorial_runs/2026-10-24/40049153450.json"
   }
 ]
