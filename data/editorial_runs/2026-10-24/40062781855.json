@@ -1,16 +1,26 @@
 {
   "run_id": "40062781855",
   "date_kst": "2026-10-24",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "gc_tip",
+  "topic": "결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/gc_tip/37",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-24T04:32:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,262 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계",
+        "source_id": "payment-date",
+        "reader_problem": "상품권 결제 날짜와 카드 청구서에 찍힌 날짜가 달라 정확한 결제 내역을 비교하기 어렵다.",
+        "distinct_angle": "결제 시점과 청구 시점 차이에 따른 기록 비교 방법을 단계별로 설명하고, 문제 발생 시 대비할 수 있는 증빙 자료 준비법을 추가한다.",
+        "outline": [
+          "결제일과 카드 청구일 차이 이해 및 발생 이유 파악",
+          "결제 내역과 카드 청구서 기록 단계별 비교 방법 익히기",
+          "차이 발생 시 증빙 자료 수집과 카드사 문의 준비 절차"
+        ],
+        "novelty_reason": "결제일과 카드 청구일이 다를 때 결제 내역을 어떻게 대조할지에 초점이 맞아 있어, 기존의 유효기간·환불 문의·잔액 조회·카드 실적 구분 글과는 문제 상황과 해결 절차가 다릅니다. 특히 ‘결제 시점 vs 청구 시점’의 차이를 기준으로 영수증, 카드명세서, 증빙 자료를 순서대로 비교하는 구성이라 실무적으로 더 구체적입니다.",
+        "screen_rejections": [
+          "0: 유효기간 표시와 실제 사용 가능 기간, 교환 기한 구분을 다루어 기존 공지/안내 글과 핵심 질문이 같습니다.",
+          "1: 환불 문의 전 주문 내역·사용 상태·문의 이력을 정리하는 방식이 기존 환불 관련 보류 주제와 거의 동일합니다.",
+          "2: 포인트 결제와 적립 포인트 구분은 상품권 활용 자체보다 일반 결제/적립 설명에 가깝고, 기존 카드 실적·이벤트 실적 구분 글과도 결이 겹칩니다.",
+          "3: 사용 후 남은 잔액과 사용 이력 확인은 기존의 상품권 사용 여부/잔액 확인 안내와 사실상 같은 범주입니다."
+        ]
+      },
+      "board": "gc_tip",
+      "topic": "결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-23T11:39:41Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 결제일과 카드 청구일이 달라졌을 때 어떤 기록을 먼저 비교하고 증빙을 어떻게 정리해야 하는지 알고 싶은 독자의 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4577,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 972,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5549
+        },
+        "estimated_usd": 0.003386,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-24T04:33:40.644503+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6864,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 482,
+          "output_tokens_details": {
+            "reasoning_tokens": 189
+          },
+          "total_tokens": 7346
+        },
+        "estimated_usd": 0.007317,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-24T04:33:45.891988+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2355,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 462,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2817
+        },
+        "estimated_usd": 0.0016812,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-24T04:33:49.643831+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7220,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 543,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7763
+        },
+        "estimated_usd": 0.0037568,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-24T04:33:54.630452+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7118,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 341,
+          "output_tokens_details": {
+            "reasoning_tokens": 191
+          },
+          "total_tokens": 7459
+        },
+        "estimated_usd": 0.006873,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-24T04:33:58.711074+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3564,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1068
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4936
+        },
+        "estimated_usd": 0.066468,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-24T04:34:26.028107+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7486,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 231,
+          "output_tokens_details": {
+            "reasoning_tokens": 166
+          },
+          "total_tokens": 7717
+        },
+        "estimated_usd": 0.006654,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-24T04:34:30.053553+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-24T04:33:34.415007+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-24T04:33:43.132541+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-24T04:33:45.894322+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-24T04:33:50.990348+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-24T04:33:56.672802+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-24T04:33:58.728972+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-24T04:34:27.365326+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.096136,
+    "estimated_total_usd": 0.096136,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

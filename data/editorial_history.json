@@ -421,5 +421,18 @@
     "publication_mode": "automatic",
     "run_id": "40057734631",
     "usage_file": "data/editorial_runs/2026-10-24/40057734631.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 37,
+    "topic": "결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "상품권 결제일과 카드 청구일이 달라졌을 때 어떤 기록을 먼저 비교하고 증빙을 어떻게 정리해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 상품권 결제 영수증과 카드 명세서를 나란히 펼쳐 두고, 날짜와 승인번호가 적힌 부분을 돋보기로 대조하는 장면",
+    "image_alt": "책상 위에 펼친 상품권 영수증과 카드 명세서를 날짜와 승인번호 기준으로 맞춰 보는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40062781855",
+    "usage_file": "data/editorial_runs/2026-10-24/40062781855.json"
   }
 ]

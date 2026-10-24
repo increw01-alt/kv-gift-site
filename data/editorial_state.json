@@ -96,8 +96,8 @@
       "run_id": "40062444564"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "40062444564",
+  "last_board": "gc_tip",
+  "last_run_id": "40062781855",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -146,6 +146,14 @@
       "date_kst": "2026-10-24",
       "run_id": "40062444564",
       "status": "error"
+    },
+    {
+      "source_id": "payment-date",
+      "board": "gc_tip",
+      "topic": "결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계",
+      "date_kst": "2026-10-24",
+      "run_id": "40062781855",
+      "status": "published"
     }
   ]
 }
