@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T04:28:32.166315+00:00",
+  "generatedAt": "2026-10-24T04:28:57.897578+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -695,14 +695,14 @@
       "runId": "40062444564",
       "dateKst": "2026-10-24",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "free",
+      "topic": "상품권 관련 의심 메시지 식별 노하우",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02301235,
+      "knownSubtotalUsd": 0.02301235
     },
     {
       "id": "post:purchase:2561",
@@ -3158,13 +3158,57 @@
     {
       "entryId": "run:40062444564",
       "dateKst": "2026-10-24",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-24T04:28:39.792948+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0029068,
+      "knownSubtotalUsd": 0.0029068,
+      "requests": 1,
+      "inputTokens": 4431,
+      "outputTokens": 709
+    },
+    {
+      "entryId": "run:40062444564",
+      "dateKst": "2026-10-24",
+      "recordedAt": "2026-10-24T04:28:46.076320+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0090975,
+      "knownSubtotalUsd": 0.0090975,
+      "requests": 1,
+      "inputTokens": 7192,
+      "outputTokens": 823
+    },
+    {
+      "entryId": "run:40062444564",
+      "dateKst": "2026-10-24",
+      "recordedAt": "2026-10-24T04:28:48.706768+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.00153,
+      "knownSubtotalUsd": 0.00153,
+      "requests": 1,
+      "inputTokens": 2489,
+      "outputTokens": 334
+    },
+    {
+      "entryId": "run:40062444564",
+      "dateKst": "2026-10-24",
+      "recordedAt": "2026-10-24T04:28:53.212884+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0026568,
+      "knownSubtotalUsd": 0.0026568,
+      "requests": 1,
+      "inputTokens": 4942,
+      "outputTokens": 425
+    },
+    {
+      "entryId": "run:40062444564",
+      "dateKst": "2026-10-24",
+      "recordedAt": "2026-10-24T04:28:57.666630+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00682125,
+      "knownSubtotalUsd": 0.00682125,
+      "requests": 1,
+      "inputTokens": 6491,
+      "outputTokens": 434
     },
     {
       "entryId": "post:purchase:2561",
