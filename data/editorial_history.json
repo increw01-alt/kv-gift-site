@@ -369,5 +369,18 @@
     "publication_mode": "automatic",
     "run_id": "39900911553",
     "usage_file": "data/editorial_runs/2026-10-23/39900911553.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 36,
+    "topic": "비밀번호·바코드 노출 없이 상품권 사용 상태 문의하는 안전 절차",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "상품권 사용 상태를 확인할 때 바코드와 번호를 노출하지 않고 안전하게 문의하는 준비 절차를 알고 싶은 독자의 질문",
+    "image_scene": "책상 위 메모장에 상품권 종류와 구매처를 적어 두고, 옆의 스마트폰 화면은 번호가 가려진 채 문의 문구만 입력하는 장면",
+    "image_alt": "책상 위 메모장에 상품권 종류와 구매처를 적어 두고, 옆 스마트폰에는 번호를 가린 채 문의 문구만 작성하는 모습입니다.",
+    "publication_mode": "automatic",
+    "run_id": "40044702433",
+    "usage_file": "data/editorial_runs/2026-10-24/40044702433.json"
   }
 ]

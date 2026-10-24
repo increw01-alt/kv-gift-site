@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T00:23:29.470732+00:00",
+  "generatedAt": "2026-10-24T00:24:27.704929+00:00",
   "dateKst": "2026-10-24",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 2,
   "held": 0,
   "errors": 1,
-  "knownSubtotalUsd": 0.0031524,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.09862455,
+  "estimatedTotalUsd": 0.09862455,
   "records": [
     {
       "runId": "40044281317",
@@ -27,16 +27,16 @@
     },
     {
       "runId": "40044702433",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "비밀번호·바코드 노출 없이 상품권 사용 상태 문의하는 안전 절차",
+      "url": "https://kv-gift.co.kr/board/gc_tip/36",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-24T00:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09547215,
+      "knownSubtotalUsd": 0.09547215
     }
   ]
 }
