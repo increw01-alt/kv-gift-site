@@ -99,10 +99,15 @@
       "board": "purchase",
       "topic": "상품권 구매 한도와 카드 이용 한도 혼동 방지법",
       "run_id": "40065706646"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 문의 시 개인정보 노출 없이 정보 정리하는 법",
+      "run_id": "40069653691"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "40066033975",
+  "last_board": "sale",
+  "last_run_id": "40069653691",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
