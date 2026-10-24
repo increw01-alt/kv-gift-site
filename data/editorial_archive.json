@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T04:34:31.291509+00:00",
+  "generatedAt": "2026-10-24T04:35:34.467053+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -713,7 +713,7 @@
       "board": "gc_tip",
       "topic": "결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계",
       "url": "https://kv-gift.co.kr/board/gc_tip/37",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-24T04:35:34.455345+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.096136,
       "knownSubtotalUsd": 0.096136
