@@ -434,5 +434,18 @@
     "publication_mode": "automatic",
     "run_id": "40062781855",
     "usage_file": "data/editorial_runs/2026-10-24/40062781855.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 8,
+    "topic": "상품권 결제 전 할부와 청구 안내별로 확인하기",
+    "drafted_at": "2026-10-24",
+    "automation": true,
+    "search_intent": "상품권 결제에서 할부 선택 화면과 카드사 청구 예정 안내를 각각 확인해 실제 청구 조건이 맞는지 비교하려는 독자의 질문",
+    "image_scene": "책상 위에 노트북의 결제 화면과 종이 달력, 할부 개월 수를 적은 메모지, 계산기가 나란히 놓여 있고 한 사람이 결제 단계의 할부 선택값을 달력의 청구 예정일과 대조하는 장면",
+    "image_alt": "책상 위 결제 화면과 종이 달력, 할부 메모를 나란히 놓고 청구 예정일과 할부 조건을 비교하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40066033975",
+    "usage_file": "data/editorial_runs/2026-10-24/40066033975.json"
   }
 ]

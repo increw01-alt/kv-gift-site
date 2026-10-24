@@ -101,8 +101,8 @@
       "run_id": "40065706646"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "40065706646",
+  "last_board": "gc_information",
+  "last_run_id": "40066033975",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -167,6 +167,14 @@
       "date_kst": "2026-10-24",
       "run_id": "40065706646",
       "status": "error"
+    },
+    {
+      "source_id": "installment-record",
+      "board": "gc_information",
+      "topic": "상품권 결제 전 할부와 청구 안내별로 확인하기",
+      "date_kst": "2026-10-24",
+      "run_id": "40066033975",
+      "status": "published"
     }
   ]
 }
