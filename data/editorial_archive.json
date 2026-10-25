@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T03:23:19.959146+00:00",
+  "generatedAt": "2026-10-25T03:23:32.929833+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -905,14 +905,14 @@
       "runId": "40157991096",
       "dateKst": "2026-10-25",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
+      "status": "held",
+      "board": "gc_tip",
       "topic": null,
       "url": null,
       "publicVerifiedAt": null,
       "source": "github_schedule",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01294115,
+      "knownSubtotalUsd": 0.01294115
     },
     {
       "id": "post:purchase:2561",
@@ -4292,13 +4292,24 @@
     {
       "entryId": "run:40157991096",
       "dateKst": "2026-10-25",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-25T03:23:28.070127+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0034364,
+      "knownSubtotalUsd": 0.0034364,
+      "requests": 1,
+      "inputTokens": 4763,
+      "outputTokens": 957
+    },
+    {
+      "entryId": "run:40157991096",
+      "dateKst": "2026-10-25",
+      "recordedAt": "2026-10-25T03:23:32.726302+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00950475,
+      "knownSubtotalUsd": 0.00950475,
+      "requests": 1,
+      "inputTokens": 9865,
+      "outputTokens": 468
     },
     {
       "entryId": "post:purchase:2561",

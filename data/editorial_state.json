@@ -131,8 +131,8 @@
       "run_id": "40157695449"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "40157695449",
+  "last_board": "gc_tip",
+  "last_run_id": "40157991096",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -253,6 +253,30 @@
       "date_kst": "2026-10-25",
       "run_id": "40153925930",
       "status": "published"
+    },
+    {
+      "source_id": "point-payment",
+      "board": "gc_tip",
+      "topic": "포인트 적립과 결제 구분하는 실용 팁",
+      "date_kst": "2026-10-25",
+      "run_id": "40157991096",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-benefit",
+      "board": "gc_tip",
+      "topic": "할인상품권 취소 시 혜택·주문 내역 따로 확인법",
+      "date_kst": "2026-10-25",
+      "run_id": "40157991096",
+      "status": "held"
+    },
+    {
+      "source_id": "card-performance",
+      "board": "gc_tip",
+      "topic": "상품권 이용 시 놓치기 쉬운 카드 실적 인정 범위",
+      "date_kst": "2026-10-25",
+      "run_id": "40157991096",
+      "status": "held"
     }
   ]
 }

@@ -1,17 +1,19 @@
 {
   "run_id": "40157991096",
   "date_kst": "2026-10-25",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "schedule",
   "trigger_source": "github_schedule",
   "scheduled_at": null,
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 글의 핵심 질문과 해결 절차를 반복합니다. 카드 실적/포인트 구분, 취소 후 혜택·주문 확인, 잔액 관리, 문의 전 기록 정리 등은 이미 유사한 글이 있어 독립적인 새 문제 해결 주제로 보기 어렵습니다. / 0: 포인트 결제와 적립을 단계별로 구분한다는 점이 기존 글 '상품권 구매, 카드 실적과 포인트 적립은 같은 기준일까요?'와 질문·절차가 거의 같습니다. / 1: 할인상품권 취소 시 혜택 반환과 주문 내역을 따로 확인하는 내용이 기존 '상품권 취소 후 카드 실적 및 혜택 반영 확인하기'와 중복됩니다. / 2: 카드 실적 인정 범위와 이벤트 실적 구분은 기존 '상품권 결제 시 카드 실적과 이벤트 실적의 차이와 확인 방법'과 사실상 같은 안내입니다. / 3: 사용한 상품권의 취소·환불을 위해 기록을 정리하고 문의를 준비하는 흐름이 기존 문의 준비/개인정보 보호 글과 겹칩니다. / 4: 상품권 사용 후 남은 잔액 확인과 관리 방법은 기존 '상품권 사용 후 남은 금액 확인과 이력 관리법'과 핵심 내용이 같습니다. / 5: 상품권과 카드 포인트 결제를 구분해 혜택을 최적화하는 내용이 0번 및 기존 카드 실적·포인트 글들과 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "40157991096",
@@ -20,15 +22,147 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "포인트 적립과 결제 구분하는 실용 팁",
+          "source_id": "point-payment",
+          "reader_problem": "포인트를 이용해 결제하거나 결제 후 포인트를 적립받을 때 두 경우가 어떻게 다른지 명확하지 않아 혜택을 제대로 누리지 못한다.",
+          "distinct_angle": "포인트 사용과 적립 조건의 차이를 결제 절차 단계별로 구분하여 직접 해볼 체크리스트 형식으로 설명, 흔히 하는 실수와 확인 방법 중심으로 구성한다.",
+          "outline": [
+            "포인트 결제와 적립의 기본 원리 정확히 파악하기",
+            "결제 시 실제 포인트 사용 단계별 행동 방법 실습하기",
+            "포인트 혜택 누락하는 흔한 실수와 예방책 점검하기"
+          ]
+        },
+        {
+          "topic": "할인상품권 취소 시 혜택·주문 내역 따로 확인법",
+          "source_id": "refund-benefit",
+          "reader_problem": "할인 혜택을 받았던 상품권 결제 후 취소할 때 혜택 반환 및 주문 내역 처리 과정을 정확히 몰라 혼란이 생긴다.",
+          "distinct_angle": "취소 과정에서 할인 혜택과 주문 내용을 별도로 분리해 확인하는 실무 중심 절차를 상황별 사례와 함께 안내한다.",
+          "outline": [
+            "취소 요청 전 할인 혜택과 주문 내역 분리 확인하기",
+            "취소 처리 중 혜택 반환 내역 꼼꼼히 점검하기",
+            "취소 완료 후 주문 상태와 혜택 적용 여부 이중 확인하기"
+          ]
+        },
+        {
+          "topic": "상품권 이용 시 놓치기 쉬운 카드 실적 인정 범위",
+          "source_id": "card-performance",
+          "reader_problem": "상품권 결제 시 카드 실적 인정 범위와 이벤트 실적 구분이 불분명해 카드 혜택을 제대로 받지 못하는 상황을 겪는다.",
+          "distinct_angle": "카드 실적과 이벤트 실적의 차이를 명확히 구분해 실적 확인 방법과 문의 요령을 단계별로 안내하며 자주 하는 착각 사례를 곁들인다.",
+          "outline": [
+            "상품권 결제 시 카드 실적 인정 원칙 이해하기",
+            "실제 카드사 실적과 이벤트 실적 구분해 확인하는 방법 실습하기",
+            "실적 확인 과정에서 흔히 하는 오해·실수 바로잡기"
+          ]
+        },
+        {
+          "topic": "사용한 상품권 취소 시 기록 정리와 문의 준비 요령",
+          "source_id": "",
+          "reader_problem": "상품권을 이미 사용한 뒤 결제를 취소해야 할 때 사용 내역과 반환 정보를 정확히 분리하고 고객센터에 문의하는 방법을 몰라 어려움을 겪는다.",
+          "distinct_angle": "상품권 취소 후 사용 내역 관리와 관련 증빙 준비를 중심으로 실제 행동 순서대로 안내하며, 개인정보 보호도 함께 고려하는 구체 절차를 담는다.",
+          "outline": [
+            "상품권 사용 내역을 정확히 파악하고 정리하기",
+            "취소·환불 관련 증빙 자료를 체계적으로 준비하기",
+            "고객문의 시 개인정보 노출 없이 효과적으로 문의하기"
+          ]
+        },
+        {
+          "topic": "상품권 사용 후 남은 잔액 관리하는 구체 방법",
+          "source_id": "",
+          "reader_problem": "상품권 사용 중 남은 잔액 확인과 효율적 관리를 어떻게 해야 할지 구체적으로 몰라 금액 소실이나 복잡한 사용을 경험한다.",
+          "distinct_angle": "잔액 확인법부터 남은 금액 활용 전략, 잔액 관리 기록법까지 일상에서 직접 해볼 수 있는 실천 절차를 단계별로 소개한다.",
+          "outline": [
+            "상품권 잔액 확인 절차 직접 따라 해보기",
+            "잔액 활용 시기와 방법 실습하기",
+            "잔액 관리 기록을 체계적으로 정리하는 방법 익히기"
+          ]
+        },
+        {
+          "topic": "상품권과 카드 포인트 결제 구분해 받는 혜택 최적화법",
+          "source_id": "",
+          "reader_problem": "상품권 결제와 카드 포인트 결제 방법이 혼동돼 둘의 혜택 차이를 모르고 최적의 할인·적립 효과를 누리지 못한다.",
+          "distinct_angle": "상품권 결제, 카드 포인트 직접 결제, 결제 후 포인트 적립의 차이를 비교하며 상황별 맞춤 사용법과 실천 전략을 사례 중심으로 설명한다.",
+          "outline": [
+            "상품권 결제와 카드 포인트 사용 각각의 특징 이해하기",
+            "상황별 최적의 결제 방식을 선택해보기",
+            "결제 후 포인트 적립 조건과 활용 계획 세우기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4763,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 957,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5720
+        },
+        "estimated_usd": 0.0034364,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T03:23:28.070127+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9865,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 468,
+          "output_tokens_details": {
+            "reasoning_tokens": 112
+          },
+          "total_tokens": 10333
+        },
+        "estimated_usd": 0.00950475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T03:23:32.726302+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T03:23:22.305620+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T03:23:30.839308+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01294115,
+    "estimated_total_usd": 0.01294115,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

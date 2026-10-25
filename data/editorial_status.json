@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T03:23:19.950083+00:00",
+  "generatedAt": "2026-10-25T03:23:32.920982+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 2,
   "attempts": 8,
-  "held": 3,
+  "held": 4,
   "errors": 1,
-  "knownSubtotalUsd": 0.38385575,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3967969,
+  "estimatedTotalUsd": 0.3967969,
   "records": [
     {
       "runId": "40146151033",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "40157991096",
-      "status": "generating",
-      "board": null,
+      "status": "held",
+      "board": "gc_tip",
       "topic": null,
       "url": null,
       "triggerEvent": "schedule",
       "triggerSource": "github_schedule",
       "scheduledAt": null,
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01294115,
+      "knownSubtotalUsd": 0.01294115
     }
   ]
 }
