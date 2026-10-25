@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T03:28:36.296363+00:00",
+  "generatedAt": "2026-10-25T03:28:54.642056+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -919,14 +919,14 @@
       "runId": "40158307702",
       "dateKst": "2026-10-25",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "purchase",
+      "topic": "상품권 구매 전 판매처 신뢰성 평가 방법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01323545,
+      "knownSubtotalUsd": 0.01323545
     },
     {
       "id": "post:purchase:2561",
@@ -4328,13 +4328,35 @@
     {
       "entryId": "run:40158307702",
       "dateKst": "2026-10-25",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-25T03:28:45.569863+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0032652,
+      "knownSubtotalUsd": 0.0032652,
+      "requests": 1,
+      "inputTokens": 5083,
+      "outputTokens": 770
+    },
+    {
+      "entryId": "run:40158307702",
+      "dateKst": "2026-10-25",
+      "recordedAt": "2026-10-25T03:28:51.250496+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00843825,
+      "knownSubtotalUsd": 0.00843825,
+      "requests": 1,
+      "inputTokens": 8209,
+      "outputTokens": 507
+    },
+    {
+      "entryId": "run:40158307702",
+      "dateKst": "2026-10-25",
+      "recordedAt": "2026-10-25T03:28:54.230599+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.001532,
+      "knownSubtotalUsd": 0.001532,
+      "requests": 1,
+      "inputTokens": 2238,
+      "outputTokens": 398
     },
     {
       "entryId": "post:purchase:2561",

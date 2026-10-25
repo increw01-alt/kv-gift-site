@@ -129,10 +129,15 @@
       "board": "free",
       "topic": "모바일상품권 메시지 안전 확인과 사기 예방 절차",
       "run_id": "40157695449"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 구매 전 판매처 신뢰성 평가 방법",
+      "run_id": "40158307702"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "40157991096",
+  "last_board": "purchase",
+  "last_run_id": "40158307702",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

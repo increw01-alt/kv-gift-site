@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T03:28:36.286641+00:00",
+  "generatedAt": "2026-10-25T03:28:54.632259+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 2,
   "attempts": 9,
   "held": 4,
-  "errors": 1,
-  "knownSubtotalUsd": 0.3967969,
-  "estimatedTotalUsd": null,
+  "errors": 2,
+  "knownSubtotalUsd": 0.41003235,
+  "estimatedTotalUsd": 0.41003235,
   "records": [
     {
       "runId": "40146151033",
@@ -118,16 +118,16 @@
     },
     {
       "runId": "40158307702",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "purchase",
+      "topic": "상품권 구매 전 판매처 신뢰성 평가 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T03:27:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01323545,
+      "knownSubtotalUsd": 0.01323545
     }
   ]
 }
