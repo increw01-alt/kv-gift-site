@@ -126,8 +126,8 @@
       "run_id": "40146474039"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "40146474039",
+  "last_board": "gc_information",
+  "last_run_id": "40146796879",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -216,6 +216,14 @@
       "date_kst": "2026-10-25",
       "run_id": "40146474039",
       "status": "held"
+    },
+    {
+      "source_id": "partial-use",
+      "board": "gc_information",
+      "topic": "상품권 사용 후 남은 금액 확인과 이력 관리법",
+      "date_kst": "2026-10-25",
+      "run_id": "40146796879",
+      "status": "published"
     }
   ]
 }

@@ -460,5 +460,18 @@
     "publication_mode": "automatic",
     "run_id": "40070646720",
     "usage_file": "data/editorial_runs/2026-10-24/40070646720.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 9,
+    "topic": "상품권 사용 후 남은 금액 확인과 이력 관리법",
+    "drafted_at": "2026-10-25",
+    "automation": true,
+    "search_intent": "상품권의 남은 금액과 사용 이력을 각각 어디서 어떻게 확인하는지, 조회 전 무엇을 메모해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 상품권 안내서와 메모장이 놓여 있고, 메모장에는 번호와 조회 날짜가 적혀 있다. 옆에는 노트북 화면에 잔액 조회 페이지가 열려 있고, 휴대폰에는 사용 이력 목록이 보이는 구도로 두 정보를 함께 대조하는 장면",
+    "image_alt": "책상 위 메모장에 상품권 번호를 적어 두고 노트북의 잔액 조회 화면과 휴대폰의 사용 이력 목록을 함께 비교하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40146796879",
+    "usage_file": "data/editorial_runs/2026-10-25/40146796879.json"
   }
 ]

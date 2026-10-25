@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T00:28:30.775012+00:00",
+  "generatedAt": "2026-10-25T00:29:31.332601+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 3,
   "held": 2,
   "errors": 0,
-  "knownSubtotalUsd": 0.0472362,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1463182,
+  "estimatedTotalUsd": 0.1463182,
   "records": [
     {
       "runId": "40146151033",
@@ -40,16 +40,16 @@
     },
     {
       "runId": "40146796879",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "상품권 사용 후 남은 금액 확인과 이력 관리법",
+      "url": "https://kv-gift.co.kr/board/gc_information/9",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T00:27:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.099082,
+      "knownSubtotalUsd": 0.099082
     }
   ]
 }
