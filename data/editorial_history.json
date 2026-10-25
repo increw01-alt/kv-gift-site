@@ -486,5 +486,18 @@
     "publication_mode": "automatic",
     "run_id": "40150409387",
     "usage_file": "data/editorial_runs/2026-10-25/40150409387.json"
+  },
+  {
+    "board": "sense",
+    "id": 8,
+    "topic": "상품권 선물 후 받는 사람의 사용 편의 높이기 팁",
+    "drafted_at": "2026-10-25",
+    "automation": true,
+    "search_intent": "선물한 상품권을 받는 사람이 등록부터 잔액 확인, 분실 대응까지 쉽게 처리하도록 안내문을 준비하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 선물 봉투와 상품권 안내 메모가 놓여 있고, 옆에는 스마트폰 화면에 등록 절차를 적는 메모 앱이 열려 있다. 한 사람이 체크리스트에 ‘번호 입력 → 앱 확인 → 잔액 조회 → 문의처 저장’ 순서로 정리하며 선물용 안내 카드를 완성하는 구도",
+    "image_alt": "선물 봉투 옆에 상품권 안내 메모와 스마트폰 메모 앱이 놓여 있고, 등록 순서와 문의처를 체크리스트로 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40153925930",
+    "usage_file": "data/editorial_runs/2026-10-25/40153925930.json"
   }
 ]

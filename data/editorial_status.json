@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T02:18:33.702359+00:00",
+  "generatedAt": "2026-10-25T02:19:34.800278+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 1,
   "attempts": 6,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.255423,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3595638,
+  "estimatedTotalUsd": 0.3595638,
   "records": [
     {
       "runId": "40146151033",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "40153925930",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "상품권 선물 후 받는 사람의 사용 편의 높이기 팁",
+      "url": "https://kv-gift.co.kr/board/sense/8",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T02:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1041408,
+      "knownSubtotalUsd": 0.1041408
     }
   ]
 }

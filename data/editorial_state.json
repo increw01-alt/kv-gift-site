@@ -126,8 +126,8 @@
       "run_id": "40146474039"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "40150409387",
+  "last_board": "sense",
+  "last_run_id": "40153925930",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -240,6 +240,14 @@
       "date_kst": "2026-10-25",
       "run_id": "40150086639",
       "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "sense",
+      "topic": "상품권 선물 후 받는 사람의 사용 편의 높이기 팁",
+      "date_kst": "2026-10-25",
+      "run_id": "40153925930",
+      "status": "published"
     }
   ]
 }
