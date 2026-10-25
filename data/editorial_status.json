@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T00:23:32.735852+00:00",
+  "generatedAt": "2026-10-25T00:24:00.926286+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 2,
-  "held": 1,
+  "held": 2,
   "errors": 0,
-  "knownSubtotalUsd": 0.02441415,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.0472362,
+  "estimatedTotalUsd": 0.0472362,
   "records": [
     {
       "runId": "40146151033",
@@ -27,16 +27,16 @@
     },
     {
       "runId": "40146474039",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "상품권 할인쿠폰과 적용 제외 상품 구분법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T00:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02282205,
+      "knownSubtotalUsd": 0.02282205
     }
   ]
 }

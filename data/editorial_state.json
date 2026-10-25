@@ -119,10 +119,15 @@
       "board": "gc_tip",
       "topic": "상품권 구매 전 구매처 및 조건 구분법",
       "run_id": "40146151033"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 할인쿠폰과 적용 제외 상품 구분법",
+      "run_id": "40146474039"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "40146151033",
+  "last_board": "purchase",
+  "last_run_id": "40146474039",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -203,6 +208,14 @@
       "date_kst": "2026-10-24",
       "run_id": "40069987669",
       "status": "error"
+    },
+    {
+      "source_id": "coupon-exclusion",
+      "board": "purchase",
+      "topic": "상품권 할인쿠폰과 적용 제외 상품 구분법",
+      "date_kst": "2026-10-25",
+      "run_id": "40146474039",
+      "status": "held"
     }
   ]
 }
