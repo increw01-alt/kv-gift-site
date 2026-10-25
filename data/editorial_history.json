@@ -473,5 +473,18 @@
     "publication_mode": "automatic",
     "run_id": "40146796879",
     "usage_file": "data/editorial_runs/2026-10-25/40146796879.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 57,
+    "topic": "사이트 첫 방문 시 주의해야 할 기본 이용 수칙",
+    "drafted_at": "2026-10-25",
+    "automation": true,
+    "search_intent": "처음 사이트를 이용할 때 무엇을 먼저 확인하고 어디에 문의해야 하는지 한 번에 정리하려는 독자의 질문",
+    "image_scene": "노트북에 사이트 첫 화면이 열려 있고 옆에는 체크리스트 메모지, 자물쇠 모양의 보안 아이콘 스티커, 고객센터 연락처가 적힌 종이가 함께 놓여 있으며 한 사람이 항목별로 순서대로 확인하는 구도",
+    "image_alt": "노트북 첫 화면 옆에서 체크리스트와 고객센터 연락처를 보며 사이트 이용 순서를 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40150409387",
+    "usage_file": "data/editorial_runs/2026-10-25/40150409387.json"
   }
 ]

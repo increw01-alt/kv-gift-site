@@ -1,16 +1,26 @@
 {
   "run_id": "40150409387",
   "date_kst": "2026-10-25",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "general_notice",
+  "topic": "사이트 첫 방문 시 주의해야 할 기본 이용 수칙",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/general_notice/57",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-25T01:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,262 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "사이트 첫 방문 시 주의해야 할 기본 이용 수칙",
+        "source_id": "",
+        "reader_problem": "사이트를 처음 이용하는 방문자가 알아야 할 필수 주의사항과 행동 지침을 구분하기 어렵습니다.",
+        "distinct_angle": "처음 방문한 이용자가 바로 적용할 수 있는 구체적인 행동 지침을 세 가지 단계별 절차로 안내합니다.",
+        "outline": [
+          "사이트 이용 전 필수 확인 사항 정리",
+          "초기 이용 시 직접 해야 할 로그인·설정 점검 방법",
+          "문의 및 문제 발생 시 담당 부서별 연락처와 대응 절차 안내"
+        ],
+        "novelty_reason": "후보 0은 ‘사이트 첫 방문 시 기본 이용 수칙’으로, 기존 글들처럼 문의 전 준비나 개인정보 보호를 반복하기보다 초보 이용자가 바로 해야 할 로그인·설정 점검과 문의 부서 구분을 묶어 안내합니다. 특히 첫 방문 상황을 출발점으로 삼아 이용 전 확인 → 초기 설정 → 담당 문의처로 이어지는 흐름이 비교적 독립적입니다.",
+        "screen_rejections": [
+          "1: 게시글 작성 전후 개인정보 보호와 문의 경로 안내가 기존의 개인정보 보호·문의 준비 글과 거의 같은 핵심 질문과 절차를 반복합니다.",
+          "2: 검색창과 목록을 활용해 원하는 안내를 찾는 방법은 이미 있는 검색/목록 안내와 독자 상황·해결 방식이 중복됩니다.",
+          "3: 문의 전 정보 정리와 민감정보 가리기는 기존 문의 준비 안내와 사실상 동일해 새 절차로 보기 어렵습니다.",
+          "4: 오류 메시지 캡처, 환경 점검, 담당 부서 신고는 일반적인 장애 대응 안내로는 유용하지만, 기존 오류/안전 점검 계열과 겹치고 후보 0보다 차별성이 약합니다."
+        ]
+      },
+      "board": "general_notice",
+      "topic": "사이트 첫 방문 시 주의해야 할 기본 이용 수칙",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-24T11:01:15Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "처음 사이트를 이용할 때 무엇을 먼저 확인하고 어디에 문의해야 하는지 한 번에 정리하려는 독자의 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4914,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 623,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5537
+        },
+        "estimated_usd": 0.0029624,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T01:23:35.236920+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6363,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 505,
+          "output_tokens_details": {
+            "reasoning_tokens": 231
+          },
+          "total_tokens": 6868
+        },
+        "estimated_usd": 0.00704475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T01:23:38.667213+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2244,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 446,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2690
+        },
+        "estimated_usd": 0.0016112,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T01:23:41.697274+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6480,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 504,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6984
+        },
+        "estimated_usd": 0.0033984,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T01:23:46.147337+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10509,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 316,
+          "output_tokens_details": {
+            "reasoning_tokens": 139
+          },
+          "total_tokens": 10825
+        },
+        "estimated_usd": 0.00930375,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T01:23:49.248363+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3538,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1042
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4910
+        },
+        "estimated_usd": 0.066338,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T01:24:19.711768+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10415,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 296,
+          "output_tokens_details": {
+            "reasoning_tokens": 231
+          },
+          "total_tokens": 10711
+        },
+        "estimated_usd": 0.00914325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T01:24:24.212874+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T01:23:29.678660+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T01:23:36.292455+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T01:23:38.669051+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T01:23:42.337907+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T01:23:47.246041+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-25T01:23:49.259922+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T01:24:20.404547+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.09980175,
+    "estimated_total_usd": 0.09980175,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

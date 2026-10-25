@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T01:23:28.073720+00:00",
+  "generatedAt": "2026-10-25T01:24:25.045521+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 5,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.15562125,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.255423,
+  "estimatedTotalUsd": 0.255423,
   "records": [
     {
       "runId": "40146151033",
@@ -66,16 +66,16 @@
     },
     {
       "runId": "40150409387",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "사이트 첫 방문 시 주의해야 할 기본 이용 수칙",
+      "url": "https://kv-gift.co.kr/board/general_notice/57",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T01:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09980175,
+      "knownSubtotalUsd": 0.09980175
     }
   ]
 }
