@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T04:24:25.309388+00:00",
+  "generatedAt": "2026-10-25T04:25:28.750189+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -979,7 +979,7 @@
       "board": "sense",
       "topic": "배송 시 안전하게 선물 포장하는 비법",
       "url": "https://kv-gift.co.kr/board/sense/9",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-25T04:25:28.739286+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09417325,
       "knownSubtotalUsd": 0.09417325
