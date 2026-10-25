@@ -144,10 +144,15 @@
       "board": "general_notice",
       "topic": "서비스 이용 중 오류 및 문제 신고 절차",
       "run_id": "40161376664"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "모바일 상품권 관리 스마트 팁",
+      "run_id": "40165336022"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "40165025033",
+  "last_board": "gc_tip",
+  "last_run_id": "40165336022",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
