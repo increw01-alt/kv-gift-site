@@ -114,10 +114,15 @@
       "board": "sense",
       "topic": "상품권 소액 잔액 효과적으로 관리하는 방법",
       "run_id": "40070313926"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 구매 전 구매처 및 조건 구분법",
+      "run_id": "40146151033"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "40070646720",
+  "last_board": "gc_tip",
+  "last_run_id": "40146151033",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
