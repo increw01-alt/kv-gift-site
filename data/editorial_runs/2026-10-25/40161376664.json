@@ -1,17 +1,19 @@
 {
   "run_id": "40161376664",
   "date_kst": "2026-10-25",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "서비스 이용 중 오류 및 문제 신고 절차",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-25T04:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글들과 핵심 질문이 겹칩니다. 오류가 났을 때 무엇을 기록하고 캡처해 고객센터에 문의하는 절차가 기존의 ‘상품권 문의 전 정보 준비’, ‘문의 화면 캡처 시 개인정보 구분’, ‘오류 문구와 사용 상태 확인’ 안내와 실질적으로 동일합니다. / 독자가 처한 상황과 해결 방법도 동일합니다. 문제 발생 내용, 화면 캡처, 기기 정보, 문의처 확인이라는 구성은 이미 여러 글에서 다뤄져 새 절차나 차별화된 예시가 부족합니다. / 공지사항 성격상 새 운영시간·정책 변경·중단 안내가 아니라 일반적인 문의 절차 설명에 머물러 있어, 새로 보일 만한 독립 주제성이 약합니다."
+    ]
   },
   "api_usage": {
     "run_id": "40161376664",
@@ -20,15 +22,198 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "서비스 이용 중 오류 및 문제 신고 절차",
+        "source_id": "",
+        "reader_problem": "서비스 이용 도중 이상 동작이나 오류를 경험할 때 어떤 정보를 모으고 어떻게 신고해야 하는지 모호해요.",
+        "distinct_angle": "이용 중 문제 상황 발생 시, 오류 증상 기록과 고객센터에 신고하는 효과적인 절차를 안내합니다.",
+        "outline": [
+          "문제 발생 시 동작 및 메시지 상세 기록하기",
+          "스크린샷과 로그 등 증빙 자료 준비하기",
+          "적절한 경로와 문의 방법으로 문제 신고하기"
+        ],
+        "novelty_reason": "서비스 이용 중 발생한 오류를 증상 기록, 스크린샷·로그 확보, 신고 경로 구분으로 안내하는 주제라서 기존의 첫 방문 안내(0), 결제/주문 문의 준비(1), 개인정보 보호(2), 회원정보 변경 주의(4)와 해결 대상이 다릅니다. 특히 ‘문제 발생 → 증빙 수집 → 적절한 문의처로 신고’라는 흐름이 비교적 구체적이고, 단순한 보안 주의나 상품권 거래 문의 준비와도 구분됩니다.",
+        "screen_rejections": [
+          "0: 첫 방문 시 기본 수칙과 문의처 안내가 기존 [이용 안내] 사이트 첫 방문 시 주의해야 할 기본 이용 수칙과 핵심 질문·절차가 거의 같습니다.",
+          "1: 결제 오류 점검과 증빙 준비는 결제일/청구일 비교 및 문의 준비 글과 문제 상황, 확인 항목이 겹칩니다.",
+          "2: 개인정보 안전 관리와 로그아웃·노출 방지는 공용 기기 보안 안내 및 일반 개인정보 보호 팁과 중복됩니다.",
+          "4: 본인 인증과 회원 정보 변경 주의는 이미 있는 회원 정보 수정·정리형 안내와 해결 절차가 비슷해 새 문제가 아닙니다."
+        ]
+      },
+      "board": "general_notice",
+      "topic": "서비스 이용 중 오류 및 문제 신고 절차",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-24T11:01:15Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5163,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 587,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5750
+        },
+        "estimated_usd": 0.0030044,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:18:42.429641+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7011,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 525,
+          "output_tokens_details": {
+            "reasoning_tokens": 232
+          },
+          "total_tokens": 7536
+        },
+        "estimated_usd": 0.00762075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T04:18:46.651833+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2255,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 295,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2550
+        },
+        "estimated_usd": 0.001374,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:18:49.100317+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6173,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 368,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6541
+        },
+        "estimated_usd": 0.003058,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:18:53.262842+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8180,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 516,
+          "output_tokens_details": {
+            "reasoning_tokens": 160
+          },
+          "total_tokens": 8696
+        },
+        "estimated_usd": 0.008457,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T04:18:58.062839+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T04:18:37.689814+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T04:18:44.313294+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T04:18:46.653947+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T04:18:50.280632+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T04:18:55.229760+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02351415,
+    "estimated_total_usd": 0.02351415,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

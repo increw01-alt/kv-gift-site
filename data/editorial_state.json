@@ -139,10 +139,15 @@
       "board": "gc_information",
       "topic": "상품권 발행사, 판매처, 참여자 역할 구분법",
       "run_id": "40158627178"
+    },
+    {
+      "board": "general_notice",
+      "topic": "서비스 이용 중 오류 및 문제 신고 절차",
+      "run_id": "40161376664"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "40158932042",
+  "last_board": "general_notice",
+  "last_run_id": "40161376664",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

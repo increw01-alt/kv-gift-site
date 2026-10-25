@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T04:18:35.603735+00:00",
+  "generatedAt": "2026-10-25T04:18:58.249751+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 4,
   "verified": 3,
   "attempts": 12,
-  "held": 5,
+  "held": 6,
   "errors": 2,
-  "knownSubtotalUsd": 0.53116415,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5546783,
+  "estimatedTotalUsd": 0.5546783,
   "records": [
     {
       "runId": "40146151033",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "40161376664",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "서비스 이용 중 오류 및 문제 신고 절차",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T04:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02351415,
+      "knownSubtotalUsd": 0.02351415
     }
   ]
 }
