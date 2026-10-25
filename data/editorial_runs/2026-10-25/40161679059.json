@@ -1,16 +1,26 @@
 {
   "run_id": "40161679059",
   "date_kst": "2026-10-25",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sense",
+  "topic": "배송 시 안전하게 선물 포장하는 비법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sense/9",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-25T04:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,263 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "배송 시 안전하게 선물 포장하는 비법",
+        "source_id": "",
+        "reader_problem": "선물용 상품권 등 배송 중 파손이나 분실 걱정 없이 안전하게 포장하는 방법을 알고 싶어요.",
+        "distinct_angle": "선물 배송 과정에서 포장 재료 선택과 포장 요령에 초점을 맞춰, 실생활에서 바로 적용할 수 있는 포장법을 소개합니다.",
+        "outline": [
+          "적합한 포장재료와 도구 고르기",
+          "포장 상태별 단계별 포장법 실천하기",
+          "라벨 및 배송 정보 꼼꼼히 확인하고 첨부하기"
+        ],
+        "novelty_reason": "배송 중 파손·분실을 막기 위한 선물 포장법에 초점이 있어, 기존의 상품권 구매·사용·메시지·정리 안내와 주제가 다릅니다. 포장재 선택, 단계별 포장, 배송 라벨 확인처럼 실제 물류/포장 절차를 다루므로 독립적인 생활상식 글로 볼 수 있습니다.",
+        "screen_rejections": [
+          "1: 디지털 선물 메시지 문구와 작성 팁은 기존 '[운영팀 질문] 디지털 선물에 짧은 메시지를 덧붙인다면 어떤 말을 전하고 싶나요?'와 핵심 질문과 예시가 겹칩니다.",
+          "2: 선물 후 받는 사람의 사용 편의 향상은 기존 '[생활상식] 상품권 선물 후 받는 사람의 사용 편의 높이기 팁'과 거의 동일한 문제·절차입니다.",
+          "3: 카드·쿠폰 정리법은 기존 '상품권을 중복 사용하지 않도록 관리하는 방법' 및 알림 정리 글과 정보 분류·보관·알림 설정이 겹칩니다.",
+          "4: 개인 생활 정보 정리 습관은 메시지/선물/이용조건을 기록하고 알림으로 관리하는 내용이 기존 메시지 정리·알림 정리 글의 범용형 반복입니다.",
+          "5: 선물 예절과 감사 인사 표현은 기존 선물 메시지/인사말 계열과 상황별 문구를 바꾸어 설명하는 수준이라 새 문제 해결로 보기 어렵습니다."
+        ]
+      },
+      "board": "sense",
+      "topic": "배송 시 안전하게 선물 포장하는 비법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-24T11:01:15Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "배송 중 선물이 손상되지 않도록 어떤 포장재를 고르고 어떻게 포장해야 하는지 알고 싶은 독자의 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5210,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 829,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6039
+        },
+        "estimated_usd": 0.0034104,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:23:40.204781+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7119,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 168
+          },
+          "total_tokens": 7642
+        },
+        "estimated_usd": 0.00769275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T04:23:44.025063+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2349,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 450,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2799
+        },
+        "estimated_usd": 0.0016596,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:23:46.800665+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3264,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 479,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3743
+        },
+        "estimated_usd": 0.002072,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:23:51.070995+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7821,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 232,
+          "output_tokens_details": {
+            "reasoning_tokens": 97
+          },
+          "total_tokens": 8053
+        },
+        "estimated_usd": 0.00690975,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T04:23:54.440116+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3499,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1003
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4871
+        },
+        "estimated_usd": 0.066143,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T04:24:21.178849+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7355,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 171,
+          "output_tokens_details": {
+            "reasoning_tokens": 106
+          },
+          "total_tokens": 7526
+        },
+        "estimated_usd": 0.00628575,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T04:24:24.257041+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T04:23:35.112822+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T04:23:42.027267+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T04:23:44.027037+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T04:23:47.722994+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T04:23:52.660716+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-25T04:23:54.455325+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T04:24:22.155031+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.09417325,
+    "estimated_total_usd": 0.09417325,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

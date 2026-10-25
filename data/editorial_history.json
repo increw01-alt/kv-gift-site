@@ -512,5 +512,18 @@
     "publication_mode": "automatic",
     "run_id": "40158932042",
     "usage_file": "data/editorial_runs/2026-10-25/40158932042.json"
+  },
+  {
+    "board": "sense",
+    "id": 9,
+    "topic": "배송 시 안전하게 선물 포장하는 비법",
+    "drafted_at": "2026-10-25",
+    "automation": true,
+    "search_intent": "배송 중 선물이 손상되지 않도록 어떤 포장재를 고르고 어떻게 포장해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 단단한 상자와 완충재, 테이프, 배송 라벨이 함께 놓여 있고 한 사람이 상자 안쪽에 완충재를 채운 뒤 라벨 위치를 확인하는 구도",
+    "image_alt": "책상 위 상자에 완충재를 채우고 배송 라벨 위치를 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40161679059",
+    "usage_file": "data/editorial_runs/2026-10-25/40161679059.json"
   }
 ]
