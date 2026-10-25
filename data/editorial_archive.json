@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T02:19:34.806399+00:00",
+  "generatedAt": "2026-10-25T02:20:17.761156+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -881,7 +881,7 @@
       "board": "sense",
       "topic": "상품권 선물 후 받는 사람의 사용 편의 높이기 팁",
       "url": "https://kv-gift.co.kr/board/sense/8",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-25T02:20:17.751372+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1041408,
       "knownSubtotalUsd": 0.1041408
