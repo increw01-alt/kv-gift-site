@@ -1,17 +1,19 @@
 {
   "run_id": "40150086639",
   "date_kst": "2026-10-25",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-25T01:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 글의 ‘교환/문의 전 상태 확인’과 ‘기록·개인정보 보호’ 범주를 반복하고 있어, 독립적인 새 문제 해결 글로 보기 어렵습니다. 특히 후보 0·1은 기존 판매 글/유효기간 안내와 주제가 직접 겹치고, 후보 2·3·4는 이미 있는 문의 전 정리·보안 안내를 표현만 바꾼 수준입니다. / 0: 교환 후 원본/새 쿠폰 상태 비교와 기록 보관은 기존 판매 글의 교환권 상태 확인 범주와 겹치며, 실제 사용 가능 여부를 구분하는 절차도 새롭지 않습니다. / 1: 유효기간과 사용 기한을 구분해 정리하는 내용은 기존 공지 ‘교환 기한과 사용 기한을 구분해 주세요’와 핵심 질문·해결 절차가 거의 같습니다. / 2: 교환 내역을 안전하게 기록·보호하는 방식은 기존 ‘상품권 문의 전, 상품명·구매처·현재 상태를 먼저 알려 주세요’ 및 기록 관리 글과 중복됩니다. / 3: 상태 확인 시 개인정보 보호 전략은 기존 문의 안내와 보안 팁을 결합한 수준으로, 바코드·PIN 노출 최소화 등도 이미 유사 주제로 다뤄졌습니다. / 4: 문의 전 상태 점검과 증빙 자료 체계화는 기존 문의 안내 글의 준비 항목을 체크리스트로 바꾼 수준이라 새 절차로 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "40150086639",
@@ -20,15 +22,136 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "교환 후 모바일 쿠폰 상태 확인 방법",
+          "source_id": "exchange-state",
+          "reader_problem": "상품권 교환 후 원래 쿠폰과 새 쿠폰 상태가 함께 보일 때 정확한 확인 절차를 몰라 혼란스럽다.",
+          "distinct_angle": "교환 직후 두 개의 쿠폰 상태를 비교, 유효성 점검, 실제 사용 가능한 쿠폰 식별에 집중한 구체적 단계 안내.",
+          "outline": [
+            "교환 전 원본 쿠폰 상태 샘플링 및 기록하기",
+            "교환 후 새 쿠폰 상세 비교 및 상태 점검",
+            "교환 기록 보관과 개인정보 보호 조치하기"
+          ]
+        },
+        {
+          "topic": "모바일상품권 유효기간과 사용 기한 체계적 정리법",
+          "source_id": "voucher-expiry",
+          "reader_problem": "모바일상품권의 표시된 유효기간과 실제 사용할 수 있는 기간이 다를 때 이를 명확히 구분하고 정리하는 법을 몰라 혼동된다.",
+          "distinct_angle": "화면상의 날짜 표시와 실제 사용 안내서를 대조하는 방법과 이를 관리할 기록 체계 수립 절차로 차별화.",
+          "outline": [
+            "상품권 표시 기한과 안내문서 내 사용 기한 비교 방법 익히기",
+            "차이를 메모하고 문의 시 사용할 명료한 정리법 적용",
+            "기록 정리와 개인정보 보호를 위한 데이터 관리 절차 수립"
+          ]
+        },
+        {
+          "topic": "상품권 교환 내역 안전하게 기록하고 보호하는 실무 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 교환 및 사용 내역을 안전하고 체계적으로 정리하는 구체적인 방법이 부족해 정보 유실과 오남용 우려가 크다.",
+          "distinct_angle": "디지털·종이자료 통합 기록, 민감정보 비식별 처리, 문의 시 활용 가능 안전 보관법 제시.",
+          "outline": [
+            "모바일 쿠폰 및 교환 내역 체계적으로 기록하기",
+            "민감정보 보호를 위한 비식별 처리 및 저장법 적용",
+            "문의 전에 기록 정보 재확인 및 안전하게 제출하기"
+          ]
+        },
+        {
+          "topic": "모바일 상품권 상태 확인 시 개인정보 보호 전략",
+          "source_id": "",
+          "reader_problem": "모바일 상품권 상태를 확인하면서 개인정보를 노출하지 않고 안전하게 관리하는 방법을 몰라 불안하다.",
+          "distinct_angle": "바코드, PIN번호 노출 최소화 및 안전하게 문의하는 절차 구성으로 기존 단순 정보 정리 안내와 차별화.",
+          "outline": [
+            "상품권 상태 확인 전 개인정보 노출 최소화 조치하기",
+            "접근 권한과 기록 보안 설정 점검하기",
+            "문의 시 개인정보를 안전하게 보호하며 전달하는 방법 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 문의 전 상태 점검과 증빙 자료 체계화",
+          "source_id": "",
+          "reader_problem": "문의 전 상품권 상태를 정확히 점검하고 증빙 자료를 체계적으로 정리하는 구체적 방법이 부족해 상담에 시간이 많이 소요된다.",
+          "distinct_angle": "상품권 상태별 점검 리스트와 문의 시 필요한 증빙자료 종류별 수집·정리법으로 효율적 상담 지원.",
+          "outline": [
+            "상품권 상태별 점검 항목 상세화 및 체크리스트 작성",
+            "필요한 증빙 자료 유형별 체계적 수집 방법",
+            "증빙 자료 안전 보관 및 문의 전 항목별 재검토"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4364,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 702,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5066
+        },
+        "estimated_usd": 0.0028688,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T01:18:42.256702+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 5801,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 463,
+          "output_tokens_details": {
+            "reasoning_tokens": 105
+          },
+          "total_tokens": 6264
+        },
+        "estimated_usd": 0.00643425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T01:18:47.295493+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T01:18:36.873022+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T01:18:44.455746+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.00930305,
+    "estimated_total_usd": 0.00930305,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

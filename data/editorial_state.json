@@ -126,8 +126,8 @@
       "run_id": "40146474039"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "40146796879",
+  "last_board": "sale",
+  "last_run_id": "40150086639",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -224,6 +224,22 @@
       "date_kst": "2026-10-25",
       "run_id": "40146796879",
       "status": "published"
+    },
+    {
+      "source_id": "exchange-state",
+      "board": "sale",
+      "topic": "교환 후 모바일 쿠폰 상태 확인 방법",
+      "date_kst": "2026-10-25",
+      "run_id": "40150086639",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-expiry",
+      "board": "sale",
+      "topic": "모바일상품권 유효기간과 사용 기한 체계적 정리법",
+      "date_kst": "2026-10-25",
+      "run_id": "40150086639",
+      "status": "held"
     }
   ]
 }
