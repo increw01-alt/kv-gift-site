@@ -1,17 +1,19 @@
 {
   "run_id": "40165025033",
   "date_kst": "2026-10-25",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-25T05:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 통과 후보가 없습니다. 0~5번 모두 기존 글과 독자가 처한 상황, 확인해야 할 항목, 해결 절차가 겹칩니다. 특히 유효기간/잔액/종류별 사용처/구매 후 문제/발송 지연/선물용 기기 확인은 이미 유사 주제로 다뤄졌고, 새로 구체적인 문제 해결 흐름이 보이지 않습니다. / 0: 유효기간이 다가온 상품권의 기한 구분과 대비 방법은 기존 ‘교환 기한과 사용 기한을 구분해 주세요’와 핵심 질문과 절차가 같습니다. / 1: 잔액 확인·이력 관리는 기존 ‘상품권 사용 후 남은 금액 확인과 이력 관리법’과 주제가 직접 겹칩니다. / 2: 종류별 사용처·조건 확인은 기존 구매 안내의 발행사/코드/사용처 확인 글들과 같은 범주입니다. / 3: 구매 후 문제 대응과 고객센터 문의 절차는 기존 구매 후 오류·미발송 대응 글과 중복됩니다. / 4: 모바일상품권 수신 지연 원인과 재발송 문의는 기존 ‘문자가 안 왔나요? 재구매 전에 발송 상태를 확인해 주세요’와 사실상 동일합니다. / 5: 선물용 상품권 선택 전 상대의 취향·사용 환경을 파악하는 방법은 기존 선물용 기기·사용환경 확인 글 및 취향 파악 글과 겹칩니다."
+    ]
   },
   "api_usage": {
     "run_id": "40165025033",
@@ -20,15 +22,147 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 유효기간 임박 시 미리 대비하는 방법",
+          "source_id": "",
+          "reader_problem": "유효기간이 다가오는 상품권을 어떻게 안전하게 사용하거나 교환해야 할지 몰라 당황한다.",
+          "distinct_angle": "유효기간 임박 상품권의 미리 점검과 대비 행동에 초점을 맞추어 상황별 대응법을 제시한다.",
+          "outline": [
+            "상품권 유효기간과 사용 기한 차이 점검하기",
+            "유효기간 임박 상품권 이용 우선순위 정하기",
+            "미리 교환 및 사용 계획 세워 상황 대응하기"
+          ]
+        },
+        {
+          "topic": "상품권 사용 중 잔액 관리 및 남은 금액 활용법",
+          "source_id": "",
+          "reader_problem": "상품권을 사용하다 남은 잔액을 효율적으로 확인하고 관리하는 구체적 방법을 모르겠다.",
+          "distinct_angle": "잔액 확인 방법과 잔액이 남았을 때 사용할 수 있는 다양한 실용적 아이디어 제공에 집중한다.",
+          "outline": [
+            "잔액 확인 방법과 기록 관리하기",
+            "잔액 소진을 위한 현명한 사용 전략 세우기",
+            "잔액 활용 시 주의할 점과 대안 찾기"
+          ]
+        },
+        {
+          "topic": "상품권 종류별 맞춤 사용처 및 조건 확인 노하우",
+          "source_id": "",
+          "reader_problem": "상품권 종류가 많아 적절한 사용처와 조건을 사전에 확인하는 법을 알고 싶다.",
+          "distinct_angle": "각 상품권 종류별로 대표적 사용처와 조건을 비교해 손쉽게 확인하는 과정을 소개한다.",
+          "outline": [
+            "주요 상품권 종류별 기본 정보 정리하기",
+            "사용처와 조건 차이점 세밀하게 비교하기",
+            "구매 전에 반드시 확인해야 할 핵심 항목 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 후 발생 가능한 문제와 사전 대비책",
+          "source_id": "",
+          "reader_problem": "상품권 구매 후 충전 오류나 미발송 등 문제가 발생했을 때 어떻게 대비하고 대응해야 할지 난감하다.",
+          "distinct_angle": "구매 직후 점검해야 할 사항과 문제 발생 시 구체적 대응 방법을 단계별로 안내한다.",
+          "outline": [
+            "상품권 구매 직후 확인 리스트 만들기",
+            "문제 발생 시 필요한 정보와 대응 절차 익히기",
+            "신속한 문제 해결을 위한 고객센터 활용 전략"
+          ]
+        },
+        {
+          "topic": "모바일상품권 수신 지연 원인과 해결 단계별 가이드",
+          "source_id": "",
+          "reader_problem": "모바일상품권 문자가 늦게 도착해 구매 확정과 사용에 혼란을 겪는다.",
+          "distinct_angle": "수신 지연의 다양한 원인을 점검하고, 문제별 구체적 해결 방법을 세분화하여 안내한다.",
+          "outline": [
+            "모바일상품권 문자 수신 과정과 주요 문제 원인 분석",
+            "수신 지연 확인 및 기본 점검 행동 익히기",
+            "문제 유형별 정확한 문의 및 재발송 요청 절차"
+          ]
+        },
+        {
+          "topic": "선물용 상품권 선택 시 받는 사람 취향·사용 조건 자연스럽게 파악하는 방법",
+          "source_id": "",
+          "reader_problem": "선물할 상품권을 고를 때 받는 사람의 취향이나 사용 환경을 듣기 어렵고 자연스럽게 알아내는 방법을 모르겠다.",
+          "distinct_angle": "상대방의 부담을 줄이는 자연스러운 질문법과 상황별 선택 기준을 사례 중심으로 소개한다.",
+          "outline": [
+            "일상 대화 속 자연스레 선호 파악하기",
+            "사용 환경과 기기 호환성 체크하는 질문법",
+            "파악한 정보로 맞춤형 상품권 선택 기준 세우기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5236,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 755,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5991
+        },
+        "estimated_usd": 0.0033024,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T05:18:36.559317+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8831,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 444,
+          "output_tokens_details": {
+            "reasoning_tokens": 94
+          },
+          "total_tokens": 9275
+        },
+        "estimated_usd": 0.00862125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T05:18:40.132105+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T05:18:30.957961+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T05:18:37.972011+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01192365,
+    "estimated_total_usd": 0.01192365,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
