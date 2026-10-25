@@ -134,10 +134,15 @@
       "board": "purchase",
       "topic": "상품권 구매 전 판매처 신뢰성 평가 방법",
       "run_id": "40158307702"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 발행사, 판매처, 참여자 역할 구분법",
+      "run_id": "40158627178"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "40158307702",
+  "last_board": "gc_information",
+  "last_run_id": "40158627178",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
