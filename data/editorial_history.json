@@ -499,5 +499,18 @@
     "publication_mode": "automatic",
     "run_id": "40153925930",
     "usage_file": "data/editorial_runs/2026-10-25/40153925930.json"
+  },
+  {
+    "board": "sale",
+    "id": 3692,
+    "topic": "판매 글 작성 전 상품권 관련 오류 방지 체크리스트",
+    "drafted_at": "2026-10-25",
+    "automation": true,
+    "search_intent": "판매 글을 올리기 전에 상품권 종류와 상태를 정확히 적고 개인정보 노출을 막는 방법을 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 상품권 실물과 메모지, 검은 마스킹 테이프, 스마트폰 카메라가 함께 놓여 있고, 한 사람이 바코드와 일련번호를 가린 뒤 상품권 종류·상태·유효기간을 체크리스트에 적어가는 구도",
+    "image_alt": "책상 위에서 상품권의 번호를 가린 뒤 종류와 상태, 유효기간을 메모지에 확인하는 장면이다.",
+    "publication_mode": "automatic",
+    "run_id": "40158932042",
+    "usage_file": "data/editorial_runs/2026-10-25/40158932042.json"
   }
 ]
