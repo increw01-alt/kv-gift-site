@@ -1,17 +1,19 @@
 {
   "run_id": "40157695449",
   "date_kst": "2026-10-25",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "free",
+  "topic": "모바일상품권 메시지 안전 확인과 사기 예방 절차",
+  "status": "error",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-25T03:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 존재하지 않는 관련 글 링크"
+    ]
   },
   "api_usage": {
     "run_id": "40157695449",
@@ -20,15 +22,199 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "모바일상품권 메시지 안전 확인과 사기 예방 절차",
+        "source_id": "",
+        "reader_problem": "모바일상품권 문자 수신 후 발신처와 메시지 안전성을 어떻게 확인하고 사기피해를 예방할지 불안합니다.",
+        "distinct_angle": "문자 메시지 수신 직후 단계별 안전 확인 절차와 이를 통한 사기 예방 행동지침을 구체적 절차로 제시해 기존 단순 경고와 차별화됩니다.",
+        "outline": [
+          "문자 발신번호와 공식 발신 여부 체크 방법",
+          "내부 링크나 첨부파일 위험 여부 판단 기준",
+          "문제 발생 시 빠른 신고 및 차단 행동 절차"
+        ],
+        "novelty_reason": "문자 수신 여부를 확인하는 기존 안내와 달리, 후보 2는 ‘받은 모바일상품권 문자 자체가 안전한지’와 ‘발신처·링크·첨부파일을 단계적으로 검증하는 절차’에 초점이 있습니다. 즉, 미도착 문의가 아니라 수신 직후의 사기 판별과 차단/신고 흐름을 다뤄서 가장 구체적이고 새롭습니다.",
+        "screen_rejections": [
+          "0: 상품권 보관·유효기간·사용 계획은 기존 '[상품권팁] 상품권 사용 계획을 세울 때 필요한 것부터 고르는 방법'과 질문·절차가 겹칩니다.",
+          "1: 할인쿠폰·카드적립·복합 혜택 최적화는 기존 구매 전 조건 확인류 글과 핵심 문제 해결 방식이 유사해 새 주제로 보기 어렵습니다.",
+          "3: 여러 앱에 흩어진 상품권 정리는 기존 '[상품권팁] 여러 앱에 흩어진 상품권을 한눈에 정리하려면 어떻게 할까요?'와 거의 같은 내용입니다.",
+          "4: 환불 문의 전 준비 체크리스트는 기존 문의 준비 안내와 정보 정리·문의 절차가 반복됩니다.",
+          "5: 사용 후 잔액과 이용 기록 관리는 기존 '[상품권 정보] 상품권 사용 후 남은 금액 확인과 이력 관리법' 및 중복 관리 글과 직접 겹칩니다."
+        ]
+      },
+      "board": "free",
+      "topic": "모바일상품권 메시지 안전 확인과 사기 예방 절차",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-24T11:01:15Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4953,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 854,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5807
+        },
+        "estimated_usd": 0.0033476,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T03:18:42.568269+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8659,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 653,
+          "output_tokens_details": {
+            "reasoning_tokens": 322
+          },
+          "total_tokens": 9312
+        },
+        "estimated_usd": 0.00943275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T03:18:47.959416+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2339,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 450,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2789
+        },
+        "estimated_usd": 0.0016556,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T03:18:51.515398+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3738,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 478,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4216
+        },
+        "estimated_usd": 0.00226,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-25T03:18:56.347432+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7536,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 432,
+          "output_tokens_details": {
+            "reasoning_tokens": 109
+          },
+          "total_tokens": 7968
+        },
+        "estimated_usd": 0.007596,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-25T03:19:00.667849+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T03:18:36.619845+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T03:18:45.068453+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T03:18:47.961749+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-25T03:18:52.762381+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-25T03:18:58.423117+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02429195,
+    "estimated_total_usd": 0.02429195,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

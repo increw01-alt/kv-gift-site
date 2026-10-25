@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-25T03:18:34.429340+00:00",
+  "generatedAt": "2026-10-25T03:19:00.917664+00:00",
   "dateKst": "2026-10-25",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 2,
   "attempts": 7,
   "held": 3,
-  "errors": 0,
-  "knownSubtotalUsd": 0.3595638,
-  "estimatedTotalUsd": null,
+  "errors": 1,
+  "knownSubtotalUsd": 0.38385575,
+  "estimatedTotalUsd": 0.38385575,
   "records": [
     {
       "runId": "40146151033",
@@ -92,16 +92,16 @@
     },
     {
       "runId": "40157695449",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "free",
+      "topic": "모바일상품권 메시지 안전 확인과 사기 예방 절차",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-25T03:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02429195,
+      "knownSubtotalUsd": 0.02429195
     }
   ]
 }
