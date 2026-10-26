@@ -525,5 +525,18 @@
     "publication_mode": "automatic",
     "run_id": "40161679059",
     "usage_file": "data/editorial_runs/2026-10-25/40161679059.json"
+  },
+  {
+    "board": "sale",
+    "id": 3693,
+    "topic": "상품권 판매 전 오류·상태 이상 대응 가이드",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "상품권에 바코드 인식 오류나 훼손이 생겼을 때 상태를 기록하고 매입처에 어떻게 문의해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 상품권 실물과 스마트폰 카메라, 메모장이 놓여 있고 한 사람이 바코드 부분을 중심으로 여러 각도에서 촬영한 뒤 오류 내용을 체크리스트에 적어 두는 장면",
+    "image_alt": "책상 위 상품권을 바코드 중심으로 촬영하면서 오류 내용을 메모장에 정리하는 모습이다.",
+    "publication_mode": "automatic",
+    "run_id": "40249498751",
+    "usage_file": "data/editorial_runs/2026-10-26/40249498751.json"
   }
 ]
