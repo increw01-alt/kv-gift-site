@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T02:19:33.019756+00:00",
+  "generatedAt": "2026-10-26T02:20:37.478661+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1077,7 +1077,7 @@
       "board": "sense",
       "topic": "함께 준비한 선물 메시지 보낸 사람 표기하기",
       "url": "https://kv-gift.co.kr/board/sense/10",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T02:20:37.469872+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09935045,
       "knownSubtotalUsd": 0.09935045
