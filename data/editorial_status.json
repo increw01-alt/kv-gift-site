@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T07:18:41.753907+00:00",
+  "generatedAt": "2026-10-26T07:19:47.859528+00:00",
   "dateKst": "2026-10-26",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 7,
+  "published": 8,
   "verified": 7,
   "attempts": 11,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.7403565,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.84138645,
+  "estimatedTotalUsd": 0.84138645,
   "records": [
     {
       "runId": "40248680884",
@@ -144,16 +144,16 @@
     },
     {
       "runId": "40284950570",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "공유된 안내 링크의 미리보기 문구와 실제 본문 구분법",
+      "url": "https://kv-gift.co.kr/board/general_notice/59",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-26T07:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10102995,
+      "knownSubtotalUsd": 0.10102995
     }
   ]
 }

@@ -616,5 +616,18 @@
     "publication_mode": "automatic",
     "run_id": "40279008305",
     "usage_file": "data/editorial_runs/2026-10-26/40279008305.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 59,
+    "topic": "공유된 안내 링크의 미리보기 문구와 실제 본문 구분법",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "공유 링크의 미리보기 문구가 본문과 다를 때 제목과 상세 내용을 어떻게 대조해 확인해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 스마트폰의 링크 미리보기 화면과 노트북의 실제 안내 페이지가 나란히 열려 있고, 가운데에는 제목과 본문 차이를 적는 메모지가 놓여 있으며 한 사람이 두 화면의 문구를 체크하며 비교하는 구도",
+    "image_alt": "스마트폰의 링크 미리보기와 노트북의 실제 안내 페이지를 나란히 두고 제목과 본문을 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40284950570",
+    "usage_file": "data/editorial_runs/2026-10-26/40284950570.json"
   }
 ]
