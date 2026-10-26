@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T00:29:32.562765+00:00",
+  "generatedAt": "2026-10-26T00:30:36.009825+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1049,7 +1049,7 @@
       "board": "sale",
       "topic": "상품권 판매 전 오류·상태 이상 대응 가이드",
       "url": "https://kv-gift.co.kr/board/sale/3693",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T00:30:35.995126+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09456005,
       "knownSubtotalUsd": 0.09456005
