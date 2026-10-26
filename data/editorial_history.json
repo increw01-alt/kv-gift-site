@@ -564,5 +564,18 @@
     "publication_mode": "automatic",
     "run_id": "40258416708",
     "usage_file": "data/editorial_runs/2026-10-26/40258416708.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 38,
+    "topic": "상품권 품절 시 대체 상품 선택 전 필수 확인 질문 가이드",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "품절된 상품권 교환 상황에서 대체 상품 가능 여부와 차액, 환불 권리를 먼저 확인하려는 독자의 질문",
+    "image_scene": "매장 진열대 앞에 품절 표시가 붙은 상품 대신 다른 상품 사진이 인쇄된 비교표와 메모장이 놓여 있고, 한 사람이 차액과 조건을 체크하며 대체 가능 여부를 정리하는 장면",
+    "image_alt": "품절 표시가 붙은 상품 옆에서 대체 상품 비교표와 메모장을 보며 차액과 조건을 확인하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40263804187",
+    "usage_file": "data/editorial_runs/2026-10-26/40263804187.json"
   }
 ]
