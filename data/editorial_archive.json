@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T06:19:46.296468+00:00",
+  "generatedAt": "2026-10-26T06:20:50.318462+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1147,7 +1147,7 @@
       "board": "sale",
       "topic": "판매 상담 중 진행 중단 시점과 확인 사항",
       "url": "https://kv-gift.co.kr/board/sale/3694",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T06:20:50.301673+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.0980122,
       "knownSubtotalUsd": 0.0980122
