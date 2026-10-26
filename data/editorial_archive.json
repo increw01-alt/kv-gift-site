@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T01:20:19.607864+00:00",
+  "generatedAt": "2026-10-26T01:37:45.042859+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -13,7 +13,7 @@
       "board": "purchase",
       "topic": "상품권 이름이 비슷할 때 사용처를 어떻게 구분하나요?",
       "url": "https://kv-gift.co.kr/board/purchase/2563",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T01:37:44.164146+00:00",
       "source": "manual",
       "estimatedUsd": 0.0691014,
       "knownSubtotalUsd": 0.0691014
@@ -867,7 +867,7 @@
       "board": "general_notice",
       "topic": "사이트 첫 방문 시 주의해야 할 기본 이용 수칙",
       "url": "https://kv-gift.co.kr/board/general_notice/57",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T01:37:44.980705+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09980175,
       "knownSubtotalUsd": 0.09980175

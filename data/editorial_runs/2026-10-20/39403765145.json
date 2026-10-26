@@ -5,7 +5,7 @@
   "topic": "상품권 이름이 비슷할 때 사용처를 어떻게 구분하나요?",
   "status": "published",
   "url": "https://kv-gift.co.kr/board/purchase/2563",
-  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
+  "publication": "공개 게시글과 원본 PNG 확인 완료",
   "review": {
     "approved": true,
     "checks": {
@@ -136,5 +136,7 @@
     "known_subtotal_usd": 0.0691014,
     "estimated_total_usd": 0.0691014,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
-  }
+  },
+  "public_verified_at": "2026-10-26T01:37:44.164146+00:00",
+  "banner_sha256": "eb0d58572f6dcad83c44ff9922f04ba36a04abab58b52df985e7e1f1a88b3b3c"
 }
