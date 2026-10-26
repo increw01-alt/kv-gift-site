@@ -18,10 +18,10 @@ ARTICLE_SCHEMA = {
     'type': 'object', 'additionalProperties': False, 'required': ['summary', 'sections', 'checks'],
     'properties': {
         'summary': {'type': 'string'},
-        'sections': {'type': 'array', 'items': {
+        'sections': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': {
             'type': 'object', 'additionalProperties': False, 'required': ['heading', 'body'],
             'properties': {'heading': {'type': 'string'}, 'body': {'type': 'string'}}}},
-        'checks': {'type': 'array', 'items': {'type': 'string'}},
+        'checks': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': {'type': 'string'}},
     },
 }
 CHECKS = ('board_fit', 'practical', 'natural_korean', 'no_unverified_claims',
@@ -149,6 +149,11 @@ def select_topic(requested, day, model, on_usage, root=ROOT, on_plan=None, revie
 
 
 def edit_article(board, topic, data, brief, model, on_usage, root=ROOT, topic_plan=None):
+    draft_issues = []
+    try:
+        validate(data)
+    except ValueError as error:
+        draft_issues.append(str(error))
     instructions = '''한국상품권거래소 운영팀의 발행 전 편집자다. 입력 초안을 사실을 추가하지 않고 더 유용하게 다듬는다.
 자연스러운 해요체, 질문형 소제목, 구체적인 행동과 짧은 문단을 사용한다.
 앱 기능이 있다/없다, 대부분 업체가 그렇다 같은 근거 없는 일반화와 고객센터에 물어보라는 반복을 없앤다.
@@ -164,6 +169,7 @@ checks는 10~80자의 구체적 행동 세 개다. 세 절의 설명이 서로 �
     instructions += '\n검수된 topic_plan이 있으면 그 독자 문제·차별점·세 절의 목차를 유지한다. 일반적인 상태 확인·메모·문의 안내로 되돌리지 않는다.'
     value = ask_json(instructions, [text_input({
         'profile': PROFILES[board], 'topic': topic, 'draft': data, 'verified_brief': brief,
+        'draft_validation_issues_to_correct': draft_issues,
         'nearby_existing_titles': related_titles(topic, root),
         'nearby_existing_articles': related_articles(topic, data, root),
         'reader_questions': planned_source_context(source_context(board, root), topic_plan),

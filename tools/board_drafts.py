@@ -116,7 +116,7 @@ def select_board(requested='auto', root=ROOT, day=None):
     raise NoTopic('모든 게시판의 준비된 주제가 소진되었습니다. 새 주제 또는 확인 자료가 필요합니다.')
 
 
-def validate(data):
+def validate(data, *, check_content=True):
     if set(data) != {'summary', 'sections', 'checks'}:
         raise ValueError('글 구조 오류')
     if not isinstance(data['summary'], str) or not 30 <= len(data['summary']) <= 180:
@@ -140,12 +140,13 @@ def validate(data):
     text = '\n'.join(strings)
     forbidden = r'https?://|www\.|[<>]|\d|[%％]|현금화|카드깡|급전|무조건|신용\s*무관|최저가|공식\s*인증|안전한\s*거래|(?<![가-힣])제가|(?<![가-힣])저는|(?<![가-힣])제\s*경험|실제\s*고객|고객님께서|당일\s*입금|즉시\s*입금'
     match = re.search(forbidden, text, re.I)
-    if match:
+    if match and check_content:
         raise ValueError('자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: ' + match.group(0))
     return data
 
 
-def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None, topic_plan=None):
+def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None, topic_plan=None,
+             defer_content_validation=False):
     from board_sources import source_context, planned_source_context
     profile = PROFILES[board]
     brief = news_brief(topic, root, day) if profile.get('requires_brief') else None
@@ -154,9 +155,9 @@ def generate(topic, model, on_usage=None, board='purchase', root=ROOT, day=None,
         raise ValueError('GitHub Secret OPENAI_API_KEY가 없습니다.')
     string = {'type': 'string'}
     schema = {'type': 'object', 'additionalProperties': False, 'required': ['summary', 'sections', 'checks'],
-              'properties': {'summary': string, 'sections': {'type': 'array', 'items': {
+              'properties': {'summary': string, 'sections': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': {
                   'type': 'object', 'additionalProperties': False, 'required': ['heading', 'body'],
-                  'properties': {'heading': string, 'body': string}}}, 'checks': {'type': 'array', 'items': string}}}
+                  'properties': {'heading': string, 'body': string}}}, 'checks': {'type': 'array', 'minItems': 3, 'maxItems': 3, 'items': string}}}
     instructions = '''한국상품권거래소 운영팀의 한국어 질문·답변 안내 초안을 작성한다.
 독자가 실제로 준비하거나 확인할 항목을 구체적으로 설명하되, 고객을 가장한 후기나 실제 상담 사례를 만들지 않는다.
 사이트는 상품권 정보와 상담을 안내한다. 업체의 취급 여부, 수수료, 할부 조건, 정산 시간, 운영 시간, 환불 권리 등 확인되지 않은 사실을 단정하지 않는다.
@@ -200,7 +201,8 @@ checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 �
     if result.get('status') != 'completed':
         raise ValueError('API 생성 미완료: 파일을 변경하지 않습니다.')
     output = ''.join(c['text'] for item in result.get('output', []) for c in item.get('content', []) if c.get('type') == 'output_text')
-    return validate(json.loads(output))
+    # The existing mandatory editor repairs draft wording; publication still uses full validation.
+    return validate(json.loads(output), check_content=not defer_content_validation)
 
 
 def replace_one(pattern, replacement, text):

@@ -46,20 +46,38 @@ def planning_material(root, context, board, day):
         (similarity(q, x['title']) for q in queries), default=0), reverse=True)[:45]
     history = read_json(root/'data/editorial_history.json')
     recent_titles = [x['topic'] for x in history[-90:]]
+    # Curated reader tasks are ideas, not customer quotes or verified business facts.
+    task_path = root/'tools/board_reader_tasks.json'
+    tasks = read_json(task_path) if task_path.exists() else []
+    plans = []
+    for path in sorted((root/'data/editorial_runs').glob('*/*.json')):
+        record = read_json(path)
+        saved = (record.get('api_usage') or {}).get('context') or {}
+        selected = saved.get('topic_plan')
+        if selected:
+            plans.append({**selected, 'status': record.get('status')})
+        plans.extend({**p, 'status': 'held'} for p in saved.get('rejected_topic_plans', []))
+    used_tasks = {p.get('task_id') for p in plans}
+    tasks = [t for t in tasks if t['board'] == board and t['id'] not in used_tasks]
+    # Expose actual solved problems, not just titles and generic profile instructions.
+    covered = [{k: p.get(k) for k in ('reader_problem', 'outline', 'status')} for p in plans[-60:]]
     return {'reader_questions': {**context, 'questions': questions} if context else None,
+            'unused_reader_tasks': tasks, 'covered_reader_problems': covered,
             'recent_source_ids_to_avoid': sorted(attempted),
             'recent_topics': recent_titles, 'recent_rejections': feedback,
             'related_existing_titles': [x['title'] for x in relevance]}, rows
 
 
-def validate_candidates(value, source_ids, fresh):
+def validate_candidates(value, source_ids, fresh, task_ids=None):
     if not isinstance(value, dict) or set(value) != {'candidates'} or not isinstance(value['candidates'], list):
         raise ValueError('주제 기획 응답 구조 오류')
     result = []
     for item in value['candidates'][:6]:
         fields = {'topic', 'source_id', 'reader_problem', 'distinct_angle', 'outline'}
-        if not isinstance(item, dict) or set(item) != fields:
+        if not isinstance(item, dict) or set(item) not in (fields, fields | {'task_id'}):
             raise ValueError('주제 기획 항목 오류')
+        if item.get('task_id', '') not in (task_ids or set()) | {''}:
+            raise ValueError('허용되지 않은 독자 질문 ID')
         if item['source_id'] not in source_ids | {''}:
             raise ValueError('허용되지 않은 관심 주제 ID')
         for key in ('topic', 'reader_problem', 'distinct_angle'):
@@ -77,11 +95,16 @@ def validate_candidates(value, source_ids, fresh):
 
 def choose_plan(board, profile, context, titles, day, root, model, review_model, ask, text_input, usage, fresh):
     material, existing = planning_material(root, context, board, day)
+    allowed = {x['id'] for x in (material['reader_questions'] or {}).get('questions', [])}
+    task_ids = {x['id'] for x in material['unused_reader_tasks']}
     string = {'type': 'string'}
     item = {'type': 'object', 'additionalProperties': False,
-            'required': ['topic', 'source_id', 'reader_problem', 'distinct_angle', 'outline'],
+            'required': ['topic', 'source_id', 'task_id', 'reader_problem', 'distinct_angle', 'outline'],
             'properties': {**{k: string for k in ('topic', 'source_id', 'reader_problem', 'distinct_angle')},
-                           'outline': {'type': 'array', 'items': string}}}
+                           'source_id': {'type': 'string', 'enum': ['', *sorted(allowed)]},
+                           'task_id': {'type': 'string', 'enum': ['', *sorted(task_ids)]},
+                           'outline': {'type': 'array', 'minItems': 3, 'maxItems': 3,
+                                       'items': {'type': 'string', 'minLength': 10, 'maxLength': 180}}}}
     proposed = ask(
         '한국어 게시판 기획자다. 본문을 쓰기 전에 서로 다른 독자 문제를 해결할 후보 최대 여섯 개를 기획한다. '
         '각 후보는 제목(topic), 관심 자료 ID(source_id), 독자의 구체적 문제(reader_problem), '
@@ -93,13 +116,17 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '최근 사용한 source_id는 제외한다. 활용 가능한 관심 질문이 부족하면 source_id를 빈 문자열로 두고 '
         '게시판 목적에 맞는 다른 생활·선택·이용 문제를 제안한다. 빈 ID로 기존 관심 질문을 재포장하지 않는다. '
         '각 목차는 이번 문제를 해결하는 행동이어야 한다. 모든 절을 기록 정리와 고객센터 문의로 채우지 않는다. '
+        'unused_reader_tasks는 편집자가 준비한 구체적 질문과 결과물이다. 남은 후보를 우선 비교하고 task_id를 그대로 기록한다. '
+        '자료의 사실이나 고객의 대화라고 소개하지 않는다. 그 질문을 선택할 때 핵심 결과물을 유지한다. '
+        'covered_reader_problems에 이미 답한 문제와 실제 해결 절차가 같으면 제외한다. '
+        '어느 준비 질문도 적절하지 않을 때만 task_id를 비우고 전혀 다른 문제를 제안한다. '
+        '후보들이 동일한 문제의 말바꾸기가 되지 않게 서로 다른 상황과 결과물을 제시한다. 각 목차는 열 자 이상이다. '
         '차별점이 없다면 candidates=[]다. 제목은 숫자·URL·HTML 없는 열두 자 이상 백 자 이하다.',
         [text_input({'profile': profile, **material})],
         {'type': 'object', 'additionalProperties': False, 'required': ['candidates'],
-         'properties': {'candidates': {'type': 'array', 'items': item}}},
+         'properties': {'candidates': {'type': 'array', 'maxItems': 6, 'items': item}}},
         'distinct_reader_problems', 'topic', model, usage, 3400)
-    allowed = {x['id'] for x in (material['reader_questions'] or {}).get('questions', [])}
-    candidates = validate_candidates(proposed, allowed, fresh)
+    candidates = validate_candidates(proposed, allowed, fresh, task_ids)
     if not candidates:
         raise PlanningHeld(board, ['기존 글과 다른 독자 문제를 찾지 못했습니다. 본문·이미지를 생성하지 않습니다.'])
     comparisons, reference_articles = [], {}
@@ -121,6 +148,7 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '통과 후보가 있으면 selected_index에 인덱스, reason에 차별점, rejections에 탈락 이유를 적는다. '
         '모두 중복이거나 판단 불가면 selected_index=-1이다. 제목만 보고 승인하지 말고 제공된 본문과 목차를 비교한다.',
         [text_input({'profile': profile, 'comparisons': comparisons,
+                     'curated_reader_tasks': material['unused_reader_tasks'],
                      'existing_articles': list(reference_articles.values()),
                      'recent_rejections': material['recent_rejections']})],
         {'type': 'object', 'additionalProperties': False, 'required': ['selected_index', 'reason', 'rejections'],

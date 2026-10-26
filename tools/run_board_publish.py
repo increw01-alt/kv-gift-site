@@ -209,7 +209,8 @@ def main(root=ROOT, command=None, now=None):
         if context:
             usage.context['source_reference'] = {k: context[k] for k in ('kind', 'checked_at', 'source_modified_at', 'source_sha256')}
         topic_plan = usage.context.get('topic_plan')
-        data = generate(topic, model, usage.record, board=board, root=root, day=day, topic_plan=topic_plan)
+        data = generate(topic, model, usage.record, board=board, root=root, day=day, topic_plan=topic_plan,
+                        defer_content_validation=True)
         write_json(preview_dir/'draft.api-original.json', data)
         data = edit_article(board, topic, data, brief, model, usage.record, root, topic_plan=topic_plan)
         write_json(preview_dir/'edited-text.json', data)
