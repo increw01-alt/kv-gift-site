@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T03:24:38.256437+00:00",
+  "generatedAt": "2026-10-26T03:25:42.326822+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1105,7 +1105,7 @@
       "board": "gc_tip",
       "topic": "상품권 품절 시 대체 상품 선택 전 필수 확인 질문 가이드",
       "url": "https://kv-gift.co.kr/board/gc_tip/38",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T03:25:42.315277+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.0976413,
       "knownSubtotalUsd": 0.0976413
