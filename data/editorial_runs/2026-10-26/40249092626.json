@@ -1,17 +1,19 @@
 {
   "run_id": "40249092626",
   "date_kst": "2026-10-26",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-26T00:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 통과할 만한 후보가 없습니다. 0~5번 모두 기존 글과 독자가 겪는 상황, 확인할 항목, 해결 절차가 겹칩니다. 특히 상품권 용어/종류 구분, 발행사·판매처 역할, 구매 전 확인 사항, 사용 중 문제 대응, 모바일·지류 차이 설명은 이미 유사한 안내 글들에서 다뤄진 범주라 독립적인 새 주제로 보기 어렵습니다. 검증 자료 없이 새로운 업체 조건이나 정책을 단정하는 내용도 없어 차별성이 부족합니다. / 0: 상품권·교환권·쿠폰의 용어 차이와 화면 확인 항목은 기존 '[상품권 정보] 금액형 상품권과 물품 교환형 쿠폰은 어떻게 다른가요?' 및 판매 글의 교환권 표기와 겹칩니다. 비유만 다르고 핵심 비교 구조가 같습니다. / 1: 발행사·판매처·사용처의 역할과 문의처 안내는 기존 '[구매 안내] 컬쳐랜드 상품권 종류별 명칭과 발행사 구분법'과 독자 상황, 확인 순서가 유사합니다. 역할 구분을 설명하는 범주가 이미 존재합니다. / 2: 금액형/물품교환형/할인쿠폰 비교는 기존 상품권 종류 비교 글과 직접 중복됩니다. 사용 범위와 제한 조건을 정리하는 방식도 새롭지 않습니다. / 3: 구매 전 기본 정보 확인과 판매처·발행사 조건 점검은 기존 구매 안내 글들의 전형적인 흐름입니다. 단계만 바꾼 점검 절차라 독립성이 약합니다. / 4: 사용 중 오류, 충전 실패, 사용처 혼동에 대한 대응은 기존 상품권팁의 문제 해결 글과 중복됩니다. 특히 상태 문의, 문의 절차, 예방 팁이 이미 다뤄진 범주입니다. / 5: 디지털 상품권과 실물 상품권 비교는 기존 '[상품권 정보] 모바일 교환권과 지류상품권의 관계를 이해해 보세요'와 핵심 질문이 같습니다. 보안·관리 항목을 더했어도 비교 축 자체가 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "40249092626",
@@ -20,15 +22,147 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "초보자를 위한 상품권 개념 대조 설명",
+          "source_id": "",
+          "reader_problem": "상품권 관련 비슷한 용어들이 헷갈려 어떤 차이가 있는지 구분하기 어렵다",
+          "distinct_angle": "사물이나 역할로 비유하여 상품권, 교환권, 쿠폰 등 용어 간 차이를 시각적 이미지로 쉽게 이해하게 한다",
+          "outline": [
+            "상품권, 교환권, 쿠폰 용어를 사례 중심으로 풀이하기",
+            "비슷한 개념들의 핵심 차이점과 쓰임새 정리하기",
+            "실제 상품권 화면에서 구분할 수 있는 요소 살펴보기"
+          ]
+        },
+        {
+          "topic": "상품권 발행사와 판매처 역할 명확히 알아보기",
+          "source_id": "",
+          "reader_problem": "상품권 관련 참여자(발행사, 판매처, 사용처) 역할과 책임이 헷갈려 혼란스럽다",
+          "distinct_angle": "각 참여자를 소비자 고객 입장에서 볼 때 어떤 역할을 하는지, 문제 발생 시 어디에 문의해야 하는지 안내한다",
+          "outline": [
+            "발행사, 판매처, 사용처 각자의 기능과 역할 설명하기",
+            "문제가 생겼을 때 각 참여자별 대응 방법 파악하기",
+            "구매 전후에 확인해야 하는 각 참여자의 확인사항 소개하기"
+          ]
+        },
+        {
+          "topic": "상품권 종류별 특징과 용도 차이 이해하기",
+          "source_id": "",
+          "reader_problem": "금액형 상품권, 물품교환권, 할인쿠폰 등 상품권 종류가 많아 구분법을 몰라서 혼란스럽다",
+          "distinct_angle": "각 종류별로 사용 가능한 범위, 혜택 차이, 제한 조건을 비교해 선택에 도움을 준다",
+          "outline": [
+            "금액형, 물품교환형, 할인쿠폰 등 주요 상품권 종류 소개하기",
+            "각 종류의 사용 조건과 제한 사항 명확히 비교하기",
+            "본인에게 맞는 상품권 선택 기준 세우기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 전 꼭 확인할 기본 정보 안내",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 어떤 기본 정보를 꼭 확인해야 안전하고 합리적인 선택인지 몰라 불안하다",
+          "distinct_angle": "복잡한 약관 대신 꼭 체크해야 할 핵심 정보를 단계별 행동으로 안내한다",
+          "outline": [
+            "상품권 구매 전에 알아야 할 주요 기본 정보 정리하기",
+            "판매처와 발행사 조건 비교 및 확인방법 안내하기",
+            "구매 시 실수하지 않는 점검 절차 체계적으로 소개하기"
+          ]
+        },
+        {
+          "topic": "상품권 사용 중 자주 발생하는 문제와 해결법",
+          "source_id": "",
+          "reader_problem": "상품권 사용 시 흔히 생기는 오류, 충전 실패, 사용처 혼동 등의 문제를 어떻게 해결할지 막막하다",
+          "distinct_angle": "자주 발생하는 실생활 문제 사례와 함께 해결 행동을 구체적으로 안내해 즉시 대응 가능하도록 한다",
+          "outline": [
+            "상품권 충전 및 사용 관련 빈번한 문제 유형 소개",
+            "문제 발생 시 차근차근 점검하고 문의하는 절차",
+            "사례별 대처법과 예방 팁 정리하기"
+          ]
+        },
+        {
+          "topic": "디지털 상품권과 실물 상품권 차이 제대로 알기",
+          "source_id": "",
+          "reader_problem": "디지털 모바일 상품권과 지류 상품권의 사용법, 관리법, 장단점을 헷갈려 이해가 어려움",
+          "distinct_angle": "실물과 디지털 상품권의 관리, 사용 주의점, 보안상 특징을 행동 중심으로 비교 설명한다",
+          "outline": [
+            "디지털 상품권과 실물 상품권의 차이점 정의하기",
+            "각 타입별 사용 시 주의할 점과 관리 방법 익히기",
+            "보안과 개인정보 보호 측면에서 해야 할 행동 정리"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5640,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 784,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6424
+        },
+        "estimated_usd": 0.0035104,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-26T00:23:39.278355+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7390,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 629,
+          "output_tokens_details": {
+            "reasoning_tokens": 130
+          },
+          "total_tokens": 8019
+        },
+        "estimated_usd": 0.008373,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-26T00:23:47.856938+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-26T00:23:33.257423+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-26T00:23:41.194440+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0118834,
+    "estimated_total_usd": 0.0118834,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
