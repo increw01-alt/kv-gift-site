@@ -642,5 +642,18 @@
     "publication_mode": "automatic",
     "run_id": "40291294794",
     "usage_file": "data/editorial_runs/2026-10-26/40291294794.json"
+  },
+  {
+    "board": "free",
+    "id": 472,
+    "topic": "상품권 받은 후 당장 사용과 계획적 사용의 장단점 분석",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "상품권을 바로 쓸지 계획적으로 아껴 쓸지에 따라 어떤 장단점이 있는지 비교하고, 내 상황에 맞는 선택 기준을 스스로 정리하려는 독자의 질문",
+    "image_scene": "탁자 위에 상품권 봉투와 달력, 장바구니 메모, 체크박스가 있는 작은 질문 카드가 놓여 있고 한 사람이 ‘지금 사용’과 ‘나중 사용’ 두 칸을 나눠 적으며 우선순위를 정리하는 구도",
+    "image_alt": "탁자 위 달력과 상품권 봉투, 장바구니 메모를 두고 바로 쓸지 나중에 쓸지 비교하며 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40299115283",
+    "usage_file": "data/editorial_runs/2026-10-26/40299115283.json"
   }
 ]
