@@ -1,17 +1,19 @@
 {
   "run_id": "40248680884",
   "date_kst": "2026-10-26",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-26T00:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 0~5 모두 기존 글과 독자의 상황·확인 항목·해결 절차가 겹칩니다. 판매처 신뢰 확인, 선물 취향 파악, 결제 혜택 점검, 취소·환불 준비, 모바일 수신 오류 점검, 구매 후 기록 관리는 이미 유사한 구매 안내·생활상식·상품권팁 글에서 다뤄진 범주라 독립적인 새 주제로 보기 어렵습니다. 검증 자료 없는 업체 조건·정책을 새로 만드는 내용도 없어 통과 후보가 없습니다. / 0: 판매처 신뢰도 확인은 기존 구매 전 연락처/판매처 확인 안내와 같은 흐름이며, 리뷰·피해 사례 조사도 일반적인 사전 점검의 반복입니다. / 1: 상대 취향 파악은 기존 선물 취향 알아보기 글과 동일한 독자 상황과 대화형 질문법을 반복합니다. / 2: 결제 수단별 혜택 최적화는 카드 실적·포인트·최종 결제금액 확인류의 기존 구매 전 안내와 중복됩니다. / 3: 취소·환불 정책 준비는 기존 환불/취소 문의 준비형 글과 핵심 질문과 절차가 같습니다. / 4: 모바일 수신 오류 사전 점검은 기존 수신 연락처 확인 및 발송/미수신 대응 글과 거의 동일합니다. / 5: 주문내역·사용기록 관리는 기존 잔액·이력 관리 글과 중복되며, 구매 후 관리 주제도 이미 다뤄졌습니다."
+    ]
   },
   "api_usage": {
     "run_id": "40248680884",
@@ -20,15 +22,147 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 구매 전 판매처 신뢰도 안전 확인법",
+          "source_id": "",
+          "reader_problem": "온라인이나 오프라인에서 처음 보는 판매처에서 상품권을 사려 할 때 안전하게 신뢰도를 확인하는 방법이 궁금하다.",
+          "distinct_angle": "판매처 신뢰 여부를 직접 확인하는 단계별 절차와 구체적 방법 안내, 안전 결제 팁을 중심으로 새롭게 구성한다.",
+          "outline": [
+            "판매처 소개 및 연락처 검증하기",
+            "구매 전 인터넷 및 SNS 리뷰와 피해 사례 조사하기",
+            "안전 결제 수단 이용 및 거래 기록 남기기"
+          ]
+        },
+        {
+          "topic": "상품권 선물 시 효과적인 상대방 취향 파악 전략",
+          "source_id": "",
+          "reader_problem": "상품권을 선물할 때 받는 사람이 좋아할 상품권 종류와 금액을 자연스럽게 파악하는 방법을 알고 싶다.",
+          "distinct_angle": "대화법과 비언어적 신호를 활용해 부담 없이 취향과 필요를 알아내는 방법 중심으로 제안한다.",
+          "outline": [
+            "일상 대화 속 취향 슬쩍 묻기",
+            "함께 쇼핑하거나 경험할 기회 활용하기",
+            "상대의 생활 패턴과 관심사 분석하기"
+          ]
+        },
+        {
+          "topic": "상품권 주문 전 결제 수단별 혜택 최적화 체크리스트",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 신용카드, 체크카드, 포인트 사용 등 다양한 결제 수단별 혜택을 최대한 활용하려면 어떻게 해야 할지 궁금하다.",
+          "distinct_angle": "각 결제 수단 특징과 혜택 차이를 비교하고 실제 구매 전 별도 점검 항목을 구성해 제시한다.",
+          "outline": [
+            "결제 수단별 할인 및 적립 혜택 파악",
+            "본인 카드 및 포인트 사용 조건 점검",
+            "최종 결제 전 혜택 적용 여부 확인하기"
+          ]
+        },
+        {
+          "topic": "주문 전 상품권 구매 취소 및 환불 정책 철저 준비하기",
+          "source_id": "",
+          "reader_problem": "상품권 주문 전 취소 및 환불 조건과 절차를 미리 정확히 이해하고 대비하고 싶다.",
+          "distinct_angle": "판매처별 취소·환불 정책 차이를 구체적으로 비교하며, 미리 준비할 정보와 주의할 점 중심으로 안내한다.",
+          "outline": [
+            "판매처별 환불 및 취소 조건 꼼꼼히 읽기",
+            "취소 요청 시 필요한 서류 및 정보 준비하기",
+            "취소 후 환불 기간과 방법 확인하며 체크하기"
+          ]
+        },
+        {
+          "topic": "상품권 모바일 수신 오류 사전 점검과 예방 조치",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 도착하지 않거나 오류가 생길 때 사전에 점검하고 문제를 예방하는 방법을 알고 싶다.",
+          "distinct_angle": "구매 전 수신번호, 기기 환경 등 점검 방법과 오류 발생 가능 원인별 대응책을 구체적으로 제공한다.",
+          "outline": [
+            "수신 연락처 및 모바일 환경 미리 확인하기",
+            "구매 후 문자 도착 불가 시 즉시 확인 절차",
+            "예방 차원에서 구매 전 주의할 점 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 후 주문내역과 사용 기록 체계적 관리법",
+          "source_id": "",
+          "reader_problem": "구매한 상품권의 주문 내역과 사용 기록을 체계적으로 정리하고 관리하는 효과적 방법이 궁금하다.",
+          "distinct_angle": "디지털 및 아날로그 기록 방법을 활용해 중복 사용, 만료 방지 등 관리 실무 중심으로 제시한다.",
+          "outline": [
+            "주문내역과 상품권 정보 디지털 기록 만들기",
+            "사용 내역 및 잔액 주기적 업데이트하기",
+            "종합 관리 앱 또는 수첩 활용법 비교하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5373,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 797,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6170
+        },
+        "estimated_usd": 0.0034244,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-26T00:18:40.914027+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7010,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 470,
+          "output_tokens_details": {
+            "reasoning_tokens": 105
+          },
+          "total_tokens": 7480
+        },
+        "estimated_usd": 0.0073725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-26T00:18:47.676125+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-26T00:18:34.404962+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-26T00:18:43.536055+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0107969,
+    "estimated_total_usd": 0.0107969,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
