@@ -551,5 +551,18 @@
     "publication_mode": "automatic",
     "run_id": "40253548521",
     "usage_file": "data/editorial_runs/2026-10-26/40253548521.json"
+  },
+  {
+    "board": "sense",
+    "id": 10,
+    "topic": "함께 준비한 선물 메시지 보낸 사람 표기하기",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "공동으로 준비한 선물 메시지에 이름을 어떻게 적어야 오해가 없고 참여자 공개 범위도 자연스럽게 맞출 수 있는지 알고 싶은 질문",
+    "image_scene": "책상 위에 작은 선물 상자와 손글씨 메시지 카드, 이름을 적는 스티커 메모가 놓여 있고 한 사람이 카드에 보낸 사람 표기를 여러 줄로 정리하는 구도",
+    "image_alt": "책상 위 선물 상자 옆에 메시지 카드와 이름 스티커 메모를 두고 보낸 사람 표기를 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40258416708",
+    "usage_file": "data/editorial_runs/2026-10-26/40258416708.json"
   }
 ]
