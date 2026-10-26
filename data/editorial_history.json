@@ -603,5 +603,18 @@
     "publication_mode": "automatic",
     "run_id": "40273469369",
     "usage_file": "data/editorial_runs/2026-10-26/40273469369.json"
+  },
+  {
+    "board": "sale",
+    "id": 3694,
+    "topic": "판매 상담 중 진행 중단 시점과 확인 사항",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "상품권 판매 상담을 멈춰야 할 때 현재 진행 단계와 제공한 정보에 맞춰 어떻게 정중하고 분명하게 중단 의사를 전할지 알고 싶은 질문",
+    "image_scene": "책상 위 노트에 상담 단계와 전달한 정보를 메모해 두고, 옆 스마트폰에는 대화창이 열려 있으며 한 사람이 체크리스트를 보며 ‘문의만 진행 중’과 ‘정보 전달 후’ 항목을 구분해 표시하는 구도",
+    "image_alt": "책상 위 메모와 스마트폰 대화창을 함께 보며 상담 단계별로 중단 여부를 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40279008305",
+    "usage_file": "data/editorial_runs/2026-10-26/40279008305.json"
   }
 ]

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T06:18:38.633776+00:00",
+  "generatedAt": "2026-10-26T06:19:46.285714+00:00",
   "dateKst": "2026-10-26",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 6,
+  "published": 7,
   "verified": 6,
   "attempts": 10,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.6423443,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.7403565,
+  "estimatedTotalUsd": 0.7403565,
   "records": [
     {
       "runId": "40248680884",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "40279008305",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sale",
+      "topic": "판매 상담 중 진행 중단 시점과 확인 사항",
+      "url": "https://kv-gift.co.kr/board/sale/3694",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-26T06:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0980122,
+      "knownSubtotalUsd": 0.0980122
     }
   ]
 }
