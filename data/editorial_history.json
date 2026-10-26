@@ -577,5 +577,18 @@
     "publication_mode": "automatic",
     "run_id": "40263804187",
     "usage_file": "data/editorial_runs/2026-10-26/40263804187.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2569,
+    "topic": "상품권 판매 이미지와 실제 상품명 불일치 점검법",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "상품권 판매 페이지에서 이미지와 실제 상품명이 다를 때 무엇을 먼저 대조하고 어떤 정보로 판매처에 문의해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 노트북의 상품 판매 페이지와 옆에 인쇄된 상품권 샘플 카드가 나란히 놓여 있고, 한 사람이 돋보기로 로고와 상품명을 대조하며 메모장에 차이점을 체크하는 구도",
+    "image_alt": "노트북 화면의 판매 페이지와 인쇄된 상품권 샘플을 돋보기로 비교하며 상품명 차이를 적어 두는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40268349632",
+    "usage_file": "data/editorial_runs/2026-10-26/40268349632.json"
   }
 ]

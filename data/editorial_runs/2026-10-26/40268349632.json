@@ -1,16 +1,26 @@
 {
   "run_id": "40268349632",
   "date_kst": "2026-10-26",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "purchase",
+  "topic": "상품권 판매 이미지와 실제 상품명 불일치 점검법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/purchase/2569",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-26T04:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,262 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "상품권 판매 이미지와 실제 상품명 불일치 점검법",
+        "source_id": "",
+        "reader_problem": "판매 페이지에 표시된 상품권 이미지와 상세 설명 혹은 상품권 명칭이 서로 다를 때 무엇부터 대조하여 불일치를 명확히 파악하고 문제를 정확히 문의할지 절차가 모호하다",
+        "distinct_angle": "판매 이미지 속 브랜드 요소, 실제 판매 상품명, 선택 가능한 옵션을 체계적으로 대응시켜 불일치 여부를 구체적 단계로 점검하는 방법을 안내한다",
+        "task_id": "purchase-product-image",
+        "outline": [
+          "판매 이미지 속 브랜드명과 디자인 확인법",
+          "실제 판매 상품명 및 옵션과 이미지 내용 비교하는 단계별 방법",
+          "차이 발견 시 효과적 문의 및 문제 제기 준비 절차"
+        ],
+        "novelty_reason": "판매 이미지와 실제 상품명/옵션이 불일치하는지를 대조하는 절차는 기존의 ‘선물용 상품권 선택 전 사용환경 점검’이나 일반적인 사용여부 문의와 달리, 구매 페이지의 정보 불일치 자체를 확인하는 구체적 문제를 다룹니다. 이미지의 브랜드 요소, 상세 설명의 상품명, 옵션 대응이라는 점검 축이 분명해 구매 전 확인용으로 가장 구체적이고 새롭습니다.",
+        "screen_rejections": [
+          "0: 단일권·분할권 선택은 예산 내 권종 구성 비교라는 점에서 유용하지만, 선물 대상의 사용환경·선호에 맞춰 고르는 일반적 구매 조언으로 기존 선물용 사용환경 점검 글과 비교적 가깝습니다.",
+          "2: 특정 지점에서 사용 가능한지 확인하는 주제는 기존의 ‘사용여부 알수있나요?’ 계열과 독자가 묻는 핵심 질문과 절차가 거의 겹칩니다. 브랜드 범위와 지점별 범위를 나누는 점은 있어도 중복성이 큽니다.",
+          "3: 공동 선물 준비의 사전 합의는 실무적으로 의미 있지만, 상품권 자체의 구매 전 질문·확인보다 선물 준비 일반론에 가깝고, 대표 구매자/예산/전달 역할 같은 메모성 항목이 중심이라 구매 게시판의 구체적 상품 선택 주제로는 덜 적합합니다."
+        ]
+      },
+      "board": "purchase",
+      "topic": "상품권 판매 이미지와 실제 상품명 불일치 점검법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-26T01:39:50Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 판매 페이지에서 이미지와 실제 상품명이 다를 때 무엇을 먼저 대조하고 어떤 정보로 판매처에 문의해야 하는지 알고 싶은 독자의 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 11883,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 744,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 12627
+        },
+        "estimated_usd": 0.0059436,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-26T04:18:44.370989+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6509,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 558,
+          "output_tokens_details": {
+            "reasoning_tokens": 222
+          },
+          "total_tokens": 7067
+        },
+        "estimated_usd": 0.00739275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-26T04:18:49.182612+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2347,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 472,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2819
+        },
+        "estimated_usd": 0.001694,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-26T04:18:53.614206+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3096,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 476,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3572
+        },
+        "estimated_usd": 0.002,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-26T04:18:58.116063+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7721,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 460,
+          "output_tokens_details": {
+            "reasoning_tokens": 274
+          },
+          "total_tokens": 8181
+        },
+        "estimated_usd": 0.00786075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-26T04:19:02.254864+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3503,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1007
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4875
+        },
+        "estimated_usd": 0.066163,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-26T04:19:31.676107+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6417,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 222,
+          "output_tokens_details": {
+            "reasoning_tokens": 157
+          },
+          "total_tokens": 6639
+        },
+        "estimated_usd": 0.00581175,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-26T04:19:34.953650+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-26T04:18:36.418590+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-26T04:18:45.933473+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-26T04:18:49.203190+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-26T04:18:54.527604+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-26T04:18:59.465215+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-26T04:19:02.269859+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-26T04:19:32.619661+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.09686585,
+    "estimated_total_usd": 0.09686585,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
