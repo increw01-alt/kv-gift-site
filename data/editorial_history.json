@@ -538,5 +538,18 @@
     "publication_mode": "automatic",
     "run_id": "40249498751",
     "usage_file": "data/editorial_runs/2026-10-26/40249498751.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 58,
+    "topic": "서비스 이용 중 접속 지연 및 장애 대처법",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "사이트 접속이 느리거나 끊길 때 사용자가 먼저 점검할 항목과 문의 전 준비물을 알고 싶은 질문",
+    "image_scene": "노트북 화면에 접속 오류 문구가 떠 있고, 옆에는 공유기와 스마트폰, 브라우저 캐시 삭제 메모가 놓여 있으며 한 사람이 체크리스트를 보며 네트워크 상태와 재접속 순서를 확인하는 구도",
+    "image_alt": "노트북의 접속 오류 화면 옆에서 공유기와 스마트폰을 두고 네트워크 상태와 재접속 순서를 체크리스트로 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40253548521",
+    "usage_file": "data/editorial_runs/2026-10-26/40253548521.json"
   }
 ]
