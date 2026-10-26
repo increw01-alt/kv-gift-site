@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T03:18:34.386124+00:00",
+  "generatedAt": "2026-10-26T03:19:03.707636+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1087,14 +1087,14 @@
       "runId": "40263385020",
       "dateKst": "2026-10-26",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "free",
+      "topic": "상품권 전달 시 어떤 상황 설명을 곁들이면 받는 사람이 이해하기 쉬울까?",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0303037,
+      "knownSubtotalUsd": 0.0303037
     },
     {
       "id": "post:purchase:2561",
@@ -5145,13 +5145,57 @@
     {
       "entryId": "run:40263385020",
       "dateKst": "2026-10-26",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-26T03:18:44.323583+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0062288,
+      "knownSubtotalUsd": 0.0062288,
+      "requests": 1,
+      "inputTokens": 11736,
+      "outputTokens": 959
+    },
+    {
+      "entryId": "run:40263385020",
+      "dateKst": "2026-10-26",
+      "recordedAt": "2026-10-26T03:18:51.268256+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.009525,
+      "knownSubtotalUsd": 0.009525,
+      "requests": 1,
+      "inputTokens": 9208,
+      "outputTokens": 582
+    },
+    {
+      "entryId": "run:40263385020",
+      "dateKst": "2026-10-26",
+      "recordedAt": "2026-10-26T03:18:54.175646+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0015132,
+      "knownSubtotalUsd": 0.0015132,
+      "requests": 1,
+      "inputTokens": 2399,
+      "outputTokens": 346
+    },
+    {
+      "entryId": "run:40263385020",
+      "dateKst": "2026-10-26",
+      "recordedAt": "2026-10-26T03:18:58.644645+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0037172,
+      "knownSubtotalUsd": 0.0037172,
+      "requests": 1,
+      "inputTokens": 7821,
+      "outputTokens": 368
+    },
+    {
+      "entryId": "run:40263385020",
+      "dateKst": "2026-10-26",
+      "recordedAt": "2026-10-26T03:19:03.383117+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0093195,
+      "knownSubtotalUsd": 0.0093195,
+      "requests": 1,
+      "inputTokens": 9768,
+      "outputTokens": 443
     },
     {
       "entryId": "post:purchase:2561",
