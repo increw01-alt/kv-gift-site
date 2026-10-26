@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T01:19:35.630089+00:00",
+  "generatedAt": "2026-10-26T01:20:19.607864+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1063,7 +1063,7 @@
       "board": "general_notice",
       "topic": "서비스 이용 중 접속 지연 및 장애 대처법",
       "url": "https://kv-gift.co.kr/board/general_notice/58",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-26T01:20:19.597081+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1025419,
       "knownSubtotalUsd": 0.1025419
