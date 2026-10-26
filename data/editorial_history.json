@@ -590,5 +590,18 @@
     "publication_mode": "automatic",
     "run_id": "40268349632",
     "usage_file": "data/editorial_runs/2026-10-26/40268349632.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 10,
+    "topic": "상품권 전달과 계정 등록 개념 차이",
+    "drafted_at": "2026-10-26",
+    "automation": true,
+    "search_intent": "상품권 전달 메시지와 계정 등록이 어떻게 다른지 알고, 등록 전후에 무엇을 확인해야 하는지 정리하려는 독자의 질문",
+    "image_scene": "책상 위에 스마트폰 화면에는 상품권 전달 메시지가 떠 있고, 옆 노트북에는 계정 등록 입력 화면이 열려 있다. 가운데에는 번호를 적는 메모지와 펜이 놓여 있어 전달 확인과 등록 절차를 서로 비교하는 구도",
+    "image_alt": "책상 위에서 상품권 전달 메시지가 열린 스마트폰과 계정 등록 화면이 켜진 노트북을 나란히 두고 차이를 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40273469369",
+    "usage_file": "data/editorial_runs/2026-10-26/40273469369.json"
   }
 ]

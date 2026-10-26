@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T05:18:37.071831+00:00",
+  "generatedAt": "2026-10-26T05:19:33.206775+00:00",
   "dateKst": "2026-10-26",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 5,
+  "published": 6,
   "verified": 5,
   "attempts": 9,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.54394355,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.6423443,
+  "estimatedTotalUsd": 0.6423443,
   "records": [
     {
       "runId": "40248680884",
@@ -118,16 +118,16 @@
     },
     {
       "runId": "40273469369",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "상품권 전달과 계정 등록 개념 차이",
+      "url": "https://kv-gift.co.kr/board/gc_information/10",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-26T05:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09840075,
+      "knownSubtotalUsd": 0.09840075
     }
   ]
 }
