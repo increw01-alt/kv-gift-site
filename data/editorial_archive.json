@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T02:19:46.840665+00:00",
+  "generatedAt": "2026-10-27T02:20:50.245713+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1273,7 +1273,7 @@
       "board": "sense",
       "topic": "선물 거절 후에도 관계가 부담되지 않는 마음 전달법",
       "url": "https://kv-gift.co.kr/board/sense/12",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-27T02:20:50.229603+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1016285,
       "knownSubtotalUsd": 0.1016285
