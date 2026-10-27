@@ -1,16 +1,26 @@
 {
   "run_id": "40426039400",
   "date_kst": "2026-10-27",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "purchase",
+  "topic": "상품권을 한 번에 구매 vs 여러 장으로 나눠 선택할 때 고려할 점",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/purchase/2570",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T00:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,264 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "상품권을 한 번에 구매 vs 여러 장으로 나눠 선택할 때 고려할 점",
+        "source_id": "",
+        "reader_problem": "선물 예산이 동일해도 상품권을 한 번에 구매하는 것과 여러 장으로 나누어 구매하는 경우 각각 어떤 장단점이 있는지 판단하기 어렵다.",
+        "distinct_angle": "수신자의 사용 패턴과 상황에 맞춰 한 번에 소진하는 상품권과 나눠서 사용하는 상품권 구성을 어떻게 대비할지 비교한다.",
+        "task_id": "purchase-single-vs-split",
+        "outline": [
+          "수신자의 사용 용도 및 상황 분석해 맞춤형 상품권 구성법",
+          "한 번에 쓸 상품권과 나눠 쓸 상품권의 장단점 체계적으로 비교",
+          "권종별 상품권 조합 방법과 구매 시 주의할 점 점검하기"
+        ],
+        "novelty_reason": "예산이 같더라도 상품권을 ‘한 장으로 크게 살지, 여러 장으로 나눠 살지’의 선택 기준을 수신자의 사용 패턴에 맞춰 비교하는 주제라서, 기존의 주문 정리·결제 확인·잔액 관리 글과는 해결 질문이 다릅니다. 구매 전 권종 구성과 사용 편의성을 직접 비교하는 구체성이 있어 후보 중 가장 새롭습니다.",
+        "screen_rejections": [
+          "1: 같은 브랜드의 지점별 사용 가능 여부를 확인하는 주제는 기존 ‘온라인 문화상품권 사용 어떻게 하나요?’와 ‘원하는 지점에서 쓸 수 있는지 확인’ 계열과 질문 구조가 매우 가깝고, 매장/배달 적용 범위 확인도 유사합니다.",
+          "2: 여러 명이 함께 준비하는 선물의 대표자 선정, 예산 분담, 명의·전달 역할 합의는 공동 구매/공동 준비라는 점에서 유사한 안내 범주가 있고, 이미 선물용 준비 맥락의 글들과 겹칠 소지가 큽니다.",
+          "3: 주문 내용·결제 수단·할인 정책 점검은 기존 ‘최종 결제 금액 확인’과 ‘구매 전 조건 확인’ 흐름을 그대로 확장한 형태라 중복입니다.",
+          "4: 선물 상대의 취향과 사용 환경을 자연스럽게 묻는 방법은 기존 ‘선물용 상품권 선택 시 받는 사람의 기기와 사용환경 점검 방법’ 및 ‘선물을 고르기 전에 상대방의 취향을 자연스럽게 알아보는 방법’과 핵심 질문과 해결 절차가 같습니다.",
+          "5: 대량 주문 내역과 개별 권종을 정리하는 내용은 기존 ‘상품권을 여러 장 구입할 때 주문 내역은 어떻게 정리하나요?’ 및 중복 기록 관리 글과 거의 동일합니다."
+        ]
+      },
+      "board": "purchase",
+      "topic": "상품권을 한 번에 구매 vs 여러 장으로 나눠 선택할 때 고려할 점",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-26T13:03:27Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권을 한 장으로 살지 여러 장으로 나눠 살지 결정할 때 사용할 장면과 관리 방법을 비교하려는 독자의 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 11929,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1039,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 12968
+        },
+        "estimated_usd": 0.006434,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T00:23:39.292353+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8873,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 725,
+          "output_tokens_details": {
+            "reasoning_tokens": 299
+          },
+          "total_tokens": 9598
+        },
+        "estimated_usd": 0.00991725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T00:23:45.609498+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2461,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 490,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2951
+        },
+        "estimated_usd": 0.0017684,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T00:23:49.448955+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4719,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 535,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5254
+        },
+        "estimated_usd": 0.0027436,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T00:23:55.818648+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11696,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 393,
+          "output_tokens_details": {
+            "reasoning_tokens": 193
+          },
+          "total_tokens": 12089
+        },
+        "estimated_usd": 0.0105405,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T00:23:59.109713+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3584,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1088
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4956
+        },
+        "estimated_usd": 0.066568,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T00:24:29.359622+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9707,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 177,
+          "output_tokens_details": {
+            "reasoning_tokens": 112
+          },
+          "total_tokens": 9884
+        },
+        "estimated_usd": 0.00807675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T00:24:32.469087+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T00:23:31.520036+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T00:23:40.884704+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T00:23:45.611261+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T00:23:50.159778+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T00:23:56.949702+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-27T00:23:59.122229+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T00:24:30.078473+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1060485,
+    "estimated_total_usd": 0.1060485,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -655,5 +655,18 @@
     "publication_mode": "automatic",
     "run_id": "40299115283",
     "usage_file": "data/editorial_runs/2026-10-26/40299115283.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2570,
+    "topic": "상품권을 한 번에 구매 vs 여러 장으로 나눠 선택할 때 고려할 점",
+    "drafted_at": "2026-10-27",
+    "automation": true,
+    "search_intent": "상품권을 한 장으로 살지 여러 장으로 나눠 살지 결정할 때 사용할 장면과 관리 방법을 비교하려는 독자의 질문",
+    "image_scene": "책상 위에 같은 상품권이 한 장으로 든 봉투와 여러 장으로 나뉜 작은 카드들이 나란히 놓여 있고, 가운데에는 금액 분할과 사용 편의성을 적는 비교 메모지가 펼쳐져 있으며 한 사람이 두 구성의 차이를 체크하는 구도",
+    "image_alt": "한 장짜리 상품권 봉투와 여러 장으로 나뉜 카드가 책상 위에 나란히 놓여 있고, 가운데 메모지에 장단점을 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40426039400",
+    "usage_file": "data/editorial_runs/2026-10-27/40426039400.json"
   }
 ]
