@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T03:19:49.136918+00:00",
+  "generatedAt": "2026-10-27T03:20:53.308227+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1287,7 +1287,7 @@
       "board": "free",
       "topic": "함께 선물을 준비할 때 의견 차이 발생 시 조율하는 우선 합의 기준은?",
       "url": "https://kv-gift.co.kr/board/free/473",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-27T03:20:53.297855+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1047057,
       "knownSubtotalUsd": 0.1047057
