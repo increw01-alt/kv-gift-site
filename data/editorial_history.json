@@ -746,5 +746,18 @@
     "publication_mode": "automatic",
     "run_id": "40461267410",
     "usage_file": "data/editorial_runs/2026-10-27/40461267410.json"
+  },
+  {
+    "board": "sense",
+    "id": 13,
+    "topic": "선물 답장 후속 요청 시 부담 없이 표현하는 대화법",
+    "drafted_at": "2026-10-27",
+    "automation": true,
+    "search_intent": "선물 받은 뒤 감사 인사와 수령 확인, 사용 여부 문의를 부담 없이 나누는 표현을 알고 싶은 독자의 질문",
+    "image_scene": "작은 테이블 위에 손글씨 감사 카드와 메모장, 열어 둔 스마트폰 메시지 초안이 놓여 있고, 옆에는 따뜻한 차 한 잔이 함께 배치된 구도로 감사 인사와 후속 질문을 차분히 정리하는 장면",
+    "image_alt": "작은 테이블 위에서 감사 카드와 메시지 초안을 함께 정리하며 선물 답장을 준비하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40466290502",
+    "usage_file": "data/editorial_runs/2026-10-27/40466290502.json"
   }
 ]
