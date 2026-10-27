@@ -694,5 +694,18 @@
     "publication_mode": "automatic",
     "run_id": "40437622941",
     "usage_file": "data/editorial_runs/2026-10-27/40437622941.json"
+  },
+  {
+    "board": "free",
+    "id": 473,
+    "topic": "함께 선물을 준비할 때 의견 차이 발생 시 조율하는 우선 합의 기준은?",
+    "drafted_at": "2026-10-27",
+    "automation": true,
+    "search_intent": "여럿이 함께 선물을 고를 때 의견이 갈리면 어떤 기준을 먼저 합의해야 하는지 정리하려는 질문",
+    "image_scene": "탁자 위에 선물 후보를 적은 카드 여러 장과 예산 메모, 우선순위를 표시한 포스트잇이 펼쳐져 있고, 세 사람이 손가락으로 같은 카드와 메모를 함께 짚으며 기준을 맞춰보는 회의 장면",
+    "image_alt": "탁자 위 선물 후보 카드와 예산 메모를 두고 여러 사람이 우선순위를 함께 맞춰보는 모습입니다.",
+    "publication_mode": "automatic",
+    "run_id": "40443392950",
+    "usage_file": "data/editorial_runs/2026-10-27/40443392950.json"
   }
 ]
