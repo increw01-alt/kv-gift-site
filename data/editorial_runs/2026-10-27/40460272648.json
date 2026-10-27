@@ -1,17 +1,19 @@
 {
   "run_id": "40460272648",
   "date_kst": "2026-10-27",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "상품권 구매 전에 꼭 확인해야 하는 기본 정보",
+  "status": "error",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T06:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: 안전한 거래"
+    ]
   },
   "api_usage": {
     "run_id": "40460272648",
@@ -20,15 +22,168 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "상품권 구매 전에 꼭 확인해야 하는 기본 정보",
+        "source_id": "",
+        "reader_problem": "어떤 정보를 미리 확인하지 않고 상품권을 사면 위험하거나 부적합할 수 있어 안전한 구매를 위한 필수 점검 항목 알고 싶다.",
+        "distinct_angle": "판매처 및 발행사 확인, 유효기간, 환불 조건 등 구매 시 알아야 할 기본 정보를 항목별 체크리스트와 행동 지침으로 정리해 구매 오류를 사전 방지한다.",
+        "task_id": "",
+        "outline": [
+          "상품권 구매 전 필수 확인해야 할 기본 정보 목록화",
+          "판매처 및 발행사 신뢰도 및 조건 비교 점검법",
+          "실제 구매 시 착오를 줄이는 단계별 점검 및 행동 가이드"
+        ],
+        "novelty_reason": "구매 전에 확인해야 할 기본 정보를 한 번에 정리하는 주제로, 기존의 ‘사용처 구분’, ‘수신 연락처 확인’, ‘도착하지 않았을 때 문의 준비’처럼 특정 1개 상황만 다루는 글보다 범위가 넓지만 해결 절차는 더 기본적이고 독립적입니다. 판매처·발행사 확인, 유효기간, 환불 조건을 체크리스트로 묶어 구매 오류를 예방하는 구성은 다른 후보보다 구체적이며, 기존 글들과 질문의 초점이 완전히 같지 않습니다.",
+        "screen_rejections": [
+          "0: 상품권·교환권·쿠폰의 정의와 차이를 설명하는 구조가 기존 [상품권 정보] 금액형 상품권과 물품 교환형 쿠폰은 어떻게 다른가요? 및 유사 게시글과 거의 같습니다.",
+          "1: 금액형, 물품교환형, 할인쿠폰의 비교와 선택 기준은 기존 상품권 종류 비교 글과 독자 상황·확인 순서가 겹칩니다.",
+          "3: 처음 보는 온라인 판매처의 신뢰도 확인은 판매처 인증, 연락처 검증, 리뷰 조사 등 기존 구매 전 사전 점검 글들과 해결 흐름이 매우 비슷합니다.",
+          "4: 0번과 같은 용어 혼란 해소 주제로, 비교 대상과 화면 확인 항목이 기존 상품권 종류/용어 설명 글과 중복됩니다."
+        ]
+      },
+      "board": "gc_information",
+      "topic": "상품권 구매 전에 꼭 확인해야 하는 기본 정보",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-27T06:03:31Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12242,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1011,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13253
+        },
+        "estimated_usd": 0.0065144,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T06:18:48.339956+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7566,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 460,
+          "output_tokens_details": {
+            "reasoning_tokens": 132
+          },
+          "total_tokens": 8026
+        },
+        "estimated_usd": 0.0077445,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T06:18:55.166817+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2333,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 448,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2781
+        },
+        "estimated_usd": 0.00165,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T06:18:58.617301+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5474,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 489,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5963
+        },
+        "estimated_usd": 0.002972,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T06:19:04.054434+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T06:18:40.686712+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T06:18:50.854336+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T06:18:55.169049+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T06:18:59.868910+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0188809,
+    "estimated_total_usd": 0.0188809,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -164,10 +164,15 @@
       "board": "sale",
       "topic": "판매 상담 완료 후 중복 진행 방지하는 소통법",
       "run_id": "40432236900"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 구매 전에 꼭 확인해야 하는 기본 정보",
+      "run_id": "40460272648"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "40454530679",
+  "last_board": "gc_information",
+  "last_run_id": "40460272648",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
