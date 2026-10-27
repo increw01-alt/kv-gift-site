@@ -1,17 +1,19 @@
 {
   "run_id": "40431750331",
   "date_kst": "2026-10-27",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T01:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 통과할 만큼 새롭고 독립적인 후보가 없습니다. 0번과 3번은 상품권 주문 완료·발송·교환·사용의 상태명 차이를 설명하는 점에서 최근 보류된 ‘주문 상태/교환 완료 구분’ 주제와 거의 같습니다. 1번과 4번은 상품권 표시 금액과 실제 결제 금액의 차이 확인으로, 기존의 결제 전 최종 금액 확인 글과 핵심 질문·확인 항목이 겹칩니다. 2번과 5번은 온라인 사용과 오프라인 사용 구분으로, 이미 있는 온라인 문화상품권 사용 안내와 같은 범주라 새 해결 절차가 부족합니다. 모든 후보가 기존 글의 질문과 확인 순서를 반복하는 수준이어서 독립 주제로 승인하기 어렵습니다. / 0: 주문 완료·발송·교환·사용의 상태 구분은 최근 보류된 주문 상태/교환 완료 구분 주제와 핵심 비교 구조가 같습니다. 판매처별 표현 차이를 넣었지만 해결 절차가 동일합니다. / 1: 권면 표시 금액과 실제 결제 금액 구분은 기존 결제 전 최종 결제 금액 확인 글과 중복됩니다. 할인·수수료를 분리해 보자는 설명도 새롭지 않습니다. / 2: 온라인 주문, 매장 수령, 오프라인 결제의 구분은 온라인 문화상품권 사용 안내와 같은 독자 상황을 다룹니다. 온라인/오프라인 혼동을 푸는 절차가 기존 글과 같습니다. / 3: 0번과 동일하게 주문 상태 용어를 실무 절차로 풀어 설명하는 구조라 중복입니다. / 4: 1번과 동일한 금액 차이 확인 주제이며, 결제 화면에서 확인할 항목도 기존 글과 거의 같습니다. / 5: 온라인과 매장 사용법 구분은 2번과 같은 범주로, 사용처와 이용 안내 확인이라는 기존 안내를 재서술한 수준입니다."
+    ]
   },
   "api_usage": {
     "run_id": "40431750331",
@@ -20,15 +22,153 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 주문 완료 단계별 의미와 상태 차이 이해하기",
+          "source_id": "",
+          "reader_problem": "상품권 주문 완료와 실제 교환 완료의 의미가 달라 이를 구분하지 못해 혼란스럽습니다.",
+          "distinct_angle": "판매·발송·교환·사용 각 단계의 상태명이 같아도 업체별 표현 차이를 실례와 절차 중심으로 설명해 독자가 각 단계 의미를 명확히 인지할 수 있도록 한다.",
+          "task_id": "info-order-vs-redeem",
+          "outline": [
+            "상품권 주문·발송·교환·사용 단계별 핵심 상태 구분하기",
+            "대표적 업체별 상태명과 실제 처리 차이 사례 비교",
+            "각 단계 상태 확인 시 주의할 점과 문의 준비 방법 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 표시 금액과 실제 결제 금액 구분법 배우기",
+          "source_id": "",
+          "reader_problem": "상품권 권면 표시 금액과 구매 시 실제 결제 금액이 차이나는 이유를 몰라 혼동하거나 질문할 때 정확한 정보를 알기 어렵다.",
+          "distinct_angle": "권면 표시와 결제 금액의 차이에 관한 기본 개념을 할인, 수수료, 충전 방식과 분리해 설명하며 실제 거래 화면에서 각각 어떤 정보를 확인해야 하는지 안내한다.",
+          "task_id": "info-face-vs-payment",
+          "outline": [
+            "상품권 권면 표시 금액과 결제 금액의 개념 정확히 정의하기",
+            "차액 발생 요인을 할인율, 수수료 등과 구분해 살펴보기",
+            "구매 화면에서 권면과 결제 금액 정보를 올바르게 확인하는 방법"
+          ]
+        },
+        {
+          "topic": "상품권 온라인 사용과 오프라인 매장 사용 명확히 구분하기",
+          "source_id": "",
+          "reader_problem": "온라인 주문 후 매장 수령이 오프라인 결제와 혼동돼 상품권 사용 안내를 제대로 이해하지 못한다.",
+          "distinct_angle": "온라인·오프라인 사용 개념을 주문 경로와 결제 수단별로 체계화하여, 혼동하기 쉬운 사례 중심으로 구분하는 실용적 안내를 제공한다.",
+          "task_id": "info-online-offline",
+          "outline": [
+            "온라인 주문, 매장 수령, 오프라인 결제의 개념별 차이 인지하기",
+            "주문·결제 프로세스별 상품권 사용처 구분 법 익히기",
+            "실제 이용 시 혼동되는 상황과 올바른 조치법 안내"
+          ]
+        },
+        {
+          "topic": "상품권 주문 시 상태 표시 용어와 실제 처리 절차 정확히 이해하기",
+          "source_id": "",
+          "reader_problem": "상품권 주문 상태라는 같은 단어가 판매처별로 다르게 해석되어, 주문 진행 상황과 실제 교환 완료 여부를 착각하는 문제를 겪는다.",
+          "distinct_angle": "주문과 교환 완료를 포함한 상품권 구매 단계별 용어 사용 차이를 심층적으로 비교해, 단계별 확인 방법과 필요한 대응 절차를 현실적 통찰과 함께 제공한다.",
+          "task_id": "info-order-vs-redeem",
+          "outline": [
+            "주문 완료, 발송 완료, 교환 완료 명칭별 정의 및 차이점 정리",
+            "다양한 업체의 상태 표시 용어 사용과 실제 처리 현황 비교",
+            "각 상태별 구매자 확인 행동과 문의 시 핵심 질문 준비 방법"
+          ]
+        },
+        {
+          "topic": "상품권 결제 시 표시 금액과 결제 금액 차이에 따른 알맞은 확인법",
+          "source_id": "",
+          "reader_problem": "상품권 금액 표시와 실제 결제 금액의 다름을 이해하지 못해 결제 오류나 환불 혼란을 겪는 사용자가 있다.",
+          "distinct_angle": "상품권 권면의 숫자와 결제창 금액 표시가 왜 다를 수 있는지를 철저히 구분해 예시 중심으로 해석하며, 구매 시점에 확인해야 할 구체 항목을 조목조목 제시한다.",
+          "task_id": "info-face-vs-payment",
+          "outline": [
+            "상품권 표시 금액과 실제 결제 금액의 개념 체계적으로 비교",
+            "할인, 프로모션, 결제 방식에 따른 금액 변동 예시 살펴보기",
+            "구매 시 결제 화면에서 필수 확인 포인트 체크하는 방법"
+          ]
+        },
+        {
+          "topic": "온라인과 매장 상품권 사용법의 차이점과 올바른 이해법",
+          "source_id": "",
+          "reader_problem": "상품권 이용 안내에서 온라인 결제, 매장 결제 방식 차이를 혼동하여 사용처를 잘못 파악하거나 불이익을 입는다.",
+          "distinct_angle": "온라인 주문과 매장 직접 구매·결제 행위를 명확하게 구분해, 사용자 행위와 시스템 처리 차이점을 체계적으로 설명하여 안내와 실제 사용 연결고리를 강화한다.",
+          "task_id": "info-online-offline",
+          "outline": [
+            "상품권 온라인 주문 절차 및 사용 범위 이해하기",
+            "매장 구매와 결제 과정의 실무적 차이점 정리",
+            "이용 안내 문서와 실제 사용처 정보를 비교해 정확히 인지하는 법"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 11970,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1063,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13033
+        },
+        "estimated_usd": 0.0064888,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T01:18:50.747883+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7457,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 723,
+          "output_tokens_details": {
+            "reasoning_tokens": 259
+          },
+          "total_tokens": 8180
+        },
+        "estimated_usd": 0.00884625,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T01:18:57.690543+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T01:18:40.682944+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T01:18:53.753599+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01533505,
+    "estimated_total_usd": 0.01533505,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
