@@ -159,10 +159,15 @@
       "board": "gc_tip",
       "topic": "모바일상품권 문자 수신 후 발신처 및 메시지 안전성 판단법",
       "run_id": "40425508879"
+    },
+    {
+      "board": "sale",
+      "topic": "판매 상담 완료 후 중복 진행 방지하는 소통법",
+      "run_id": "40432236900"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "40431750331",
+  "last_board": "sale",
+  "last_run_id": "40432236900",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

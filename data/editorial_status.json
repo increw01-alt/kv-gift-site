@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T01:23:39.339986+00:00",
+  "generatedAt": "2026-10-27T01:24:08.370220+00:00",
   "dateKst": "2026-10-27",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 4,
-  "held": 2,
+  "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.15130375,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1816737,
+  "estimatedTotalUsd": 0.1816737,
   "records": [
     {
       "runId": "40425508879",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "40432236900",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "판매 상담 완료 후 중복 진행 방지하는 소통법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-27T01:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.03036995,
+      "knownSubtotalUsd": 0.03036995
     }
   ]
 }

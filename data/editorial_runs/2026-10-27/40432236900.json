@@ -1,17 +1,19 @@
 {
   "run_id": "40432236900",
   "date_kst": "2026-10-27",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "판매 상담 완료 후 중복 진행 방지하는 소통법",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T01:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 '[판매 안내] 판매 상담 중 진행 중단 시점과 확인 사항'과 핵심 질문이 겹칩니다. 둘 다 상품권 판매 상담의 진행 상태를 정리하고, 중단 또는 완료 의사를 명확히 전달하며, 기록으로 중복 소통을 막는 방법을 안내합니다. / 상담 완료 후 다른 매입처에 중단 의사를 알리고 상태를 구분해 기록하는 방식이 이미 기존 글의 ‘상담 단계 확인·중단 의사 전달·기록 정리’와 사실상 같은 해결 흐름입니다."
+    ]
   },
   "api_usage": {
     "run_id": "40432236900",
@@ -20,15 +22,200 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "판매 상담 완료 후 중복 진행 방지하는 소통법",
+        "source_id": "",
+        "reader_problem": "여러 매입처에 동시에 상담할 때 한 곳에서 거래가 완료되면 다른 곳에 중복 진행 여부를 명확히 알리는 방법을 몰라 혼란과 시간 낭비가 발생한다.",
+        "distinct_angle": "상담 완료 사실을 다른 상담처에 알리고 미진행 문의를 종료하는 효과적인 메시지 표현과 자기 기록 구분법을 소개한다.",
+        "task_id": "sale-completed-confirmation",
+        "outline": [
+          "현재 상담 중인 단계와 진행 상태 객관적으로 파악하기",
+          "거래 완료 시 다른 매입처에 중단 의사 명확히 전달하는 메시지 작성",
+          "자신 기록으로 상담 완료 여부와 미진행 문의 구분해 관리하기"
+        ],
+        "novelty_reason": "후보 2는 ‘한 곳에서 거래가 완료된 뒤 다른 상담처에 중복 진행을 막기 위해 종료 의사를 알리는 소통법’에 초점이 있어, 기존의 상담 중단/정보 준비/상태 확인 글과 상황이 다릅니다. 이미 진행이 끝난 이후의 미진행 문의 정리, 완료 사실 전달 문구, 자기 기록에서 상담 완료 여부를 구분하는 절차까지 포함해 독립성이 가장 큽니다.",
+        "screen_rejections": [
+          "0: 같은 상품권 종류와 상태를 맞춰 답변을 비교하는 내용은 기존의 상담 금액·공제내역 정리, 상담 전 정보 준비와 비교 구조가 겹칩니다.",
+          "1: 상담 정보와 실제 전달 정보, 개인정보 보호를 구분하는 흐름은 기존의 상담 전 준비와 민감정보 노출 방지 글과 같은 범주입니다.",
+          "3: 상태 이상 발견 후 점검·사진 기록·문의 순서는 기존 판매 전 오류·상태 이상 대응 가이드와 거의 같습니다.",
+          "4: 문의 전 상태와 증빙 자료를 점검하는 체크리스트는 기존 문의 전 정보 준비 및 상태 확인 안내를 확장한 수준입니다.",
+          "5: 모바일상품권 상태 관리와 개인정보 보호는 기존의 보안 안내, 기록 관리, 상태 점검 글들과 핵심 해결 절차가 겹칩니다."
+        ]
+      },
+      "board": "sale",
+      "topic": "판매 상담 완료 후 중복 진행 방지하는 소통법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-26T13:03:27Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12312,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 956,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13268
+        },
+        "estimated_usd": 0.0064544,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T01:23:47.331755+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11502,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 384,
+          "output_tokens_details": {
+            "reasoning_tokens": 74
+          },
+          "total_tokens": 11886
+        },
+        "estimated_usd": 0.0103545,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T01:23:53.869729+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2340,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 357,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2697
+        },
+        "estimated_usd": 0.0015072,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T01:23:56.734254+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4225,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 476,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4701
+        },
+        "estimated_usd": 0.0024516,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T01:24:02.207028+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9623,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 530,
+          "output_tokens_details": {
+            "reasoning_tokens": 223
+          },
+          "total_tokens": 10153
+        },
+        "estimated_usd": 0.00960225,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T01:24:08.117463+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T01:23:41.387750+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T01:23:50.294344+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T01:23:53.874895+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T01:23:57.985481+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T01:24:04.168888+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03036995,
+    "estimated_total_usd": 0.03036995,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
