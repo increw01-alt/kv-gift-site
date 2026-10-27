@@ -733,5 +733,18 @@
     "publication_mode": "automatic",
     "run_id": "40454530679",
     "usage_file": "data/editorial_runs/2026-10-27/40454530679.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 61,
+    "topic": "주문 관련 문의를 명확하게 분리해 고객센터 응대 도움 받기",
+    "drafted_at": "2026-10-27",
+    "automation": true,
+    "search_intent": "여러 주문을 한꺼번에 문의할 때 주문별 문제와 증거를 나눠 정리해 상담을 빠르게 받으려는 독자의 질문",
+    "image_scene": "책상 위에 서로 다른 색 탭이 꽂힌 서류철 세 개와 주문번호 스티커, 펜이 놓여 있고 한 사람이 각 서류철에 주문별 메모와 증빙 사진을 따로 끼워 넣으며 분류하는 장면",
+    "image_alt": "색깔 탭이 달린 서류철에 주문별 메모와 증빙을 하나씩 나눠 꽂으며 정리하는 모습입니다.",
+    "publication_mode": "automatic",
+    "run_id": "40461267410",
+    "usage_file": "data/editorial_runs/2026-10-27/40461267410.json"
   }
 ]
