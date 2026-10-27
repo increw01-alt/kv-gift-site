@@ -169,10 +169,15 @@
       "board": "gc_information",
       "topic": "상품권 구매 전에 꼭 확인해야 하는 기본 정보",
       "run_id": "40460272648"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 매입 상담 시 동일 조건 비교법 안내",
+      "run_id": "40460770109"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "40460272648",
+  "last_board": "sale",
+  "last_run_id": "40460770109",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T06:23:33.876151+00:00",
+  "generatedAt": "2026-10-27T06:23:58.429616+00:00",
   "dateKst": "2026-10-27",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 6,
   "verified": 6,
   "attempts": 11,
-  "held": 3,
+  "held": 4,
   "errors": 1,
-  "knownSubtotalUsd": 0.70652415,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.7313214,
+  "estimatedTotalUsd": 0.7313214,
   "records": [
     {
       "runId": "40425508879",
@@ -144,16 +144,16 @@
     },
     {
       "runId": "40460770109",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "상품권 매입 상담 시 동일 조건 비교법 안내",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-27T06:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02479725,
+      "knownSubtotalUsd": 0.02479725
     }
   ]
 }
