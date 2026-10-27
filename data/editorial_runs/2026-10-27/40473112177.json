@@ -1,17 +1,19 @@
 {
   "run_id": "40473112177",
   "date_kst": "2026-10-27",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T08:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 제공된 후보 0~5는 모두 기존 글의 질문, 확인 항목, 해결 절차와 겹쳐 통과할 만큼 새롭고 독립적인 주제가 없습니다. 최근 보류 사유도 피하지 못했습니다. / 0: 상품권 구매 시 결제수단별 할인·적립 혜택을 비교하는 내용이 기존 카드 실적/포인트 적립 확인 글과 핵심 질문이 같습니다. / 1: 매장 선택 시 접근성·이동 경로·재고를 비교하는 흐름이 기존 상품권 사용 계획/매장 선택 글과 동일합니다. / 2: 주문 취소·환불 조건 점검과 서류 준비는 기존 취소·환불 문의 준비형 글과 중복됩니다. / 3: 모바일상품권 문자 미도착 시 점검·문의 정보 준비는 기존 발송 지연/미도착 대응 글과 같은 문제 해결 절차입니다. / 4: 판매처 신뢰도 확인은 기존 판매처 확인, 리뷰 조사, 안전 결제 점검과 사실상 같은 사전 검증입니다. / 5: 주문 완료·교환 완료·사용 준비 상태를 구분하는 내용은 최근 보류된 상태명 구분 주제와 겹칩니다."
+    ]
   },
   "api_usage": {
     "run_id": "40473112177",
@@ -20,15 +22,153 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 구매시 할인과 적립 혜택 최적 활용법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 신용카드, 체크카드, 포인트 적립 등 다양한 결제 혜택을 한 번에 놓치지 않고 최대한 활용하는 방법이 궁금하다.",
+          "distinct_angle": "각 결제 수단별 혜택을 간단히 파악하고, 실제 상황에 맞춰 우선순위를 정해 적용하는 실제 구매 전용 판단법을 제시한다.",
+          "task_id": "tip-unneeded-basket",
+          "outline": [
+            "주요 결제 수단별 할인 및 적립 혜택 간략 정리하기",
+            "구매 예정 상품권 종류와 금액에 맞춰 최적 결제 수단 우선순위 설정",
+            "결제 직전 적용 여부 점검과 조건 충족 시나리오 대비하기"
+          ]
+        },
+        {
+          "topic": "상품권 사용 매장 선택과 접근성 고려하기",
+          "source_id": "",
+          "reader_problem": "상품권으로 구매할 매장을 정할 때 이동 경로, 실제 구매 예정 상품 유무, 시간과 비용 등 여러 조건을 함께 비교하는 구체적 방법을 몰라 혼란스럽다.",
+          "distinct_angle": "단순 매장 위치뿐 아니라 기존 방문 계획과 이동 동선까지 포함해 편하게 구매를 완료하는 실제 단계별 비교 과정과 판단 기준을 구체적으로 안내한다.",
+          "task_id": "tip-visit-route",
+          "outline": [
+            "현재 위치와 원래 방문 예정지, 인근 매장 위치 파악하기",
+            "각 매장 접근 경로와 이동 시간·비용 비교 분석하기",
+            "필요한 상품 재고 및 가격 여부 고려해 최종 매장 선택하기"
+          ]
+        },
+        {
+          "topic": "상품권 주문 취소와 환불 조건 철저 점검법",
+          "source_id": "",
+          "reader_problem": "상품권 주문을 취소하거나 환불할 때 판매처별 조건과 절차가 달라서 미리 준비해야 할 서류와 확인 사항을 정확히 알고 싶다.",
+          "distinct_angle": "실제 취소·환불 전 필수로 확인할 조건 점검표를 만들고, 요청 시 신속하게 대응하는 단계별 행동 지침까지 실용적으로 제공한다.",
+          "task_id": "",
+          "outline": [
+            "판매처별 환불 및 취소 정책 문서에서 핵심 조건 정리하기",
+            "취소 요청 시 필요한 증빙서류와 정보 미리 준비하기",
+            "환불 처리 기간과 방식에 맞게 대응 및 확인 절차 수행하기"
+          ]
+        },
+        {
+          "topic": "상품권 모바일 문자 수신 이상 대응과 사전 점검",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 늦게 도착하거나 도착하지 않을 때, 사전에 점검할 항목과 문의할 때 필요한 정보를 알지 못해 즉각 대응하기 어렵다.",
+          "distinct_angle": "사전 점검 리스트와 단계별 확인 절차를 바탕으로, 빠르고 정확하게 문제를 인지하고 고객센터 문의 시 준비해야 할 구체적 정보를 정리한다.",
+          "task_id": "",
+          "outline": [
+            "구매 시 입력한 수신 연락처 및 모바일 환경 사전 점검 항목 목록",
+            "문자 미도착 시 바로 확인해야 하는 항목과 순서별 점검 방법",
+            "문자 재발송 요청 시 문의에 필요한 상세 정보 준비법"
+          ]
+        },
+        {
+          "topic": "상품권 구매처 신뢰도 안전 확인 절차",
+          "source_id": "",
+          "reader_problem": "온라인이나 오프라인에서 처음 접하는 판매처에서 상품권을 구매할 때, 해당 판매처가 안전한지 신뢰도를 검증하는 구체적인 방법이 궁금하다.",
+          "distinct_angle": "판매처 연락처 검증, 인터넷 리뷰 및 피해 사례 조사, 안전 결제 수단 활용 등 다각도로 신속하게 신뢰성을 따지는 실질 단계별 점검법을 안내한다.",
+          "task_id": "",
+          "outline": [
+            "판매처 공식 연락처 및 인증 정보 직접 확인하기",
+            "인터넷, SNS 리뷰 및 피해 사례 신속 조사하기",
+            "안전 결제 수단 사용 및 거래 기록 철저히 남기기"
+          ]
+        },
+        {
+          "topic": "상품권 주문 완료와 교환 완료 상태 정확히 구별하기",
+          "source_id": "",
+          "reader_problem": "상품권 주문이 완료됐다는 메시지와 실제 상품권 교환 또는 사용 준비가 완료됐다는 의미가 달라서 혼란스러운데, 각 단계별 의미와 확인 방법이 궁금하다.",
+          "distinct_angle": "주요 판매처별 상태명과 처리 과정 차이를 실제 예시와 함께 비교해 보여주며, 각 상태마다 독자가 해야 할 점검 및 문의 방법을 안내한다.",
+          "task_id": "",
+          "outline": [
+            "상품권 주문, 발송, 교환, 사용 단계별 핵심 상태 정의 및 특징 이해하기",
+            "대표 판매처 상태 표시 용어와 실제 처리 차이 사례 비교",
+            "각 상태 발생 시 반드시 확인해야 할 사항과 고객센터 문의 준비법"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12352,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1016,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13368
+        },
+        "estimated_usd": 0.0065664,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T08:23:46.635588+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8924,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 392,
+          "output_tokens_details": {
+            "reasoning_tokens": 104
+          },
+          "total_tokens": 9316
+        },
+        "estimated_usd": 0.008457,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T08:23:52.183669+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T08:23:38.806565+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T08:23:48.158054+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0150234,
+    "estimated_total_usd": 0.0150234,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
