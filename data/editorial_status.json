@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T01:28:31.294945+00:00",
+  "generatedAt": "2026-10-27T01:29:36.767455+00:00",
   "dateKst": "2026-10-27",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 5,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.1816737,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2827082,
+  "estimatedTotalUsd": 0.2827082,
   "records": [
     {
       "runId": "40425508879",
@@ -66,16 +66,16 @@
     },
     {
       "runId": "40432726261",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "문의 내용 수정 시 이전 내용과 변경점 명확히 구분하는 요령",
+      "url": "https://kv-gift.co.kr/board/general_notice/60",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-27T01:27:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1010345,
+      "knownSubtotalUsd": 0.1010345
     }
   ]
 }
