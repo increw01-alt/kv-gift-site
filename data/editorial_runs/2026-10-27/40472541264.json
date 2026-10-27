@@ -1,17 +1,19 @@
 {
   "run_id": "40472541264",
   "date_kst": "2026-10-27",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T08:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 통과할 만큼 새롭고 독립적인 후보가 없습니다. 0번과 3번은 선물을 미리 물어볼지/깜짝으로 줄지 판단하는 기준으로, 이미 있는 ‘상대 취향을 자연스럽게 알아보는 방법’ 및 ‘선물받을 사람에게 맞는 상품권을 고르려면 무엇을 물어봐야 하나요?’와 핵심 질문과 해결 흐름이 겹칩니다. 2번은 모바일상품권 미수신 점검과 재문의 준비로 기존 발송 지연·미도착 대응 글과 중복됩니다. 1번과 5번은 상품권 구매 전 점검과 종류별 선택으로 범위가 너무 넓고, 기존 구매 안내·상품권 종류 비교 글과 같은 확인 순서를 반복합니다. 4번은 상대의 선물을 거절한 뒤 관계를 유지하는 소통법으로 가장 구체적이지만, 이미 선물 거절/답장 후속 대화 관련 기존 글과 해결 절차가 거의 같아 독립 주제로 보기 어렵습니다. / 0번: 선물은 미리 물어보고 고를지 깜짝 전달할지의 선택 기준은 기존 ‘선물을 고르기 전에 상대방의 취향을 자연스럽게 알아보는 방법’과 질문·상황·해결 순서가 겹칩니다. 받는 사람의 성향을 파악해 선물 방식을 정한다는 흐름도 동일합니다. / 1번: 상품권 구매 전 필수 확인사항과 판매처 구별법은 기존 구매 안내 글의 ‘판매처 확인, 리뷰 조사, 안전 결제 수단 확인’과 사실상 같은 사전 점검 절차입니다. 검증 자료 없는 업체 조건이나 정책을 새로 제시하는 내용도 없습니다. / 2번: 모바일상품권 문자 미수신 시 점검과 예방은 기존 ‘문자가 안 왔나요? 재구매 전에 발송 상태를 확인해 주세요’ 및 ‘도착하지 않았을 때 어떤 정보를 준비해 문의하나요?’와 핵심 문제, 확인 항목, 문의 준비가 겹칩니다. / 3번: 선물용 상품권 고르기 전 받는 이의 취향 파악법은 기존 ‘선물을 고르기 전에 상대방의 취향을 자연스럽게 알아보는 방법’과 거의 같은 독자 상황과 대화형 질문법을 반복합니다. / 4번: 선물 거절 후에도 관계를 부드럽게 유지하는 소통법은 비교적 구체적이지만, 이미 선물 거절 후 관계 유지와 후속 대화 표현을 다룬 기존 글들과 감사를 전하고 안부를 이어가는 해결 방식이 매우 유사합니다. / 5번: 상품권 종류별 기본 정보와 나에게 맞는 선택법은 범위가 지나치게 넓고, 기존 상품권 종류 비교·선택 안내 글과 사용 조건을 정리해 스스로 고르는 구조가 같습니다."
+    ]
   },
   "api_usage": {
     "run_id": "40472541264",
@@ -20,15 +22,153 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "선물을 미리 물어보고 고를지 깜짝 전달할지 선택 기준 정리",
+          "source_id": "",
+          "reader_problem": "선물 선택 시 미리 수신자에게 물어보고 고르는 편과 깜짝 선물로 전달하는 편 중 자신에게 맞는 적절한 방식을 결정하기 어렵습니다.",
+          "distinct_angle": "받는 이와 상황별 마음 상태를 고려해 각각의 장단점을 공정하게 비교하고, 독자가 스스로 선택 기준을 세울 수 있도록 질문 중심의 접근법을 제시합니다.",
+          "task_id": "free-surprise-or-ask",
+          "outline": [
+            "선물 받는 사람의 성향과 상황 이해하기 위한 질문 만들기",
+            "각 선택 방식의 감정적 효과와 관계 영향 비교하기",
+            "자가진단형 질문으로 나에게 맞는 선물 전달 방법 결정하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 전 필수 확인사항과 신뢰할 수 있는 판매처 구별법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 전에 어떤 기본 정보를 꼭 확인해야 안전하고 합리적인 선택인지 구체적으로 알기 어려워 불안합니다.",
+          "distinct_angle": "신뢰할 수 있는 판매처 선별과 필수 점검사항을 실천 가능한 단계별 행동요령으로 나누어 독자가 구매 전에 스스로 확인할 수 있는 체계를 제공합니다.",
+          "task_id": "free-surprise-or-ask",
+          "outline": [
+            "판매처 공식 인증 마크 및 연락처 직접 확인하기",
+            "인터넷과 SNS 리뷰로 판매 이력과 피해 사례 조사하기",
+            "구매 전 안전 결제 수단과 기록 남기는 습관 들이기"
+          ]
+        },
+        {
+          "topic": "모바일상품권 문자 미수신 시 점검과 문제 예방 실천법",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 도착하지 않거나 오류가 있을 때 어떻게 미리 점검하고 예방하는지 구체적으로 모릅니다.",
+          "distinct_angle": "구매 전 연락처 정확성 확인부터 문자 수신 지연 위험 원인 파악 및 유형별 대처 절차를 실천 중심으로 안내해 독자가 능동적으로 문제를 대비하도록 돕습니다.",
+          "task_id": "free-surprise-or-ask",
+          "outline": [
+            "구매 시 수신 연락처와 모바일 기기 환경 사전 점검하기",
+            "문자 미도착 즉시 확인해야 할 사항과 고객센터 문의 준비하기",
+            "재발송 요청 시 필요한 정보와 빈틈없이 점검하는 습관 기르기"
+          ]
+        },
+        {
+          "topic": "선물용 상품권 고르기 전 받는 이의 자연스러운 취향 파악법",
+          "source_id": "",
+          "reader_problem": "선물할 상품권을 고르기 전에 받는 사람의 취향이나 사용 환경을 자연스럽고 부담 없이 파악하는 방법을 몰라 고민입니다.",
+          "distinct_angle": "일상 대화 속에 녹여내는 질문법과 관찰 방법, 상대의 라이프스타일에 맞춘 맞춤형 상품권 선택 기준 세우기까지 단계별 실용 팁 제공으로 새롭게 접근합니다.",
+          "task_id": "free-surprise-or-ask",
+          "outline": [
+            "친근한 대화에서 자연스럽게 선호도 파악하는 질문법 연습하기",
+            "사용 환경, 기기 호환성 등 필수 체크사항 질문으로 점검하기",
+            "파악한 정보로 선물용 상품권 유형과 금액 합리적으로 선택하기"
+          ]
+        },
+        {
+          "topic": "선물 거절 후에도 관계를 부드럽게 유지하는 소통법",
+          "source_id": "",
+          "reader_problem": "선물을 정중히 거절한 뒤에도 상대방과의 관계에 부담을 주지 않고 긍정적인 마음을 전하는 구체적인 소통 방법이 어려워 고민입니다.",
+          "distinct_angle": "거절 의사 표현과 동시에 고마움을 진솔하게 전하고, 이후에도 지속적인 관심을 담는 대화 예시와 실천법을 구체적으로 제시합니다.",
+          "task_id": "free-surprise-or-ask",
+          "outline": [
+            "거절 시 긍정과 감사의 마음을 진심으로 전하는 문장 구성하기",
+            "거절 후에도 관심과 우정을 지속적으로 표현하는 의사소통 전략 배우기",
+            "선물 대신 작은 마음표현 방법과 타이밍 실습하기"
+          ]
+        },
+        {
+          "topic": "상품권 종류별 기본 정보와 나에게 맞는 선택법 안내",
+          "source_id": "",
+          "reader_problem": "상품권 종류가 다양해 적절한 사용처와 조건을 사전에 스스로 확인하고 본인에게 맞는 상품권을 고르기가 어려워 혼란스럽습니다.",
+          "distinct_angle": "금액형, 물품교환형, 할인쿠폰 등 주요 상품권 종류를 체계적으로 분류하고, 각 조건과 제한을 비교한 후 자기 상황에 맞는 선택 기준을 만드는 질문 중심 틀을 제공합니다.",
+          "task_id": "free-surprise-or-ask",
+          "outline": [
+            "주요 상품권 종류별 특성과 사용 조건 구체적으로 정리하기",
+            "각 종류와 조건을 상세 비교하며 차이점 명확하게 이해하기",
+            "자기 용도에 맞는 상품권 선택기준 스스로 점검하는 질문법 적용하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12273,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1079,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13352
+        },
+        "estimated_usd": 0.0066356,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T08:18:52.119000+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10269,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 785,
+          "output_tokens_details": {
+            "reasoning_tokens": 123
+          },
+          "total_tokens": 11054
+        },
+        "estimated_usd": 0.01123425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T08:19:01.103850+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T08:18:42.891466+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T08:18:54.809345+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01786985,
+    "estimated_total_usd": 0.01786985,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
