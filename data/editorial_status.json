@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T02:18:36.824984+00:00",
+  "generatedAt": "2026-10-27T02:19:46.828906+00:00",
   "dateKst": "2026-10-27",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 6,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.2827082,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3843367,
+  "estimatedTotalUsd": 0.3843367,
   "records": [
     {
       "runId": "40425508879",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "40437622941",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "선물 거절 후에도 관계가 부담되지 않는 마음 전달법",
+      "url": "https://kv-gift.co.kr/board/sense/12",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-27T02:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1016285,
+      "knownSubtotalUsd": 0.1016285
     }
   ]
 }

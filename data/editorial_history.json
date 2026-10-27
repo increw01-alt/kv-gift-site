@@ -681,5 +681,18 @@
     "publication_mode": "automatic",
     "run_id": "40432726261",
     "usage_file": "data/editorial_runs/2026-10-27/40432726261.json"
+  },
+  {
+    "board": "sense",
+    "id": 12,
+    "topic": "선물 거절 후에도 관계가 부담되지 않는 마음 전달법",
+    "drafted_at": "2026-10-27",
+    "automation": true,
+    "search_intent": "선물 거절 뒤에도 상대가 서운하지 않게 마음을 전하고 관계를 자연스럽게 이어가는 말과 행동을 알고 싶은 독자 질문",
+    "image_scene": "작은 테이블 위에 손글씨 감사 카드와 따뜻한 차 두 잔, 작은 화분이 놓여 있고 한 사람이 카드에 짧은 감사 문장을 적으며 상대에게 전할 메시지를 정리하는 장면",
+    "image_alt": "작은 테이블에서 손글씨 감사 카드를 적으며 선물 거절 뒤의 마음을 전하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40437622941",
+    "usage_file": "data/editorial_runs/2026-10-27/40437622941.json"
   }
 ]

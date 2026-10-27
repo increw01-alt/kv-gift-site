@@ -1,16 +1,26 @@
 {
   "run_id": "40437622941",
   "date_kst": "2026-10-27",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sense",
+  "topic": "선물 거절 후에도 관계가 부담되지 않는 마음 전달법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sense/12",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-27T02:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,264 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "선물 거절 후에도 관계가 부담되지 않는 마음 전달법",
+        "source_id": "",
+        "reader_problem": "선물을 정중히 거절한 후에도 상대와 관계에 부담을 주지 않고 오히려 긍정적인 마음을 전달하는 구체적인 방법을 몰라 고민이다.",
+        "distinct_angle": "거절하면서도 관계를 유지할 수 있는 감사·칭찬·다른 지원 제안 등 다양한 마음 전달 예시와 대화 태도를 소개한다.",
+        "task_id": "sense-decline-gift",
+        "outline": [
+          "거절 시 긍정적인 마음과 고마움 진솔하게 표현하기",
+          "거절 후에도 지속적 관심과 우정을 드러내는 방법",
+          "선물 대신 다른 작은 마음 표현 방안 실습하기"
+        ],
+        "novelty_reason": "4번은 단순한 선물 거절 문구가 아니라, 거절 이후에도 관계를 어색하게 만들지 않도록 감사·칭찬·다른 지원 제안까지 포함해 마음을 전달하는 흐름을 다룹니다. 기존의 선물 거절/답장 재촉 방지 글들과 질문이 일부 겹치지만, ‘거절 후 관계 유지’라는 후속 상황을 중심으로 구체적인 대화 태도와 전환 예시를 제시해 가장 새롭습니다.",
+        "screen_rejections": [
+          "0번은 선물을 받기 어렵다는 의사를 부드럽게 전하는 내용으로, 이미 있는 선물 거절·감사 표현 범주와 거의 같습니다.",
+          "1번은 선물 후 답장이나 사용 재촉을 하지 않는 감사 인사법으로, 기존의 선물 후 부담 주지 않는 메시지 안내와 독자 상황이 겹칩니다.",
+          "2번은 선물 받기 어려운 상황을 솔직하게 알리는 예의 있는 대화법으로, 0번과 동일한 거절 주제의 변형이라 새 절차가 부족합니다.",
+          "3번은 답장하지 않아도 되는 상황을 알리는 문구 만들기로, 선물 후 재촉을 피하는 메시지 예시라는 점에서 기존 글과 중복됩니다.",
+          "5번은 선물 후 자연스러운 후속 연락법으로, 1번과 같은 부담 없는 감사 메시지·후속 연락 안내 범주에 속합니다."
+        ]
+      },
+      "board": "sense",
+      "topic": "선물 거절 후에도 관계가 부담되지 않는 마음 전달법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-26T13:03:27Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "선물 거절 뒤에도 상대가 서운하지 않게 마음을 전하고 관계를 자연스럽게 이어가는 말과 행동을 알고 싶은 독자 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12318,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1018,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13336
+        },
+        "estimated_usd": 0.006556,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T02:18:47.520399+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8882,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 479,
+          "output_tokens_details": {
+            "reasoning_tokens": 143
+          },
+          "total_tokens": 9361
+        },
+        "estimated_usd": 0.008817,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T02:18:55.222827+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2360,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 415,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2775
+        },
+        "estimated_usd": 0.001608,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T02:18:58.524500+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7634,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 534,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8168
+        },
+        "estimated_usd": 0.003908,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T02:19:03.898838+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9326,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 255,
+          "output_tokens_details": {
+            "reasoning_tokens": 91
+          },
+          "total_tokens": 9581
+        },
+        "estimated_usd": 0.008142,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T02:19:09.136806+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3562,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1066
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4934
+        },
+        "estimated_usd": 0.066458,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-27T02:19:41.209609+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7112,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 179,
+          "output_tokens_details": {
+            "reasoning_tokens": 114
+          },
+          "total_tokens": 7291
+        },
+        "estimated_usd": 0.0061395,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-27T02:19:45.703388+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T02:18:38.944040+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T02:18:50.317233+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T02:18:55.225249+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-27T02:18:59.697065+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T02:19:05.880090+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-27T02:19:09.156618+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-27T02:19:42.489457+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1016285,
+    "estimated_total_usd": 0.1016285,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
