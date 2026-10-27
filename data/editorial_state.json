@@ -154,10 +154,15 @@
       "board": "free",
       "topic": "상품권 전달 시 어떤 상황 설명을 곁들이면 받는 사람이 이해하기 쉬울까?",
       "run_id": "40263385020"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "모바일상품권 문자 수신 후 발신처 및 메시지 안전성 판단법",
+      "run_id": "40425508879"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "40299115283",
+  "last_board": "gc_tip",
+  "last_run_id": "40425508879",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
