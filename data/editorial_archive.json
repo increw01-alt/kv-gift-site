@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T04:19:34.821910+00:00",
+  "generatedAt": "2026-10-27T04:20:38.418804+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1301,7 +1301,7 @@
       "board": "gc_tip",
       "topic": "상품권과 다른 결제 수단 혼합 시 결제 전 확인 질문 리스트",
       "url": "https://kv-gift.co.kr/board/gc_tip/39",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-27T04:20:38.409200+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10166475,
       "knownSubtotalUsd": 0.10166475
