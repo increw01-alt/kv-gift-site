@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T09:18:45.198316+00:00",
+  "generatedAt": "2026-10-28T09:19:18.452876+00:00",
   "dateKst": "2026-10-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 9,
   "verified": 9,
   "attempts": 15,
-  "held": 5,
+  "held": 6,
   "errors": 0,
-  "knownSubtotalUsd": 1.0873466,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 1.12086415,
+  "estimatedTotalUsd": 1.12086415,
   "records": [
     {
       "runId": "40607871974",
@@ -196,16 +196,16 @@
     },
     {
       "runId": "40663156653",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "장바구니에 담은 뒤 상품권 옵션을 바꿨다면 마지막에 무엇을 대조할까요?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-28T09:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.03351755,
+      "knownSubtotalUsd": 0.03351755
     }
   ]
 }

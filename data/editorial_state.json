@@ -179,10 +179,15 @@
       "board": "purchase",
       "topic": "스마트폰 사용이 익숙하지 않은 수신자 위한 상품권 비교 가이드",
       "run_id": "40626365386"
+    },
+    {
+      "board": "purchase",
+      "topic": "장바구니에 담은 뒤 상품권 옵션을 바꿨다면 마지막에 무엇을 대조할까요?",
+      "run_id": "40663156653"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "40655792876",
+  "last_board": "purchase",
+  "last_run_id": "40663156653",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

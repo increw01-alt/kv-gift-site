@@ -1,17 +1,19 @@
 {
   "run_id": "40663156653",
   "date_kst": "2026-10-28",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "장바구니에 담은 뒤 상품권 옵션을 바꿨다면 마지막에 무엇을 대조할까요?",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-28T09:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 장바구니에서 상품권 옵션을 바꾼 뒤 원래 의도한 대상과 최종 옵션을 대조하는 방식이, 기존의 수신 연락처 확인·결제 전 최종 확인 글과 핵심 질문 및 해결 흐름이 거의 같습니다. / 본문이 대상, 금액, 메시지, 연락처를 항목별로 대조하라고만 안내해 새로운 절차나 사례가 충분히 드러나지 않습니다. / 수정 전 기록과 수정 후 선택값을 짝지어 확인하라는 설명이 이미 공개된 주문 전 확인·대조형 글들과 의미상 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "40663156653",
@@ -20,15 +22,200 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "장바구니에 담은 뒤 상품권 옵션을 바꿨다면 마지막에 무엇을 대조할까요?",
+        "source_id": "",
+        "reader_problem": "장바구니에서 상품권 옵션을 수정할 때 최종 선택한 옵션들과 원래 의도한 대상(수신자 등)이 일치하는지 점검해야 하지만, 이를 꼼꼼히 확인하는 절차를 몰라 구매 실수를 걱정하는 독자 문제",
+        "distinct_angle": "옵션 변경 후 발생할 수 있는 착오를 예방하기 위해 구매 직전 단계에서 원래 선택 대상으로부터 최종 옵션까지 대응 관계를 세밀하게 대조하는 구체 점검 절차를 제안하는 글",
+        "reader_situation": "상품권 장바구니에서 옵션 변경(금액, 수신자 등)을 자주 하며, 결국 최종 주문 정보가 원래 의도와 맞는지 비교하고 싶은 구매자 상황",
+        "deliverable": "최종 주문 확인 시 원래 선택한 대상과 현재 선택된 상품권 옵션 및 수신 대상과의 대응 관계를 쉽게 확인하는 점검 순서와 구체 행동 목록",
+        "task_id": "purchase-cart-options",
+        "outline": [
+          "원래 장바구니에 담긴 상품권의 대상과 옵션 기록 방법",
+          "장바구니 내 옵션 변경 시 변경 사항 상세 확인법",
+          "최종 주문 전 의도 대상과 옵션의 대응 관계 대조 절차"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 /board/purchase/2566의 ‘결제 전 최종 결제 금액 확인’과 /board/purchase/2564의 ‘수신 연락처 확인’인데, 이 후보는 그보다 한 단계 앞선 ‘장바구니에서 옵션을 바꾼 뒤 원래 의도한 대상과 최종 옵션·수신 대상의 대응 관계를 어떻게 대조할지’에 초점을 둡니다. 즉 금액 확인이나 연락처 재확인이 아니라, 변경 전 기록과 변경 후 선택값을 짝지어 최종 주문 정보의 일치 여부를 점검하는 구체 절차를 제시해 새로운 해결 문제를 만듭니다.",
+        "screen_rejections": [
+          "1번: /board/purchase/2564가 이미 수신 연락처 확인, 수정 여부 문의, 주문 직전 재점검을 다뤘습니다. 이 후보는 동명이인 혼동 방지와 개인정보 최소 공개를 추가했지만, 핵심 질문과 해결 흐름이 ‘수신자 정보 확인’과 거의 같아 새 문제로 보기 어렵습니다.",
+          "2번: 내가 쓸 상품권과 선물할 상품권을 분리하는 내용은 사용자·전달 대상·보관 책임을 나누는 주문 준비표를 제안하지만, 결국 주문 전 역할 구분과 관리라는 일반적 준비 절차에 머물러 있습니다. 기존 글들과 비교했을 때 구매자가 최종적으로 무엇을 대조해야 하는지에 대한 새 질문이 충분히 드러나지 않습니다.",
+          "3번: /board/purchase/2568의 상품권 종류별 명칭·발행사 구분과 겹칩니다. 여러 창에서 옵션을 대응시켜 비교하는 방식이 추가되었지만, 상품명·형태·옵션 차이를 표로 정리해 혼동을 막는 구조가 이미 공개 글의 구분법과 유사합니다."
+        ]
+      },
+      "board": "purchase",
+      "topic": "장바구니에 담은 뒤 상품권 옵션을 바꿨다면 마지막에 무엇을 대조할까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-28T01:23:44Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8414,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1127,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9541
+        },
+        "estimated_usd": 0.0051688,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T09:18:57.725474+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10690,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 617,
+          "output_tokens_details": {
+            "reasoning_tokens": 186
+          },
+          "total_tokens": 11307
+        },
+        "estimated_usd": 0.010794,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-28T09:19:02.959595+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2588,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 439,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3027
+        },
+        "estimated_usd": 0.0017376,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T09:19:07.219548+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5994,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 493,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6487
+        },
+        "estimated_usd": 0.0031864,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T09:19:12.720263+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12485,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 726,
+          "output_tokens_details": {
+            "reasoning_tokens": 408
+          },
+          "total_tokens": 13211
+        },
+        "estimated_usd": 0.01263075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-28T09:19:18.113540+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T09:18:48.628265+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-28T09:18:58.139221+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T09:19:02.974051+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T09:19:08.036138+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-28T09:19:14.065357+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03351755,
+    "estimated_total_usd": 0.03351755,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
