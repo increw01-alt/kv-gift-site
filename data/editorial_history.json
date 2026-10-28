@@ -837,5 +837,18 @@
     "publication_mode": "automatic",
     "run_id": "40637177926",
     "usage_file": "data/editorial_runs/2026-10-28/40637177926.json"
+  },
+  {
+    "board": "sense",
+    "id": 14,
+    "topic": "선물 안내를 말로 전할 때 놓치기 쉬운 내용을 줄이려면?",
+    "drafted_at": "2026-10-28",
+    "automation": true,
+    "search_intent": "전화나 대면으로 선물 내용을 설명할 때 핵심 정보와 추가 확인을 나눠 전달하고 이해 여부까지 자연스럽게 점검하려는 질문",
+    "image_scene": "책상 위에 선물 봉투와 짧은 안내 메모가 놓여 있고, 옆 스마트폰에는 문자로 보낼 추가 안내 초안이 열려 있다. 한 사람이 메모의 핵심 항목을 짚으며 상대와 통화 내용을 정리하는 구도",
+    "image_alt": "책상 위 선물 봉투 옆에 핵심 안내 메모와 문자 초안이 놓여 있고, 한 사람이 말로 전할 내용을 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40643006811",
+    "usage_file": "data/editorial_runs/2026-10-28/40643006811.json"
   }
 ]
