@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T00:18:40.400206+00:00",
+  "generatedAt": "2026-10-28T00:19:45.565250+00:00",
   "dateKst": "2026-10-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 1,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.09929935,
+  "estimatedTotalUsd": 0.09929935,
   "records": [
     {
       "runId": "40607871974",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "공동 구매 상품권 예산 초과 시 해결 방안과 재조정 방법",
+      "url": "https://kv-gift.co.kr/board/purchase/2572",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-28T00:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.09929935,
+      "knownSubtotalUsd": 0.09929935
     }
   ]
 }
