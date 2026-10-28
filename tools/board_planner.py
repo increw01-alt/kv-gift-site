@@ -101,6 +101,17 @@ def validate_candidates(value, source_ids, fresh, task_ids=None):
 
 def choose_plan(board, profile, context, titles, day, root, model, review_model, ask, text_input, usage, fresh):
     material, existing = planning_material(root, context, board, day)
+    review_feedback = material['recent_rejections']
+    # Anchor the creative request to genuinely unused assignments. Long rejected
+    # drafts otherwise become examples to imitate, despite negative instructions.
+    anchors = [task for task in material['unused_reader_tasks'] if fresh(task['question'])]
+    anchors = sorted(anchors, key=lambda task: max(
+        (similarity(task['question'], row['title']) for row in existing), default=0))[:4]
+    if anchors:
+        material = {**material, 'unused_reader_tasks': anchors,
+                    'covered_reader_problems': [p for p in material['covered_reader_problems']
+                                               if p.get('status') == 'published'][-30:],
+                    'recent_rejections': [], 'reader_questions': None}
     allowed = {x['id'] for x in (material['reader_questions'] or {}).get('questions', [])}
     task_ids = {x['id'] for x in material['unused_reader_tasks']}
     string = {'type': 'string'}
@@ -114,6 +125,9 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
                            'task_id': {'type': 'string', 'enum': ['', *sorted(task_ids)]},
                            'outline': {'type': 'array', 'minItems': 3, 'maxItems': 3,
                                        'items': {'type': 'string', 'minLength': 10, 'maxLength': 180}}}}
+    if anchors:
+        item['properties']['topic'] = {'type': 'string', 'enum': [t['question'] for t in anchors]}
+        item['properties']['task_id'] = {'type': 'string', 'enum': [t['id'] for t in anchors]}
     proposed = ask(
         '한국어 게시판 기획자다. 본문을 쓰기 전에 서로 다른 독자 문제를 해결할 후보 최대 네 개를 기획한다. '
         '각 후보는 제목(topic), 관심 자료 ID(source_id), 독자의 구체적 문제(reader_problem), '
@@ -127,6 +141,9 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '각 목차는 이번 문제를 해결하는 행동이어야 한다. 모든 절을 기록 정리와 고객센터 문의로 채우지 않는다. '
         'unused_reader_tasks는 편집자가 준비한 구체적 질문과 결과물이다. 남은 후보를 우선 비교하고 task_id를 그대로 기록한다. '
         '자료의 사실이나 고객의 대화라고 소개하지 않는다. 그 질문을 선택할 때 핵심 결과물을 유지한다. '
+        'unused_reader_tasks가 있으면 각 과제의 question을 topic에 그대로 쓰고 짝이 맞는 task_id를 사용한다. '
+        '과제마다 최대 한 후보만 만들며 모든 설명과 목차는 그 question과 deliverable에 직접 답한다. '
+        '이전 글·보류 제목은 피해야 할 비교 자료이며 새 글의 예시나 작성할 주제가 아니다. '
         'covered_reader_problems에 이미 답한 문제와 실제 해결 절차가 같으면 제외한다. '
         '어느 준비 질문도 적절하지 않을 때만 task_id를 비우고 전혀 다른 문제를 제안한다. '
         'reader_situation에는 이번 글이 필요한 독자와 구체적인 결정 상황을, deliverable에는 읽고 완성할 비교 기준·문구·판단 결과를 적는다. '
@@ -139,6 +156,10 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
          'properties': {'candidates': {'type': 'array', 'maxItems': 4, 'items': item}}},
         'distinct_reader_problems', 'topic', model, usage, 4200)
     candidates = validate_candidates(proposed, allowed, fresh, task_ids)
+    if anchors:
+        assignments = {task['id']: task for task in anchors}
+        candidates = [plan for plan in candidates if plan.get('task_id') in assignments
+                      and plan['topic'] == assignments[plan['task_id']]['question']]
     if not candidates:
         raise PlanningHeld(board, ['기존 글과 다른 독자 문제를 찾지 못했습니다. 본문·이미지를 생성하지 않습니다.'])
     comparisons, reference_articles = [], {}
@@ -173,7 +194,7 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         + '\n\n' + ANGLE_RULES,
         [text_input({'profile': profile, 'comparisons': comparisons,
                      'existing_articles': list(reference_articles.values()),
-                     'recent_rejections': material['recent_rejections']})],
+                     'recent_rejections': review_feedback})],
         {'type': 'object', 'additionalProperties': False, 'required': ['selected_index', 'reason', 'rejections'],
          'properties': {'selected_index': {'type': 'integer'}, 'reason': string,
                         'rejections': {'type': 'array', 'items': string}}},

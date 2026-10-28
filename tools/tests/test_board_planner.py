@@ -38,19 +38,32 @@ class PlannerTests(unittest.TestCase):
                   'deliverable':'구매 전에 정하는 짧은 메시지 구성과 실제 작성 예시'}
             other={**task,'id':'purchase-unused','question':'독립된 다른 편집 질문은 비교 글이 아닙니다'}
             (root/'tools/board_reader_tasks.json').write_text(json.dumps([task,other]),encoding='utf-8')
-            proposed=candidate(task['question'],'gift-choice');proposed['task_id']=task['id']
+            held=root/'data/editorial_runs/2026-10-20/100.json';held.parent.mkdir(parents=True)
+            held.write_text(json.dumps({'status':'held','board':'purchase','topic':'기존에 보류된 다른 질문',
+                'review':{'issues':['기존 글과 실제 해결 절차가 같음']}}),encoding='utf-8')
+            proposed=candidate(task['question'],'');proposed['task_id']=task['id']
             api=Mock(side_effect=[{'candidates':[proposed]},
                 {'selected_index':0,'reason':'미발행 과제 자체는 중복 근거가 아니며 본문과 비교했습니다.','rejections':[]}])
             plan=choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
             first=json.loads(api.call_args_list[0].args[1][0]['text'])
             screen=json.loads(api.call_args_list[1].args[1][0]['text'])
             self.assertEqual(len(first['unused_reader_tasks']),2)
+            self.assertEqual(first['recent_rejections'],[])
+            self.assertEqual(screen['recent_rejections'][0]['issues'],['기존 글과 실제 해결 절차가 같음'])
             self.assertNotIn('curated_reader_tasks',screen)
             self.assertEqual(screen['comparisons'][0]['unpublished_assignment'],task)
             self.assertNotIn(other['question'],str(screen))
             self.assertFalse(any(x['title']==task['question'] for x in screen['existing_articles']))
             self.assertIn('과제와 같다는 이유로 중복 보류하지 않는다',api.call_args.args[0])
             self.assertEqual(plan['task_id'],task['id'])
+            schema=api.call_args_list[0].args[2]['properties']['candidates']['items']['properties']
+            self.assertEqual(set(schema['topic']['enum']),{task['question'],other['question']})
+            self.assertEqual(set(schema['task_id']['enum']),{task['id'],other['id']})
+            mismatched={**proposed,'task_id':other['id']}
+            api=Mock(return_value={'candidates':[mismatched]})
+            with self.assertRaises(PlanningHeld):
+                choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
+            self.assertEqual(api.call_count,1)
 
     def test_selects_distinct_candidate_instead_of_first_title_and_reads_rejection_reasons(self):
         with tempfile.TemporaryDirectory() as temp:
