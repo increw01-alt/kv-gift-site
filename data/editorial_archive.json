@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T02:34:55.297231+00:00",
+  "generatedAt": "2026-10-28T02:35:59.657758+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1483,7 +1483,7 @@
       "board": "free",
       "topic": "선물 가격 대신 마음과 의미를 자연스럽게 표현하는 대화법",
       "url": "https://kv-gift.co.kr/board/free/474",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T02:35:59.639042+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11199215,
       "knownSubtotalUsd": 0.11199215
