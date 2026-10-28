@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T01:18:40.929993+00:00",
+  "generatedAt": "2026-10-28T01:19:49.065253+00:00",
   "dateKst": "2026-10-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 2,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.09929935,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.20760675,
+  "estimatedTotalUsd": 0.20760675,
   "records": [
     {
       "runId": "40607871974",
@@ -27,16 +27,16 @@
     },
     {
       "runId": "40614195382",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "구매 영수증과 상품권 화면, 두 자료의 차이와 쓰임새",
+      "url": "https://kv-gift.co.kr/board/gc_information/11",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-28T01:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1083074,
+      "knownSubtotalUsd": 0.1083074
     }
   ]
 }

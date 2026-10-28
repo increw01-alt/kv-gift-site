@@ -772,5 +772,18 @@
     "publication_mode": "automatic",
     "run_id": "40607871974",
     "usage_file": "data/editorial_runs/2026-10-28/40607871974.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 11,
+    "topic": "구매 영수증과 상품권 화면, 두 자료의 차이와 쓰임새",
+    "drafted_at": "2026-10-28",
+    "automation": true,
+    "search_intent": "구매 영수증과 상품권 화면이 각각 어떤 용도인지 구분하고, 환불·증빙·사용 시점에 무엇을 먼저 확인해야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 구매 영수증과 상품권 화면이 띄워진 스마트폰을 나란히 두고, 가운데에는 메모지에 ‘구매 증빙’과 ‘사용 수단’을 구분해 적는 장면",
+    "image_alt": "책상 위에 구매 영수증과 상품권 화면이 함께 놓여 있고, 가운데 메모지에 두 자료의 쓰임새를 나눠 적는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40614195382",
+    "usage_file": "data/editorial_runs/2026-10-28/40614195382.json"
   }
 ]
