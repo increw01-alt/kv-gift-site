@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T07:19:52.656643+00:00",
+  "generatedAt": "2026-10-28T07:21:16.569054+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1581,7 +1581,7 @@
       "board": "free",
       "topic": "예전에 좋아했던 선물과 지금 필요한 선물이 달라졌다면 어떻게 전할까요?",
       "url": "https://kv-gift.co.kr/board/free/475",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T07:21:16.548245+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1120777,
       "knownSubtotalUsd": 0.1120777
