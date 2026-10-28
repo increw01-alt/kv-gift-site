@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T01:19:49.078630+00:00",
+  "generatedAt": "2026-10-28T01:20:53.442903+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1427,7 +1427,7 @@
       "board": "gc_information",
       "topic": "구매 영수증과 상품권 화면, 두 자료의 차이와 쓰임새",
       "url": "https://kv-gift.co.kr/board/gc_information/11",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T01:20:53.425280+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1083074,
       "knownSubtotalUsd": 0.1083074
