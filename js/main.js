@@ -202,40 +202,24 @@
     }).fail(function () { console.error('시세 데이터(data/prices.json) 로드 실패'); });
   }
 
-  /* ---------- 등록업체: data/businesses.json 렌더링 (메인 섹션 + 최근등록업체 플로팅) ---------- */
+  /* ---------- 등록 사이트: 메인 무작위 10개 + 전체 목록 링크 ---------- */
   if ($('#main_business_list').length || $('#recent_business_list').length) {
-    $.ajax({ url: '/data/businesses.json', dataType: 'json', timeout: 8000 })
-      .done(function (data) {
-        var all = (data.businesses || []).slice();
-        /* 원본과 동일: 메인 카드는 랜덤 순서로 10곳 노출 */
-        for (var i = all.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var t = all[i]; all[i] = all[j]; all[j] = t;
-        }
-        var random10 = all.slice(0, 10);
-        $('#main_business_list').html(random10.map(function (b, i) {
-          var btns = '';
-          if (b.phone) {
-            btns += '<p onclick="event.stopPropagation();location.href=\'tel:' + esc(b.phone) + '\'" title="' + esc(b.phone) + '">' +
-              '<img src="/img/phone-solid.svg" alt="">전화번호</p>';
-          }
-          if (b.homepage) {
-            btns += '<p onclick="event.stopPropagation();window.open(\'' + esc(b.homepage) + '\')">' +
-              '<img src="/img/internet-explorer.svg" alt="">홈페이지</p>';
-          }
-          return '<li class="kv" onclick="location.href=\'/business.html\'">' +
-            '<span></span><span></span><span></span><span></span>' +
-            '<div class="name" style="background-image:url(&quot;/img/kv_random' + ((i % 32) + 1) + '.jpg&quot;)"><p>' + esc(b.name) + '</p></div>' +
-            '<div class="text"><p>' + esc(b.desc) + '</p></div>' +
-            (btns ? '<div class="btn_wrap flex">' + btns + '</div>' : '') +
-            '</li>';
-        }).join(''));
-        /* 최근등록업체 플로팅: 최신 등록순 10곳 */
-        $('#recent_business_list').html((data.businesses || []).slice(0, 10).map(function (b) {
-          return '<li class="new_busi" onclick="location.href=\'/business.html\'"><span>N</span>' + esc(b.name) + '</li>';
-        }).join(''));
-      })
-      .fail(function () { console.error('등록업체 데이터(data/businesses.json) 로드 실패'); });
+    var businessApi = window.KVBusinessCards;
+    var showBusinesses = function (rows) {
+      var all = businessApi ? businessApi.featured(rows) : rows.filter(function (b) { return b.featured === true; });
+      if ($('#main_business_list').length && businessApi) {
+        $('#main_business_list').html(businessApi.render(businessApi.select(all, 10)));
+      }
+      $('#recent_business_list').html(all.slice(0, 10).map(function (b) {
+        return '<li class="new_busi"><a href="' + esc(b.homepage) + '" target="_blank" rel="noopener">' + esc(b.name) + '</a></li>';
+      }).join(''));
+    };
+    if (businessApi) {
+      businessApi.load().then(showBusinesses).catch(function () { console.error('등록 사이트 정보를 불러오지 못했습니다. 기본 목록을 표시합니다.'); });
+    } else {
+      $.ajax({ url: '/data/businesses.json?v=20261028-sites1', dataType: 'json', timeout: 8000 })
+        .done(function (data) { showBusinesses(data.businesses || []); });
+    }
   }
 
   /* ---------- 메인 게시판 요약: data/latest_posts.json 렌더링 ---------- */

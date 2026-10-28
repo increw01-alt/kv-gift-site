@@ -45,23 +45,31 @@ ls img/banner | wc -l      # 10 이면 완료
 행 추가/삭제도 같은 형식으로 하면 되고, `paper`(지류) / `mobile`(모바일) 두 배열로 나뉩니다.
 
 ## 2-1. 등록업체 추가/수정 방법
-`data/businesses.json` 을 열어 `businesses` 배열 **맨 앞에** 아래 형식으로 추가하고 `git push` 하면 됩니다.
-(GitHub 웹사이트에서 파일을 직접 편집·커밋해도 자동 배포됩니다)
+`data/businesses.json`의 `businesses` 배열을 수정한 뒤 `node tools/build_businesses.cjs`를 실행해 메인과 전체 목록의 정적 HTML을 갱신합니다. 변경 파일을 함께 커밋·푸시하면 배포됩니다.
 ```json
 {
   "name": "업체명",
   "desc": "업체 한 줄 소개",
   "phone": "010-0000-0000",
   "homepage": "https://example.com/",
-  "certified": true,
+  "certified": false,
+  "mine": true,
+  "featured": true,
+  "enabled": true,
+  "category": "구입·할부",
+  "image": "/img/kv_random8.jpg",
+  "imageAlt": "업체 안내용 업무 사진",
   "regions": ["서울"],
   "products": ["컬쳐랜드", "백화점"]
 }
 ```
-- `phone` / `homepage` 는 없으면 `""` 로 두면 해당 버튼이 숨겨집니다.
-- `certified: true` 면 "인증업체" 필터에 포함됩니다.
-- `regions`(지역) / `products`(취급 상품권) 는 business.html 필터에 쓰입니다. 온라인 전용 업체는 `regions: []`.
-- 메인 화면의 "거래소 등록업체" 카드와 "최근등록업체" 플로팅 목록은 이 파일의 **앞 10개**가 자동 표시됩니다.
+- 모든 카드의 하단 버튼은 **홈페이지 바로가기** 하나입니다. `homepage`는 실제 HTTP(S) 주소가 필요합니다. `phone`은 보존용이며 카드에 표시하지 않습니다.
+- `featured: true`인 노출 후보에서 방문할 때마다 중복 없이 10개를 무작위 선택합니다. 2026-10-28 적용 기준 후보는 21개입니다.
+- 전체 목록은 기존 등록업체 6곳을 포함해 27개이며, `enabled: false` 항목과 www 유무만 다른 중복 도메인은 표시하지 않습니다. 데이터에 중복을 추가하면 정적 빌드가 중단됩니다.
+- `certified`는 기존 인증 필터용입니다. 신규 사이트 등록 자체를 인증으로 간주하지 않습니다.
+- `regions`, `products`, `category`는 전체 목록의 지역·상품권 정보·분야 필터에 사용합니다. 확인하지 못한 정보는 빈 배열로 둡니다.
+- `js/business-cards.js`를 브라우저와 정적 빌드가 함께 사용합니다. JavaScript나 데이터 요청이 실패해도 기본 10개 및 전체 27개의 설명과 홈페이지 링크를 이용할 수 있습니다.
+- 이미지·문구는 사이트별로 고정되며 무작위 선택은 대상과 순서만 바꿉니다. 기존 사진은 안내용이며 해당 업체의 실제 사무실·직원 촬영 사진으로 표시하지 않습니다.
 
 ## 2-2. 게시글 조회수 카운터 활성화 (1회 설정)
 글을 열 때마다 조회수가 +1 되는 기능은 Cloudflare Workers KV를 씁니다. 대시보드에서 한 번만 설정하면 켜집니다:

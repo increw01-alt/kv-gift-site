@@ -1,182 +1,399 @@
 {
-  "updated": "2026-09-29",
-  "_설명": "등록업체 데이터 파일입니다. 새 업체 추가는 businesses 배열 맨 앞에 항목을 복사해 넣으세요. name(업체명)·desc(소개)는 필수, phone/homepage는 없으면 빈칸(\"\")으로 두면 버튼이 숨겨집니다. certified: true면 인증업체 배지. regions(지역)·products(취급상품권)는 필터용입니다.",
+  "updated": "2026-10-28",
+  "description": "메인 featured=true 사이트 중 중복 없이 10개를 무작위 표시합니다. 전체 목록은 기존 등록업체를 함께 제공합니다.",
   "businesses": [
     {
-      "name": "티켓의 힘",
-      "desc": "비상금이 필요한순간 티켓의 힘이 도와드리겠습니다. 24시간 편하게 문의주세요◆",
-      "phone": "010-9469-8576",
-      "homepage": "https://xn--ot5bj5l0mdk5f.kr/",
-      "certified": true,
+      "id": "koreagiftcard",
+      "name": "한국상품권협회",
+      "desc": "상품권 구입·판매 절차와 쇼핑몰 이용 정보를 안내합니다.",
+      "phone": "1800-2434",
+      "homepage": "https://koreagiftcard.co.kr/",
+      "certified": false,
+      "regions": [
+        "경기"
+      ],
+      "products": [
+        "컬쳐랜드",
+        "백화점"
+      ],
+      "category": "종합 안내",
+      "image": "/img/kv_random10.jpg",
+      "imageAlt": "한국상품권협회 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "plus24",
+      "name": "플러스24",
+      "desc": "카드·휴대폰 결제와 상품권 구매 전 조건을 안내합니다.",
+      "phone": "1800-2434",
+      "homepage": "https://plus24.or.kr/",
+      "certified": false,
       "regions": [],
       "products": [
-        "국민관광",
-        "농협",
+        "컬쳐랜드",
+        "백화점"
+      ],
+      "category": "결제 안내",
+      "image": "/img/kv_random8.jpg",
+      "imageAlt": "플러스24 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "gift-tech",
+      "name": "백화할부",
+      "desc": "백화점 상품권 구입 방법과 할부 조건을 살펴보세요.",
+      "phone": "1800-2434",
+      "homepage": "https://gift-tech.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
         "백화점",
-        "북앤라이프",
         "컬쳐랜드"
-      ]
+      ],
+      "category": "구입·할부",
+      "image": "/img/kv_random9.jpg",
+      "imageAlt": "백화할부 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "k-pin",
+      "name": "쏠쏠페이",
+      "desc": "모바일 상품권·기프티콘의 구입·판매 절차를 상담합니다.",
+      "phone": "1800-2434",
+      "homepage": "https://k-pin.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "매입·판매",
+      "image": "/img/kv_random27.jpg",
+      "imageAlt": "쏠쏠페이 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "kocash",
+      "name": "컬현",
+      "desc": "컬쳐랜드 상품권의 이용 방법과 매입 조건을 안내합니다.",
+      "phone": "",
+      "homepage": "https://kocash.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드"
+      ],
+      "category": "매입·판매",
+      "image": "/img/kv_random11.jpg",
+      "imageAlt": "컬현 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "halbu",
+      "name": "상품권할부닷컴",
+      "desc": "상품권 구매처와 카드 할부 조건·수수료를 안내합니다.",
+      "phone": "",
+      "homepage": "https://xn--zf0bo61amncw13a54a.com/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "백화점",
+        "컬쳐랜드"
+      ],
+      "category": "구입·할부",
+      "image": "/img/kv_random1.jpg",
+      "imageAlt": "상품권할부닷컴 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "daehan-gift",
+      "name": "대한상품권센터",
+      "desc": "상품권 구입·매입과 모바일 교환 절차를 안내합니다.",
+      "phone": "1800-2324",
+      "homepage": "https://daehan-gift.com/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "백화점",
+        "컬쳐랜드"
+      ],
+      "category": "종합 안내",
+      "image": "/img/kv_random30.jpg",
+      "imageAlt": "대한상품권센터 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "ticket-power",
+      "name": "티켓의힘",
+      "desc": "휴대폰 결제·정보이용료와 상품권 이용 정보를 안내합니다.",
+      "phone": "1800-2434",
+      "homepage": "https://xn--ot5bj5l0mdk5f.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드",
+        "틴캐시"
+      ],
+      "category": "결제 안내",
+      "image": "/img/kv_random26.jpg",
+      "imageAlt": "티켓의힘 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "gift-go",
+      "name": "원패스",
+      "desc": "상품권 구입부터 판매까지 이어지는 절차를 안내합니다.",
+      "phone": "1800-2434",
+      "homepage": "https://gift-go.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "매입·판매",
+      "image": "/img/kv_random12.jpg",
+      "imageAlt": "원패스 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "vipvip",
+      "name": "기프트캐시",
+      "desc": "카드·휴대폰 결제 방법과 상품권 구매처를 안내합니다.",
+      "phone": "",
+      "homepage": "https://vipvip.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드"
+      ],
+      "category": "결제 안내",
+      "image": "/img/kv_random12.jpg",
+      "imageAlt": "기프트캐시 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "koreagift-cc",
+      "name": "한국상품권협회 상담센터",
+      "desc": "상품권 종류와 금액에 맞춰 구입·판매 문의를 남겨보세요.",
+      "phone": "1800-2434",
+      "homepage": "https://koreagift.cc/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "종합 안내",
+      "image": "/img/kv_random9.jpg",
+      "imageAlt": "한국상품권협회 상담센터 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "plusto",
+      "name": "plusto.co.kr",
+      "desc": "휴대폰·카드 결제와 상품권 구매 시 확인할 조건을 안내합니다.",
+      "phone": "",
+      "homepage": "https://plusto.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드"
+      ],
+      "category": "결제 안내",
+      "image": "/img/kv_random25.jpg",
+      "imageAlt": "plusto.co.kr 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "sangtech",
+      "name": "상테크",
+      "desc": "컬쳐랜드·백화점 상품권의 구매·판매 절차를 안내합니다.",
+      "phone": "",
+      "homepage": "https://xn--hg4bo00agta.com/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드",
+        "백화점"
+      ],
+      "category": "종합 안내",
+      "image": "/img/kv_random1.jpg",
+      "imageAlt": "상테크 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "cash-kor",
+      "name": "캐시나우",
+      "desc": "상품권 종류와 구입·판매 진행 전 확인할 정보를 살펴보세요.",
+      "phone": "",
+      "homepage": "https://cash-kor.com/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "종합 안내",
+      "image": "/img/kv_random26.jpg",
+      "imageAlt": "캐시나우 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "kv-work",
+      "name": "한국상품권협회 창업컨설팅",
+      "desc": "상품권 유통 사업의 창업 절차와 가맹·제휴 정보를 안내합니다.",
+      "phone": "",
+      "homepage": "https://kv-work.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드"
+      ],
+      "category": "창업·제휴",
+      "image": "/img/kv_random10.jpg",
+      "imageAlt": "한국상품권협회 창업컨설팅 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "pingdeal",
+      "name": "핑딜",
+      "desc": "모바일 쿠폰과 쇼핑 카테고리를 확인할 수 있습니다.",
+      "phone": "",
+      "homepage": "https://pingdeal.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "구입·할부",
+      "image": "/img/kv_random8.jpg",
+      "imageAlt": "핑딜 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "red-pin",
+      "name": "레드핀",
+      "desc": "모바일 상품권의 권종과 카드·휴대폰 결제 조건을 확인하세요.",
+      "phone": "",
+      "homepage": "https://red-pin.co.kr/",
+      "certified": false,
+      "regions": [],
+      "products": [
+        "컬쳐랜드",
+        "구글기프트",
+        "에그머니"
+      ],
+      "category": "구입·할부",
+      "image": "/img/kv_random25.jpg",
+      "imageAlt": "레드핀 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "ticketb",
+      "name": "티켓비",
+      "desc": "상품권 카드 할부 구매 전 조건과 수수료·월 납부 계획을 안내합니다.",
+      "phone": "",
+      "homepage": "https://xn--hy1bu9xc1c9rk.net/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "구입·할부",
+      "image": "/img/kv_random11.jpg",
+      "imageAlt": "티켓비 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "smallpay",
+      "name": "소액결제가이드",
+      "desc": "휴대폰 소액결제의 한도·차단 확인과 피해 예방 정보를 안내합니다.",
+      "phone": "",
+      "homepage": "https://xn--p89ao90bdyc6qd.xn--3e0b707e/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "결제 안내",
+      "image": "/img/kv_random27.jpg",
+      "imageAlt": "소액결제가이드 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "moneyplan",
+      "name": "머니플랜",
+      "desc": "모바일 상품권의 구입·매입 흐름과 결제 전 확인사항을 안내합니다.",
+      "phone": "",
+      "homepage": "https://xn--zf0b677a35e9vj85a47j.com/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "종합 안내",
+      "image": "/img/kv_random30.jpg",
+      "imageAlt": "머니플랜 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
+    },
+    {
+      "id": "daehan-smallpay",
+      "name": "대한상품권센터 휴대폰결제",
+      "desc": "통신사별 휴대폰결제 조건과 상품권 이용·수수료 확인 방법을 안내합니다.",
+      "phone": "",
+      "homepage": "https://daehan-smallpay.com/",
+      "certified": false,
+      "regions": [],
+      "products": [],
+      "category": "결제 안내",
+      "image": "/img/kv_random26.jpg",
+      "imageAlt": "대한상품권센터 휴대폰결제 안내용 업무·상담 사진",
+      "mine": true,
+      "featured": true,
+      "enabled": true
     },
     {
       "name": "희망페이",
-      "desc": "고객님들의 희망이 되어주는 업체가 되도록 노력하겠습니다.♥",
+      "desc": "상품권 이용 문의와 상담 정보를 확인할 수 있습니다.",
       "phone": "010-6713-3655",
       "homepage": "https://pay-hope.co.kr/",
       "certified": true,
       "regions": [],
       "products": [
         "백화점"
-      ]
+      ],
+      "image": "/img/kv_random9.jpg",
+      "mine": false,
+      "id": "partner-1",
+      "imageAlt": "희망페이 안내용 업무·상담 사진",
+      "category": "기존 등록업체",
+      "featured": false,
+      "enabled": true
     },
     {
-      "name": "상테크",
-      "desc": "♡사업자 정식업체♡  365일 24시간 상시대기중 언제든 부담없이 상담요청해주세요^^",
-      "phone": "02-1800-2434",
-      "homepage": "https://xn--hg4bo00agta.com/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "국민관광",
-        "백화점",
-        "북앤라이프",
-        "컬쳐랜드"
-      ]
-    },
-    {
-      "name": "컬현",
-      "desc": "컬쳐랜드 전문 업체 24 편하게 문의",
-      "phone": "010-8204-2445",
-      "homepage": "https://kocash.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "온라인문화"
-      ]
-    },
-    {
-      "name": "◆플러스24◆",
-      "desc": "한국상품권협회 운영 / 신용카드·휴대폰 소액결제로 컬쳐랜드 등 모바일상품권 구매 / 일시불·할부 구매 및 24시간 채널톡 상담",
-      "phone": "02-1800-2434",
-      "homepage": "https://plus24.or.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "▶상품권할부닷컴◀",
-      "desc": "상품권 할부 구입 전문 상담 구입쇼핑몰 구입방법 안내",
-      "phone": "01048942402",
-      "homepage": "https://xn--zf0bo61amncw13a54a.com",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "쏠쏠페이",
-      "desc": "모바일상품권 전문 상담업체 안전하게 안내하는 상품권 상담처 빠른 응대와 정확한 상담 서비스",
-      "phone": "02-1800-2434",
-      "homepage": "https://k-pin.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "주유",
-        "컬쳐랜드",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "핑딜",
-      "desc": "상품권구매 할부가능! ★24시간 상담대기중★",
-      "phone": "010-4894-2402",
-      "homepage": "https://pingdeal.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "온라인문화",
-        "컬쳐랜드"
-      ]
-    },
-    {
-      "name": "▶백화할부◀",
-      "desc": "백화점상품권 할부 구입 및 컬쳐랜드상품권 할부 구입 안내 24시간 빠른 상담",
-      "phone": "010-2531-2445",
-      "homepage": "https://gift-tech.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "할부전문상담센터",
-      "desc": "●최저수수료●365일24시간 친절상담",
-      "phone": "",
-      "homepage": "https://card.koreagiftcard.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "백화점",
-        "북앤라이프",
-        "온라인문화",
-        "컬쳐랜드",
-        "틴캐시"
-      ]
-    },
-    {
-      "name": "▶모아핀◀",
-      "desc": "한국상품권협회 첫 공식 쇼핑몰 / 24시간 실시간 구입 및 발송 / 신용카드 및 소액결제 구입",
+      "name": "모아핀",
+      "desc": "컬쳐랜드 등 모바일 상품권의 구매 정보와 이용 조건을 확인하세요.",
       "phone": "02-1800-2434",
       "homepage": "https://moapin.co.kr/",
       "certified": true,
@@ -191,89 +408,18 @@
         "컬쳐랜드",
         "틴캐시",
         "해피머니"
-      ]
-    },
-    {
-      "name": "★상품권할부",
-      "desc": "상품권 할부 구매 가능",
-      "phone": "",
-      "homepage": "https://blog.naver.com/koreagiftcard2021/224056525665",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "국민관광",
-        "백화점",
-        "컬쳐랜드"
-      ]
-    },
-    {
-      "name": "상품권 할부결제",
-      "desc": "* 한국상품권협회 & 국세청 정식 등록   365일 24시간 연중무휴",
-      "phone": "1800-2434",
-      "homepage": "https://blog.naver.com/kvnewshub/224170115480",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "백화점",
-        "컬쳐랜드"
-      ]
-    },
-    {
-      "name": "상품권 상담",
-      "desc": "최고의 상품권 거래 파트너",
-      "phone": "",
-      "homepage": "https://blog.naver.com/korgiftcard/223808078958",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "백화점"
-      ]
-    },
-    {
-      "name": "한국상품권협회",
-      "desc": "상품권의 기준 상품권 유통 및 가맹 문의",
-      "phone": "02-1800-2434",
-      "homepage": "https://koreagiftcard.co.kr/",
-      "certified": true,
-      "regions": [
-        "경기"
       ],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "플러스핀",
-      "desc": "■모바일상품권 전문 쇼핑몰■ 문화상품권, 컬쳐랜드, 북앤라이프, 틴캐시, 구글기프트 신용카드/휴대폰결제 가능 쇼핑",
-      "phone": "02-1668-2445",
-      "homepage": "https://pluspin.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니"
-      ]
+      "image": "/img/kv_random8.jpg",
+      "mine": false,
+      "id": "partner-2",
+      "imageAlt": "모아핀 안내용 업무·상담 사진",
+      "category": "기존 등록업체",
+      "featured": false,
+      "enabled": true
     },
     {
       "name": "플러스문",
-      "desc": "컬쳐랜드/문화상품권 전문 쇼핑몰 할인 구입 / 24시간 실시간 발송 / 한국상품권협회 인증 쇼핑",
+      "desc": "문화상품권·모바일 상품권 구매 정보와 이용 방법을 안내합니다.",
       "phone": "02-1668-2445",
       "homepage": "https://plusmoon.co.kr/",
       "certified": true,
@@ -286,57 +432,18 @@
         "컬쳐랜드",
         "틴캐시",
         "해피머니"
-      ]
+      ],
+      "image": "/img/kv_random25.jpg",
+      "mine": false,
+      "id": "partner-3",
+      "imageAlt": "플러스문 안내용 업무·상담 사진",
+      "category": "기존 등록업체",
+      "featured": false,
+      "enabled": true
     },
     {
-      "name": "기프트캐시",
-      "desc": "★한국상품권협회 정식등록업체★친절상담&안전거래보장 24시간 문의 환영",
-      "phone": "",
-      "homepage": "https://www.vipvip.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "상품권 인포센터",
-      "desc": "★정식 등록업체★ ★24시간 친절상담★",
-      "phone": "010-2531-2445",
-      "homepage": "https://www.vipvip.or.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "■ 플러스존 ■",
-      "desc": "■ 온라인 문상, 컬쳐랜드 충전서비스 ■",
+      "name": "플러스존",
+      "desc": "컬쳐랜드 상품권의 매입 절차와 이용 조건을 확인하세요.",
       "phone": "1668-2445",
       "homepage": "https://plus-zone.co.kr/",
       "certified": true,
@@ -344,386 +451,18 @@
       "products": [
         "온라인문화",
         "컬쳐랜드"
-      ]
-    },
-    {
-      "name": "컬쳐 할부구매 가능",
-      "desc": "◆사업자 정식업체  365일 24시간 상시대기 편하게 연락주세요^^",
-      "phone": "",
-      "homepage": "https://koreagiftcard.co.kr/%EC%BB%AC%EC%B3%90%EB%9E%9C%EB%93%9C-%ED%95%A0%EB%B6%80%EA%B5%AC%EB%A7%A4",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "카드핀",
-      "desc": "♡업계최저수수료♡ 정식등록업체 24시간 문의환영",
-      "phone": "",
-      "homepage": "https://pin-lab.com/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "백화점상품권 할부구매",
-      "desc": "간편한 상품권 매입!  ★365일 연중무휴★",
-      "phone": "010-2531-2445",
-      "homepage": "https://www.koreagiftcard.co.kr/%EB%B0%B1%ED%99%94%EC%A0%90%EC%83%81%ED%92%88%EA%B6%8C-%ED%95%A0%EB%B6%80%EA%B5%AC%EB%A7%A4",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "머니토크",
-      "desc": "정식인증업체 최저수수료 신속정확입금",
-      "phone": "",
-      "homepage": "https://bizyo.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "로또민족",
-      "desc": "♥정식등록업체♥친절상담&안전거래 보장",
-      "phone": "010-2531-2445",
-      "homepage": "https://lottominjok.com/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "캐시리턴",
-      "desc": "국내 최저 수수료 상품권 매입 업체",
-      "phone": "010-4894-2402",
-      "homepage": "https://plusto.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "페이24",
-      "desc": "연중무휴 24시 OPEN 안전한모바일 간편상담",
-      "phone": "",
-      "homepage": "https://plus24.or.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "한국상품권협회",
-      "desc": "상품권의 중심 한국상품권협회",
-      "phone": "1800-2434",
-      "homepage": "koreagiftcard.co.kr",
-      "certified": true,
-      "regions": [
-        "경기"
       ],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "페이스탭",
-      "desc": "♥정식등록업체♥친절상담&안전거래 보장",
-      "phone": "010-4894-2402",
-      "homepage": "https://plusgood.co.kr/",
-      "certified": true,
-      "regions": [
-        "인천"
-      ],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "백상신용카드구매",
-      "desc": "상품권 확인 후 매입절차 빠르게 도와드립니다!!^^",
-      "phone": "010-4894-2402",
-      "homepage": "https://m.blog.naver.com/korgiftcard/222844024855",
-      "certified": true,
-      "regions": [
-        "대전"
-      ],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "상품권할부닷컴",
-      "desc": "♡사업자 정식업체♡  365일 24시간 상시대기중 언제든 부담없이 상담요청해주세요^^",
-      "phone": "010-4894-2402",
-      "homepage": "https://xn--zf0bo61amncw13a54a.com/",
-      "certified": true,
-      "regions": [
-        "대전"
-      ],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "백화할부",
-      "desc": "상품권 24시간 판매 백화점상품권 할부♥",
-      "phone": "010-4894-2402",
-      "homepage": "https://gift-tech.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "상품권재태크",
-      "desc": "365일 상담가능 재태크모든 것 ❤",
-      "phone": "010-4894-2402",
-      "homepage": "https://www.gift-tech.net/",
-      "certified": true,
-      "regions": [
-        "서울"
-      ],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "컬쳐랜드현금화",
-      "desc": "컬쳐랜드 현금화 전문 업체 24시간 진행★",
-      "phone": "010-4894-2402",
-      "homepage": "https://kocash.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "원패스(현금화한방에)",
-      "desc": "각종 상품권매입/24시간 상시대기",
-      "phone": "010-4894-2402",
-      "homepage": "https://gift-go.co.kr/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
-    },
-    {
-      "name": "소액캐시",
-      "desc": "소액결제 전문상담, 상담사 24시간 대기중",
-      "phone": "010-4894-2402",
-      "homepage": "https://bizplusmall.com/",
-      "certified": true,
-      "regions": [],
-      "products": [
-        "구글기프트",
-        "국민관광",
-        "농협",
-        "백화점",
-        "북앤라이프",
-        "에그머니",
-        "온라인문화",
-        "외식",
-        "주유",
-        "컬쳐랜드",
-        "틴캐시",
-        "해피머니",
-        "홈플러스"
-      ]
+      "image": "/img/kv_random26.jpg",
+      "mine": false,
+      "id": "partner-4",
+      "imageAlt": "플러스존 안내용 업무·상담 사진",
+      "category": "기존 등록업체",
+      "featured": false,
+      "enabled": true
     },
     {
       "name": "플러스유",
-      "desc": "어디서나 사용 가능한 모바일 상품권구매!",
+      "desc": "모바일 상품권의 판매 상품과 결제 조건을 확인하세요.",
       "phone": "1668-2445",
       "homepage": "https://plusyou.co.kr/",
       "certified": true,
@@ -741,11 +480,18 @@
         "컬쳐랜드",
         "틴캐시",
         "해피머니"
-      ]
+      ],
+      "image": "/img/kv_random27.jpg",
+      "mine": false,
+      "id": "partner-5",
+      "imageAlt": "플러스유 안내용 업무·상담 사진",
+      "category": "기존 등록업체",
+      "featured": false,
+      "enabled": true
     },
     {
       "name": "핀앤티켓",
-      "desc": "상품권 매입 업체 빠른 상담 정확한 서비스!",
+      "desc": "상품권 관련 서비스와 이용 안내를 홈페이지에서 확인하세요.",
       "phone": "010-4633-0027",
       "homepage": "http://xn--ef5b40p06cvzc.com/",
       "certified": true,
@@ -764,7 +510,14 @@
         "틴캐시",
         "해피머니",
         "홈플러스"
-      ]
+      ],
+      "image": "/img/kv_random30.jpg",
+      "mine": false,
+      "id": "partner-6",
+      "imageAlt": "핀앤티켓 안내용 업무·상담 사진",
+      "category": "기존 등록업체",
+      "featured": false,
+      "enabled": true
     }
   ]
 }

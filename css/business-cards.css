@@ -1,0 +1,44 @@
+/* Approved existing layout, one uniform homepage action per site. */
+#general_main .kv-business .section-heading{display:flex;align-items:center;gap:12px;min-height:30px;margin-bottom:20px}
+#general_main .kv-business .section-heading h2{margin:0;font-size:17px;line-height:1.5;font-weight:750;letter-spacing:-.04em;color:#101010}
+#general_main .kv-business .site-badge{display:inline-flex;align-items:center;gap:7px;min-height:30px;padding:3px 10px;border:1px solid #ddd;font-size:12px;letter-spacing:2px;font-weight:700;color:#101010}
+#general_main .kv-business .site-badge img{width:26px;height:14px;object-fit:contain}
+#general_main .kv-business>.business-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px 12px;list-style:none;margin:0;padding:0;align-items:stretch}
+#general_main .kv-business>.business-grid>.business-card{width:auto;min-width:0;margin:0!important;padding:0;border:1px solid #ddd;position:relative;background:#fff;transition:border-color .18s;cursor:default}
+#general_main .kv-business .business-card:hover,#general_main .kv-business .business-card:focus-within{border-color:#d84500}
+#general_main .kv-business .business-card article{height:100%;display:flex;flex-direction:column}
+#general_main .kv-business .photo-link{height:150px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;isolation:isolate;text-decoration:none}
+#general_main .kv-business .photo-link img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+#general_main .kv-business .photo-link:after{content:"";position:absolute;inset:0;background:#0000000a;z-index:-1}
+#general_main .kv-business .photo-link h3{margin:0;padding:0 18px;font-size:18px;line-height:1.4;font-weight:800;color:#fff;text-align:center;letter-spacing:-.04em;text-shadow:0 1px 5px #000a;max-width:100%;word-break:keep-all;overflow-wrap:anywhere}
+#general_main .kv-business .description{padding:20px;min-height:82px;display:flex;align-items:center;justify-content:center;flex:1}
+#general_main .kv-business .description p{margin:0!important;font-size:15px;line-height:21px;font-weight:700;text-align:center;word-break:keep-all;overflow-wrap:anywhere;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:#101010}
+#general_main .kv-business .actions{width:calc(100% - 40px);margin:0 auto 20px;padding-top:20px;border-top:1px solid #ddd;display:flex;align-items:center}
+#general_main .kv-business .actions .homepage{width:100%;min-width:0;height:44px;display:flex;justify-content:center;align-items:center;gap:7px;font-size:13px;line-height:1;border:1px solid #d84500;background:#d84500;color:#fff;font-weight:650;white-space:nowrap;text-decoration:none;touch-action:manipulation}
+#general_main .kv-business .actions .homepage:hover{background:#b83b00;border-color:#b83b00}
+#general_main .kv-business .actions svg{width:12px;height:12px;flex-shrink:0}
+#general_main .kv-business a:focus-visible{outline:3px solid #254681;outline-offset:3px}
+#general_main .kv-business .directory-more{display:flex;justify-content:flex-end;margin-top:14px}
+#general_main .kv-business .directory-more a{display:inline-flex;align-items:center;min-height:44px;color:#333;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+#recent_business_list a{display:block;width:100%;color:inherit;text-decoration:none}
+#biz_page .biz_filter button.chip{font-family:inherit;line-height:1.45;min-height:36px;background-color:transparent}
+#biz_page .biz_filter button.chip.atv{background:var(--color-orange)}
+#biz_page .biz_filter button.chip:focus-visible{outline:3px solid #254681;outline-offset:2px}
+@media(max-width:1000px){#general_main .kv-business>.business-grid{grid-template-columns:repeat(3,minmax(0,1fr))}#general_main .kv-business .description{min-height:88px}}
+@media(max-width:640px){
+  #biz_page .biz_filter button.chip{min-height:44px}
+  #general_main .kv-business{width:calc(100% - 20px)}
+  #general_main .kv-business .section-heading{gap:10px;margin-bottom:16px}
+  #general_main .kv-business .section-heading h2{font-size:16px}
+  #general_main .kv-business .site-badge{font-size:10px;letter-spacing:1px;padding:3px 6px;gap:5px;min-height:27px}
+  #general_main .kv-business .site-badge img{width:23px;height:13px}
+  #general_main .kv-business>.business-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 10px}
+  #general_main .kv-business .photo-link{height:130px}
+  #general_main .kv-business .photo-link h3{font-size:16px;padding:0 12px}
+  #general_main .kv-business .description{padding:16px 12px;min-height:83px}
+  #general_main .kv-business .description p{font-size:13px;line-height:21px}
+  #general_main .kv-business .actions{width:calc(100% - 24px);padding-top:13px;margin-bottom:14px}
+  #general_main .kv-business .actions .homepage{font-size:12px;gap:6px}
+}
+@media(max-width:359px){#general_main .kv-business .actions{width:calc(100% - 16px)}#general_main .kv-business .actions .homepage{font-size:11px;gap:5px}#general_main .kv-business .actions svg{width:11px;height:11px}#general_main .kv-business .photo-link h3{font-size:15px;padding-inline:9px}#general_main .kv-business .description{padding-inline:9px}#general_main .kv-business .description p{font-size:12px}#general_main .kv-business .site-badge{letter-spacing:0}}
+@media(prefers-reduced-motion:reduce){#general_main .kv-business *{transition:none!important}}
