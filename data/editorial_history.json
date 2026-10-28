@@ -850,5 +850,18 @@
     "publication_mode": "automatic",
     "run_id": "40643006811",
     "usage_file": "data/editorial_runs/2026-10-28/40643006811.json"
+  },
+  {
+    "board": "free",
+    "id": 475,
+    "topic": "예전에 좋아했던 선물과 지금 필요한 선물이 달라졌다면 어떻게 전할까요?",
+    "drafted_at": "2026-10-28",
+    "automation": true,
+    "search_intent": "예전에 좋아하던 선물과 지금 필요한 선물이 달라졌을 때, 상대에게 서운함 없이 변화된 선호를 어떻게 설명할지 정리하려는 질문",
+    "image_scene": "작은 식탁 위에 예전 선물 메모 카드와 현재 필요한 물건 목록이 나란히 놓여 있고, 한 사람이 둘을 비교하며 짧은 설명 문장을 적는 장면",
+    "image_alt": "식탁 위에서 예전에 좋았던 선물 메모와 지금 필요한 물건 목록을 나란히 비교하며 설명 문장을 적는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40649174177",
+    "usage_file": "data/editorial_runs/2026-10-28/40649174177.json"
   }
 ]
