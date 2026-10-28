@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T00:19:45.579152+00:00",
+  "generatedAt": "2026-10-28T00:21:09.688962+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1413,7 +1413,7 @@
       "board": "purchase",
       "topic": "공동 구매 상품권 예산 초과 시 해결 방안과 재조정 방법",
       "url": "https://kv-gift.co.kr/board/purchase/2572",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T00:21:09.671655+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.09929935,
       "knownSubtotalUsd": 0.09929935
