@@ -1,17 +1,19 @@
 {
   "run_id": "40620106132",
   "date_kst": "2026-10-28",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-28T02:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 통과할 만큼 새롭고 독립적인 후보가 없습니다. 0~3번 모두 기존 판매 안내 글들이 이미 다룬 ‘상태 확인·개인정보 보호·상담 준비·누락 항목 재문의’ 흐름을 재구성한 수준입니다. 특히 0번은 상품권 상태와 증빙 정리로 기존의 상태 확인/개인정보 가리기와 겹치고, 1번은 여러 상품권의 항목을 구분해 상담 목록을 만드는 방식이 최근 보류된 항목 분리 주제와 동일한 해결 구조입니다. 2번은 사진 촬영과 안전 제출로 기존의 사진·PIN·바코드 보호 안내와 직접 중복되며, 3번은 누락된 질문만 다시 묻는 절차가 기존의 답변 대조·재문의 안내와 같습니다. 가장 가까운 기존 글은 '[판매 안내] 판매 글 작성 전 상품권 관련 오류 방지 체크리스트'와 '[판매 안내] 매입 상담 시 제시 금액과 공제내역 따로 정리요령'인데, 후보들은 그 범위를 넘어서지 못하고 준비 방식만 바꾸는 수준입니다. / 0번: 상품권 매입 문의 전 상태 점검과 증빙 정리는 기존 '[판매 안내] 판매 글 작성 전 상품권 관련 오류 방지 체크리스트'의 상태 확인·개인정보 보호와 해결 순서가 같고, 증빙을 비식별 처리한다는 설명도 이미 포함된 개인정보 가리기 변형에 가깝습니다. / 1번: 여러 종류 상품권을 식별 이름으로 나눠 상담 목록을 만드는 내용은 독자 상황과 해결 절차가 최근 보류된 '상품권 매입 상담 시 동일 조건 비교법 안내' 및 기존 상품권 종류 구분 글과 겹치며, 질문-답변 매칭 표로 바꾸는 수준입니다. / 2번: 상담용 상품권 사진 촬영 및 안전 제출은 기존 '[판매 안내] 판매 글 작성 전 상품권 관련 오류 방지 체크리스트'와 일반 공지 '상품권 사진을 올리기 전, PIN번호와 바코드를 가려 주세요'의 사진 판독·노출 방지와 동일합니다. 촬영 품질 설명이 추가돼도 새 문제 해결이 아닙니다. / 3번: 판매 상담 답변 간 누락 항목을 재문의하는 방법은 기존 '[판매 안내] 매입 상담 시 제시 금액과 공제내역 따로 정리요령'의 상담 기록·재문의 부분과, 최근 보류된 '여러 상품권에 대한 상담 답변에서 빠진 항목을 어떻게 다시 물어볼까요?'와 핵심 질문이 같습니다."
+    ]
   },
   "api_usage": {
     "run_id": "40620106132",
@@ -20,15 +22,137 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 매입 문의 전 상품권 상태와 증빙 정리법",
+          "source_id": "",
+          "reader_problem": "상품권 매입 문의 전에 상태 점검과 관련 증빙을 정확하고 안전하게 정리하는 절차가 명확하지 않아 시간과 상담 효율이 떨어진다.",
+          "distinct_angle": "기존 안내보다 상품권 상태 점검과 증빙 자료를 각 상태별로 구분하고 안전하게 비식별 처리하는 구체적 방법을 제시하며, 고객 문의 준비 과정에서 개인정보 노출 최소화법을 포함한다.",
+          "reader_situation": "상품권을 여러 곳에 매입 문의하려고 하는데, 상태 확인과 증빙 자료를 체계적으로 준비해 상담 시간을 줄이고 개인정보 노출을 방지하고자 하는 고객.",
+          "deliverable": "상품권 상태별 점검 체크리스트, 증빙 자료 종류별 체계적 수집·비식별 처리 방법, 개인정보 보호를 고려한 질문 목록과 준비 단계 안내.",
+          "task_id": "sale-inquiry-vs-transfer",
+          "outline": [
+            "상품권 상태별 상세 점검 항목 작성하기",
+            "증빙 자료 유형별 체계적 수집 및 정리하기",
+            "문의 전 개인정보 최소화하고 안전하게 전달하는 방법 익히기"
+          ]
+        },
+        {
+          "topic": "여러 종류 상품권 매입 상담 시 항목 혼동 방지 및 구분법",
+          "source_id": "",
+          "reader_problem": "다양한 종류의 상품권을 매입 문의할 때 항목이 섞여 상담자와 상담내용이 혼동되고 관리가 어렵다.",
+          "distinct_angle": "상품권 종류별로 식별 명칭을 부여하고, 항목별 질문과 답변을 명확히 대응시키는 상담 목록 작성법을 제안, 개인정보와 사적 연락처는 철저히 제외하는 절차를 강조한다.",
+          "reader_situation": "여러 상품권을 동시에 판매 문의할 예정인데, 각 상품권 항목과 상담 내용을 혼합하지 않고 효율적으로 구분해 관리하고 싶은 고객.",
+          "deliverable": "종류별 상품권 식별 이름 부여법, 상담 목록과 질문-답변 매칭 테이블 양식, 개인정보 비노출 체크리스트",
+          "task_id": "sale-batch-separation",
+          "outline": [
+            "상품권 종류별 고유 식별 명칭 부여하기",
+            "상담 항목과 답변 대응 구분 목록 만들기",
+            "상담 시 개인정보·연락처 노출 방지 수칙 적용하기"
+          ]
+        },
+        {
+          "topic": "판매 상담에 쓸 상품권 사진 촬영 및 준비법",
+          "source_id": "",
+          "reader_problem": "상품권 판매 상담에 필요한 사진을 어떤 부분 위주로, 어떻게 찍어야 읽히기 쉽고 개인정보를 보호할 수 있는지 방법을 잘 모른다.",
+          "distinct_angle": "상품권 주요 정보(상품명, 형태) 판독용 사진 준비와 반사, 잘림 없는 촬영법 안내 및 사용자 코드·PIN번호 숨기는 안전한 사진 제출법을 구분해 안내한다.",
+          "reader_situation": "상품권 판매 상담에 사진을 제출하려는데, 어떤 사진을 어떻게 찍어야 상담에 도움이 되면서 개인정보 노출을 막을지 고민하는 독자.",
+          "deliverable": "상품권 사진 촬영 체크리스트, 개인정보 노출 위험 부분 숨기기 가이드, 상담용 안전 사진 제출 권장 표준 절차",
+          "task_id": "sale-photo-legibility",
+          "outline": [
+            "상품권 주요 정보 읽히는 사진 촬영법 익히기",
+            "반사·잘림 없는 사진 준비 및 판독성 높이기",
+            "사용 코드·PIN 숨기고 개인정보 보호하는 사진 제출법"
+          ]
+        },
+        {
+          "topic": "판매 상담 답변 간 누락 항목 재문의 체계적 방법",
+          "source_id": "",
+          "reader_problem": "다중 상품권 상담 답변에서 누락된 판매 조건이나 항목을 정확히 확인해 재문의하는 방법이 명확하지 않아 문제가 발생한다.",
+          "distinct_angle": "원래 문의 목록과 답변 대상을 항목별로 대응시켜 누락된 질문만 추출하는 방식을 제공하며, 답변 조건을 함부로 추정하지 않고 사실 관계만 다시 묻는 체계적 사례를 소개한다.",
+          "reader_situation": "여러 상품권에 대해 매입 상담 답변을 받았는데, 빠진 조건을 재문의할 때 어떻게 명확히 걸러내고 다시 물어봐야 할지 어려움을 겪는 상황.",
+          "deliverable": "누락 질문 선별용 원본 문의 및 답변 대조 체크리스트, 누락 항목 재문의 표준 문구 예시, 임의 조건 추정을 배제하는 재문의 절차 안내",
+          "task_id": "sale-missing-item",
+          "outline": [
+            "원문의 질문 목록과 답변 항목별 일치성 확인하기",
+            "누락 질문만 추출해 재문의 목록 작성하기",
+            "임의 조건 추정 없이 명확한 재문의 문구 작성법 연습하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 17930,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1028,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 18958
+        },
+        "estimated_usd": 0.0088168,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T02:18:52.393905+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11025,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 805,
+          "output_tokens_details": {
+            "reasoning_tokens": 197
+          },
+          "total_tokens": 11830
+        },
+        "estimated_usd": 0.01189125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-28T02:18:59.191224+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T02:18:44.287132+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-28T02:18:52.805847+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02070805,
+    "estimated_total_usd": 0.02070805,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
