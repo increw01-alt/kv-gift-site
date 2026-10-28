@@ -863,5 +863,18 @@
     "publication_mode": "automatic",
     "run_id": "40649174177",
     "usage_file": "data/editorial_runs/2026-10-28/40649174177.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 40,
+    "topic": "상품권으로 주문한 물건을 다른 날 찾으러 갈 때 무엇을 나눠 챙길까요?",
+    "drafted_at": "2026-10-28",
+    "automation": true,
+    "search_intent": "상품권으로 결제한 주문을 여러 날에 나눠 수령할 때 결제용 상품권과 수령 서류를 분리해 챙기는 방법을 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 주문 확인서, 수령 안내문, 주문번호 메모와 함께 상품권 봉투가 따로 놓여 있고, 한 사람이 날짜별로 나뉜 체크리스트에 필요한 서류를 분류해 넣는 장면",
+    "image_alt": "책상 위에서 주문 확인서와 수령 안내문, 상품권을 날짜별 체크리스트로 나눠 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40655792876",
+    "usage_file": "data/editorial_runs/2026-10-28/40655792876.json"
   }
 ]
