@@ -824,5 +824,18 @@
     "publication_mode": "automatic",
     "run_id": "40631539288",
     "usage_file": "data/editorial_runs/2026-10-28/40631539288.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 62,
+    "topic": "작은 안내 글씨가 잘 안 보일 때 어떤 도움을 요청하면 좋을까요?",
+    "drafted_at": "2026-10-28",
+    "automation": true,
+    "search_intent": "작은 글씨가 잘 안 보여 접근성 도움을 요청할 때 어떤 증상과 지원 방식을 구체적으로 말해야 하는지 알고 싶은 질문",
+    "image_scene": "책상 위에 확대해서 본 웹페이지 화면이 띄워진 노트북과 메모장이 나란히 놓여 있고, 메모장에는 ‘글씨가 너무 작음’, ‘색 대비 약함’, ‘음성 안내 필요’ 같은 항목이 적혀 있다. 한 사람이 화면의 불편한 부분을 짚어 보며 문의 문구를 정리하는 구도",
+    "image_alt": "노트북 화면 옆 메모장에 글씨가 너무 작아 읽기 어렵다는 내용과 필요한 지원 항목을 적어 두고 문의 문구를 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40637177926",
+    "usage_file": "data/editorial_runs/2026-10-28/40637177926.json"
   }
 ]
