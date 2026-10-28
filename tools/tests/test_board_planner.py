@@ -30,6 +30,28 @@ CONTEXT = {'kind': 'anonymized_question_signals', 'questions': [
 
 
 class PlannerTests(unittest.TestCase):
+    def test_unpublished_task_catalog_is_not_duplicate_evidence(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);fixture(root)
+            task={'id':'purchase-message','board':'purchase',
+                  'question':'선물 메시지에 필요한 내용을 어떤 순서로 정리할까요?',
+                  'deliverable':'구매 전에 정하는 짧은 메시지 구성과 실제 작성 예시'}
+            other={**task,'id':'purchase-unused','question':'독립된 다른 편집 질문은 비교 글이 아닙니다'}
+            (root/'tools/board_reader_tasks.json').write_text(json.dumps([task,other]),encoding='utf-8')
+            proposed=candidate(task['question'],'gift-choice');proposed['task_id']=task['id']
+            api=Mock(side_effect=[{'candidates':[proposed]},
+                {'selected_index':0,'reason':'미발행 과제 자체는 중복 근거가 아니며 본문과 비교했습니다.','rejections':[]}])
+            plan=choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
+            first=json.loads(api.call_args_list[0].args[1][0]['text'])
+            screen=json.loads(api.call_args_list[1].args[1][0]['text'])
+            self.assertEqual(len(first['unused_reader_tasks']),2)
+            self.assertNotIn('curated_reader_tasks',screen)
+            self.assertEqual(screen['comparisons'][0]['unpublished_assignment'],task)
+            self.assertNotIn(other['question'],str(screen))
+            self.assertFalse(any(x['title']==task['question'] for x in screen['existing_articles']))
+            self.assertIn('과제와 같다는 이유로 중복 보류하지 않는다',api.call_args.args[0])
+            self.assertEqual(plan['task_id'],task['id'])
+
     def test_selects_distinct_candidate_instead_of_first_title_and_reads_rejection_reasons(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);fixture(root)
