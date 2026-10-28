@@ -1,17 +1,19 @@
 {
   "run_id": "40626365386",
   "date_kst": "2026-10-28",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "스마트폰 사용이 익숙하지 않은 수신자 위한 상품권 비교 가이드",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-28T03:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글과 핵심 해결 문제가 겹칩니다. 수신자의 기기 사용 환경을 확인해 상품권을 고르는 내용은 이미 관련 글에서 다뤘고, 본문도 기기 호환성·대리 사용·전달 방식 비교로 같은 질문에 답하고 있습니다. / 제목만 달리한 수준으로 보이며, 실제로 새로 해결하는 절차나 예시가 충분히 구분되지 않습니다. / 스마트폰 사용이 익숙하지 않은 수신자에게 맞는 유형을 고른다는 방향이 기존의 ‘받는 사람의 기기와 사용환경 점검’과 사실상 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "40626365386",
@@ -20,15 +22,200 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "topic_plan": {
+        "topic": "스마트폰 사용이 익숙하지 않은 수신자 위한 상품권 비교 가이드",
+        "source_id": "",
+        "reader_problem": "스마트폰 이용이 익숙하지 않은 분께 선물할 상품권을 고르려 할 때 어떤 점부터 비교해야 할지 몰라 고민이다.",
+        "distinct_angle": "일반적인 상품권 사용 안내와 달리, 디지털 접근성과 대리 사용 가능성 등 수신자의 기기 사용 능력에 초점을 맞춰 비교할 행동 지침을 제시한다.",
+        "reader_situation": "스마트폰 사용이 익숙하지 않은 부모님, 연세 많은 친지 등에게 상품권을 선물하려는 사람이 구체적 사용 환경을 고려해 적합한 상품권을 찾고자 할 때 필요하다.",
+        "deliverable": "상품권을 받는 사람이 읽고 보관하고 사용하는 실제 단계별 특징을 비교하는 질문표.",
+        "task_id": "purchase-recipient-device",
+        "outline": [
+          "수신자의 스마트폰 기기 지원 범위 꼼꼼히 확인하기",
+          "대리 사용 가능 여부 및 사용 편의성 검토하기",
+          "수신자 환경에 맞는 상품권 유형과 전달 방식 비교하기"
+        ],
+        "novelty_reason": "0번은 기존 글들 중 '/board/sense/8'처럼 받은 뒤의 등록·잔액·분실 대응이 아니라, 선물받는 사람이 스마트폰 사용에 익숙하지 않을 때 어떤 상품권이 실제로 다루기 쉬운지 비교하는 주제입니다. 가장 가까운 기존 글 '/board/purchase/2571'은 지점 사용 가능 여부를 확인하는 내용이라 사용처 중심이고, 0번은 디지털 접근성, 대리 사용 가능성, 보관·읽기 난이도까지 함께 따져 수신자 환경에 맞는 상품권 유형을 고르는 질문표를 제시한다는 점이 새롭습니다.",
+        "screen_rejections": [
+          "1번: '/board/sale/3692'의 브랜드명·상품명·옵션 대조 흐름과 '/board/purchase/2563'의 비슷한 이름 상품권의 발행사/사용처 구분 흐름을 반복합니다. 로고, 상품명, 운영 브랜드를 맞춰 보는 정도라 새 해결 문제로 보기 어렵습니다.",
+          "2번: '/board/purchase/2566'과 '/board/gc_information/8'이 이미 결제 화면의 최종 금액, 옵션 반영 여부, 주문서 대조를 다룹니다. 장바구니 이후 최종 확인이라는 표현만 다르고, 대조 순서와 확인 항목이 거의 같습니다.",
+          "3번: '/board/sense/10'의 공동 선물 메시지 표기와 '/board/free/467'의 짧은 선물 메시지 구성과 겹칩니다. 보낸 사람·선물 이유·사용 안내를 압축하는 방식은 이미 있는 메시지 작성 안내를 거의 그대로 반복합니다."
+        ]
+      },
+      "board": "purchase",
+      "topic": "스마트폰 사용이 익숙하지 않은 수신자 위한 상품권 비교 가이드",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-28T01:23:44Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 19466,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 930,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20396
+        },
+        "estimated_usd": 0.0092744,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T03:24:18.169246+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 13002,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 495,
+          "output_tokens_details": {
+            "reasoning_tokens": 110
+          },
+          "total_tokens": 13497
+        },
+        "estimated_usd": 0.011979,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-28T03:24:21.978610+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2483,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 477,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2960
+        },
+        "estimated_usd": 0.0017564,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T03:24:25.800815+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5212,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 460,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5672
+        },
+        "estimated_usd": 0.0028208,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T03:24:30.833763+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12047,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 662,
+          "output_tokens_details": {
+            "reasoning_tokens": 358
+          },
+          "total_tokens": 12709
+        },
+        "estimated_usd": 0.01201425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-28T03:24:36.036639+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T03:24:09.758209+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-28T03:24:18.715011+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T03:24:21.983763+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T03:24:27.134549+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-28T03:24:32.913158+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03784485,
+    "estimated_total_usd": 0.03784485,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

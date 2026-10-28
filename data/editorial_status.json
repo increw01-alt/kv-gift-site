@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T03:24:07.551942+00:00",
+  "generatedAt": "2026-10-28T03:24:36.388457+00:00",
   "dateKst": "2026-10-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 3,
   "attempts": 8,
-  "held": 4,
+  "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.4017673,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.43961215,
+  "estimatedTotalUsd": 0.43961215,
   "records": [
     {
       "runId": "40607871974",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "40626365386",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "스마트폰 사용이 익숙하지 않은 수신자 위한 상품권 비교 가이드",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-28T03:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.03784485,
+      "knownSubtotalUsd": 0.03784485
     }
   ]
 }
