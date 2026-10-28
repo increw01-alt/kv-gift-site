@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T06:20:51.865782+00:00",
+  "generatedAt": "2026-10-28T07:18:45.821405+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1553,7 +1553,7 @@
       "board": "general_notice",
       "topic": "작은 안내 글씨가 잘 안 보일 때 어떤 도움을 요청하면 좋을까요?",
       "url": "https://kv-gift.co.kr/board/general_notice/62",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T07:18:45.800791+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10759735,
       "knownSubtotalUsd": 0.10759735
