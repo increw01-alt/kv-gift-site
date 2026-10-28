@@ -43,7 +43,7 @@ class PlannerTests(unittest.TestCase):
                 'review':{'issues':['기존 글과 실제 해결 절차가 같음']}}),encoding='utf-8')
             proposed=candidate(task['question'],'');proposed['task_id']=task['id']
             api=Mock(side_effect=[{'candidates':[proposed]},
-                {'selected_index':0,'reason':'미발행 과제 자체는 중복 근거가 아니며 본문과 비교했습니다.','rejections':[]}])
+                {'selected_index':0,'reason':'미발행 과제 자체는 중복 근거가 아니며 본문과 비교했습니다.','rejections':[],'rejected_indices':[]}])
             plan=choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
             first=json.loads(api.call_args_list[0].args[1][0]['text'])
             screen=json.loads(api.call_args_list[1].args[1][0]['text'])
@@ -78,9 +78,10 @@ class PlannerTests(unittest.TestCase):
             proposals=[candidate('카드 실적과 이벤트 실적을 구분하는 방법'),
                        candidate('선물 안내를 비교해 나에게 맞는 전달 방식을 고르는 방법','gift-choice')]
             api=Mock(side_effect=[{'candidates':proposals},
-                {'selected_index':1,'reason':'둘째 후보는 다른 독자 문제를 해결합니다.','rejections':['첫째 후보는 중복']}])
+                {'selected_index':1,'reason':'둘째 후보는 다른 독자 문제를 해결합니다.','rejections':['첫째 후보는 중복'],'rejected_indices':[0]}])
             plan=choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
             self.assertEqual(plan['topic'],proposals[1]['topic'])
+            self.assertEqual(plan['screened_out_plans'],[proposals[0]])
             first=json.loads(api.call_args_list[0].args[1][0]['text'])
             screen=json.loads(api.call_args_list[1].args[1][0]['text'])
             self.assertIn('해결 절차가 중복',first['recent_rejections'][0]['issues'][0])
@@ -94,7 +95,7 @@ class PlannerTests(unittest.TestCase):
             root=Path(temp);fixture(root)
             plans=[candidate('카드 실적과 이벤트 실적을 구분하는 방법')]
             api=Mock(side_effect=[{'candidates':plans},
-                {'selected_index':-1,'reason':'기존 글과 해결 절차가 같습니다.','rejections':['같은 질문']}])
+                {'selected_index':-1,'reason':'기존 글과 해결 절차가 같습니다.','rejections':['같은 질문'],'rejected_indices':[0]}])
             with self.assertRaises(PlanningHeld) as error:
                 choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
             self.assertEqual(error.exception.board,'purchase')
@@ -123,7 +124,7 @@ class PlannerTests(unittest.TestCase):
             root=Path(temp);fixture(root)
             for proposal, screen, exception in [({'candidates':[]},None,PlanningHeld),
                 ({'candidates':[candidate('카드 실적과 이벤트 실적을 구분하는 방법')]},
-                 {'selected_index':7,'reason':'선택 범위를 벗어났습니다.','rejections':[]},ValueError)]:
+                 {'selected_index':7,'reason':'선택 범위를 벗어났습니다.','rejections':[],'rejected_indices':[]},ValueError)]:
                 api=Mock(side_effect=[proposal,screen])
                 with self.assertRaises(exception):
                     choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
@@ -137,6 +138,21 @@ class PlannerTests(unittest.TestCase):
         plan['source_id']='arbitrary-private-text'
         with self.assertRaises(ValueError):
             validate_candidates({'candidates':[plan]},{'card-performance'},lambda t:True)
+
+    def test_invalid_rejected_indices_fail_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);fixture(root)
+            plans=[candidate('카드 실적과 이벤트 실적을 구분하는 방법'),
+                   candidate('선물 안내를 비교해 전달 방식을 고르는 방법','gift-choice')]
+            for rejected in ([0], [2], [1,1], [True], '1'):
+                with self.subTest(rejected=rejected):
+                    api=Mock(side_effect=[{'candidates':plans},
+                        {'selected_index':0,'reason':'다른 독자의 문제를 해결하는 선택입니다.',
+                         'rejections':[], 'rejected_indices':rejected}])
+                    with self.assertRaises(ValueError):
+                        choose_plan('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,
+                                    'draft','review',api,text_input,lambda *x:None,lambda t:True)
+                    self.assertEqual(api.call_count,2)
 
 
 if __name__=='__main__':unittest.main()

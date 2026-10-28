@@ -134,13 +134,14 @@ def record_outcome(root, day, run_id, board, topic, status, review, usage, url=N
         if status != 'published' and topic:
             state.setdefault('held_topics', []).append({'board': board, 'topic': topic, 'run_id': run_id})
         topic_plan = usage.context.get('topic_plan') or {}
-        attempted_plans = ([topic_plan] if topic_plan else []) + usage.context.get('rejected_topic_plans', [])
-        for attempted_plan in attempted_plans:
+        attempted_plans = ([(topic_plan, status)] if topic_plan else []) + [
+            (rejected_plan, 'held') for rejected_plan in usage.context.get('rejected_topic_plans', [])]
+        for attempted_plan, attempted_status in attempted_plans:
             if not attempted_plan.get('source_id'):
                 continue
             state.setdefault('source_topic_attempts', []).append({
                 'source_id': attempted_plan['source_id'], 'board': board, 'topic': attempted_plan['topic'],
-                'date_kst': day.isoformat(), 'run_id': run_id, 'status': status})
+                'date_kst': day.isoformat(), 'run_id': run_id, 'status': attempted_status})
         state['source_topic_attempts'] = state.get('source_topic_attempts', [])[-100:]
         write_json(path, state)
         files.append(path.relative_to(root).as_posix())
@@ -200,8 +201,10 @@ def main(root=ROOT, command=None, now=None):
     status, api_status, error = 'held', 'failed', None
     try:
         def remember_plan(value):
-            usage.context['topic_plan'] = value
-            write_json(preview_dir/'topic-plan.json', value)
+            selected = dict(value)
+            usage.context['rejected_topic_plans'] = selected.pop('screened_out_plans', [])
+            usage.context['topic_plan'] = selected
+            write_json(preview_dir/'topic-plan.json', selected)
         board, topic, brief = select_topic(os.getenv('REQUESTED_BOARD') or 'auto', day, model, usage.record, root,
                                           on_plan=remember_plan, review_model=review_model)
         usage.context.update({'board': board, 'topic': topic})

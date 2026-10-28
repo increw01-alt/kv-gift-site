@@ -15,7 +15,7 @@ import verify_board_publication as public
 from board_drafts import ROOT, KST, NoTopic, read_json
 from board_usage import estimate
 from editorial_settings import DEFAULT
-from board_planner import PlanningHeld
+from board_planner import PlanningHeld, planning_material
 from test_board_drafts import fixture, example, DAY
 
 NOW = dt.datetime(2026, 10, 21, 10, tzinfo=KST)
@@ -48,7 +48,7 @@ class EditorialTests(unittest.TestCase):
                 'distinct_angle':'대답하기 부담스럽지 않은 질문을 고르는 새로운 상황',
                 'outline':['선물의 목적부터 분리해서 질문하는 방법','상대방이 고르기 편한 선택지를 만드는 방법','대답을 재촉하지 않고 마무리하는 방법']} for title in (used,candidate)]}
             with patch.object(editor,'ask_json',side_effect=[proposals,
-                    {'selected_index':0,'reason':'상대 취향을 묻는 새 질문을 해결합니다.','rejections':[]}]) as call:
+                    {'selected_index':0,'reason':'상대 취향을 묻는 새 질문을 해결합니다.','rejections':[],'rejected_indices':[]}]) as call:
                 board,topic,brief=editor.select_topic('purchase',DAY,'gpt-4.1-mini',lambda *a:None,root)
             self.assertEqual((board,topic,brief),('purchase',candidate,None))
             self.assertEqual(call.call_count,2)
@@ -103,7 +103,7 @@ class EditorialTests(unittest.TestCase):
 class PublishingTests(unittest.TestCase):
     def run_case(self, root, output, review=None, image_error=False, preview=False, push_error=False,
                  event='workflow_dispatch', follow=False, now=NOW, reservation_error=False, preflight_error=False,
-                 planning_error=False):
+                 planning_error=False, selected_plan=None):
         topic='지인과 함께 고를 선물의 취향 질문을 정리하는 방법은 무엇인가요?'
         calls=[]
         def command(*args):
@@ -114,21 +114,29 @@ class PublishingTests(unittest.TestCase):
                 raise RuntimeError('push rejected')
             return ''
         def text(topic,model,on_usage,**kwargs):
+            if selected_plan:
+                self.assertNotIn('screened_out_plans',kwargs['topic_plan'])
+                self.assertEqual(kwargs['topic_plan']['task_id'],selected_plan['task_id'])
             if not preview:
                 reservation=read_json(root/f'data/editorial_runs/{now.date()}/123456.json')
                 self.assertEqual(reservation['status'],'generating')
                 self.assertTrue(any(call[:2] == ('git','push') for call in calls))
             on_usage('text',model,{'input_tokens':1000,'output_tokens':1000})
             return example()
+        def select(*args, **kwargs):
+            if planning_error:
+                raise PlanningHeld('purchase',['기존 글과 질문·해결 절차가 중복됩니다.'],
+                                   [{'topic':topic,'source_id':'gift-choice'}])
+            if selected_plan:
+                kwargs['on_plan'](selected_plan)
+            return 'purchase',topic,None
         raw=(ROOT/'board-img/gc_tip/organize-vouchers-20261020.png').read_bytes()
         env={'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main','GITHUB_RUN_ID':'123456',
              'GITHUB_RUN_ATTEMPT':'1','GITHUB_EVENT_NAME':event,'FOLLOW_SCHEDULE':str(follow).lower(),
              'RUNNER_TEMP':str(output),'GITHUB_STEP_SUMMARY':'','GITHUB_OUTPUT':'',
              'PREVIEW_ONLY':str(preview).lower(),'REQUESTED_BOARD':'auto'}
         with patch.dict(os.environ,env), \
-             patch.object(publish,'select_topic',return_value=('purchase',topic,None),
-                          side_effect=PlanningHeld('purchase',['기존 글과 질문·해결 절차가 중복됩니다.'],
-                            [{'topic':topic,'source_id':'gift-choice'}]) if planning_error else None), \
+             patch.object(publish,'select_topic',side_effect=select), \
              patch.object(publish,'generate',side_effect=text), \
              patch.object(publish,'edit_article',return_value=example()), \
              patch.object(publish,'preflight',side_effect=NoTopic('기존 본문과 같은 질문') if preflight_error else None,
@@ -170,6 +178,29 @@ class PublishingTests(unittest.TestCase):
             self.assertEqual(state['last_board'],'purchase')
             self.assertEqual(state['source_topic_attempts'][-1]['source_id'],'gift-choice')
             self.assertEqual(publish.daily_counts(root,NOW.date()),(0,1))
+
+    def test_selected_plan_preserves_rejected_tasks_without_sending_them_to_draft(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)/'repo';fixture(root)
+            tasks=[{'id':key,'board':'purchase','question':'서로 다른 독자 상황의 질문 '+key,
+                    'deliverable':'독자가 직접 실행할 서로 다른 단계와 예시'}
+                   for key in ('selected','rejected','unreviewed')]
+            publish.write_json(root/'tools/board_reader_tasks.json',tasks)
+            rejected={'task_id':'rejected','source_id':'gift-choice','topic':tasks[1]['question']}
+            selected={'task_id':'selected','source_id':'','topic':tasks[0]['question'],
+                      'screened_out_plans':[rejected]}
+            code,_=self.run_case(root,Path(temp)/'out',selected_plan=selected)
+            self.assertEqual(code,0)
+            record=read_json(root/f'data/editorial_runs/{NOW.date()}/123456.json')
+            self.assertEqual(record['status'],'published')
+            context=record['api_usage']['context']
+            self.assertEqual(context['rejected_topic_plans'],[rejected])
+            self.assertNotIn('screened_out_plans',context['topic_plan'])
+            material,_=planning_material(root,None,'purchase',NOW.date())
+            self.assertEqual([task['id'] for task in material['unused_reader_tasks']],['unreviewed'])
+            self.assertIn('gift-choice',material['recent_source_ids_to_avoid'])
+            state=read_json(root/'data/editorial_state.json')
+            self.assertEqual(state['source_topic_attempts'][-1]['status'],'held')
 
     def test_duplicate_body_preflight_stops_before_paid_image_and_publication(self):
         with tempfile.TemporaryDirectory() as temp:

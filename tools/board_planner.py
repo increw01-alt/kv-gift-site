@@ -189,23 +189,35 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '넓은 상품권 주제나 일반적인 보안 안내가 겹친다는 이유만으로 다른 문제까지 보류하지 않는다. '
         '검증 자료 없는 뉴스·정책·업체 조건은 허용하지 않는다. '
         '통과 후보가 있으면 selected_index에 인덱스, reason에 차별점, rejections에 탈락 이유를 적는다. '
+        '중복 또는 부적합으로 탈락시킨 후보의 인덱스만 rejected_indices에 적는다. '
+        '선택 후보와 단순히 우선순위가 낮은 유효 후보는 rejected_indices에 넣지 않는다. '
         '모두 중복이거나 판단 불가면 selected_index=-1이다. 제목만 보고 승인하지 말고 제공된 본문과 목차를 비교한다. '
-        '선택 이유에는 가장 가까운 기존 글이 다룬 문제와 새 글이 추가하는 구체적인 해결 내용을 함께 적는다.'
+        '선택 이유에는 가장 가까운 기존 글이 다룬 문제와 새 글이 추가하는 구체적인 해결 내용을 함께 적는다. '
+        '기존 글의 답을 그대로 적용해도 해결된다면 새 시점이나 비교표라는 이유로 통과시키지 않는다. '
+        '새 해결 내용에는 기존 답만으로 처리되지 않는 구체적인 예시와 그때 달라지는 행동을 설명한다. '
+        '구체적인 차이를 설명할 수 없으면 selected_index=-1로 두고 본문 생성 전에 보류한다.'
         + '\n\n' + ANGLE_RULES,
         [text_input({'profile': profile, 'comparisons': comparisons,
                      'existing_articles': list(reference_articles.values()),
                      'recent_rejections': review_feedback})],
-        {'type': 'object', 'additionalProperties': False, 'required': ['selected_index', 'reason', 'rejections'],
+        {'type': 'object', 'additionalProperties': False, 'required': ['selected_index', 'reason', 'rejections', 'rejected_indices'],
          'properties': {'selected_index': {'type': 'integer'}, 'reason': string,
+                        'rejected_indices': {'type': 'array', 'items': {'type': 'integer'}},
                         'rejections': {'type': 'array', 'items': string}}},
         'topic_novelty_screen', 'review', review_model, usage, 1800)
-    if (not isinstance(report, dict) or set(report) != {'selected_index', 'reason', 'rejections'} or
+    if (not isinstance(report, dict) or set(report) != {'selected_index', 'reason', 'rejections', 'rejected_indices'} or
         type(report['selected_index']) is not int or not -1 <= report['selected_index'] < len(candidates) or
         not isinstance(report['reason'], str) or not 5 <= len(report['reason']) <= 800 or
         not isinstance(report['rejections'], list) or
         any(not isinstance(x, str) or len(x) > 500 for x in report['rejections'])):
         raise ValueError('주제 사전 검수 응답 오류')
+    rejected = report['rejected_indices']
+    if (not isinstance(rejected, list) or
+        any(type(i) is not int or not 0 <= i < len(candidates) for i in rejected) or
+        len(set(rejected)) != len(rejected) or report['selected_index'] in rejected):
+        raise ValueError('주제 사전 검수 탈락 후보 인덱스 오류')
     if report['selected_index'] == -1:
         raise PlanningHeld(board, [report['reason'], *report['rejections'][:6]], candidates)
     selected = candidates[report['selected_index']]
-    return {**selected, 'novelty_reason': report['reason'], 'screen_rejections': report['rejections']}
+    return {**selected, 'novelty_reason': report['reason'], 'screen_rejections': report['rejections'],
+            'screened_out_plans': [candidates[i] for i in rejected]}

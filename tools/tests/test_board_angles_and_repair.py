@@ -87,7 +87,7 @@ class AnglesAndRepairTests(unittest.TestCase):
             root=Path(temp);fixture(root)
             for selected in (0,-1):
                 api=Mock(side_effect=[{'candidates':[value]},
-                    {'selected_index':selected,'reason':'기존 글의 독자 질문과 실제 해결 단계를 비교했습니다.','rejections':[]}])
+                    {'selected_index':selected,'reason':'기존 글의 독자 질문과 실제 해결 단계를 비교했습니다.','rejections':[],'rejected_indices':[]}])
                 args=('purchase',PROFILES['purchase'],CONTEXT,[],DAY,root,'draft','review',api,text_input,lambda *x:None,lambda t:True)
                 if selected < 0:
                     with self.assertRaises(PlanningHeld):choose_plan(*args)
