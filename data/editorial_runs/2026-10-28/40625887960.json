@@ -1,17 +1,19 @@
 {
   "run_id": "40625887960",
   "date_kst": "2026-10-28",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-28T03:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 이번 후보들은 모두 미발행 과제의 질문인 ‘원래 필요했던 상품인지 다시 확인하기’에 답하는 구조가 아니고, 기존 공개 글과도 독립적인 새 해결 문제를 충분히 만들지 못합니다. 과제와 가장 비슷한 방향의 후보가 없어 중복 판단 없이 보류합니다. / 0번: 상품권 구매 시 결제 수단별 할인·적립을 비교하는 내용으로, 원래 필요했던 물건인지 재검토하는 질문과 다릅니다. 기존 공개 글 '/board/gc_tip/29'의 카드 실적·포인트 적립 확인과 같은 해결 구조를 반복합니다. / 1번: 구매 영수증과 상품권 화면의 역할 구분·보관법을 다루며, 선택한 물건이 원래 필요했던 것인지 다시 확인하는 문제와 연결되지 않습니다. 기존 공개 글 '/board/gc_information/11'과 같은 질문·해결 흐름입니다. / 2번: 가족에게 장보기를 부탁할 때 전달 목록을 정리하는 주제로, 독자가 이미 고른 상품이 필요한지 재확인하는 문제와 다릅니다. 판매/상담형 정리 구조만 보이고 과제의 핵심 질문을 직접 해결하지 못합니다. / 3번: 모바일상품권 문자 미도착 시 점검과 문의 준비 절차로, 상품 선택이 원래 필요했던 것인지 확인하는 과제와 무관합니다. 기존 공개 글 '/board/purchase/2565' 및 '/board/general_notice/44'의 발송 상태 점검과 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "40625887960",
@@ -20,15 +22,137 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 구매 시 카드 결제 수단별 할인 및 적립 혜택 실전 비교",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 신용카드, 체크카드, 포인트 등 다양한 결제 수단별로 받을 수 있는 할인과 적립 혜택 체계를 정확히 알고 비교하는 방법이 어려워 결국 최적의 혜택을 못 챙긴다.",
+          "distinct_angle": "기존 카드 실적과 포인트 적립 안내와 달리, 실제 구매 절차에 따라 결제 수단별로 할인율과 적립 조건을 구체적으로 비교하고, 결제 전에 직접 점검할 수 있는 체크포인트 중심으로 안내한다.",
+          "reader_situation": "여러 결제 수단을 가지고 있으나 각각의 할인·적립 조건을 정확히 파악하지 못해 구매 직전에 고민하는 소비자.",
+          "deliverable": "상품권 종류별 결제 수단 선택 기준과 각 카드 및 포인트 사용 조건을 테이블로 정리한 비교표와 결제 전 확인해야 할 구체 항목 리스트.",
+          "task_id": "tip-choice-break",
+          "outline": [
+            "주요 결제 수단별 할인 및 적립 조건 상세 파악하기",
+            "구매 상품권 종류와 금액에 맞춰 최적 결제 수단 선택해보기",
+            "결제 전 현장에서 적용 조건 다시 확인하며 할인 및 적립 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 후 영수증과 상품권 화면의 차이 이해 및 활용법",
+          "source_id": "",
+          "reader_problem": "상품권을 구매했으나 영수증과 상품권 화면 두 가지 모두를 받으면서 각각이 어떤 역할을 하고 언제 어떻게 활용해야 하는지 헷갈려 잘못 관리하거나 문의 시 어려움을 겪는다.",
+          "distinct_angle": "기존 자료가 구매 영수증과 상품권 화면 역할을 단순 비교하는 데 그친 반면, 본 글은 상황별 활용 시나리오와 법적 개념을 구분하여 쉽고 실제적인 사용법과 관리법에 초점을 맞춘다.",
+          "reader_situation": "구매 후 증빙과 사용 준비 과정에서 어떤 자료를 어떻게 보관하고 활용해야 할지 구체적 지침이 필요한 이용자.",
+          "deliverable": "영수증과 상품권 화면의 기능 차이 및 법적 의미를 시각화한 개념도와 각 경우별 구체적 활용법을 담은 요약표.",
+          "task_id": "tip-keep-or-discard",
+          "outline": [
+            "구매 영수증의 법적 증빙 및 사용 목적 이해하기",
+            "상품권 화면의 실사용 수단으로서 기능과 확인할 주요 정보 안내",
+            "상황별 영수증과 상품권 화면 활용사례 및 보관법 비교 정리하기"
+          ]
+        },
+        {
+          "topic": "상품권 매입 상담 시 항목별 정보 체계적 구분과 차별화 관리법",
+          "source_id": "",
+          "reader_problem": "여러 종류의 상품권을 동시 매입 상담할 때 각 상품권별 상태, 상담 내용, 증빙 자료 등이 섞여 상담자가 혼동하고 상담 결과도 제대로 비교하지 못해 비용 손해와 시간 낭비가 생긴다.",
+          "distinct_angle": "기존의 단순 증빙 및 개인정보 보호 안내를 넘어서, 실제 상담 매칭 시 상황별 항목 구분과 개인정보 노출 최소화 수칙을 포함해 상담 별 맞춤 관리법을 제시한다.",
+          "reader_situation": "동일 판매자 또는 여러 판매처에 다양한 상품권 상담을 동시에 진행하며 체계적인 정보 분리와 안전 관리를 원하는 판매자.",
+          "deliverable": "상품권 종류별 명칭 부여법, 상담별 질문·답변 매칭 테이블 양식, 개인정보 노출 방지 체크리스트가 포함된 통합 관리 매뉴얼.",
+          "task_id": "tip-shopping-delegate",
+          "outline": [
+            "상품권 종류별 고유 명칭 체계적으로 부여하기",
+            "상담항목·답변 구분해 각각 목록 및 테이블로 관리하기",
+            "상담 시 개인정보 및 연락처 노출 최소화 수칙 실제 적용하기"
+          ]
+        },
+        {
+          "topic": "모바일상품권 문자 미도착 시 사전 점검과 문의 준비 절차",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 늦게 오거나 아예 도착하지 않아 당황하는데, 문제 확인을 위한 점검 항목과 문의 시 필요한 준비 정보를 몰라 효율적 대처가 어렵다.",
+          "distinct_angle": "기존 단순 문의 안내와 달리 구매 전후 단계별 체크리스트를 제공하고, 문자 미도착 원인별 구체 점검 절차와 문의 시점에 필요한 정보 준비를 단계적으로 설명한다.",
+          "reader_situation": "모바일상품권 구매 후 문자 미수신 문제에 대응하려고 구매 환경을 점검하고 고객센터 문의를 준비 중인 이용자.",
+          "deliverable": "구매 시 사전 점검 항목, 문자 미도착 시 단계별 확인법, 문의 시 요구되는 상세 정보 목록으로 구성된 실용 점검 매뉴얼.",
+          "task_id": "tip-no-rush-shopping",
+          "outline": [
+            "구매 시 입력 연락처 및 모바일 환경 사전 점검하기",
+            "문자 미도착 발생 시 점검 항목 및 조치 순서 숙지하기",
+            "고객센터 문의 전 필요한 정보 미리 준비해 효율적 상담하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 19074,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1129,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20203
+        },
+        "estimated_usd": 0.009436,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-28T03:18:53.960293+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12116,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 511,
+          "output_tokens_details": {
+            "reasoning_tokens": 150
+          },
+          "total_tokens": 12627
+        },
+        "estimated_usd": 0.0113865,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-28T03:18:58.454205+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-28T03:18:45.253890+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-28T03:18:54.597192+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0208225,
+    "estimated_total_usd": 0.0208225,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
