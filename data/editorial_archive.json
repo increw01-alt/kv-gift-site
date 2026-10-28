@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T03:29:50.252791+00:00",
+  "generatedAt": "2026-10-28T03:30:53.394496+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1525,7 +1525,7 @@
       "board": "gc_information",
       "topic": "상품권 전체 안내와 특정 상품의 예외 안내는 어떻게 함께 읽을까요?",
       "url": "https://kv-gift.co.kr/board/gc_information/12",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T03:30:53.374860+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10635105,
       "knownSubtotalUsd": 0.10635105
