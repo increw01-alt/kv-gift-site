@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T02:33:47.432539+00:00",
+  "generatedAt": "2026-10-28T02:34:55.282861+00:00",
   "dateKst": "2026-10-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 6,
   "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.26895265,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3809448,
+  "estimatedTotalUsd": 0.3809448,
   "records": [
     {
       "runId": "40607871974",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "40621591023",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "선물 가격 대신 마음과 의미를 자연스럽게 표현하는 대화법",
+      "url": "https://kv-gift.co.kr/board/free/474",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-28T02:32:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11199215,
+      "knownSubtotalUsd": 0.11199215
     }
   ]
 }
