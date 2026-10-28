@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T03:28:41.824570+00:00",
+  "generatedAt": "2026-10-28T03:29:50.238128+00:00",
   "dateKst": "2026-10-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 9,
   "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.43961215,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5459632,
+  "estimatedTotalUsd": 0.5459632,
   "records": [
     {
       "runId": "40607871974",
@@ -118,16 +118,16 @@
     },
     {
       "runId": "40626841891",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "상품권 전체 안내와 특정 상품의 예외 안내는 어떻게 함께 읽을까요?",
+      "url": "https://kv-gift.co.kr/board/gc_information/12",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-28T03:27:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10635105,
+      "knownSubtotalUsd": 0.10635105
     }
   ]
 }

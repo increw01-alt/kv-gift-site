@@ -798,5 +798,18 @@
     "publication_mode": "automatic",
     "run_id": "40621591023",
     "usage_file": "data/editorial_runs/2026-10-28/40621591023.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 12,
+    "topic": "상품권 전체 안내와 특정 상품의 예외 안내는 어떻게 함께 읽을까요?",
+    "drafted_at": "2026-10-28",
+    "automation": true,
+    "search_intent": "상품권 안내 문서에서 전체 규칙과 특정 상품 예외를 함께 읽을 때 우선순위와 적용 범위를 스스로 구분하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 상품권 안내서 두 권이 펼쳐져 있고, 한 권에는 ‘전체 안내’ 탭이 꽂혀 있으며 다른 한 권에는 ‘예외 조항’ 탭이 꽂혀 있다. 가운데에는 돋보기와 형광펜, 적용 범위를 적는 메모지가 놓여 있고 한 사람이 두 문서의 문구를 나란히 비교하며 우선 적용 부분을 표시하는 구도",
+    "image_alt": "전체 안내가 적힌 책과 예외 조항이 적힌 책을 나란히 두고 돋보기로 적용 범위를 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40626841891",
+    "usage_file": "data/editorial_runs/2026-10-28/40626841891.json"
   }
 ]

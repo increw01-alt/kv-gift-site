@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T03:28:41.841047+00:00",
+  "generatedAt": "2026-10-28T03:29:50.252791+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1521,14 +1521,14 @@
       "runId": "40626841891",
       "dateKst": "2026-10-28",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "상품권 전체 안내와 특정 상품의 예외 안내는 어떻게 함께 읽을까요?",
+      "url": "https://kv-gift.co.kr/board/gc_information/12",
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10635105,
+      "knownSubtotalUsd": 0.10635105
     },
     {
       "id": "post:purchase:2561",
@@ -7438,13 +7438,79 @@
     {
       "entryId": "run:40626841891",
       "dateKst": "2026-10-28",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-28T03:28:53.672721+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0045772,
+      "knownSubtotalUsd": 0.0045772,
+      "requests": 1,
+      "inputTokens": 7143,
+      "outputTokens": 1075
+    },
+    {
+      "entryId": "run:40626841891",
+      "dateKst": "2026-10-28",
+      "recordedAt": "2026-10-28T03:28:59.174566+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.012642,
+      "knownSubtotalUsd": 0.012642,
+      "requests": 1,
+      "inputTokens": 12260,
+      "outputTokens": 766
+    },
+    {
+      "entryId": "run:40626841891",
+      "dateKst": "2026-10-28",
+      "recordedAt": "2026-10-28T03:29:02.620759+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.001798,
+      "knownSubtotalUsd": 0.001798,
+      "requests": 1,
+      "inputTokens": 2663,
+      "outputTokens": 458
+    },
+    {
+      "entryId": "run:40626841891",
+      "dateKst": "2026-10-28",
+      "recordedAt": "2026-10-28T03:29:07.519264+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0025276,
+      "knownSubtotalUsd": 0.0025276,
+      "requests": 1,
+      "inputTokens": 4359,
+      "outputTokens": 490
+    },
+    {
+      "entryId": "run:40626841891",
+      "dateKst": "2026-10-28",
+      "recordedAt": "2026-10-28T03:29:12.316504+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0105525,
+      "knownSubtotalUsd": 0.0105525,
+      "requests": 1,
+      "inputTokens": 12144,
+      "outputTokens": 321
+    },
+    {
+      "entryId": "run:40626841891",
+      "dateKst": "2026-10-28",
+      "recordedAt": "2026-10-28T03:29:44.589233+00:00",
+      "kind": "image",
+      "estimatedUsd": 0.066423,
+      "knownSubtotalUsd": 0.066423,
+      "requests": 1,
+      "inputTokens": 3555,
+      "outputTokens": 1372
+    },
+    {
+      "entryId": "run:40626841891",
+      "dateKst": "2026-10-28",
+      "recordedAt": "2026-10-28T03:29:48.998427+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00783075,
+      "knownSubtotalUsd": 0.00783075,
+      "requests": 1,
+      "inputTokens": 8809,
+      "outputTokens": 272
     },
     {
       "entryId": "post:purchase:2561",
