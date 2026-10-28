@@ -47,6 +47,27 @@ class NoTopic(ValueError):
     """유효한 주제가 없으면 API 호출 전에 정상적으로 건너뜁니다."""
 
 
+class ContentValidationError(ValueError):
+    """Only generated wording violations are eligible for a bounded editorial repair."""
+    def __init__(self, violations):
+        self.violations = violations
+        super().__init__('자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: '
+                         + ', '.join(dict.fromkeys(x['text'] for x in violations)))
+
+
+FORBIDDEN_TEXT = re.compile(
+    r'https?://|www\.|[<>]|\d|[%％]|현금화|카드깡|급전|무조건|신용\s*무관|최저가|공식\s*인증|안전한\s*거래|(?<![가-힣])제가|(?<![가-힣])저는|(?<![가-힣])제\s*경험|실제\s*고객|고객님께서|당일\s*입금|즉시\s*입금', re.I)
+
+
+def content_violations(data):
+    fields = [('summary', data['summary'])]
+    for index, section in enumerate(data['sections']):
+        fields.extend((f'sections[{index}].{key}', section[key]) for key in ('heading', 'body'))
+    fields.extend((f'checks[{index}]', value) for index, value in enumerate(data['checks']))
+    return [{'field': path, 'text': match.group(0)} for path, value in fields
+            for match in FORBIDDEN_TEXT.finditer(value)][:24]
+
+
 def read_json(path):
     return json.loads(path.read_text(encoding='utf-8'))
 
@@ -123,7 +144,6 @@ def validate(data, *, check_content=True):
         raise ValueError('요약 길이 오류')
     if not isinstance(data['sections'], list) or len(data['sections']) != 3:
         raise ValueError('본문은 3개 절이어야 합니다')
-    strings = [data['summary']]
     for section in data['sections']:
         if set(section) != {'heading', 'body'}:
             raise ValueError('본문 구조 오류')
@@ -131,17 +151,13 @@ def validate(data, *, check_content=True):
             raise ValueError('소제목 길이 오류')
         if not isinstance(section['body'], str) or not 60 <= len(section['body']) <= 650:
             raise ValueError('본문 길이 오류')
-        strings.extend([section['heading'], section['body']])
     if not isinstance(data['checks'], list) or len(data['checks']) != 3:
         raise ValueError('확인 사항은 3개여야 합니다')
     if any(not isinstance(x, str) or not 10 <= len(x) <= 130 for x in data['checks']):
         raise ValueError('확인 사항 길이 오류')
-    strings.extend(data['checks'])
-    text = '\n'.join(strings)
-    forbidden = r'https?://|www\.|[<>]|\d|[%％]|현금화|카드깡|급전|무조건|신용\s*무관|최저가|공식\s*인증|안전한\s*거래|(?<![가-힣])제가|(?<![가-힣])저는|(?<![가-힣])제\s*경험|실제\s*고객|고객님께서|당일\s*입금|즉시\s*입금'
-    match = re.search(forbidden, text, re.I)
-    if match and check_content:
-        raise ValueError('자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: ' + match.group(0))
+    violations = content_violations(data) if check_content else []
+    if violations:
+        raise ContentValidationError(violations)
     return data
 
 

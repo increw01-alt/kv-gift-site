@@ -43,21 +43,22 @@ class UsageTests(unittest.TestCase):
             self.assertEqual(saved['estimated_total_usd'], .002)
             self.assertEqual(saved['requests'][0]['usage_record_index'], 0)
 
-    def test_editing_validation_failure_keeps_both_metered_calls(self):
+    def test_editing_and_repair_failure_keep_all_metered_calls(self):
         with tempfile.TemporaryDirectory() as temp:
             log = UsageLog(Path(temp)/'usage.json')
             invalid = example()
             invalid['sections'][0]['body'] += ' 안전한 거래'
             with patch.dict('os.environ', {'OPENAI_API_KEY': 'test-secret'}), \
-                 patch('urllib.request.urlopen', side_effect=[self.response(example()), self.response(invalid)]), \
+                 patch('urllib.request.urlopen', side_effect=[self.response(example()), self.response(invalid), self.response(invalid)]), \
                  patch.object(board_editor, 'related_titles', return_value=[]):
                 data = board_drafts.generate('topic', 'gpt-4.1-mini', log.record)
                 with self.assertRaisesRegex(ValueError, '금지 표현'):
                     board_editor.edit_article('sale', 'topic', data, None, 'gpt-4.1-mini', log.record)
             log.save('failed')
             saved = json.loads(log.path.read_text(encoding='utf-8'))
-            self.assertEqual(saved['estimated_total_usd'], .004)
-            self.assertEqual([r['kind'] for r in saved['requests']], ['text', 'editing'])
+            self.assertEqual(saved['estimated_total_usd'], .006)
+            self.assertEqual(saved['accounting_status'], 'complete')
+            self.assertEqual([r['kind'] for r in saved['requests']], ['text', 'editing', 'editing'])
 
     def test_image_timeout_keeps_unmetered_request_unknown(self):
         with tempfile.TemporaryDirectory() as temp:

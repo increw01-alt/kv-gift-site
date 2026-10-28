@@ -4,6 +4,7 @@ import re
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 from board_profiles import PROFILES
+from board_angle_rules import ANGLE_RULES
 
 
 class PlainArticle(HTMLParser):
@@ -109,7 +110,7 @@ def validate_plan(value, related):
     return value
 
 
-def preflight(board, topic, data, model, on_usage, root):
+def preflight(board, topic, data, model, on_usage, root, topic_plan=None):
     from board_drafts import NoTopic, CARD_FACT_RULES
     from board_editor import ask_json, text_input, prior_titles
     duplicate = reject_copy(data, root)
@@ -138,9 +139,10 @@ image_scene은 본문 핵심 행동을 나타내는 구체적인 사물과 구�
 image_alt는 그 장면을 묘사한 자연스러운 한국어 문장이다. '이미지'만 붙인 제목이나 검색어 나열로 만들지 않는다.
 related_paths는 allowed_related_paths에서 그대로 선택한다. 주소를 새로 작성하거나 도메인·확장자·슬래시를 덧붙이지 않는다. 도움이 되는 다음 읽을거리만 최대 세 개, 없으면 빈 배열이다.
 자료에 있는 업체 조건을 현재 사실로 단정하지 않는다. 기존 제목과 본문은 검토 자료이지 출처 검증이 아니다.'''
-        + '\n다음 기준 위반도 issues에 기록하고 unique=false로 보류한다.\n' + CARD_FACT_RULES,
+        + '\n다음 기준 위반도 issues에 기록하고 unique=false로 보류한다.\n' + CARD_FACT_RULES
+        + '\n\n' + ANGLE_RULES,
         [text_input({'board': PROFILES[board], 'title': topic, 'article': data,
-                     'allowed_related_paths': allowed_paths,
+                     'allowed_related_paths': allowed_paths, 'topic_plan_to_verify_against_body': topic_plan,
                      'related_existing_articles': related, 'other_existing_titles': prior_titles(root)[-220:],
                      'previous_reader_intents_and_scenes': previous_plans})],
         schema, 'originality_and_image_plan', 'review', model, on_usage, 3000)

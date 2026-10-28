@@ -212,15 +212,21 @@ def main(root=ROOT, command=None, now=None):
         data = generate(topic, model, usage.record, board=board, root=root, day=day, topic_plan=topic_plan,
                         defer_content_validation=True)
         write_json(preview_dir/'draft.api-original.json', data)
-        data = edit_article(board, topic, data, brief, model, usage.record, root, topic_plan=topic_plan)
+        def remember_repair(value):
+            usage.context['wording_repair'] = dict(value)
+            usage.save('in_progress')
+            write_json(preview_dir/'wording-repair.json', value)
+        data = edit_article(board, topic, data, brief, model, usage.record, root,
+                            topic_plan=topic_plan, on_repair=remember_repair)
         write_json(preview_dir/'edited-text.json', data)
-        plan = preflight(board, topic, data, review_model, usage.record, root)
+        plan = preflight(board, topic, data, review_model, usage.record, root, topic_plan=topic_plan)
         usage.context['search_intent'] = plan['search_intent']
         write_json(preview_dir/'originality-image-plan.json', plan)
         raw, image_info = generate_banner(topic, data, usage.record, board=board, plan=plan)
         save_preview(preview_dir, board, topic, data, day, raw, root, brief, approval_required=preview, plan=plan)
         write_json(preview_dir/'image-generation.json', image_info)
-        report = review_article(board, topic, data, raw, brief, review_model, usage.record, root, plan=plan)
+        report = review_article(board, topic, data, raw, brief, review_model, usage.record, root,
+                                plan=plan, topic_plan=topic_plan)
         api_status = 'completed'
         if report['approved']:
             status = 'ready'
