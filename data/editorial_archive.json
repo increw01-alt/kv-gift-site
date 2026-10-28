@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T04:19:40.734423+00:00",
+  "generatedAt": "2026-10-28T04:20:44.772682+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1539,7 +1539,7 @@
       "board": "sale",
       "topic": "지난 상담 답변을 다시 보며 판매를 결정할 때 어떤 내용을 재확인할까요?",
       "url": "https://kv-gift.co.kr/board/sale/3695",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-28T04:20:44.757573+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1099741,
       "knownSubtotalUsd": 0.1099741
