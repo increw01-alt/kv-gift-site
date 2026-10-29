@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T02:19:52.195158+00:00",
+  "generatedAt": "2026-10-29T02:21:16.059700+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1651,7 +1651,7 @@
       "board": "general_notice",
       "topic": "다른 기기에서는 결과가 다를 때 차이점을 나눠 적어 주세요",
       "url": "https://kv-gift.co.kr/board/general_notice/63",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-29T02:21:16.039375+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1093141,
       "knownSubtotalUsd": 0.1093141
