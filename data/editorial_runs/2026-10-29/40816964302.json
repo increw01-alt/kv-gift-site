@@ -1,16 +1,26 @@
 {
   "run_id": "40816964302",
   "date_kst": "2026-10-29",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "free",
+  "topic": "선물은 필요한 때에 맞추는 편과 기념일에 맞추는 편 중 무엇을 우선하나요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/free/476",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-29T04:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,308 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "선물을 고를 때 브랜드와 실제 사용 편의 중 무엇부터 생각하나요?",
+          "source_id": "",
+          "reader_problem": "선물 선택 시 브랜드 인지도와 사용 편의성 중 어느 기준을 더 우선해야 하는지 혼란스럽다.",
+          "distinct_angle": "기존 글은 브랜드나 사용성 각각의 장점 안내가 주를 이뤘으나, 이번 글은 브랜드·생활권·사용 방식을 연결해 상황별 최적 판단을 돕는 비교 질문을 제시한다.",
+          "reader_situation": "선물 구매 전 브랜드와 사용 편의성 기준 중 우선순위를 결정하고자 하는 독자.",
+          "deliverable": "브랜드 인지도와 실제 생활권 또는 사용 방식 관련 선택 기준 비교 질문과 상황별 고려 포인트 정리 자료.",
+          "task_id": "free-brand-or-use",
+          "outline": [
+            "브랜드 인지도와 사용 편의성 각각의 주요 고려 요소 탐색",
+            "생활 환경과 사용 방식에 따른 선택 기준 비교 분석",
+            "상황별 적합한 우선 기준을 스스로 판단하는 질문 만들기"
+          ]
+        },
+        {
+          "topic": "모임에서 선물 취향을 공개로 묻기 어려울 때 어떤 방법이 편할까요?",
+          "source_id": "",
+          "reader_problem": "선물 취향을 공개적으로 묻기 부담스러워 비공개 방식이나 기타 편리한 방법을 찾고 있다.",
+          "distinct_angle": "기존에는 공개 방식과 개인 문의의 장단점 비교 중심이었다면, 이번 글은 민감하지 않으면서도 편리한 질문 설계에 중점을 둔다.",
+          "reader_situation": "모임에서 선물 선호를 자연스레 파악하길 원하지만 공개 질문 부담이 큰 독자.",
+          "deliverable": "비공개 응답이나 부담 없이 쓸 수 있는 질문 설계 방안과 장단점 비교 질문 리스트.",
+          "task_id": "free-preference-private",
+          "outline": [
+            "공개 질문과 비공개 답변 방식의 편의 및 부담 비교",
+            "민감한 사정을 요구하지 않는 질문 설계 원리 이해",
+            "적합한 질문 설계와 활용 방안 실천하기"
+          ]
+        },
+        {
+          "topic": "선물 안내를 자세히 받는 편과 간단히 받는 편 중 어떤 차이가 있나요?",
+          "source_id": "",
+          "reader_problem": "선물 관련 안내는 어느 정도까지 받아야 하는지, 너무 많거나 적음에 따른 차이가 무엇인지 몰라 고민이다.",
+          "distinct_angle": "기존 안내는 단순 정보량 차이나 과잉 안내 주의가 많았으나, 이번 글은 필수 안내와 선택 설명 분리를 중심으로 안내 필요량 차이를 판단하는 질문 기획에 집중한다.",
+          "reader_situation": "상대방이 원하는 안내 정도가 다를 수 있어 적절한 안내 수준을 고민하는 독자.",
+          "deliverable": "정보 필요량을 확인하는 질문과 필수 및 선택 안내 분리 기준, 그에 따른 운영팀 질문 양식.",
+          "task_id": "free-receiving-style",
+          "outline": [
+            "필수 안내 사항과 선택적 정보 구분하기",
+            "상대별 맞춤형 안내 필요량 진단 질문 만들기",
+            "적합한 안내 방식 선택을 위한 의사 결정 도구 활용"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "선물은 필요한 때에 맞추는 편과 기념일에 맞추는 편 중 무엇을 우선하나요?",
+        "source_id": "",
+        "reader_problem": "선물을 일정에 맞추는 것과 필요에 맞추는 것 중 우선순위에 대한 개인적 판단 기준이 없어 고민이다.",
+        "distinct_angle": "기존에는 개인 취향이나 경우별 안내가 대부분이지만, 이번 글은 일정과 필요 충돌 상황에서 독자가 스스로 판단할 구체적 자가 진단 질문을 제시한다.",
+        "reader_situation": "선물을 언제 준비할지 결정해야 하는 독자로, 사용 시기와 기념일 간 우선순위를 고민하는 상황.",
+        "deliverable": "일정 맞춤과 필요 충돌 상황에서 활용할 수 있는 스스로 판단할 질문 리스트와 간단한 판단 틀을 제공한다.",
+        "task_id": "free-timing-choice",
+        "outline": [
+          "선물 일정 맞춤과 필요 충족 중 장단점 비교하기",
+          "충돌 상황에서 고려해야 할 핵심 질문 도출하기",
+          "자가 진단을 통한 적합한 선물 시점 결정하기"
+        ],
+        "novelty_reason": "0번은 기존 글 '/board/free/473'가 다룬 ‘받는 사람의 선호와 필요를 기준으로 선물을 고르는 우선 합의’와 달리, 이번에는 ‘기념일 일정’과 ‘실제 필요 시점’이 충돌할 때 독자가 스스로 우선순위를 판단하도록 돕는 질문 설계가 중심입니다. 기존 글은 무엇을 기준으로 선물을 고를지에 가까웠고, 새 글은 언제 맞춰 준비할지에 대한 자가 진단 질문과 판단 틀을 추가합니다. 즉, 가장 가까운 기존 글이 해결한 문제는 선물 선택 기준 합의이고, 새 글은 일정 충돌 상황에서의 결정을 돕는다는 점이 다릅니다.",
+        "screen_rejections": [
+          "1번은 '브랜드 인지도 vs 실제 사용 편의'라는 축이 새로워 보이지만, 본문 목차가 결국 생활 환경과 사용 방식에 따라 무엇을 우선할지 정리하는 형태라 기존의 취향·사용환경 점검형 글('/board/sense/6', '/board/free/470')과 해결 흐름이 가깝습니다. 브랜드 우열을 따지는 구체적 판단 예시가 충분히 드러나지 않습니다.",
+          "2번은 공개 질문이 부담스러울 때 비공개 응답으로 바꾸는 방식이 핵심인데, 이는 이미 취향을 자연스럽게 묻는 방식('/board/sense/6')과 상대 부담을 줄이는 대화법('/board/sense/13')의 연장선입니다. '민감하지 않게 질문을 설계하는 기준'은 있으나, 기존 답으로도 충분히 처리될 수 있어 독립성이 약합니다.",
+          "3번은 안내를 자세히 받을지 간단히 받을지의 차이를 묻지만, 본문은 필수 안내와 선택 설명을 나누는 수준에 머물러 기존의 정보량 조절·부담 없는 안내 글('/board/sense/13')과 거의 같은 해결 구조입니다. 새로 달라지는 행동이나 구체적 판단 사례가 충분하지 않습니다."
+        ]
+      },
+      "board": "free",
+      "topic": "선물은 필요한 때에 맞추는 편과 기념일에 맞추는 편 중 무엇을 우선하나요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-28T12:55:44Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "선물을 기념일에 맞출지 먼저 필요한 시점에 맞출지 스스로 판단할 기준과 질문을 정리하려는 독자의 고민"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8945,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 905,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9850
+        },
+        "estimated_usd": 0.005026,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T04:18:57.547042+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11700,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 772,
+          "output_tokens_details": {
+            "reasoning_tokens": 288
+          },
+          "total_tokens": 12472
+        },
+        "estimated_usd": 0.012249,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T04:19:03.590633+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3075,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 395,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3470
+        },
+        "estimated_usd": 0.001862,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T04:19:06.851296+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7552,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 470,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8022
+        },
+        "estimated_usd": 0.0037728,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T04:19:12.931374+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17132,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 334,
+          "output_tokens_details": {
+            "reasoning_tokens": 156
+          },
+          "total_tokens": 17466
+        },
+        "estimated_usd": 0.014352,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T04:19:17.382487+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3521,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1025
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4893
+        },
+        "estimated_usd": 0.066253,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T04:19:47.090401+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12388,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 208,
+          "output_tokens_details": {
+            "reasoning_tokens": 143
+          },
+          "total_tokens": 12596
+        },
+        "estimated_usd": 0.010227,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T04:19:50.900135+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T04:18:49.584363+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T04:18:58.089107+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T04:19:03.625818+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T04:19:08.137147+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T04:19:15.060464+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-29T04:19:17.403098+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T04:19:48.455296+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1137418,
+    "estimated_total_usd": 0.1137418,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

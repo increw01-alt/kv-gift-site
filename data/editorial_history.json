@@ -928,5 +928,18 @@
     "publication_mode": "automatic",
     "run_id": "40811353646",
     "usage_file": "data/editorial_runs/2026-10-29/40811353646.json"
+  },
+  {
+    "board": "free",
+    "id": 476,
+    "topic": "선물은 필요한 때에 맞추는 편과 기념일에 맞추는 편 중 무엇을 우선하나요?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "선물을 기념일에 맞출지 먼저 필요한 시점에 맞출지 스스로 판단할 기준과 질문을 정리하려는 독자의 고민",
+    "image_scene": "탁자 위에 달력과 작은 선물 상자, 메모 카드가 놓여 있고 한 사람이 ‘기념일’과 ‘필요 시점’ 두 칸으로 나뉜 체크리스트에 장단점을 적으며 비교하는 장면",
+    "image_alt": "달력 옆에 놓인 선물 상자와 메모 카드에 기념일과 필요 시점을 나눠 적으며 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40816964302",
+    "usage_file": "data/editorial_runs/2026-10-29/40816964302.json"
   }
 ]
