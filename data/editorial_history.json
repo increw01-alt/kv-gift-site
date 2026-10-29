@@ -980,5 +980,18 @@
     "publication_mode": "automatic",
     "run_id": "40834541709",
     "usage_file": "data/editorial_runs/2026-10-29/40834541709.json"
+  },
+  {
+    "board": "sale",
+    "id": 3697,
+    "topic": "상품권 매입 문의 기록에 내 판단과 상대의 답변을 어떻게 구분할까요?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "상품권 매입 문의 기록에서 상대 답변과 내 추정을 나눠 적고 재문의 기준까지 정리하려는 질문",
+    "image_scene": "책상 위에 상품권 문의 메모지와 스마트폰 메신저 화면이 나란히 놓여 있고, 메모지에는 ‘답변 / 추정 / 추가 질문’ 세 칸이 보인다. 한 사람이 상담 내용을 항목별로 옮겨 적으며 답변과 자신의 판단을 분리해 정리하는 장면",
+    "image_alt": "상품권 문의 내용을 답변과 추정, 추가 질문으로 나눠 적는 메모지와 스마트폰 화면이 놓인 책상 장면",
+    "publication_mode": "automatic",
+    "run_id": "40841142565",
+    "usage_file": "data/editorial_runs/2026-10-29/40841142565.json"
   }
 ]

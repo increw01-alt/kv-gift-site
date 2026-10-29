@@ -1,16 +1,26 @@
 {
   "run_id": "40841142565",
   "date_kst": "2026-10-29",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sale",
+  "topic": "상품권 매입 문의 기록에 내 판단과 상대의 답변을 어떻게 구분할까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sale/3697",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-29T08:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,278 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "가족을 대신해 상품권 판매 문의만 할 때 어떤 역할을 먼저 구분할까요?",
+          "source_id": "",
+          "reader_problem": "가족을 대신해 판매 문의를 하는 경우, 소유자, 문의자, 실제 판매 진행자의 역할과 권한을 명확히 구별하지 못해 대리 판매 여부와 절차가 불명확해 업무 진행에 곤란함.",
+          "distinct_angle": "일반 판매 상담과 달리 대리 문의 시점에서 역할 구분과 동의 절차를 강조해 대리 판매 가능 여부를 단정하지 않고, 필요한 확인 사항을 제안하는 차별화된 절차를 소개한다.",
+          "reader_situation": "가족 등으로부터 상품권 판매 관련 문의를 대신 받아 처리하려는 이용자나 대리 판매 가능성을 사전에 확인하고 싶은 상황.",
+          "deliverable": "소유자, 문의자, 실제 진행자를 분리하고 각각의 동의와 확인 절차를 안내하는 단계별 역할 구분 가이드와 대리 판매 시 주의할 점 체크리스트.",
+          "task_id": "sale-proxy-inquiry",
+          "outline": [
+            "소유자, 문의자, 실제 판매 진행자 역할 정의와 구분 방법",
+            "대리 문의 시 동의 여부와 권한 확인 절차 안내",
+            "대리 판매 가능 여부 판정의 주의점과 문의 기록 작성 요령"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 매입 문의 기록에 내 판단과 상대의 답변을 어떻게 구분할까요?",
+        "source_id": "",
+        "reader_problem": "상품권 매입 문의 중 상대방의 답변과 본인의 판단이 혼재되어 기록되어 상담 내용 혼동 및 잘못된 판매 판단으로 이어지는 상황을 겪음.",
+        "distinct_angle": "답변과 내 추정을 명확히 구분하는 구획화된 기록방법과 예시를 제공해, 답변을 확정 계약으로 오해하지 않고 재문의와 판단 근거로 적절히 활용할 수 있는 개인 기록법을 제시한다.",
+        "reader_situation": "상품권 매입 문의를 진행하며 상담 내용을 체계적으로 정리하고, 상대 답변과 자신 판단을 명확히 구분해 기록을 관리하려는 이용자.",
+        "deliverable": "확인된 답변, 자신의 추측, 추가 질문으로 구분된 문의 기록 예시와 이를 활용하는 기록법 안내 자료.",
+        "task_id": "sale-own-notes",
+        "outline": [
+          "상대 답변과 개인 판단 구분의 중요성 설명",
+          "답변·추정·추가 질문 구획 구분 표기 방법",
+          "확정 계약으로 인식하지 않고 재확인과 판단에 활용하는 기록법"
+        ],
+        "novelty_reason": "가장 가까운 기존 공개 글들은 상품권 상태 점검, 개인정보 보호, 매입처 문의 내용 정리처럼 ‘판매 전 확인 항목’을 다루지만, 후보 1은 그와 다른 질문인 ‘문의 과정에서 내 추정과 상대 답변을 어떻게 구분해 기록할지’에 답합니다. 특히 확인된 답변·내 추정·추가 질문을 구획해서 남기고, 답변을 확정 계약으로 오해하지 않도록 재문의 기준까지 정리한다는 점이 새 해결 내용입니다. 기존 글이 다룬 문제는 상태 이상 점검과 문의 방법이고, 이번 글은 상담 기록의 해석과 분리 저장이라는 다른 행동을 제시하므로 중복이 아닙니다.",
+        "screen_rejections": [
+          "0번은 가족을 대신해 문의하는 상황을 다루지만, 역할 구분과 동의 확인 절차가 중심이라 판매 문의 기록 관리나 답변/추정 분리는 해결하지 않습니다. 기존 공개 글의 상태 점검·문의 기록과도 직접 중복되지는 않지만, 후보 1보다 문제 정의가 더 넓고 덜 구체적입니다."
+        ]
+      },
+      "board": "sale",
+      "topic": "상품권 매입 문의 기록에 내 판단과 상대의 답변을 어떻게 구분할까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-29T07:31:09Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 매입 문의 기록에서 상대 답변과 내 추정을 나눠 적고 재문의 기준까지 정리하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8882,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 558,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9440
+        },
+        "estimated_usd": 0.0044456,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T08:18:56.487309+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8801,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 400,
+          "output_tokens_details": {
+            "reasoning_tokens": 126
+          },
+          "total_tokens": 9201
+        },
+        "estimated_usd": 0.00840075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T08:18:59.922905+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2885,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 504,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3389
+        },
+        "estimated_usd": 0.0019604,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T08:19:06.271861+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4859,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 560,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5419
+        },
+        "estimated_usd": 0.0028396,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T08:19:12.803989+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14182,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 403,
+          "output_tokens_details": {
+            "reasoning_tokens": 213
+          },
+          "total_tokens": 14585
+        },
+        "estimated_usd": 0.01245,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T08:19:18.051444+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3619,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1123
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4991
+        },
+        "estimated_usd": 0.066743,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T08:19:49.667902+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8759,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 304,
+          "output_tokens_details": {
+            "reasoning_tokens": 239
+          },
+          "total_tokens": 9063
+        },
+        "estimated_usd": 0.00793725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T08:19:54.317452+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T08:18:50.817345+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T08:18:56.873900+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T08:18:59.928542+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T08:19:07.665818+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T08:19:14.993853+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-29T08:19:18.071773+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T08:19:51.107921+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1047766,
+    "estimated_total_usd": 0.1047766,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
