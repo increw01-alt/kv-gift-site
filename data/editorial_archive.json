@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T03:19:46.741570+00:00",
+  "generatedAt": "2026-10-29T03:20:50.154465+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1665,7 +1665,7 @@
       "board": "sense",
       "topic": "직접 만나지 못해 선물만 보낼 때 오해 없이 마음을 전하려면?",
       "url": "https://kv-gift.co.kr/board/sense/15",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-29T03:20:50.139621+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1137567,
       "knownSubtotalUsd": 0.1137567
