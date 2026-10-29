@@ -3,6 +3,215 @@
   "purpose": "상품권 관련 실적·혜택 조건 확인용이며 카드 발급 추천 순위가 아닙니다.",
   "cards": [
     {
+      "id": "shinhan-deepoil",
+      "issuerKey": "shinhan",
+      "issuer": "신한카드",
+      "name": "Deep Oil",
+      "scope": "기프트·선불카드 거래와 구분되는 일반 상품권 구매. 실제 승인·매입 분류에 따라 달라질 수 있음.",
+      "scopeNote": "일반 상품권은 전월실적 제외 목록에 별도 명시되지 않음",
+      "performance": "산정 가능 해석",
+      "performanceType": "interpreted",
+      "performanceNote": "일반 이용금액 산정 규정 + 제외 목록 기준",
+      "benefitType": "unconfirmed",
+      "benefit": "상품권 할인 확정 근거 없음",
+      "benefitNote": "커피 서비스의 상품권 구입은 할인 제외 명시",
+      "issuanceNote": "",
+      "note": "판단: 실적 산정 가능성은 약관 해석으로 표시하고, 상품권 할인 카드로 확정하지 않습니다.",
+      "source": {
+        "url": "https://www.shinhancard.com/pconts/html/card/apply/credit/1188274_2207.html",
+        "sections": [
+          "통합할인한도 > 전월 이용금액 유의 사항",
+          "통합할인한도 > 할인 서비스 적용 제외",
+          "생활 할인 > 커피"
+        ],
+        "evidence": "일반 일시불·할부 산정 규정이 있고 제외 목록은 기프트카드 구매·선불카드 충전 등이며 일반 상품권을 별도 열거하지 않음. 일반 상품권 자체 할인 근거 없음. 커피 할인 항목에서 상품권 구입·선불카드 충전 제외를 명시. 이 제외를 전월실적 제외로 확대하지 않음.",
+        "checkedAt": "2026-10-29",
+        "details": [
+          {
+            "title": "전월 이용금액 유의 사항",
+            "paragraphs": [
+              "본인·가족카드의 전월 일시불과 할부가 산정 기준입니다. 제외 목록에는 “기프트카드 구매금액/선불카드 충전금액”과 주유·LPG 등이 있습니다. 일반 상품권 구매는 별도로 열거되지 않았습니다."
+            ]
+          },
+          {
+            "title": "생활 할인 · 통합할인한도",
+            "paragraphs": [
+              "커피 할인 항목은 “상품권 구입, 선불카드 충전은 할인 제외됩니다.”라고 명시합니다. 이를 모든 상품권의 전월실적 제외로 확대할 수 없습니다. 일반 상품권 자체의 포인트·할인 혜택을 확인한 것도 아닙니다."
+            ]
+          }
+        ]
+      },
+      "issuance": {
+        "status": "application_open",
+        "sourceUrl": "https://www.shinhancard.com/pconts/html/card/apply/credit/1188274_2207.html",
+        "checkedAt": "2026-10-29",
+        "method": "현재 공식 화면의 온라인 신청·간편 신청 버튼과 신규 고객 안내 확인. 상품권 실적 인정 확인과는 별개입니다."
+      },
+      "audience": "personal",
+      "verification": {
+        "basis": "official_terms_interpretation",
+        "result": "interpretation",
+        "checkedAt": "2026-10-29"
+      },
+      "display": {
+        "category": "performance",
+        "tag": "실적 중심",
+        "subtitle": "상품권으로 실적을 채우는 경우를 검토",
+        "image": "/img/payment/shinhan-deep-oil.png",
+        "imageAlt": "신한카드 Deep Oil 카드 플레이트",
+        "imageWidth": 378,
+        "imageHeight": 600,
+        "performanceLabel": "일반 상품권 전월실적",
+        "performanceBasis": "terms_interpretation",
+        "benefitLabel": "상품권 구매 적립·할인",
+        "benefitBasis": "not_confirmed",
+        "conditionLabel": "혜택 이용 전월실적",
+        "conditionValue": "30만원 / 70만원 구간"
+      }
+    },
+    {
+      "id": "shinhan-airone",
+      "issuerKey": "shinhan",
+      "issuer": "신한카드",
+      "name": "Air One",
+      "scope": "기프트·선불카드 거래와 구분되는 일반 상품권 구매. 실제 승인·매입 분류에 따라 달라질 수 있음.",
+      "scopeNote": "제외 목록 검토 · 기프트카드·선불 구매·충전은 제외",
+      "performance": "산정 가능 해석",
+      "performanceType": "interpreted",
+      "performanceNote": "선불카드 구매·충전(Gift카드 포함)은 제외",
+      "benefitType": "interpreted",
+      "benefit": "1천원당 1마일 가능 해석",
+      "benefitNote": "전월 50만원 이상 · 무이자/슬림할부 등 제외",
+      "issuanceNote": "신규 신청 화면 확인",
+      "issuance": {
+        "status": "application_open",
+        "sourceUrl": "https://www.shinhancard.com/pconts/html/card/apply/credit/1187901_2207.html",
+        "checkedAt": "2026-10-29",
+        "method": "공식 상품 화면의 온라인 신청·간편 신청 및 신규 고객 안내 확인. 신청 경로 확인이며 발급 보장은 아닙니다."
+      },
+      "note": "판단: 일반 상품권 거래라면 실적·기본적립 가능으로 해석하되, 거래 분류와 적립 제외 조건을 함께 확인합니다.",
+      "source": {
+        "url": "https://www.shinhancard.com/pconts/html/card/apply/credit/1187901_2207.html",
+        "sections": [
+          "기본적립",
+          "마일리지 적립 세부 안내",
+          "이용금액 실적 산정 기준 안내(공통)"
+        ],
+        "evidence": "일시불·할부 산정, 대출·수수료·취소 및 선불카드 구매·충전(Gift 포함) 제외. 일반 상품권은 별도 열거되지 않음. 일반 상품권은 마일리지 제외 목록에 별도 열거되지 않음. 선불·Gift, 무이자/슬림할부, 카드사 할인 거래 등은 제외. 상품권 자체 청구할인은 확인하지 못함.",
+        "checkedAt": "2026-10-29",
+        "details": [
+          {
+            "title": "이용금액 실적 산정 기준",
+            "paragraphs": [
+              "일시불·할부 이용금액이 기준입니다. 대출·수수료·취소 및 “선불카드 충전 및 구매(Gift카드 포함)금액”이 실적 제외 대상이며, 일반 상품권은 별도 열거되지 않았습니다."
+            ]
+          },
+          {
+            "title": "기본적립 · 마일리지 적립 세부 안내",
+            "paragraphs": [
+              "국내 일시불·할부의 기본 적립률은 1천원당 1마일입니다. 일반 상품권은 적립 제외 목록에도 별도 열거되지 않았습니다. 선불·Gift카드, 무이자/슬림할부, 할인받은 거래 등은 적립에서 제외됩니다.",
+              "실적 50만원 미만이면 기본·추가 마일리지가 제공되지 않습니다. 신규 회원은 카드 사용 등록월과 다음 달까지 실적 유예가 있습니다. 일반 상품권 구매의 별도 청구할인은 확인되지 않았습니다."
+            ]
+          }
+        ]
+      },
+      "audience": "personal",
+      "verification": {
+        "basis": "official_terms_interpretation",
+        "result": "interpretation",
+        "checkedAt": "2026-10-29"
+      },
+      "display": {
+        "category": "mileage",
+        "tag": "실적 + 마일리지",
+        "subtitle": "실적과 기본 마일리지를 각각 확인",
+        "image": "/img/payment/shinhan-air-one.png",
+        "imageAlt": "신한카드 Air One 카드 플레이트",
+        "imageWidth": 378,
+        "imageHeight": 600,
+        "performanceLabel": "일반 상품권 전월실적",
+        "performanceBasis": "terms_interpretation",
+        "benefitLabel": "상품권 구매 기본 마일리지",
+        "benefitBasis": "terms_interpretation",
+        "conditionLabel": "마일리지 이용 전월실적",
+        "conditionValue": "50만원 이상"
+      }
+    },
+    {
+      "id": "samsung-mileage-platinum",
+      "issuerKey": "samsung",
+      "issuer": "삼성카드",
+      "name": "& MILEAGE PLATINUM (스카이패스)",
+      "scope": "기프트·선불카드 거래와 구분되는 일반 상품권 구매. 실제 승인·매입 분류에 따라 달라질 수 있음.",
+      "scopeNote": "공식 상세의 기본적립·빅포인트 제외 항목을 함께 확인",
+      "performance": "전월실적 조건 없는 구조",
+      "performanceType": "not_required",
+      "performanceNote": "기본은 요건 미기재 · 추가는 실적 무관 명시",
+      "benefitType": "interpreted",
+      "benefit": "1천원당 1마일 가능 해석",
+      "benefitNote": "선불카드 충전·무이자/다이어트할부 등 제외",
+      "issuanceNote": "신규 신청 안내 확인",
+      "issuance": {
+        "status": "application_open",
+        "sourceUrl": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1452",
+        "checkedAt": "2026-10-29",
+        "method": "현재 상품 화면에 모니모·홈페이지 PC·대표전화 신청 안내와 카드신청 버튼 표시 확인. 발급은 카드사 심사 후 결정됩니다."
+      },
+      "note": "판단: 기본 1마일의 가능 해석으로 표시합니다. 카드사가 정한 업종 분류 및 별도 사전 공지 거래도 확인 대상입니다.",
+      "source": {
+        "url": "https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1452",
+        "sections": [
+          "스카이패스마일리지 적립",
+          "스카이패스 마일리지 추가 적립",
+          "아멕스 PLATINUM 등급 서비스"
+        ],
+        "evidence": "기본적립 상세에는 전월실적 요건이 별도 기재되지 않음. 추가적립 상세는 전월 이용금액에 관계없이 제공한다고 명시. 다른 공항 등급 서비스나 이벤트까지 실적 무관으로 확대하지 않음. 현재 상품 서비스 상세의 빅포인트 제외 목록에 일반 상품권 구매는 별도 열거되지 않음. 선불카드 충전·무이자/다이어트할부·삼성카드 할인 거래 등 제외. 카드사 업종 분류 및 별도 사전 게시 제외 거래 조건 존재. 상품권 2마일 추가 적립이나 청구할인은 확정하지 않음.",
+        "checkedAt": "2026-10-29",
+        "details": [
+          {
+            "title": "스카이패스마일리지 적립",
+            "paragraphs": [
+              "국내외 가맹점에서 1천원당 1마일 기본 적립을 안내합니다. 서비스 상세의 빅포인트 제외 목록에 선불카드 충전과 무이자·다이어트할부 등이 있고, 일반 상품권 구매는 별도로 열거되지 않았습니다."
+            ]
+          },
+          {
+            "title": "스카이패스 마일리지 추가 적립",
+            "paragraphs": [
+              "“전월 이용금액에 관계없이 제공”을 명시합니다. 기본 적립에는 별도 전월실적 요건이 기재되어 있지 않습니다. 공항 등급 서비스와 발급 이벤트의 실적까지 무조건 없다는 뜻은 아닙니다.",
+              "일반 상품권의 기본 적립은 위 일반 규정에 따른 해석입니다. 온라인 상품권 구매에 백화점 등 특정 업종의 2마일 추가 적립까지 적용된다고 단정하지 않습니다. 상품권 자체 청구할인은 별도 확인되지 않았습니다."
+            ]
+          }
+        ],
+        "related": [
+          {
+            "label": "삼성카드 포인트 이용기준",
+            "url": "https://www.samsungcard.com/personal/customer-service/conditions/point/UHPPCC0361M0.jsp"
+          }
+        ]
+      },
+      "audience": "personal",
+      "verification": {
+        "basis": "official_terms_interpretation",
+        "result": "interpretation",
+        "checkedAt": "2026-10-29"
+      },
+      "display": {
+        "category": "mileage",
+        "tag": "마일리지",
+        "subtitle": "스카이패스 · 기본 적립과 추가 적립 구분",
+        "image": "/img/payment/samsung-mileage-platinum.png",
+        "imageAlt": "삼성카드 & MILEAGE PLATINUM (스카이패스) 카드 플레이트",
+        "imageWidth": 379,
+        "imageHeight": 600,
+        "performanceLabel": "마일리지 서비스 전월실적",
+        "performanceBasis": "official_description",
+        "benefitLabel": "상품권 구매 기본 마일리지",
+        "benefitBasis": "terms_interpretation",
+        "conditionLabel": "비교 범위",
+        "conditionValue": "기본 마일리지 서비스"
+      }
+    },
+    {
       "id": "samsung-corporate",
       "issuerKey": "samsung",
       "issuer": "삼성카드",

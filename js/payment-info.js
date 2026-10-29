@@ -135,6 +135,17 @@
     search.focus();
   });
   filterCards();
+  const personalCards = [...document.querySelectorAll('[data-personal-card]')];
+  const personalFilters = [...document.querySelectorAll('[data-personal-filter]')];
+  personalFilters.forEach(button => {
+    button.disabled = false;
+    button.addEventListener('click', () => {
+      const category = button.dataset.personalFilter;
+      personalFilters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      personalCards.forEach(card => { card.hidden = category !== 'all' && card.dataset.category !== category; });
+      document.getElementById('personal-filter-status').textContent = `${personalCards.filter(card => !card.hidden).length}개 카드`;
+    });
+  });
   document.querySelectorAll('[data-card-terms]').forEach(link => link.addEventListener('click', event => {
     const target = document.getElementById('terms-' + link.dataset.cardTerms);
     if (!target) return;

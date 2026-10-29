@@ -74,15 +74,15 @@ ls img/banner | wc -l      # 10 이면 완료
 ## 2-2. 상품권 결제 정보 관리
 
 - 운영 경로: `/payment/`. 승인된 사진형 안내 화면에 카드 조건 비교, 카드명·확인 범위 검색, 확인 항목·카드사 필터, 비용 계산기, 체크리스트, FAQ와 상담 링크를 제공합니다.
-- `data/payment-cards.json`에 카드별 범위·전월실적·혜택 적용·발급 상태·공식 출처·확인일을 기록합니다. 2026-10-29 검토 기준, 공개 자료 15종은 개인 신규발급 확인 0종·기존 보유/제외 조건 참고 13종·별도 법인 행사 2종으로 구분합니다. 개인의 신규 신청과 상품권 구매 실적·적립·할인이 공식 자료에서 함께 확인된 경우만 개인 신규발급 목록에 표시합니다. 이번 조사에서 충족한 개인카드는 없으며 시장 전체에 없다는 뜻은 아닙니다.
-- `benefitType`은 `conditional`(지정 구매처 혜택 직접 명시), `excluded`(각 행 범위에서 제외)만 공개합니다. 공식 직접 근거는 `verification.basis=official_explicit`이며 결과는 `purchase_benefit`, `performance`, `exclusion`으로 구분합니다. `audience`는 `personal` 또는 `corporate`를 필수 기록합니다. 확인 전 후보나 `review` 항목은 공개 생성기가 거부합니다. 제외 목록에 상품권이 없다는 이유만으로 실적·적립을 확정하지 않습니다.
+- `data/payment-cards.json`에 카드별 범위·전월실적·혜택 적용·발급 상태·공식 출처·확인일을 기록합니다. 2026-10-29 승인 기준, 공개 자료 18종은 개인 신규 신청 경로를 확인한 약관 비교 3종·기존 보유/제외 조건 참고 13종·별도 법인 행사 2종입니다. 사진형 비교의 딥오일·에어원·앤마일리지는 일반 규정과 제외 목록에 따른 해석이며, 상품권 적용을 직접 명시한 확정 사례로 집계하지 않습니다. 현재 직접 명시된 개인 신규발급 사례는 이번 검토에서 확보하지 못했으며 시장 전체에 없다는 뜻은 아닙니다.
+- 공식 직접 근거는 `verification.basis=official_explicit`, 결과는 `purchase_benefit`, `performance`, `exclusion`입니다. 직접 확인된 혜택의 `benefitType`은 `conditional`, 제외는 `excluded`입니다. 승인된 약관 비교는 별도 근거 유형인 `official_terms_interpretation`과 결과 `interpretation`으로 기록하며, 실적은 `interpreted` 또는 서비스 범위의 `not_required`, 혜택은 `interpreted` 또는 `unconfirmed`로 구분합니다. 일반 상품권의 적용을 `included`나 직접 확인으로 승격하지 않습니다. 확인 전 `review` 항목, 법인카드를 개인 비교로 표시하는 데이터, 근거 설명·이미지·발급 증거가 없는 해석 항목은 생성기가 거부합니다.
 - `issuance.status`는 `application_open`(확인일에 신규 신청 안내 확인), `closed`(신규발급 중단)입니다. 없는 항목은 신규 상태를 별도로 확인하지 않았다는 뜻입니다. 신규 신청 확인에는 `sourceUrl`·`checkedAt`·`method`가 필수이며 발급 승인 보장으로 표현하지 않습니다.
-- 삼성 CORPORATE·CORPORATE #2는 페이지 하단 `#corporate-cards`의 법인 전용 영역에 표시합니다. 상품권 추가 제공 행사를 포인트·청구할인과 구분하고 기간·구매금액·지정 판매처를 안내합니다. 상품권 적용을 직접 확인하지 못한 후보 3종은 공개 데이터에서 제외하고 로컬 검토 기록으로 보관했습니다.
+- 삼성 CORPORATE·CORPORATE #2는 페이지 하단 `#corporate-cards`의 법인 전용 영역에 표시합니다. 상품권 추가 제공 행사를 포인트·청구할인과 구분하고 기간·구매금액·지정 판매처를 안내합니다. 개인 약관 비교 필터와 보유 카드 참고 필터는 각각 독립적으로 작동하며 법인카드를 숨기지 않습니다.
 - Hi-Point 기존형·Nano의 지정 CJ 구매처 기본적립을 보유자용으로 수록하고 신규발급·유효기간 연장 중단, 구간별 적립률, 월 한도, 무이자 제외를 명시합니다. Deep Oil은 실적 제외 목록 검토 사례이며 인정 확정이 아닙니다. Hi-Point Plan의 상품권 실적·적립 제외와 혼동하지 않도록 비교합니다.
 - 카드사 공식 페이지 또는 상품설명서를 직접 확인한 뒤 데이터를 수정하고 `node tools/build_payment_page.cjs`로 정적 HTML을 갱신합니다. 일반 쇼핑 혜택이나 수집 자료의 키워드 분류만으로 상품권 혜택을 판정하지 않습니다.
-- 화면 원본은 `tools/templates/payment-page.html`, 스타일은 `css/payment-info.css`, 동작은 `js/payment-info.js`입니다. 생성기는 홈의 기존 GTM·GA4·네이버 분석 코드를 재사용합니다.
+- 화면 원본은 `tools/templates/payment-page.html`, 기본 스타일은 `css/payment-info.css`, 승인된 사진형 카드 비교는 `css/payment-card-gallery.css`, 동작은 `js/payment-info.js`입니다. 카드 원본은 `img/payment/`에 보관하며 `display`에 이미지·실적 및 혜택의 판정 근거를, `source.details`에 카드사 공식 항목별 설명을 기록합니다. 생성기는 홈의 기존 GTM·GA4·네이버 분석 코드를 재사용합니다.
 - 홈페이지 시세 다음 영역의 바로가기와 PC·모바일 상품권 정보 메뉴에서 연결합니다. `#card-reference`는 참고 자료만 접어서 보며, 그 필터가 법인 전용 영역에 영향을 주지 않습니다. JavaScript 없이도 참고 영역을 열어 조건·출처를 읽을 수 있고 법인 안내는 페이지 하단에 별도로 표시됩니다.
-- `tools/payment_card_render.cjs`가 카드 행·출처·개인 확인 상태를 렌더링합니다. 카드가 확인되지 않았을 때는 기준을 충족한 항목이 없다는 사실을 표시하며, 수를 채우기 위해 미확인 카드를 추가하지 않습니다.
+- `tools/payment_card_render.cjs`가 사진형 개인 약관 비교·직접 명시된 개인카드·참고 및 법인 행·공식 출처를 렌더링합니다. `renderPersonal`은 직접 명시된 개인 신규발급 카드에만 사용하고, 약관 해석 사례는 `renderInterpretations`로 표시합니다. 직접 명시된 개인카드가 없는 상태를 약관 비교 3종의 실적·적립 확정으로 바꾸지 않습니다. JavaScript 없이도 세 카드와 근거 펼치기, 공식 출처를 읽을 수 있습니다.
 - 비용 계산은 입력한 구매 결제금액·별도 수수료·전체 할부이자를 합산합니다. 미입력 비용은 확인 필요로 표시하고, 예상 포인트를 차감하거나 이자를 추정하지 않습니다.
 - 배포 전 PC·모바일에서 검색·필터·빈 결과·비용 입력 오류·상담 링크와 고유 canonical을 확인합니다. 변경한 데이터와 생성된 HTML을 함께 커밋합니다.
 
