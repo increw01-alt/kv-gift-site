@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T00:18:44.105702+00:00",
+  "generatedAt": "2026-10-29T00:19:48.687693+00:00",
   "dateKst": "2026-10-29",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 1,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1090769,
+  "estimatedTotalUsd": 0.1090769,
   "records": [
     {
       "runId": "40793143563",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "상품권 안내에서 등록할 곳과 사용할 곳이 다르게 적힌 이유는 무엇일까요?",
+      "url": "https://kv-gift.co.kr/board/gc_information/13",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-29T00:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1090769,
+      "knownSubtotalUsd": 0.1090769
     }
   ]
 }

@@ -1,16 +1,26 @@
 {
   "run_id": "40793143563",
   "date_kst": "2026-10-29",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "gc_information",
+  "topic": "상품권 안내에서 등록할 곳과 사용할 곳이 다르게 적힌 이유는 무엇일까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/gc_information/13",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-29T00:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,308 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "주문을 취소한다는 말과 전달한 선물을 회수한다는 말은 왜 구분해야 하나요?",
+          "source_id": "",
+          "reader_problem": "주문 취소와 선물 회수의 개념이 혼용되어 배송·사용 권리, 환불 가능성 판단에 혼란이 있는 고객",
+          "distinct_angle": "판매 주문 처리 단계와 이미 전달된 상품권 등 이용 수단 권리 상태를 명확히 구분해 혼동 방지",
+          "reader_situation": "상품권 구매 후 주문 취소를 원하는 상황에서, 이미 선물로 전달한 상품권 회수 여부를 문의하는 고객",
+          "deliverable": "판매 주문 상태와 전달 상품권 상태를 분리하여 각각 점검할 수 있는 기준과 설명 문구",
+          "task_id": "info-order-versus-gift",
+          "outline": [
+            "판매 주문 취소 처리 과정과 의미 이해하기",
+            "전달한 선물 또는 상품권 회수와 취소의 법적·실무적 차이 구분하기",
+            "주문 취소와 선물 회수 상황별 대응 절차 정리하기"
+          ]
+        },
+        {
+          "topic": "취소 접수라는 안내와 취소 완료라는 안내는 어떤 점이 다를까요?",
+          "source_id": "",
+          "reader_problem": "상품권 취소 신청 후 ‘취소 접수’와 ‘취소 완료’ 안내를 구분하지 못해 처리 진행 상황과 환불 시점을 혼동하는 독자",
+          "distinct_angle": "처리 단계별 상태 의미와 안내 문구 해석 방법을 단계적으로 구분해 이해하도록 설명",
+          "reader_situation": "상품권 취소를 요청하고 나서 처리 상황을 파악하기 위해 안내 문구 차이를 알고자 하는 고객",
+          "deliverable": "취소 처리 단계별 안내 문구별 의미와 환불 시점을 포함한 기대 결과를 한눈에 정리한 표",
+          "task_id": "info-cancel-record",
+          "outline": [
+            "취소 접수 단계의 의미와 이후 절차 설명",
+            "취소 완료 단계와 환불 완료 시점 안내",
+            "취소 안내 문구별 고객이 할 수 있는 점검과 문의 방법"
+          ]
+        },
+        {
+          "topic": "상품권 화면에 날짜가 여러 개 있으면 각각 어떤 의미부터 찾아볼까요?",
+          "source_id": "",
+          "reader_problem": "상품권 화면에서 표시된 여러 날짜 의미를 몰라 구매·사용 조건 파악과 만료일 혼동 고민",
+          "distinct_angle": "구매일, 발송일, 사용기한 등 날짜별 주요 의미를 선별해 실물 안내 화면 예시로 각각 대응하는 읽기법 제공",
+          "reader_situation": "상품권 구매 후 여러 날짜가 표시된 화면을 보고 각각 어떤 의미인지 순서대로 확인하려는 이용자",
+          "deliverable": "상품권별로 표시되는 주요 날짜 종류와 의미별 해석 순서, 실제 화면 항목별 확인 가이드",
+          "task_id": "info-multiple-dates",
+          "outline": [
+            "상품권에 표시되는 주요 날짜 종류 알아보기",
+            "각 날짜가 의미하는 구매·발송·사용 조건 확인법",
+            "상품권 화면에서 날짜별 표시 위치 및 용어 대응 방법"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 안내에서 등록할 곳과 사용할 곳이 다르게 적힌 이유는 무엇일까요?",
+        "source_id": "",
+        "reader_problem": "상품권 안내 문서에 등록 장소와 실제 사용처가 서로 달라서, 등록 절차와 사용처 개념 구분이 어려운 독자",
+        "distinct_angle": "등록 절차가 반드시 모든 상품에 있는 것 아니며, 등록 장소와 사용처는 별개임을 구분하는 실제 사례 중심 안내",
+        "reader_situation": "상품권 구매 후 등록해야 한다는 안내와 별개로 사용처가 다르게 명시되어 혼동을 겪는 고객",
+        "deliverable": "등록 채널과 사용 가능한 매장 또는 사이트를 구분하는 판단 기준과 안내 문서 내 읽는 요령",
+        "task_id": "info-redeem-channel",
+        "outline": [
+          "상품권 등록 절차의 일반 개념과 예외 사례 설명",
+          "등록 장소와 사용처가 다른 경우 사례 구분하기",
+          "상품권 안내문에서 등록 및 사용처 정보를 올바르게 읽는 방법"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 '/board/gc_information/10'의 ‘상품권 전달 메시지와 계정 등록 개념 차이’인데, 후보 3은 거기서 한 단계 더 나아가 ‘등록해야 하는 곳’과 ‘실제로 사용할 곳’이 다르게 적힌 안내를 읽는 법을 다룹니다. 즉 전달/등록 여부를 구분하는 수준이 아니라, 등록 채널·사용 가능한 매장 또는 사이트를 분리해서 문서에서 확인하는 방법과 예외 사례를 설명하므로 해결 질문이 더 구체적입니다.",
+        "screen_rejections": [
+          "0번은 ‘주문 취소’와 ‘이미 전달된 선물 회수’를 구분하자는 취지지만, 본문이 없고 개념 설명만으로는 기존의 주문 처리/상태 구분형 안내와 어떤 새로운 해결 단계가 있는지 확인하기 어렵습니다. 제공된 자료만으로는 구체적인 차별점을 확정하기 부족합니다.",
+          "1번은 '/board/general_notice/51'의 ‘취소 요청/처리 중/취소 완료’ 단계 구분과 핵심 질문이 거의 같습니다. 취소 접수와 취소 완료를 나누고 환불 시점을 확인하는 흐름이 이미 공개된 글에서 다뤄진 질문과 해결 절차를 그대로 반복합니다.",
+          "2번은 날짜가 여러 개일 때 의미를 읽는 주제이지만, '/board/gc_information/11'에서 이미 상품권 화면에서 확인할 수 있는 번호·유효기간 등 표기 항목을 점검하는 흐름과 가깝습니다. 날짜 종류를 추가로 나눈다고 해도 구매·발송·사용 조건을 확인하는 같은 읽기 순서를 반복하는 수준으로 보여 새 해결 문제가 충분히 드러나지 않습니다."
+        ]
+      },
+      "board": "gc_information",
+      "topic": "상품권 안내에서 등록할 곳과 사용할 곳이 다르게 적힌 이유는 무엇일까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-28T12:55:44Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 안내문에서 등록처와 사용처가 왜 따로 적히는지 이해하고, 등록 절차가 필요한지와 실제 사용 가능한 곳을 구분해 확인하려는 독자의 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8486,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 869,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9355
+        },
+        "estimated_usd": 0.0047848,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T00:18:54.590676+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12758,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 722,
+          "output_tokens_details": {
+            "reasoning_tokens": 308
+          },
+          "total_tokens": 13480
+        },
+        "estimated_usd": 0.0128175,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T00:19:00.038145+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2966,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 448,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3414
+        },
+        "estimated_usd": 0.0019032,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T00:19:04.114480+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5815,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 469,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6284
+        },
+        "estimated_usd": 0.0030764,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T00:19:08.980396+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12880,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 692,
+          "output_tokens_details": {
+            "reasoning_tokens": 516
+          },
+          "total_tokens": 13572
+        },
+        "estimated_usd": 0.012774,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T00:19:15.219428+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3502,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1006
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4874
+        },
+        "estimated_usd": 0.066158,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T00:19:43.216279+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8608,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 246,
+          "output_tokens_details": {
+            "reasoning_tokens": 181
+          },
+          "total_tokens": 8854
+        },
+        "estimated_usd": 0.007563,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T00:19:47.444655+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T00:18:48.014202+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T00:18:55.228239+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T00:19:00.040433+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T00:19:05.459431+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T00:19:11.016990+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-29T00:19:15.239259+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T00:19:44.616365+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1090769,
+    "estimated_total_usd": 0.1090769,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -876,5 +876,18 @@
     "publication_mode": "automatic",
     "run_id": "40655792876",
     "usage_file": "data/editorial_runs/2026-10-28/40655792876.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 13,
+    "topic": "상품권 안내에서 등록할 곳과 사용할 곳이 다르게 적힌 이유는 무엇일까요?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "상품권 안내문에서 등록처와 사용처가 왜 따로 적히는지 이해하고, 등록 절차가 필요한지와 실제 사용 가능한 곳을 구분해 확인하려는 독자의 질문",
+    "image_scene": "책상 위에 상품권 안내서 두 쪽이 펼쳐져 있고, 왼쪽에는 등록처 항목이, 오른쪽에는 사용처 항목이 크게 표시되어 있다. 가운데에는 메모지와 펜이 놓여 있으며 한 사람이 두 항목을 따로 표시해 비교하는 구도",
+    "image_alt": "상품권 안내서의 등록처와 사용처 항목을 나란히 비교하며 확인하는 책상 장면",
+    "publication_mode": "automatic",
+    "run_id": "40793143563",
+    "usage_file": "data/editorial_runs/2026-10-29/40793143563.json"
   }
 ]
