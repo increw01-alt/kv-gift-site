@@ -23,6 +23,11 @@
 .comparison tr[data-condition="conditional"]{background:var(--soft-ink)}
 .terms-link{display:inline-flex;align-items:center;min-height:44px;font-size:12px;text-decoration:underline;text-underline-offset:4px;color:var(--ink)}
 .source-card-notes li{scroll-margin-top:24px}
+.issuance-link{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);font-size:11px;text-decoration:underline;text-underline-offset:4px;font-weight:500}
+.table-filters{justify-content:flex-end}
+.issuer-name{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+.issuer-name .mini-status{white-space:normal;line-height:1.5}
+@media(max-width:900px){.table-filters{justify-content:flex-start;gap:10px 16px}.table-filters .filter-label{white-space:nowrap}}
 @media(max-width:900px){.table-toolbar{align-items:flex-start;flex-direction:column}.table-filters{width:100%;justify-content:space-between;gap:10px}.table-filters .filter-label{gap:6px}.table-filters select{max-width:160px}.benefit-guide{font-size:12px}}
 @media(max-width:760px){.benefit-summary>strong{font-size:13px}.comparison tr[data-condition="conditional"]{padding-inline:12px}.table-filters select{padding-left:8px;padding-right:8px;font-size:12px}.table-filters .filter-label{font-size:10px}.table-filters{gap:6px}}
 .card-search{margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:20px}

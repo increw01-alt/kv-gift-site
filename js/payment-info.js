@@ -102,18 +102,21 @@
   });
   const issuer = document.getElementById('issuer');
   const condition = document.getElementById('condition-filter');
+  const issuance = document.getElementById('issuance-filter');
   const search = document.getElementById('card-search');
   const filterReset = document.getElementById('filter-reset');
   const normalize = value => value.normalize('NFKC').toLocaleLowerCase('ko-KR').trim();
-  [issuer, condition, search, filterReset].forEach(control => { control.disabled = false; });
+  issuance.value = 'application_open';
+  [issuer, condition, issuance, search, filterReset].forEach(control => { control.disabled = false; });
   function filterCards() {
     const words = normalize(search.value).split(/\s+/).filter(Boolean);
     let count = 0;
     document.querySelectorAll('[data-issuer]').forEach(row => {
       const matchesIssuer = issuer.value === 'all' || row.dataset.issuer === issuer.value;
       const matchesCondition = condition.value === 'all' || row.dataset.condition === condition.value;
+      const matchesIssuance = issuance.value === 'all' || row.dataset.issuance === issuance.value;
       const haystack = normalize(row.dataset.search || row.textContent);
-      row.hidden = !matchesIssuer || !matchesCondition || !words.every(word => haystack.includes(word));
+      row.hidden = !matchesIssuer || !matchesCondition || !matchesIssuance || !words.every(word => haystack.includes(word));
       if (!row.hidden) count++;
     });
     document.getElementById('filter-status').textContent = `${count}종 표시 · 발급 추천 순위가 아닌 조건 확인용 자료입니다.`;
@@ -121,14 +124,17 @@
   }
   issuer.addEventListener('change', filterCards);
   condition.addEventListener('change', filterCards);
+  issuance.addEventListener('change', filterCards);
   search.addEventListener('input', filterCards);
   filterReset.addEventListener('click', () => {
     issuer.value = 'all';
     condition.value = 'all';
+    issuance.value = 'all';
     search.value = '';
     filterCards();
     search.focus();
   });
+  filterCards();
   document.querySelectorAll('[data-card-terms]').forEach(link => link.addEventListener('click', event => {
     const target = document.getElementById('terms-' + link.dataset.cardTerms);
     if (!target) return;
