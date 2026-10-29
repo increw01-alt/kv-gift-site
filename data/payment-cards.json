@@ -1,0 +1,86 @@
+{
+  "updated": "2026-10-29",
+  "purpose": "상품권 관련 실적·혜택 조건 확인용이며 카드 발급 추천 순위가 아닙니다.",
+  "cards": [
+    {
+      "id": "lotte-loca365", "issuerKey": "lotte", "issuer": "롯데카드", "name": "LOCA 365",
+      "scope": "상품권·모바일상품권 구매", "scopeNote": "기프트·선불카드 구매·충전도 제외",
+      "performance": "제외", "performanceType": "excluded", "performanceNote": "해당 구매·충전 금액 기준",
+      "benefit": "할인 제외", "benefitNote": "이 카드의 무이자할부 혜택도 제외", "issuanceNote": "",
+      "note": "상품권 구매에 일반 생활업종 할인이나 이 카드의 무이자할부 혜택이 적용된다고 판단하지 마세요.",
+      "source": {"url": "https://www.lottecard.co.kr/app/LPCDADB_V100.lc?vtCdKndC=P14028-A14028", "sections": ["할인 공통기준", "이용실적 산정 시 제외 대상", "무이자 할부 적용 제외 대상"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "lotte-likit12", "issuerKey": "lotte", "issuer": "롯데카드", "name": "LOCA LIKIT 1.2",
+      "scope": "상품권·모바일상품권 구매", "scopeNote": "기프트·선불카드 구매·충전 포함",
+      "performance": "조건 없음", "performanceType": "not_required", "performanceNote": "기본·온라인 할인 기준",
+      "benefit": "할인 제외", "benefitNote": "실적 조건 없음과 할인 대상은 별개", "issuanceNote": "",
+      "note": "실적 조건이 없더라도 상품권 구매는 할인 제외 항목입니다. 카드 보유·발급 가능 여부는 카드사에 별도 확인하세요.",
+      "source": {"url": "https://www.lottecard.co.kr/app/LPCDADB_V100.lc?vtCdKndC=P13937-A13937", "sections": ["모든 가맹점 할인", "온라인 할인", "할인 공통기준"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "shinhan-pointplan", "issuerKey": "shinhan", "issuer": "신한카드", "name": "Point Plan",
+      "scope": "상품권·선불전자지급수단 구매·충전", "scopeNote": "기프트·선불카드 구매·충전 포함",
+      "performance": "제외", "performanceType": "excluded", "performanceNote": "전월 이용금액 산정 기준",
+      "benefit": "포인트 적립 제외", "benefitNote": "모든 적립 서비스 공통 제외", "issuanceNote": "",
+      "note": "간편결제로 결제해도 상품권·충전 금액의 적립 제외 조건은 별도로 확인해야 합니다.",
+      "source": {"url": "https://www.shinhancard.com/pconts/html/card/apply/credit/1232405_2207.html", "sections": ["적립 서비스 유의사항 — 모든 서비스 공통 제외", "전월 이용금액 산정기준"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "shinhan-deepdream", "issuerKey": "shinhan", "issuer": "신한카드", "name": "Deep Dream",
+      "scope": "기프트카드 구매·선불카드 충전", "scopeNote": "일반 상품권 전체 조건과 구분",
+      "performance": "제외", "performanceType": "excluded", "performanceNote": "기프트카드·선불충전 범위",
+      "benefit": "포인트 적립 제외", "benefitNote": "해당 구매·충전 거래 기준", "issuanceNote": "신규발급 중단",
+      "note": "기존 보유자의 조건 확인용입니다. 일반 상품권 전체가 실적에 포함되거나 제외된다고 확대 해석하지 않습니다.",
+      "source": {"url": "https://www.shinhancard.com/pconts/html/card/apply/credit/1188220_2207.html", "sections": ["카드 발급 유의사항", "포인트 적립 관련 유의 사항"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "hyundai-zero3-discount", "issuerKey": "hyundai", "issuer": "현대카드", "name": "ZERO Edition3 할인형",
+      "scope": "상품권 등 현금성 유가증권 구매", "scopeNote": "선불카드 구매·충전 포함",
+      "performance": "조건 없음", "performanceType": "not_required", "performanceNote": "기본 청구할인 기준",
+      "benefit": "할인 제외", "benefitNote": "상품권은 기본 할인 대상에서 제외", "issuanceNote": "",
+      "note": "일반 가맹점의 기본 할인과 상품권 구매의 할인 제외 조건을 구분하세요.",
+      "source": {"url": "https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZROE3", "sections": ["상품 소개 — 실적·한도 제한 없는 카드", "기본 혜택 — 할인 제외 기준"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "hyundai-zero3-point", "issuerKey": "hyundai", "issuer": "현대카드", "name": "ZERO Edition3 포인트형",
+      "scope": "상품권 등 현금성 유가증권 구매", "scopeNote": "선불카드 구매·충전 포함",
+      "performance": "조건 없음", "performanceType": "not_required", "performanceNote": "기본 M포인트 적립 기준",
+      "benefit": "M포인트 적립 제외", "benefitNote": "상품권은 기본 적립 대상에서 제외", "issuanceNote": "",
+      "note": "실적 제한이 없는 기본 적립 상품이지만 상품권·선불카드 구매·충전은 적립 제외입니다. 할인형과 포인트형은 별도 상품입니다.",
+      "source": {"url": "https://www.hyundaicard.com/upload/card/%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_ZERO%20Ed3_%ED%8F%AC%EC%9D%B8%ED%8A%B8_260330.pdf", "sections": ["가이드북 02쪽 기본 혜택", "가이드북 04쪽 M포인트 적립 제외 기준"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "kb-my-wesh", "issuerKey": "kb", "issuer": "KB국민카드", "name": "My WE:SH",
+      "scope": "상품권·선불카드 구입·충전", "scopeNote": "선불전자지급수단 포함",
+      "performance": "제외", "performanceType": "excluded", "performanceNote": "전월 이용실적 산정 기준",
+      "benefit": "할인 제외", "benefitNote": "KB Pay 결제도 제외 조건 확인", "issuanceNote": "",
+      "note": "KB Pay 할인 안내가 있어도 상품권·선불충전은 할인 및 전월실적 제외 대상입니다.",
+      "source": {"url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076?cooperationcode=09923", "sections": ["이용 전 확인사항 — 할인서비스 제외 대상", "전월 이용실적 제외 대상"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "kb-wesh-daily", "issuerKey": "kb", "issuer": "KB국민카드", "name": "WE:SH Daily",
+      "scope": "상품권·선불카드 구입·충전", "scopeNote": "선불전자지급수단 포함",
+      "performance": "제외", "performanceType": "excluded", "performanceNote": "선택할인용 실적에서도 제외",
+      "benefit": "할인 제외", "benefitNote": "기본 할인과 선택 할인 제외 조건 확인", "issuanceNote": "",
+      "note": "일반 국내 가맹점의 기본 할인에는 전월실적 조건이 없지만 상품권은 할인 제외입니다. 선택 할인용 실적에서도 제외됩니다.",
+      "source": {"url": "https://card.kbcard.com/CRD/DVIEW/HCAMCXPRICAC0076?cooperationcode=09570", "sections": ["서비스 요약 — 기본 할인", "이용 전 확인사항 — 할인서비스 제외 대상", "전월 이용실적 제외 대상"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "hana-wonder2-free", "issuerKey": "hana", "issuer": "하나카드", "name": "원더카드 2.0 FREE",
+      "scope": "상품권·기프트카드 구매·선불충전", "scopeNote": "선불전자지급수단 충전 포함",
+      "performance": "기본 조건 없음", "performanceType": "not_required", "performanceNote": "추가혜택용 실적에서는 제외",
+      "benefit": "할인·적립 서비스 제외", "benefitNote": "공통 서비스 제외 대상 기준", "issuanceNote": "",
+      "note": "혜택 조합별 조건을 확인하세요. 기본 할인에 실적 조건이 없어도 상품권은 공통 서비스 제외 대상이며, 실적을 요구하는 추가혜택의 실적에서도 제외됩니다.",
+      "source": {"url": "https://www.hanacard.co.kr/OPI42000000D.web?CD_PD_SEQ=16780&_frame=no", "sections": ["국내외 가맹점 — 실적기준 없음", "공통안내 — 실적 제외 대상", "공통안내 — 서비스 제외 대상"], "checkedAt": "2026-10-29"}
+    },
+    {
+      "id": "hana-jade-classic", "issuerKey": "hana", "issuer": "하나카드", "name": "JADE Classic",
+      "scope": "상품권·기프트카드 구매·선불충전", "scopeNote": "선불전자지급수단 충전 포함",
+      "performance": "특별혜택 실적 제외", "performanceType": "excluded", "performanceNote": "기본적립 자체는 실적 조건 없음",
+      "benefit": "하나머니 적립 제외", "benefitNote": "상품권 제공 바우처와 구매 혜택은 별개", "issuanceNote": "",
+      "note": "프리미엄 바우처로 상품권을 받는 서비스와 상품권 구매금액에 적립되는 혜택을 혼동하지 마세요. 상품권 구매는 서비스와 특별혜택 실적 산정에서 제외됩니다.",
+      "source": {"url": "https://m.hanacard.co.kr/JADEINTROM.web?CD_PD_SEQ=17512", "sections": ["하나머니 적립 — 서비스 제외 대상", "서비스 실적 조건", "실적 제외 대상"], "checkedAt": "2026-10-29"}
+    }
+  ]
+}
