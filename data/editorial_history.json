@@ -915,5 +915,18 @@
     "publication_mode": "automatic",
     "run_id": "40805523239",
     "usage_file": "data/editorial_runs/2026-10-29/40805523239.json"
+  },
+  {
+    "board": "sense",
+    "id": 15,
+    "topic": "직접 만나지 못해 선물만 보낼 때 오해 없이 마음을 전하려면?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "직접 만나지 못할 때 선물 메시지에 왜 보내는지와 답장 기대를 분리해 부담 없이 마음을 전하는 문구를 찾는 질문",
+    "image_scene": "작은 탁자 위에 선물 봉투와 손글씨 메모 카드, 열어 둔 스마트폰 메시지 초안이 놓여 있고 한 사람이 카드에 ‘전하는 이유’와 ‘답장 부담 없음’을 나눠 적으며 문구를 다듬는 장면",
+    "image_alt": "탁자 위에 선물 봉투와 메시지 초안이 놓여 있고, 한 사람이 이유와 답장 부담을 나눠 적으며 문구를 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40811353646",
+    "usage_file": "data/editorial_runs/2026-10-29/40811353646.json"
   }
 ]

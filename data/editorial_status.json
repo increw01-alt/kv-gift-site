@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T03:18:42.878059+00:00",
+  "generatedAt": "2026-10-29T03:19:46.730905+00:00",
   "dateKst": "2026-10-29",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 4,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.33065015,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.44440685,
+  "estimatedTotalUsd": 0.44440685,
   "records": [
     {
       "runId": "40793143563",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "40811353646",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "직접 만나지 못해 선물만 보낼 때 오해 없이 마음을 전하려면?",
+      "url": "https://kv-gift.co.kr/board/sense/15",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-29T03:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1137567,
+      "knownSubtotalUsd": 0.1137567
     }
   ]
 }
