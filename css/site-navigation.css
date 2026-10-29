@@ -1,0 +1,52 @@
+@font-face{font-family:Pretendard;src:url('/fonts/PretendardVariable-payment.woff2') format('woff2');font-weight:100 900;font-display:swap}
+.kv-global-header{--nav-ink:var(--color-blue);--nav-accent:var(--color-orange);--nav-paper:white;--nav-line:rgb(221 221 221);--nav-muted:rgb(85 85 85);--nav-soft:color-mix(in srgb,var(--nav-ink) 5%,white);position:relative;z-index:50;background:var(--nav-paper);font-family:Pretendard,'Malgun Gothic',sans-serif;line-height:1.5;letter-spacing:-.025em;color:var(--nav-ink);isolation:isolate}
+.kv-global-header *{box-sizing:border-box}
+.kv-global-header a,.kv-global-header button{font-family:inherit;letter-spacing:inherit;text-decoration:none;cursor:pointer;touch-action:manipulation}
+.kv-global-header a:focus-visible,.kv-global-header button:focus-visible,.kv-global-header summary:focus-visible{outline:3px solid var(--nav-accent);outline-offset:-4px}
+.kv-global-header button{border:0;margin:0;background:none;padding:0;color:inherit}
+.kv-global-header svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.kv-header-inner{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.kv-header-top{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:94px}
+.kv-header-brand{display:inline-flex;align-items:center;min-height:56px}
+.kv-header-brand img{display:block;width:270px;height:auto;max-width:100%}
+.kv-header-utilities{display:flex;align-items:center;gap:28px}
+.kv-header-utilities a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13px;color:var(--nav-ink)}
+.kv-header-utilities .kv-header-consult{font-weight:750}
+.kv-header-utilities a:hover{color:var(--nav-accent)}
+.kv-menu-toggle{display:none!important;width:44px;height:44px;align-items:center;justify-content:center}
+.kv-menu-toggle svg{width:26px;height:26px}
+.kv-header-nav{background:var(--nav-ink);color:var(--nav-paper)}
+.kv-header-nav-list{display:flex;align-items:stretch;justify-content:space-between;list-style:none;padding:0!important;margin:0!important;gap:9px}
+.kv-header-nav-item{display:flex;position:relative;align-items:center;flex-shrink:0}
+.kv-header-link{display:flex;align-items:center;min-height:56px;position:relative;color:var(--nav-paper)!important;font-weight:650;font-size:14px;white-space:nowrap;padding:0 4px}
+.kv-header-link[aria-current]:after{content:'';position:absolute;height:4px;background:var(--nav-accent);bottom:0;left:4px;right:4px}
+.kv-submenu-toggle{display:flex;align-items:center;justify-content:center;width:44px;min-height:56px;opacity:.7}
+.kv-submenu-toggle svg{width:13px;height:13px}
+.kv-header-nav-item.is-open .kv-submenu-toggle svg{transform:rotate(180deg)}
+.kv-header-link:hover,.kv-header-nav-item.is-open>.kv-header-link{background:color-mix(in srgb,var(--nav-paper) 7%,transparent)}
+.kv-header-submenu{position:absolute;top:100%;left:0;width:230px;border:1px solid var(--nav-line);border-top:3px solid var(--nav-accent);padding:10px!important;margin:0!important;list-style:none;background:var(--nav-paper);box-shadow:0 10px 24px color-mix(in srgb,var(--nav-ink) 12%,transparent)}
+.kv-header-submenu[hidden]{display:none!important}
+.kv-header-nav-item:nth-last-child(-n+2) .kv-header-submenu{left:auto;right:0}
+.kv-header-submenu a{display:flex;align-items:center;gap:6px;min-height:44px;font-size:13px;font-weight:500;color:var(--nav-ink);padding:9px 12px;word-break:keep-all}
+.kv-header-submenu a:hover,.kv-header-submenu a:focus-visible{background:var(--nav-soft);color:var(--nav-accent)}
+.kv-header-submenu a svg{width:12px;height:12px}
+.kv-mobile-menu{border:0;padding:0;margin:0 0 0 auto;inset:0;width:min(420px,100%);max-width:100%;height:100dvh;max-height:100dvh;background:var(--nav-paper);color:var(--nav-ink);overflow:auto}
+.kv-mobile-menu::backdrop{background:color-mix(in srgb,var(--nav-ink) 55%,transparent)}
+.kv-mobile-menu-top{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--nav-line);background:var(--nav-paper)}
+.kv-mobile-menu-top img{display:block;width:216px;height:auto}
+.kv-mobile-menu-top button{width:44px;height:44px;display:grid;place-items:center}
+.kv-mobile-menu-list{padding:4px 20px 24px}
+.kv-mobile-menu-list details{border-bottom:1px solid var(--nav-line);background:var(--nav-paper);border-radius:0;margin:0}
+.kv-mobile-menu-list summary{display:flex;align-items:center;justify-content:space-between;padding:18px 4px;min-height:58px;list-style:none;font-size:15px;cursor:pointer;font-weight:700}
+.kv-mobile-menu-list summary::-webkit-details-marker{display:none}
+.kv-mobile-menu-list details[open] summary{color:var(--nav-accent)}
+.kv-mobile-menu-list details[open] summary svg{transform:rotate(180deg)}
+.kv-mobile-menu-list ul{margin:0 0 12px!important;padding:6px 12px!important;list-style:none;background:var(--nav-soft)}
+.kv-mobile-menu-list a{display:flex;align-items:center;gap:6px;min-height:44px;padding:10px 5px;color:var(--nav-ink);font-size:14px}
+.kv-mobile-menu-list a svg{width:13px;height:13px}
+.kv-mobile-menu-consult{display:flex!important;align-items:center;justify-content:center;gap:8px;min-height:48px;margin:0 20px 30px;background:var(--nav-accent);color:var(--nav-paper)!important;border-radius:4px;font-weight:700;font-size:14px}
+html.kv-menu-is-open{overflow:hidden}
+@media(max-width:1200px){.kv-header-nav-list{gap:3px}.kv-header-link{font-size:13px}.kv-header-inner{width:calc(100% - 40px)}}
+@media(max-width:1100px){.kv-header-top{min-height:78px;gap:12px}.kv-header-brand img{width:230px}.kv-header-utilities{display:none}.kv-menu-toggle{display:flex!important}.kv-header-nav-list{justify-content:flex-start;gap:23px;width:max-content}.kv-header-nav>.kv-header-inner{overflow-x:auto;scrollbar-width:none;width:100%;padding-inline:20px}.kv-header-nav>.kv-header-inner::-webkit-scrollbar{display:none}.kv-header-link{font-size:13px;min-height:49px;padding-inline:0}.kv-header-link[aria-current]:after{left:0;right:0}.kv-submenu-toggle{display:none!important}.kv-header-submenu{display:none!important}.kv-header-brand{min-height:44px}.kv-header-inner{width:calc(100% - 36px)}}
+@media(max-width:360px){.kv-header-brand img{width:214px}.kv-header-inner{width:calc(100% - 28px)}}
+@media(prefers-reduced-motion:reduce){.kv-global-header *{scroll-behavior:auto!important;transition:none!important}}
