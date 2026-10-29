@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T08:19:55.681588+00:00",
+  "generatedAt": "2026-10-29T08:20:59.448786+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1735,7 +1735,7 @@
       "board": "sale",
       "topic": "상품권 매입 문의 기록에 내 판단과 상대의 답변을 어떻게 구분할까요?",
       "url": "https://kv-gift.co.kr/board/sale/3697",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-29T08:20:59.426978+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1047766,
       "knownSubtotalUsd": 0.1047766
