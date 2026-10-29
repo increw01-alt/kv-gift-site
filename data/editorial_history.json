@@ -889,5 +889,18 @@
     "publication_mode": "automatic",
     "run_id": "40793143563",
     "usage_file": "data/editorial_runs/2026-10-29/40793143563.json"
+  },
+  {
+    "board": "sale",
+    "id": 3696,
+    "topic": "매입 가능 여부에 조건부 답변을 받았을 때 어떤 조건을 따로 읽어야 할까요?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "조건부로 매입 가능하다는 답변에서 어떤 문장이 전제이고 어떤 문장이 제한인지 구분해 판매 여부를 판단하려는 질문",
+    "image_scene": "책상 위에 매입 답변 문장이 인쇄된 종이와 형광펜, 조건을 따로 적는 메모지, 돋보기가 놓여 있고 한 사람이 문장 중 ‘가능’ 표현과 제한 문구를 나눠 표시하며 읽는 구도",
+    "image_alt": "책상 위 답변 문서의 긍정 문구와 조건 문구를 형광펜으로 나눠 표시하며 메모하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40799569708",
+    "usage_file": "data/editorial_runs/2026-10-29/40799569708.json"
   }
 ]
