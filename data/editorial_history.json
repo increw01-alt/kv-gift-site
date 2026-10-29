@@ -993,5 +993,18 @@
     "publication_mode": "automatic",
     "run_id": "40841142565",
     "usage_file": "data/editorial_runs/2026-10-29/40841142565.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 64,
+    "topic": "예전에 저장한 글을 문의할 때 제목과 확인 시점을 함께 알려 주세요",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "오래전에 저장한 게시글을 문의할 때 제목과 마지막 확인 시점을 함께 정리해 정확히 전달하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 메모장과 스마트폰이 나란히 놓여 있고, 스마트폰에는 오래전에 저장한 게시글 화면이 열려 있다. 메모장에는 게시글 제목, 마지막 확인 날짜, 현재 보이는 내용, 궁금한 적용 범위를 칸별로 적어 두었으며 한 사람이 각 항목을 줄 맞춰 옮겨 적는 구도",
+    "image_alt": "책상 위 메모장에 오래 저장한 게시글 제목과 마지막 확인 날짜, 궁금한 적용 범위를 나눠 적고 스마트폰 화면의 게시글과 대조하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40848546247",
+    "usage_file": "data/editorial_runs/2026-10-29/40848546247.json"
   }
 ]
