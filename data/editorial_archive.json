@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T06:19:56.622639+00:00",
+  "generatedAt": "2026-10-29T06:21:00.577034+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1707,7 +1707,7 @@
       "board": "purchase",
       "topic": "내가 쓸 상품권과 선물할 상품권을 같은 주문에 담기 전 무엇을 분리할까요?",
       "url": "https://kv-gift.co.kr/board/purchase/2573",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-29T06:21:00.557137+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11009415,
       "knownSubtotalUsd": 0.11009415
