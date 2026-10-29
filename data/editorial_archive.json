@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T04:19:52.151828+00:00",
+  "generatedAt": "2026-10-29T04:21:15.905564+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1679,7 +1679,7 @@
       "board": "free",
       "topic": "선물은 필요한 때에 맞추는 편과 기념일에 맞추는 편 중 무엇을 우선하나요?",
       "url": "https://kv-gift.co.kr/board/free/476",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-29T04:21:15.884236+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1137418,
       "knownSubtotalUsd": 0.1137418
