@@ -954,5 +954,18 @@
     "publication_mode": "automatic",
     "run_id": "40822584448",
     "usage_file": "data/editorial_runs/2026-10-29/40822584448.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2573,
+    "topic": "내가 쓸 상품권과 선물할 상품권을 같은 주문에 담기 전 무엇을 분리할까요?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "같은 주문에 내 사용분과 선물용 상품권이 섞였을 때 무엇을 따로 기록하고 어떻게 나눠 관리할지 알고 싶은 질문",
+    "image_scene": "책상 위에 상품권 봉투 여러 장과 색깔별 분류 스티커, 작은 서류함이 놓여 있다. 한 사람이 ‘내가 쓸 것’과 ‘선물할 것’ 라벨을 붙여 봉투를 각각 다른 칸에 넣고, 옆 메모지에 사용 주체와 전달 방법을 나눠 적는 구도",
+    "image_alt": "책상 위에서 상품권 봉투를 내가 쓸 것과 선물할 것으로 나눠 서류함에 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40828369962",
+    "usage_file": "data/editorial_runs/2026-10-29/40828369962.json"
   }
 ]

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T06:18:47.880021+00:00",
+  "generatedAt": "2026-10-29T06:19:56.608251+00:00",
   "dateKst": "2026-10-29",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 6,
+  "published": 7,
   "verified": 6,
   "attempts": 7,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.6666626,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.77675675,
+  "estimatedTotalUsd": 0.77675675,
   "records": [
     {
       "runId": "40793143563",
@@ -92,16 +92,16 @@
     },
     {
       "runId": "40828369962",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "내가 쓸 상품권과 선물할 상품권을 같은 주문에 담기 전 무엇을 분리할까요?",
+      "url": "https://kv-gift.co.kr/board/purchase/2573",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-29T06:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11009415,
+      "knownSubtotalUsd": 0.11009415
     }
   ]
 }
