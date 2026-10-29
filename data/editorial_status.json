@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T02:18:44.988343+00:00",
+  "generatedAt": "2026-10-29T02:19:52.178731+00:00",
   "dateKst": "2026-10-29",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 3,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.22133605,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.33065015,
+  "estimatedTotalUsd": 0.33065015,
   "records": [
     {
       "runId": "40793143563",
@@ -40,16 +40,16 @@
     },
     {
       "runId": "40805523239",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "다른 기기에서는 결과가 다를 때 차이점을 나눠 적어 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/63",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-29T02:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1093141,
+      "knownSubtotalUsd": 0.1093141
     }
   ]
 }

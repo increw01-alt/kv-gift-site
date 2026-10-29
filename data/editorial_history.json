@@ -902,5 +902,18 @@
     "publication_mode": "automatic",
     "run_id": "40799569708",
     "usage_file": "data/editorial_runs/2026-10-29/40799569708.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 63,
+    "topic": "다른 기기에서는 결과가 다를 때 차이점을 나눠 적어 주세요",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "여러 기기와 브라우저에서 다르게 보이는 문제를 비교해 적고, 상담에 필요한 환경 정보와 결과 차이를 정확히 정리하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 노트북과 스마트폰이 나란히 놓여 있고, 두 화면에는 같은 웹페이지가 서로 다르게 표시된다. 앞쪽에는 ‘기기 / 브라우저 / 행동 / 결과’라고 적힌 비교 메모지가 펼쳐져 있으며 한 사람이 각 항목을 칸별로 나눠 적는 구도",
+    "image_alt": "노트북과 스마트폰에 같은 화면이 다르게 보이는 모습을 옆에 두고, 기기별 행동과 결과를 표로 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40805523239",
+    "usage_file": "data/editorial_runs/2026-10-29/40805523239.json"
   }
 ]

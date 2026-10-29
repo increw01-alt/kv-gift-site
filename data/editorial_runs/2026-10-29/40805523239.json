@@ -1,16 +1,26 @@
 {
   "run_id": "40805523239",
   "date_kst": "2026-10-29",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "general_notice",
+  "topic": "다른 기기에서는 결과가 다를 때 차이점을 나눠 적어 주세요",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/general_notice/63",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-29T02:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,308 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "문의 제목에는 원하는 답변을 구체적으로 적어 주세요",
+          "source_id": "",
+          "reader_problem": "문의 제목에 막연한 표현만 있어 상담 담당자가 문제를 정확히 파악하기 어렵고 답변이 지연되는 상황입니다.",
+          "distinct_angle": "기존 안내는 문의 내용의 준비를 강조했으나, 이번에는 구체적인 제목 작성법과 실제 전후 예시를 제시해 독자가 직접 개선할 수 있도록 도움을 줍니다.",
+          "reader_situation": "고객센터에 문의를 하려는데 막연한 제목으로 문의를 제출해 본인의 요청이 정확히 반영되었는지 확신이 서지 않는 이용자",
+          "deliverable": "문의 제목을 통해 문의 대상과 원하는 답변이 명확히 드러나는 좋은 제목 작성 전후 예시와 작성 가이드",
+          "task_id": "notice-question-one-result",
+          "outline": [
+            "문의 제목에 포함하면 효과적인 핵심 정보 알아보기",
+            "막연한 제목과 구체적 제목의 차이점 비교하기",
+            "좋은 문의 제목 작성법을 적용해 실제 예시로 연습하기"
+          ]
+        },
+        {
+          "topic": "문의 첨부파일은 전체 화면 대신 필요한 부분만 준비해 주세요",
+          "source_id": "",
+          "reader_problem": "문의 시 첨부파일에 오류 화면과 관계없는 대화나 개인정보 등이 포함되어, 상담 내용 파악과 개인정보 보호에 어려움이 생깁니다.",
+          "distinct_angle": "기존 안내가 PIN 번호 가리기에 초점을 맞췄다면, 이번에는 첨부파일 범위 선별 기준과 잘못된 첨부 유형을 구체적으로 다룹니다.",
+          "reader_situation": "문의 과정에서 오류 화면을 첨부해야 하지만, 어떤 부분만 캡처하고 무엇은 제외해야 할지 혼란스러워 제대로 파일을 준비하지 못하는 고객",
+          "deliverable": "필요한 오류 정보는 포함하고 개인정보와 무관한 내용은 제외하도록 하는 첨부파일 준비 가이드와 예시",
+          "task_id": "notice-attachment-scope",
+          "outline": [
+            "오류 화면에서 문의에 꼭 필요한 정보 구분하기",
+            "개인정보 및 대화 등 불필요한 부분은 제외하는 방법 익히기",
+            "적절한 첨부파일 범위 선택 후 파일 만드는 실제 절차 안내"
+          ]
+        },
+        {
+          "topic": "화면 일부를 가린 뒤에도 문의에 필요한 맥락은 남겨 주세요",
+          "source_id": "",
+          "reader_problem": "중요 개인정보를 가리면서도 오류 위치나 주요 항목명이 함께 보여져야 문의가 신속 정확하게 처리됩니다.",
+          "distinct_angle": "기존 가리기 안내를 넘어서 문제 위치 파악과 맥락 전달을 균형 있게 유지하는 적정 가리기 범위 구체화를 중심으로 합니다.",
+          "reader_situation": "상품번호 등 개인정보는 숨기지만 문제 상황과 위치를 정확히 알리고 싶어 화면 일부 가림 범위를 고민 중인 문의자",
+          "deliverable": "개인정보는 가리고 문제 파악에 필수인 위치·항목명은 명확히 보이도록 처리하는 비교 기준과 예시",
+          "task_id": "notice-screenshot-redaction",
+          "outline": [
+            "문의에 필요한 문제 위치·항목명과 개인정보 구분 기준 알기",
+            "적절한 가림 범위 설정과 가림 도구 활용 방법 익히기",
+            "가림 전후 화면을 비교하며 문의에 필요한 맥락 유지하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "다른 기기에서는 결과가 다를 때 차이점을 나눠 적어 주세요",
+        "source_id": "",
+        "reader_problem": "여러 기기와 브라우저에서 오류나 결과가 다르게 나와 문제를 정확히 설명하지 못해 상담이 어려워집니다.",
+        "distinct_angle": "일반적인 문의 준비와 달리, 이번 글은 다양한 기기 환경과 조건을 구분 기록하는 구체적 작성법을 제시합니다.",
+        "reader_situation": "같은 문제임에도 모바일과 PC 기기에서 증상이 다르게 나타나서 각각 조건과 결과를 명확히 구별해 보고 싶은 이용자",
+        "deliverable": "기기별·브라우저별 수행 행동과 결과를 구분해서 기록하는 요령과 실제 작성 예시",
+        "task_id": "notice-two-devices",
+        "outline": [
+          "기기와 브라우저 등 환경 정보 상세히 정리하는 법 배우기",
+          "서로 다른 결과 조건과 행동을 명확히 구분하는 방법",
+          "복수 기기 결과를 비교해 정확한 문의 준비하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글들은 문의 내용을 구체화하거나 오류 화면을 캡처할 때 무엇을 가려야 하는지 안내하지만, 2번은 그보다 한 단계 더 나아가 모바일/PC, 브라우저별로 결과가 달라질 때 조건을 분리해 기록하는 방법을 다룹니다. 즉 기존 글의 ‘같은 문의를 더 명확히 쓰는 법’이 아니라, 서로 다른 기기 환경에서 재현 여부와 차이점을 비교해 상담자가 원인을 좁힐 수 있게 만드는 새 해결 과제가 있습니다. 구체적으로 기기명·브라우저명·수행 행동·각 결과를 나눠 적는 예시가 있어 기존의 일반적인 문의 준비만으로는 처리되지 않는 상황을 보완합니다.",
+        "screen_rejections": [
+          "0번은 문의 제목을 구체적으로 쓰는 방법으로, 기존 '[이용 안내] 문의 답변이 서로 다를 때는 같은 주문과 상품인지 먼저 확인해 주세요'가 이미 주문번호·상품명처럼 문의의 핵심 식별 정보를 구체화해 답변 차이를 줄이는 흐름을 다뤘습니다. 제목만 바꾸고 전후 예시를 붙인 수준이라 질문과 해결 절차가 크게 다르지 않습니다.",
+          "1번은 첨부파일에서 필요한 부분만 남기고 개인정보를 제외하는 내용으로, 기존 '[이용 안내] 문의 화면을 캡처할 때는 오류 문구와 개인정보를 구분해 주세요'와 공개 경로의 본문에서 이미 오류 문구는 보이게 하고 개인정보는 가리라는 같은 질문을 해결하고 있습니다. PIN 가리기 대신 범위 선별이라고 바꿨지만 핵심 답은 동일합니다.",
+          "3번은 화면 일부를 가리면서도 문제 위치와 항목명을 남기는 안내로, 기존 '[이용 안내] 문의 화면을 캡처할 때는 오류 문구와 개인정보를 구분해 주세요'가 이미 오류 부분은 살리고 민감 정보는 숨기라는 동일한 해결 흐름을 제시합니다. 가림 범위 비교라는 형식만 추가된 중복에 가깝습니다."
+        ]
+      },
+      "board": "general_notice",
+      "topic": "다른 기기에서는 결과가 다를 때 차이점을 나눠 적어 주세요",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-28T12:55:44Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "여러 기기와 브라우저에서 다르게 보이는 문제를 비교해 적고, 상담에 필요한 환경 정보와 결과 차이를 정확히 정리하는 방법을 알고 싶은 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8588,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 939,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9527
+        },
+        "estimated_usd": 0.0049376,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T02:18:55.729691+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10675,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 745,
+          "output_tokens_details": {
+            "reasoning_tokens": 254
+          },
+          "total_tokens": 11420
+        },
+        "estimated_usd": 0.01135875,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T02:19:01.314606+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3049,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 417,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3466
+        },
+        "estimated_usd": 0.0018868,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T02:19:04.895599+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6209,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 476,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6685
+        },
+        "estimated_usd": 0.0032452,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T02:19:10.235358+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14983,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 349,
+          "output_tokens_details": {
+            "reasoning_tokens": 149
+          },
+          "total_tokens": 15332
+        },
+        "estimated_usd": 0.01280775,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T02:19:15.157340+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3537,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1041
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4909
+        },
+        "estimated_usd": 0.066333,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T02:19:46.849262+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10502,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 193,
+          "output_tokens_details": {
+            "reasoning_tokens": 128
+          },
+          "total_tokens": 10695
+        },
+        "estimated_usd": 0.008745,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T02:19:50.967163+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T02:18:48.420783+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T02:18:56.315323+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T02:19:01.358452+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T02:19:06.199342+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T02:19:12.332976+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-29T02:19:15.179731+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T02:19:48.175348+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1093141,
+    "estimated_total_usd": 0.1093141,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
