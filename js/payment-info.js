@@ -106,12 +106,12 @@
   const search = document.getElementById('card-search');
   const filterReset = document.getElementById('filter-reset');
   const normalize = value => value.normalize('NFKC').toLocaleLowerCase('ko-KR').trim();
-  issuance.value = 'application_open';
+  issuance.value = 'all';
   [issuer, condition, issuance, search, filterReset].forEach(control => { control.disabled = false; });
   function filterCards() {
     const words = normalize(search.value).split(/\s+/).filter(Boolean);
     let count = 0;
-    document.querySelectorAll('[data-issuer]').forEach(row => {
+    document.querySelectorAll('[data-filterable-card]').forEach(row => {
       const matchesIssuer = issuer.value === 'all' || row.dataset.issuer === issuer.value;
       const matchesCondition = condition.value === 'all' || row.dataset.condition === condition.value;
       const matchesIssuance = issuance.value === 'all' || row.dataset.issuance === issuance.value;
@@ -119,7 +119,7 @@
       row.hidden = !matchesIssuer || !matchesCondition || !matchesIssuance || !words.every(word => haystack.includes(word));
       if (!row.hidden) count++;
     });
-    document.getElementById('filter-status').textContent = `${count}종 표시 · 발급 추천 순위가 아닌 조건 확인용 자료입니다.`;
+    document.getElementById('filter-status').textContent = `참고 자료 ${count}종 표시 · 개인 신규발급 혜택 카드 목록이 아닙니다.`;
     document.getElementById('filter-empty').hidden = count !== 0;
   }
   issuer.addEventListener('change', filterCards);

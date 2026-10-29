@@ -27,6 +27,21 @@
 .table-filters{justify-content:flex-end}
 .issuer-name{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
 .issuer-name .mini-status{white-space:normal;line-height:1.5}
+.verified-personal{margin:24px 0}
+.card-group-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:15px}
+.card-group-heading h3{font-size:20px}
+.card-group-heading>span{font-size:12px;color:var(--muted);white-space:nowrap}
+.verification-empty{padding:23px 24px;border:1px solid var(--border);border-left:3px solid var(--ink);border-radius:4px;background:var(--surface);font-size:14px;line-height:1.8}
+.verification-empty strong{display:block;color:var(--ink);margin-bottom:8px}
+.verification-empty p{font-size:13px;color:var(--muted)}
+.reference-details{margin-top:24px;border:1px solid var(--border);border-radius:4px}
+.reference-details>summary{padding:19px 21px;font-size:14px;color:var(--ink)}
+.reference-details>summary small{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:4px}
+.reference-body{padding:24px 20px}
+.audience-badge{display:inline-flex;align-items:center;background:var(--soft-accent);color:var(--accent);border:1px solid var(--accent);padding:3px 7px;font-size:11px;font-weight:700;border-radius:3px;white-space:nowrap}
+.corporate-section{padding:28px 24px;margin-top:40px;border:1px solid var(--border);border-top:3px solid var(--ink);border-radius:4px;background:var(--paper)}
+.corporate-section .section-description{margin-bottom:22px}
+@media(max-width:760px){.card-group-heading h3{font-size:18px}.verification-empty{padding:18px;font-size:13px}.verification-empty p{font-size:12px}.reference-details>summary{padding:16px}.reference-body{padding:18px 12px}.corporate-section{padding:22px 15px}.corporate-section .section-heading{flex-direction:column;gap:12px}.corporate-section .section-heading h2{font-size:22px}}
 @media(max-width:900px){.table-filters{justify-content:flex-start;gap:10px 16px}.table-filters .filter-label{white-space:nowrap}}
 @media(max-width:900px){.table-toolbar{align-items:flex-start;flex-direction:column}.table-filters{width:100%;justify-content:space-between;gap:10px}.table-filters .filter-label{gap:6px}.table-filters select{max-width:160px}.benefit-guide{font-size:12px}}
 @media(max-width:760px){.benefit-summary>strong{font-size:13px}.comparison tr[data-condition="conditional"]{padding-inline:12px}.table-filters select{padding-left:8px;padding-right:8px;font-size:12px}.table-filters .filter-label{font-size:10px}.table-filters{gap:6px}}
