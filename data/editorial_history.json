@@ -941,5 +941,18 @@
     "publication_mode": "automatic",
     "run_id": "40816964302",
     "usage_file": "data/editorial_runs/2026-10-29/40816964302.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 41,
+    "topic": "상품권으로 물건을 고를 때 용량이 다른 상품을 어떻게 비교할까요?",
+    "drafted_at": "2026-10-29",
+    "automation": true,
+    "search_intent": "용량이 다른 상품을 상품권으로 고를 때 실제 사용량과 보관 여건을 기준으로 비교해 후회 없는 선택을 하려는 질문",
+    "image_scene": "주방 조리대 위에 서로 다른 용량의 세제 두 통과 계량컵, 메모장이 놓여 있고 한 사람이 사용량과 보관 칸을 적은 비교표를 보며 두 상품의 크기와 남은 공간을 대조하는 구도",
+    "image_alt": "주방 조리대에 서로 다른 용량의 세제 두 통과 계량컵이 놓여 있고, 한 사람이 비교표를 보며 사용량과 보관 공간을 대조하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40822584448",
+    "usage_file": "data/editorial_runs/2026-10-29/40822584448.json"
   }
 ]

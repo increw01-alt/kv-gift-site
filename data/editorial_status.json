@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T05:18:46.536312+00:00",
+  "generatedAt": "2026-10-29T05:19:52.602010+00:00",
   "dateKst": "2026-10-29",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 5,
+  "published": 6,
   "verified": 5,
   "attempts": 6,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.55814865,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.6666626,
+  "estimatedTotalUsd": 0.6666626,
   "records": [
     {
       "runId": "40793143563",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "40822584448",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "상품권으로 물건을 고를 때 용량이 다른 상품을 어떻게 비교할까요?",
+      "url": "https://kv-gift.co.kr/board/gc_tip/41",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-29T05:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10851395,
+      "knownSubtotalUsd": 0.10851395
     }
   ]
 }

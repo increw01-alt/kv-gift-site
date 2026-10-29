@@ -1,16 +1,26 @@
 {
   "run_id": "40822584448",
   "date_kst": "2026-10-29",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "gc_tip",
+  "topic": "상품권으로 물건을 고를 때 용량이 다른 상품을 어떻게 비교할까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/gc_tip/41",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-29T05:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,308 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "원하는 상품이 없어서 다른 상품을 고를 때 무엇을 기준으로 비교할까요?",
+          "source_id": "",
+          "reader_problem": "품절 등으로 원하는 상품이 없을 때, 대체 상품을 선택하며 무엇을 주요 비교 기준으로 삼아야 할지 몰라 결정이 어렵습니다.",
+          "distinct_angle": "이미 품절 확인과 대체 가능 여부 점검에 대한 일반 안내는 있으나, 원래 구매 목적과 대체상품의 기능, 보관, 사용 빈도를 구체적 기준으로 비교해 의사결정을 돕는 표와 방법을 제시합니다.",
+          "reader_situation": "구매 목적에 맞게 대체 상품을 합리적으로 고르려 하지만 물리적 포장 크기, 실제 사용 빈도, 기능 차이를 구분하여 선택 기준을 체계적으로 세우고자 하는 독자.",
+          "deliverable": "원래 구매 목적과 대체 상품의 기능, 보관 편의성, 사용 빈도 등을 비교하는 판단 기준표. 권리 차이 및 교환 조건 구분 안내 포함.",
+          "task_id": "tip-product-substitute",
+          "outline": [
+            "원래 구매 목적과 사용 환경 명확히 파악하기",
+            "대체 상품과 원 상품의 주요 기능 및 보관 방식 비교하기",
+            "사용 빈도와 효율성 기준으로 최적 대체품 결정하기"
+          ]
+        },
+        {
+          "topic": "여러 구매 목적에 쓸 상품권 목록을 만들 때 개인 메모 제목을 어떻게 붙일까요?",
+          "source_id": "",
+          "reader_problem": "여러 상품권을 다양한 구매 목적에 맞춰 정리하려고 하는데, 상품권 코드만으로는 어떤 용도인지 구분하기 어려워 관리에 혼란이 생깁니다.",
+          "distinct_angle": "상품권 코드 대신 구매 목적과 보관 장소를 사용한 개인 식별자 작성 예시를 제공하고, 모든 앱에서 이름 변경 기능이 없는 점을 포함해 현실적인 메모 작성법을 제안합니다.",
+          "reader_situation": "상품권을 여러 용도별로 분류 및 관리하고자 하면서 각 상품권을 식별할 수 있는 제목 만들기에 어려움을 겪는 이용자.",
+          "deliverable": "구매 용도와 보관 위치를 포함한 개인 메모 예시와 함께, 앱별 이름 변경 기능 여부를 참고한 실용적 관리법 안내.",
+          "task_id": "tip-order-note",
+          "outline": [
+            "상품권별 구매 목적과 보관 위치 정리하기",
+            "상품권 코드 대신 알아보기 쉬운 메모 제목 작성법 익히기",
+            "앱별 이름 변경 기능 존재 여부 및 한계 파악하기"
+          ]
+        },
+        {
+          "topic": "가족이 함께 쓰려는 상품권으로 살 물건 목록이 다를 때 어떻게 맞출까요?",
+          "source_id": "",
+          "reader_problem": "가족과 함께 쓸 상품권 대상 물건 의견이 달라 우선순위를 어떻게 조율해야 할지 판단하기 어렵고, 결국 구매가 지연됩니다.",
+          "distinct_angle": "가족 각자의 필수 품목과 공동 품목을 명확히 구분하고, 합의 가능한 우선순위 설정 절차와 같은 계정 공유 제외한 현실적인 조율 방법을 구체적으로 설명합니다.",
+          "reader_situation": "가족 구성원별 구매 희망 품목이 달라 함께 사용하는 상품권 구매 우선순위를 합리적이고 원만하게 결정하고자 하는 독자.",
+          "deliverable": "가족별 필수/공동 구분 기준과 우선순위 조정 절차, 합의를 위한 토론 방법을 담은 조율 가이드.",
+          "task_id": "tip-family-wishlist",
+          "outline": [
+            "각자의 필수 품목과 공동 품목 명확히 구분하기",
+            "우선순위 조정 기준과 합의 방법 탐색하기",
+            "계정 공유 이외의 협력적 구매 결정 프로세스 실행하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권으로 물건을 고를 때 용량이 다른 상품을 어떻게 비교할까요?",
+        "source_id": "",
+        "reader_problem": "같은 제품이라도 용량이나 크기가 다를 때, 포장 크기만 보고 구매하면 사용량이나 보관 가능성을 고려하지 않아 후회하는 경우가 많아 비교 방법이 필요합니다.",
+        "distinct_angle": "포장 크기 대신 필요한 양과 남길 가능성을 중심으로 비교하는 사용성 위주 선택 과정을 제시하며, 임의 가격 계산이나 절약액 강조를 배제한 균형 잡힌 판단법을 안내합니다.",
+        "reader_situation": "상품권으로 구매 시 다양한 용량/포장 단위가 있는 상품을 어느 쪽이 실제로 합리적인지 비교하고 싶은 이용자.",
+        "deliverable": "필요한 양과 보관 여건, 장기 사용 가능성 등을 포함해 용량별 상품 비교 판단 기준과 실제 선택 과정을 담은 지침.",
+        "task_id": "tip-different-unit",
+        "outline": [
+          "필요한 용량과 사용 빈도 사전 확인하기",
+          "포장 크기에 의존하지 않고 실사용량 기준으로 비교하기",
+          "남은 양 보관 가능성 등 현실적 변수 평가하기"
+        ],
+        "novelty_reason": "3번은 기존 글들이 다룬 ‘사용처/결제/지점 확인’이나 ‘주문 내역 정리’와 달리, 상품권으로 실제 물건을 고를 때 용량 차이·남길 가능성·보관 여건을 기준으로 어떤 쪽이 더 합리적인지 판단하는 문제를 직접 다룹니다. 가장 가까운 기존 글인 '/board/purchase/2571'은 지점별 사용 가능 여부 확인이 핵심이고, '/board/purchase/2566'은 최종 결제 금액 확인이 핵심이라 용량별 실사용 비교와는 질문이 다릅니다. 새 글은 포장 크기보다 필요한 양과 남은 양 처리 가능성을 비교해 선택을 바꾸는 구체적 행동을 제시할 수 있어 독립성이 있습니다.",
+        "screen_rejections": [
+          "0번은 '/board/gc_tip/38'이 이미 다룬 품절 시 대체 상품 가능 여부와 차액·조건 확인 흐름을 그대로 연장한 수준입니다. 독자가 묻는 질문도 ‘원래 구매 목적에 맞는 대체품을 무엇으로 고를지’로 거의 같아, 기능·보관·사용 빈도라는 표현만 달라도 해결 구조가 중복됩니다.",
+          "1번은 '/board/purchase/2567'의 ‘여러 장을 살 때 주문 내역과 용도를 메모로 정리하는 방법’과 질문과 흐름이 겹칩니다. 용도·보관 위치를 붙인 개인 메모라는 차별점이 있어도, 실제로는 상품권 목록을 구분해 기록하는 방법을 반복하는 수준이라 새 해결 문제로 보기 어렵습니다.",
+          "2번은 가족 구성원별 필수/공동 품목을 나눠 우선순위를 정하는 내용이지만, 이미 존재하는 주문/사용 계획 정리형 글들과 같은 조율 절차를 반복합니다. 최근 보류 이력상 추상적인 합의 절차만 강조하는 주제는 피해야 하며, 계정 공유 제외라는 조건만으로는 충분한 새 해결 단계가 드러나지 않습니다."
+        ]
+      },
+      "board": "gc_tip",
+      "topic": "상품권으로 물건을 고를 때 용량이 다른 상품을 어떻게 비교할까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-28T12:55:44Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "용량이 다른 상품을 상품권으로 고를 때 실제 사용량과 보관 여건을 기준으로 비교해 후회 없는 선택을 하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9049,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1062,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10111
+        },
+        "estimated_usd": 0.0053188,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T05:18:59.945819+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10637,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 759,
+          "output_tokens_details": {
+            "reasoning_tokens": 271
+          },
+          "total_tokens": 11396
+        },
+        "estimated_usd": 0.01139325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T05:19:05.328713+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3077,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 422,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3499
+        },
+        "estimated_usd": 0.001906,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T05:19:09.065861+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5544,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 413,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5957
+        },
+        "estimated_usd": 0.0028784,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T05:19:13.759326+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14965,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 291,
+          "output_tokens_details": {
+            "reasoning_tokens": 101
+          },
+          "total_tokens": 15256
+        },
+        "estimated_usd": 0.01253325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T05:19:18.082456+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3467,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 971
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4839
+        },
+        "estimated_usd": 0.065983,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-29T05:19:47.297088+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10033,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 217,
+          "output_tokens_details": {
+            "reasoning_tokens": 152
+          },
+          "total_tokens": 10250
+        },
+        "estimated_usd": 0.00850125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-29T05:19:51.306444+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T05:18:50.339628+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T05:19:00.678854+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T05:19:05.330919+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-29T05:19:10.424643+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T05:19:15.900886+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-29T05:19:18.102519+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-29T05:19:48.690273+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.10851395,
+    "estimated_total_usd": 0.10851395,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
