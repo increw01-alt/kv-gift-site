@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T00:19:48.702855+00:00",
+  "generatedAt": "2026-10-29T00:21:13.229444+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1623,7 +1623,7 @@
       "board": "gc_information",
       "topic": "상품권 안내에서 등록할 곳과 사용할 곳이 다르게 적힌 이유는 무엇일까요?",
       "url": "https://kv-gift.co.kr/board/gc_information/13",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-29T00:21:13.209297+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1090769,
       "knownSubtotalUsd": 0.1090769
