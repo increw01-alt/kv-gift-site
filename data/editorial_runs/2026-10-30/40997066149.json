@@ -1,17 +1,19 @@
 {
   "run_id": "40997066149",
   "date_kst": "2026-10-30",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-30T03:22:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글의 질문·독자 상황·해결 절차와 겹쳐 새 해결 문제를 만들지 못합니다. 0번은 영수증과 상품권 화면의 역할 구분을 이미 다룬 글과 사실상 동일하고, 1번은 매입 상담 준비·증빙 정리 주제와 중복됩니다. 2번은 모바일상품권 문자 미도착 시 점검과 문의 준비 흐름이 기존 발송 지연 대응 글과 같습니다. 3번은 선물 메시지의 부담 완화·짧은 문구 작성이라는 점에서 기존 생활상식/운영팀 질문 글들과 해결 구조가 같습니다. 구체적으로 기존 답만으로 이번 질문이 해결되므로 통과시킬 새 방향이 없습니다. / 0번: /board/gc_information/11에서 이미 ‘구매 영수증은 결제 증빙, 상품권 화면은 실제 사용 수단’으로 역할과 활용법을 설명해 같은 질문을 해결했습니다. 후보는 개념도·활용 예시를 더했지만 새로운 해결 단계가 아니라 동일한 구분을 다시 설명하는 수준입니다. / 1번: /board/sale/3697가 상품권 매입 문의 기록에서 상대 답변과 내 판단을 구분해 적는 방법을 다뤘고, 최근 보류 사유도 상태 점검·증빙 정리 흐름이 기존 판매 상담 준비와 같다고 지적했습니다. 후보의 상태 점검·증빙 수집·개인정보 최소화는 같은 해결 구조입니다. / 2번: /board/general_notice/44와 /board/purchase/2565가 이미 모바일상품권 문자 미도착 시 주문 상태 확인, 수신번호·스팸함 점검, 문의 정보 준비를 다뤘습니다. 후보는 ‘단계별 매뉴얼’이라 해도 실제 질문과 행동 순서가 동일합니다. / 3번: /board/sense/15, /board/free/474, /board/free/467가 선물 메시지에서 부담을 줄이고 짧게 마음을 전하는 문구를 이미 설명했습니다. 후보의 길이 제한 메시지 작성법도 필수/선택 정보 구분, 압축 예시라는 형식만 달라졌을 뿐 같은 문제를 풉니다."
+    ]
   },
   "api_usage": {
     "run_id": "40997066149",
@@ -20,15 +22,137 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "구매 영수증과 상품권 화면, 역할과 활용법 명확히 구분하기",
+          "source_id": "",
+          "reader_problem": "상품권 구매 후 영수증과 상품권 화면의 각각 역할과 사용 시기를 헷갈려 정확한 활용과 보관이 어렵다.",
+          "distinct_angle": "영수증은 법적 구매 증빙이며, 상품권 화면은 사용 수단임을 시각적 개념도와 상황별 실제 활용 예시로 명확히 구분해 독자가 쉽게 자기 상황에 맞게 적절히 활용하도록 안내한다.",
+          "reader_situation": "상품권 구매 직후 영수증과 상품권 화면을 받았으나, 언제 어떤 용도로 각각을 사용해야 하는지 헷갈려 관리와 활용이 어려운 사람.",
+          "deliverable": "영수증과 상품권 화면의 법적 역할과 기능을 한눈에 알 수 있는 개념도와, 대표적인 사용 사례별 활용법 및 보관법을 정리한 요약표.",
+          "task_id": "",
+          "outline": [
+            "구매 영수증의 법적 의미와 결제 증빙 활용법 설명하기",
+            "상품권 화면의 실제 사용 수단으로서의 기능과 확인 포인트 안내하기",
+            "각각의 활용 사례를 상황별로 비교하며 적절한 보관과 활용법 정리하기"
+          ]
+        },
+        {
+          "topic": "상품권 상태 점검과 증빙 자료 안전하게 준비하는 절차 안내",
+          "source_id": "",
+          "reader_problem": "상품권 매입 상담을 준비하며 상태 확인과 증빙 자료 수집 및 개인정보 보호 방법이 명확하지 않아 상담 시간과 효율이 떨어진다.",
+          "distinct_angle": "상품권 상태별 세부 점검 항목 작성과 증빙 자료 유형별 체계적 수집 방법, 개인정보 최소화 원칙에 기반해 상담 준비를 안전하고 효율적으로 하는 구체적 절차를 상세히 안내한다.",
+          "reader_situation": "다수 상품권을 매입 문의하려고 준비 중이며, 상태 점검과 증빙 제출에서 개인정보 노출을 막고 상담 시간을 아끼고자 하는 고객.",
+          "deliverable": "상품권 상태별 점검 체크리스트, 각종 증빙자료 종류별 수집과 비식별화 방법, 개인정보를 최소한으로 안전하게 제출하는 사전 준비와 질문 목록 안내서.",
+          "task_id": "",
+          "outline": [
+            "상품권 상태별로 구분한 상세 점검 항목 작성법 학습하기",
+            "증빙 자료 유형별 체계적으로 수집하고 정리하는 방법 익히기",
+            "문의 전 개인정보 노출 최소화와 안전한 전달 절차 숙지하기"
+          ]
+        },
+        {
+          "topic": "모바일상품권 문자 미도착 대응 점검과 문의 준비 단계별 매뉴얼",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 늦게 도착하거나 전혀 없어 문제 확인과 고객센터 문의를 위한 정보 준비가 어려워 즉각적인 대응이 어렵다.",
+          "distinct_angle": "구매 시 사전 점검부터 문자 미도착시 순차적 점검 방법, 효율적 문의를 위한 정보 준비에 이르는 단계별 실용적 매뉴얼을 제시하여 문제 해결을 신속하고 정확하게 돕는다.",
+          "reader_situation": "모바일상품권 구매 후 문자 미수신 문제를 겪고, 구매 환경을 체계적으로 점검하고 고객센터 문의에 필요한 정보를 미리 준비하려는 이용자.",
+          "deliverable": "구매 시 연락처 및 모바일 환경 점검 리스트, 문자 미도착 시 단계별 확인법, 문의 시 필요한 상세 정보 체크리스트를 포함한 실용적 점검 및 대응 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "구매 시 입력 연락처와 기기 환경 사전 점검 항목 작성하기",
+            "문자 미도착 발생 시 현상별 점검 순서와 조치 방법 습득",
+            "고객센터 문의 전에 필요한 상세 정보 미리 준비하고 정리하기"
+          ]
+        },
+        {
+          "topic": "사랑하는 이에게 선물하는 상품권, 부담 없는 메시지 작성법",
+          "source_id": "",
+          "reader_problem": "선물과 함께 전달할 메시지가 짧은 공간에 핵심과 배려를 담기 어려우며, 받는 이를 고려해 부담 없이 마음을 전하는 구체적 문구 작성 요령을 모르겠다.",
+          "distinct_angle": "길이 제한 상황에서도 꼭 들어가야 할 필수 정보와 선택적 안내를 구분하고, 다양한 상황별 예시와 메시지 압축 기술을 소개해 쉽고 효과적으로 의미를 전달하는 작문법을 제시한다.",
+          "reader_situation": "간결한 선물 메시지 공간에 핵심 정보와 따뜻한 마음을 전하고 싶으나, 어떤 내용을 얼마나 담아야 하는지 어려움을 겪는 이용자.",
+          "deliverable": "필수 정보 우선순위와 선택 사항 구분표, 상황별 간결 메시지 예시, 감정과 안내를 효과적으로 압축하는 노하우를 담은 작성 가이드.",
+          "task_id": "",
+          "outline": [
+            "선물 메시지 내 꼭 담아야 할 필수 정보와 선택 정보 분류하기",
+            "길이 제한에 맞는 각종 상황별 압축 메세지 작성 예시 검토",
+            "감정과 안내를 자연스럽게 담아내는 간결 문구 작성 팁 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22655,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1115,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23770
+        },
+        "estimated_usd": 0.010846,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:23:58.355167+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12829,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 627,
+          "output_tokens_details": {
+            "reasoning_tokens": 98
+          },
+          "total_tokens": 13456
+        },
+        "estimated_usd": 0.01244325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T03:24:02.263176+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:23:50.400560+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T03:23:59.012426+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02328925,
+    "estimated_total_usd": 0.02328925,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
