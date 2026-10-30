@@ -1032,5 +1032,18 @@
     "publication_mode": "automatic",
     "run_id": "40985005043",
     "usage_file": "data/editorial_runs/2026-10-30/40985005043.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 42,
+    "topic": "외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하려면?",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "외출 중 상품권으로 살 물건을 부피와 매장 위치에 따라 나눠서, 들고 다닐 부담이 적은 구매 순서를 짜고 싶은 독자의 질문",
+    "image_scene": "카페 테이블 위에 종이 지도와 장바구니 메모가 펼쳐져 있고, 작은 파우치와 접이식 장바구니, 큰 상자 모양의 구매 목록 카드를 나란히 두고 한 사람이 매장 위치를 동선 화살표로 연결하며 구매 순서를 정리하는 장면",
+    "image_alt": "종이 지도와 구매 목록을 보며 작은 물건과 큰 물건의 구매 순서를 동선대로 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40990869974",
+    "usage_file": "data/editorial_runs/2026-10-30/40990869974.json"
   }
 ]
