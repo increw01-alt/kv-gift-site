@@ -1084,5 +1084,18 @@
     "publication_mode": "automatic",
     "run_id": "41008132369",
     "usage_file": "data/editorial_runs/2026-10-30/41008132369.json"
+  },
+  {
+    "board": "sense",
+    "id": 18,
+    "topic": "선물 답장이 늦어졌을 때 변명 없이 간결하게 감사 표현하는 법",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "선물 답장이 늦었을 때 변명 없이 짧게 사과하고 감사와 마무리 문장을 자연스럽게 쓰는 방법",
+    "image_scene": "책상 위에 오래 전에 받은 선물 포장지와 짧게 적은 감사 메모, 지우개가 놓인 펜, 수정 흔적이 남은 문자 초안이 펼쳐져 있고 한 사람이 문장을 줄이며 정리하는 장면",
+    "image_alt": "책상 위에서 늦은 답장용 감사 문장을 짧게 다듬는 모습으로, 수정한 메모와 문자 초안이 나란히 놓여 있다.",
+    "publication_mode": "automatic",
+    "run_id": "41014728895",
+    "usage_file": "data/editorial_runs/2026-10-30/41014728895.json"
   }
 ]

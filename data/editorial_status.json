@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T06:33:51.844627+00:00",
+  "generatedAt": "2026-10-30T06:35:40.962906+00:00",
   "dateKst": "2026-10-30",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 6,
+  "published": 7,
   "verified": 6,
   "attempts": 15,
   "held": 8,
   "errors": 0,
-  "knownSubtotalUsd": 0.89382205,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 1.0128878,
+  "estimatedTotalUsd": 1.0128878,
   "records": [
     {
       "runId": "40978811862",
@@ -196,16 +196,16 @@
     },
     {
       "runId": "41014728895",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "선물 답장이 늦어졌을 때 변명 없이 간결하게 감사 표현하는 법",
+      "url": "https://kv-gift.co.kr/board/sense/18",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-30T06:32:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11906575,
+      "knownSubtotalUsd": 0.11906575
     }
   ]
 }
