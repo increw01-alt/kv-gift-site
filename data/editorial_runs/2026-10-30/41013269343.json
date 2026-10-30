@@ -1,17 +1,19 @@
 {
   "run_id": "41013269343",
   "date_kst": "2026-10-30",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-30T06:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글의 질문·독자 상황·해결 절차를 그대로 반복하거나, 최근 보류된 방향을 표현만 바꾼 수준입니다. 구체적으로 새로 해결하는 문제와 기존 답으로는 처리되지 않는 추가 행동이 드러나지 않아 통과 후보를 고르기 어렵습니다. / 0번은 기존 '/board/purchase/2564'가 이미 다룬 ‘모바일상품권 구매 전에 수신 연락처를 확인하는 방법’과 같은 문제입니다. 동명이인 혼동 예방과 최소 정보 확인은 결국 정확한 수신자 연락처 확인 절차를 더 세분화한 것뿐이라, 이미 해결한 질문(선물 전달 전 수신자 연락처를 정확히 확인하기)에서 벗어나지 않습니다. / 1번은 기존 '/board/gc_information/11'이 이미 다룬 ‘구매 영수증과 상품권 화면의 차이와 쓰임새’와 동일한 질문입니다. 법적 역할·실사용 수단·보관법을 다시 정리할 뿐, 영수증과 화면의 역할 구분에서 새로 해결해야 할 독립적인 문제가 없습니다. / 2번은 기존 '/board/sale/3697'의 ‘매입 문의 기록에서 내 판단과 상대의 답변을 구분하는 방법’과, 최근 보류된 판매 준비형 상태 점검/증빙 정리 주제와 해결 흐름이 겹칩니다. 상태 확인·증빙 준비·개인정보 최소화는 이미 공개 글과 같은 상담 준비 문제를 반복합니다. / 3번은 기존 '/board/purchase/2564'와 '/board/purchase/2566'가 각각 다룬 ‘수신 연락처 확인’과 ‘결제 전 최종 금액 확인’의 조합입니다. 장바구니 수정 후 대상과 옵션을 대조하는 절차는 이미 있는 최종 확인·수정 전후 비교 안내를 그대로 적용해 해결되므로 새 방향으로 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41013269343",
@@ -20,15 +22,137 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "선물용 상품권 구매 전 동명이인 혼동 예방과 정확한 수신자 확인 방법",
+          "source_id": "",
+          "reader_problem": "선물용 상품권을 구매하기 전에 수신자가 동일한 이름을 가진 동명이인이 아닌지 혼동을 예방하고, 전달 오류를 막는 구체적인 절차를 몰라 고민입니다.",
+          "distinct_angle": "기존에는 단순 연락처 확인 정도만 안내하는 반면, 이 글은 최소 필수 정보와 비공개 확인 절차를 포함한 실천적 소통 절차를 제시해 명확히 구분합니다.",
+          "reader_situation": "상품권 선물을 구매하려는 고객이 수신자의 정확한 신분을 파악하고 개인정보 노출은 최소화하면서 오배송을 예방하고자 하는 구체적인 상황.",
+          "deliverable": "동명이인 식별 위한 최소 정보 목록과 비공개 연락처 확인 절차를 포함한 체크리스트 및 개인정보 보호 소통 지침.",
+          "task_id": "",
+          "outline": [
+            "동명이인 수신자 확인을 위해 반드시 확인할 최소 필수 정보 정리하기",
+            "개인정보를 최소화하며 연락처를 일부 비공개로 확인하는 안전한 절차 구축 방법",
+            "식별된 수신자 정보에 기반해 오배송 예방과 전달 채널 분리를 위한 효과적 커뮤니케이션 전략 수립"
+          ]
+        },
+        {
+          "topic": "상품권 구매 영수증과 상품권 화면의 기능 차이와 상황별 올바른 활용법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 후 받은 영수증과 상품권 화면의 역할과 사용 시기를 구분하지 못해 혼란스럽고, 보관 및 문의 시 정확한 활용법이 필요합니다.",
+          "distinct_angle": "기존 글의 단순 안내와 달리, 법적 역할과 실사용 수단 기능을 시각화한 개념도와 구체적 상황별 활용표를 통해 누구나 쉽게 이해하고 활용할 수 있도록 구성했습니다.",
+          "reader_situation": "상품권 구매 직후 영수증과 상품권 화면을 동시에 받아 사용 준비와 증빙 보관이 막막한 신규 또는 재이용 고객.",
+          "deliverable": "영수증과 상품권 화면의 법적, 기능적 차이점을 보여주는 개념도 및 각 상황별 활용법과 보관법을 정리한 요약표.",
+          "task_id": "",
+          "outline": [
+            "구매 영수증의 법적 증빙 역할과 구매 증빙으로서의 활용 방법 자세히 설명하기",
+            "상품권 화면을 실제 결제 수단으로 사용하는 기능과 확인해야 할 주요 정보 안내하기",
+            "여러 상황에서 영수증과 상품권 화면을 적절히 활용하는 사례와 각별한 보관법 비교 정리하기"
+          ]
+        },
+        {
+          "topic": "상품권 매입 문의 시 상태 확인과 증빙 자료의 체계적 준비 및 개인정보 보호 방법",
+          "source_id": "",
+          "reader_problem": "상품권 매입 문의 전 상태 점검과 관련 증빙 자료 수집 방법, 개인정보 노출 최소화 절차를 몰라 준비가 미흡하고 상담 시간이 길어지고 있습니다.",
+          "distinct_angle": "기존 글들이 상태 점검이나 개인정보 보호를 단순 분리 설명하는 데 반해, 이 글은 체크리스트·증빙 유형별 수집법·비식별화 및 질문 리스트까지 통합하여 체계적이고 안전한 준비법을 제시합니다.",
+          "reader_situation": "여러 상품권을 매입 문의하려는 고객으로서, 효과적 점검과 증빙 준비, 개인정보 보호 대응까지 한 번에 대비하고자 하는 중간 단계 이용자.",
+          "deliverable": "상품권 상태별 점검 체크리스트, 유형별 증빙 자료 체계적 수집과 비식별 처리 방법, 개인정보 최소화 위한 질문 목록과 사전 준비 안내서.",
+          "task_id": "",
+          "outline": [
+            "상품권 상태별 상세 점검 항목을 구조화하여 작성하는 방법 습득하기",
+            "증빙 자료 유형별로 어떻게 체계적으로 수집 및 정리할지 실천법 익히기",
+            "문의 전 개인정보 노출을 최소화하고 안전하게 자료를 전달하는 실제 절차와 질문 적용법"
+          ]
+        },
+        {
+          "topic": "상품권 구매 전 장바구니 옵션 변경 후 의도한 수신 대상 및 옵션 대조 점검 방법",
+          "source_id": "",
+          "reader_problem": "장바구니에서 상품권 옵션(금액, 수신자 등)을 변경했을 때 최종 주문 내역이 원래 의도한 대상과 맞는지 꼼꼼히 확인하는 절차를 몰라 주문 오류를 걱정합니다.",
+          "distinct_angle": "기존의 단순 최종 확인 안내를 넘어 변경 전후 기록 관리법과 대응 관계 대조 절차를 체계적으로 정리해, 실전에서 구체적으로 점검할 수 있는 행동 단계별 가이드입니다.",
+          "reader_situation": "상품권 장바구니에서 옵션 수정을 자주 하는 구매자로서, 변경 후 수신자와 옵션이 정확히 일치하는지 오류 없이 체크하고 싶은 상황.",
+          "deliverable": "원래 담긴 상품권 대상 및 옵션 기록법, 옵션 변경 발생 상세 확인 방법, 최종 주문 전 의도 대상과 옵션 대응 관계를 대조하는 점검 순서와 구체적 행동 목록.",
+          "task_id": "",
+          "outline": [
+            "원래 장바구니에 담긴 상품권의 대상과 옵션을 체계적으로 기록하는 방법 배우기",
+            "장바구니 내 옵션 변경 시 변경된 사항을 상세하게 확인하는 절차 익히기",
+            "최종 주문 전 원래 의도한 대상과 현재 선택된 옵션이 정확히 일치하는지 대조하는 점검 절차"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23176,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1188,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24364
+        },
+        "estimated_usd": 0.0111712,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T06:18:57.808200+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10524,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 551,
+          "output_tokens_details": {
+            "reasoning_tokens": 85
+          },
+          "total_tokens": 11075
+        },
+        "estimated_usd": 0.0103725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T06:19:01.012038+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T06:18:48.005030+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T06:18:58.384857+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0215437,
+    "estimated_total_usd": 0.0215437,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
