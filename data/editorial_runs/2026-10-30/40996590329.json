@@ -1,17 +1,29 @@
 {
   "run_id": "40996590329",
   "date_kst": "2026-10-30",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "선물 수신자를 동명이인으로 혼동하지 않도록 구매 전에 무엇을 나눠 확인할까요?",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-30T03:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": false,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
+    "issues": [
+      "기존 글 '[구매 안내] 모바일상품권 구매 전에 수신 연락처를 확인해야 하는 이유는 무엇인가요?'와 질문과 해결 흐름이 매우 유사해 중복 가능성이 있습니다."
+    ]
   },
   "api_usage": {
     "run_id": "40996590329",
@@ -20,15 +32,308 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 구매 안내를 여러 창에서 비교할 때 다른 옵션을 같은 상품으로 착각하지 않으려면?",
+          "source_id": "",
+          "reader_problem": "여러 개 구매 안내 페이지를 띄워놓고 비교할 때 비슷한 이름이나 옵션 때문에 서로 다른 옵션을 동일 상품인 것처럼 착각해 혼란이 생깁니다.",
+          "distinct_angle": "비교 대상 항목을 표 형식으로 사전에 정리하며 상품명과 형태, 옵션별 변수를 각 창에 맞춰 정확히 매칭시키는 체계적인 비교 준비법을 중심으로 설명합니다.",
+          "reader_situation": "다양한 온라인 판매 창에서 상품권 가격과 옵션을 비교 검토하며 주요 조건을 한눈에 파악해 착오 없는 선택 기준을 만들고자 하는 독자.",
+          "deliverable": "상품별 옵션과 특징을 표로 체계적으로 정리해 각 창 조건을 대응시키는 비교표 작성법과 단계별 점검 가이드.",
+          "task_id": "purchase-compare-screens",
+          "outline": [
+            "비교 전 필수 상품조건과 옵션 항목 정의 및 리스트업 방법",
+            "여러 창 별 상품명·옵션 매칭 및 표 작성으로 조건 비교하기",
+            "작성한 비교표로 각 상품권 옵션 명확히 구분·판단하기"
+          ]
+        },
+        {
+          "topic": "깜짝 선물을 준비할 때 브랜드를 미리 드러내지 않고 사용 취향을 물으려면?",
+          "source_id": "",
+          "reader_problem": "선물 브랜드를 미리 알리지 않고 상대방의 생활권과 사용 선호를 파악해 적절한 상품권을 준비하고 싶은데, 어떤 질문을 어떻게 해야 할지 어렵습니다.",
+          "distinct_angle": "브랜드 명칭 대신 접근 가능한 생활권과 이용 방법, 선호하는 사용 형태를 중심으로 질문 설계하는 실제 가능한 대화법과 체크 항목을 중점 소개합니다.",
+          "reader_situation": "깜짝 선물로 상품권을 준비하려 하며, 브랜드노출 없이 실용적 선호 정보를 확보하기 위한 맞춤형 질문 방식을 찾는 독자.",
+          "deliverable": "미리 브랜드를 알리지 않고 상대 취향을 묻는 질문 예시와 단계별 설문 설계법, 활용 팁을 담은 안내 자료.",
+          "task_id": "purchase-surprise-name",
+          "outline": [
+            "방문 가능한 생활권과 이용 가능한 환경 파악 질문 만들기",
+            "브랜드 언급 없이 선호하는 사용 방식과 선택 조건 묻기",
+            "수집한 정보 바탕으로 비공개 선물 선택 방향 정리하기"
+          ]
+        },
+        {
+          "topic": "선물 메시지가 짧아야 할 때 어떤 내용을 우선해서 넣을까요?",
+          "source_id": "",
+          "reader_problem": "압축된 문자 메시지나 제한된 공간에 담아야 할 선물 메시지에서, 어떤 핵심 정보를 우선 넣어야 마음과 의미를 효과적으로 전달할 수 있을지 고민됩니다.",
+          "distinct_angle": "보낸 사람 소개, 선물 이유, 안내 문구를 필수와 선택 항목으로 나누고, 최소화한 예시 메시지와 압축 전략을 통해 의도 전달력을 강화하는 구체적 방법을 설명합니다.",
+          "reader_situation": "선물 메시지 길이 제한이 있어 간결하지만 핵심과 배려를 모두 담은 문구 작성 요령을 알고자 하는 독자.",
+          "deliverable": "필수 정보 우선순위와 선택적 안내를 구분한 압축 메시지 예시와 제작 팁, 상황별 필수 문구 숙지 가이드.",
+          "task_id": "purchase-message-length",
+          "outline": [
+            "전달할 메시지 내 필수 정보와 선택 정보를 구분하기",
+            "다양한 상황별 메시지 압축 전략 및 예시 살펴보기",
+            "짧은 메시지에 감정과 안내를 효과적으로 담는 팁 익히기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "선물 수신자를 동명이인으로 혼동하지 않도록 구매 전에 무엇을 나눠 확인할까요?",
+        "source_id": "",
+        "reader_problem": "선물용 상품권을 구매하기 전에 수신자가 같은 이름을 가진 동명이인일 가능성 때문에 잘못 전달되거나 혼동되는 문제를 예방하고자 합니다.",
+        "distinct_angle": "연락처의 전체 노출 없이 수신자를 정확히 식별하고 결제 전 커뮤니케이션 채널을 분리 확인하는 구체적 준비과정을 안내합니다. 주소록 기능을 전제로 하지 않고 활용 가능한 단계별 확인 방법을 다룹니다.",
+        "reader_situation": "상품권 선물을 구매 준비 중이며, 수신자의 정확한 신분 구분과 연락채널 확인을 통해 오배송이나 전달 오류를 막고자 하는 독자.",
+        "deliverable": "수신자 식별 시 필요한 최소 정보와 별도로 확인해야 할 전달 채널을 구분하는 체크리스트와, 개인정보 노출을 최소화하는 소통 절차의 실천 안내.",
+        "task_id": "purchase-recipient-confirm",
+        "outline": [
+          "동명이인 수신자 확인을 위한 최소 필수 정보 수집 방법 배우기",
+          "개인정보 보호를 위한 연락처 일부 비공개 확인 절차 마련하기",
+          "수신자 식별과 전달 채널 분리를 위한 커뮤니케이션 전략 수립하기"
+        ],
+        "novelty_reason": "0번은 기존 공개 글 /board/purchase/2564가 다룬 ‘구매 전 수신 연락처 확인’과 겹치는 출발점은 같지만, 이번 후보는 그보다 더 구체적으로 ‘동명이인으로 인한 오배송·전달 혼동’을 막기 위해 최소 식별 정보와 전달 채널을 분리 확인하는 절차를 제시합니다. 즉, 단순히 연락처를 정확히 적고 주문 직전에 재확인하는 수준이 아니라, 연락처 전체를 노출하지 않고도 수신자 식별 정보와 소통 채널을 나눠 검증하는 실천 방법이 새로 추가됩니다. 기존 글의 답만으로는 해결되지 않는 개인정보 최소노출형 확인 흐름이 있어 가장 새롭고 구체적입니다.",
+        "screen_rejections": [
+          "1번은 여러 창의 상품권 옵션을 표로 대조하는 방법이 핵심인데, 이는 최근 보류된 비교형 주제들과 같은 ‘항목 매칭·대조표 작성’ 구조를 반복합니다. 상품명·형태·옵션을 대응시키는 설명만으로는 기존의 비교 준비형 글과 구분되는 새로운 해결 문제가 충분히 드러나지 않습니다.",
+          "2번은 브랜드를 미리 드러내지 않고 선호를 묻는 질문법인데, 기존 공개 글 /board/sense/6가 이미 상대의 취향을 자연스럽게 알아보는 대화법과 관심사·사용 선호를 묻는 흐름을 다뤘습니다. 생활권·이용 방식으로 질문 대상을 좁혔지만, 독자가 해결하려는 ‘선호 파악’과 질문 설계 절차가 사실상 같습니다.",
+          "3번은 짧은 선물 메시지에서 무엇을 우선 넣을지 정리하는 내용으로, 기존 공개 글 /board/free/467과 /board/free/474가 이미 짧은 메시지, 감사·축하·격려, 가격 대신 의미를 전하는 문구를 다뤘습니다. 필수/선택 항목으로 나눈다는 형식만 추가됐을 뿐, 같은 메시지 작성 문제를 다시 설명하는 수준입니다."
+        ]
+      },
+      "board": "purchase",
+      "topic": "선물 수신자를 동명이인으로 혼동하지 않도록 구매 전에 무엇을 나눠 확인할까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-29T13:01:39Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "동명이인 수신자에게 상품권을 잘못 보내지 않도록 최소 식별 정보와 연락 채널을 어떻게 나눠 확인할지 알고 싶은 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9644,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1098,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10742
+        },
+        "estimated_usd": 0.0056144,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:19:16.894890+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12180,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 804,
+          "output_tokens_details": {
+            "reasoning_tokens": 307
+          },
+          "total_tokens": 12984
+        },
+        "estimated_usd": 0.012753,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T03:19:21.269175+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3121,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 444,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3565
+        },
+        "estimated_usd": 0.0019588,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:19:24.177887+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8998,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 510,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9508
+        },
+        "estimated_usd": 0.0044152,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:19:30.564661+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18271,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 496,
+          "output_tokens_details": {
+            "reasoning_tokens": 263
+          },
+          "total_tokens": 18767
+        },
+        "estimated_usd": 0.01593525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T03:19:35.491217+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3601,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1105
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4973
+        },
+        "estimated_usd": 0.066653,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:20:08.342669+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12207,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 529,
+          "output_tokens_details": {
+            "reasoning_tokens": 419
+          },
+          "total_tokens": 12736
+        },
+        "estimated_usd": 0.01153575,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T03:20:14.883459+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:19:08.968135+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T03:19:17.567321+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:19:21.271383+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:19:25.584770+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T03:19:32.797683+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-30T03:19:35.511384+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T03:20:09.818566+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1188654,
+    "estimated_total_usd": 0.1188654,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

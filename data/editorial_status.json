@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T03:19:05.240655+00:00",
+  "generatedAt": "2026-10-30T03:20:15.217662+00:00",
   "dateKst": "2026-10-30",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 3,
   "attempts": 4,
-  "held": 0,
+  "held": 1,
   "errors": 0,
-  "knownSubtotalUsd": 0.3201163,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.4389817,
+  "estimatedTotalUsd": 0.4389817,
   "records": [
     {
       "runId": "40978811862",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "40996590329",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "선물 수신자를 동명이인으로 혼동하지 않도록 구매 전에 무엇을 나눠 확인할까요?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-30T03:17:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1188654,
+      "knownSubtotalUsd": 0.1188654
     }
   ]
 }
