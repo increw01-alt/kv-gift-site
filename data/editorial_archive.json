@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T01:19:57.556216+00:00",
+  "generatedAt": "2026-10-30T01:21:22.107935+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1777,7 +1777,7 @@
       "board": "free",
       "topic": "상품권 선물에 관한 질문을 만들 때 선택지를 먼저 주는 편이 좋을까요?",
       "url": "https://kv-gift.co.kr/board/free/477",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-30T01:21:22.085591+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11032315,
       "knownSubtotalUsd": 0.11032315
