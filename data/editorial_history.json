@@ -1019,5 +1019,18 @@
     "publication_mode": "automatic",
     "run_id": "40978811862",
     "usage_file": "data/editorial_runs/2026-10-30/40978811862.json"
+  },
+  {
+    "board": "free",
+    "id": 477,
+    "topic": "상품권 선물에 관한 질문을 만들 때 선택지를 먼저 주는 편이 좋을까요?",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "상품권 선물 관련 질문을 만들 때 선택지를 먼저 줄지 자유롭게 답하게 할지 상황별로 판단하는 기준을 알고 싶은 질문",
+    "image_scene": "책상 위에 상품권 선물 질문 카드 여러 장과 체크박스가 있는 선택지 메모, 빈 답변 칸이 있는 설문지가 나란히 놓여 있고, 한 사람이 질문 문구를 비교하며 어떤 형식이 더 알맞은지 고르는 구도",
+    "image_alt": "책상 위에 선택지형 질문 카드와 빈 답변 칸이 있는 설문지가 나란히 놓여 있고, 한 사람이 두 형식을 비교하며 질문 문구를 고르는 모습",
+    "publication_mode": "automatic",
+    "run_id": "40985005043",
+    "usage_file": "data/editorial_runs/2026-10-30/40985005043.json"
   }
 ]

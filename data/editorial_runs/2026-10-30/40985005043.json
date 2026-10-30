@@ -1,16 +1,26 @@
 {
   "run_id": "40985005043",
   "date_kst": "2026-10-30",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "free",
+  "topic": "상품권 선물에 관한 질문을 만들 때 선택지를 먼저 주는 편이 좋을까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/free/477",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-30T01:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -20,15 +30,293 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "여럿이 선물할 때 의견을 모두 듣는 방법은 어떻게 정하면 좋을까요?",
+          "source_id": "",
+          "reader_problem": "여러 사람이 선물 의견을 낼 때 말이 많아 혼선이 생기고, 합의된 선택 기준이 명확하지 않아 결정이 어렵다.",
+          "distinct_angle": "일반적인 조율 방법이 아니라, 말이 많은 사람 의견과 합의 결과를 구분해 먼저 기준을 모으는 토론 질문 방식 중심으로 안내한다.",
+          "reader_situation": "여러 명이 함께 선물을 준비하며 각자의 의견이 많고 서로 다른 의견을 합의해야 하는 상황.",
+          "deliverable": "말 많은 사람 의견과 합의 결과를 구분하고, 우선 선택 기준을 함께 모으는 토론 질문과 그에 따른 결정 방향을 제시하는 글.",
+          "task_id": "free-shared-choice",
+          "outline": [
+            "참여자의 다양한 의견을 모두 정리하는 질문 방식 만들기",
+            "모든 의견 속에서 선택 기준을 추출하고 분류하기",
+            "추출한 기준을 바탕으로 합의 점을 찾아내는 토론 정리법"
+          ]
+        },
+        {
+          "topic": "선물 이야기를 나눌 때 가격 대신 어떤 질문을 하면 좋을까요?",
+          "source_id": "",
+          "reader_problem": "선물 가격을 묻거나 가격에 집중하는 대화가 부담스럽고 압박이 되서 자연스럽게 선물의 의미나 가치를 이야기하기 어렵다.",
+          "distinct_angle": "가격 중심 대화 대신 배려와 기억에 남는 가치를 떠올릴 수 있는 질문을 구체적으로 안내하며, 구매 압박 없이 선물 대화를 자연스럽게 이끄는 방법을 다룬다.",
+          "reader_situation": "선물 대화에서 가격 언급을 피해 부담 없이 가치를 이야기하고 싶어하는 상황.",
+          "deliverable": "선물의 의미와 배려를 담아내는 자연스러운 질문 예시와 전달 전략을 포함한 글.",
+          "task_id": "free-gift-experience-question",
+          "outline": [
+            "가격 대신 선물의 의미나 추억을 묻는 질문 사례 만들기",
+            "부담 없이 대화 주제를 선물 가치로 전환하는 방법 익히기",
+            "선물 담긴 마음을 자연스럽게 표현하는 대화 기법 제시"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 선물에 관한 질문을 만들 때 선택지를 먼저 주는 편이 좋을까요?",
+        "source_id": "",
+        "reader_problem": "질문에 앞서 선택지를 미리 제시하는 것과 자유 응답을 두는 것의 장단점을 상황별로 판단하기 어려워 적절한 방법을 찾고 싶다.",
+        "distinct_angle": "단순히 선택지 제공 여부를 논하는 것이 아니라, 대화 상황별로 자유 응답과 제한된 선택지의 구체적 효과와 판단 기준을 비교 분석한다.",
+        "reader_situation": "상품권 선물 관련 질문을 만들 때, 독자 반응을 고려해 어떤 응답 방식을 적용할지 고민하는 상황.",
+        "deliverable": "자유 응답과 선택지 제시의 장단점 비교와 적용 상황별 판단 기준을 구체적으로 설명한 글.",
+        "task_id": "free-open-question",
+        "outline": [
+          "자유 응답과 선택지 제공 방식의 기본 차이 이해하기",
+          "다양한 대화 상황에 따른 각 방식 효과 분석하기",
+          "상황에 맞는 응답 방식 선택을 위한 구체적 판단 기준 마련하기"
+        ],
+        "novelty_reason": "3번은 기존 글들이 다룬 ‘선물 대화의 부담을 줄이는 표현’이나 ‘상품권 사용 편의 안내’와 달리, 상품권 선물 관련 질문을 만들 때 자유 응답과 제한된 선택지를 어떤 상황에서 쓸지 판단하는 문제를 다룹니다. 가장 가까운 기존 글은 선택지보다 질문 자체의 부담을 낮추는 대화법을 다룬 '/board/free/474'이지만, 이번 후보는 그보다 한 단계 앞선 질문 설계와 응답 방식 선택 기준을 제시한다는 점에서 새롭습니다. 구체적으로는 대화 상황별로 선택지를 먼저 주는 편이 좋은 경우와 자유 응답이 필요한 경우를 나누고, 독자가 실제로 질문 문구를 고르는 기준을 정리해 준다는 차이가 있습니다.",
+        "screen_rejections": [
+          "0번은 기존 공개 글 '/board/free/473'이 이미 다룬 '여럿이 선물할 때 의견 차이가 있을 때 우선 합의 기준을 정하는 방법'과 같은 질문·상황·해결 흐름입니다. 말이 많은 의견을 먼저 모으고 합의 기준을 추출해 정리하는 방식까지 겹쳐 새 해결 내용이 부족합니다.",
+          "1번은 기존 공개 글 '/board/free/474'가 이미 다룬 '선물 가격 대신 마음과 의미를 자연스럽게 표현하는 대화법'과 해결 질문이 같습니다. 가격 대신 다른 말을 하도록 유도하는 질문 예시와 대화 전환 전략도 같은 흐름이라 중복입니다."
+        ]
+      },
+      "board": "free",
+      "topic": "상품권 선물에 관한 질문을 만들 때 선택지를 먼저 주는 편이 좋을까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-29T13:01:39Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 선물 관련 질문을 만들 때 선택지를 먼저 줄지 자유롭게 답하게 할지 상황별로 판단하는 기준을 알고 싶은 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9205,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 949,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10154
+        },
+        "estimated_usd": 0.0052004,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T01:19:04.864446+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12580,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 813,
+          "output_tokens_details": {
+            "reasoning_tokens": 448
+          },
+          "total_tokens": 13393
+        },
+        "estimated_usd": 0.0130935,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T01:19:09.445902+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2952,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3475
+        },
+        "estimated_usd": 0.0020176,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T01:19:13.636231+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5812,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6338
+        },
+        "estimated_usd": 0.0031664,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T01:19:18.880015+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14325,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 527,
+          "output_tokens_details": {
+            "reasoning_tokens": 350
+          },
+          "total_tokens": 14852
+        },
+        "estimated_usd": 0.01311525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T01:19:24.584525+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3586,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1090
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4958
+        },
+        "estimated_usd": 0.066578,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T01:19:51.417685+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8480,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 176,
+          "output_tokens_details": {
+            "reasoning_tokens": 111
+          },
+          "total_tokens": 8656
+        },
+        "estimated_usd": 0.007152,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T01:19:56.115662+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T01:18:57.186416+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T01:19:05.462615+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T01:19:09.448412+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T01:19:15.063400+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T01:19:21.065602+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-30T01:19:24.605915+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T01:19:52.870934+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11032315,
+    "estimated_total_usd": 0.11032315,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
