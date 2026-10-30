@@ -1071,5 +1071,18 @@
     "publication_mode": "automatic",
     "run_id": "41002118685",
     "usage_file": "data/editorial_runs/2026-10-30/41002118685.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2574,
+    "topic": "음식 교환권 선물을 고르기 전에 메뉴 선택 범위를 어떻게 물어볼까요?",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "음식 교환권 선물을 고르기 전에 상대가 편하게 답할 수 있도록 메뉴 범위와 알레르기 정보를 자연스럽게 묻는 방법을 알고 싶은 질문",
+    "image_scene": "식탁 위에 음식 교환권 봉투와 작은 메뉴 카드, 알레르기 표시가 적힌 체크 메모가 나란히 놓여 있고, 한 사람이 상대에게 보낼 질문 문구를 노트에 정리하며 메뉴 범위와 피해야 할 음식 항목을 함께 확인하는 장면",
+    "image_alt": "식탁 위에서 음식 교환권과 메뉴 카드, 알레르기 체크 메모를 함께 두고 상대에게 물어볼 문구를 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41008132369",
+    "usage_file": "data/editorial_runs/2026-10-30/41008132369.json"
   }
 ]

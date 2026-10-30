@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kv-gift.co.kr/board/purchase/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://kv-gift.co.kr/board/purchase/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://kv-gift.co.kr/board/purchase/61</loc><lastmod>2023-08-31</lastmod></url>
   <url><loc>https://kv-gift.co.kr/board/purchase/62</loc><lastmod>2023-08-31</lastmod></url>
   <url><loc>https://kv-gift.co.kr/board/purchase/80</loc><lastmod>2023-09-14</lastmod></url>
@@ -5191,4 +5191,5 @@
   <url><loc>https://kv-gift.co.kr/board/gc_tip/42</loc><lastmod>2026-10-30</lastmod><image:image><image:loc>https://kv-gift.co.kr/board-img/gc_tip/guide-2026-10-30-40990869974.png</image:loc></image:image></url>
   <url><loc>https://kv-gift.co.kr/board/sense/17</loc><lastmod>2026-10-30</lastmod><image:image><image:loc>https://kv-gift.co.kr/board-img/sense/guide-2026-10-30-40998466746.png</image:loc></image:image></url>
   <url><loc>https://kv-gift.co.kr/board/free/478</loc><lastmod>2026-10-30</lastmod><image:image><image:loc>https://kv-gift.co.kr/board-img/free/guide-2026-10-30-41002118685.png</image:loc></image:image></url>
+  <url><loc>https://kv-gift.co.kr/board/purchase/2574</loc><lastmod>2026-10-30</lastmod><image:image><image:loc>https://kv-gift.co.kr/board-img/purchase/guide-2026-10-30-41008132369.png</image:loc></image:image></url>
 </urlset>

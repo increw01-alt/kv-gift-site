@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T05:23:49.891429+00:00",
+  "generatedAt": "2026-10-30T05:24:51.571860+00:00",
   "dateKst": "2026-10-30",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 5,
+  "published": 6,
   "verified": 5,
   "attempts": 11,
   "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.73290595,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.83891455,
+  "estimatedTotalUsd": 0.83891455,
   "records": [
     {
       "runId": "40978811862",
@@ -144,16 +144,16 @@
     },
     {
       "runId": "41008132369",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "음식 교환권 선물을 고르기 전에 메뉴 선택 범위를 어떻게 물어볼까요?",
+      "url": "https://kv-gift.co.kr/board/purchase/2574",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-30T05:22:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1060086,
+      "knownSubtotalUsd": 0.1060086
     }
   ]
 }
