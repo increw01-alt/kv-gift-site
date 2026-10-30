@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T06:35:40.982261+00:00",
+  "generatedAt": "2026-10-30T06:36:44.192207+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1959,7 +1959,7 @@
       "board": "sense",
       "topic": "선물 답장이 늦어졌을 때 변명 없이 간결하게 감사 표현하는 법",
       "url": "https://kv-gift.co.kr/board/sense/18",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-30T06:36:44.167604+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11906575,
       "knownSubtotalUsd": 0.11906575
