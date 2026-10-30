@@ -1,17 +1,19 @@
 {
   "run_id": "40997533761",
   "date_kst": "2026-10-30",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "상품권 판매 전 상태 확인과 증빙 자료 체계적 준비법",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-30T03:27:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글들인 ‘상품권 판매 상담 전에 어떤 정보를 준비하면 되나요?’, ‘상품권 판매 전 오류·상태 이상 대응 가이드’, ‘비밀번호·바코드 노출 없이 상품권 사용 상태 문의하는 안전 절차’와 핵심 질문이 겹칩니다. 상태 확인, 증빙 준비, 개인정보 최소화라는 해결 단계가 거의 같아 새 절차로 보기 어렵습니다. / 본문이 ‘어떻게 점검할지’와 ‘어떤 정보를 준비할지’를 묶어 설명하지만, 기존 글에서 이미 다룬 판매 상담 준비와 정보 보호의 범위를 크게 벗어나지 않습니다. 질문 대상과 결과물이 사실상 동일합니다. / ‘체계적 준비법’이라는 표현에 비해 구체적으로 새로운 판단 기준이나 차별화된 예시가 충분히 드러나지 않아, 독자가 기존 글로도 같은 답을 얻을 수 있습니다."
+    ]
   },
   "api_usage": {
     "run_id": "40997533761",
@@ -20,15 +22,197 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "상품권 판매 전 상태 확인과 증빙 자료 체계적 준비법",
+        "source_id": "",
+        "reader_problem": "상품권 매입 문의 전에 상태 점검과 관련 증빙을 정확하고 안전하게 정리하는 절차가 명확하지 않아 시간과 상담 효율이 떨어진다.",
+        "distinct_angle": "기존 글은 단순 확인이나 개인정보 보호만 안내하지만, 본 글은 상태별 구체 점검항목과 증빙 유형별 수집법, 개인정보 최소화 질문 준비까지 체계적 절차를 상세히 제시한다.",
+        "reader_situation": "상품권을 여러 곳에 매입 문의하려고 하는데, 상태 확인과 증빙 자료를 체계적으로 준비해 상담 시간을 줄이고 개인정보 노출을 방지하고자 하는 고객.",
+        "deliverable": "상품권 상태별 점검 체크리스트, 증빙 자료 종류별 체계적 수집·비식별 처리 방법, 개인정보 보호를 고려한 질문 목록과 준비 단계 안내.",
+        "task_id": "",
+        "outline": [
+          "상품권 상태별 상세 점검 항목 작성하기",
+          "증빙 자료 유형별 체계적 수집 및 정리하기",
+          "문의 전 개인정보 최소화하고 안전하게 전달하는 방법 익히기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글인 /board/sale/3693은 상품권의 오류·상태 이상을 사진으로 기록하고 매입처에 구체적으로 문의하는 흐름을 이미 다뤘고, /board/sale/3690도 사용 가능 상태와 매입 조건 확인을 설명합니다. 반면 후보 0은 그보다 한 단계 더 들어가 상태를 ‘어떻게 점검할지’에 더해, 문의 전 어떤 증빙을 어떤 유형으로 모아 비식별 처리할지, 그리고 개인정보를 최소화한 질문 목록을 어떻게 준비할지까지 구체적으로 제시합니다. 즉 단순 상태 확인을 반복하는 것이 아니라, 여러 매입처에 비교 문의할 때 필요한 준비물과 질문 설계를 새로 정리하는 방향이라 중복성이 상대적으로 낮습니다.",
+        "screen_rejections": []
+      },
+      "board": "sale",
+      "topic": "상품권 판매 전 상태 확인과 증빙 자료 체계적 준비법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-29T13:01:39Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23034,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 259,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23293
+        },
+        "estimated_usd": 0.009628,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:28:55.060493+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6537,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 448,
+          "output_tokens_details": {
+            "reasoning_tokens": 242
+          },
+          "total_tokens": 6985
+        },
+        "estimated_usd": 0.00691875,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T03:28:57.936950+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2799,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 477,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3276
+        },
+        "estimated_usd": 0.0018828,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:29:02.769001+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4582,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 539,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5121
+        },
+        "estimated_usd": 0.0026952,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-30T03:29:07.980929+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 13819,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 626,
+          "output_tokens_details": {
+            "reasoning_tokens": 265
+          },
+          "total_tokens": 14445
+        },
+        "estimated_usd": 0.01318125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-30T03:29:15.089404+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:28:52.051143+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T03:28:55.214765+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:28:57.939684+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-30T03:29:04.138932+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-30T03:29:10.272338+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.034306,
+    "estimated_total_usd": 0.034306,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

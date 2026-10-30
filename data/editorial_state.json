@@ -189,10 +189,15 @@
       "board": "purchase",
       "topic": "선물 수신자를 동명이인으로 혼동하지 않도록 구매 전에 무엇을 나눠 확인할까요?",
       "run_id": "40996590329"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 판매 전 상태 확인과 증빙 자료 체계적 준비법",
+      "run_id": "40997533761"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "40997066149",
+  "last_board": "sale",
+  "last_run_id": "40997533761",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
