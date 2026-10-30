@@ -1058,5 +1058,18 @@
     "publication_mode": "automatic",
     "run_id": "40998466746",
     "usage_file": "data/editorial_runs/2026-10-30/40998466746.json"
+  },
+  {
+    "board": "free",
+    "id": 478,
+    "topic": "모임에서 선물 참여를 선택으로 두려면 어떤 표현이 편할까요?",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "모임에서 선물 참여를 강요처럼 느끼지 않게 묻는 표현과 비공식 합의 방식을 찾는 질문",
+    "image_scene": "회의 테이블 위에 선물 참여 문구가 적힌 메모 카드 몇 장과 체크박스가 있는 질문지, 펜, 소형 메모지가 놓여 있고 한 사람이 표현을 고르며 참여 여부를 조용히 정리하는 구도",
+    "image_alt": "회의 테이블 위에서 선물 참여 문구가 적힌 카드와 체크박스 메모를 비교하며 부담 없는 표현을 고르는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41002118685",
+    "usage_file": "data/editorial_runs/2026-10-30/41002118685.json"
   }
 ]
