@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T02:19:46.429405+00:00",
+  "generatedAt": "2026-10-30T02:21:10.892687+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -1791,7 +1791,7 @@
       "board": "gc_tip",
       "topic": "외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하려면?",
       "url": "https://kv-gift.co.kr/board/gc_tip/42",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-30T02:21:10.870381+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1022382,
       "knownSubtotalUsd": 0.1022382
