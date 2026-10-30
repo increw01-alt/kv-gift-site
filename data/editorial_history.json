@@ -1006,5 +1006,18 @@
     "publication_mode": "automatic",
     "run_id": "40848546247",
     "usage_file": "data/editorial_runs/2026-10-29/40848546247.json"
+  },
+  {
+    "board": "sense",
+    "id": 16,
+    "topic": "감사 인사가 너무 길어질 때 어떤 문장부터 남기면 좋을까요?",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "길어진 감사 인사에서 핵심 고마움만 남겨 반복 없이 짧고 자연스럽게 다듬는 방법을 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 긴 감사 메모 초안과 수정한 짧은 문장이 적힌 종이가 나란히 놓여 있고, 옆에는 형광펜과 펜, 체크박스가 있는 메모지가 있다. 한 사람이 반복 표현을 지우고 핵심 문장만 남기며 전후 문장을 비교하는 구도",
+    "image_alt": "책상 위에서 긴 감사 인사 초안과 짧게 다듬은 문장을 나란히 두고 핵심만 남기며 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40978811862",
+    "usage_file": "data/editorial_runs/2026-10-30/40978811862.json"
   }
 ]
