@@ -1045,5 +1045,18 @@
     "publication_mode": "automatic",
     "run_id": "40990869974",
     "usage_file": "data/editorial_runs/2026-10-30/40990869974.json"
+  },
+  {
+    "board": "sense",
+    "id": 17,
+    "topic": "선물 답장에 따른 톤과 말투 차별화하기",
+    "drafted_at": "2026-10-30",
+    "automation": true,
+    "search_intent": "선물 감사 답장을 쓸 때 친한 사이와 격식을 차려야 하는 사이의 말투·호칭·문장 길이를 어떻게 다르게 써야 하는지 알고 싶은 질문",
+    "image_scene": "책상 위에 선물 상자 옆으로 감사 메시지 초안 두 장이 나란히 놓여 있고, 왼쪽에는 짧은 반말 메모와 하트 스티커가, 오른쪽에는 정중한 존댓말 문장과 단정한 봉투가 배치된 구도",
+    "image_alt": "책상 위에 친근한 답장 초안과 정중한 답장 초안이 나란히 놓여 있는 장면",
+    "publication_mode": "automatic",
+    "run_id": "40998466746",
+    "usage_file": "data/editorial_runs/2026-10-30/40998466746.json"
   }
 ]

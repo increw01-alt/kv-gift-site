@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T03:38:42.182817+00:00",
+  "generatedAt": "2026-10-30T03:39:44.961964+00:00",
   "dateKst": "2026-10-30",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 8,
   "held": 4,
   "errors": 0,
-  "knownSubtotalUsd": 0.50586815,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.62160355,
+  "estimatedTotalUsd": 0.62160355,
   "records": [
     {
       "runId": "40978811862",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "40998466746",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "선물 답장에 따른 톤과 말투 차별화하기",
+      "url": "https://kv-gift.co.kr/board/sense/17",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-30T03:37:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1157354,
+      "knownSubtotalUsd": 0.1157354
     }
   ]
 }
