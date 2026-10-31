@@ -201,8 +201,8 @@
       "run_id": "41153391651"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "41155479205",
+  "last_board": "gc_tip",
+  "last_run_id": "41214179089",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -346,6 +346,38 @@
       "topic": "상품권 이용 시 놓치기 쉬운 카드 실적 인정 범위",
       "date_kst": "2026-10-25",
       "run_id": "40157991096",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-record",
+      "board": "gc_tip",
+      "topic": "상품권 환불 상담 전 주문·사용 기록과 답변 내역을 체계적으로 구분하는 법",
+      "date_kst": "2026-11-01",
+      "run_id": "41214179089",
+      "status": "held"
+    },
+    {
+      "source_id": "barcode-privacy",
+      "board": "gc_tip",
+      "topic": "상품권 문의 시 바코드와 번호 노출 없이 사용 상태를 안전하게 설명하는 방법",
+      "date_kst": "2026-11-01",
+      "run_id": "41214179089",
+      "status": "held"
+    },
+    {
+      "source_id": "payment-date",
+      "board": "gc_tip",
+      "topic": "상품권 결제일과 카드 청구일 불일치 시 비교하는 핵심 기록과 확인 방법",
+      "date_kst": "2026-11-01",
+      "run_id": "41214179089",
+      "status": "held"
+    },
+    {
+      "source_id": "cancel-performance",
+      "board": "gc_tip",
+      "topic": "상품권 결제 취소 후 카드 실적 반영 여부를 구체적으로 확인하는 절차",
+      "date_kst": "2026-11-01",
+      "run_id": "41214179089",
       "status": "held"
     }
   ]

@@ -1,17 +1,19 @@
 {
   "run_id": "41214179089",
   "date_kst": "2026-11-01",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 이미 공개된 글이 해결한 질문·독자 상황·해결 절차와 겹쳐, 기존 답만으로도 처리 가능한 수준입니다. 새로 필요한 해결 단계나 사례 차이가 충분히 드러나지 않아 본문 생성 전 보류가 적절합니다. / 0번은 상품권 환불 상담 전에 주문 정보·사용 내역·이전 문의 답변을 나눠 정리하는 흐름이 기존 /board/general_notice/43의 ‘상품명·구매처·현재 상태를 먼저 알려 주세요’와 /board/general_notice/60의 ‘이전 내용과 변경점 구분’에서 이미 해결된 질문을 반복합니다. 기록을 분리해 적는 방식 외에 환불 판단을 새로 돕는 구체적 예시나 별도 해결 단계가 없습니다. / 1번은 /board/gc_tip/36의 ‘비밀번호·바코드 노출 없이 상품권 사용 상태 문의하는 안전 절차’와 /board/general_notice/43의 문의 준비 안내를 그대로 반복합니다. 개인정보를 가린 채 상황을 설명하는 방법 자체가 이미 해결된 문제라 새 질문이 아닙니다. / 2번은 /board/gc_tip/37의 ‘결제일과 카드 청구일 다를 때 상품권 결제 내역 비교 체계’와 /board/gc_information/6의 카드 실적·이벤트 실적 구분 안내와 중복됩니다. 날짜 차이의 의미와 비교 순서가 이미 제시되어 있어 새 해결 내용이 없습니다. / 3번은 /board/gc_information/7의 ‘상품권 취소 후 카드 실적 및 혜택 반영 확인하기’와 /board/general_notice/51의 ‘취소 신청 후 결제내역 처리 단계 확인’이 이미 다룬 질문입니다. 취소 접수, 완료, 카드 반영을 구분해 확인하는 절차가 같아 새로 추가되는 행동이 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41214179089",
@@ -21,15 +23,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T00:18:26.742811+09:00"
+      "attempt_started_at": "2026-11-01T00:18:26.742811+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 환불 상담 전 주문·사용 기록과 답변 내역을 체계적으로 구분하는 법",
+          "source_id": "refund-record",
+          "reader_problem": "상품권 환불 문의 전, 주문 정보, 사용 내역, 그리고 상담 답변 기록이 뒤섞여 정확한 상태 확인과 효율적 문의가 어렵다.",
+          "distinct_angle": "기존 단순 확인 안내에서 벗어나, 구체적 행동 순서와 각 기록별 분리 체계를 제시하여 혼란과 오해를 줄이는 방법을 다룬다.",
+          "reader_situation": "상품권 환불을 위해 주문 상태와 사용 내역, 이전 문의 답변을 정확히 분리해 확인 및 정리해야 하는 소비자.",
+          "deliverable": "주문·사용·답변 내역을 분리·관리하는 체크리스트와 기록 구분 표, 문의 전 명확한 상태점검 절차 안내문.",
+          "task_id": "",
+          "outline": [
+            "주문 기록과 사용 이력의 차이점 명확히 이해하기",
+            "과거 상담 답변과 현재 상태를 구분하는 기록 정리 방법 배우기",
+            "환불 전 각 기록을 체계적으로 분리해 확인하고 문의하기"
+          ]
+        },
+        {
+          "topic": "상품권 문의 시 바코드와 번호 노출 없이 사용 상태를 안전하게 설명하는 방법",
+          "source_id": "barcode-privacy",
+          "reader_problem": "상품권 사용 상태 문의 시 바코드나 번호를 노출하지 않고도 문제 상황을 명확하고 안전하게 전달하는 방법이 어렵다.",
+          "distinct_angle": "정보 노출 위험을 줄이는 기존 단순 비공개 안내를 넘어, 효과적 전달을 위한 구체적 표현 기법과 사례 중심 대화법을 소개한다.",
+          "reader_situation": "개인정보 및 상품권 바코드 노출을 최소화하면서 고객센터나 판매처에 사용 상태를 정확히 문의하려는 이용자.",
+          "deliverable": "바코드·번호 비공개 상태에서 상황을 설명하는 구체적 문장 예시와 보호수칙, 안전한 문의 대화 흐름 안내.",
+          "task_id": "",
+          "outline": [
+            "상품권 번호 등 민감정보 중요성과 노출 위험 이해하기",
+            "비공개 상태에서 사용하는 명확한 상황 설명 표현 익히기",
+            "안전하고 효율적인 문의를 위한 단계별 대화 전략 실천하기"
+          ]
+        },
+        {
+          "topic": "상품권 결제일과 카드 청구일 불일치 시 비교하는 핵심 기록과 확인 방법",
+          "source_id": "payment-date",
+          "reader_problem": "상품권 결제 시 지불 날짜와 카드 청구 내역 날짜가 달라서 어떤 기록을 기준으로 확인해야 하는지 혼란스러워 한다.",
+          "distinct_angle": "단순 날짜 비교에서 벗어나 결제·청구 시스템 차이 이해와 기록별 비교 순서 및 점검 포인트를 체계적으로 알려준다.",
+          "reader_situation": "상품권 결제 시 실제 결제일과 신용카드 청구일이 달라 정확한 결제 내역을 확인하고 싶은 고객.",
+          "deliverable": "결제일과 청구일 간 차이를 설명하는 가이드, 비교해야 할 주요 기록과 점검 절차 요약표.",
+          "task_id": "",
+          "outline": [
+            "결제일과 카드 청구일의 개념과 차이 점검하기",
+            "각 날짜 관련 기록별 진위 파악과 우선 확인 대상 이해하기",
+            "불일치 시 단계별 비교법과 고객센터 문의 준비 절차 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 결제 취소 후 카드 실적 반영 여부를 구체적으로 확인하는 절차",
+          "source_id": "cancel-performance",
+          "reader_problem": "상품권 결제를 취소했는데 카드 실적 반영 내역이 어떻게 바뀌었는지 어떤 기록을 보고 확인해야 하는지 구체적 방법을 몰라 혼란이다.",
+          "distinct_angle": "단순 취소 안내를 넘어 환불·취소 접수 단계별 실적 처리 흐름과 확인 가능한 기록, 점검 순서를 체계적으로 제시한다.",
+          "reader_situation": "상품권 결제 취소 후 카드 실적 반영 상태를 명확히 파악하고 환불 진행 상황을 체계적으로 점검하려는 이용자.",
+          "deliverable": "취소 후 카드 실적 변동 확인 절차와 단계별 기록 정리 체크리스트, 고객센터 문의용 확인 문구 및 절차 안내.",
+          "task_id": "",
+          "outline": [
+            "결제 취소 처리 단계와 카드 실적 영향 이해하기",
+            "취소 접수와 완료 시점별 실적 반영 기록 구분해 점검하기",
+            "실적 반영 여부를 확인하는 구체적 기록 비교 및 문의 절차 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22215,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 982,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23197
+        },
+        "estimated_usd": 0.0104572,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T15:18:37.148646+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9060,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 717,
+          "output_tokens_details": {
+            "reasoning_tokens": 265
+          },
+          "total_tokens": 9777
+        },
+        "estimated_usd": 0.0100215,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T15:18:41.853957+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T15:18:29.051957+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T15:18:37.530165+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0204787,
+    "estimated_total_usd": 0.0204787,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
