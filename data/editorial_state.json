@@ -224,10 +224,15 @@
       "board": "purchase",
       "topic": "신용카드 이용한 상품권 구매 한도 정확히 확인하는 실전 점검법",
       "run_id": "41227053549"
+    },
+    {
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처 구분과 역할 이해하기",
+      "run_id": "41227464297"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41227053549",
+  "last_board": "gc_information",
+  "last_run_id": "41227464297",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

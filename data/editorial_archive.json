@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T18:03:31.171949+00:00",
+  "generatedAt": "2026-10-31T18:03:58.888134+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2305,14 +2305,14 @@
       "runId": "41227464297",
       "dateKst": "2026-11-01",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처 구분과 역할 이해하기",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04179215,
+      "knownSubtotalUsd": 0.04179215
     },
     {
       "id": "post:purchase:2561",
@@ -10950,13 +10950,57 @@
     {
       "entryId": "run:41227464297",
       "dateKst": "2026-11-01",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-31T18:03:41.582840+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0108664,
+      "knownSubtotalUsd": 0.0108664,
+      "requests": 1,
+      "inputTokens": 22806,
+      "outputTokens": 1090
+    },
+    {
+      "entryId": "run:41227464297",
+      "dateKst": "2026-11-01",
+      "recordedAt": "2026-10-31T18:03:46.354861+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.01156125,
+      "knownSubtotalUsd": 0.01156125,
+      "requests": 1,
+      "inputTokens": 11305,
+      "outputTokens": 685
+    },
+    {
+      "entryId": "run:41227464297",
+      "dateKst": "2026-11-01",
+      "recordedAt": "2026-10-31T18:03:49.850534+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0019428,
+      "knownSubtotalUsd": 0.0019428,
+      "requests": 1,
+      "inputTokens": 3057,
+      "outputTokens": 450
+    },
+    {
+      "entryId": "run:41227464297",
+      "dateKst": "2026-11-01",
+      "recordedAt": "2026-10-31T18:03:53.655308+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0023692,
+      "knownSubtotalUsd": 0.0023692,
+      "requests": 1,
+      "inputTokens": 4399,
+      "outputTokens": 381
+    },
+    {
+      "entryId": "run:41227464297",
+      "dateKst": "2026-11-01",
+      "recordedAt": "2026-10-31T18:03:58.594194+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0150525,
+      "knownSubtotalUsd": 0.0150525,
+      "requests": 1,
+      "inputTokens": 17322,
+      "outputTokens": 458
     },
     {
       "entryId": "post:purchase:2561",

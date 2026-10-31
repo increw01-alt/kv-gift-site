@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T18:03:31.153195+00:00",
+  "generatedAt": "2026-10-31T18:03:58.856319+00:00",
   "dateKst": "2026-11-01",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 10,
-  "held": 8,
+  "held": 9,
   "errors": 0,
-  "knownSubtotalUsd": 0.3732716,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.41506375,
+  "estimatedTotalUsd": 0.41506375,
   "records": [
     {
       "runId": "41214179089",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "41227464297",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처 구분과 역할 이해하기",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T18:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04179215,
+      "knownSubtotalUsd": 0.04179215
     }
   ],
   "topicRetry": {
