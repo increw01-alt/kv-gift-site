@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T17:54:43.613997+00:00",
+  "generatedAt": "2026-10-31T17:55:47.496839+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2281,7 +2281,7 @@
       "board": "gc_tip",
       "topic": "상품권 여러 개를 맞춤 용도별로 쉽게 분류하고 관리하는 실전 방법",
       "url": "https://kv-gift.co.kr/board/gc_tip/43",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-10-31T17:55:47.469492+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1145165,
       "knownSubtotalUsd": 0.1145165
