@@ -1,17 +1,19 @@
 {
   "run_id": "41223840371",
   "date_kst": "2026-11-01",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T17:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 글이 이미 해결한 질문·독자 상황·해결 절차와 겹쳐, 새로 필요한 구체적 해결 내용이 충분히 드러나지 않습니다. 각 후보는 비교·확인·문의 준비라는 동일한 흐름을 반복하고 있어 기존 답을 그대로 적용해도 이번 질문이 해결됩니다. / 0번: /board/purchase/2569의 상품권 판매 이미지와 실제 상품명 불일치 점검법과 질문 구조가 겹칩니다. 판매 화면의 상충 안내를 비교해 문의 준비를 하는 흐름이 이미 해결된 내용이라 새 해결 단계가 부족합니다. / 1번: /board/free/474와 /board/sense/13에서 이미 다룬 선물 관련 배려 표현·부담 없는 질문·응답 반영 흐름과 거의 같습니다. 호칭과 공개 범위를 묻고 메시지에 반영하는 절차가 동일해 중복입니다. / 2번: /board/purchase/2565와 /board/general_notice/44의 모바일상품권 미도착·문자 미수신 확인 및 문의 준비 안내와 같습니다. 연락처·기기 점검과 발송 상태 확인, 문의용 정보 정리가 이미 해결된 질문입니다. / 3번: /board/purchase/2567, /board/gc_tip/37과 함께 본질적으로 주문 내역/기록을 대조해 최종 상태를 확인하는 절차를 반복합니다. 장바구니 옵션 변경 후 원래 의도와 최종 주문을 맞춰 보는 안내는 기존 답만으로 처리 가능합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41223840371",
@@ -21,15 +23,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T02:18:29.757934+09:00"
+      "attempt_started_at": "2026-11-01T02:18:29.757934+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "서로 다른 조건 충돌 시 상품권 구매 결정 보류 절차 안내",
+          "source_id": "",
+          "reader_problem": "상품권 구매 화면 내 상품명, 옵션, 안내 내용이 이중적 또는 충돌하여 최종 조건 판별이 어려워 구매 결정 보류가 필요한 경우",
+          "distinct_angle": "기존에는 단순 조건 안내 정리에 그친 반면, 이번 글은 충돌 조건을 시각적으로 비교하고 보류 의사를 효과적으로 판매처에 전달하는 구체적 절차를 제시한다",
+          "reader_situation": "상품권 구매 중 서로 상충하는 안내를 발견해 혼란스러운 독자가 명확한 비교표 작성과 보류 연락을 준비하는 상황",
+          "deliverable": "충돌 조건별 위치와 내용을 표로 정리한 비교표, 이를 바탕으로 작성한 판매처 문의 예문과 보류 의사 전달 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "충돌하는 안내 위치와 내용을 색인해 조건별로 분리 정리하기",
+            "비교 확인용 시각적 표 작성법 익히기",
+            "판매처에 한 번에 보류 의사를 명확히 전달하는 문의 문장 작성하기"
+          ]
+        },
+        {
+          "topic": "선물 메시지에 실명 대신 편안한 호칭 사용 문의법과 자연스러운 반영 가이드",
+          "source_id": "",
+          "reader_problem": "선물 메시지 작성 시 받는 사람 실명 대신 부담 없는 호칭을 요청하고, 공개 범위 선택까지 자연스럽게 묻는 방법과 그 결과 반영법이 어려운 경우",
+          "distinct_angle": "기존 글과 달리 부담 없이 묻는 질문 대화문과 실제 응답 반영 과정을 상세히 안내하여 맞춤 메시지 완성까지 설명",
+          "reader_situation": "선물 메시지 작성자가 상대에게 부담 주지 않고 호칭과 공개 범위를 묻고, 응답 결과를 메시지에 자연스레 반영하고자 하는 상황",
+          "deliverable": "호칭과 공개 범위 선택을 위한 예의 바른 질문 예시와 소통 팁, 응답 결과를 반영하는 문구 작성법",
+          "task_id": "",
+          "outline": [
+            "호칭 필요성과 배려하는 질문 태도 배우기",
+            "부담 없이 호칭과 공개 범위를 문의하는 대화 기법 익히기",
+            "응답 결과를 반영해 메시지를 자연스럽게 작성하는 방법 익히기"
+          ]
+        },
+        {
+          "topic": "모바일상품권 문자 미수신 문제의 체계적 점검과 문의 준비 매뉴얼",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 늦거나 아예 도착하지 않아 원인 점검과 고객센터 문의를 위한 정보를 사전에 체계적으로 준비하기 어려운 경우",
+          "distinct_angle": "기존 단순 점검 안내를 넘어서 다양한 미도착 유형별 점검 절차와 고객 문의 전 필요한 상세 정보 준비법을 구체적 매뉴얼 형태로 제공",
+          "reader_situation": "문자 미수신 문제를 겪으며 구매 환경, 증상별 점검과 고객센터 문의에 필요한 자료를 미리 꼼꼼히 준비하려는 이용자",
+          "deliverable": "구매 연락처 및 기기 환경 점검 리스트, 유형별 점검 절차, 고객센터 문의 시 확보해야 할 상세 정보 체크리스트 포함 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "구매 시 연락처와 모바일 환경 사전 점검 방법 익히기",
+            "미도착 증상별 유형 구분과 각 유형별 점검 절차 숙지하기",
+            "고객센터 문의 전 필요한 정보 미리 준비 및 정리하는 법 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 후 의도와 최종 주문 내역 비교 점검법",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니에서 금액, 수신자 등 옵션을 자주 변경했으나 최종 주문 내역이 원래 의도한 대상과 정확히 일치하는지 꼼꼼히 점검하는 방법을 몰라 실수를 우려하는 경우",
+          "distinct_angle": "기존에는 단순 변경 확인으로 그쳤지만, 이번 글은 변경 기록 체계화, 상세 변경 내용 단계별 확인, 최종 주문 전 일치 여부 대조 절차까지 구체적 행동 목록으로 제시",
+          "reader_situation": "옵션 변경이 잦은 구매자가 원래 선택한 대상과 현재 주문 내역 간 일치 여부를 체계적으로 확인하고 싶어 하는 상황",
+          "deliverable": "원본 선택 정보 기록법, 변경 내역 상세 확인 절차, 대상 및 옵션 대조 점검 목록으로 구성된 실무 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "장바구니 원래 선택한 상품권 대상과 옵션 체계적 기록하기",
+            "옵션 변경 발생 시 세밀한 변경 사항 확인 절차 익히기",
+            "최종 주문 전 원래 의도 대상과 현재 옵션 일치 여부 대조 점검하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22556,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1041,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23597
+        },
+        "estimated_usd": 0.010688,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T17:18:40.413370+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10889,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 723,
+          "output_tokens_details": {
+            "reasoning_tokens": 347
+          },
+          "total_tokens": 11612
+        },
+        "estimated_usd": 0.01142025,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T17:18:45.768719+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T17:18:32.588859+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T17:18:40.957784+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02210825,
+    "estimated_total_usd": 0.02210825,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
