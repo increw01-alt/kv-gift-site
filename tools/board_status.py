@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from editorial_settings import load_settings
 from board_archive import write_archive
+from board_retry import retry_state
 
 KST = dt.timezone(dt.timedelta(hours=9))
 
@@ -38,6 +39,7 @@ def build_status(root, day, now=None):
         'knownSubtotalUsd': round(sum(r['knownSubtotalUsd'] for r in records if r['knownSubtotalUsd'] is not None), 8),
         'estimatedTotalUsd': round(sum(costs), 8) if all(c is not None for c in costs) else None,
         'records': records,
+        'topicRetry': retry_state(root, day),
     }
 
 

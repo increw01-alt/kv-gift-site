@@ -70,6 +70,11 @@ def prior_titles(root=ROOT):
     state = root/'data/editorial_state.json'
     if state.exists():
         titles.extend(x['topic'] for x in read_json(state).get('held_topics', []))
+    # Planning holds may have no selected topic. Explicitly rejected candidates
+    # still must not return as fresh titles; unselected pending plans remain usable.
+    for path in (root/'data/editorial_runs').glob('*/*.json'):
+        context = (read_json(path).get('api_usage') or {}).get('context') or {}
+        titles.extend(p['topic'] for p in context.get('rejected_topic_plans', []))
     return titles
 
 
@@ -94,7 +99,7 @@ def related_titles(topic, root=ROOT, limit=18):
                   reverse=True)[:limit]
 
 
-def select_topic(requested, day, model, on_usage, root=ROOT, on_plan=None, review_model='gpt-5.4-mini'):
+def select_topic(requested, day, model, on_usage, root=ROOT, on_plan=None, review_model='gpt-5.4-mini', on_pool=None):
     if requested != 'auto' and requested not in PROFILES:
         raise ValueError('게시판 선택 오류')
     history = read_json(root/'data/editorial_history.json')
@@ -118,7 +123,7 @@ def select_topic(requested, day, model, on_usage, root=ROOT, on_plan=None, revie
         context = source_context(board, root)
         # Every non-news board receives the same independent planning gate, even without Drive signals.
         plan = choose_plan(board, profile, context, titles, day, root, model, review_model,
-                           ask_json, text_input, on_usage, lambda t: fresh_topic(t, titles))
+                           ask_json, text_input, on_usage, lambda t: fresh_topic(t, titles), on_pool=on_pool)
         if on_plan:
             on_plan(plan)
         return board, plan['topic'], None
