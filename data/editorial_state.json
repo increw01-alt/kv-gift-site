@@ -194,10 +194,15 @@
       "board": "sale",
       "topic": "상품권 판매 전 상태 확인과 증빙 자료 체계적 준비법",
       "run_id": "40997533761"
+    },
+    {
+      "board": "purchase",
+      "topic": "선물용 상품권 수신자 동명이인 확인과 개인정보 최소화 소통 절차",
+      "run_id": "41153391651"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "41152959275",
+  "last_board": "purchase",
+  "last_run_id": "41153391651",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

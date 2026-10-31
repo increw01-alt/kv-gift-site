@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T01:03:33.872511+00:00",
+  "generatedAt": "2026-10-31T01:04:40.595559+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2095,14 +2095,14 @@
       "runId": "41153391651",
       "dateKst": "2026-10-31",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "선물용 상품권 수신자 동명이인 확인과 개인정보 최소화 소통 절차",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1162143,
+      "knownSubtotalUsd": 0.1162143
     },
     {
       "id": "post:purchase:2561",
@@ -10179,13 +10179,79 @@
     {
       "entryId": "run:41153391651",
       "dateKst": "2026-10-31",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-10-31T01:03:45.136198+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.010884,
+      "knownSubtotalUsd": 0.010884,
+      "requests": 1,
+      "inputTokens": 22606,
+      "outputTokens": 1151
+    },
+    {
+      "entryId": "run:41153391651",
+      "dateKst": "2026-10-31",
+      "recordedAt": "2026-10-31T01:03:49.586405+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00983025,
+      "knownSubtotalUsd": 0.00983025,
+      "requests": 1,
+      "inputTokens": 9753,
+      "outputTokens": 559
+    },
+    {
+      "entryId": "run:41153391651",
+      "dateKst": "2026-10-31",
+      "recordedAt": "2026-10-31T01:03:53.478892+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0020056,
+      "knownSubtotalUsd": 0.0020056,
+      "requests": 1,
+      "inputTokens": 2990,
+      "outputTokens": 506
+    },
+    {
+      "entryId": "run:41153391651",
+      "dateKst": "2026-10-31",
+      "recordedAt": "2026-10-31T01:03:58.453713+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0033792,
+      "knownSubtotalUsd": 0.0033792,
+      "requests": 1,
+      "inputTokens": 6300,
+      "outputTokens": 537
+    },
+    {
+      "entryId": "run:41153391651",
+      "dateKst": "2026-10-31",
+      "recordedAt": "2026-10-31T01:04:03.530768+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.01406625,
+      "knownSubtotalUsd": 0.01406625,
+      "requests": 1,
+      "inputTokens": 15581,
+      "outputTokens": 529
+    },
+    {
+      "entryId": "run:41153391651",
+      "dateKst": "2026-10-31",
+      "recordedAt": "2026-10-31T01:04:33.263603+00:00",
+      "kind": "image",
+      "estimatedUsd": 0.066503,
+      "knownSubtotalUsd": 0.066503,
+      "requests": 1,
+      "inputTokens": 3571,
+      "outputTokens": 1372
+    },
+    {
+      "entryId": "run:41153391651",
+      "dateKst": "2026-10-31",
+      "recordedAt": "2026-10-31T01:04:40.316246+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.009546,
+      "knownSubtotalUsd": 0.009546,
+      "requests": 1,
+      "inputTokens": 8828,
+      "outputTokens": 650
     },
     {
       "entryId": "post:purchase:2561",

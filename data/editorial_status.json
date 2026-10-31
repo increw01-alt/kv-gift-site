@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T01:03:33.856347+00:00",
+  "generatedAt": "2026-10-31T01:04:40.579711+00:00",
   "dateKst": "2026-10-31",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 10,
-  "held": 9,
+  "held": 10,
   "errors": 0,
-  "knownSubtotalUsd": 0.09596265,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.21217695,
+  "estimatedTotalUsd": 0.21217695,
   "records": [
     {
       "runId": "41149407224",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "41153391651",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "선물용 상품권 수신자 동명이인 확인과 개인정보 최소화 소통 절차",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T01:02:58.440Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1162143,
+      "knownSubtotalUsd": 0.1162143
     }
   ]
 }
