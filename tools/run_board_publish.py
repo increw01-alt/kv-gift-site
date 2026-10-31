@@ -16,6 +16,8 @@ from board_originality import preflight, reject_copy
 from board_usage import UsageLog
 from board_status import write_status
 from editorial_settings import load_settings, target_at
+from board_retry import retry_guard
+from board_topic_pool import apply_pool_update
 
 DAILY_LIMIT = 10
 DAILY_ATTEMPT_LIMIT = 15
@@ -126,6 +128,9 @@ def record_outcome(root, day, run_id, board, topic, status, review, usage, url=N
     }
     write_json(ledger, outcome)
     files = [ledger.relative_to(root).as_posix()]
+    pool_file = apply_pool_update(root, usage.context.get('topic_pool_update'))
+    if pool_file:
+        files.append(pool_file)
     if board:
         path = root/'data/editorial_state.json'
         state = read_json(path) if path.exists() else {'held_topics': []}
@@ -176,6 +181,8 @@ def main(root=ROOT, command=None, now=None):
         summary(f"한국 시간 {instant:%Y-%m-%d %H:%M}: 현재 목표 {target}편 / 게시 {published}편 / 하루 목표 {settings['dailyTarget']}편")
         if published >= target:
             reason = '현재 시간대의 게시 목표를 충족했거나 운영 시간 밖입니다. 다음 점검에서 부족분을 확인합니다.'
+    if not reason and not preview:
+        reason = retry_guard(root, day, instant)
     if reason:
         summary(reason+'\n\nAPI를 호출하지 않았습니다.')
         if not preview:
@@ -189,7 +196,7 @@ def main(root=ROOT, command=None, now=None):
     usage = UsageLog(output/'board-api-usage.json',
                      {'mode': 'preview_only' if preview else 'automatic_publish',
                       'daily_limit': settings['dailyTarget'], 'daily_attempt_limit': DAILY_ATTEMPT_LIMIT,
-                      'follow_schedule': scheduled})
+                      'follow_schedule': scheduled, 'attempt_started_at': instant.isoformat()})
     if not preview:
         # 유료 요청 전에 시도를 main에 예약해 강제 종료나 연결 끊김도 횟수에 포함합니다.
         usage.save('in_progress')
@@ -200,13 +207,15 @@ def main(root=ROOT, command=None, now=None):
     report = {'approved': False, 'issues': []}
     status, api_status, error = 'held', 'failed', None
     try:
+        def remember_pool(value):
+            usage.context['topic_pool_update'] = value
         def remember_plan(value):
             selected = dict(value)
             usage.context['rejected_topic_plans'] = selected.pop('screened_out_plans', [])
             usage.context['topic_plan'] = selected
             write_json(preview_dir/'topic-plan.json', selected)
         board, topic, brief = select_topic(os.getenv('REQUESTED_BOARD') or 'auto', day, model, usage.record, root,
-                                          on_plan=remember_plan, review_model=review_model)
+                                          on_plan=remember_plan, review_model=review_model, on_pool=remember_pool)
         usage.context.update({'board': board, 'topic': topic})
         context = source_context(board, root)
         if context:

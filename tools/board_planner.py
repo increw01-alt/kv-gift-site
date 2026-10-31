@@ -5,6 +5,7 @@ import re
 from board_drafts import NoTopic, read_json
 from board_originality import existing_articles, similarity
 from board_angle_rules import ANGLE_RULES
+from board_topic_pool import pending_plans, pool_update, expansion_focus, REFILL_BELOW
 
 
 class PlanningHeld(NoTopic):
@@ -99,7 +100,7 @@ def validate_candidates(value, source_ids, fresh, task_ids=None):
     return result
 
 
-def choose_plan(board, profile, context, titles, day, root, model, review_model, ask, text_input, usage, fresh):
+def choose_plan(board, profile, context, titles, day, root, model, review_model, ask, text_input, usage, fresh, on_pool=None):
     material, existing = planning_material(root, context, board, day)
     review_feedback = material['recent_rejections']
     # Anchor the creative request to genuinely unused assignments. Long rejected
@@ -114,6 +115,16 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
                     'recent_rejections': [], 'reader_questions': None}
     allowed = {x['id'] for x in (material['reader_questions'] or {}).get('questions', [])}
     task_ids = {x['id'] for x in material['unused_reader_tasks']}
+    queued = [p for p in pending_plans(root, board)
+              if p.get('source_id', '') in allowed | {''} and p.get('task_id', '') in task_ids | {''}]
+    queued = [p for start in range(0, len(queued), 6)
+              for p in validate_candidates({'candidates': queued[start:start+6]}, allowed, fresh, task_ids)]
+    material['new_problem_directions'] = expansion_focus(root, board, day)
+    material['pending_topics_to_avoid_repeating'] = [p['topic'] for p in queued]
+    if not anchors:
+        # Long rejection narratives act as examples to imitate. Keep their meaning compact.
+        material['recent_rejections'] = [{'board': r['board'], 'issues': [i[:180] for i in r['issues'][:1]]}
+                                         for r in review_feedback[:6]]
     string = {'type': 'string'}
     item = {'type': 'object', 'additionalProperties': False,
             'required': ['topic', 'source_id', 'task_id', 'reader_problem', 'distinct_angle', 'outline',
@@ -128,7 +139,7 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
     if anchors:
         item['properties']['topic'] = {'type': 'string', 'enum': [t['question'] for t in anchors]}
         item['properties']['task_id'] = {'type': 'string', 'enum': [t['id'] for t in anchors]}
-    proposed = ask(
+    proposed = {'candidates': []} if len(queued) >= REFILL_BELOW else ask(
         '한국어 게시판 기획자다. 본문을 쓰기 전에 서로 다른 독자 문제를 해결할 후보 최대 네 개를 기획한다. '
         '각 후보는 제목(topic), 관심 자료 ID(source_id), 독자의 구체적 문제(reader_problem), '
         '기존 글과 실제로 다른 해결 내용(distinct_angle), 서로 다른 세 절의 목차(outline)로 구성한다. '
@@ -150,16 +161,26 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         'distinct_angle에는 이미 다룬 일반 안내와 이번 해결 방법이 어떻게 다른지 적는다. '
         '후보들이 동일한 문제의 말바꾸기가 되지 않게 서로 다른 상황과 결과물을 제시한다. 각 목차는 열 자 이상이다. '
         '차별점이 없다면 candidates=[]다. 제목은 숫자·URL·HTML 없는 열두 자 이상 백 자 이하다.'
+        '준비 과제를 모두 사용했다면 new_problem_directions를 참고해 새로운 질문을 보충한다. '
+        '방향은 사실 자료나 정답이 아니며, 새로운 상황과 실제 결과물을 직접 설계한다. '
+        'pending_topics_to_avoid_repeating의 후보는 이미 대기 중이므로 새 후보로 반복하지 않는다.'
         + '\n\n' + ANGLE_RULES,
         [text_input({'profile': profile, **material})],
         {'type': 'object', 'additionalProperties': False, 'required': ['candidates'],
          'properties': {'candidates': {'type': 'array', 'maxItems': 4, 'items': item}}},
         'distinct_reader_problems', 'topic', model, usage, 4200)
-    candidates = validate_candidates(proposed, allowed, fresh, task_ids)
+    new_candidates = validate_candidates(proposed, allowed, fresh, task_ids)
+    by_topic = {}
+    for plan in [*queued, *new_candidates]:
+        by_topic.setdefault(plan['topic'], plan)
+    combined = list(by_topic.values())
     if anchors:
         assignments = {task['id']: task for task in anchors}
-        candidates = [plan for plan in candidates if plan.get('task_id') in assignments
-                      and plan['topic'] == assignments[plan['task_id']]['question']]
+        combined = [plan for plan in combined if plan.get('task_id') in assignments
+                    and plan['topic'] == assignments[plan['task_id']]['question']]
+    candidates = combined[:4]
+    if on_pool:
+        on_pool(pool_update(board, combined))
     if not candidates:
         raise PlanningHeld(board, ['기존 글과 다른 독자 문제를 찾지 못했습니다. 본문·이미지를 생성하지 않습니다.'])
     comparisons, reference_articles = [], {}
@@ -217,7 +238,12 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         len(set(rejected)) != len(rejected) or report['selected_index'] in rejected):
         raise ValueError('주제 사전 검수 탈락 후보 인덱스 오류')
     if report['selected_index'] == -1:
+        if on_pool:
+            on_pool(pool_update(board, combined[4:]))
         raise PlanningHeld(board, [report['reason'], *report['rejections'][:6]], candidates)
     selected = candidates[report['selected_index']]
+    if on_pool:
+        consumed = {selected['topic'], *(candidates[i]['topic'] for i in rejected)}
+        on_pool(pool_update(board, [p for p in combined if p['topic'] not in consumed]))
     return {**selected, 'novelty_reason': report['reason'], 'screen_rejections': report['rejections'],
             'screened_out_plans': [candidates[i] for i in rejected]}
