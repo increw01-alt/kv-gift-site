@@ -265,12 +265,13 @@ class PublishingTests(unittest.TestCase):
                 api.assert_not_called()
 
     def test_schedule_target_uses_korean_time_and_evening_catchup(self):
+        legacy = {**DEFAULT, 'startTime':'09:17', 'endTime':'18:17', 'catchUpUntil':'23:00'}
         for hour,minute,target in [(9,2,0),(9,16,0),(9,17,1),(10,16,1),(10,17,2),
                                    (16,52,8),(18,17,10),(22,59,10),(23,0,0)]:
             with self.subTest(hour=hour,minute=minute):
                 moment=NOW.replace(hour=hour,minute=minute)
-                self.assertEqual(publish.scheduled_target(moment, DEFAULT),target)
-                self.assertEqual(publish.scheduled_target(moment.astimezone(dt.timezone.utc), DEFAULT),target)
+                self.assertEqual(publish.scheduled_target(moment, legacy),target)
+                self.assertEqual(publish.scheduled_target(moment.astimezone(dt.timezone.utc), legacy),target)
 
     def test_schedule_target_reads_saved_quantity_and_times(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -286,6 +287,7 @@ class PublishingTests(unittest.TestCase):
         for event,follow in [('schedule',False),('workflow_dispatch',True)]:
             with self.subTest(event=event),tempfile.TemporaryDirectory() as temp:
                 root=Path(temp)/'repo';fixture(root)
+                publish.write_json(root/'data/editorial_settings.json', {**DEFAULT,'startTime':'09:17','endTime':'18:17'})
                 publish.write_json(root/'data/editorial_history.json',[
                     {'publication_mode':'automatic','drafted_at':str(NOW.date())}])
                 with patch.dict(os.environ,{'GITHUB_ACTIONS':'true','GITHUB_REF':'refs/heads/main',

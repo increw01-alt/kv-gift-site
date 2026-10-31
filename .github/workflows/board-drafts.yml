@@ -2,9 +2,9 @@ name: 게시판 글·이미지 자동 게시
 run-name: 게시판 자동 게시 · ${{ github.event_name == 'schedule' && 'github_schedule' || inputs.scheduler_source || 'manual' }} · ${{ inputs.scheduled_at || github.run_number }}
 on:
   schedule:
-    # KST 09:02~22:47, 15분마다 부족분 점검. 게시 목표는 09:17~18:17 시간당 1편.
-    # 지연/보류분은 다음 실행에서 보충하며 하루 10편이면 API 호출 없이 종료합니다.
-    - cron: '2,17,32,47 0-13 * * *'
+    # 24시간 운영. Cloudflare가 5분마다 점검하고 GitHub는 매시 17분에 보완합니다.
+    # 목표 시각 전·목표 충족·보류 대기·15회 한도 도달 시 API를 호출하지 않습니다.
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       board:
