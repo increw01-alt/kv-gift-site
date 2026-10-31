@@ -214,10 +214,15 @@
       "board": "general_notice",
       "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
       "run_id": "41220615121"
+    },
+    {
+      "board": "sense",
+      "topic": "선물용 상품권 메세지에 호칭과 공개 범위 편안히 묻는 대화법",
+      "run_id": "41223438541"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "41220615121",
+  "last_board": "sense",
+  "last_run_id": "41223438541",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
