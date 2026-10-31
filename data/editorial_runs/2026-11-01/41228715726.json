@@ -1,17 +1,19 @@
 {
   "run_id": "41228715726",
   "date_kst": "2026-11-01",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T18:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문·독자 상황·절차와 겹쳐 새 해결 문제가 확인되지 않습니다. 0번과 2번은 /board/purchase/2564의 ‘모바일상품권 구매 전에 수신 연락처를 확인해야 하는 이유’와 같은 문제로, 동명이인 식별과 연락처 확인을 위해 사전 점검·문의·오배송 방지 절차를 반복합니다. 1번은 /board/gc_information/11의 ‘구매 영수증과 상품권 화면, 두 자료의 차이와 쓰임새’와 동일하게 영수증과 상품권 화면의 역할 구분과 보관·활용을 설명합니다. 기존 답만으로도 해결되므로 본문 생성 전 보류가 적절합니다. / 0번: /board/purchase/2564에서 이미 다룬 ‘모바일상품권 구매 전에 수신 연락처를 확인하는 방법’과 중복됩니다. 동명이인 구별, 최소 정보 수집, 안전한 전달 채널 분리도 결국 수신자 연락처와 식별 정보를 확인해 오배송을 막는 같은 질문입니다. / 1번: /board/gc_information/11의 ‘구매 영수증과 상품권 화면, 두 자료의 차이와 쓰임새’와 중복됩니다. 영수증의 증빙 역할과 상품권 화면의 사용 수단 역할, 보관·활용 구분이 이미 해결된 내용입니다. / 2번: /board/purchase/2564의 ‘모바일상품권 구매 전에 수신 연락처를 확인해야 하는 이유’와 사실상 같습니다. 개인정보 최소화 소통 전략을 붙였지만, 실제 해결 흐름은 수신 연락처 확인과 오배송 예방 절차를 반복하는 수준입니다."
+    ]
   },
   "api_usage": {
     "run_id": "41228715726",
@@ -21,15 +23,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T03:18:24.761968+09:00"
+      "attempt_started_at": "2026-11-01T03:18:24.761968+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "동명이인 수신자 상품권 선물 혼동 방지 절차",
+          "source_id": "",
+          "reader_problem": "상품권 선물 시 수신자가 동명이인인지 구분하기 어려워 오배송 위험이 있어 구체적 확인과 개인정보 보호 절차를 알고 싶음",
+          "distinct_angle": "기존 유사 답변과 달리 개인정보 최소화 원칙과 안전한 연락 수단 분리, 실무적 소통 전략을 중심으로 한 점검 체크리스트 및 실행법 제시",
+          "reader_situation": "동명이인 수신자의 상품권 선물을 준비하며 개인정보는 최소한으로 공개하되 정확한 수신자 식별과 안전한 전달 채널 분리를 원해 혼란스러운 구매자",
+          "deliverable": "동명이인 식별용 최소 정보 수집 목록과 비공개 연락처 확인 절차, 개인정보 보호 소통법을 포함한 실무 안내서",
+          "task_id": "",
+          "outline": [
+            "동명이인 구별을 위한 최소 필수 정보와 수집 방법 정리하기",
+            "개인정보 보호를 고려한 연락처 일부 비공개 확인 절차 수립하기",
+            "식별 정보를 바탕으로 오배송 예방과 전달 채널 분리 전략 수립 및 실행하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 후 영수증과 상품권 화면의 역할 및 활용법 차별적 안내",
+          "source_id": "",
+          "reader_problem": "상품권 구매 후 받은 영수증과 상품권 화면의 법적 의미와 사용 시기를 혼동하여 정확한 활용과 보관 방법을 명확히 알고 싶음",
+          "distinct_angle": "기존 설명과 달리 법적·기능적 차이를 시각 개념도와 상황별 활용 사례 비교표로 구체화, 보관·활용법을 단계별로 세분화해 실용적 이해 제공",
+          "reader_situation": "상품권 구매 후 영수증과 화면을 동시에 받았으나 각각이 언제 어떻게 쓰이고 보관하는지 명확히 구분하고 싶은 신규 고객 또는 재이용자",
+          "deliverable": "영수증과 상품권 화면의 법적·기능적 차이 시각 개념도, 특정 상황별 활용·보관 사례 비교 요약표, 단계별 실제 활용 및 보관 방법 안내 자료",
+          "task_id": "",
+          "outline": [
+            "구매 영수증의 법적 증빙 역할과 활용법 시각적으로 설명하기",
+            "상품권 화면의 사용 수단 기능과 확인 포인트 단계별 안내하기",
+            "각 상황에서 두 자료의 적절한 활용 사례 비교 및 맞춤 보관법 정리하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 전 동명이인 위험 대비 및 개인정보 최소화 소통 전략",
+          "source_id": "",
+          "reader_problem": "상품권 선물 시 수신자명이 동일한 동명이인으로 인한 의도치 않은 전달 오류 위험과 개인정보 노출 최소화 방법을 구체적으로 몰라 고민함",
+          "distinct_angle": "기존 답변에서 개인정보 최소 공개를 핵심 원칙으로 삼고, 비공개 연락처 확인 절차 설계, 안전한 의사소통 방식과 현실적인 커뮤니케이션 전략을 체계적으로 제안",
+          "reader_situation": "상품권 선물 구매 시 안전하게 수신자 신원을 구분하고, 개인정보 노출 위험은 효과적으로 낮추며 오배송 예방 절차를 만들고 싶은 구매자",
+          "deliverable": "동명이인 확인용 필수 정보 리스트, 비공개 연락처 일부 확인 절차, 개인정보 보호 원칙 중심의 안전한 전달 및 소통 절차 안내서",
+          "task_id": "",
+          "outline": [
+            "동명이인 식별 위한 최소 필수 정보 수집과 관리법 익히기",
+            "개인정보 보호를 위한 연락처 비공개 확인 절차 설계 및 실천",
+            "식별 정보 기반 오배송 예방과 안전한 전달 커뮤니케이션 전략 수립"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23043,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1121,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24164
+        },
+        "estimated_usd": 0.0110108,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:18:34.412742+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8948,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 563,
+          "output_tokens_details": {
+            "reasoning_tokens": 145
+          },
+          "total_tokens": 9511
+        },
+        "estimated_usd": 0.0092445,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T18:18:37.942083+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:18:26.946325+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T18:18:34.772063+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0202553,
+    "estimated_total_usd": 0.0202553,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
