@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T01:28:39.824243+00:00",
+  "generatedAt": "2026-10-31T07:24:20.813603+00:00",
   "dateKst": "2026-10-31",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -207,5 +207,10 @@
       "estimatedUsd": 0.00908,
       "knownSubtotalUsd": 0.00908
     }
-  ]
+  ],
+  "topicRetry": {
+    "consecutiveTopicHolds": 5,
+    "retryAfter": "2026-10-31T03:27:58.440000+00:00",
+    "cooldownMinutes": 120
+  }
 }
