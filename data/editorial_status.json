@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T18:13:33.782003+00:00",
+  "generatedAt": "2026-10-31T18:14:31.096415+00:00",
   "dateKst": "2026-11-01",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 12,
-  "held": 10,
+  "held": 11,
   "errors": 0,
-  "knownSubtotalUsd": 0.45734295,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5696842,
+  "estimatedTotalUsd": 0.5696842,
   "records": [
     {
       "runId": "41214179089",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "41228292204",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "문서 글자 크기와 읽는 순서로 안내 접근성 높이기",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T18:12:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11234125,
+      "knownSubtotalUsd": 0.11234125
     }
   ],
   "topicRetry": {

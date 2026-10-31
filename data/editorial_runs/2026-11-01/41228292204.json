@@ -1,17 +1,29 @@
 {
   "run_id": "41228292204",
   "date_kst": "2026-11-01",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "문서 글자 크기와 읽는 순서로 안내 접근성 높이기",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T18:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": false,
+      "logo_matches": true
+    },
+    "issues": [
+      "배너의 큰 제목이 ‘안내문, 쉽게 읽하게’로 보여 어색하고 오탈자처럼 읽힙니다."
+    ]
   },
   "api_usage": {
     "run_id": "41228292204",
@@ -21,15 +33,282 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T03:13:33.596597+09:00"
+      "attempt_started_at": "2026-11-01T03:13:33.596597+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "공용 기기에서 상품권 파일을 남기지 않는 안전한 이용 습관",
+          "source_id": "",
+          "reader_problem": "공용 컴퓨터나 스마트기기에서 상품권 관련 파일을 다운로드 후 삭제하지 않아 개인정보 노출과 오남용 위험에 노출되는 독자 문제.",
+          "distinct_angle": "기존 안내는 일반 개인정보 보호만 언급하지만, 이번 글은 상품권 파일 특성에 맞춘 삭제 절차, 확인 방법, 사후 점검과 습관화 방안을 구체적으로 배운다.",
+          "reader_situation": "공공장소, 회사, 도서관 등 여러 사람이 쓰는 기기를 이용해 상품권 결제나 영수증 파일을 받는 독자로, 보안 실천 방안을 체계적으로 알고 싶은 상황.",
+          "deliverable": "공용 기기 사용 후 상품권 관련 파일 삭제 절차, 재확인 방법, 파일 관리 책임감 형성을 위한 습관화 가이드.",
+          "task_id": "",
+          "outline": [
+            "공용 기기 특성 및 위험 요소 파악하기",
+            "상품권 파일 다운로드·저장 관리를 위한 안전 절차 익히기",
+            "사용 후 파일 삭제 및 이력 확인 습관화 방법 실천하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "문서 글자 크기와 읽는 순서로 안내 접근성 높이기",
+        "source_id": "",
+        "reader_problem": "이용 안내 문서가 글자 크기와 배치 방식 때문에 읽기 어려워 실제 정보 확인에 부담을 느끼는 독자가 많아 이용 불편을 겪음.",
+        "distinct_angle": "기존 안내는 내용 위주로만 구성하지만, 이번 글은 시각적 접근성과 읽기 흐름 개선에 집중해 눈의 피로를 줄이고 이해도를 높이는 실무적 조언 제공.",
+        "reader_situation": "이용 안내를 처음 접하거나 글자 크기 때문에 안내를 제대로 파악하지 못해 어려움을 겪는 독자, 특히 노안이나 시각적 어려움 있는 이용자를 돕고자 하는 사람.",
+        "deliverable": "안내문서에서 적절한 글자 크기와 읽는 순서 기준, 실제로 적용할 수 있는 검사 방법과 개선 체크리스트.",
+        "task_id": "",
+        "outline": [
+          "필수 안내 내용별 적절한 글자 크기 정하기",
+          "독자 흐름에 맞는 읽는 순서 설계와 주요 정보 강조법",
+          "글자 크기·배치 점검 체크리스트 작성과 실전 적용하기"
+        ],
+        "novelty_reason": "0번은 기존 글들이 다룬 ‘문의 시 개인정보를 가리고, 수정 내용이나 오류 화면을 구분해 전달하는 방법’과 달리, 이용 안내 문서 자체를 더 읽기 쉽게 만드는 문제를 다룹니다. 즉 기존 글의 가장 가까운 주제는 문의 준비와 정보보호였고, 이번 글은 글자 크기·배치·읽는 순서를 조정해 시각적 접근성을 높이는 구체적 개선 방법과 점검 기준을 추가합니다. 기존 답만으로는 ‘안내문이 눈에 피로하고 읽기 어려울 때 어떻게 구성할지’가 해결되지 않으므로 새 주제로 볼 수 있습니다.",
+        "screen_rejections": [
+          "1번은 기존 공개 글 /board/general_notice/54에서 이미 해결한 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 삭제해 개인정보 노출을 막는 방법’과 질문, 상황, 해결 절차가 같습니다. 후보도 공용 기기 사용 후 파일 삭제와 재확인이라는 동일한 행동을 반복하므로 새 해결 문제가 없습니다."
+        ]
+      },
+      "board": "general_notice",
+      "topic": "문서 글자 크기와 읽는 순서로 안내 접근성 높이기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-31T12:29:59Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "안내 문서의 글자 크기와 읽는 순서를 어떻게 설계해야 이용자가 더 쉽게 이해하는지 알고 싶은 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23119,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23642
+        },
+        "estimated_usd": 0.0100844,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:13:40.105255+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7131,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 366,
+          "output_tokens_details": {
+            "reasoning_tokens": 105
+          },
+          "total_tokens": 7497
+        },
+        "estimated_usd": 0.00699525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T18:13:43.252689+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2860,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 549,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3409
+        },
+        "estimated_usd": 0.0020224,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:13:46.974458+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8860,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 507,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9367
+        },
+        "estimated_usd": 0.0043552,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:13:52.255638+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16799,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 336,
+          "output_tokens_details": {
+            "reasoning_tokens": 154
+          },
+          "total_tokens": 17135
+        },
+        "estimated_usd": 0.01411125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T18:13:57.093470+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3561,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1065
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4933
+        },
+        "estimated_usd": 0.066453,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:14:25.752691+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9335,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 293,
+          "output_tokens_details": {
+            "reasoning_tokens": 198
+          },
+          "total_tokens": 9628
+        },
+        "estimated_usd": 0.00831975,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T18:14:30.881535+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:13:35.909584+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T18:13:40.406048+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:13:43.255482+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:13:48.576347+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T18:13:54.531760+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-10-31T18:13:57.115163+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T18:14:27.195885+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11234125,
+    "estimated_total_usd": 0.11234125,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -234,10 +234,15 @@
       "board": "sale",
       "topic": "상품권 매입 문의 전 효율적인 상태 점검과 증빙 자료 준비 방법",
       "run_id": "41227881430"
+    },
+    {
+      "board": "general_notice",
+      "topic": "문서 글자 크기와 읽는 순서로 안내 접근성 높이기",
+      "run_id": "41228292204"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "41227881430",
+  "last_board": "general_notice",
+  "last_run_id": "41228292204",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
