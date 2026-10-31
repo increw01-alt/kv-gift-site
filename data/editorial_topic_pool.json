@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "boards": {
-    "gc_tip": []
+    "gc_tip": [],
+    "purchase": []
   }
 }

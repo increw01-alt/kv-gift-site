@@ -199,10 +199,15 @@
       "board": "purchase",
       "topic": "선물용 상품권 수신자 동명이인 확인과 개인정보 최소화 소통 절차",
       "run_id": "41153391651"
+    },
+    {
+      "board": "purchase",
+      "topic": "결제자 정보와 주문자 정보 불일치 시 정보 공개 범위 및 문의 방법",
+      "run_id": "41216955959"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "41214179089",
+  "last_board": "purchase",
+  "last_run_id": "41216955959",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -378,6 +383,30 @@
       "topic": "상품권 결제 취소 후 카드 실적 반영 여부를 구체적으로 확인하는 절차",
       "date_kst": "2026-11-01",
       "run_id": "41214179089",
+      "status": "held"
+    },
+    {
+      "source_id": "payment-name",
+      "board": "purchase",
+      "topic": "결제자 정보와 주문자 정보 불일치 시 정보 공개 범위 및 문의 방법",
+      "date_kst": "2026-11-01",
+      "run_id": "41216955959",
+      "status": "held"
+    },
+    {
+      "source_id": "culture-product",
+      "board": "purchase",
+      "topic": "컬쳐랜드 상품권, 상품명과 판매사 정보 구분법 안내",
+      "date_kst": "2026-11-01",
+      "run_id": "41216955959",
+      "status": "held"
+    },
+    {
+      "source_id": "installment-record",
+      "board": "purchase",
+      "topic": "상품권 결제 전 할부 선택과 카드 청구 내역 별도 확인법 안내",
+      "date_kst": "2026-11-01",
+      "run_id": "41216955959",
       "status": "held"
     }
   ]
