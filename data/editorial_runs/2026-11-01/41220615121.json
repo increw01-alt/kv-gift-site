@@ -1,17 +1,19 @@
 {
   "run_id": "41220615121",
   "date_kst": "2026-11-01",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T16:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글과 독자가 처한 상황이 같습니다. 받은 상품권 문자 메시지의 출처를 확인하고 링크를 열기 전에 안전성을 점검하는 절차를 설명하므로 핵심 질문과 해결 방법이 중복됩니다. / 본문의 핵심 단계도 기존 글과 같습니다. 발신 번호 확인, 링크 도메인 대조, 의심 시 클릭 중단과 공식 문의라는 흐름이 이미 다른 글에서 다뤄진 내용과 동일합니다. / 제목만 다르고 본문도 같은 문제를 해결합니다. 상품권 관련 의심 메시지나 모바일상품권 문자 안전 확인 글과 비교해도 새 행동이나 새로운 판단 도구가 충분히 보이지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41220615121",
@@ -21,15 +23,201 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T01:38:29.317218+09:00"
+      "attempt_started_at": "2026-11-01T01:38:29.317218+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
+        "source_id": "phishing-message",
+        "reader_problem": "상품권 관련 메시지에 포함된 링크를 열기 전, 문자의 출처와 발신자가 진짜인지 안전하게 다시 확인하지 못해 보안 위험에 노출되는 문제",
+        "distinct_angle": "일반적인 피싱 예방책과 달리, 실제 메시지 내 발신 경로와 문자 형식을 점검하는 구체적인 방법과 단계별 확인 절차를 제시한다",
+        "reader_situation": "받은 상품권 메시지에서 링크를 클릭하기 전에, 발신 번호와 문자 내용의 신뢰성을 명확히 가늠하고자 하는 이용자",
+        "deliverable": "문자 내 발신 번호, 보낸 사람 이름, 링크 도메인 등을 검증하는 상세 행동 목록과 발신 경로 재확인 체크리스트",
+        "task_id": "",
+        "outline": [
+          "문자 메시지 내 발신 번호와 명칭의 진위를 확인하는 방법 익히기",
+          "링크 주소 구성과 도메인 안전성 점검 단계별 행동 이해하기",
+          "확인 결과 의심스러운 경우 취할 행동과 신고 절차 정리하기"
+        ],
+        "novelty_reason": "선택 후보는 상품권 관련 메시지의 링크를 클릭하기 전에 발신 번호, 보낸 사람 이름, 링크 도메인을 직접 대조해 진위를 확인하는 절차를 다룹니다. 기존 공개 글들은 상품권 판매 전 오류 방지, 만료일 알림 정리, 중요한 메시지 분류처럼 각각 다른 문제를 해결하고 있어, 이번 후보가 추가하는 ‘문자 발신 경로 확인→의심 링크 식별→의심 시 신고/중단’ 단계는 기존 답만으로 처리되지 않습니다. 가장 가까운 기존 글도 메시지를 정리하는 방법일 뿐, 링크 클릭 전 안전성 검증이나 발신자 진위 판단을 해결하지는 못합니다.",
+        "screen_rejections": []
+      },
+      "board": "general_notice",
+      "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-31T12:29:59Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 21940,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 264,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 22204
+        },
+        "estimated_usd": 0.0091984,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T16:38:35.159451+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 4896,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 309,
+          "output_tokens_details": {
+            "reasoning_tokens": 128
+          },
+          "total_tokens": 5205
+        },
+        "estimated_usd": 0.0050625,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T16:38:37.655723+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2825,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 460,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3285
+        },
+        "estimated_usd": 0.001866,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T16:38:40.947952+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6299,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 480,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6779
+        },
+        "estimated_usd": 0.0032876,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T16:38:45.521267+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17960,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 498,
+          "output_tokens_details": {
+            "reasoning_tokens": 143
+          },
+          "total_tokens": 18458
+        },
+        "estimated_usd": 0.015711,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T16:38:50.252858+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T16:38:31.473164+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T16:38:35.288330+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T16:38:37.657863+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T16:38:41.984594+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T16:38:47.178785+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0351255,
+    "estimated_total_usd": 0.0351255,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

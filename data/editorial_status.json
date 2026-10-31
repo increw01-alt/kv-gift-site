@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T16:38:29.508281+00:00",
+  "generatedAt": "2026-10-31T16:38:50.441869+00:00",
   "dateKst": "2026-11-01",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 5,
-  "held": 4,
+  "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.1216415,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.156767,
+  "estimatedTotalUsd": 0.156767,
   "records": [
     {
       "runId": "41214179089",
@@ -66,21 +66,21 @@
     },
     {
       "runId": "41220615121",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T16:37:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0351255,
+      "knownSubtotalUsd": 0.0351255
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-01T02:08:29.317218+09:00",
+    "cooldownMinutes": 30
   }
 }

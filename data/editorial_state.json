@@ -209,10 +209,15 @@
       "board": "sale",
       "topic": "상품권 장바구니 옵션 변경 후 의도한 대상과 일치 여부 꼼꼼 확인법",
       "run_id": "41220210266"
+    },
+    {
+      "board": "general_notice",
+      "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
+      "run_id": "41220615121"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "41220210266",
+  "last_board": "general_notice",
+  "last_run_id": "41220615121",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -420,6 +425,14 @@
       "topic": "매입 상담서 제시 금액과 공제 내역 비교 기록법",
       "date_kst": "2026-11-01",
       "run_id": "41217344282",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "general_notice",
+      "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
+      "date_kst": "2026-11-01",
+      "run_id": "41220615121",
       "status": "held"
     }
   ]
