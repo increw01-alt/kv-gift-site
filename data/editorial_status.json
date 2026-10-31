@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T16:33:25.204756+00:00",
+  "generatedAt": "2026-10-31T16:33:53.093270+00:00",
   "dateKst": "2026-11-01",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 4,
-  "held": 3,
+  "held": 4,
   "errors": 0,
-  "knownSubtotalUsd": 0.0785574,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1216415,
+  "estimatedTotalUsd": 0.1216415,
   "records": [
     {
       "runId": "41214179089",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "41220210266",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "상품권 장바구니 옵션 변경 후 의도한 대상과 일치 여부 꼼꼼 확인법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T16:32:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0430841,
+      "knownSubtotalUsd": 0.0430841
     }
   ],
   "topicRetry": {

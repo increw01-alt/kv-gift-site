@@ -3,6 +3,7 @@
   "boards": {
     "gc_tip": [],
     "purchase": [],
-    "gc_information": []
+    "gc_information": [],
+    "sale": []
   }
 }
