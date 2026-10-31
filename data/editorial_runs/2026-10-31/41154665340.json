@@ -1,17 +1,19 @@
 {
   "run_id": "41154665340",
   "date_kst": "2026-10-31",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T01:17:58.440Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글이 이미 해결한 질문·독자 상황·해결 절차와 겹쳐, 이번에 새로 필요한 해결 내용이 충분히 드러나지 않습니다. 기존 답만으로도 처리 가능한 수준이라 본문 생성 전 보류가 적절합니다. / 0번은 /board/general_notice/44의 ‘모바일상품권 문자가 안 왔을 때 발송 상태를 먼저 확인하고 재발송 여부를 문의하는 방법’과 /board/purchase/2565의 ‘도착하지 않은 모바일상품권 문의 전 주문 정보와 연락처를 준비하는 방법’을 그대로 반복합니다. 연락처·기기 점검과 문의 준비 흐름이 이미 해결된 질문입니다. / 1번은 /board/gc_information/11의 ‘구매 영수증과 상품권 화면의 차이와 쓰임새’와 /board/gc_information/10의 ‘전달 메시지와 계정 등록의 개념 차이’를 이미 다룬 내용과 겹칩니다. 역할 구분과 보관·활용 정리만 반복되어 새 해결 문제가 없습니다. / 2번은 /board/purchase/2567의 ‘상품권을 여러 장 구입할 때 주문 내역을 어떻게 정리하는지’와 /board/general_notice/54의 ‘공용 기기에서 확인 후 로그아웃·다운로드 파일 점검’처럼 주문 전후 확인 항목을 다시 묶은 수준입니다. 장바구니 변경 후 최종 확인이라는 시점만 다를 뿐, 동일한 대조·기록 절차를 반복합니다. / 3번은 /board/sense/17의 ‘선물 답장에 따른 톤과 말투 차별화하기’와 /board/sense/7의 ‘중요한 메시지를 정리하는 방법’과 겹칩니다. 친밀/격식 톤 구분, 호칭, 마무리 표현 선택까지 기존 글이 이미 해결한 질문입니다."
+    ]
   },
   "api_usage": {
     "run_id": "41154665340",
@@ -20,15 +22,137 @@
       "mode": "automatic_publish",
       "daily_limit": 10,
       "daily_attempt_limit": 15,
-      "follow_schedule": true
+      "follow_schedule": true,
+      "rejected_topic_plans": [
+        {
+          "topic": "모바일상품권 문자 미수신 문제, 사전 점검과 문의 준비 방법",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 늦게 오거나 도착하지 않아 구매 환경 확인부터 고객센터 문의 준비까지 구체적 대응법이 필요하다.",
+          "distinct_angle": "기존 글은 일반 안내 수준이나, 본 글은 구매 시 연락처·기기 점검, 문제 유형별 단계별 점검법, 문의 시 상세 정보 준비를 체계적으로 제시해 즉각 확인과 상담 효율을 높인다.",
+          "reader_situation": "모바일상품권 구매 후 문자가 늦게 도착하거나 미도착 문제를 경험해 신속한 문제 확인과 고객센터 문의를 준비하는 이용자.",
+          "deliverable": "구매 연락처 및 모바일 환경 점검 리스트, 문자 미도착 유형별 점검 순서와 조치 방법, 문의 시 요구 정보 목록 등 실용적 점검과 문의 준비 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "구매 시 입력 연락처 및 모바일 환경을 꼼꼼히 점검하기",
+            "문자 미도착 증상별 차이 알아서 단계별 점검과 조치 적용하기",
+            "고객센터 문의 전 필요한 상세 정보 미리 준비하고 정리하기"
+          ]
+        },
+        {
+          "topic": "상품권 영수증과 상품권 화면의 역할과 활용법 한눈에 비교",
+          "source_id": "",
+          "reader_problem": "상품권 구매 후 받은 영수증과 상품권 화면의 각각 역할과 언제 어떻게 활용·보관해야 할지 혼란스러워 정확한 관리 지침이 필요하다.",
+          "distinct_angle": "기존 안내는 기능 구분만 있으나, 본 글은 법적 증빙과 결제 수단 기능을 시각화한 개념도와 상황별 활용 예시, 보관법을 체계적으로 비교 정리한다.",
+          "reader_situation": "상품권을 구매해 영수증과 상품권 화면을 받았으나 각각의 용도와 보관법을 명확히 알고 싶어 정확한 활용 지침을 구하는 신규 또는 재이용 고객.",
+          "deliverable": "영수증과 상품권 화면의 법적·기능적 차이를 시각적으로 보여 주는 개념도, 상황별 활용과 보관법 비교 요약표, 구체적 이용 방법 안내.",
+          "task_id": "",
+          "outline": [
+            "구매 영수증의 법적 증빙 의미와 활용 방법 설명하기",
+            "상품권 화면을 실제 결제 수단으로 사용하는 기능과 확인 사항 안내하기",
+            "상황별 각 자료 활용법과 적절한 보관 방법을 비교해 정리하기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 후 최종 주문 내용 꼼꼼 확인법",
+          "source_id": "",
+          "reader_problem": "장바구니에서 상품권 금액, 수신자 등 옵션을 자주 바꾸다 보니, 최종 주문 내역이 원래 의도한 대상을 정확히 반영하는지 점검 절차를 몰라 주문 실수를 걱정한다.",
+          "distinct_angle": "기존 글들은 단순 확인 안내에 그치지만, 본 글은 변경 내역 기록법, 상세 확인 절차, 의도 대상과 현재 옵션 대조 점검 방법을 구체적 행동 목록과 함께 실용적으로 제시한다.",
+          "reader_situation": "상품권 장바구니 내 옵션 변경이 잦아 최종 주문 전 의도한 옵션 및 수신자 일치 여부를 정확히 점검하고 싶은 구매자.",
+          "deliverable": "원래 선택 정보 기록법, 변경 사항 상세 확인 절차, 최종 주문 전 의도와 현재 옵션 대조 점검 목록으로 구성된 실용 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "원래 장바구니에 담긴 상품권 대상과 옵션 체계적으로 기록하기",
+            "옵션 변경 시 변경 사항을 세밀히 확인하는 절차 익히기",
+            "최종 주문 전 의도 대상과 현재 옵션이 일치하는지 대조 점검하기"
+          ]
+        },
+        {
+          "topic": "같은 감사 메시지라도 친밀한 사이와 격식 있는 사이 톤 차별화 가이드",
+          "source_id": "",
+          "reader_problem": "감사 메시지를 쓸 때 친한 사이와 공식적인 사이의 톤과 말투, 호칭을 어떻게 다르게 써야 할지 혼란스럽다.",
+          "distinct_angle": "기존 안내는 일반 문체 예시 중심이나, 이 글은 관계별 호칭 선정 기준과 문장 구성법, 문장 길이·어투의 차이점, 마무리 표현 선택법을 체계적으로 비교해 실용적 팁을 준다.",
+          "reader_situation": "다양한 관계에 맞춘 감사 메시지를 자연스럽고 적절한 톤으로 전달하고 싶은 이용자.",
+          "deliverable": "친밀한 메시지와 격식 있는 메시지 예시 비교, 관계별 톤과 문체 선택 기준과 마무리 표현 고르는 방법 및 예시.",
+          "task_id": "",
+          "outline": [
+            "관계에 맞는 호칭 선택 기준 소개하기",
+            "문장 길이와 어투 차이 및 특징 비교하기",
+            "적절한 마무리 표현 고르는 방법과 예시 제공하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22329,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1095,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23424
+        },
+        "estimated_usd": 0.0106836,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T01:18:45.394227+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10047,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 549,
+          "output_tokens_details": {
+            "reasoning_tokens": 93
+          },
+          "total_tokens": 10596
+        },
+        "estimated_usd": 0.01000575,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T01:18:49.754645+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T01:18:37.669037+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T01:18:46.058169+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02068935,
+    "estimated_total_usd": 0.02068935,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
