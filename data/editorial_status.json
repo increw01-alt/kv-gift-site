@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T17:53:34.371938+00:00",
+  "generatedAt": "2026-10-31T17:54:43.591355+00:00",
   "dateKst": "2026-11-01",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 8,
   "held": 7,
   "errors": 0,
-  "knownSubtotalUsd": 0.22108075,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.33559725,
+  "estimatedTotalUsd": 0.33559725,
   "records": [
     {
       "runId": "41214179089",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "41226666644",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "상품권 여러 개를 맞춤 용도별로 쉽게 분류하고 관리하는 실전 방법",
+      "url": "https://kv-gift.co.kr/board/gc_tip/43",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T17:52:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1145165,
+      "knownSubtotalUsd": 0.1145165
     }
   ],
   "topicRetry": {

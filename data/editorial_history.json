@@ -1097,5 +1097,18 @@
     "publication_mode": "automatic",
     "run_id": "41014728895",
     "usage_file": "data/editorial_runs/2026-10-30/41014728895.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 43,
+    "topic": "상품권 여러 개를 맞춤 용도별로 쉽게 분류하고 관리하는 실전 방법",
+    "drafted_at": "2026-11-01",
+    "automation": true,
+    "search_intent": "여러 장의 상품권을 용도와 보관 위치까지 함께 나눠 이름 붙이고 오래 헷갈리지 않게 관리하는 방법을 찾는 질문",
+    "image_scene": "책상 위에 상품권 봉투 여러 장과 색깔별 라벨 스티커, 작은 정리함이 놓여 있고 한 사람이 각 봉투에 ‘외식용’, ‘선물용’ 같은 메모를 붙인 뒤 보관 칸에 나눠 넣으며 정리하는 장면",
+    "image_alt": "책상 위에서 상품권 봉투에 용도 라벨을 붙이고 보관함 칸별로 나눠 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41226666644",
+    "usage_file": "data/editorial_runs/2026-11-01/41226666644.json"
   }
 ]
