@@ -219,10 +219,15 @@
       "board": "sense",
       "topic": "선물용 상품권 메세지에 호칭과 공개 범위 편안히 묻는 대화법",
       "run_id": "41223438541"
+    },
+    {
+      "board": "purchase",
+      "topic": "신용카드 이용한 상품권 구매 한도 정확히 확인하는 실전 점검법",
+      "run_id": "41227053549"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "41226666644",
+  "last_board": "purchase",
+  "last_run_id": "41227053549",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -438,6 +443,14 @@
       "topic": "상품권 관련 메시지 링크 열기 전 안전하게 발신 경로 확인하는 방법",
       "date_kst": "2026-11-01",
       "run_id": "41220615121",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-limit",
+      "board": "purchase",
+      "topic": "신용카드 이용한 상품권 구매 한도 정확히 확인하는 실전 점검법",
+      "date_kst": "2026-11-01",
+      "run_id": "41227053549",
       "status": "held"
     }
   ]
