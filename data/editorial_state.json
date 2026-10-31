@@ -206,8 +206,8 @@
       "run_id": "41216955959"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41216955959",
+  "last_board": "gc_information",
+  "last_run_id": "41217344282",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -407,6 +407,14 @@
       "topic": "상품권 결제 전 할부 선택과 카드 청구 내역 별도 확인법 안내",
       "date_kst": "2026-11-01",
       "run_id": "41216955959",
+      "status": "held"
+    },
+    {
+      "source_id": "sale-fee",
+      "board": "gc_information",
+      "topic": "매입 상담서 제시 금액과 공제 내역 비교 기록법",
+      "date_kst": "2026-11-01",
+      "run_id": "41217344282",
       "status": "held"
     }
   ]

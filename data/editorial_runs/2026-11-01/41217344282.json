@@ -1,17 +1,19 @@
 {
   "run_id": "41217344282",
   "date_kst": "2026-11-01",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T15:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 0번은 기존 공개 글 /board/sale/3691의 ‘매입 상담 시 제시 금액과 공제내역 따로 정리요령’과 같은 질문, 같은 독자 상황(상품권 매입 상담을 앞둔 판매자), 같은 해결 절차(제시 금액과 공제 항목을 분리 기록하고 표로 비교)입니다. 기존 글이 이미 상담 시점부터 내역을 따로 적고 비교표로 정리하는 방법을 해결했고, 후보도 그 흐름을 그대로 반복합니다. 새로 추가된 구체적 판단 문제나 기존 답으로는 처리되지 않는 예시가 확인되지 않아 중복으로 보류합니다. / 0번: /board/sale/3691에서 이미 해결한 ‘매입 상담 시 제시 금액과 공제 항목을 구분해 기록하고 비교하는 방법’과 동일합니다. 후보의 ‘상담 시점부터 내역 대조용 표 작성’과 ‘조건 분류법’은 기존 글의 표 정리, 항목 분리 기록, 상담 후 비교 메모를 그대로 반복합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41217344282",
@@ -21,15 +23,99 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T00:58:27.571814+09:00"
+      "attempt_started_at": "2026-11-01T00:58:27.571814+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "매입 상담서 제시 금액과 공제 내역 비교 기록법",
+          "source_id": "sale-fee",
+          "reader_problem": "매입 상담 시 받은 제시 금액과 공제 항목을 따로 정리하는 방법을 몰라 혼란스러운 이용자 문제",
+          "distinct_angle": "구체적으로 상담 시점부터 내역 대조용 표 작성과 조건 분류법까지 매입 상담 직전에 필요한 구체적 기록 절차를 안내한다.",
+          "reader_situation": "상품권 매입을 상담받으면서 답변 속 조건과 공제 내역을 정확히 비교하고 판단하려는 판매자",
+          "deliverable": "매입 상담에서 제시받은 금액과 공제 항목을 체계적으로 기록하고 쉽게 비교할 수 있는 표와 세부 점검 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "매입 상담 시 제시 금액과 공제 조건 분리하는 기록법 익히기",
+            "공제 내역별 금액 산정과 조건 별도 표기 방법 배우기",
+            "상담 이후 판단을 위한 비교표 작성과 점검 목록 실습하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 21581,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 461,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 22042
+        },
+        "estimated_usd": 0.00937,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T15:58:33.055690+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 4482,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 327,
+          "output_tokens_details": {
+            "reasoning_tokens": 55
+          },
+          "total_tokens": 4809
+        },
+        "estimated_usd": 0.004833,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T15:58:35.691278+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T15:58:29.669197+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T15:58:33.249948+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.014203,
+    "estimated_total_usd": 0.014203,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "boards": {
     "gc_tip": [],
-    "purchase": []
+    "purchase": [],
+    "gc_information": []
   }
 }
