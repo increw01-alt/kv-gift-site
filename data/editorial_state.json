@@ -239,10 +239,15 @@
       "board": "general_notice",
       "topic": "문서 글자 크기와 읽는 순서로 안내 접근성 높이기",
       "run_id": "41228292204"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 잔액 관리와 추가 결제액 계산법으로 현명한 이용법 정리",
+      "run_id": "41236644103"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "41231543853",
+  "last_board": "gc_tip",
+  "last_run_id": "41236644103",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T19:58:38.846245+00:00",
+  "generatedAt": "2026-10-31T19:59:07.747945+00:00",
   "dateKst": "2026-11-01",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 15,
-  "held": 13,
+  "held": 14,
   "errors": 0,
-  "knownSubtotalUsd": 0.5991599,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.63874615,
+  "estimatedTotalUsd": 0.63874615,
   "records": [
     {
       "runId": "41214179089",
@@ -196,16 +196,16 @@
     },
     {
       "runId": "41236644103",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "상품권 잔액 관리와 추가 결제액 계산법으로 현명한 이용법 정리",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-10-31T19:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.03958625,
+      "knownSubtotalUsd": 0.03958625
     }
   ],
   "topicRetry": {
