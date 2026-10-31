@@ -1,17 +1,19 @@
 {
   "run_id": "41227881430",
   "date_kst": "2026-11-01",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "상품권 매입 문의 전 효율적인 상태 점검과 증빙 자료 준비 방법",
+  "status": "held",
   "url": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-10-31T18:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글들에서 이미 다룬 상품권 상태 확인, 증빙 자료 준비, 개인정보 최소화 전달 절차를 거의 같은 순서와 목표로 반복하고 있습니다. / 독자가 해결하려는 질문이 '매입 문의 전 무엇을 점검하고 무엇을 준비할지'로 기존의 상담 준비 글과 같아, 새로운 해결 문제나 다른 절차가 충분히 드러나지 않습니다. / 증빙 자료를 유형별로 분류하고 비식별화한다는 설명이 추가되었지만, 본문의 실제 행동은 상태 확인→자료 준비→개인정보 가리기라는 기존 답을 그대로 확장한 수준이라 새 방향으로 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41227881430",
@@ -21,15 +23,248 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-01T03:08:34.488656+09:00"
+      "attempt_started_at": "2026-11-01T03:08:34.488656+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모바일상품권 미수신 문제, 구매 환경 점검과 고객센터 문의 전 정보 준비 매뉴얼",
+          "source_id": "",
+          "reader_problem": "모바일상품권 구매 후 문자가 늦게 오거나 도착하지 않아 문제 원인 파악과 정리, 고객센터 문의 준비 정보가 부족해 즉각적 대응이 어렵다.",
+          "distinct_angle": "기존에 단순히 미수신 상황 대처법을 안내한 것과 달리, 본 글은 구매연락처 및 모바일 환경 사전 점검 체크리스트와 증상 유형별 단계적 점검법, 고객센터 문의 전 구비해야 할 상세 정보 정리법을 통합적으로 다루어 한눈에 대응 체계를 제공한다.",
+          "reader_situation": "모바일상품권을 구매했으나 문자를 받지 못해 스스로 점검하고, 고객센터에 정확하고 신속하게 문의하기 위해 필요한 준비를 꼼꼼히 하고자 하는 사용자.",
+          "deliverable": "구매 연락처와 모바일 환경 점검 리스트, 미도착 유형별 점검 및 조치 단계별 안내서, 고객센터 문의용 상세 정보 체크리스트.",
+          "task_id": "",
+          "outline": [
+            "구매 시 등록 연락처와 모바일 환경 꼼꼼히 점검하기",
+            "문자 미도착 증상별 유형 구분과 단계별 점검 및 조치 방법 익히기",
+            "효과적인 고객센터 문의를 위한 정보 준비 및 정리법 습득하기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 후 최종 주문 내역 꼼꼼 점검 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니에서 금액, 수신자 등 옵션을 자주 바꾸면서 최종 주문 내역이 원래 의도한 대상과 정확히 일치하는지 확인하는 절차가 없어 주문 오류가 우려된다.",
+          "distinct_angle": "단순 변경 사항 확인 안내가 아닌, 원본 정보 체계적 기록법과 세밀한 변경 내역 점검 절차, 그리고 최종 주문 전 대상 및 옵션의 정확한 대조 점검법을 단계별 행동 목록과 함께 구체적으로 안내하는 심층적 매뉴얼을 제공하는 점에서 달라진다.",
+          "reader_situation": "상품권 옵션을 여러 차례 수정하고, 최종 주문 전 원래 선택한 대상과 현재 주문 내역의 일치 여부를 체계적이고 오류 없이 점검하고자 하는 구매자.",
+          "deliverable": "원래 선택 정보 기록법, 상세 변경 내역 확인 절차, 최종 주문 전 대상 및 옵션 대조 점검 목록과 구체 행동 지침으로 구성된 실용 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "원래 담긴 상품권 대상 및 옵션을 체계적으로 기록하는 방법 배우기",
+            "옵션 변경 시마다 변경 사항을 세밀히 확인하는 점검 절차 익히기",
+            "최종 주문 직전 원래 의도 대상과 현재 옵션이 일치하는지 구체적으로 대조 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 코드만으로 용도와 보관 위치 구분이 어려울 때 맞춤 분류법과 관리 팁",
+          "source_id": "",
+          "reader_problem": "상품권 코드만 보고 각 상품권이 어떤 구매 용도와 보관 위치를 위한 것인지 구분하기 어려워 효과적인 관리에 혼란을 겪는다.",
+          "distinct_angle": "기존의 단순 정리 안내에서 나아가 구매 목적과 실제 보관 위치를 포함한 명확한 분류 기준 마련, 알아보기 쉬운 개인 메모 제목 작성법, 그리고 주요 앱별 이름 변경 기능과 한계를 참고해 실생활에서 바로 적용 가능한 체계적 분류 및 관리법을 제안한다.",
+          "reader_situation": "다양한 상품권을 여러 용도와 보관 장소에 맞게 분류 및 이름 붙여 효율적으로 관리하고 싶지만 알기 쉽고 실용적인 기준과 방법이 없어 난감한 이용자.",
+          "deliverable": "구매 용도와 보관 위치 포함 개인 메모 예시, 앱별 이름 변경 기능 및 한계 정리, 상품권별 제목 작성 실용 기준 및 단계별 실천 안내서.",
+          "task_id": "",
+          "outline": [
+            "상품권별 구매 목적과 실제 보관 위치 명확히 분류하기",
+            "상품권 코드 대신 알아보기 쉬운 개인 메모 제목 작성법 익히기",
+            "주요 앱별 이름 변경 기능과 관리 한계 확인 및 활용법 배우기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 매입 문의 전 효율적인 상태 점검과 증빙 자료 준비 방법",
+        "source_id": "",
+        "reader_problem": "상품권 매입 상담 전 상태 확인, 증빙 자료 수집, 개인정보 보호 절차가 명확하지 않아 상담 시간이 늘어나고 혼란이 발생한다.",
+        "distinct_angle": "기존에는 매입 문의 준비가 단순 정보 확인 단계로 다뤄졌으나, 이번 글은 상태별 점검 체크리스트와 증빙 자료 유형별 분류·비식별화 방법, 그리고 개인정보 보호 실천 절차를 체계적으로 소개하여 상담 효율과 보안 수준을 동시에 높이는 점에서 차별화된다.",
+        "reader_situation": "여러 상품권을 다양한 매입처에 문의하려는 이용자가 상품권 상태를 정확히 점검하고 관련 증빙을 잘 준비하며, 개인정보 노출 위험 없이 효율적인 상담을 준비하는 상황.",
+        "deliverable": "상품권 상태별 점검 체크리스트, 증빙자료 유형별 체계적 수집 및 비식별화 가이드, 개인정보 최소 공개와 안전 전달 절차 안내서.",
+        "task_id": "",
+        "outline": [
+          "상품권 상태별 세부 점검 항목 작성법 익히기",
+          "증빙 자료 유형별 수집과 비식별화 방법 체계적으로 배우기",
+          "개인정보 노출 최소화 및 안전한 자료 전달 절차 습득하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 /board/sale/3692로, 상품권 상태 확인과 개인정보 가리기까지는 이미 다뤘습니다. 다만 후보 0은 그보다 한 단계 앞선 ‘매입 문의 전에 어떤 증빙 자료를 어떤 유형으로 모으고, 어떻게 비식별화해 전달할지’에 중심이 있어, 단순 상태 점검을 넘어 상담 준비물 정리와 안전 전달 절차를 구체화한 점이 새롭습니다. 즉 기존 글의 답만으로는 부족한 ‘증빙 자료 분류와 최소 공개 기준’이라는 추가 행동을 제공합니다.",
+        "screen_rejections": [
+          "1번은 /board/purchase/2565와 /board/general_notice/44에서 이미 다룬 모바일상품권 미수신 시 주문 정보·연락처 확인과 문의 준비 흐름을 거의 그대로 반복합니다. 구매 후 문자 미도착이라는 같은 질문에 같은 점검 순서라 새 해결 문제가 부족합니다.",
+          "2번은 주문 옵션 변경 후 최종 내역을 대조하는 방식이 /board/purchase/2567의 주문 내역 정리와 /board/sale/3692의 오류 방지 점검과 겹칩니다. 원본 정보 기록→변경 내역 확인→최종 대조라는 해결 절차가 사실상 같습니다.",
+          "3번은 /board/gc_tip/43의 구매 목적·보관 위치별 분류, 이름 변경 기능 확인과 핵심 질문이 같습니다. 제목과 예시만 달라졌고, 상품권을 어떻게 분류해 관리할지라는 동일한 문제를 이미 해결한 글이 있습니다."
+        ]
+      },
+      "board": "sale",
+      "topic": "상품권 매입 문의 전 효율적인 상태 점검과 증빙 자료 준비 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-10-31T12:29:59Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22969,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1238,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24207
+        },
+        "estimated_usd": 0.0111684,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:08:45.137405+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12211,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 714,
+          "output_tokens_details": {
+            "reasoning_tokens": 339
+          },
+          "total_tokens": 12925
+        },
+        "estimated_usd": 0.01237125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T18:08:50.628317+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3011,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 438,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3449
+        },
+        "estimated_usd": 0.0019052,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:08:54.275062+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4535,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 451,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4986
+        },
+        "estimated_usd": 0.0025356,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-10-31T18:08:58.746685+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 15807,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 543,
+          "output_tokens_details": {
+            "reasoning_tokens": 213
+          },
+          "total_tokens": 16350
+        },
+        "estimated_usd": 0.01429875,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-10-31T18:09:03.177130+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:08:36.874348+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T18:08:45.727466+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:08:50.638374+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-10-31T18:08:55.341776+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-10-31T18:09:00.461890+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0422792,
+    "estimated_total_usd": 0.0422792,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
