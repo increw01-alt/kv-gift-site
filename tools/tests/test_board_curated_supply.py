@@ -1,5 +1,6 @@
 """Validate the dated, unverified assignments against the real offline archive."""
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -68,6 +69,7 @@ class CuratedSupplyTests(unittest.TestCase):
                     for key in ('reader_situation', 'deliverable'):
                         self.assertTrue(12 <= len(task[key]) <= 180, (task['id'], key))
 
+    @unittest.skipUnless(os.environ.get("BOARD_SUPPLY_CHECK") == "1", "과제 추가 때 수동 점검(BOARD_SUPPLY_CHECK=1). 운영 글 제목과 비교하므로 CI 게이트로 쓰지 않음")
     def test_new_tasks_pass_actual_plan_validator_and_current_title_gate(self):
         self.assertTrue(self.added, 'dated supply has not been added')
         for task in self.added:
@@ -80,6 +82,7 @@ class CuratedSupplyTests(unittest.TestCase):
                 self.assertEqual(validate_candidates({'candidates': [candidate]}, set(),
                                  lambda t: fresh_topic(t, self.titles), {task['id']}), [candidate])
 
+    @unittest.skipUnless(os.environ.get("BOARD_SUPPLY_CHECK") == "1", "과제 추가 때 수동 점검(BOARD_SUPPLY_CHECK=1). 운영 글 제목과 비교하므로 CI 게이트로 쓰지 않음")
     def test_title_token_overlap_reuses_existing_originality_cutoff(self):
         # reject_copy uses candidate 5-gram coverage >= .72. Applied to titles here
         # as a lexical screen only; the semantic/body gates remain mandatory.

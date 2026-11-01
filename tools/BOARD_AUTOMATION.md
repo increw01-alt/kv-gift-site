@@ -62,7 +62,8 @@
 - 주제 추가는 기존 공급 경로인 `tools/board_reader_tasks.json`에서 합니다. 고유 `id`, 게시판 `board`, 질문 `question`, **결정 상황 한 줄 `reader_situation`**, **구체적인 결과물 한 줄 `deliverable`**을 적습니다. 새 과제는 사실 자료·고객 사례·게시 승인으로 취급하지 않습니다.
 - 소식 외 7개 게시판에 각각 다른 결정 상황의 미사용 후보를 최소 5개씩 준비합니다. 제목·독자 호칭·게시판·목차 순서만 바꾸거나, 기존의 확인→메모→문의로 같은 답에 도달하는 과제는 추가하지 않습니다. 협회 소식의 확인 자료 경로는 보강 대상에서 제외합니다.
 - `validate_candidates`에 넣을 기획 형태로 변환해 길이·필드·제한 표현을 검사하고, 기존 제목 게이트(`fresh_topic`, 문자열 유사도 0.82)를 통과시킵니다. 신규 회귀 테스트의 제목 토큰 검사는 `board_originality`의 기존 5-gram 후보 포함률 기준 **0.72**를 재사용합니다. 원래 이 기준은 본문 복제 검사용이며, 제목 토큰 검사만으로 의미 중복을 입증하거나 부정하지 않습니다. 본문의 최소 토큰 수 80과 중복 기준은 유지합니다.
-- 최초 추가 시에는 전체 게시판 제목과 운영팀 본문의 해결 절차를 대조한 표를 남깁니다. 실제 발행 후 CI에서는 해당 과제 ID의 `published` 원장과 자동 게시 이력이 함께 입증하는 자기 게시글만 최초 제목 대조에서 제외합니다. 다른 기존 글과의 중복 검사는 계속합니다.
+- 최초 추가 시에는 전체 게시판 제목과 운영팀 본문의 해결 절차를 대조한 표를 남깁니다. 실제 발행 후 수동 제목 점검에서는 해당 과제 ID의 `published` 원장과 자동 게시 이력이 함께 입증하는 자기 게시글만 최초 제목 대조에서 제외합니다. 다른 기존 글과의 중복 검사는 계속합니다.
+- 과제 추가 때만 수동 점검합니다(운영 글 제목과 비교하므로 CI 게이트로 쓰지 않음). 저장소 루트에서 기존 테스트 모듈 가져오기를 위해 `PYTHONPATH`도 지정합니다. PowerShell: `$env:PYTHONPATH='tools/tests'; $env:BOARD_SUPPLY_CHECK='1'; python -X utf8 -m unittest tools.tests.test_board_curated_supply -v` / bash: `BOARD_SUPPLY_CHECK=1 PYTHONPATH=tools/tests python -m unittest tools.tests.test_board_curated_supply -v`.
 - [35개 후보의 결정 상황·결과물·기존 글 대조표](../docs/HOLD_REASONS_TOPIC_SUPPLY_2026-11-01.md). 하루 목표·시도 상한·일정·유료 호출 횟수·검수 강도는 변경하지 않습니다.
 
 ### 초안·편집 공통 문구 기준 (2026-10-22 보강)
