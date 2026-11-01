@@ -1123,5 +1123,18 @@
     "publication_mode": "automatic",
     "run_id": "41320505443",
     "usage_file": "data/editorial_runs/2026-11-02/41320505443.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 15,
+    "topic": "상품권의 이용 상태와 문의의 처리 단계는 왜 별도 축으로 읽을까요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "상품권 사용 상태와 문의 처리 단계를 헷갈리지 않고 각각 따로 확인해 다음 행동을 정리하려는 질문",
+    "image_scene": "책상 위에 두 개의 서류함이 나란히 놓여 있고, 왼쪽 서류함에는 ‘사용 가능 상태’라고 적힌 카드와 상품권 카드가 들어 있으며 오른쪽 서류함에는 ‘문의 접수 → 처리 중 → 완료’가 적힌 진행표가 꽂혀 있다. 가운데에는 두 칸으로 나뉜 메모지와 펜이 놓여 있어 두 축을 구분해 비교하는 구도",
+    "image_alt": "책상 위에서 상품권의 사용 가능 상태 카드와 문의 처리 진행표를 나란히 두고 두 축을 따로 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41332880515",
+    "usage_file": "data/editorial_runs/2026-11-02/41332880515.json"
   }
 ]
