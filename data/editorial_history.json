@@ -1149,5 +1149,18 @@
     "publication_mode": "automatic",
     "run_id": "41345249285",
     "usage_file": "data/editorial_runs/2026-11-02/41345249285.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 65,
+    "topic": "문의 자료를 준비할 때 파일 이름의 확장자와 실제 열리는 내용을 구분해 주세요",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "문의에 보낼 첨부파일의 확장자와 실제 열리는 파일 내용을 따로 확인해 어떤 자료를 보내야 할지 판단하려는 질문",
+    "image_scene": "책상 위에 파일 목록이 보이는 노트북 화면과 파일 속성을 확인하는 스마트폰, 그리고 옆에 인쇄한 파일 미리보기가 함께 놓여 있다. 한 사람이 확장자 표기와 실제 열리는 문서 내용을 비교하며 메모지에 파일 형식과 문의 채널별 제출 기준을 나눠 적는 구도",
+    "image_alt": "노트북의 파일 목록과 스마트폰의 속성 화면을 번갈아 보며 확장자와 실제 내용을 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41357683726",
+    "usage_file": "data/editorial_runs/2026-11-02/41357683726.json"
   }
 ]

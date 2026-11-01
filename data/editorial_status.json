@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T22:33:48.937999+00:00",
+  "generatedAt": "2026-11-01T22:34:53.380770+00:00",
   "dateKst": "2026-11-02",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 4,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.3228392,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.438173,
+  "estimatedTotalUsd": 0.438173,
   "records": [
     {
       "runId": "41320505443",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "41357683726",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "문의 자료를 준비할 때 파일 이름의 확장자와 실제 열리는 내용을 구분해 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/65",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-01T22:32:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1153338,
+      "knownSubtotalUsd": 0.1153338
     }
   ],
   "topicRetry": {

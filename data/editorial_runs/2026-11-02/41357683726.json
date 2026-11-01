@@ -1,17 +1,27 @@
 {
   "run_id": "41357683726",
   "date_kst": "2026-11-02",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "general_notice",
+  "topic": "문의 자료를 준비할 때 파일 이름의 확장자와 실제 열리는 내용을 구분해 주세요",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/general_notice/65",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-01T22:32:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,312 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-02T07:33:48.744814+09:00"
+      "attempt_started_at": "2026-11-02T07:33:48.744814+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "게시판 목록의 읽던 위치를 남기려면 새 창 열기와 뒤로 가기를 구분해 보세요",
+          "source_id": "",
+          "reader_problem": "게시판 글을 차례로 읽다가 연결된 글로 이동해 원래 목록에서 읽던 위치를 잃어버리는 이용자",
+          "distinct_angle": "기존에 안내하지 않은 구분된 창 사용법과 뒤로 가기 시 위치 복원 없이 목록 위치 유지 전략을 단계별로 설명",
+          "reader_situation": "게시판을 차례로 읽던 중 연결 글 클릭으로 목록 위치를 잃어버려 다시 찾기 어려운 이용자",
+          "deliverable": "목록 위치를 보존하는 새 창과 추가 읽기를 위한 새 창을 구분한 탐색 순서도",
+          "task_id": "supply-20261101-notice-navigation-place",
+          "outline": [
+            "게시판 목록과 글 읽기 창의 기능 및 역할을 이해하기",
+            "내용을 이어 읽을 땐 새 창 사용으로 목록 위치 보존하기",
+            "뒤로 가기 시 목록 위치 복원이 지원되지 않는 상황 대처법"
+          ]
+        },
+        {
+          "topic": "게시글을 종이로 출력하기 전에 인쇄 미리보기의 본문 잘림을 살펴봐 주세요",
+          "source_id": "",
+          "reader_problem": "페이지 경계에서 문장과 표가 끊겨 출력 범위를 정하기 어려운 이용자",
+          "distinct_angle": "모든 브라우저에서 일관된 인쇄 결과를 약속하지 않고, 인쇄 미리보기에서 잘린 부분과 출처 표시에 집중하는 점검 방법 제공",
+          "reader_situation": "안내글을 출력해 문장과 표가 끊기지 않게 인쇄 범위를 조절하려는 이용자",
+          "deliverable": "인쇄 미리보기에서 문장·표 잘림을 확인하고 출처 표기를 점검하는 출력 전 점검표",
+          "task_id": "supply-20261101-notice-print-preview",
+          "outline": [
+            "인쇄 미리보기 기능의 역할과 사용법 알아보기",
+            "페이지 나눔에서 문장과 표 끊김 여부 점검하기",
+            "출처 정보의 위치와 내용이 바르게 표시되는지 확인하기"
+          ]
+        },
+        {
+          "topic": "안내 주소를 공유하기 전에 개인 식별 정보가 붙어 있는지 살펴봐 주세요",
+          "source_id": "",
+          "reader_problem": "문의용 주소 뒤의 긴 값에 개인 정보가 포함됐는지 몰라 공유에 주저하는 이용자",
+          "distinct_angle": "주소 내 개인 식별 가능 값과 공개해도 되는 안내 주소 확인 절차를 구분하여 판단 기준과 주의사항을 정리함",
+          "reader_situation": "복사한 게시글 주소를 공유하려는데 주소 뒤에 있는 긴 값의 정보 공개 여부를 판단하기 어려운 이용자",
+          "deliverable": "공개 가능 안내 주소 찾기와 개인 식별 의심 값 제외 판단표",
+          "task_id": "supply-20261101-notice-share-address",
+          "outline": [
+            "주소 구조 분석으로 공개 안내 주소 위치 파악하기",
+            "개인 정보 식별 가능성 있는 값과 구분하는 방법 이해하기",
+            "공유 시 개인 식별 정보 제거 필요성 및 주의사항 점검하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "문의 자료를 준비할 때 파일 이름의 확장자와 실제 열리는 내용을 구분해 주세요",
+        "source_id": "",
+        "reader_problem": "파일명이 이미지라 생각했으나 열려 보니 다른 형식이라 보내려는 자료 선정에 혼란스러운 이용자",
+        "distinct_angle": "확장자명과 실제 콘텐츠 형식을 각각 점검하는 절차와 허용 문의 자료 형식을 분리하여 점검표로 제공",
+        "reader_situation": "문의할 때 보내려는 첨부파일의 확장자와 실제 열림 형식을 혼동해 어떤 파일로 보낼지 결정하지 못하는 이용자",
+        "deliverable": "파일 이름, 열리는 프로그램, 실제 콘텐츠 내용을 나눠 확인하는 점검표와 허용 파일 형식 안내",
+        "task_id": "supply-20261101-notice-file-format",
+        "outline": [
+          "파일 이름 확장자와 실제 파일 형식 구분하는 방법 익히기",
+          "파일을 열어보며 보이는 콘텐츠의 종류 확인하기",
+          "문의 채널별 허용 파일 형식 파악과 점검표 작성하기"
+        ],
+        "novelty_reason": "후보 3은 기존 글들이 다루지 않은 ‘문의 자료를 보낼 때 파일명 확장자와 실제 열리는 콘텐츠가 서로 다를 수 있는 상황’에 초점을 둡니다. 가까운 기존 글은 오류 화면 캡처나 개인정보 가리기처럼 화면 공유 방식의 주의사항을 다뤘지만, 이번 후보처럼 파일의 겉표기(확장자)와 실제 내용 형식을 구분해 어떤 첨부파일을 보낼지 판단하는 문제는 해결하지 않았습니다. 따라서 새 글이 추가하는 해결 내용은 파일명·열리는 프로그램·실제 보이는 내용을 분리 확인하고, 채널별 허용 형식을 다시 묻는 점검 절차입니다.",
+        "screen_rejections": [
+          "0번은 ‘읽던 위치를 잃지 않게 새 창과 뒤로 가기를 구분하는 법’으로, 기존 공개 글에 있는 링크 미리보기·공유 안내·정보보호와 전혀 다른 주제이긴 하지만, 게시판 이동 중 위치 보존이라는 일반 탐색 팁 수준이라 이번 묶음에서 3번보다 덜 구체적입니다.",
+          "1번은 인쇄 미리보기에서 본문이 잘리는지 확인하는 내용으로 새 주제는 맞지만, 기존의 링크 본문 비교·화면 확인 안내와 가까운 ‘미리보기 점검’ 범주에 있어 후보 3번보다 차별성이 약합니다.",
+          "2번은 안내 주소에 개인 식별 정보가 붙었는지 확인하는 문제로, 기존의 링크 안전성·캡처 개인정보 보호와 유사한 범주의 일반 보안 안내와 겹칩니다. 주소 구조 분석이라는 점은 있으나, 새 해결 도구가 충분히 구체적으로 드러나는 3번보다 덜 새롭습니다."
+        ]
+      },
+      "board": "general_notice",
+      "topic": "문의 자료를 준비할 때 파일 이름의 확장자와 실제 열리는 내용을 구분해 주세요",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-01T13:25:08Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "문의에 보낼 첨부파일의 확장자와 실제 열리는 파일 내용을 따로 확인해 어떤 자료를 보내야 할지 판단하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6975,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 901,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7876
+        },
+        "estimated_usd": 0.0042316,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T22:33:59.123181+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11345,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 609,
+          "output_tokens_details": {
+            "reasoning_tokens": 190
+          },
+          "total_tokens": 11954
+        },
+        "estimated_usd": 0.01124925,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-01T22:34:03.831739+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2985,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 401,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3386
+        },
+        "estimated_usd": 0.0018356,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T22:34:07.259770+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9714,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 465,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10179
+        },
+        "estimated_usd": 0.0046296,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T22:34:12.996417+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20347,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 272,
+          "output_tokens_details": {
+            "reasoning_tokens": 76
+          },
+          "total_tokens": 20619
+        },
+        "estimated_usd": 0.01648425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-01T22:34:17.256391+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3525,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1029
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4897
+        },
+        "estimated_usd": 0.066273,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T22:34:47.580711+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12716,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 243,
+          "output_tokens_details": {
+            "reasoning_tokens": 178
+          },
+          "total_tokens": 12959
+        },
+        "estimated_usd": 0.0106305,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-01T22:34:51.976099+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-01T22:33:52.355806+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-01T22:33:59.838624+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-01T22:34:03.837025+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-01T22:34:08.620386+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-01T22:34:15.084653+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-01T22:34:17.277077+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-01T22:34:48.979744+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1153338,
+    "estimated_total_usd": 0.1153338,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
