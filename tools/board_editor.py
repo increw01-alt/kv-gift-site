@@ -14,6 +14,7 @@ from board_usage import begin_request
 from board_sources import source_context, planned_source_context
 from board_originality import related_articles
 from board_planner import choose_plan
+from board_hold_reasons import OTHER, review_hold_reason
 
 ARTICLE_SCHEMA = {
     'type': 'object', 'additionalProperties': False, 'required': ['summary', 'sections', 'checks'],
@@ -127,7 +128,7 @@ def select_topic(requested, day, model, on_usage, root=ROOT, on_plan=None, revie
         if on_plan:
             on_plan(plan)
         return board, plan['topic'], None
-    raise NoTopic('게시판에 사용할 확인 자료가 없습니다.')
+    raise NoTopic('게시판에 사용할 확인 자료가 없습니다.', hold_reason=OTHER)
 
 
 def edit_article(board, topic, data, brief, model, on_usage, root=ROOT, topic_plan=None, on_repair=None):
@@ -239,4 +240,6 @@ logo_matches: 하단의 독립된 KV 심벌이 원본과 색/형태가 유사하
         raise ValueError('게시 전 검수 사유 오류')
     result['approved'] = (result['approved'] is True and all(result['checks'][k] is True for k in CHECKS)
                           and not result['issues'])
+    if not result['approved']:
+        result['holdReason'] = review_hold_reason(result)
     return result

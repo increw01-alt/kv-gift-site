@@ -11,6 +11,7 @@ import urllib.request
 from urllib.parse import urlsplit
 from board_profiles import PROFILES, ROTATION
 from board_usage import begin_request
+from board_hold_reasons import HOLD_REASONS, TOPIC_DUPLICATE, OTHER
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = '한국상품권거래소 운영팀'
@@ -45,6 +46,12 @@ ARTICLE_TEXT_RULES += '\n\n' + CARD_FACT_RULES
 
 class NoTopic(ValueError):
     """유효한 주제가 없으면 API 호출 전에 정상적으로 건너뜁니다."""
+
+    def __init__(self, message, *, hold_reason=TOPIC_DUPLICATE):
+        if hold_reason not in HOLD_REASONS:
+            raise ValueError('알 수 없는 보류 원인 코드')
+        super().__init__(message)
+        self.hold_reason = hold_reason
 
 
 class ContentValidationError(ValueError):
@@ -95,7 +102,7 @@ def news_brief(topic, root=ROOT, day=None):
             if not path.is_file() and not path.with_suffix('.html').is_file():
                 raise ValueError('협회 소식의 확인 자료가 저장소에 없습니다.')
         return brief
-    raise NoTopic('사용 가능한 확인 자료가 없습니다. 협회 소식은 자료 확인 후 작성합니다.')
+    raise NoTopic('사용 가능한 확인 자료가 없습니다. 협회 소식은 자료 확인 후 작성합니다.', hold_reason=OTHER)
 
 
 def pick_topic(board, root=ROOT, day=None):
@@ -118,7 +125,8 @@ def pick_topic(board, root=ROOT, day=None):
             except NoTopic:
                 continue
         return topic
-    raise NoTopic('미사용 주제 또는 유효한 확인 자료가 없습니다.')
+    raise NoTopic('미사용 주제 또는 유효한 확인 자료가 없습니다.',
+                  hold_reason=OTHER if PROFILES[board].get('requires_brief') else TOPIC_DUPLICATE)
 
 
 def select_board(requested='auto', root=ROOT, day=None):

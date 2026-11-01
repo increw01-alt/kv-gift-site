@@ -2,6 +2,7 @@
 import datetime as dt
 import json
 from pathlib import Path
+from board_hold_reasons import NOVELTY_HOLDS
 
 KST = dt.timezone(dt.timedelta(hours=9))
 
@@ -25,6 +26,8 @@ def attempt_time(record):
 def novelty_hold(record):
     if record.get('status') != 'held':
         return False
+    if 'holdReason' in record:
+        return record['holdReason'] in NOVELTY_HOLDS
     issues = ' '.join((record.get('review') or {}).get('issues') or [])
     return any(marker in issues for marker in ('중복', '주제 사전 검수 보류', '다른 독자 문제', '기존 본문과 같은 질문'))
 

@@ -6,11 +6,12 @@ from board_drafts import NoTopic, read_json
 from board_originality import existing_articles, similarity
 from board_angle_rules import ANGLE_RULES
 from board_topic_pool import pending_plans, pool_update, expansion_focus, REFILL_BELOW
+from board_hold_reasons import TOPIC_DUPLICATE
 
 
 class PlanningHeld(NoTopic):
     def __init__(self, board, issues, candidates=None):
-        super().__init__('주제 사전 검수 보류: ' + ' / '.join(issues))
+        super().__init__('주제 사전 검수 보류: ' + ' / '.join(issues), hold_reason=TOPIC_DUPLICATE)
         self.board = board
         self.issues = issues
         self.candidates = candidates or []

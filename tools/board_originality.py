@@ -5,6 +5,9 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit
 from board_profiles import PROFILES
 from board_angle_rules import ANGLE_RULES
+from board_hold_reasons import BODY_DUPLICATE, OTHER
+
+COPY_OVERLAP_THRESHOLD = .72
 
 
 class PlainArticle(HTMLParser):
@@ -74,15 +77,20 @@ def reject_copy(data, root):
     candidate = grams(text, 5)
     for item in existing_articles(root):
         previous = grams(item['body'], 5)
-        if len(candidate) >= 80 and previous and len(candidate & previous)/len(candidate) >= .72:
+        if len(candidate) >= 80 and previous and len(candidate & previous)/len(candidate) >= COPY_OVERLAP_THRESHOLD:
             return item['path']
     return None
 
 
 def validate_plan(value, related):
     fields = {'unique', 'issues', 'search_intent', 'image_scene', 'image_alt', 'related_paths'}
-    if not isinstance(value, dict) or set(value) != fields or type(value['unique']) is not bool:
+    if not isinstance(value, dict) or set(value) not in (fields, fields | {'holdReason'}) or type(value['unique']) is not bool:
         raise ValueError('본문 중복·이미지 기획 응답 오류')
+    if 'holdReason' in value and value['holdReason'] not in (None, BODY_DUPLICATE, OTHER):
+        raise ValueError('본문 검수 보류 원인 코드 오류')
+    if 'holdReason' in value and ((value['unique'] and value['holdReason'] is not None)
+                                 or (not value['unique'] and value['holdReason'] is None)):
+        raise ValueError('본문 검수 결과와 보류 원인 불일치')
     if not isinstance(value['issues'], list) or any(not isinstance(x, str) or len(x) > 300 for x in value['issues']):
         raise ValueError('본문 검수 사유 오류')
     for key, minimum, maximum in [('search_intent', 10, 180), ('image_scene', 20, 400), ('image_alt', 10, 120)]:
@@ -115,7 +123,8 @@ def preflight(board, topic, data, model, on_usage, root, topic_plan=None):
     from board_editor import ask_json, text_input, prior_titles
     duplicate = reject_copy(data, root)
     if duplicate:
-        raise NoTopic('기존 글 본문과 크게 겹쳐 이미지 생성 전에 보류했습니다: '+duplicate)
+        raise NoTopic('기존 글 본문과 크게 겹쳐 이미지 생성 전에 보류했습니다: '+duplicate,
+                      hold_reason=BODY_DUPLICATE)
     related = related_articles(topic, data, root)
     history = json.loads((root/'data/editorial_history.json').read_text(encoding='utf-8'))
     previous_plans = [{key: item.get(key) for key in ('topic', 'search_intent', 'image_scene')}
@@ -123,8 +132,9 @@ def preflight(board, topic, data, model, on_usage, root, topic_plan=None):
     string = {'type': 'string'}
     allowed_paths = [x['path'] for x in related]
     schema = {'type': 'object', 'additionalProperties': False,
-        'required': ['unique', 'issues', 'search_intent', 'image_scene', 'image_alt', 'related_paths'],
+        'required': ['unique', 'issues', 'search_intent', 'image_scene', 'image_alt', 'related_paths', 'holdReason'],
         'properties': {'unique': {'type': 'boolean'}, 'issues': {'type': 'array', 'items': string},
+                       'holdReason': {'type': ['string', 'null'], 'enum': [BODY_DUPLICATE, OTHER, None]},
                        'search_intent': string, 'image_scene': string, 'image_alt': string,
                        'related_paths': {'type': 'array', 'maxItems': 3 if allowed_paths else 0,
                                          'items': {'type': 'string', 'enum': allowed_paths} if allowed_paths else string}}}
@@ -133,6 +143,7 @@ def preflight(board, topic, data, model, on_usage, root, topic_plan=None):
 새 글을 기존 글의 제목뿐 아니라 본문과 비교한다. 핵심 질문, 독자 상황, 해결 방법이 같고 표현만 다르면 unique=false다.
 동일 주제라도 실제 다른 문제를 해결하는 새 절차와 예시가 있으면 허용한다. 중복하거나 쓸모없는 키워드 나열이면 보류한다.
 검색자의 질문에 답하지 않고 문의하라는 말만 반복해도 보류한다. 중복 문제가 없으면 issues=[]다.
+holdReason은 기존 글과 같은 질문·해결 절차가 원인이면 body_duplicate, 그 밖의 품질·근거 문제이면 other다. unique=true일 때만 null이다.
 search_intent는 이 글만의 독자 질문과 해결 목표를 한국어 평문 열 자 이상으로 적는다.
 image_scene은 본문 핵심 행동을 나타내는 구체적인 사물과 구도다. 기존 배너의 주된 사물과 장면이 반복되지 않게 새 장면을 기획한다.
 가짜 대화 캡처, 실제 고객, 수익, 현금, 개인정보, 기관 인증, 수수료나 약관 확정 표현은 제외한다.
@@ -148,5 +159,7 @@ related_paths는 allowed_related_paths에서 그대로 선택한다. 주소를 �
         schema, 'originality_and_image_plan', 'review', model, on_usage, 3000)
     value = validate_plan(value, related)
     if not value['unique']:
-        raise NoTopic('본문 검수 보류: '+' / '.join(value['issues']))
+        # Legacy in-process reviewers may omit the code; the live schema requires it.
+        raise NoTopic('본문 검수 보류: '+' / '.join(value['issues']),
+                      hold_reason=value.get('holdReason') or OTHER)
     return value

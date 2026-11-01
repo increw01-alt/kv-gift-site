@@ -18,6 +18,7 @@ from board_status import write_status
 from editorial_settings import load_settings, target_at
 from board_retry import retry_guard
 from board_topic_pool import apply_pool_update
+from board_hold_reasons import HOLD_REASONS, TOPIC_DUPLICATE, BODY_DUPLICATE, OTHER, review_hold_reason
 
 DAILY_LIMIT = 10
 DAILY_ATTEMPT_LIMIT = 15
@@ -113,11 +114,14 @@ def commit_files(command, files, message):
     command('git', 'push', 'origin', 'HEAD:refs/heads/main')
 
 
-def record_outcome(root, day, run_id, board, topic, status, review, usage, url=None):
+def record_outcome(root, day, run_id, board, topic, status, review, usage, url=None, *, hold_reason=None):
+    if hold_reason is not None and hold_reason not in HOLD_REASONS:
+        raise ValueError('실행 원장의 보류 원인 코드 오류')
     ledger = root/'data/editorial_runs'/day.isoformat()/f'{run_id}.json'
     outcome = {
         'run_id': run_id, 'date_kst': day.isoformat(), 'board': board, 'topic': topic,
         'status': status, 'url': url,
+        'holdReason': (hold_reason or review_hold_reason(review)) if status == 'held' else None,
         'trigger_event': os.getenv('GITHUB_EVENT_NAME'),
         'trigger_source': ('github_schedule' if os.getenv('GITHUB_EVENT_NAME') == 'schedule'
                            else os.getenv('SCHEDULER_SOURCE') or 'manual'),
@@ -206,6 +210,7 @@ def main(root=ROOT, command=None, now=None):
     board = topic = brief = data = raw = plan = None
     report = {'approved': False, 'issues': []}
     status, api_status, error = 'held', 'failed', None
+    hold_reason = None
     try:
         def remember_pool(value):
             usage.context['topic_pool_update'] = value
@@ -243,6 +248,7 @@ def main(root=ROOT, command=None, now=None):
         if report['approved']:
             status = 'ready'
     except NoTopic as exc:
+        hold_reason = exc.hold_reason
         # No candidate may be selected, but the attempted board still advances.
         board = board or getattr(exc, 'board', None)
         if getattr(exc, 'candidates', None):
@@ -258,7 +264,8 @@ def main(root=ROOT, command=None, now=None):
         write_json(preview_dir/'review.json', report)
         summary(usage.markdown())
     if preview:
-        write_json(preview_dir/'result.json', {'status': status, 'published': False, 'review': report})
+        write_json(preview_dir/'result.json', {'status': status, 'published': False, 'review': report,
+                   'holdReason': (hold_reason or review_hold_reason(report)) if status == 'held' else None})
         summary(f'검토 전용 생성: {status}. 운영 사이트와 게시 이력은 변경하지 않았습니다.')
         return 1 if error else 0
 
@@ -271,13 +278,16 @@ def main(root=ROOT, command=None, now=None):
         reason = '게시 가능 시간이 지나 공개를 보류했습니다.'
     if reason:
         status = 'held'
+        hold_reason = OTHER
         report = {'approved': False, 'issues': [reason]}
     files, url = [], None
     if status == 'ready' and not fresh_topic(topic, prior_titles(root)):
         status = 'held'
+        hold_reason = TOPIC_DUPLICATE
         report = {'approved': False, 'issues': ['생성 중 같은 주제가 게시되어 중복 게시를 보류합니다.']}
     if status == 'ready' and reject_copy(data, root):
         status = 'held'
+        hold_reason = BODY_DUPLICATE
         report = {'approved': False, 'issues': ['최신 글 본문과 겹쳐 중복 게시를 보류합니다.']}
     if status == 'ready':
         banner = f'board-img/{board}/guide-{day.isoformat()}-{run_id}.png'
@@ -294,7 +304,8 @@ def main(root=ROOT, command=None, now=None):
         write_json(history_path, history)
         url = f'https://kv-gift.co.kr/board/{board}/{history[-1]["id"]}'
         status = 'published'
-    audit_files, outcome = record_outcome(root, day, run_id, board, topic, status, report, usage, url)
+    audit_files, outcome = record_outcome(root, day, run_id, board, topic, status, report, usage, url,
+                                        hold_reason=hold_reason)
     files.extend(audit_files)
     write_json(preview_dir/'result.json', outcome)
     # main 이동 시 일반 push가 거절됩니다. 강제 push나 임의 덮어쓰기는 하지 않습니다.
