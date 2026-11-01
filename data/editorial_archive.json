@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T20:09:56.018074+00:00",
+  "generatedAt": "2026-11-01T20:11:20.388268+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2421,7 +2421,7 @@
       "board": "sale",
       "topic": "상품권 장별 계산과 묶음 계산의 반올림 차이를 견적에서 어떻게 검산할까요?",
       "url": "https://kv-gift.co.kr/board/sale/3698",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-01T20:11:20.363314+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1068719,
       "knownSubtotalUsd": 0.1068719
