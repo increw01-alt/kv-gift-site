@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T17:44:51.926645+00:00",
+  "generatedAt": "2026-11-01T17:45:55.958186+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2407,7 +2407,7 @@
       "board": "gc_information",
       "topic": "상품권의 이용 상태와 문의의 처리 단계는 왜 별도 축으로 읽을까요?",
       "url": "https://kv-gift.co.kr/board/gc_information/15",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-01T17:45:55.931339+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10977115,
       "knownSubtotalUsd": 0.10977115
