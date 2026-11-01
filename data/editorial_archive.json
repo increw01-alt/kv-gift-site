@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T22:34:53.403804+00:00",
+  "generatedAt": "2026-11-01T22:35:57.808740+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2435,7 +2435,7 @@
       "board": "general_notice",
       "topic": "문의 자료를 준비할 때 파일 이름의 확장자와 실제 열리는 내용을 구분해 주세요",
       "url": "https://kv-gift.co.kr/board/general_notice/65",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-01T22:35:57.780007+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1153338,
       "knownSubtotalUsd": 0.1153338
