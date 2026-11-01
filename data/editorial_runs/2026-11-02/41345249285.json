@@ -1,17 +1,27 @@
 {
   "run_id": "41345249285",
   "date_kst": "2026-11-02",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sale",
+  "topic": "상품권 장별 계산과 묶음 계산의 반올림 차이를 견적에서 어떻게 검산할까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sale/3698",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-01T20:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,308 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-02T05:08:47.317812+09:00"
+      "attempt_started_at": "2026-11-02T05:08:47.317812+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [
+          {
+            "topic": "공동으로 보유한 상품권은 판매 문의 전에 누구의 의사를 모아야 할까요?",
+            "source_id": "",
+            "task_id": "supply-20261101-sale-joint-owners",
+            "reader_problem": "여러 명이 공동으로 보유한 상품권 처분 권한과 범위를 명확히 정하지 않아 대표자의 단독 처분 동의 여부가 불분명한 상황",
+            "distinct_angle": "일반적 대표자 지정과 다르게 법률적 처분 권한 여부 판단 없이 내부 협의와 동의 범위를 명확히 나누는 점을 중점적으로 설명하는 점",
+            "outline": [
+              "공동 소유 상품권의 처분 권한 기본 개념 소개",
+              "내부 합의에서 문의 권한과 처분 권한 분리하는 방법",
+              "합의 초안 작성 및 실제 진행 시 고려할 점 안내"
+            ],
+            "reader_situation": "공동 소유자가 대표자 한 명에게 판매 문의를 맡기려 하나 내부 의사 합의가 미흡해 불안해 하는 공동 소유자 모임",
+            "deliverable": "판매 문의 진행 권한과 합의 범위를 구분한 내부 합의 초안 예시 및 진행 시 주의사항 지침"
+          },
+          {
+            "topic": "보유 상품권 일부를 남길 때 판매 문의할 수량을 어떻게 산출할까요?",
+            "source_id": "",
+            "task_id": "supply-20261101-sale-retained-quantity",
+            "reader_problem": "미사용 상품권 중에서 일부는 직접 사용하고 일부만 판매 문의하려 할 때 전체 보유량과 판매 문의 수량 산출 기준이 불분명한 문제",
+            "distinct_angle": "상품권 쪼개기 가능성을 판단하지 않고, 실사용 예정량과 판매 문의량을 명확히 분리하여 재고 분할표 형태로 산출하는 방법에 주안점을 둠",
+            "outline": [
+              "전체 보유량과 사용 예정량 파악하기",
+              "보관할 상품권과 판매 문의 수량 분리 기준 세우기",
+              "재고 분할표 작성 방법과 예제 설명"
+            ],
+            "reader_situation": "보유 상품권 중 일부만 직접 사용하고 나머지에 대해서만 판매 문의를 준비하려는 개인 이용자",
+            "deliverable": "사용 예정 수량과 판매 문의 수량을 분리 표기한 재고 분할표 양식 및 산출 방법 안내"
+          },
+          {
+            "topic": "매입처가 안내한 방문과 비대면 상담 중 준비 부담을 어떻게 비교할까요?",
+            "source_id": "",
+            "task_id": "supply-20261101-sale-channel-effort",
+            "reader_problem": "매입처가 제시한 방문 상담과 비대면 상담 방식 각각의 준비물, 이동거리, 시간 부담을 비교하여 문의 경로를 결정하고 싶은 상황",
+            "distinct_angle": "단순 장단점 소개를 넘어서 확인된 자료와 이동 필요 여부를 구분한 선택표를 제공하며, 업체별로 상담 방식이 다를 수 있음을 명확히 안내하는 점",
+            "outline": [
+              "방문 상담과 비대면 상담 준비물 목록 확인",
+              "각 상담 방식 이동 필요성과 시간 부담 비교",
+              "선택표 작성으로 상담 경로 결정 지원"
+            ],
+            "reader_situation": "매입처에서 복수 상담 방식을 안내받았으나, 이동과 준비 부담을 실제 비교해 최적 상담 방법을 결정하려는 이용자",
+            "deliverable": "각 상담 방식별 준비물, 이동 필요성, 남겨둘 추가 질문을 구분해 정리한 선택 비교표"
+          }
+        ]
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "상품권 장별 계산과 묶음 계산의 반올림 차이를 견적에서 어떻게 검산할까요?",
+        "source_id": "",
+        "reader_problem": "매입처에서 제시한 장별 합산 금액과 묶음 합산 금액이 달라서 단순 합산 오류인지 계산 단위나 반올림 위치 차이인지 구분이 필요한 이용자",
+        "distinct_angle": "기존 안내가 단순 계산 방법 소개에 그쳤다면, 이번 글은 실제 사례를 토대로 계산 단위와 반올림 위치를 명확히 구분하여 대조식을 작성하는 실용적 해법을 제시함",
+        "reader_situation": "매입처가 제공한 두 계산 방식 간 차이를 이해하고, 어느 쪽이 맞는지 검증해 보고자 하는 판매자",
+        "deliverable": "장별 계산과 묶음 계산의 반올림 위치와 적용 단위를 표시한 표와 대조식, 검증용 비교 공식, 차이가 설명되지 않는 부분은 남기는 질문 목록",
+        "task_id": "supply-20261101-sale-rounding-unit",
+        "outline": [
+          "장별 계산과 묶음 계산의 기본 원리 정리",
+          "반올림 적용 위치와 계산 단위 확인 방법 안내",
+          "두 계산 방식 결과 비교를 위한 대조식 작성 및 검산"
+        ],
+        "novelty_reason": "0번은 기존 공개 글들과 달리 ‘상품권 매입 견적에서 장별 계산과 묶음 계산이 왜 달라지는지’를 계산 단위와 반올림 위치로 분해해 검산하는 문제를 다룹니다. 가장 가까운 기존 글들인 /board/gc_information/6은 카드 실적과 이벤트 실적의 기준을 구분하는 글이고, /board/purchase/2566은 최종 결제 금액을 확인하는 글이라서, 둘 다 금액을 확인한다는 점은 같지만 ‘장별 합산과 묶음 합산의 반올림 차이’를 대조식으로 검증하는 절차는 해결하지 않습니다. 새 글은 확인된 계산 단위, 반올림 적용 위치, 대조식 작성법, 차이가 남는 부분을 질문으로 남기는 방법까지 구체적으로 제시하므로 새 해결 과제가 분명합니다.",
+        "screen_rejections": []
+      },
+      "board": "sale",
+      "topic": "상품권 장별 계산과 묶음 계산의 반올림 차이를 견적에서 어떻게 검산할까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-01T13:25:08Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "매입 견적에서 장별 계산과 묶음 계산의 차이가 계산 단위인지 반올림 위치인지 구분해 검산하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6223,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1010,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7233
+        },
+        "estimated_usd": 0.0041052,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T20:08:58.853231+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11053,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 635,
+          "output_tokens_details": {
+            "reasoning_tokens": 408
+          },
+          "total_tokens": 11688
+        },
+        "estimated_usd": 0.01114725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-01T20:09:05.439313+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2856,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 407,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3263
+        },
+        "estimated_usd": 0.0017936,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T20:09:09.548458+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3741,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 442,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4183
+        },
+        "estimated_usd": 0.0022036,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T20:09:14.072667+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 15719,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 417,
+          "output_tokens_details": {
+            "reasoning_tokens": 254
+          },
+          "total_tokens": 16136
+        },
+        "estimated_usd": 0.01366575,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-01T20:09:19.028392+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3487,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 991
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4859
+        },
+        "estimated_usd": 0.066083,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-01T20:09:49.598623+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8062,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 406,
+          "output_tokens_details": {
+            "reasoning_tokens": 341
+          },
+          "total_tokens": 8468
+        },
+        "estimated_usd": 0.0078735,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-01T20:09:54.667699+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-01T20:08:51.056534+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-01T20:08:59.589878+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-01T20:09:05.441811+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-01T20:09:10.882262+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-01T20:09:16.164299+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-01T20:09:19.050359+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-01T20:09:50.980899+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1068719,
+    "estimated_total_usd": 0.1068719,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

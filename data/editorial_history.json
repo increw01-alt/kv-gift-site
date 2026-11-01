@@ -1136,5 +1136,18 @@
     "publication_mode": "automatic",
     "run_id": "41332880515",
     "usage_file": "data/editorial_runs/2026-11-02/41332880515.json"
+  },
+  {
+    "board": "sale",
+    "id": 3698,
+    "topic": "상품권 장별 계산과 묶음 계산의 반올림 차이를 견적에서 어떻게 검산할까요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "매입 견적에서 장별 계산과 묶음 계산의 차이가 계산 단위인지 반올림 위치인지 구분해 검산하려는 질문",
+    "image_scene": "책상 위에 상품권 장수별 계산표와 묶음 합산표를 나란히 두고, 계산기와 형광펜, 반올림 규칙을 적는 메모지가 함께 놓인 구도",
+    "image_alt": "책상 위에 장별 계산표와 묶음 합산표를 나란히 놓고 계산기와 메모지로 반올림 차이를 대조하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41345249285",
+    "usage_file": "data/editorial_runs/2026-11-02/41345249285.json"
   }
 ]

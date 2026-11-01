@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-01T20:08:47.550362+00:00",
+  "generatedAt": "2026-11-01T20:09:55.998124+00:00",
   "dateKst": "2026-11-02",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 3,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.2159673,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3228392,
+  "estimatedTotalUsd": 0.3228392,
   "records": [
     {
       "runId": "41320505443",
@@ -40,16 +40,16 @@
     },
     {
       "runId": "41345249285",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sale",
+      "topic": "상품권 장별 계산과 묶음 계산의 반올림 차이를 견적에서 어떻게 검산할까요?",
+      "url": "https://kv-gift.co.kr/board/sale/3698",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-01T20:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1068719,
+      "knownSubtotalUsd": 0.1068719
     }
   ],
   "topicRetry": {
