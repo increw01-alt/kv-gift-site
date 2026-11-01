@@ -1110,5 +1110,18 @@
     "publication_mode": "automatic",
     "run_id": "41226666644",
     "usage_file": "data/editorial_runs/2026-11-01/41226666644.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2575,
+    "topic": "직접 전달할 종이상품권의 봉투 규격을 구매 전에 어떻게 재볼까요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "종이상품권과 봉투의 실제 크기·두께를 미리 재서 접힘 없이 들어가는지 확인하는 방법을 찾는 질문",
+    "image_scene": "책상 위에 자와 노트, 종이상품권 샘플, 봉투 견본을 나란히 두고 한 사람이 봉투 안쪽 가로세로와 상품권 크기를 같은 기준선으로 재며 비교하는 구도",
+    "image_alt": "책상 위에서 자로 종이상품권과 봉투 안쪽 치수를 함께 재며 맞는지 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41320505443",
+    "usage_file": "data/editorial_runs/2026-11-02/41320505443.json"
   }
 ]
