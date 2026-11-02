@@ -1,18 +1,20 @@
 {
   "run_id": "41410807715",
   "date_kst": "2026-11-02",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "상품권 구매 후보의 미확인 조건을 유리한 점수로 오인하지 않으려면?",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-02T08:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ContentValidationError: 자동 검수에서 금지 표현이 발견되어 게시를 중단했습니다: 0"
+    ]
   },
   "api_usage": {
     "run_id": "41410807715",
@@ -22,15 +24,220 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-02T17:08:54.193129+09:00"
+      "attempt_started_at": "2026-11-02T17:08:54.193129+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": []
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "상품권 구매 후보의 미확인 조건을 유리한 점수로 오인하지 않으려면?",
+        "source_id": "",
+        "reader_problem": "여러 상품권 후보를 사용 편의와 전달 부담 등으로 평가할 때 안내가 없는 조건을 좋게 착각하여 순위를 잘못 매기는 문제",
+        "distinct_angle": "미확인 조건을 그냥 좋게 가정하는 대신, 반드시 필수 조건을 통과·탈락·미확인으로 분류한 후에, 확인된 항목만을 객관적으로 평가하는 의사결정 도구를 제공하여 오해를 차단하는 방식을 설명한다.",
+        "reader_situation": "상품권 후보의 조건들을 정확히 파악하지 못해 장점으로 오인해 구매 순위를 왜곡하는 구매 전 사용자가 실제로 사용할 편리성, 선물 편의, 가격 등을 비교·판단하려는 상황",
+        "deliverable": "통과·탈락·미확인으로 항목을 분리하고, 확인된 조건만 평가하는 의사결정표 양식으로 미확인 조건을 0점 또는 평가 제외로 처리하는 판단 기준 표와 작성 가이드",
+        "task_id": "supply-20261101-purchase-unknown-score",
+        "outline": [
+          "구매 후보별 필수 조건을 통과, 탈락, 미확인으로 체계적으로 분류하기",
+          "확인된 조건 항목만을 추려 객관적으로 평가할 평가 도구 설계법",
+          "미확인 조건을 유리한 점수로 오인하지 않고 안전하게 무시하는 의사결정표 작성과 사용"
+        ],
+        "novelty_reason": "기존 글들 중 가장 가까운 것은 /board/gc_tip/29로, 상품권 구매 시 카드 실적과 포인트 적립을 각각 확인하라는 내용입니다. 하지만 이번 후보는 혜택 여부를 묻는 글이 아니라, 여러 상품권 후보를 고를 때 ‘안내가 없는 조건’을 유리하게 오인하지 않도록 필수 조건을 통과·탈락·미확인으로 먼저 분류하고, 확인된 항목만 점수화하는 의사결정표를 만드는 문제를 다룹니다. 즉 기존 글이 ‘무엇을 각각 확인할지’에 초점이 있다면, 이번 글은 ‘미확인 조건을 평가에서 제외하는 판단 규칙’과 그 적용 예시를 제공해 구매 순위 왜곡을 막는 점이 새롭습니다.",
+        "screen_rejections": []
+      },
+      "board": "purchase",
+      "topic": "상품권 구매 후보의 미확인 조건을 유리한 점수로 오인하지 않으려면?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-01T13:25:08Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "wording_repair": {
+        "attempt": 1,
+        "stage": "after_editing",
+        "issues": [
+          {
+            "field": "sections[1].body",
+            "text": "0"
+          },
+          {
+            "field": "sections[2].body",
+            "text": "0"
+          },
+          {
+            "field": "checks[2]",
+            "text": "0"
+          }
+        ],
+        "status": "failed"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5808,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 350,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6158
+        },
+        "estimated_usd": 0.0028832,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T08:09:01.569379+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6197,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 354,
+          "output_tokens_details": {
+            "reasoning_tokens": 147
+          },
+          "total_tokens": 6551
+        },
+        "estimated_usd": 0.00624075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T08:09:04.703525+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2884,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 528,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3412
+        },
+        "estimated_usd": 0.0019984,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T08:09:08.743032+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4318,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 583,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4901
+        },
+        "estimated_usd": 0.00266,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T08:09:13.902190+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2463,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 587,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3050
+        },
+        "estimated_usd": 0.0019244,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T08:09:18.071951+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T08:08:57.613246+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T08:09:01.758244+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T08:09:04.705852+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T08:09:10.125211+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T08:09:13.903719+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01570675,
+    "estimated_total_usd": 0.01570675,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

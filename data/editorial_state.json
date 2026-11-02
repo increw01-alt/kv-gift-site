@@ -244,10 +244,15 @@
       "board": "gc_tip",
       "topic": "상품권 잔액 관리와 추가 결제액 계산법으로 현명한 이용법 정리",
       "run_id": "41236644103"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 구매 후보의 미확인 조건을 유리한 점수로 오인하지 않으려면?",
+      "run_id": "41410807715"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "41395626779",
+  "last_board": "purchase",
+  "last_run_id": "41410807715",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T08:08:54.590806+00:00",
+  "generatedAt": "2026-11-02T08:09:18.442610+00:00",
   "dateKst": "2026-11-02",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 7,
   "attempts": 8,
   "held": 0,
-  "errors": 0,
-  "knownSubtotalUsd": 0.7707625,
-  "estimatedTotalUsd": null,
+  "errors": 1,
+  "knownSubtotalUsd": 0.78646925,
+  "estimatedTotalUsd": 0.78646925,
   "records": [
     {
       "runId": "41320505443",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "41410807715",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "purchase",
+      "topic": "상품권 구매 후보의 미확인 조건을 유리한 점수로 오인하지 않으려면?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-02T08:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.01570675,
+      "knownSubtotalUsd": 0.01570675
     }
   ],
   "topicRetry": {
