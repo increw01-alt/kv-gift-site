@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T00:59:39.807055+00:00",
+  "generatedAt": "2026-11-02T01:01:04.687362+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2449,7 +2449,7 @@
       "board": "sense",
       "topic": "메시지에 할 일이 여럿이면 담당자와 완료 조건을 어떻게 묶어 쓸까요?",
       "url": "https://kv-gift.co.kr/board/sense/19",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T01:01:04.666864+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10640535,
       "knownSubtotalUsd": 0.10640535
