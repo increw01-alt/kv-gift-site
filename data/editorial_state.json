@@ -249,10 +249,15 @@
       "board": "purchase",
       "topic": "상품권 구매 후보의 미확인 조건을 유리한 점수로 오인하지 않으려면?",
       "run_id": "41410807715"
+    },
+    {
+      "board": "sale",
+      "topic": "공동으로 보유한 상품권은 판매 문의 전에 누구의 의사를 모아야 할까요?",
+      "run_id": "41429685093"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "41411409454",
+  "last_board": "sale",
+  "last_run_id": "41429685093",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
