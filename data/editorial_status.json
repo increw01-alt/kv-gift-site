@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T20:44:26.349846+00:00",
+  "generatedAt": "2026-11-02T21:48:53.786815+00:00",
   "dateKst": "2026-11-03",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
-  "attempts": 4,
+  "attempts": 5,
   "held": 2,
   "errors": 0,
   "knownSubtotalUsd": 0.27073825,
-  "estimatedTotalUsd": 0.27073825,
+  "estimatedTotalUsd": null,
   "records": [
     {
       "runId": "41470206770",
@@ -63,11 +63,24 @@
       "publicVerifiedAt": null,
       "estimatedUsd": 0.03965765,
       "knownSubtotalUsd": 0.03965765
+    },
+    {
+      "runId": "41531619344",
+      "status": "generating",
+      "board": null,
+      "topic": null,
+      "url": null,
+      "triggerEvent": "workflow_dispatch",
+      "triggerSource": "cloudflare_cron",
+      "scheduledAt": "2026-11-02T21:47:54.084Z",
+      "publicVerifiedAt": null,
+      "estimatedUsd": null,
+      "knownSubtotalUsd": 0
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 2,
-    "retryAfter": "2026-11-03T06:43:47.936646+09:00",
-    "cooldownMinutes": 60
+    "consecutiveTopicHolds": 0,
+    "retryAfter": null,
+    "cooldownMinutes": 0
   }
 }
