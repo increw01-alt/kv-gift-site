@@ -254,10 +254,15 @@
       "board": "sale",
       "topic": "공동으로 보유한 상품권은 판매 문의 전에 누구의 의사를 모아야 할까요?",
       "run_id": "41429685093"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 교환 후 원래 쿠폰과 교환 결과를 효과적으로 구분하는 방법",
+      "run_id": "41521734004"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41516367051",
+  "last_board": "gc_information",
+  "last_run_id": "41521734004",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -513,6 +518,30 @@
       "topic": "상품권 결제 시 포인트 결제와 적립 구분, 사용 조건 확인하기",
       "date_kst": "2026-11-03",
       "run_id": "41516367051",
+      "status": "held"
+    },
+    {
+      "source_id": "exchange-state",
+      "board": "gc_information",
+      "topic": "상품권 교환 후 원래 쿠폰과 교환 결과를 효과적으로 구분하는 방법",
+      "date_kst": "2026-11-03",
+      "run_id": "41521734004",
+      "status": "held"
+    },
+    {
+      "source_id": "partial-use",
+      "board": "gc_information",
+      "topic": "상품권 사용 후 남은 금액과 사용 이력을 함께 관리하는 구체적 방법",
+      "date_kst": "2026-11-03",
+      "run_id": "41521734004",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-benefit",
+      "board": "gc_information",
+      "topic": "할인 혜택을 받은 상품권 결제 취소 시 혜택과 주문 내역을 구분하는 체크법",
+      "date_kst": "2026-11-03",
+      "run_id": "41521734004",
       "status": "held"
     }
   ]

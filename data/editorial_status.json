@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T20:43:48.327230+00:00",
+  "generatedAt": "2026-11-02T20:44:26.349846+00:00",
   "dateKst": "2026-11-03",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 4,
-  "held": 1,
+  "held": 2,
   "errors": 0,
-  "knownSubtotalUsd": 0.2310806,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.27073825,
+  "estimatedTotalUsd": 0.27073825,
   "records": [
     {
       "runId": "41470206770",
@@ -53,21 +53,21 @@
     },
     {
       "runId": "41521734004",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "상품권 교환 후 원래 쿠폰과 교환 결과를 효과적으로 구분하는 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-02T20:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.03965765,
+      "knownSubtotalUsd": 0.03965765
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 2,
+    "retryAfter": "2026-11-03T06:43:47.936646+09:00",
+    "cooldownMinutes": 60
   }
 }
