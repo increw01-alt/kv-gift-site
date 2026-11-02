@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T08:14:48.493863+00:00",
+  "generatedAt": "2026-11-02T08:16:11.836664+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2505,7 +2505,7 @@
       "board": "gc_information",
       "topic": "상품권 안내의 적용 단위가 주문 전체인지 개별 품목인지 어떻게 구분하나요?",
       "url": "https://kv-gift.co.kr/board/gc_information/16",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T08:16:11.807347+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10870225,
       "knownSubtotalUsd": 0.10870225
