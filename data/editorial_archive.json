@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T03:19:54.028781+00:00",
+  "generatedAt": "2026-11-02T03:20:57.623290+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2463,7 +2463,7 @@
       "board": "free",
       "topic": "선물 포장을 재사용할지 새로 준비할지 어떤 흔적을 기준으로 고를까요?",
       "url": "https://kv-gift.co.kr/board/free/479",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T03:20:57.594739+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1126023,
       "knownSubtotalUsd": 0.1126023
