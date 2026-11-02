@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T15:19:56.706067+00:00",
+  "generatedAt": "2026-11-02T15:21:20.921965+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2561,7 +2561,7 @@
       "board": "free",
       "topic": "이미 정한 선물안을 바꾸자는 의견이 늦게 나오면 다시 논의할 기준은 무엇일까요?",
       "url": "https://kv-gift.co.kr/board/free/480",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T15:21:20.898011+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1068849,
       "knownSubtotalUsd": 0.1068849
