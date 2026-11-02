@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T12:58:47.160513+00:00",
+  "generatedAt": "2026-11-02T12:59:55.037065+00:00",
   "dateKst": "2026-11-02",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 9,
+  "published": 10,
   "verified": 9,
   "attempts": 12,
   "held": 1,
   "errors": 1,
-  "knownSubtotalUsd": 1.1099226,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 1.22760225,
+  "estimatedTotalUsd": 1.22760225,
   "records": [
     {
       "runId": "41320505443",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "41448955699",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "서로 다른 단위로 적힌 치수를 한 메모에 옮길 때 환산 실수를 줄이려면?",
+      "url": "https://kv-gift.co.kr/board/sense/20",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-02T12:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11767965,
+      "knownSubtotalUsd": 0.11767965
     }
   ],
   "topicRetry": {

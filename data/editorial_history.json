@@ -1227,5 +1227,18 @@
     "publication_mode": "automatic",
     "run_id": "41430364063",
     "usage_file": "data/editorial_runs/2026-11-02/41430364063.json"
+  },
+  {
+    "board": "sense",
+    "id": 20,
+    "topic": "서로 다른 단위로 적힌 치수를 한 메모에 옮길 때 환산 실수를 줄이려면?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "서로 다른 단위의 치수를 메모에 옮길 때 원값과 환산값을 헷갈리지 않고 정확히 기록하는 방법",
+    "image_scene": "책상 위에 자와 계산기, 줄자, 그리고 단위가 다른 치수 메모지가 놓여 있고 한 사람이 원래 단위와 환산 단위를 칸별로 나눠 적은 뒤 역환산 결과를 옆 칸에 다시 적어 대조하는 구도",
+    "image_alt": "책상 위 메모지에 서로 다른 단위의 치수와 환산값을 칸별로 적어 두고 자와 계산기로 함께 대조하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41448955699",
+    "usage_file": "data/editorial_runs/2026-11-02/41448955699.json"
   }
 ]
