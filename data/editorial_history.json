@@ -1240,5 +1240,18 @@
     "publication_mode": "automatic",
     "run_id": "41448955699",
     "usage_file": "data/editorial_runs/2026-11-02/41448955699.json"
+  },
+  {
+    "board": "free",
+    "id": 480,
+    "topic": "이미 정한 선물안을 바꾸자는 의견이 늦게 나오면 다시 논의할 기준은 무엇일까요?",
+    "drafted_at": "2026-11-03",
+    "automation": true,
+    "search_intent": "모임에서 이미 정한 선물안을 늦게 바꾸자고 할 때 다시 논의할지 판단 기준을 정리하려는 질문",
+    "image_scene": "회의 테이블 위에 선물 후보가 적힌 카드 몇 장과 진행 단계 메모, 변경 요청이 적힌 포스트잇이 놓여 있고 한 사람이 '주문 전 / 진행 중 / 완료' 칸으로 나뉜 판단표를 보며 다시 논의할지 체크하는 구도",
+    "image_alt": "회의 테이블 위에서 선물 후보 카드와 진행 단계 메모를 나란히 두고, 한 사람이 변경 요청이 적힌 포스트잇을 보며 재논의 여부를 체크하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41470206770",
+    "usage_file": "data/editorial_runs/2026-11-03/41470206770.json"
   }
 ]
