@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T00:58:43.019400+00:00",
+  "generatedAt": "2026-11-02T00:59:39.790648+00:00",
   "dateKst": "2026-11-02",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 4,
+  "published": 5,
   "verified": 4,
   "attempts": 5,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.438173,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.54457835,
+  "estimatedTotalUsd": 0.54457835,
   "records": [
     {
       "runId": "41320505443",
@@ -66,16 +66,16 @@
     },
     {
       "runId": "41369952642",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "메시지에 할 일이 여럿이면 담당자와 완료 조건을 어떻게 묶어 쓸까요?",
+      "url": "https://kv-gift.co.kr/board/sense/19",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-02T00:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10640535,
+      "knownSubtotalUsd": 0.10640535
     }
   ],
   "topicRetry": {

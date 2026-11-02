@@ -1162,5 +1162,18 @@
     "publication_mode": "automatic",
     "run_id": "41357683726",
     "usage_file": "data/editorial_runs/2026-11-02/41357683726.json"
+  },
+  {
+    "board": "sense",
+    "id": 19,
+    "topic": "메시지에 할 일이 여럿이면 담당자와 완료 조건을 어떻게 묶어 쓸까요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "메시지에 여러 할 일이 섞일 때 각 요청의 행동, 담당자, 완료 조건을 한 줄로 묶어 헷갈리지 않게 정리하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 업무 메시지를 옮겨 적은 메모지와 작은 화이트보드가 놓여 있고, 화이트보드에는 ‘할 일 / 담당자 / 완료 조건’ 세 칸이 그려져 있다. 한 사람이 각 칸에 항목을 적으며 여러 요청을 한 행씩 정리하는 구도",
+    "image_alt": "책상 위 화이트보드의 세 칸 표에 할 일과 담당자, 완료 조건을 나눠 적는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41369952642",
+    "usage_file": "data/editorial_runs/2026-11-02/41369952642.json"
   }
 ]
