@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T12:59:55.062816+00:00",
+  "generatedAt": "2026-11-02T13:01:19.061298+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2547,7 +2547,7 @@
       "board": "sense",
       "topic": "서로 다른 단위로 적힌 치수를 한 메모에 옮길 때 환산 실수를 줄이려면?",
       "url": "https://kv-gift.co.kr/board/sense/20",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T13:01:19.030449+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11767965,
       "knownSubtotalUsd": 0.11767965
