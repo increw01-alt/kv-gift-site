@@ -1,18 +1,20 @@
 {
   "run_id": "41516367051",
   "date_kst": "2026-11-03",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-02T20:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 새로 필요한 구체적 해결 문제나 기존 답으로는 처리되지 않는 차별적 행동이 확인되지 않아 본문 생성 전에 보류가 적절합니다. / 0번은 /board/gc_information/6의 ‘상품권 결제 시 카드 실적과 이벤트 실적의 차이와 확인 방법’과 중복됩니다. 카드 명세서와 이벤트 조건을 비교해 실적 인정 여부를 확인하는 질문과 해결 흐름이 이미 공개 글에서 해결된 문제입니다. / 1번은 /board/free/470 및 /board/sense/8의 ‘선물용 상품권 선택 시 받는 사람의 기기와 사용환경 점검’과 중복됩니다. 기기 종류, 앱 설치, 사용 환경을 확인해 맞춤 선택하는 절차가 동일합니다. / 2번은 /board/general_notice/45의 ‘상품권 유효기간이 다가온다면, 교환 기한과 사용 기한을 구분해 주세요’와 중복됩니다. 날짜 표시를 해석하고 실제 사용 가능 기간을 확인하는 핵심 질문이 이미 다뤄졌습니다. / 3번은 /board/gc_information/6의 카드 실적 구분 안내와 실질적으로 같은 문제를 다룹니다. 포인트 결제와 적립을 구분해 결제 전후 실적과 혜택을 확인하라는 흐름이 기존 실적 확인 글의 범위를 벗어나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41516367051",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-03T05:08:50.968443+09:00"
+      "attempt_started_at": "2026-11-03T05:08:50.968443+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 결제 시 카드 실적 인정 범위와 이벤트 실적 차이 명확히 구분하기",
+          "source_id": "card-performance",
+          "reader_problem": "상품권 결제의 카드 실적과 이벤트 실적이 어떻게 다르게 처리되는지 정확한 확인 방법을 몰라 혼란스러운 구매자.",
+          "distinct_angle": "일반적인 카드 실적 안내와 달리, 결제 후 카드 명세서와 이벤트 조건별 실적 반영 기록을 비교하는 구체적 점검 절차를 제시한다.",
+          "reader_situation": "상품권 결제 후 카드 실적 확인이나 이벤트 참여 여부를 판단하고자 하나, 청구 내역과 카드사 이벤트 조건 이해가 어려운 고객.",
+          "deliverable": "카드 결제 실적과 이벤트 실적의 차이점, 각 실적 인정 기록을 비교하는 점검 목록과 단계별 확인 가이드.",
+          "task_id": "",
+          "outline": [
+            "신용카드 결제 실적 인정 기준과 처리 흐름 이해하기",
+            "이벤트 실적 조건과 일반 실적 기록 간 차이점 파악하기",
+            "카드 명세서 및 이벤트 실적 반영 내역 확인하는 실제 점검 절차 적용하기"
+          ]
+        },
+        {
+          "topic": "선물 상품권 받는 사람 사용 환경 세심 배려하기",
+          "source_id": "gift-choice",
+          "reader_problem": "선물 상품권을 고를 때 받는 사람이 모바일 기기 종류와 사용 가능 환경을 상세히 모르면 선물 선택이 어려움.",
+          "distinct_angle": "일반적인 상품권 추천과 달리, 받는 사람의 기기 호환성, 네트워크 상황, 앱 설치 여부 등을 점검하고 맞춤 추천하는 구체적 점검법과 의사 확인 절차를 안내한다.",
+          "reader_situation": "선물용 상품권 구입 전에 상대의 사용 환경을 점검해 적합한 상품권 종류를 선택하려는 구매자.",
+          "deliverable": "받는 사람의 사용 가능한 기기 종류와 환경 체크리스트, 선물 선택에 반영하는 맞춤 추천 기준 및 의사소통 가이드.",
+          "task_id": "",
+          "outline": [
+            "받는 사람 기기 종류와 운영체제 확인 방법 익히기",
+            "앱 설치 유무, 네트워크 환경 등 사용 가능 조건 세부 점검하기",
+            "점검 결과를 기반으로 적합한 상품권 추천과 선물 대화 진행하기"
+          ]
+        },
+        {
+          "topic": "모바일상품권의 표시 기한과 실제 이용 가능 기간 정확히 확인하는 법",
+          "source_id": "voucher-expiry",
+          "reader_problem": "모바일상품권 화면에 표시된 다양한 날짜들(구매일, 유효기간, 사용기한)을 어떻게 해석하고 실제 사용 조건과 연계해 확인해야 하는지 모름.",
+          "distinct_angle": "표시된 날짜별 의미를 해석하는 일반 안내를 넘어서 화면별 날짜 위치와 용어 차이를 시각적으로 규명하고 실제 사용 안내와 대조하는 종합 확인 방법 제공.",
+          "reader_situation": "구매한 모바일상품권의 각 날짜들이 무엇을 의미하는지 정확히 파악해 만료 전에 안전하게 사용하고자 하는 고객.",
+          "deliverable": "모바일상품권 화면 내 날짜별 정보 해석 가이드, 용어와 위치별 실제 의미 파악법, 사용 가능 기간과 조건을 대조해 정리하는 실무 안내.",
+          "task_id": "",
+          "outline": [
+            "상품권 화면에 표시된 주요 날짜 종류와 의미 구분하기",
+            "날짜별 구매 조건 및 사용 기한과 실제 이용 안내 비교 분석하기",
+            "이를 바탕으로 유효기간 체크와 만료 전 이용 계획 수립하기"
+          ]
+        },
+        {
+          "topic": "상품권 결제 시 포인트 결제와 적립 구분, 사용 조건 확인하기",
+          "source_id": "point-payment",
+          "reader_problem": "포인트로 결제하는 경우와 결제 후 포인트가 적립되는 경우를 구분하지 못해 결제 전 후 예상 실적과 혜택 확인이 어려움.",
+          "distinct_angle": "단순 일반 안내를 뛰어넘어 포인트 결제 승인 절차와 적립 조건을 결제 기록별로 구분하여 확인하는 구체적 점검법과 활용 사례 안내.",
+          "reader_situation": "상품권 구매 시 포인트 사용과 적립 여부를 명확히 구분해 결제 계획을 세우려는 고객.",
+          "deliverable": "포인트 결제와 적립의 차이 설명, 결제 기록 및 주문 내역에서 각각 확인하는 절차, 예상 혜택 판단 및 문의 준비 가이드.",
+          "task_id": "",
+          "outline": [
+            "포인트 결제와 적립 개념 및 적용 과정 이해하기",
+            "결제 내역과 주문서에서 각 상태 구분하는 실제 점검법 익히기",
+            "결제 후 실적 및 혜택 있음을 확인하고 문의 대응 준비하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22490,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1004,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23494
+        },
+        "estimated_usd": 0.0106024,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T20:09:05.082669+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10765,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 501,
+          "output_tokens_details": {
+            "reasoning_tokens": 142
+          },
+          "total_tokens": 11266
+        },
+        "estimated_usd": 0.01032825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T20:09:09.550079+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T20:08:53.816690+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T20:09:05.812015+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02093065,
+    "estimated_total_usd": 0.02093065,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

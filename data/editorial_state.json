@@ -256,8 +256,8 @@
       "run_id": "41429685093"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "41493762295",
+  "last_board": "purchase",
+  "last_run_id": "41516367051",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -481,6 +481,38 @@
       "topic": "신용카드 이용한 상품권 구매 한도 정확히 확인하는 실전 점검법",
       "date_kst": "2026-11-01",
       "run_id": "41227053549",
+      "status": "held"
+    },
+    {
+      "source_id": "card-performance",
+      "board": "purchase",
+      "topic": "상품권 결제 시 카드 실적 인정 범위와 이벤트 실적 차이 명확히 구분하기",
+      "date_kst": "2026-11-03",
+      "run_id": "41516367051",
+      "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "purchase",
+      "topic": "선물 상품권 받는 사람 사용 환경 세심 배려하기",
+      "date_kst": "2026-11-03",
+      "run_id": "41516367051",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-expiry",
+      "board": "purchase",
+      "topic": "모바일상품권의 표시 기한과 실제 이용 가능 기간 정확히 확인하는 법",
+      "date_kst": "2026-11-03",
+      "run_id": "41516367051",
+      "status": "held"
+    },
+    {
+      "source_id": "point-payment",
+      "board": "purchase",
+      "topic": "상품권 결제 시 포인트 결제와 적립 구분, 사용 조건 확인하기",
+      "date_kst": "2026-11-03",
+      "run_id": "41516367051",
       "status": "held"
     }
   ]
