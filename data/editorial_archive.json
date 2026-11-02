@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T05:44:42.558415+00:00",
+  "generatedAt": "2026-11-02T05:46:06.030982+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2477,7 +2477,7 @@
       "board": "gc_tip",
       "topic": "교환권으로 받은 묶음 물품에서 빠진 구성품을 어떻게 찾아낼까요?",
       "url": "https://kv-gift.co.kr/board/gc_tip/44",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T05:46:06.016603+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11358185,
       "knownSubtotalUsd": 0.11358185

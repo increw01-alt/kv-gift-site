@@ -9,7 +9,7 @@
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-02T05:42:54.084Z",
-  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
+  "publication": "공개 게시글과 원본 PNG 확인 완료",
   "review": {
     "approved": true,
     "checks": {
@@ -381,5 +381,7 @@
     "known_subtotal_usd": 0.11358185,
     "estimated_total_usd": 0.11358185,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
-  }
+  },
+  "public_verified_at": "2026-11-02T05:46:06.016603+00:00",
+  "banner_sha256": "58ecf1f5282209722ed89e5a91792c0b1af0a57bae896a0e8f3e8afd30ef9e78"
 }
