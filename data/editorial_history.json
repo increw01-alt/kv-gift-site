@@ -1201,5 +1201,18 @@
     "publication_mode": "automatic",
     "run_id": "41395626779",
     "usage_file": "data/editorial_runs/2026-11-02/41395626779.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 16,
+    "topic": "상품권 안내의 적용 단위가 주문 전체인지 개별 품목인지 어떻게 구분하나요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "상품권 안내에서 주문 전체와 개별 품목 중 어느 단위에 조건이 붙는지 스스로 구분하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 주문서 한 장과 상품 목록 카드 여러 장을 나란히 펼쳐 두고, 한 사람이 ‘주문 전체’라고 적힌 큰 영역과 ‘품목별’이라고 적힌 작은 카드들을 구분 표시하며 적용 범위를 비교하는 장면",
+    "image_alt": "주문서와 개별 상품 카드가 나란히 놓인 책상에서 적용 범위를 표시해 비교하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41411409454",
+    "usage_file": "data/editorial_runs/2026-11-02/41411409454.json"
   }
 ]
