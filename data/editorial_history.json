@@ -1175,5 +1175,18 @@
     "publication_mode": "automatic",
     "run_id": "41369952642",
     "usage_file": "data/editorial_runs/2026-11-02/41369952642.json"
+  },
+  {
+    "board": "free",
+    "id": 479,
+    "topic": "선물 포장을 재사용할지 새로 준비할지 어떤 흔적을 기준으로 고를까요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "이전 표시와 손상 흔적을 보고 선물 포장지를 다시 써도 되는지 판단하는 기준을 알고 싶은 질문",
+    "image_scene": "책상 위에 접어 둔 선물 포장지 한 장과 이름 스티커, 작은 자, 돋보기가 놓여 있고 한 사람이 스티커 자국과 모서리 찢김을 가까이 살펴보며 재사용 여부를 판단하는 구도",
+    "image_alt": "책상 위에서 선물 포장지의 이름 스티커 자국과 모서리 손상을 돋보기로 살펴보며 재사용 여부를 확인하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41382321237",
+    "usage_file": "data/editorial_runs/2026-11-02/41382321237.json"
   }
 ]
