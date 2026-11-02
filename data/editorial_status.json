@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T05:43:35.620656+00:00",
+  "generatedAt": "2026-11-02T05:44:42.547644+00:00",
   "dateKst": "2026-11-02",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 6,
+  "published": 7,
   "verified": 6,
   "attempts": 7,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.65718065,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.7707625,
+  "estimatedTotalUsd": 0.7707625,
   "records": [
     {
       "runId": "41320505443",
@@ -92,16 +92,16 @@
     },
     {
       "runId": "41395626779",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "교환권으로 받은 묶음 물품에서 빠진 구성품을 어떻게 찾아낼까요?",
+      "url": "https://kv-gift.co.kr/board/gc_tip/44",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-02T05:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11358185,
+      "knownSubtotalUsd": 0.11358185
     }
   ],
   "topicRetry": {

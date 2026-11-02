@@ -1188,5 +1188,18 @@
     "publication_mode": "automatic",
     "run_id": "41382321237",
     "usage_file": "data/editorial_runs/2026-11-02/41382321237.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 44,
+    "topic": "교환권으로 받은 묶음 물품에서 빠진 구성품을 어떻게 찾아낼까요?",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "교환권으로 받은 묶음 물품에서 구성품 누락 여부를 상품 설명과 실제 수령품을 대조해 판정하려는 질문",
+    "image_scene": "책상 위에 묶음 상품 상자와 구성품 메모지가 펼쳐져 있고, 한 사람이 상자 안의 물품을 하나씩 꺼내며 메모지의 항목과 개수를 체크하는 장면",
+    "image_alt": "상자에서 꺼낸 구성품을 메모지의 목록과 하나씩 맞춰 보며 누락 여부를 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41395626779",
+    "usage_file": "data/editorial_runs/2026-11-02/41395626779.json"
   }
 ]

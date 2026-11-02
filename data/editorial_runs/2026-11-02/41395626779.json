@@ -1,17 +1,27 @@
 {
   "run_id": "41395626779",
   "date_kst": "2026-11-02",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "gc_tip",
+  "topic": "교환권으로 받은 묶음 물품에서 빠진 구성품을 어떻게 찾아낼까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/gc_tip/44",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-02T05:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,354 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-02T14:43:35.339295+09:00"
+      "attempt_started_at": "2026-11-02T14:43:35.339295+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권을 쓰기 직전에 휴대전화 배터리가 부족하면 무엇부터 준비할까요?",
+          "source_id": "",
+          "reader_problem": "매장 도착 후 모바일 상품권 바로 제시 가능 여부와 휴대전화 충전 필요성 판단이 어려운 상황",
+          "distinct_angle": "접속 및 인증 단계 구분과 현장 충전 가능성 판단을 통해 즉시 이용과 방문 재조사의 분기점을 구체적으로 소개함",
+          "reader_situation": "매장에 도착했으나 휴대전화 전원이 부족해 모바일 상품권을 지금 제시할지 충전 후 이용할지 결정해야 하는 독자",
+          "deliverable": "접속·인증 필요 단계를 나누고, 현장 또는 인근 충전 가능 장소를 점검해 즉시 이용 또는 재방문 결정을 돕는 분기표",
+          "task_id": "supply-20261101-tip-battery-triage",
+          "outline": [
+            "모바일 상품권 접속과 인증 절차 단계별 확인하기",
+            "주변 충전 설비와 시간 소요 점검 방법 안내",
+            "충전 및 재방문 여부 결정용 선택 분기표 완성하기"
+          ]
+        },
+        {
+          "topic": "상품권 표시 화면의 가장자리가 잘릴 때 확대와 화면 방향을 어떻게 점검할까요?",
+          "source_id": "",
+          "reader_problem": "상품권 바코드 등이 잘려 인식 오류 우려 시 확대 축소 및 화면 회전 복원 절차가 낯설고 혼란스러운 문제",
+          "distinct_angle": "임의 확대·편집 금지 조건 속에서 단계별 정상 표시 복원과 원 화면 재진입 방법을 체계적으로 구분하여 제공함",
+          "reader_situation": "상품권 제시 시 확대 또는 화면 방향으로 바코드 일부가 가려져 정상 표시를 확보할지 여부를 고민하는 독자",
+          "deliverable": "확대 해제, 화면 방향 복원, 원래 표시 화면 재진입 순으로 구분한 점검 리스트와 실행 가이드",
+          "task_id": "supply-20261101-tip-display-clipping",
+          "outline": [
+            "상품권 화면 확대 상태 점검 및 복원 단계 이해하기",
+            "화면 방향 정상 복원 절차 시행하기",
+            "원래 표시 화면 재진입으로 최종 확인 및 문제 해결하기"
+          ]
+        },
+        {
+          "topic": "상품권 결제 영수증에서 상품 할인과 결제수단별 차감을 따로 검산하려면?",
+          "source_id": "",
+          "reader_problem": "상품권 결제 이후 할인 및 여러 결제수단 차감 금액 합계가 맞지 않아 영수증 검산이 어렵고 추정이 불안한 상황",
+          "distinct_angle": "할인 전 합계부터 상품 할인, 상품권·다른 결제수단 차감 금액을 분리, 정리하는 공식화된 등식표로 명확 검산법을 안내함",
+          "reader_situation": "상품권으로 결제 완료 후 할인과 결제수단별 차감 금액을 분리해 영수증 금액을 검산하려는 독자",
+          "deliverable": "상품권 사용 전 합계에서 할인을 뺀 금액과 결제수단별 차감액 합계의 검증용 등식표 및 점검 지침",
+          "task_id": "supply-20261101-tip-receipt-equation",
+          "outline": [
+            "할인 전 금액과 상품 할인 분리하기",
+            "상품권 차감액 및 기타 결제수단 금액 분리 검산하기",
+            "영수증 금액과 산출한 합계 등식 대조 및 점검 단계"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "교환권으로 받은 묶음 물품에서 빠진 구성품을 어떻게 찾아낼까요?",
+        "source_id": "",
+        "reader_problem": "묶음으로 교환받은 물품 중 안에 들어있어야 할 구성품 수량과 종류가 실제와 다를 때 누락 판단이 모호함",
+        "distinct_angle": "상품 설명과 실제 수령품 구성 목록을 일치시키고, 미수령 여부·별도 포장 가능성·확인 필요 항목으로 나눠 대조하는 체크 방법 제공",
+        "reader_situation": "교환권으로 물품을 수령했으나 포장 겉 수량과 내부 구성품이 달라 누락 여부 확인을 원하는 독자",
+        "deliverable": "구성 목록별 미수령·별도 포장 등 상태를 구분해 체계적으로 확인하는 대조표와 절차 안내",
+        "task_id": "supply-20261101-tip-kit-components",
+        "outline": [
+          "상품 설명의 구성 목록 항목별 세밀히 점검하기",
+          "수령품과 대조해 미수령 또는 별도 포장 항목 확인하기",
+          "확인 필요 구성품 분류 및 누락 판단 기준 마련하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글들은 결제 전 금액 확인, 잔액/이력 관리처럼 ‘금액·내역’을 확인하는 문제를 다루지만, 3번은 교환권으로 받은 묶음 물품에서 실제 구성품이 빠졌는지 ‘구성 목록 대조’로 판정하는 별개의 문제입니다. 독자가 처한 상황도 포장 겉수량과 내부 구성품 불일치라는 수령 직후 검수이며, 새 글에서 추가하는 해결 내용은 상품 설명의 구성 항목을 하나씩 대응시켜 미수령·별도 포장·확인 필요로 나누는 구체적 점검 절차입니다. 기존 답만으로는 처리되지 않는 실제 누락 판별 기준과 대조표가 있어 새 방향성이 가장 분명합니다.",
+        "screen_rejections": [
+          "0번은 이미 도착한 모바일 상품권을 쓰기 직전 배터리가 부족할 때의 대처로, 발송 여부 확인이나 연락처 점검 같은 기존 글과 달리 보이지만 핵심은 ‘지금 제시 가능한지/재방문할지’ 판단을 위한 기기 상태 점검입니다. 다만 충전 가능 여부에 따른 분기 자체는 구체적이지만, 다른 후보들보다 상대적으로 일반적이라 3번보다 우선순위가 낮습니다.",
+          "1번은 확대·화면 방향 때문에 바코드가 잘리는 화면 복원 문제로, 기존 글들과 직접 중복되지는 않습니다. 그러나 실제 해결이 화면 표시 정상화에 집중되어 있고, 다른 후보들에 비해 사용 단계의 구체적 상황 변화가 적어 선택하지 않았습니다.",
+          "2번은 결제 후 영수증에서 상품 할인과 결제수단별 차감을 등식으로 검산하는 문제로, 기존의 최종 결제 금액 확인 글과 인접합니다. 다만 결제 전 확인이 아니라 사후 검산이라는 차이는 있지만, ‘금액이 맞는지 확인’이라는 목적이 가까워 3번보다 새로움이 약합니다."
+        ]
+      },
+      "board": "gc_tip",
+      "topic": "교환권으로 받은 묶음 물품에서 빠진 구성품을 어떻게 찾아낼까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-01T13:25:08Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "wording_repair": {
+        "attempt": 1,
+        "stage": "after_editing",
+        "issues": [
+          {
+            "field": "sections[0].body",
+            "text": "1"
+          }
+        ],
+        "status": "passed"
+      },
+      "search_intent": "교환권으로 받은 묶음 물품에서 구성품 누락 여부를 상품 설명과 실제 수령품을 대조해 판정하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6816,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1007,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7823
+        },
+        "estimated_usd": 0.0043376,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T05:43:45.475709+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10739,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 666,
+          "output_tokens_details": {
+            "reasoning_tokens": 191
+          },
+          "total_tokens": 11405
+        },
+        "estimated_usd": 0.01105125,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T05:43:50.453608+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3059,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 488,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3547
+        },
+        "estimated_usd": 0.0020044,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T05:43:54.023089+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4655,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 484,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5139
+        },
+        "estimated_usd": 0.0026364,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T05:43:59.301870+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2514,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3040
+        },
+        "estimated_usd": 0.0018472,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T05:44:02.869526+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18961,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 378,
+          "output_tokens_details": {
+            "reasoning_tokens": 200
+          },
+          "total_tokens": 19339
+        },
+        "estimated_usd": 0.01592175,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T05:44:06.738906+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3557,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1061
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4929
+        },
+        "estimated_usd": 0.066433,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T05:44:35.955460+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11225,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 207,
+          "output_tokens_details": {
+            "reasoning_tokens": 142
+          },
+          "total_tokens": 11432
+        },
+        "estimated_usd": 0.00935025,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T05:44:41.704447+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T05:43:38.379886+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T05:43:45.846268+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T05:43:50.455167+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T05:43:54.920961+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T05:43:59.303162+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T05:44:03.912765+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-02T05:44:06.751502+00:00",
+        "usage_record_index": 6
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T05:44:36.762681+00:00",
+        "usage_record_index": 7
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11358185,
+    "estimated_total_usd": 0.11358185,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
