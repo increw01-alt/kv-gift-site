@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T17:44:55.426652+00:00",
+  "generatedAt": "2026-11-02T17:45:59.192252+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2575,7 +2575,7 @@
       "board": "gc_tip",
       "topic": "상품권으로 장볼 때 무게로 매긴 가격과 포장 총액을 어떻게 맞춰 볼까요?",
       "url": "https://kv-gift.co.kr/board/gc_tip/45",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-02T17:45:59.163424+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.10326505,
       "knownSubtotalUsd": 0.10326505
