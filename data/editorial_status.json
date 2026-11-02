@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T21:48:53.786815+00:00",
+  "generatedAt": "2026-11-02T21:49:20.095290+00:00",
   "dateKst": "2026-11-03",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 5,
-  "held": 2,
+  "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.27073825,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2998774,
+  "estimatedTotalUsd": 0.2998774,
   "records": [
     {
       "runId": "41470206770",
@@ -66,21 +66,21 @@
     },
     {
       "runId": "41531619344",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "직접 사용할 때 줄어드는 지출과 상품권 판매 제시액을 어떻게 비교할까요?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-02T21:47:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02913915,
+      "knownSubtotalUsd": 0.02913915
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 3,
+    "retryAfter": "2026-11-03T08:48:53.386934+09:00",
+    "cooldownMinutes": 120
   }
 }

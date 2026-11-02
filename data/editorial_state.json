@@ -259,10 +259,15 @@
       "board": "gc_information",
       "topic": "상품권 교환 후 원래 쿠폰과 교환 결과를 효과적으로 구분하는 방법",
       "run_id": "41521734004"
+    },
+    {
+      "board": "sale",
+      "topic": "직접 사용할 때 줄어드는 지출과 상품권 판매 제시액을 어떻게 비교할까요?",
+      "run_id": "41531619344"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "41521734004",
+  "last_board": "sale",
+  "last_run_id": "41531619344",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
