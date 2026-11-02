@@ -1214,5 +1214,18 @@
     "publication_mode": "automatic",
     "run_id": "41411409454",
     "usage_file": "data/editorial_runs/2026-11-02/41411409454.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 66,
+    "topic": "번역 기능으로 읽은 이용 안내는 핵심 용어를 원문과 나눠 확인해 주세요",
+    "drafted_at": "2026-11-02",
+    "automation": true,
+    "search_intent": "자동 번역된 이용 안내에서 원문과 번역 용어가 다를 때 의미 차이를 스스로 확인하는 방법을 알고 싶다",
+    "image_scene": "책상 위에 외국어 이용 안내가 열린 노트북과 번역된 안내가 보이는 스마트폰을 나란히 두고, 가운데에는 원문 단어와 번역어를 한 줄씩 적는 메모지와 형광펜이 놓여 있다. 한 사람이 취소, 교환 같은 핵심 용어를 표시하며 두 화면을 대조하는 구도",
+    "image_alt": "노트북의 원문 안내와 스마트폰의 번역 안내를 옆에 두고 핵심 용어를 하나씩 대조하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41430364063",
+    "usage_file": "data/editorial_runs/2026-11-02/41430364063.json"
   }
 ]

@@ -1,17 +1,27 @@
 {
   "run_id": "41430364063",
   "date_kst": "2026-11-02",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "general_notice",
+  "topic": "번역 기능으로 읽은 이용 안내는 핵심 용어를 원문과 나눠 확인해 주세요",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/general_notice/66",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-02T10:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,265 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-02T19:40:18.911043+09:00"
+      "attempt_started_at": "2026-11-02T19:40:18.911043+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "번역 기능으로 읽은 이용 안내는 핵심 용어를 원문과 나눠 확인해 주세요",
+        "source_id": "",
+        "reader_problem": "브라우저 자동 번역 기능으로 이용 안내를 읽을 때 원문과 번역된 용어가 일치하는지, 특히 '취소'나 '교환' 같은 중요한 표현의 뜻이 확실하지 않아 혼란스러운 문제",
+        "distinct_angle": "기존 글은 일반 안내나 번역본 설명에 머무르나, 본 글은 원문과 번역 표현을 나란히 대조하여 주요 용어의 정확한 의미와 차이를 체계적으로 정리해 보여 주는 실용적 도구를 제공함",
+        "reader_situation": "외국어 사이트를 이용하며 자동 번역된 안내를 보다가 서비스 이용·문의 시 사용하는 핵심 용어가 불확실해 문의 준비를 하려는 이용자",
+        "deliverable": "원문 주요 이용 안내 용어와 이에 대응하는 번역 표현, 뜻 차이가 모호한 부분을 대응시켜 점검할 수 있는 문의 준비표, '번역문이 공식 약관이 아니다'는 안내 문구 예시 포함",
+        "task_id": "supply-20261101-notice-translation-terms",
+        "outline": [
+          "주요 이용 안내 핵심 용어와 사용 예시 원문 정리하기",
+          "자동 번역 결과와 원문의 핵심 용어 대조 방식 소개하기",
+          "뜻이 분명하지 않은 번역 표현 점검과 문의 전 점검표 작성법 안내하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글들은 문의 답변 비교(53), 캡처 시 개인정보 분리(56), 첨부파일 확장자와 실제 열림 내용 구분(65)처럼 ‘문의 준비’의 다른 점검을 다루고 있습니다. 이번 후보는 브라우저 자동 번역으로 읽은 안내에서 원문 용어와 번역 표현을 나란히 대조해 취소·교환 같은 핵심 용어의 뜻 차이를 확인하는 문제를 해결하므로, 기존 글이 답한 질문과는 다릅니다. 특히 원문-번역 대응표와 ‘번역문은 공식 약관이 아니다’라는 확인 기준을 제공해, 기존 안내만으로는 해결되지 않는 용어 오해를 줄이는 구체적 행동을 추가합니다.",
+        "screen_rejections": []
+      },
+      "board": "general_notice",
+      "topic": "번역 기능으로 읽은 이용 안내는 핵심 용어를 원문과 나눠 확인해 주세요",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-01T13:25:08Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "자동 번역된 이용 안내에서 원문과 번역 용어가 다를 때 의미 차이를 스스로 확인하는 방법을 알고 싶다"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6551,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 335,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6886
+        },
+        "estimated_usd": 0.0031564,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T10:40:24.981182+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 5567,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 314,
+          "output_tokens_details": {
+            "reasoning_tokens": 114
+          },
+          "total_tokens": 5881
+        },
+        "estimated_usd": 0.00558825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T10:40:27.311434+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2868,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 506,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3374
+        },
+        "estimated_usd": 0.0019568,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T10:40:31.539550+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 10519,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 499,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11018
+        },
+        "estimated_usd": 0.005006,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T10:40:36.906074+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 22101,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 334,
+          "output_tokens_details": {
+            "reasoning_tokens": 126
+          },
+          "total_tokens": 22435
+        },
+        "estimated_usd": 0.01807875,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T10:40:41.577777+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3569,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1073
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4941
+        },
+        "estimated_usd": 0.066493,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-02T10:41:13.015139+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14372,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 256,
+          "output_tokens_details": {
+            "reasoning_tokens": 191
+          },
+          "total_tokens": 14628
+        },
+        "estimated_usd": 0.011931,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-02T10:41:18.384541+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T10:40:21.951045+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T10:40:25.163510+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T10:40:27.313826+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-02T10:40:32.919138+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T10:40:39.037113+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-02T10:40:41.598063+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-02T10:41:14.427579+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1122102,
+    "estimated_total_usd": 0.1122102,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
