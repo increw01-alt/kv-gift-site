@@ -1253,5 +1253,18 @@
     "publication_mode": "automatic",
     "run_id": "41470206770",
     "usage_file": "data/editorial_runs/2026-11-03/41470206770.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 45,
+    "topic": "상품권으로 장볼 때 무게로 매긴 가격과 포장 총액을 어떻게 맞춰 볼까요?",
+    "drafted_at": "2026-11-03",
+    "automation": true,
+    "search_intent": "단위 무게 가격과 포장 총액을 같은 기준으로 바꿔 직접 계산하고 비교하려는 질문",
+    "image_scene": "주방 조리대 위에 무게가 적힌 두 상품 포장과 계산기, 메모지가 나란히 놓여 있고 한 사람이 단위 무게 가격과 표시 무게를 적어 예상 금액을 계산한 뒤 포장 총액과 비교하는 구도",
+    "image_alt": "주방 조리대에서 한 사람이 상품 포장에 적힌 단위 무게 가격과 표시 무게를 메모해 계산기와 함께 총액을 비교하고 있다.",
+    "publication_mode": "automatic",
+    "run_id": "41493762295",
+    "usage_file": "data/editorial_runs/2026-11-03/41493762295.json"
   }
 ]
