@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T23:54:12.838307+00:00",
+  "generatedAt": "2026-11-03T23:54:48.624715+00:00",
   "dateKst": "2026-11-04",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 8,
-  "held": 6,
+  "held": 7,
   "errors": 0,
-  "knownSubtotalUsd": 0.2680133,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.31147455,
+  "estimatedTotalUsd": 0.31147455,
   "records": [
     {
       "runId": "41662427920",
@@ -105,21 +105,21 @@
     },
     {
       "runId": "41742591310",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "상품권 선물 시 동명이인 확인과 개인정보 보호 절차",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-03T23:52:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04346125,
+      "knownSubtotalUsd": 0.04346125
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 2,
+    "retryAfter": "2026-11-04T09:54:12.598455+09:00",
+    "cooldownMinutes": 60
   }
 }
