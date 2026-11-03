@@ -1292,5 +1292,18 @@
     "publication_mode": "automatic",
     "run_id": "41615282669",
     "usage_file": "data/editorial_runs/2026-11-03/41615282669.json"
+  },
+  {
+    "board": "sense",
+    "id": 22,
+    "topic": "선물할 시간 제안 시 부담 없이 상대 일정과 이동 부담 확인하는 대화법",
+    "drafted_at": "2026-11-04",
+    "automation": true,
+    "search_intent": "함께할 시간을 제안할 때 상대의 일정과 이동 부담을 부담 없이 확인하며 자연스럽게 약속을 조율하는 방법",
+    "image_scene": "책상 위에 달력, 스마트폰 메신저 화면, 지하철 노선도가 함께 놓여 있고 한 사람이 메모장에 가능한 날짜와 만날 장소를 적어 두며 상대의 이동 시간을 고려해 동선을 비교하는 장면",
+    "image_alt": "달력과 메신저 화면, 지하철 노선도를 옆에 두고 가능한 날짜와 이동 거리를 함께 확인하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41737357459",
+    "usage_file": "data/editorial_runs/2026-11-04/41737357459.json"
   }
 ]

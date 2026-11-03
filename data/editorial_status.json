@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T23:13:41.193836+00:00",
+  "generatedAt": "2026-11-03T23:14:43.108693+00:00",
   "dateKst": "2026-11-04",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 6,
   "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.1271185,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.25189975,
+  "estimatedTotalUsd": 0.25189975,
   "records": [
     {
       "runId": "41662427920",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "41737357459",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "선물할 시간 제안 시 부담 없이 상대 일정과 이동 부담 확인하는 대화법",
+      "url": "https://kv-gift.co.kr/board/sense/22",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-03T23:12:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12478125,
+      "knownSubtotalUsd": 0.12478125
     }
   ],
   "topicRetry": {
