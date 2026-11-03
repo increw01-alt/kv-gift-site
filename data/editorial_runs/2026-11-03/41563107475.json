@@ -1,17 +1,27 @@
 {
   "run_id": "41563107475",
   "date_kst": "2026-11-03",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sense",
+  "topic": "물건 부담 줄이는 선물과 보관 부담 관리법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sense/21",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T01:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,312 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-03T10:58:48.463082+09:00"
+      "attempt_started_at": "2026-11-03T10:58:48.463082+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "외출 시 상품권 사용과 구매 동선 및 부피 효율 계획",
+          "source_id": "",
+          "reader_problem": "외출하여 여러 매장과 상품권을 활용할 때 물건 부피와 매장 위치를 함께 고려한 효율적인 장보기 순서를 짜기 어렵다.",
+          "distinct_angle": "상품권별 단순 사용법 안내를 넘어서, 물품 크기와 매장 동선을 통합 계획하는 실행 가능한 동선과 분류 전략을 제공한다.",
+          "reader_situation": "상품권을 활용해 여러 매장 방문 구매를 계획하며 물품 부피와 이동 경로를 최적화하고자 하는 실용적 구매자.",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치를 반영한 최소 이동 동선 계획표, 실제 이동 계획에 반영하는 상품권 사용 순서 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "상품권으로 구매 물품 부피별 나누기 및 우선순위 설정하기",
+            "매장 위치 지도화 및 최소 이동 경로 구성법 익히기",
+            "효율적 구입·이동 위한 동선 계획과 상품권 사용 순서 정하기"
+          ]
+        },
+        {
+          "topic": "선물 포장 재사용 판단과 구매 전 봉투 사전 점검",
+          "source_id": "",
+          "reader_problem": "행사에서 사용하는 종이 상품권 봉투 선정 시, 봉투 크기와 상품권 두께를 사전 측정·비교하지 않아 적합성 판단과 준비에 어려움을 겪는다.",
+          "distinct_angle": "기존 단순 상품권 본문과 달리, 봉투 내외 크기와 두께, 동봉품 포함 여부를 객관적으로 점검하여 실제 행사 준비에 적용할 수 있게 안내한다.",
+          "reader_situation": "행사 담당자로서 상품권 봉투 호환성과 부피를 미리 재고 평가하여 당일 난처함 없이 봉투를 준비하려는 이용자.",
+          "deliverable": "상품권과 동봉품 실측 기반 봉투 호환성 표, 포장봉투 내부 규격 측정법, 실측값 비교 확인을 위한 체크리스트와 사례 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "상품권과 동봉 안내지 두께 및 크기 정확히 측정하기",
+            "봉투 내부 규격과 상품권 실측값 상세 비교 방법",
+            "측정 결과를 바탕으로 봉투 적합 여부 확인표 작성 및 활용"
+          ]
+        },
+        {
+          "topic": "생활계획에 맞춘 일정·이동 부담 고려한 시간 제안법",
+          "source_id": "",
+          "reader_problem": "선물 대신 함께할 시간을 제안할 때 상대방의 일정, 이동 거리, 준비 부담을 부담 없이 확인하고 자연스럽게 조율하기 어려움.",
+          "distinct_angle": "기존 상품권 안내와 달리, 시간 제안 시 대화 흐름과 선택 기준을 구체화해 대화 부담 없이 상대방 사정을 고려하는 중심으로 제시한다.",
+          "reader_situation": "물건 선물보다 의미 있는 시간을 제안하며 상대방 일정과 이동 부담을 세분화해 부담 없이 소통하려는 이용자.",
+          "deliverable": "활동 참여 의사부터 일정 부담, 이동 거리까지 단계별 질문 흐름도, 상대방 편의를 고려한 조율 기준표와 대화 예시 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "활동 참여 의사 부담 없이 묻는 질문 표현 만들기",
+            "일정 부담 관련 구체적 확인법과 예시 학습하기",
+            "이동 거리를 고려해 상황별 자연스러운 질문 흐름 그리기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "물건 부담 줄이는 선물과 보관 부담 관리법",
+        "source_id": "",
+        "reader_problem": "선물할 때 물건이 많아지는 부담을 줄이고, 받은 선물이 난잡해지는 보관 문제를 어떻게 체계적으로 관리할지 모름.",
+        "distinct_angle": "기존 상품권 사용과 구매 안내와 달리, 선물 후 물건 증가와 보관 부담을 줄이는 선택 기준과 분류 방법을 구체적으로 제시한다.",
+        "reader_situation": "선물용으로 다수 상품권이나 물건을 준비하는데 관리와 보관이 부담스러워 효율적 정리와 부담 최소화 방안을 찾는 이용자.",
+        "deliverable": "보관 부담을 줄이는 선물 선택 기준과 단순화 방법, 보관 위치·용도별 분류표 작성법, 실생활 적용형 정리체계 매뉴얼.",
+        "task_id": "",
+        "outline": [
+          "선물할 물건 수 제한과 부피 최소화 기준 세우기",
+          "받은 선물의 용도별, 장소별 체계적 분류와 기록법 정리하기",
+          "선물 관리 부담 줄이는 단순화 조치와 일상 적용법 안내하기"
+        ],
+        "novelty_reason": "가장 구체적으로 새 해결 문제가 드러납니다. 기존 글들은 선물 취향을 묻는 대화법(/board/sense/6), 선물 가치 표현(/board/free/474), 참여 의사 조율(/board/free/478), 상품권 사용처 확인이나 잔액·이력 관리(/board/purchase/2563, /board/gc_information/9)처럼 ‘묻기/확인하기/사용하기’ 중심입니다. 반면 0번은 선물 후 물건이 늘어나는 부담을 줄이고 받은 선물의 보관·분류 체계를 만드는 문제에 초점이 있어, 기존 답만으로는 해결되지 않는 구체적 관리 방법(수량 제한, 부피 최소화, 용도·장소별 분류표, 기록 체계)을 추가합니다. 가장 가까운 기존 글이 다룬 문제는 선물 선택과 선호 파악이지만, 새 글은 그 이후의 보관 부담과 정리 운영을 다루므로 방향이 다릅니다.",
+        "screen_rejections": [
+          "1번은 외출 중 상품권으로 구매할 물건의 부피와 매장 동선을 함께 계획하는 내용으로, 기존 [/board/gc_tip/42]의 ‘구매 물건을 부피별로 나누고 매장 위치에 따라 이동 동선을 계획하는 방법’과 질문·절차가 거의 같습니다. 이미 공개된 글이 같은 동선 최적화와 부피 우선순위를 해결합니다.",
+          "2번은 종이상품권 봉투의 크기와 두께를 재고 봉투 내부 규격과 비교하는 내용으로, 기존 [/board/purchase/2575]의 ‘종이상품권 전달용 봉투 규격을 구매 전에 재는 방법’과 동일한 질문과 해결 순서를 반복합니다. 봉투 내부 치수 측정과 실측값 비교가 이미 해결된 주제입니다.",
+          "3번은 선물 대신 함께할 시간을 제안하면서 상대의 일정과 이동 부담을 확인하는 대화법으로, 기존 [/board/sense/6]의 자연스럽게 취향을 알아보는 질문, [/board/free/474]의 부담 없는 대화 전환, [/board/free/478]의 참여 의사 조율과 핵심 질문이 겹칩니다. 결국 상대 사정을 부담 없이 묻는 대화 흐름을 반복할 뿐, 새 해결 문제나 별도의 행동 기준이 충분하지 않습니다."
+        ]
+      },
+      "board": "sense",
+      "topic": "물건 부담 줄이는 선물과 보관 부담 관리법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-02T15:53:07Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "선물 물건이 너무 많아지지 않게 개수를 조절하고 받은 선물은 용도별로 나눠 정리하는 방법을 찾는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22768,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1004,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23772
+        },
+        "estimated_usd": 0.0107136,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T01:59:01.139334+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11709,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 661,
+          "output_tokens_details": {
+            "reasoning_tokens": 109
+          },
+          "total_tokens": 12370
+        },
+        "estimated_usd": 0.01175625,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T01:59:05.982945+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3147,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 546,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3693
+        },
+        "estimated_usd": 0.0021324,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T01:59:10.527962+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8986,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 478,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9464
+        },
+        "estimated_usd": 0.0043592,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T01:59:16.749240+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17631,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 311,
+          "output_tokens_details": {
+            "reasoning_tokens": 114
+          },
+          "total_tokens": 17942
+        },
+        "estimated_usd": 0.01462275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T01:59:21.733704+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3532,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1036
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4904
+        },
+        "estimated_usd": 0.066308,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T01:59:51.391338+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9693,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 210,
+          "output_tokens_details": {
+            "reasoning_tokens": 145
+          },
+          "total_tokens": 9903
+        },
+        "estimated_usd": 0.00821475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T01:59:56.791992+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T01:58:51.166333+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T01:59:01.746170+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T01:59:05.985468+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T01:59:11.846466+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T01:59:18.896986+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-03T01:59:21.754355+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T01:59:52.739362+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11810695,
+    "estimated_total_usd": 0.11810695,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

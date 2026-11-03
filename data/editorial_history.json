@@ -1266,5 +1266,18 @@
     "publication_mode": "automatic",
     "run_id": "41493762295",
     "usage_file": "data/editorial_runs/2026-11-03/41493762295.json"
+  },
+  {
+    "board": "sense",
+    "id": 21,
+    "topic": "물건 부담 줄이는 선물과 보관 부담 관리법",
+    "drafted_at": "2026-11-03",
+    "automation": true,
+    "search_intent": "선물 물건이 너무 많아지지 않게 개수를 조절하고 받은 선물은 용도별로 나눠 정리하는 방법을 찾는 질문",
+    "image_scene": "책상 위에 작은 선물 상자 몇 개와 라벨 스티커, 메모장, 정리함이 놓여 있고 한 사람이 선물 개수를 적은 뒤 ‘주방용’, ‘욕실용’, ‘사무용’ 라벨을 붙여 보관 칸에 나눠 넣는 구도",
+    "image_alt": "책상 위에서 선물 상자와 라벨 스티커를 이용해 물건을 용도별로 나눠 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41563107475",
+    "usage_file": "data/editorial_runs/2026-11-03/41563107475.json"
   }
 ]
