@@ -1,18 +1,20 @@
 {
   "run_id": "41615973992",
   "date_kst": "2026-11-03",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T10:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 이미 공개된 글이 해결한 질문과 절차를 그대로 반복합니다. 0번은 /board/sense/19의 ‘할 일마다 담당자와 완료 조건을 한 줄에 묶어 쓰는 방법’과 독자의 상황, 질문, 작성 방식이 같고, 1번은 /board/sense/21의 ‘선물 수·부피를 줄이고 용도·보관 장소별로 분류하는 관리법’과 사실상 동일합니다. 기존 글로 그대로 해결되는 수준이라 새 해결 내용이 확인되지 않아 보류합니다. / 0번은 /board/sense/19가 이미 다룬 ‘여러 할 일의 담당자와 완료 조건을 구분해 한 줄 요청표로 정리하는 방법’과 중복됩니다. 기존 글이 이미 해결한 질문은 ‘메시지에서 각 할 일마다 담당자와 완료 조건을 어떻게 묶어 쓸까’이며, 후보도 같은 문제를 같은 방식으로 풉니다. / 1번은 /board/sense/21이 이미 다룬 ‘선물할 물건의 수와 부피를 조절하고 받은 선물을 용도·보관 장소별로 분류해 관리하는 방법’과 중복됩니다. 기존 글이 이미 해결한 질문은 ‘선물 부담과 보관 부담을 어떻게 줄일까’이며, 후보도 같은 분류·기록·정리 절차를 반복합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41615973992",
@@ -22,15 +24,113 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-03T19:03:37.919539+09:00"
+      "attempt_started_at": "2026-11-03T19:03:37.919539+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모임 참여 방식에 따른 역할 분배와 책임 구분하기",
+          "source_id": "",
+          "reader_problem": "모임에서 여러 할 일을 각 참여자가 누가 맡고 어떤 조건까지 책임지는지 명확히 정리하지 못해 혼란이 생기는 문제",
+          "distinct_angle": "기존 일반 안내가 아닌 각 할 일별 담당자와 완료 조건을 한 줄에 묶어 보는 구체적 기록법과 명확한 역할 분배 방법을 실제 상황 중심으로 설명",
+          "reader_situation": "모임이나 프로젝트에서 여러 요청이 동시에 섞여 있으며, 각 할 일의 담당자, 범위, 완료 기준을 분명히 확인·관리해야 하는 상황의 독자",
+          "deliverable": "할 일별 행동과 완료 조건 분리, 담당자 명시, 중복 방지 원칙 포함한 실용 요청표 양식과 구체적 작성 예시",
+          "task_id": "",
+          "outline": [
+            "할 일과 수행 기준을 명확히 구분하여 한 줄에 함께 기록하는 법 배우기",
+            "담당자 이름과 역할을 분명히 적어 중복이나 빠짐 없이 책임 분배하기",
+            "한 줄 작성 요청표 예시와 모호한 부탁을 구체화하는 문장 만들기 실습하기"
+          ]
+        },
+        {
+          "topic": "물건 부담 줄이는 선물 선택과 체계적 보관 방법",
+          "source_id": "",
+          "reader_problem": "선물이 많아 관리와 보관 부담이 커지고 난잡해져 선물의 효용과 만족이 떨어지는 문제 해결 희망",
+          "distinct_angle": "단순화된 선물 수와 부피 기준 제시, 용도별·장소별 선물을 체계적으로 분류·기록하는 구체적 실천 매뉴얼 제공",
+          "reader_situation": "다수 상품권이나 선물용 물건을 준비하면서 관리와 보관 부담을 낮추고자 효율적인 분류 및 정리 체계를 찾는 독자",
+          "deliverable": "선물 수 및 부피 제한 기준, 선물 용도와 보관 장소별 분류표 작성법, 단순화 조치 및 일상 적용 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "선물할 물건 수 제한과 부피 최소화 기준을 명확히 세우기",
+            "받은 선물을 용도별과 장소별로 체계적으로 분류하고 기록하는 방법 익히기",
+            "부담을 줄이는 단순화 조치와 생활 속 적용 방법 안내 및 사례 소개"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22979,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23502
+        },
+        "estimated_usd": 0.0100284,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T10:03:44.913590+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8057,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 455,
+          "output_tokens_details": {
+            "reasoning_tokens": 115
+          },
+          "total_tokens": 8512
+        },
+        "estimated_usd": 0.00809025,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T10:03:48.189709+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T10:03:40.082930+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T10:03:45.062200+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01811865,
+    "estimated_total_usd": 0.01811865,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
