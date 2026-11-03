@@ -1279,5 +1279,18 @@
     "publication_mode": "automatic",
     "run_id": "41563107475",
     "usage_file": "data/editorial_runs/2026-11-03/41563107475.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 67,
+    "topic": "이용 안내 문서의 글자 크기와 배열 방식 개선으로 가독성 높이기",
+    "drafted_at": "2026-11-03",
+    "automation": true,
+    "search_intent": "안내문을 읽기 쉽게 만들기 위해 글자 크기와 배열을 어떻게 설계하고 점검할지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 안내문 초안과 크기 표시가 다른 글씨 샘플 카드, 자, 형광펜, 체크리스트가 놓여 있고 한 사람이 제목·부제목·본문의 글자 크기를 비교하며 문단 배열과 읽는 순서를 조정하는 구도",
+    "image_alt": "책상 위 안내문 초안에서 제목, 부제목, 본문의 글자 크기를 비교하며 읽기 좋은 배열로 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "41615282669",
+    "usage_file": "data/editorial_runs/2026-11-03/41615282669.json"
   }
 ]

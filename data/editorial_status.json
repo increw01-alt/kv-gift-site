@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T09:59:04.870270+00:00",
+  "generatedAt": "2026-11-03T10:00:17.334979+00:00",
   "dateKst": "2026-11-03",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 13,
   "held": 9,
   "errors": 0,
-  "knownSubtotalUsd": 0.5735644,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.69490365,
+  "estimatedTotalUsd": 0.69490365,
   "records": [
     {
       "runId": "41470206770",
@@ -170,16 +170,16 @@
     },
     {
       "runId": "41615282669",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "이용 안내 문서의 글자 크기와 배열 방식 개선으로 가독성 높이기",
+      "url": "https://kv-gift.co.kr/board/general_notice/67",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-03T09:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12133925,
+      "knownSubtotalUsd": 0.12133925
     }
   ],
   "topicRetry": {
