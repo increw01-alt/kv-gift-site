@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T23:14:43.126215+00:00",
+  "generatedAt": "2026-11-03T23:18:50.030001+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2841,7 +2841,7 @@
       "board": "sense",
       "topic": "선물할 시간 제안 시 부담 없이 상대 일정과 이동 부담 확인하는 대화법",
       "url": "https://kv-gift.co.kr/board/sense/22",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-03T23:18:50.003458+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.12478125,
       "knownSubtotalUsd": 0.12478125
