@@ -1,18 +1,20 @@
 {
   "run_id": "41585998939",
   "date_kst": "2026-11-03",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T05:47:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 제공된 후보들은 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 그대로 반복합니다. 0번과 2번은 판매가·잔액을 포함한 금액 용어 구분과 확인 절차가 기존의 정가/판매가 안내(/board/gc_information/14) 및 잔액 확인·이력 관리(/board/gc_information/9)와 겹칩니다. 1번과 3번은 비슷한 이름의 상품권을 목적·보관 위치로 나누고 메모/라벨로 관리하는 흐름이 기존의 분류·관리 글(/board/gc_tip/43)과 사실상 같습니다. 새 해결 문제나 기존 답으로는 처리되지 않는 구체적 예시가 확인되지 않아 본문 생성 전 보류가 적절합니다. / 0번: /board/gc_information/14가 이미 ‘정가와 판매가를 어떻게 구분해 읽는가’를 다루고, /board/gc_information/9가 ‘사용 후 남은 금액 확인과 관리’를 다룹니다. 후보의 액면가·판매가·잔액 비교와 계산표 작성은 이 두 글의 질문과 해결 절차를 합친 수준입니다. / 1번: /board/gc_tip/43의 ‘상품권 여러 개를 맞춤 용도별로 쉽게 분류하고 관리하는 실전 방법’과 중복됩니다. 구매 목적·보관 위치로 구분하고, 개인 메모와 앱 이름 변경 기능을 확인하는 관리 흐름이 이미 공개 글에 있습니다. / 2번: /board/gc_information/14와 /board/gc_information/9의 조합과 같습니다. 금액 한도·할인금액·실결제액을 구분하고 구매/결제 시점에 확인하는 절차는 기존의 가격 해석과 잔액 확인 안내를 그대로 적용해도 해결됩니다. / 3번: /board/gc_tip/43와 동일한 문제를 다룹니다. 이름이 같은 상품권을 특성별로 분류하고 라벨링·표시법을 만드는 내용은 이미 공개된 관리 안내의 질문과 절차를 반복합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41585998939",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-03T14:48:49.260062+09:00"
+      "attempt_started_at": "2026-11-03T14:48:49.260062+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "액면가, 판매가, 잔액 용어 구분과 금액 비교하기",
+          "source_id": "",
+          "reader_problem": "상품권 이용 시 액면가, 판매가, 잔액 등의 혼동으로 금액 비교와 사용 계획이 어려움",
+          "distinct_angle": "기존 안내가 용어별 사전적 정의에 그쳤다면, 본문은 구체적 금액 계산과 비교용 표 작성법, 실전 계산 절차로 해결",
+          "reader_situation": "상품권 구매와 사용 계획 중 액면가와 판매가, 잔액의 의미와 차이, 실제 금액 비교 절차를 정확히 알고 싶은 이용자",
+          "deliverable": "액면가와 판매가, 잔액 정의 비교표, 실제 금액 산출 및 잔액 확인용 계산 과정을 담은 실전 계산표와 점검 목록",
+          "task_id": "",
+          "outline": [
+            "액면가, 판매가, 잔액 각각의 개념과 실제 의미 명확히 구분하기",
+            "상품권 구매 시 나타나는 각 금액의 관계로 비교표 작성하기",
+            "계산 과정별 예시와 잔액 확인 절차를 따라 실전 점검하기"
+          ]
+        },
+        {
+          "topic": "동일한 상품권 이름이지만 다른 종류 구별 기준과 관리법",
+          "source_id": "",
+          "reader_problem": "가까운 이름의 상품권이 여러 종류일 때, 용도와 보관 위치별로 구분하는 구체적 분류기준과 관리법이 없어 혼란스러움",
+          "distinct_angle": "일반 이름 구분 설명에서 나아가, 개인 메모 작성법과 앱 이름 변경 가능 여부를 점검해 실제 관리 체계 구축법 제시",
+          "reader_situation": "비슷한 이름의 상품권들을 맞춤 용도별, 보관 위치별로 명확히 구분하고 효율적으로 관리하고자 하는 이용자",
+          "deliverable": "상품권별 구매 목적과 보관 위치 목록, 개인 메모 예시, 앱별 이름 변경 기능 및 제한사항 정리, 분류 및 관리 단계별 안내서",
+          "task_id": "",
+          "outline": [
+            "상품권별 실제 구매 목적과 보관 장소 구분을 위한 구체적 기준 만들기",
+            "상품권 코드 대신 알기 쉬운 개인용 메모 제목 작성법 익히기",
+            "주요 앱별 이름 변경 가능 여부 점검과 관리 한계 인지 및 활용 방법 배우기"
+          ]
+        },
+        {
+          "topic": "상품권 금액 관련 주요 용어의 실제 활용과 안전한 금액 확인 절차",
+          "source_id": "",
+          "reader_problem": "상품권 구매나 사용 중 금액 한도, 할인금액, 실결제액 등의 용어가 섞여 실제 사용 가능한 금액과 제한을 정확히 알기 어려움",
+          "distinct_angle": "기존 단순 용어별 뜻 안내가 아니라, 실제 구매 현장과 결제 시점에서 용어별 금액 확인과 오류 예방 절차를 세분해 소개",
+          "reader_situation": "상품권 이용 전후 금액 한도와 할인 적용, 실결제액 차이를 구분해 올바른 사용 계획 및 주문 오류 방지를 원하는 구매자",
+          "deliverable": "알아야 할 금액 관련 용어 정리, 구매 시점 금액 확인 체크리스트, 주문 시 금액 오류 예방 및 확인 절차 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권 관련 주요 금액 용어와 각각 쓰임새 이해하기",
+            "구매 및 결제 과정 중 각 금액 확인 및 기록 요령 익히기",
+            "주문 오류 방지를 위한 금액 확인 단계별 점검법 실천하기"
+          ]
+        },
+        {
+          "topic": "상품권 이름이 같아도 다른 종류 구분 위한 명확한 기준과 표시법 만들기",
+          "source_id": "",
+          "reader_problem": "상품권 이름이 유사해 혼동 발생 시, 어떤 기준으로 다른 상품권으로 구분하고 표시해야 하는지 명확한 기준이 없어 정리하기 어려움",
+          "distinct_angle": "기존 단순 명칭 차별화 안내에서 벗어나, 상품권 특성별 분류 기준과 효과적인 라벨링·표시법 개발 실무 가이드로 차별화",
+          "reader_situation": "같은 이름의 상품권을 명확하게 분류하고 관리하며 사용자와 판매자 모두 혼동 없이 식별하고자 하는 실무 담당자",
+          "deliverable": "상품권 구분에 필요한 구체적 분류 항목 리스트, 상품권별 표시 및 라벨링 예시, 효과적인 구분 체계 구축 단계별 실행 지침서",
+          "task_id": "",
+          "outline": [
+            "상품권 명칭 유사성에 따른 혼동 사례 분석 및 문제점 도출",
+            "분류와 표시를 위한 상품권 특성별 구분 기준 체계화",
+            "실무에서 적용할 수 있는 상품권 라벨링 및 구분 표시 개선법 수립"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22847,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1016,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23863
+        },
+        "estimated_usd": 0.0107644,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T05:48:59.945511+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10875,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 733,
+          "output_tokens_details": {
+            "reasoning_tokens": 231
+          },
+          "total_tokens": 11608
+        },
+        "estimated_usd": 0.01145475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T05:49:04.943173+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T05:48:52.128033+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T05:49:00.676430+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02221915,
+    "estimated_total_usd": 0.02221915,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
