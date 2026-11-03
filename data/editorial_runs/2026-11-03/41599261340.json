@@ -1,18 +1,20 @@
 {
   "run_id": "41599261340",
   "date_kst": "2026-11-03",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T07:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 제공된 후보 4개는 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 그대로 반복합니다. 새로 해결해야 할 독자 문제나 기존 답으로는 처리되지 않는 구체적 예시가 확인되지 않아, 본문 생성 전 보류가 적절합니다. / 0번은 /board/sale/3692의 ‘판매 글 작성 전 상품권 종류·상태·개인정보 노출을 확인하는 방법’과 질문·절차가 겹칩니다. 상품권 상태 점검, 문의 전 준비, 개인정보 보호라는 이미 해결한 문제를 그대로 다시 다룹니다. / 1번은 /board/purchase/2566의 ‘상품권 결제 전 최종 결제 금액과 적용 내역을 확인하는 방법’과 중복됩니다. 장바구니에서 변경 후 최종 내역을 대조해 실수를 막는 흐름이 기존 글의 확인 절차와 사실상 같습니다. / 2번은 /board/general_notice/46의 ‘상품권 취소·환불 전 사용 상태를 먼저 확인하는 방법’과 /board/gc_tip/36의 ‘사용 상태를 노출 없이 문의하는 안전 절차’와 겹칩니다. 교환 후 상태 구분, 이상 판단, 문의 준비라는 핵심 질문이 이미 다뤄졌습니다. / 3번은 /board/gc_tip/43의 ‘상품권 여러 개를 용도·보관 위치별로 분류하고 이름을 붙여 관리하는 방법’과 거의 같습니다. 구매 목적·보관 장소로 나누고 앱 이름 변경 여부를 확인하는 관리 흐름이 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41599261340",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-03T16:53:48.642400+09:00"
+      "attempt_started_at": "2026-11-03T16:53:48.642400+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 보유 상태별 매입 상담 전 체크리스트 작성법",
+          "source_id": "",
+          "reader_problem": "상품권 매입 상담에 앞서 각 상품권의 상태를 정확히 점검하고 매입처에 문의할 내용을 체계적으로 준비하기 어려움",
+          "distinct_angle": "기존 안내가 단순 상태 확인에 그친 반면, 본 글은 상담 전에 상태 점검, 증빙 자료 준비, 비식별 개인정보 보호까지 통합적으로 준비하는 절차를 상세하게 제안함",
+          "reader_situation": "여러 상품권을 다양한 매입처에 판매 문의하려는 이용자로, 상담 전에 상품권 상태 점검부터 개인정보 보호까지 한 번에 체계적 관리와 상담 준비가 필요한 상황",
+          "deliverable": "상품권 상태 점검표, 증빙자료 수집 및 비식별화 매뉴얼, 개인정보 최소 공개 및 안전한 전달 절차 공식화 문서",
+          "task_id": "",
+          "outline": [
+            "상품권 종류별 상태 점검 항목과 기록 방법 체계적으로 배우기",
+            "유형별 증빙자료 수집 방법과 민감정보 비식별 처리법 익히기",
+            "개인정보 노출 최소화를 위한 자료 전달 안전 절차 및 상담 준비 체크리스트 완성하기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 시 최종 주문 내역 정확 점검 매뉴얼",
+          "source_id": "",
+          "reader_problem": "장바구니에서 금액, 수신자 등의 옵션을 자주 변경하는 데 최종 주문 내역과 원래 의도 간 일치 여부를 세밀하게 확인하는 방법을 모름",
+          "distinct_angle": "기존 안내가 변경 이력 단순 기록에 그치지만, 본 글은 옵션 변경별 세부 검증 절차와 대조 점검표를 실무 매뉴얼로 제공하여 주문 실수 예방에 특화됨",
+          "reader_situation": "상품권을 여러 차례 옵션 변경한 대량 구매자로서, 주문 최종 단계에서 원래 선택과 현재 옵션을 구분해 실수를 막으려는 상황",
+          "deliverable": "원본 선택 정보 기록 방법, 변경 내역 상세 확인 매뉴얼, 최종 주문 전 정밀 대조 점검표와 실행 지침서",
+          "task_id": "",
+          "outline": [
+            "장바구니 내 최초 담긴 상품권/옵션 체계적 기록법 습득",
+            "옵션 변경 발생 시 세부 내역 점검과 확인 절차 익히기",
+            "최종 주문 직전 원래 의도와 현재 옵션 일치 여부 대조 점검 실습 및 지침"
+          ]
+        },
+        {
+          "topic": "상품권 교환 후 원래 쿠폰과 교환 결과 정보 올바른 구분 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 교환 완료 후 앱이나 화면에 원래 쿠폰과 교환 결과가 같이 나타나 혼란스러워, 무엇을 확인하고 어떤 상태를 점검해야 하는지 모름",
+          "distinct_angle": "종전 안내가 단순히 쿠폰 교환 절차만 설명한 반면, 이번 글은 원·교환 쿠폰 상태별 차이점 규칙적 구분, 점검표 작성, 이상 판단과 문의용 문구 사례까지 전문 안내",
+          "reader_situation": "교환권 상태를 명확히 파악하고 이상 발생 시 고객센터 문의 방식까지 숙지해 안전한 상품권 교환 후 관리를 원하는 사용자",
+          "deliverable": "원·교환 쿠폰 상태 비교 점검표, 이상 사례 판단 기준, 고객센터 문의용 구체적 문의 문장 예시 모음집",
+          "task_id": "",
+          "outline": [
+            "원래 쿠폰과 교환 결과 쿠폰의 표기 차이 및 상태 구분법 배우기",
+            "잔액 및 사용 상태별 비교 점검체계 세우기",
+            "교환 후 이상 징후 판별 및 문의 준비용 기록 작성과 사례 연습"
+          ]
+        },
+        {
+          "topic": "여러 상품권 용도·보관 위치별 맞춤 분류 및 이름 작성 실무 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 코드만으로 각각의 용도나 보관 위치를 알기 어려워, 효과적 분류와 명확한 관리를 위한 실용적 기준과 명칭 작성법을 모르겠음",
+          "distinct_angle": "기존 글은 단순히 분류 조언에 머무르는 반면, 본 글은 구매 목적·보관 장소별 실무 예시와 앱별 이름 변경 가능 여부, 단계별 개인 메모 작성법까지 포괄적으로 안내함",
+          "reader_situation": "다양한 상품권을 체계적으로 분류해 개인용 관리명과 보관 위치를 명확히 하고, 앱 특성에 맞게 효율적으로 이름 붙여 정리하려는 사용자",
+          "deliverable": "용도·보관 위치 포함 분류 목록과 개인 메모 구체 예시, 주요 앱별 이름 변경 기능 현황 및 한계 정보, 분류와 관리 단계별 적용 안내서",
+          "task_id": "",
+          "outline": [
+            "상품권별 구매 목적과 실보관 위치를 구분하는 구체적 기준 세우기",
+            "상품권 코드 대신 알아보기 쉬운 개인 메모 제목 개발 방법 익히기",
+            "주요 앱 이름 변경 기능 파악과 관리 한계 인지 및 실제 적용 실습"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22892,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1108,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24000
+        },
+        "estimated_usd": 0.0109296,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T07:53:59.748516+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10962,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 854,
+          "output_tokens_details": {
+            "reasoning_tokens": 470
+          },
+          "total_tokens": 11816
+        },
+        "estimated_usd": 0.0120645,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T07:54:05.941551+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T07:53:51.286697+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T07:54:00.500561+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0229941,
+    "estimated_total_usd": 0.0229941,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
