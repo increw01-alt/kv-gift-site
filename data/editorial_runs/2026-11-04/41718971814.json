@@ -1,18 +1,20 @@
 {
   "run_id": "41718971814",
   "date_kst": "2026-11-04",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T21:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 그대로 반복합니다. 0번은 /board/general_notice/54에서 이미 다룬 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 점검하는 방법’과 핵심 문제와 해결 순서가 같습니다. 1번은 /board/general_notice/67에서 이미 다룬 ‘이용 안내 문서의 글자 크기와 배열 방식 개선으로 가독성 높이기’와 같은 질문과 답변 구조를 반복합니다. 기존 답만으로도 해결되므로 새로 필요한 구체적 상황과 추가 해결 내용이 확인되지 않아 보류가 적절합니다. / 0번: /board/general_notice/54가 이미 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 점검하는 방법’을 해결했습니다. 후보도 공용 기기 사용 후 상품권 관련 파일 삭제, 이력 점검, 개인정보 보호 습관화라는 같은 질문과 절차를 반복해 중복입니다. / 1번: /board/general_notice/67가 이미 ‘이용 안내 문서의 글자 크기와 배열 방식 개선으로 가독성 높이기’를 다뤘습니다. 후보도 글자 크기 기준, 읽기 순서 설계, 점검 체크리스트라는 동일한 해결 구조를 다시 제시해 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "41718971814",
@@ -22,15 +24,113 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-04T06:12:25.313892+09:00"
+      "attempt_started_at": "2026-11-04T06:12:25.313892+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "공용기기에서 상품권 파일 안전 삭제 절차 익히기",
+          "source_id": "",
+          "reader_problem": "공용 컴퓨터나 스마트기기에서 상품권 관련 파일을 다운로드 후 삭제하지 않아 개인정보 및 상품권 정보 노출 위험이 크다.",
+          "distinct_angle": "기존 단편 안내와 달리, 공용 기기 사용 경험 단계별 안내 및 재확인 습관화 방법과 책임감 형성에 집중한다.",
+          "reader_situation": "도서관, 회사 등 다수가 공유하는 컴퓨터를 사용해 상품권 결제 정보와 영수증 파일을 처리한 뒤 안전하게 삭제 및 점검 절차를 알고 싶은 이용자.",
+          "deliverable": "공용 기기 사용 후 상품권 관련 파일 안전 삭제 절차 매뉴얼, 삭제 후 재확인 방법, 개인정보 위험 인지 및 예방 습관화 안내서.",
+          "task_id": "",
+          "outline": [
+            "공용 컴퓨터 사용 시 개인정보 유출 위험과 영향 이해하기",
+            "상품권 파일 다운로드 위치 확인과 안전 삭제 과정 익히기",
+            "파일 삭제 후 이력 점검과 개인정보 보호 습관화 방법 실천하기"
+          ]
+        },
+        {
+          "topic": "이용 안내 문서 가독성 높이는 글자 크기와 배열 설계",
+          "source_id": "",
+          "reader_problem": "이용 안내 문서의 글자 크기와 배치 방식이 독자에게 가독성 문제를 유발해 정보 확인이 어려운 상황이다.",
+          "distinct_angle": "기존 단순 권장안과 달리 독자의 읽기 흐름과 시각 제약을 고려한 순서 설계와 실무 점검 체크리스트 제작을 포함한다.",
+          "reader_situation": "처음 서비스 이용 안내를 접하거나 노안, 시각 장애가 있는 사용자가 쉽고 편리하게 안내 내용을 파악하도록 돕고자 하는 안내 담당자.",
+          "deliverable": "안내문서 글자 크기 권장안, 독자 흐름에 맞는 읽기 순서 설계법, 적용과 검수를 위한 점검 및 개선 체크리스트 포함 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "필수 안내 항목별 적절한 글자 크기 선정 기준 정립하기",
+            "독자의 자연스러운 읽기 흐름에 맞춘 안내문 배치 및 순서 설계하기",
+            "글자 크기와 배열 적용 후 검토 위한 점검 체크리스트 작성 및 활용하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23095,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 505,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23600
+        },
+        "estimated_usd": 0.010046,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T21:12:50.554661+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8488,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 453,
+          "output_tokens_details": {
+            "reasoning_tokens": 121
+          },
+          "total_tokens": 8941
+        },
+        "estimated_usd": 0.0084045,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T21:12:54.268208+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T21:12:39.660256+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T21:12:50.755274+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0184505,
+    "estimated_total_usd": 0.0184505,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
