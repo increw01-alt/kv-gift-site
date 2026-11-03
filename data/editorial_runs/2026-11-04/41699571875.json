@@ -1,18 +1,20 @@
 {
   "run_id": "41699571875",
   "date_kst": "2026-11-04",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T19:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 0번은 /board/sale/3693과 /board/sale/3692가 다룬 ‘판매 전 상태 점검·기록·개인정보 보호 후 매입처에 문의하기’ 흐름과 같고, 1번은 판매/정보 글에서 이미 다룬 ‘직접 사용 절감액과 판매 제시액 비교’와 동일한 계산·비교 문제입니다. 2번은 /board/gc_tip/43의 ‘구매 목적·보관 위치로 분류하고 제목을 붙여 관리하는 방법’과 사실상 같습니다. 기존 답으로 그대로 해결되는 수준이라 새 해결 문제가 확인되지 않아 보류가 적절합니다. / 0번: /board/sale/3693에서 이미 ‘상품권 상태 이상을 확인하고 사진으로 기록한 뒤 매입처에 구체적으로 문의하는 방법’과 /board/sale/3692에서 이미 ‘판매 전 상품권 종류·상태·개인정보 노출을 점검하는 방법’을 다뤘습니다. 후보도 상태 점검, 증빙 준비, 개인정보 비식별화와 안전 전달 절차를 같은 순서로 반복해 중복입니다. / 1번: 상품권을 직접 사용했을 때의 절감액과 판매 제시액을 비교하는 질문과 계산 절차가 기존 글과 같습니다. 생활비 항목을 나누고 직접 사용 절감액과 판매액을 표로 대조하는 구성은 이미 해결된 문제를 그대로 다시 다룹니다. / 2번: /board/gc_tip/43의 ‘상품권을 구매 목적과 보관 위치로 구분하고, 알아보기 쉬운 제목을 붙여 관리하는 방법’과 중복됩니다. 구매 목적·보관 장소 분류, 개인 메모 제목 작성, 앱 이름 변경 기능 확인이라는 핵심 해결 절차가 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41699571875",
@@ -22,15 +24,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-04T04:06:52.166046+09:00"
+      "attempt_started_at": "2026-11-04T04:06:52.166046+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 판매 전 상태 체크 및 매입처 문의 준비 완벽 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 매입 상담 전에 상태 확인, 증빙 자료 수집, 개인정보 보호 절차가 명확하지 않아 상담 시간이 지연되고 혼란이 발생하는 문제",
+          "distinct_angle": "기존 안내와 달리, 상태 점검부터 증빙 자료 비식별화, 고객정보 최소 공개 및 안전 전달 절차를 통합해 매입 전 전 과정을 체계적으로 준비하는 구체적 매뉴얼 제공",
+          "reader_situation": "여러 종류 상품권을 다양한 매입처에 판매 문의할 이용자이며, 상담 전 상태 확인과 증빙 준비, 개인정보 보호까지 한꺼번에 체계적 준비가 필요한 경우",
+          "deliverable": "상품권 상태 점검 체크리스트, 증빙자료 유형별 수집 및 비식별화 방법 매뉴얼, 개인정보 최소 공개 및 안전 전달 공식 절차 안내서",
+          "task_id": "",
+          "outline": [
+            "상품권 유형별 상태 점검 세부 항목 및 기록 방법 익히기",
+            "증빙자료별 수집 요령과 개인정보 비식별 처리 방법 배우기",
+            "안전한 개인정보 공개 범위 설정 및 자료 전달 절차 구축하기"
+          ]
+        },
+        {
+          "topic": "상품권 판매 대비 생활비 절감 효과 명확 비교표 작성법",
+          "source_id": "",
+          "reader_problem": "상품권을 판매해 받는 금액과 직접 사용해 줄이는 생활비를 혼동해 두 선택지를 정확히 비교하고 최적 결정을 내리기 어려운 상황",
+          "distinct_angle": "생활비 내 소비 계획 중 상품권 적용 가능 금액 산출부터 실제 절감 금액과 매입처가 제시하는 판매 금액을 별도 열로 명확히 작성한 비교 선택표 작성법과 해석 지침으로 차별화",
+          "reader_situation": "보유 상품권을 일부 직접 소비에 활용하고 나머지 일부는 판매 문의할 예정인 이용자이며, 두 방식을 정확히 비교해 최적 선택을 하려는 구체적 상황",
+          "deliverable": "생활비 내 계획 소비 항목별 상품권 적용 가능 금액, 직접 사용 시 절감 금액 계산법, 매입처 판매 제시액과 절감액 비교표 및 해석 자료",
+          "task_id": "",
+          "outline": [
+            "전체 생활비와 소비 계획서에서 상품권 적용 가능한 지출 항목 구분하기",
+            "직접 사용 시 실제 지출 감소액을 산출하는 계산법 배우기",
+            "매입처 판매 가격과 직접 소비 절감액을 한눈에 비교하는 선택표 작성 및 해석 실습"
+          ]
+        },
+        {
+          "topic": "상품권별 구매 목적과 보관 위치에 따른 체계적 분류 및 개인 메모 작성법",
+          "source_id": "",
+          "reader_problem": "상품권 코드를 보고 용도와 보관 위치를 구분하기 어려워 효율적인 관리와 빠른 식별에 어려움을 겪는 문제",
+          "distinct_angle": "단순 코드 인식뿐만 아니라, 각각 상품권별 구매 용도·보관 위치를 명확히 구분하는 기준 설정, 코드 대신 알아보기 쉬운 개인 메모 제목 작성법, 주요 앱별 이름 변경 기능 활용 방안까지 포함",
+          "reader_situation": "다양한 상품권을 구매 목적과 보관 장소별로 체계적으로 분류하고, 앱에서 효과적으로 관리하며 빠르게 인지하고 싶은 사용자",
+          "deliverable": "상품권별 구매 목적과 보관 위치 목록 작성법, 실용적인 개인 메모 제목 작성법, 주요 앱 이름 변경 기능 유무 및 관리 한계 정리 자료",
+          "task_id": "",
+          "outline": [
+            "상품권별 구매 목적과 실제 보관 위치 명확히 분류하는 구체적 기준 만들기",
+            "상품권 코드 대신 알아보기 쉽고 실용적인 개인 메모 제목 작성법 익히기",
+            "주요 앱별 이름 변경 가능 여부와 관리 한계 파악 및 활용 방법 배우기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23080,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1142,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24222
+        },
+        "estimated_usd": 0.0110592,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T19:07:27.265711+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9426,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 609,
+          "output_tokens_details": {
+            "reasoning_tokens": 163
+          },
+          "total_tokens": 10035
+        },
+        "estimated_usd": 0.00981,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T19:07:32.286505+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T19:07:17.190995+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T19:07:27.953053+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0208692,
+    "estimated_total_usd": 0.0208692,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
