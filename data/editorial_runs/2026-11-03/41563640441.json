@@ -1,18 +1,20 @@
 {
   "run_id": "41563640441",
   "date_kst": "2026-11-03",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-03T02:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 제공된 후보들은 모두 이미 공개된 글이 해결한 질문과 절차를 그대로 반복합니다. 새로 필요한 구체적 해결 문제나 기존 답으로는 처리되지 않는 차별적 행동이 확인되지 않아 본문 생성 전 보류가 적절합니다. / 0번은 /board/gc_tip/43의 ‘상품권 여러 개를 맞춤 용도별로 쉽게 분류하고 관리하는 실전 방법’과 중복됩니다. 구매 목적과 보관 위치를 함께 적고, 알아보기 쉬운 제목을 붙이며, 앱의 이름 변경 가능 여부를 확인하는 관리 흐름이 이미 해결된 질문입니다. / 1번은 /board/purchase/2564의 ‘모바일상품권 구매 전에 수신 연락처를 확인해야 하는 이유는 무엇인가요?’ 및 /board/general_notice/44의 발송·수신 확인 안내와 같은 문제로 겹칩니다. 종이상품권 배송지와 모바일상품권 수신 연락처를 구분해 입력하는 절차가 기존 답과 사실상 같습니다. / 2번은 /board/purchase/2575의 ‘직접 전달할 종이상품권의 봉투 규격을 구매 전에 어떻게 재볼까요?’와 중복됩니다. 상품권 크기·두께와 봉투 내부 치수를 실측해 비교하는 핵심 질문과 해결 순서가 이미 공개 글에서 다뤄졌습니다. / 3번은 /board/gc_tip/42의 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하려면?’과 중복됩니다. 물건 부피를 나누고 매장 위치와 동선을 함께 계획한 뒤 구매 순서를 정하는 흐름이 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41563640441",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-03T11:03:51.097034+09:00"
+      "attempt_started_at": "2026-11-03T11:03:51.097034+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 이름과 보관 위치별 분류와 관리 체계 수립 방법",
+          "source_id": "",
+          "reader_problem": "상품권 코드만으로는 어떤 상품권이 어떤 용도와 보관 위치인지 구분하기 어려워 혼란스러운 이용자 문제",
+          "distinct_angle": "기존 글이 단순 코드를 모아두는 방법을 다룬 데 반해, 본 글은 구매 목적과 실제 보관 위치를 명확히 분리하고, 앱별 이름 변경 기능 한계까지 고려한 체계적인 분류/기록법을 제시함",
+          "reader_situation": "여러 상품권을 맞춤 용도별, 보관 위치별로 체계적으로 분류해 효율적 관리와 빠른 식별을 원하는 사용자 상황",
+          "deliverable": "구매 목적과 보관 위치를 포함한 개인 메모 예시, 앱별 이름 변경 가능 여부 정리, 상품권별 제목 작성 실용 기준과 단계별 실천 안내",
+          "task_id": "",
+          "outline": [
+            "상품권별 구매 목적과 실제 보관 위치를 명확히 분류하기",
+            "상품권 코드 대신 알아보기 쉽고 실용적인 개인 메모 제목 작성법 익히기",
+            "주요 앱별 이름 변경 기능 유무 확인과 관리 한계 파악 및 활용법"
+          ]
+        },
+        {
+          "topic": "상품권 배송지와 모바일상품권 수신처 입력란 구분과 올바른 정보 작성법",
+          "source_id": "",
+          "reader_problem": "종이형과 모바일형 상품권 주문 과정에서 배송지 주소와 모바일 수신 연락처의 차이를 정확히 몰라 적절한 정보 입력이 어려운 이용자 문제",
+          "distinct_angle": "기존 글이 주소 단순 안내에 그친 반면, 본 글은 종이상품권 우편 배송지와 모바일상품권 수신 연락처 구조를 시각적으로 연결해 설명하고, 실제 정보 작성 예시까지 자세히 안내함",
+          "reader_situation": "상품권 구매 초보로서 두 입력란의 역할과 차이를 명확히 이해하고 실수 없이 정보를 입력하려는 이용자 상황",
+          "deliverable": "종이형 상품권 우편 배송지와 모바일상품권 수신 연락처의 연결 개념도와 각 입력란에 넣어야 할 정보의 상세 안내 자료",
+          "task_id": "",
+          "outline": [
+            "종이상품권 배송지에 실제 우편물이 도착하는 구조 이해하기",
+            "모바일상품권 수신처에 휴대전화 번호나 이메일이 전달되는 방식 설명하기",
+            "두 정보 입력란의 역할 차이와 올바른 정보 기입 사례 제공하기"
+          ]
+        },
+        {
+          "topic": "종이 상품권 봉투 적합성 판단을 위한 실측 비교와 점검 방법",
+          "source_id": "",
+          "reader_problem": "행사용 종이 상품권 봉투를 선택할 때 봉투 크기와 상품권 및 동봉 안내지 두께를 사전에 정확히 재고 비교하는 방법이 없어 당일 난처한 상황 발생 우려",
+          "distinct_angle": "기존 글 대부분이 봉투 일반 안내에 그친 데 반해, 본 글은 실제 상품권과 동봉물 두께를 실측하여 봉투 내부 규격과 표로 비교·점검하는 구체적 절차 제공함",
+          "reader_situation": "행사 담당자로서 상품권과 안내물 크기, 두께를 직접 측정해 봉투와 맞는지 사전에 꼼꼼히 확인하려는 준비자 상황",
+          "deliverable": "상품권 및 동봉물 실측 표, 봉투 내부 크기 측정 및 상품권 실측값 비교 방법, 적합 여부 점검 체크리스트와 사례 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권과 동봉 안내지 두께 및 크기 정확하게 측정하기",
+            "봉투 내부 규격과 상품권 실측값 상세 비교 방법 익히기",
+            "측정 결과를 바탕으로 봉투 적합 여부 판단표 및 체크리스트 활용하기"
+          ]
+        },
+        {
+          "topic": "외출 장보기 시 상품권 사용 물품 부피와 매장 위치 고려한 최적 동선 계획 방법",
+          "source_id": "",
+          "reader_problem": "여러 상품권을 활용하여 다양한 매장에서 구매할 때, 물품 부피와 매장 위치를 함께 고려하여 가장 효율적인 장보기 순서와 이동 경로를 계획하기 어려운 문제",
+          "distinct_angle": "단순 매장 위치 안내가 아니라, 물품 부피별 우선순위 나누기와 지도화한 매장 위치, 최소 이동 동선 수립법, 실제 상품권 사용 순서까지 포함한 통합 계획 방법을 제시함",
+          "reader_situation": "상품권 구매로 여러 매장을 방문할 예정이며, 들고 다닐 물품 부피 및 매장 위치를 고려해 편리하게 이동 및 구매하려는 이용자 상황",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치 지도와 최소 동선 계획표, 이동 계획 반영 상품권 사용 순서 매뉴얼 완성본",
+          "task_id": "",
+          "outline": [
+            "상품권 사용 물품을 부피별로 나누고 우선순위 설정하기",
+            "매장 위치 지도 작성과 최소 이동 경로 구성 방법 익히기",
+            "효율적 구매와 이동을 위한 동선 계획과 상품권 사용 순서 결정하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 22849,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1109,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 23958
+        },
+        "estimated_usd": 0.010914,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-03T02:04:04.739138+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11702,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 486,
+          "output_tokens_details": {
+            "reasoning_tokens": 85
+          },
+          "total_tokens": 12188
+        },
+        "estimated_usd": 0.0109635,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-03T02:04:08.238020+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-03T02:03:53.898781+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-03T02:04:05.520010+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0218775,
+    "estimated_total_usd": 0.0218775,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
