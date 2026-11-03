@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T17:00:28.747238+00:00",
+  "generatedAt": "2026-11-03T17:00:57.623179+00:00",
   "dateKst": "2026-11-04",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 3,
-  "held": 2,
+  "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.0511991,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.0877988,
+  "estimatedTotalUsd": 0.0877988,
   "records": [
     {
       "runId": "41662427920",
@@ -40,21 +40,21 @@
     },
     {
       "runId": "41679506474",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처의 역할 관계도와 상품권 이해",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-03T16:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0365997,
+      "knownSubtotalUsd": 0.0365997
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 3,
+    "retryAfter": "2026-11-04T04:00:28.006023+09:00",
+    "cooldownMinutes": 120
   }
 }

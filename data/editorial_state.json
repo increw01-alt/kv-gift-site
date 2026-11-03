@@ -279,10 +279,15 @@
       "board": "gc_tip",
       "topic": "상품권 구매 시 화면 배송지와 수신 연락처 입력 구분법",
       "run_id": "41662427920"
+    },
+    {
+      "board": "gc_information",
+      "topic": "발행사·판매처·사용처의 역할 관계도와 상품권 이해",
+      "run_id": "41679506474"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41668439866",
+  "last_board": "gc_information",
+  "last_run_id": "41679506474",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
