@@ -274,10 +274,15 @@
       "board": "gc_tip",
       "topic": "상품권 결제 전 할인쿠폰 적용 가능 여부와 상품권 제외 조건 깔끔하게 구분하는 방법",
       "run_id": "41567318455"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 구매 시 화면 배송지와 수신 연락처 입력 구분법",
+      "run_id": "41662427920"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "41620882728",
+  "last_board": "gc_tip",
+  "last_run_id": "41662427920",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
