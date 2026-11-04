@@ -294,10 +294,15 @@
       "board": "gc_information",
       "topic": "종이형과 모바일상품권 주문 시 배송지와 수신 연락처 입력 혼동 해소법",
       "run_id": "41764616383"
+    },
+    {
+      "board": "free",
+      "topic": "상품권 구매 시 옵션 변경 내역 정확히 기록하고 최종 주문 대조하는 방법",
+      "run_id": "41788461613"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "41775357588",
+  "last_board": "free",
+  "last_run_id": "41788461613",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
