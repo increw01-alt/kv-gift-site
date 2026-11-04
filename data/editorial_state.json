@@ -304,10 +304,15 @@
       "board": "gc_tip",
       "topic": "상품권 잔액과 추가 결제액 구분해 최적 사용 순서 정하기",
       "run_id": "41803565628"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 발행사, 판매처, 사용처 역할 및 권한 명확히 이해하기",
+      "run_id": "41879800984"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41856267900",
+  "last_board": "gc_information",
+  "last_run_id": "41879800984",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
