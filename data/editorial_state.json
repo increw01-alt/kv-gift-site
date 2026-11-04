@@ -289,10 +289,15 @@
       "board": "gc_tip",
       "topic": "상품권 선물 시 동명이인 확인과 개인정보 보호 절차",
       "run_id": "41742591310"
+    },
+    {
+      "board": "gc_information",
+      "topic": "종이형과 모바일상품권 주문 시 배송지와 수신 연락처 입력 혼동 해소법",
+      "run_id": "41764616383"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41750685665",
+  "last_board": "gc_information",
+  "last_run_id": "41764616383",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
