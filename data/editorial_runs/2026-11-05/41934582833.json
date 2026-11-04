@@ -1,18 +1,20 @@
 {
   "run_id": "41934582833",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-04T23:32:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 0번은 무게 단위 가격과 포장 총액 비교를 다루는 /board/gc_tip/45와 동일하고, 1번은 여러 수신자에게 금액을 용도별로 배분하는 /board/purchase/2576과 같습니다. 2번은 부피와 이동 동선을 함께 계획하는 /board/gc_tip/42와 같은 문제이며, 3번도 장바구니 옵션 변경 후 최종 주문을 대조하는 /board/sale/3692 및 기존 보류 이력의 동일 주제와 겹칩니다. 새로 필요한 독자 상황이나 기존 답으로는 처리되지 않는 구체적 해결 내용이 확인되지 않아 본문 생성 전 보류가 적절합니다. / 0번: /board/gc_tip/45가 이미 ‘상품권으로 장볼 때 무게로 매긴 가격과 포장 총액을 어떻게 맞춰 볼까요?’에서 단위 무게 가격과 포장 총액을 같은 기준으로 환산·비교하고, 반올림 없이 검증하는 절차까지 해결했습니다. 후보도 동일한 금액 비교 문제를 다시 제시하므로 중복입니다. / 1번: /board/purchase/2576이 이미 ‘여러 수신자에게 상품권 금액을 용도별로 배분하는 기준 세우기’에서 용도 파악, 우선순위 설정, 배분표 작성 절차를 다뤘습니다. 후보도 수신자별 용도·우선순위·최소 단위로 금액을 나누는 같은 해결 흐름이라 중복입니다. / 2번: /board/gc_tip/42가 이미 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하려면?’에서 물건 부피를 나누고 매장 위치를 표시해 최소 이동 경로를 짜는 방법을 다뤘습니다. 후보도 부피 우선순위와 이동 경로 계획을 반복하므로 중복입니다. / 3번: /board/sale/3692가 이미 판매 글 작성 전 상품권 종류·상태·개인정보 노출을 확인하는 절차를 다뤘고, 최근 보류 이력에서도 ‘장바구니 옵션 변경 후 최종 주문 대조’ 주제가 이미 동일한 질문과 절차를 반복한다고 판단됐습니다. 후보 역시 최초 선택 기록, 변경 내역 추적, 최종 대조라는 같은 문제를 재현하므로 새 해결 문제가 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41934582833",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T08:33:40.412968+09:00"
+      "attempt_started_at": "2026-11-05T08:33:40.412968+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권으로 장볼 때 무게 가격과 포장 총액 맞추는 판단 기준",
+          "source_id": "",
+          "reader_problem": "상품권으로 구매하는 물건이 무게 단위 가격과 포장에 표시된 총액 간 차이로 실제 금액 계산과 비교가 어려운 상황",
+          "distinct_angle": "실제 사용 시 무게 기준 가격과 포장 총액이 다른 기준으로 표시되는 예를 중심으로 반올림 없이 계산해 정확히 비교하는 방법을 제시",
+          "reader_situation": "상품권으로 식품이나 생필품을 구매하며 단위 무게 가격과 포장 총액이 달라 금액 비교와 상품권 활용 계획에 혼란을 겪는 이용자",
+          "deliverable": "단위 무게 가격과 포장 총액을 같은 기준으로 환산·비교하는 계산 순서, 반올림 없이 금액 검증하는 절차가 포함된 실용 가이드",
+          "task_id": "",
+          "outline": [
+            "상품권 구매 대상 물품 무게와 단위 가격 정보 정확히 파악하기",
+            "포장에 표시된 총액과 무게 단위 가격으로 계산한 금액 비교하는 방법 익히기",
+            "계산 과정 중 반올림 없이 실제 표시값으로 금액 검증 절차 실습하기"
+          ]
+        },
+        {
+          "topic": "여러 수신자에게 상품권 용도별 금액 배분 기준 세우기",
+          "source_id": "",
+          "reader_problem": "한 번에 구매한 상품권을 가족이나 팀원 등 여러 명에게 용도에 따라 합리적으로 금액을 배분하는 기준과 실행 방법이 없어 갈등과 혼란 발생",
+          "distinct_angle": "단순 금액 균등 배분이 아닌 각각의 용도별 우선순위와 최소 단위 설정까지 포함한 체계적 배분 기준과 실제 표 작성 및 배분 실행 절차 안내 제공",
+          "reader_situation": "복수 수신자에게 상품권을 맞춤 용도로 배분하고 각각에게 전달할 금액과 종류를 명확히 정해 정확하게 관리하고자 하는 구매자와 운영자",
+          "deliverable": "수신자별 상품권 배분 표 양식, 용도별 우선순위 설정 기준, 수신자별 배분 계산 및 실행 절차가 포함된 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적을 명확히 파악하기",
+            "용도별 우선순위와 최소 배분 단위를 구체적으로 설정하기",
+            "수신자별 금액 배분표를 작성하고 배분 실행 절차를 단계별로 안내하기"
+          ]
+        },
+        {
+          "topic": "여러 매장 방문 시 상품권 활용 물품 부피와 이동 경로 효율적 계획하기",
+          "source_id": "",
+          "reader_problem": "상품권으로 여러 매장을 방문해 구매할 때 물품의 부피와 각 매장 위치가 달라 효율적인 구매 순서와 이동 경로를 계획하기 어려운 문제",
+          "distinct_angle": "단순 매장 위치만 고려하지 않고 구매할 물품 부피별 우선순위 설정과 최소 이동 경로 구성까지 통합해 실제 이동과 구매 계획에 반영하는 방법 제시",
+          "reader_situation": "여러 매장에서 상품권 구매를 계획하며 물품 부피와 매장 위치를 고려해 들고 다니기 편하고 경제적인 순서를 수립하려는 이용자",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치 지도를 통한 최소 이동 경로 계획표, 부피와 이동 동선을 반영한 상품권 사용 순서 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권으로 구매할 물품을 부피별로 나누고 우선순위를 체계적으로 설정하기",
+            "매장 위치를 지도에 표시하고 최소 이동 경로를 구성하는 방법 배우기",
+            "효율적 구매 및 이동을 위한 동선 계획과 상품권 사용 순서를 결정해 실행하기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 후 최종 주문 내역 대조와 오류 방지 방법",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니에서 금액, 수신자 등 옵션을 여러 번 변경한 뒤 최종 주문 내역이 최초 선택과 정확히 일치하는지 체계적으로 확인하는 방법이 없어 주문 실수가 발생하는 문제",
+          "distinct_angle": "단순 변경 내역 추적뿐만 아니라 최초 담긴 옵션과 변경 내역을 상세 기록하는 양식과 체크리스트를 사용해 주문 오류 위험을 줄이는 실무 매뉴얼 제공",
+          "reader_situation": "여러 차례 옵션을 수정한 대량 또는 꼼꼼한 구매자가 최종 주문 전 원래 의도와 현재 주문 조건을 엄밀히 비교하고 실수를 예방하기 위해 꼼꼼한 점검이 필요한 상황",
+          "deliverable": "최초 옵션 기록법 및 변경 내역 점검 매뉴얼, 최종 주문 전 대조 체크리스트, 오류 예방 및 주문 정확성 확보를 위한 구체적 행동 지침서",
+          "task_id": "",
+          "outline": [
+            "장바구니에 최초 담긴 상품권 대상과 옵션을 체계적으로 기록하는 방법 습득하기",
+            "옵션 변경 시 상세한 변경 내역을 세밀히 확인하는 점검 절차 익히기",
+            "최종 주문 전에 최초 의도와 현재 옵션이 일치하는지 대조 점검하고 오류를 사전에 예방하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23665,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1144,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24809
+        },
+        "estimated_usd": 0.0112964,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-04T23:33:51.202951+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12425,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 744,
+          "output_tokens_details": {
+            "reasoning_tokens": 153
+          },
+          "total_tokens": 13169
+        },
+        "estimated_usd": 0.01266675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-04T23:33:56.056359+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-04T23:33:42.721187+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-04T23:33:51.590994+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02396315,
+    "estimated_total_usd": 0.02396315,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
