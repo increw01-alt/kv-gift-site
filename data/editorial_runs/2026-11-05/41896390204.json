@@ -1,18 +1,20 @@
 {
   "run_id": "41896390204",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-04T19:22:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 그대로 반복합니다. 0번은 /board/general_notice/54의 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 점검하는 방법’과 같고, 1번은 /board/purchase/2576의 ‘여러 수신자에게 상품권 금액을 용도별로 배분하는 기준과 배분표 작성’과 같습니다. 2번은 /board/gc_tip/42의 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하는 방법’과 동일한 문제를 다룹니다. 기존 답으로 그대로 해결되므로 새 해결 문제를 확인할 수 없어 본문 생성 전 보류가 맞습니다. / 0번: /board/general_notice/54가 이미 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 점검하는 방법’을 해결했습니다. 후보도 공용 기기 사용 후 파일 삭제, 재확인, 개인정보 보호 습관화라는 같은 질문과 절차를 반복합니다. / 1번: /board/purchase/2576이 이미 ‘여러 수신자에게 상품권 금액을 용도별로 나누고 우선순위와 최소 단위를 정해 배분표를 작성하는 방법’을 다뤘습니다. 후보도 수신자별 용도 파악, 우선순위 설정, 배분표 작성이라는 동일한 흐름입니다. / 2번: /board/gc_tip/42가 이미 ‘외출 중 상품권으로 구매할 물건의 부피와 매장 위치를 함께 고려해 동선을 계획하는 방법’을 해결했습니다. 후보도 물품 부피 분류, 매장 위치 지도화, 최소 이동 경로 설계로 같은 문제를 다시 제시합니다."
+    ]
   },
   "api_usage": {
     "run_id": "41896390204",
@@ -22,15 +24,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T04:23:52.381117+09:00"
+      "attempt_started_at": "2026-11-05T04:23:52.381117+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "공용 컴퓨터에서 상품권 파일 안전 삭제와 개인정보 노출 방지 습관",
+          "source_id": "",
+          "reader_problem": "공용 컴퓨터나 스마트기기에서 상품권 관련 파일을 다운로드한 후 안전하게 삭제하지 않아 개인정보와 상품권 정보 노출 위험이 큰 이용자 문제",
+          "distinct_angle": "일반 삭제 안내를 넘어, 다운로드 경로 확인, 삭제 후 재확인 절차까지 포함해 이용자가 직접 점검표를 완성하고 지속적 개인정보 보호 습관을 실천하도록 도움",
+          "reader_situation": "도서관·회사 등 여러 사용자가 공용하는 기기에서 상품권 파일을 취급한 후 안전하게 파일을 삭제하고 점검하는 구체적 절차와 습관을 체계적으로 배우고 싶은 이용자",
+          "deliverable": "상품권 관련 파일 안전 삭제 순서와 재확인 절차, 개인정보 노출 위험과 영향 설명, 삭제 점검표 및 보호 습관화 가이드 문서",
+          "task_id": "",
+          "outline": [
+            "공용 기기 사용 시 개인정보 및 파일 노출 위험과 영향 배우기",
+            "상품권 파일 다운로드 위치 확인과 안전한 삭제 절차 익히기",
+            "파일 삭제 후 재확인과 개인정보 보호 실천 습관 점검표 작성하기"
+          ]
+        },
+        {
+          "topic": "선물용 상품권 여러 수신자에 맞는 금액 합리적 배분 기준 세우기",
+          "source_id": "",
+          "reader_problem": "한 번에 구매한 상품권을 가족이나 팀원 여러 명에게 용도 및 필요에 맞게 얼마씩 배분할지 기준이 없어 혼란인 상황",
+          "distinct_angle": "기존 단순 배분 안내와 달리, 수신자별 예상 사용 목적과 우선순위 기준 설정, 최소 단위 배분, 실제 양식 작성과 배분 계획 실행 단계까지 독자가 직접 완성하는 구체적 절차 제공",
+          "reader_situation": "여러 수신자에게 상품권을 맞춤 용도로 합리적으로 나눠주고, 각자에게 전달할 금액과 종류를 명확히 계획하려는 사용자",
+          "deliverable": "수신자별 용도에 따른 금액 배분표 양식, 용도별 우선순위 및 최소 단위 설정 가이드, 배분 계획 실행 지침서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적 파악하기",
+            "용도별 우선순위 설정과 최소 배분 단위 결정하기",
+            "수신자별 배분표 작성과 배분 실행 절차 구체적으로 안내하기"
+          ]
+        },
+        {
+          "topic": "여러 매장과 상품권 사용 시 물품 부피와 매장 위치 고려한 효율적 구매 동선 계획",
+          "source_id": "",
+          "reader_problem": "상품권을 여러 매장에서 사용하며 구매 물품 부피와 매장 위치를 동시에 고려해 가장 효율적인 이동 순서와 장보기 경로를 계획하기 어려움",
+          "distinct_angle": "기존 단순 목록 안내가 아니라, 부피별 우선순위 분류, 매장 지도 작성법, 최소 이동 경로 구성, 동선 계획과 상품권 사용 순서 결정을 독자가 직접 설계하는 구체적 실행 매뉴얼 제공",
+          "reader_situation": "상품권으로 여러 매장을 방문해 구매할 때, 들고 다닐 물품 부피와 매장 위치를 고려하여 편리한 이동과 경제적 구매 계획을 원하는 이용자",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치 지도를 통한 최소 이동 경로 계획표, 효율적 동선 계획과 상품권 사용 순서 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "구매할 물품을 부피별로 구분하고 우선순위 설정하기",
+            "매장 위치를 지도에 표시하고 최소 이동 경로 구성 방법 익히기",
+            "동선에 따라 상품권 사용 순서 결정 및 실제 구매 계획 세우기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23674,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1132,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24806
+        },
+        "estimated_usd": 0.0112808,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-04T19:24:06.177000+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9899,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 519,
+          "output_tokens_details": {
+            "reasoning_tokens": 90
+          },
+          "total_tokens": 10418
+        },
+        "estimated_usd": 0.00975975,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-04T19:24:10.775687+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-04T19:23:54.924779+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-04T19:24:06.876344+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02104055,
+    "estimated_total_usd": 0.02104055,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
