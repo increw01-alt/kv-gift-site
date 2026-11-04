@@ -1,18 +1,20 @@
 {
   "run_id": "41768814763",
   "date_kst": "2026-11-04",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-04T03:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 새로 필요한 구체적 상황, 해결 단계, 결과물이 기존 답과 달라진다고 보기 어려워 본문 생성 전 보류가 적절합니다. / 0번은 /board/general_notice/67이 이미 다룬 ‘이용 안내 문서의 글자 크기와 배열 방식 개선으로 가독성 높이기’와 같은 질문과 해결 절차를 반복합니다. 기존 글도 글자 크기 기준, 읽기 순서 설계, 점검 체크리스트까지 이미 해결했기 때문에 새로 추가된 가독성 매뉴얼은 중복입니다. / 1번은 /board/general_notice/54가 이미 다룬 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 점검하는 방법’과 질문과 행동 순서가 같습니다. 후보도 공용 기기 사용 후 다운로드 파일 삭제, 삭제 확인, 개인정보 보호 습관화라는 동일한 해결 흐름을 반복합니다. / 2번은 /board/gc_tip/42가 이미 다룬 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하는 방법’과 핵심 질문과 해결 절차가 같습니다. 부피 분류, 매장 위치 표시, 최소 이동 경로 설계라는 기존 답을 그대로 다시 제시하므로 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "41768814763",
@@ -22,15 +24,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-04T12:43:51.805728+09:00"
+      "attempt_started_at": "2026-11-04T12:43:51.805728+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "이용 안내 문서의 글자 크기와 배열을 개선해 가독성 높이는 방법",
+          "source_id": "",
+          "reader_problem": "이용 안내 문서를 읽을 때 글자 크기와 배치가 비효율적이라 정보 흡수가 어렵고 이용에 불편을 겪는 이용자",
+          "distinct_angle": "기존 글은 가독성 문제를 지적하지만 이번 글은 구체적인 글자 크기 기준과 자연스러운 읽기 흐름 설계, 검수용 체크리스트를 제공하여 실무 적용과 개선 효과를 체계적으로 지원한다",
+          "reader_situation": "처음 서비스 이용 안내를 접하거나 시력이 약한 이용자가 안내 문서의 글자 크기와 배열로 인해 내용을 명확히 이해하지 못해 불편함을 겪는 상황",
+          "deliverable": "추천 글자 크기 기준, 안내문 읽는 순서 설계법, 적용 후 점검 및 개선을 위한 체크리스트 포함한 가독성 개선 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "필수 안내 항목별 적절한 글자 크기 선정 기준 설명하기",
+            "독자의 자연스러운 읽기 흐름에 맞춘 안내문 읽는 순서 설계하기",
+            "글자 크기 및 배열 변경 후 적용 검수와 지속적 개선 위한 점검 체크리스트 활용법"
+          ]
+        },
+        {
+          "topic": "공용 컴퓨터나 스마트기기에서 상품권 관련 파일 안전하게 삭제하는 절차",
+          "source_id": "",
+          "reader_problem": "공용 기기에서 상품권 결제 정보와 영수증 파일을 다운로드 후 안전하게 삭제하지 않아 개인정보 및 상품권 정보 노출 위험이 크다",
+          "distinct_angle": "기존 안내가 다운로드 후 단순 삭제를 안내하는 데 비해, 이번 글은 파일 위치 확인, 삭제 절차, 삭제 확인과 개인정보보호 습관화를 포함해 체계적 실천법을 제공한다",
+          "reader_situation": "도서관, 회사 등 공용 컴퓨터나 스마트기기 사용 후 상품권 관련 파일을 안전하게 삭제하고 점검 절차를 배우려는 이용자",
+          "deliverable": "공용 기기 사용 후 상품권 관련 파일의 안전 삭제 절차, 삭제 후 확인 방법, 개인정보 노출 방지를 위한 습관화 전략 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "공용 컴퓨터 및 스마트기기 사용 시 개인정보 및 파일 노출 위험 이해하기",
+            "다운로드 파일 위치 확인과 안전 삭제 절차 익히기",
+            "파일 삭제 완료 후 재확인 및 개인정보 보호 습관화 방안 실천하기"
+          ]
+        },
+        {
+          "topic": "여러 매장 방문 시 물품 부피와 매장 위치를 고려한 효율적 장보기 및 이동 계획",
+          "source_id": "",
+          "reader_problem": "여러 매장과 상품권을 활용해 구매할 때, 물품 부피와 매장 위치를 함께 고려해 효율적인 장보기 순서와 이동 경로 계획이 어렵다",
+          "distinct_angle": "기존 유사 글은 부피 또는 매장 위치만 다루지만 본 글은 부피별 우선순위, 매장 위치 지도화, 최소 이동 경로 설계와 결합해 통합적 계획 수립을 도와준다",
+          "reader_situation": "상품권을 활용해 다수 매장을 방문하며 들고 다닐 물품 부피와 매장 위치를 고려한 편리한 이동ㆍ구매 계획을 세우려는 이용자",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치 지도 및 최소 이동 경로 계산표, 부피와 동선을 고려한 상품권 사용 순서 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권 사용 물품을 부피별로 분류하고 우선순위 설정하기",
+            "매장 위치를 지도에 표시하고 최소 이동 경로 구성법 배우기",
+            "효율적 구매와 이동을 위한 동선 계획과 상품권 사용 순서 결정하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23226,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1089,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24315
+        },
+        "estimated_usd": 0.0110328,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-04T03:44:03.640671+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10178,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 439,
+          "output_tokens_details": {
+            "reasoning_tokens": 103
+          },
+          "total_tokens": 10617
+        },
+        "estimated_usd": 0.009609,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-04T03:44:08.554392+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-04T03:43:54.540311+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-04T03:44:04.362721+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0206418,
+    "estimated_total_usd": 0.0206418,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
