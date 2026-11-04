@@ -1305,5 +1305,18 @@
     "publication_mode": "automatic",
     "run_id": "41737357459",
     "usage_file": "data/editorial_runs/2026-11-04/41737357459.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2576,
+    "topic": "여러 수신자의 용도에 맞추는 상품권 금액 배분 기준 세우기",
+    "drafted_at": "2026-11-05",
+    "automation": true,
+    "search_intent": "여러 사람에게 나눠 줄 상품권을 용도와 필요에 맞게 얼마씩 배분할지 기준을 세우고 싶다",
+    "image_scene": "책상 위에 여러 장의 상품권과 이름표가 붙은 메모 카드, 계산기, 우선순위가 적힌 배분표가 펼쳐져 있고 한 사람이 수신자별 금액을 칸별로 나눠 적으며 배정액을 조정하는 장면",
+    "image_alt": "책상 위 배분표에 여러 수신자별 상품권 금액을 나눠 적으며 계산하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "41856267900",
+    "usage_file": "data/editorial_runs/2026-11-05/41856267900.json"
   }
 ]
