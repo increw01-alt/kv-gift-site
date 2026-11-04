@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T15:20:07.830766+00:00",
+  "generatedAt": "2026-11-04T15:21:32.015671+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -2981,7 +2981,7 @@
       "board": "purchase",
       "topic": "여러 수신자의 용도에 맞추는 상품권 금액 배분 기준 세우기",
       "url": "https://kv-gift.co.kr/board/purchase/2576",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-04T15:21:31.987027+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11334605,
       "knownSubtotalUsd": 0.11334605
