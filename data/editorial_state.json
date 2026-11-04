@@ -299,10 +299,15 @@
       "board": "free",
       "topic": "상품권 구매 시 옵션 변경 내역 정확히 기록하고 최종 주문 대조하는 방법",
       "run_id": "41788461613"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 잔액과 추가 결제액 구분해 최적 사용 순서 정하기",
+      "run_id": "41803565628"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "41788461613",
+  "last_board": "gc_tip",
+  "last_run_id": "41803565628",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
