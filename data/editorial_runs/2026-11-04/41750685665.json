@@ -1,18 +1,20 @@
 {
   "run_id": "41750685665",
   "date_kst": "2026-11-04",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-04T00:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 글이 이미 해결한 질문과 절차를 반복합니다. 0번은 /board/purchase/2564가 이미 다룬 ‘모바일상품권 구매 전에 수신 연락처를 확인하는 방법’과 동일한 입력 확인 문제이고, 1번은 /board/gc_tip/42의 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 계획하는 방법’과 해결 흐름이 같습니다. 2번은 /board/sense/22와 /board/free/478이 이미 다룬 ‘선물할 시간을 제안할 때 상대 일정과 이동 부담을 조율하는 대화법’과 같고, 3번은 /board/sense/21 및 /board/gc_tip/33, /board/gc_tip/34와 겹치는 선물 수·부피·보관 관리 주제입니다. 기존 답만으로도 해결되는 수준이라 새로 필요한 구체적 예시나 추가 해결 내용이 확인되지 않아 보류가 적절합니다. / 0번: /board/purchase/2564가 이미 ‘모바일상품권 구매 전에 수신 연락처를 확인해야 하는 이유는 무엇인가요?’를 통해 수신 연락처 입력, 수정 문의, 주문 전 재확인 절차까지 해결했습니다. 후보도 종이상품권 배송지와 모바일상품권 수신 연락처를 구분해 정확히 입력하는 안내라서 이미 해결한 질문을 그대로 다시 다룹니다. / 1번: /board/gc_tip/42가 이미 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하려면?’이라는 질문에 대해 부피별 분류, 매장 위치 확인, 최단 동선 구성, 구매 순서 조정까지 안내했습니다. 후보의 물품 부피·매장 위치·이동 경로·사용 순서 조합은 같은 해결 절차를 반복합니다. / 2번: /board/sense/22와 /board/free/478이 이미 ‘선물할 시간을 제안할 때 상대 일정과 이동 부담을 부담 없이 확인하는 대화법’과 ‘모임에서 선물 참여를 선택으로 두는 표현’을 다뤘습니다. 후보도 참여 의사→일정 부담→이동 거리 순으로 묻는 흐름이라 독자 문제와 해결 단계가 같습니다. / 3번: /board/sense/21이 이미 ‘선물할 물건의 수와 부피를 조절하고 받은 선물을 용도·보관 장소별로 분류하는 방법’을 해결했고, /board/gc_tip/33과 /board/gc_tip/34도 상품권/선물의 분류·기록·관리 절차를 다뤘습니다. 후보의 수량·부피 제한, 보관 위치 분류, 단순화 조치는 기존 답과 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "41750685665",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-04T09:58:48.640764+09:00"
+      "attempt_started_at": "2026-11-04T09:58:48.640764+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "종이상품권과 모바일상품권 수신지 구분 및 정확한 입력법",
+          "source_id": "",
+          "reader_problem": "종이형과 모바일형 상품권 주문 시 배송지 주소와 모바일 수신 연락처의 차이를 몰라 올바른 정보 입력이 어려움",
+          "distinct_angle": "초보 구매자가 배송지와 수신 연락처 각각의 역할과 정보를 명확하게 구분하고, 실수 없이 입력하는 실전 안내를 제공",
+          "reader_situation": "상품권 구매 초보로서 두 입력란의 역할과 차이를 명확히 이해하고 실수 없이 정보를 입력하려는 이용자 상황",
+          "deliverable": "종이형 상품권 우편 배송지와 모바일상품권 수신 연락처 연결 개념도와 각 입력란에 넣어야 할 정보 상세 안내 자료",
+          "task_id": "",
+          "outline": [
+            "종이상품권 배송지에 실제 우편물이 도착하는 구조 이해하기",
+            "모바일상품권 수신처에 휴대전화 번호 또는 이메일이 전달되는 방식 설명하기",
+            "배송지와 수신 연락처 입력란의 역할 차이 및 올바른 정보 기입 사례 제시하기"
+          ]
+        },
+        {
+          "topic": "여러 매장 및 상품권 활용 시 물품 부피와 최적 이동 경로 계획법",
+          "source_id": "",
+          "reader_problem": "여러 매장 방문과 상품권 구매 시 물품 부피와 매장 위치를 함께 고려해 효율적인 장보기 순서와 이동 경로를 결정하기 어려움",
+          "distinct_angle": "물품 부피와 매장 위치를 모두 반영하여 실제 이동 동선을 계획하고 상품권 사용 순서까지 조합하는 실무적 방법론 제시",
+          "reader_situation": "상품권을 활용해 여러 매장을 방문하며 들고 다닐 물품 부피와 매장 위치를 고려한 편리한 이동과 구매 계획을 세우려는 사용자",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치 지도 및 최소 이동 경로 계획표, 이동 계획 반영 상품권 사용 순서 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권 사용 물품을 부피별로 나누고 우선순위 설정하기",
+            "매장 위치 지도 작성과 최소 이동 경로 구성 방법 익히기",
+            "효율적 구매와 이동 위한 동선 계획과 상품권 사용 순서 결정하기"
+          ]
+        },
+        {
+          "topic": "선물용 시간 제안 시 상대 일정 및 이동 부담 자연스러운 조율법",
+          "source_id": "",
+          "reader_problem": "증정용 물건 대신 함께할 시간을 제안하며 상대방의 일정, 이동 거리, 준비 부담을 부담 없이 확인하고 조율하는 방법이 모호함",
+          "distinct_angle": "활동 의사부터 일정 부담, 이동 거리까지 단계별 구분된 질문 흐름과 배려 중심의 조율 기준 및 예시 대화법 제공",
+          "reader_situation": "물건 선물보다 의미 있는 시간을 제안하면서 상대방 일정과 이동 부담을 세분화해 부담 없이 소통하려는 이용자",
+          "deliverable": "활동 참여 의사, 일정 부담, 이동 거리까지 단계별 질문 흐름도, 상대방 편의를 고려한 조율 기준표와 대화 예시 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "활동 참여 의사를 부담 없이 묻는 질문 표현 만들기",
+            "일정 부담 관련 구체적 확인법과 예시 익히기",
+            "이동 거리와 준비 부담을 고려한 자연스러운 질문 흐름 설계하기"
+          ]
+        },
+        {
+          "topic": "선물용 상품 수 및 부피 부담 줄이고 효율적으로 관리하는 방법",
+          "source_id": "",
+          "reader_problem": "선물용 상품권이나 물건 수가 많아져 관리 및 보관 부담이 커지면서 효용과 만족도 저하 문제 발생",
+          "distinct_angle": "구체적인 수량·부피 제한 기준을 바탕으로 용도별·보관 장소별 분류 표 작성과 단순화 조치로 부담을 줄이는 실용적 안내",
+          "reader_situation": "다수 상품권이나 선물용 물건을 준비하며 보관 공간과 관리 부담을 줄이고 효율적인 정리 체계를 마련하려는 이용자",
+          "deliverable": "선물 수량·부피 제한 기준, 용도별 보관 위치 분류표 작성법, 단순화 및 실생활 적용 가능한 정리 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "선물할 물품 수량과 부피 최소화 기준 명확히 세우기",
+            "받은 선물을 용도별·장소별 체계적 분류 및 기록 방법 익히기",
+            "관리 부담을 줄이는 단순화 조치 및 일상 적용법 안내"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23166,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 979,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24145
+        },
+        "estimated_usd": 0.0108328,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-04T00:58:59.854908+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12274,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 815,
+          "output_tokens_details": {
+            "reasoning_tokens": 166
+          },
+          "total_tokens": 13089
+        },
+        "estimated_usd": 0.012873,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-04T00:59:06.757610+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-04T00:58:51.162708+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-04T00:59:00.585477+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0237058,
+    "estimated_total_usd": 0.0237058,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
