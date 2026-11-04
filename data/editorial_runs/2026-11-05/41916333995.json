@@ -1,18 +1,20 @@
 {
   "run_id": "41916333995",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-04T21:27:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글이 이미 해결한 질문과 절차를 그대로 반복합니다. 새로 필요한 독자 상황, 해결 단계, 결과물이 기존 글과 달라진다고 보기 어려워 본문 생성 전 보류가 적절합니다. / 0번은 /board/purchase/2576이 이미 다룬 ‘여러 수신자에게 상품권 금액을 용도별로 나누고 우선순위와 최소 단위를 정해 배분표를 작성하는 방법’과 핵심 질문, 독자 상황, 해결 순서가 같습니다. 수신자별 용도 파악, 우선순위 설정, 배분표 작성이라는 기존 답을 그대로 다시 제시하므로 중복입니다. / 1번은 /board/purchase/2566과 /board/general_notice/53이 이미 다룬 ‘주문·결제 전 최종 내역과 변경 사항을 확인하는 방법’과 해결 흐름이 같습니다. 최초 기록, 변경 내역 점검, 최종 대조는 기존 답만으로 처리되는 범위라 새 해결 문제가 확인되지 않습니다. / 2번은 /board/gc_tip/42가 이미 다룬 ‘외출 중 상품권으로 구매할 물건의 부피와 이동 동선을 함께 고려하는 방법’과 동일한 문제를 다룹니다. 부피 분류, 매장 위치 표시, 최소 이동 경로 설계라는 기존 답을 그대로 반복합니다. / 3번은 /board/sense/21과 /board/gc_tip/43이 이미 다룬 ‘선물할 물건의 수·부피를 줄이고, 받은 물건을 용도·보관 장소별로 관리하는 방법’과 겹칩니다. 수량·부피 제한, 분류 체계, 보관 위치 정리라는 해결 순서가 같아 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "41916333995",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T06:28:52.010396+09:00"
+      "attempt_started_at": "2026-11-05T06:28:52.010396+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 금액 배분, 여러 수신자용 맞춤 기준과 배분표 작성법",
+          "source_id": "",
+          "reader_problem": "여러 수신인에게 구매한 상품권을 용도에 맞게 합리적으로 금액을 배분할 기준과 실행 절차를 모르겠다.",
+          "distinct_angle": "기존 글과 달리 가족·팀 등 다수 수신자별 용도 우선순위 설정과 최소 단위 기준을 포함한 실무 배분표 작성법, 실행 지침까지 자세히 제공한다.",
+          "reader_situation": "한 번에 구매한 상품권을 여러 명에게 맞춤 용도로 배분하고 금액, 종류를 명확히 계획하려는 이용자.",
+          "deliverable": "수신자별 용도 분류가 포함된 금액 배분표 양식, 용도별 우선순위 설정 안내, 배분 계산 및 실행 지침서.",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적 명확히 파악하기",
+            "용도별 우선순위와 최소 배분 단위 구체적으로 결정하기",
+            "수신자별 금액 배분표 작성 및 배분 계획 실행 절차 안내하기"
+          ]
+        },
+        {
+          "topic": "상품권 구입 후 변경된 옵션 대조 점검과 주문 실수 방지 매뉴얼",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니 옵션을 여러 번 변경했을 때 원래 의도와 최종 주문 내역이 일치하는지 꼼꼼히 확인하는 구체적 방법이 없다.",
+          "distinct_angle": "기존 단순 확인법과 차별화해 최초 기록법, 변경 내역 세부 점검 프로세스, 대조 점검표 작성 및 오류 예방 구체 실행 지침 포함.",
+          "reader_situation": "상품권 옵션을 잦은 수정 후 최종 주문 전 일치 여부 확인과 실수 방지를 원하는 대량 구매자나 꼼꼼한 개인 구매자.",
+          "deliverable": "원본 옵션 및 변경 내역 기록 방법, 상세 점검 절차 매뉴얼, 최종 주문 전 대조 점검표와 실천 지침서.",
+          "task_id": "",
+          "outline": [
+            "장바구니 최초 담긴 상품권과 옵션 체계적 기록 익히기",
+            "옵션 변경 시 변경 사항 세밀 점검 절차 습득하기",
+            "최종 주문 전 원래 의도와 현재 옵션 대조 점검 및 오류 예방 방법 지도하기"
+          ]
+        },
+        {
+          "topic": "상품권과 구매 물품 부피·매장 위치를 고려한 최적 장보기 동선 계획법",
+          "source_id": "",
+          "reader_problem": "여러 매장과 상품권을 이용할 때 물품 부피와 매장 위치를 함께 고려해 가장 효율적인 구매 순서와 이동 경로를 정하는 방법이 어렵다.",
+          "distinct_angle": "기존 단일 요소 고려 안내와 달리 부피별 우선순위 설정, 매장 지도로 최소 이동 경로 작성, 동선과 상품권 사용 순서 총체적 계획 수립법 제공.",
+          "reader_situation": "상품권으로 여러 매장을 방문하며, 들고 다닐 물품 부피와 매장 위치를 고려해 편리하고 합리적인 구매·이동 계획을 원하는 이용자.",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치 지도와 최소 이동 경로 계획표, 상품권 사용 순서 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "상품권 사용 물품을 부피별로 분류해 우선순위 설정하기",
+            "매장 위치를 지도에 표시하고 최소 이동 경로 구성법 익히기",
+            "효율적 구매와 이동 위한 동선 계획과 상품권 사용 순서 결정하기"
+          ]
+        },
+        {
+          "topic": "선물용 상품권 및 물건 수량·부피 제한과 체계적 관리법",
+          "source_id": "",
+          "reader_problem": "선물용 상품권이나 물건 수가 많아 관리와 보관 부담이 커지고 효용과 만족도가 떨어지는 문제를 해결하는 방안을 모르겠다.",
+          "distinct_angle": "단순한 정리법에서 벗어나 수량 및 부피 제한 기준 제시와 용도·보관 위치별 분류 체계, 단순화 조치 및 일상 적용 현실적 매뉴얼을 함께 제공한다.",
+          "reader_situation": "다수의 선물용 상품권이나 물건을 준비하며 보관 공간과 관리 부담을 줄이고 효율적인 정리 방법을 찾는 이용자.",
+          "deliverable": "선물 수량·부피 제한 기준, 용도별 보관 위치 분류표, 단순화 및 실생활 적용 가능한 정리 매뉴얼.",
+          "task_id": "",
+          "outline": [
+            "선물할 물품 수량과 부피 최소화 기준 명확히 세우기",
+            "받은 선물을 용도별·장소별 체계적으로 분류하고 기록하는 법 익히기",
+            "관리 부담 줄이는 단순화 조치와 실생활 적용 방법 안내하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23675,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1052,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24727
+        },
+        "estimated_usd": 0.0111532,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-04T21:29:02.561753+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10909,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 505,
+          "output_tokens_details": {
+            "reasoning_tokens": 77
+          },
+          "total_tokens": 11414
+        },
+        "estimated_usd": 0.01045425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-04T21:29:06.661844+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-04T21:28:54.778706+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-04T21:29:03.293522+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02160745,
+    "estimated_total_usd": 0.02160745,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
