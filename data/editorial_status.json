@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T01:38:39.470991+00:00",
+  "generatedAt": "2026-11-05T01:39:06.449493+00:00",
   "dateKst": "2026-11-05",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 7,
-  "held": 5,
+  "held": 6,
   "errors": 0,
-  "knownSubtotalUsd": 0.2387755,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2770023,
+  "estimatedTotalUsd": 0.2770023,
   "records": [
     {
       "runId": "41856267900",
@@ -92,21 +92,21 @@
     },
     {
       "runId": "41949819243",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "상품권 잔액과 부족액 구분으로 최적 결제 순서 정하기",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-05T01:37:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0382268,
+      "knownSubtotalUsd": 0.0382268
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 6,
+    "retryAfter": "2026-11-05T12:38:39.200090+09:00",
+    "cooldownMinutes": 120
   }
 }

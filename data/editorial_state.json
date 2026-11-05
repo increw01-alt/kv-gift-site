@@ -309,10 +309,15 @@
       "board": "gc_information",
       "topic": "상품권 발행사, 판매처, 사용처 역할 및 권한 명확히 이해하기",
       "run_id": "41879800984"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 잔액과 부족액 구분으로 최적 결제 순서 정하기",
+      "run_id": "41949819243"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "41934582833",
+  "last_board": "gc_tip",
+  "last_run_id": "41949819243",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
