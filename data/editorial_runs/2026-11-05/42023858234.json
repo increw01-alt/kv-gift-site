@@ -1,18 +1,20 @@
 {
   "run_id": "42023858234",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T12:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 후보 0은 /board/sense/19의 ‘메시지에 할 일이 여럿이면 담당자와 완료 조건을 어떻게 묶어 쓸까요?’와 질문·해결 방식이 같고, /board/general_notice/60의 문의 내용 구분 요령처럼 한 줄로 정리하는 작성법을 반복합니다. 후보 1은 /board/sense/21의 ‘물건 부담 줄이는 선물과 보관 부담 관리법’과 같은 선물 수량·부피 제한, 용도별 분류, 보관 부담 경감 흐름입니다. 후보 2는 /board/general_notice/54의 ‘공용 기기에서 상품권을 확인했다면 로그아웃과 다운로드 파일을 점검해 주세요’와 동일하게 공용 기기에서 파일을 삭제하고 노출을 막는 절차를 다룹니다. 각 후보 모두 기존 답만으로 처리되는 범위를 벗어난 새 질문이나 구체적 해결 단계가 확인되지 않아 본문 생성 전 보류가 맞습니다. / 0번: 기존 공개 글 /board/sense/19가 이미 ‘할 일, 담당자, 완료 조건을 한 줄에 묶어 쓰는 방법’을 해결했고, /board/general_notice/60도 내용 구분을 다루므로 후보의 역할·책임 배분 및 완료 조건 분리 설명은 중복입니다. / 1번: 기존 공개 글 /board/sense/21이 이미 ‘선물 수량과 부피를 줄이고, 용도와 보관 장소별로 분류해 부담을 관리하는 방법’을 다뤘습니다. 후보의 최소화 기준, 분류표, 관리 매뉴얼은 같은 질문·해결 절차를 반복합니다. / 2번: 기존 공개 글 /board/general_notice/54가 이미 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 삭제해 개인정보 노출을 막는 방법’을 해결했습니다. 후보의 안전 삭제, 재검증, 보호 습관화는 기존 답만으로 처리되는 범위라 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "42023858234",
@@ -22,15 +24,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T21:03:51.390514+09:00"
+      "attempt_started_at": "2026-11-05T21:03:51.390514+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모임 참여 방식에 따른 역할과 책임 배분 기준",
+          "source_id": "",
+          "reader_problem": "모임이나 프로젝트에서 여러 요청사항이 섞여 있어 누가 어떤 역할과 책임을 맡았는지 명확하지 않아 업무가 혼란스럽고 진행 상황 파악이 어렵다.",
+          "distinct_angle": "기존 글들이 단순 업무 목록화나 담당자 이름 열거에 머문 반면, 본 기획은 역할별 책임 범위와 완료 조건을 명확히 구분해 한 줄에 기록하는 구체적 작성법과 중복 방지 원칙까지 제시한다.",
+          "reader_situation": "모임 운영팀이나 프로젝트 참여자로서 여러 업무를 체계적으로 분배하고, 진행 및 완료 기준을 명확히 해 혼란 없이 관리하고자 하는 상황",
+          "deliverable": "할 일별 행동과 구체적 완료 조건이 분리된 실용적 요청표 양식, 담당자 및 역할 명시 예시, 중복 방지를 위한 원칙, 모호한 부탁을 구체화한 문장 만들기 안내서",
+          "task_id": "",
+          "outline": [
+            "할 일과 수행 기준을 명확히 구분하여 한 줄로 작성하는 방법 익히기",
+            "담당자 이름과 역할을 분명히 적어 중복이나 누락 없이 책임 분배하기",
+            "구체적 요청표 예시 살펴보고 모호한 부탁을 명확한 문장으로 다듬는 실습"
+          ]
+        },
+        {
+          "topic": "물건 늘리지 않는 선물 선택과 보관 부담 최소화 전략",
+          "source_id": "",
+          "reader_problem": "선물용 상품권이나 물건을 많이 준비하다 보면 관리와 보관의 부담이 커져 선물의 효용과 만족도가 떨어지고 스트레스를 받는다.",
+          "distinct_angle": "기존 단순 분류 안내와 달리, 본 기획은 선물 수량과 부피를 제한하는 기준 설정부터, 용도별·보관 위치별 체계적인 분류법과 함께 일상에 적용 가능한 단순화 조치 및 부담 경감 방법까지 통합 솔루션을 제공한다.",
+          "reader_situation": "여러 개의 선물을 준비하며 보관 공간이 부족하고 관리가 번거로워 체계적이고 현실적인 정리 및 부담 감소 방안을 찾는 사용자",
+          "deliverable": "선물 수량과 부피 제한 기준, 용도 및 보관 위치별 분류표 작성법, 단순화 조치 및 일상 생활에 적용 가능한 정리 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "선물할 물품의 수량과 부피에 대한 최소화 기준 명확히 설정하기",
+            "받은 선물을 용도별과 보관 장소별로 체계적으로 분류하고 기록하는 방법 배우기",
+            "관리 부담을 줄이는 단순화 조치와 일상 생활에 적용하는 구체적 실천법 안내"
+          ]
+        },
+        {
+          "topic": "상품권 파일 안전 삭제와 개인정보 노출 방지 방법",
+          "source_id": "",
+          "reader_problem": "공용 컴퓨터나 스마트기기에서 상품권 결제 정보나 영수증 파일을 다운로드한 뒤 안전하게 삭제하지 않아 개인정보 및 상품권 정보 노출 위험이 크다.",
+          "distinct_angle": "기존 단순 삭제 안내를 넘어, 공용 기기별 특성과 노출 위험 이해부터 다운로드 경로 확인, 안전 삭제 절차와 삭제 후 재검증, 개인정보 보호 습관화까지 단계별 실전 매뉴얼을 제시한다.",
+          "reader_situation": "도서관, 회사, 카페 등 여러 사람이 사용하는 기기에서 상품권 파일을 처리한 후 정확하고 안전하게 파일 삭제와 점검 절차를 익혀 개인정보 노출을 예방하고자 하는 사용자",
+          "deliverable": "공용 기기 사용 후 상품권 관련 파일 안전 삭제 단계별 매뉴얼, 삭제 후 재확인 방법, 개인정보 노출 예방을 위한 습관화 가이드",
+          "task_id": "",
+          "outline": [
+            "공용 컴퓨터 및 스마트기기 사용 시 개인정보 및 파일 노출 위험과 영향 이해하기",
+            "상품권 관련 파일 다운로드 위치 찾기 및 안전 삭제 절차 배우기",
+            "파일 삭제 후 재확인 방법과 개인정보 보호를 위한 일상적 습관화 전략 실천"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23907,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1198,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 25105
+        },
+        "estimated_usd": 0.0114796,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T12:04:07.434536+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11129,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 638,
+          "output_tokens_details": {
+            "reasoning_tokens": 146
+          },
+          "total_tokens": 11767
+        },
+        "estimated_usd": 0.01121775,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T12:04:12.282729+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T12:03:54.066734+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T12:04:07.985562+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02269735,
+    "estimated_total_usd": 0.02269735,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
