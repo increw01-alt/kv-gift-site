@@ -1,18 +1,20 @@
 {
   "run_id": "41990339849",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T07:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 0번은 기존 공개 글 /board/sale/3690, /board/sale/3692, /board/sale/3693이 이미 다룬 ‘매입처에 문의하기 전 상품권 상태를 확인하고, 민감 정보를 가리고, 필요한 정보를 정리해 문의하는 방법’과 질문·해결 절차가 같습니다. 후보가 추가한 증빙자료 수집, 비식별 처리, 안전한 전달 절차도 실제로는 기존 글의 상태 점검·기록·개인정보 보호 안내를 확장 서술한 수준이라, 기존 답만으로도 해결되는 범위를 벗어난 새 판단이나 행동이 확인되지 않았습니다. / 0번: /board/sale/3690이 이미 상품권 사용 가능 상태 확인, 매입처에 문의해야 할 조건, 거래 기록과 개인정보 안전 관리 방법을 다뤘고, /board/sale/3692는 상품권 종류·상태·개인정보 노출 방지 체크리스트를, /board/sale/3693은 상태 이상을 기록하고 매입처에 구체적으로 문의하는 절차를 해결했습니다. 후보의 상태 점검·증빙자료 수집·비식별화·안전 전달은 이 기존 답을 그대로 적용해도 처리되는 범위라 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "41990339849",
@@ -22,15 +24,99 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T16:53:39.420854+09:00"
+      "attempt_started_at": "2026-11-05T16:53:39.420854+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 판매 상담 전 상태 점검과 매입처 문의 준비법",
+          "source_id": "",
+          "reader_problem": "여러 종류의 상품권을 매입처에 판매 문의하기 전에 각각의 상태를 정확히 점검하고, 관련 증빙 자료를 체계적으로 수집하며 개인정보를 안전하게 보호하는 절차가 불분명해 상담 과정이 지연되고 정보 노출 위험이 존재하는 문제",
+          "distinct_angle": "기존 매입 안내는 매입률이나 입금 시점 안내 중심이나, 이 글은 상담 전 상태 점검과 증빙 자료 수집 절차를 표준화하고 개인정보 보호까지 포함한 종합적 상담 준비 매뉴얼을 제공한다",
+          "reader_situation": "다양한 상품권을 여러 매입처에 판매 문의하려는 이용자가, 매입 상담 전에 상품권 상태 확인부터 개인정보 보호까지 한 번에 체계적으로 준비하고자 하는 상황",
+          "deliverable": "상품권 상태 점검표 양식, 유형별 증빙자료 수집과 비식별화 매뉴얼, 개인정보 최소 공개 및 안전한 전달 절차를 포함한 공식 상담 준비문서",
+          "task_id": "",
+          "outline": [
+            "상품권 종류별 상태 점검 필수 항목 및 기록 및 분류 방법 익히기",
+            "각 유형별 증빙자료 수집 방식과 개인정보 비식별 처리 방법 학습하기",
+            "개인정보 노출 최소화를 위한 자료 공개 범위 설정과 안전한 상담 자료 전달 절차 구축하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23911,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 317,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24228
+        },
+        "estimated_usd": 0.0100716,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T07:53:46.382648+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6440,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 439,
+          "output_tokens_details": {
+            "reasoning_tokens": 125
+          },
+          "total_tokens": 6879
+        },
+        "estimated_usd": 0.0068055,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T07:53:49.588038+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T07:53:41.550569+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T07:53:46.478081+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0168771,
+    "estimated_total_usd": 0.0168771,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
