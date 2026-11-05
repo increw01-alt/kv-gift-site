@@ -1,18 +1,20 @@
 {
   "run_id": "42053541936",
   "date_kst": "2026-11-06",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 가족 구성원별 상품권 잔액과 예정 사용량을 대조해 중복 사용을 막는 내용인데, 기존 글 /board/gc_tip/33이 이미 가족 단위로 누가 언제 어디서 얼마를 썼는지 기록하고 서로 비교해 중복 사용을 방지하는 방법을 다뤘고, /board/gc_tip/32도 잔액 확인·사용 계획 수립·사용 전 점검을 해결했습니다. 이번 후보에서 새로 추가되는 구체적 해결 단계나 기존 답으로는 처리되지 않는 질문을 확인할 수 없어 본문 생성 전 보류가 맞습니다. / 0번: 기존 공개 글 /board/gc_tip/33이 이미 가족 구성원별 상품권 사용 내역을 기록하고 서로 비교해 중복 사용을 막는 방법을 해결했습니다. 후보도 가족별 잔액과 예정 사용 계획을 대조해 중복 사용과 잔액 부족을 점검하므로 질문과 해결 절차가 사실상 같습니다. /board/gc_tip/32도 잔액 확인과 사용 계획 수립을 다뤄 새로 필요한 판단이나 행동이 확인되지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42053541936",
@@ -22,15 +24,99 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T00:18:50.865728+09:00"
+      "attempt_started_at": "2026-11-06T00:18:50.865728+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "가족별 상품권 잔액과 사용 계획 대조로 중복 사용 방지하기",
+          "source_id": "",
+          "reader_problem": "여러 가족 구성원이 각자 보유한 상품권의 잔액과 예정된 사용 계획을 명확히 대조하지 못해 중복 사용이나 잔액 미파악 문제가 발생함",
+          "distinct_angle": "기존 문서들은 개인 단위 상품권 관리에 집중한 반면, 이번 글은 가족 단위로 여러 명의 잔액과 사용 계획을 비교하며 조율하는 실질적 절차와 기록 도구를 제시함",
+          "reader_situation": "가족 내 여러 명이 별도 또는 공동으로 보유한 상품권 사용 계획을 조율하면서, 잔액과 예정 사용량을 꼼꼼히 비교해 의사소통과 관리 효율을 높이고자 하는 상황",
+          "deliverable": "가족 구성원별 보유 잔액 표와 예정 사용 내역 대조표, 중복 사용과 잔액 부족 여부를 점검하는 체크리스트 양식",
+          "task_id": "",
+          "outline": [
+            "가족 구성원별 상품권 잔액 현황을 정확하게 정리하는 방법 익히기",
+            "예정된 사용 내역을 기간과 용도별로 상세히 기록 및 분류하기",
+            "잔액과 예정 사용 계획을 대조해 중복 또는 과다 사용 여부를 체크하고 소통하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24009,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 588,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24597
+        },
+        "estimated_usd": 0.0105444,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T15:18:59.997522+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 6608,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 537,
+          "output_tokens_details": {
+            "reasoning_tokens": 257
+          },
+          "total_tokens": 7145
+        },
+        "estimated_usd": 0.0073725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T15:19:04.298834+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T15:18:53.576615+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T15:19:00.314295+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0179169,
+    "estimated_total_usd": 0.0179169,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
