@@ -1331,5 +1331,18 @@
     "publication_mode": "automatic",
     "run_id": "42059466562",
     "usage_file": "data/editorial_runs/2026-11-06/42059466562.json"
+  },
+  {
+    "board": "sense",
+    "id": 23,
+    "topic": "한정된 예산 내에서 선물의 효용과 비용 대비 가치를 비교해 결정하는 기준 세우기",
+    "drafted_at": "2026-11-06",
+    "automation": true,
+    "search_intent": "한정된 예산 안에서 선물 후보를 효용과 비용 기준으로 직접 비교해 고르는 방법을 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 작은 선물 상자 두 개와 계산기, 메모장이 나란히 놓여 있고 한 사람이 왼쪽에는 만족도 점수, 오른쪽에는 가격과 추가 조건을 적어 비교표를 채우는 장면",
+    "image_alt": "책상 위에서 선물 두 가지의 만족도와 가격을 비교표로 적어 보는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42112880050",
+    "usage_file": "data/editorial_runs/2026-11-06/42112880050.json"
   }
 ]
