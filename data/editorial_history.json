@@ -1318,5 +1318,18 @@
     "publication_mode": "automatic",
     "run_id": "41856267900",
     "usage_file": "data/editorial_runs/2026-11-05/41856267900.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2577,
+    "topic": "액면가 다른 상품권 선택 시 실제 지출 비교 방법",
+    "drafted_at": "2026-11-06",
+    "automation": true,
+    "search_intent": "액면가가 다른 상품권들을 실제 지출 기준으로 환산해 비교하고 나에게 맞는 선택표를 만들고 싶은 질문",
+    "image_scene": "책상 위에 액면가가 다른 상품권 카드 세 장과 계산기, 엑셀 비교표가 펼쳐져 있고 한 사람이 실제 지출 금액과 할인 조건을 칸별로 적어 가장 저렴한 선택지를 고르는 구도",
+    "image_alt": "책상 위에 서로 다른 액면가의 상품권 카드와 계산기, 비교표가 놓여 있고 한 사람이 실제 지출 금액을 적어 가며 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42059466562",
+    "usage_file": "data/editorial_runs/2026-11-06/42059466562.json"
   }
 ]
