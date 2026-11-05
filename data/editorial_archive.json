@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T21:29:42.877411+00:00",
+  "generatedAt": "2026-11-05T21:31:27.793247+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3233,7 +3233,7 @@
       "board": "sense",
       "topic": "한정된 예산 내에서 선물의 효용과 비용 대비 가치를 비교해 결정하는 기준 세우기",
       "url": "https://kv-gift.co.kr/board/sense/23",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-05T21:31:27.774688+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.12184615,
       "knownSubtotalUsd": 0.12184615
