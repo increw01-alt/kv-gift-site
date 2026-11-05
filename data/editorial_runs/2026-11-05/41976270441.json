@@ -1,18 +1,20 @@
 {
   "run_id": "41976270441",
   "date_kst": "2026-11-05",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "종이형·모바일 상품권 배송지와 수신 연락처 입력 구분법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T05:47:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 종이형 상품권의 우편 배송지와 모바일 상품권의 수신 연락처를 구분해 입력하는 방법이라는 핵심 질문이 기존 글과 같습니다. 본문도 배송지에는 주소, 수신 연락처에는 전화번호·이메일을 넣으라는 동일한 절차를 반복하고 있어 새 해결 단계가 없습니다. / 기존 관련 글인 모바일상품권 수신 연락처 확인 안내와 실물 배송지·모바일 수신처 구분 제목이 이미 같은 역할 구분을 다루고 있어, 제목만 바꾼 수준으로 보입니다. / 주문 화면에서 무엇을 입력할지에 대한 실무 예시는 있지만, 더 새로운 판단 기준이나 다른 문제 해결이 추가되지 않았습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41976270441",
@@ -22,15 +24,248 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T14:48:50.922970+09:00"
+      "attempt_started_at": "2026-11-05T14:48:50.922970+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 발행·판매·사용처 역할 구분과 구매 결정 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 구매와 사용 시 발행사, 판매처, 사용처의 각각의 역할과 권한을 명확히 이해하지 못해 올바른 구매 및 이용 결정을 내리기 어렵다.",
+          "distinct_angle": "기존의 일반 안내와 달리, 각 참여자별 역할을 시각적 역할도와 실제 사례 중심으로 구체적이고 실무적으로 설명하여 구매 전·후 단계에서 확인해야 할 점을 명확히 한다.",
+          "reader_situation": "상품권을 처음 구매하거나 여러 업체 상품권을 비교하며, 각 역할별 책임 범위를 분명히 알고 구매와 사용 결정을 내리려는 소비자 및 실무 담당자.",
+          "deliverable": "발행사, 판매처, 사용처의 역할과 권한을 시각적으로 정리한 역할도, 각 역할별 체크포인트와 실제 구매·사용 사례 설명 자료.",
+          "task_id": "",
+          "outline": [
+            "발행사, 판매처, 사용처 각각의 기본 역할 및 책임 범위 상세 분류하기",
+            "각 역할별 실제 구매·사용 절차에서 확인해야 할 점과 주의사항 도출하기",
+            "시각적 역할 관계도 작성 및 상황별 역할 분리 사례 중심 실제 설명 전달하기"
+          ]
+        },
+        {
+          "topic": "상품권 명칭 유사 상품 구분과 라벨링 체계 구축 실무 지침",
+          "source_id": "",
+          "reader_problem": "비슷한 이름이나 겉모습의 상품권이 많아 명확한 구분 기준과 표시 방법이 없어 혼란스럽고 관리가 어렵다.",
+          "distinct_angle": "기존 단순 명칭 분류를 넘어서, 실무에서 적용 가능한 구분 항목 구축과 라벨링 예시, 단계별 구분 체계 구축 절차를 소개하여 실질적 구분 능력 향상을 목표로 한다.",
+          "reader_situation": "여러 비슷한 이름의 상품권을 보유 또는 관리하면서, 용도, 발행사, 보관 위치 등에 따라 명확히 분류하고 빠르게 식별·관리하려는 담당자와 이용자.",
+          "deliverable": "상품권별 구분에 필요한 구체적 분류 항목 목록, 라벨링 및 표시 방법 예시, 단계별 구분 체계 구축 실행 지침서.",
+          "task_id": "",
+          "outline": [
+            "상품권 명칭과 발행사별 기본 정보 수집 및 문제점 분석",
+            "분류와 표시를 위한 상품권 특성별 구분 기준 체계화 과정",
+            "실무에서 적용 가능한 상품권 라벨링 및 구분 표시 개선 방안 수립과 실행"
+          ]
+        },
+        {
+          "topic": "상품권 주문 장바구니 옵션 변경 내역 꼼꼼 확인 절차 매뉴얼",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니에서 금액, 수신자 등 옵션을 여러 차례 변경할 때 최종 주문 내역과 최초 의도가 정확히 일치하는지 체계적으로 확인하는 방법이 없어 주문 실수가 우려된다.",
+          "distinct_angle": "기존 단순 점검 안내에서 벗어나, 최초 옵션 기록법과 변경 내역 상세 점검 매뉴얼, 최종 주문 전 대조 점검표 및 이를 실행하는 구체적 행동 지침을 제공하는 실무 중심 매뉴얼이다.",
+          "reader_situation": "장바구니 옵션을 여러 차례 수정하면서 최종 주문 전 원래 의도와 변경된 내역을 엄밀히 대조해 실수를 방지하고자 하는 대량 구매자 및 꼼꼼한 개인 구매자.",
+          "deliverable": "최초 장바구니 내 상품권 및 옵션 기록 양식과 상세 변경 내역 점검 절차, 최종 주문 직전 원본과 최신 내역 대조 점검표 및 구체적 실천 지침서.",
+          "task_id": "",
+          "outline": [
+            "장바구니에 최초 담긴 상품권 및 옵션 체계적 기록 방법 익히기",
+            "변경 시마다 세부 내역 점검과 확인 절차 실습하기",
+            "최종 주문 전 최초 의도와 현재 옵션 일치 여부 직접 대조 점검 및 오류 예방하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "종이형·모바일 상품권 배송지와 수신 연락처 입력 구분법",
+        "source_id": "",
+        "reader_problem": "종이 상품권 우편 배송지 주소와 모바일 상품권 수신 연락처의 역할 차이를 몰라 주문 과정에서 잘못된 정보 입력으로 오류가 발생하는 문제.",
+        "distinct_angle": "단순 설명을 넘어, 배송과 수신 처리 메커니즘과 실제 사례를 연결해 시각적으로 이해시키며, 올바른 정보 입력 체크리스트와 오류 사례를 구체적으로 안내한다.",
+        "reader_situation": "상품권 구매 초보자로서 두 정보 입력란의 기능과 역할 차이를 명확히 이해하고, 실수 없이 정확하게 입력해 안전한 주문을 원한다.",
+        "deliverable": "종이형 상품권 우편 배송지와 모바일 상품권 수신 연락처의 연동 구조도와 역할 구분, 올바른 정보 입력 사례, 오입력 방지 체크리스트.",
+        "task_id": "",
+        "outline": [
+          "종이 상품권 우편 배송지에 실제 우편물이 도착하는 과정 상세 설명하기",
+          "모바일 상품권 수신 연락처에 휴대폰 번호·이메일 등이 전달되는 방식 구체적 이해하기",
+          "두 입력란의 정보 역할 차이와 올바른 기입 예시 및 체크리스트 활용하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 /board/purchase/2564로, 모바일상품권 구매 시 ‘수신 연락처를 왜 확인해야 하는가’와 입력 전 점검을 다뤘습니다. 후보 2는 여기에 더해 종이형 상품권의 우편 배송지와 모바일상품권의 수신 연락처를 서로 다른 입력 항목으로 분리해 설명하고, 실제 주문 화면에서 어느 칸에 무엇을 넣어야 하는지까지 구체적으로 안내한다는 점에서 새 해결 내용이 있습니다. 특히 주소 입력과 연락처 입력을 혼동했을 때의 오류 예시와 각 항목별 행동 차이를 다루므로 단순 연락처 확인 안내보다 더 구체적입니다.",
+        "screen_rejections": [
+          "0번은 /board/purchase/2564, /board/gc_information/8와 겹칩니다. 이미 공개 경로 /board/purchase/2564에서 모바일상품권 구매 전 수신 연락처를 확인하는 이유와 입력·수정 점검을 해결했고, 후보 0도 발행사·판매처·사용처의 역할을 구분해 구매 전후 확인점을 정리하는 수준이라 기존 역할 구분 안내를 그대로 적용해도 해결되는 범위입니다.",
+          "1번은 /board/purchase/2568, /board/purchase/2563과 겹칩니다. 공개 경로 /board/purchase/2568에서는 상품권 명칭과 발행사, 코드, 사용처로 종류를 구분하는 방법을 이미 다뤘고, 후보 1은 비슷한 이름의 상품권을 라벨링해 구분하는 실무 지침으로 같은 구분 문제를 표현만 바꾼 수준입니다.",
+          "3번은 /board/sale/3692와 겹칩니다. 공개 경로 /board/sale/3692에서 판매 글 작성 전 상품권 종류·상태·개인정보 노출을 확인하는 절차와 최종 대조를 이미 해결했고, 후보 3도 최초 기록-변경 내역-최종 주문 대조라는 같은 확인 절차를 반복합니다."
+        ]
+      },
+      "board": "gc_information",
+      "topic": "종이형·모바일 상품권 배송지와 수신 연락처 입력 구분법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-04T14:32:38Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23824,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1162,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24986
+        },
+        "estimated_usd": 0.0113888,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T05:49:03.266720+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11897,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 620,
+          "output_tokens_details": {
+            "reasoning_tokens": 140
+          },
+          "total_tokens": 12517
+        },
+        "estimated_usd": 0.01171275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T05:49:08.197965+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3093,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 572,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3665
+        },
+        "estimated_usd": 0.0021524,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T05:49:12.422044+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4520,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 559,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5079
+        },
+        "estimated_usd": 0.0027024,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T05:49:17.746141+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17036,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 547,
+          "output_tokens_details": {
+            "reasoning_tokens": 202
+          },
+          "total_tokens": 17583
+        },
+        "estimated_usd": 0.0152385,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T05:49:22.801373+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T05:48:53.615228+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T05:49:04.024050+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T05:49:08.200684+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T05:49:13.799339+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T05:49:19.924815+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04319485,
+    "estimated_total_usd": 0.04319485,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

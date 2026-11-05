@@ -314,10 +314,15 @@
       "board": "gc_tip",
       "topic": "상품권 잔액과 부족액 구분으로 최적 결제 순서 정하기",
       "run_id": "41949819243"
+    },
+    {
+      "board": "gc_information",
+      "topic": "종이형·모바일 상품권 배송지와 수신 연락처 입력 구분법",
+      "run_id": "41976270441"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "41963305956",
+  "last_board": "gc_information",
+  "last_run_id": "41976270441",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
