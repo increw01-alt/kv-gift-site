@@ -1,18 +1,20 @@
 {
   "run_id": "42122413397",
   "date_kst": "2026-11-06",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "처음 구매하는 사람을 위한 종이형과 모바일형 상품권 배송지·수신처 입력법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T22:32:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 /board/purchase/2564가 모바일상품권 수신 연락처 입력과 주문 전 점검을 이미 다루고 있어, 이번 글의 핵심 질문과 해결 절차가 상당히 겹칩니다. / 본문에서도 종이형은 배송지 주소, 모바일형은 수신 연락처를 정확히 입력하라는 단계가 중심이라 기존 안내를 그대로 적용해도 독자의 문제를 해결할 수 있습니다. / 제목과 본문이 ‘입력란 구분’과 ‘올바른 작성법’에 집중해 있어, 새 문제 해결보다 같은 절차를 반복하는 구성으로 보입니다."
+    ]
   },
   "api_usage": {
     "run_id": "42122413397",
@@ -22,15 +24,295 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T07:33:56.441281+09:00"
+      "attempt_started_at": "2026-11-06T07:33:56.441281+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 장바구니 내 여러 옵션 수정 후 최종 주문 내역 꼼꼼 확인법",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니에서 금액·수신자 등 옵션을 여러 번 바꾼 뒤 최종 주문 내용이 원래 의도와 정확히 일치하는지 체계적으로 확인하기 어려움",
+          "distinct_angle": "다량 주문 또는 꼼꼼한 구매자를 위해 최초 선택과 변경 내역을 기록·대조하는 구체적 점검 절차와 체크리스트 포함 매뉴얼 제공",
+          "reader_situation": "상품권 옵션을 여러 차례 변경하고 최종 주문 전 변경 사항과 원본을 엄밀히 비교해 주문 오류를 막으려는 구매자",
+          "deliverable": "최초 장바구니 옵션 기록 양식, 변경 내역 세부 점검 매뉴얼, 최종 대조 점검표와 구체적 행동 지침서 포함 실용 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "장바구니에 최초 담긴 상품권 대상을 체계적으로 기록하는 방법 배우기",
+            "옵션 변경 시 변경 사항을 상세히 점검하는 확인 절차 익히기",
+            "최종 주문 전 최초 의도와 현재 옵션이 일치하는지 직접 대조 점검해 오류 예방하기"
+          ]
+        },
+        {
+          "topic": "다수 수신자에게 상품권 용도에 맞춰 금액을 합리적으로 배분하는 기준과 실행 절차",
+          "source_id": "",
+          "reader_problem": "여러 명에게 상품권을 나눠주려 하지만 용도와 필요에 따라 금액을 어떻게 합리적으로 배분할지 기준과 절차가 없어 계획 수립이 어려움",
+          "distinct_angle": "수신자별 예상 용도 파악부터 용도별 우선순위 결정, 최소 배분 단위 설정, 금액 배분표 작성 및 실행 절차 전반을 단계별로 자세히 안내",
+          "reader_situation": "한 번에 구매한 상품권을 가족이나 팀원들에게 용도에 맞게 적절히 배분하고 정확한 계획과 실행을 원하는 이용자",
+          "deliverable": "여러 수신자용 금액 배분표 양식, 용도별 우선순위 설정 안내, 수신자별 맞춤 배분 계산 및 단계별 실행 지침서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적을 정확히 파악하기",
+            "용도별 우선순위와 최소 배분 단위를 구체적으로 설정하기",
+            "수신자별 금액 배분표 작성과 배분 계획 실행 절차를 단계별로 안내하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "처음 구매하는 사람을 위한 종이형과 모바일형 상품권 배송지·수신처 입력법",
+        "source_id": "",
+        "reader_problem": "상품권 주문 때 종이형 우편 배송지와 모바일 수신 연락처를 구분하지 못해 잘못 입력하는 문제",
+        "distinct_angle": "처음 구매자가 두 입력란의 역할과 차이를 정확히 이해하고 실수를 방지할 수 있도록 단계별 기초 이해와 실전 예시로 안내",
+        "reader_situation": "처음 상품권을 구매하며 종이형은 우편 주소, 모바일형은 연락처 입력란에 정확한 정보를 넣고자 하는 초보 고객",
+        "deliverable": "종이형 배송과 모바일 수신 연락처 기능을 연결한 개념도, 입력란별 올바른 정보 사례와 체크리스트, 실수 방지 안내 자료",
+        "task_id": "",
+        "outline": [
+          "종이형 상품권 우편물이 실제 도착하는 과정과 배송지 주소의 의미 설명하기",
+          "모바일상품권 수신 연락처에 휴대폰 번호 또는 이메일이 전달되는 과정을 단계별로 안내하기",
+          "각 입력란에 넣어야 할 정보 유형과 오입력 사례, 올바른 작성법 및 점검 체크리스트 만들기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글 /board/purchase/2564는 모바일상품권의 수신 연락처를 왜 확인해야 하는지와 입력 전 점검을 다뤘고, 후보 0은 여기에 더해 종이형 상품권의 우편 배송지와 모바일상품권의 수신 연락처를 서로 구분해 입력하는 방법, 각 입력란에 넣을 정보의 차이, 오입력 예시와 체크리스트까지 제시합니다. 기존 답을 그대로 적용하면 모바일 수신처 점검은 되지만 종이형 배송지 입력 구분 문제까지는 해결되지 않아, 이번 후보는 더 구체적인 새 해결 문제를 담고 있습니다.",
+        "screen_rejections": [
+          "1번은 기존 공개 글 /board/gc_information/8과 /board/purchase/2567이 이미 주문 전 옵션 변경 내역을 기록하고 최종 주문 내역을 대조하는 절차를 다뤘기 때문에, 장바구니 수정 후 최종 확인이라는 질문과 해결 순서가 사실상 같습니다.",
+          "2번은 기존 공개 글 /board/purchase/2576이 이미 여러 수신자에게 상품권 금액을 용도와 우선순위에 따라 배분하고 배분표를 작성하는 방법을 해결했으므로, 같은 금액 배분 기준·실행 절차를 반복합니다."
+        ]
+      },
+      "board": "purchase",
+      "topic": "처음 구매하는 사람을 위한 종이형과 모바일형 상품권 배송지·수신처 입력법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-05T14:39:42Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "wording_repair": {
+        "attempt": 1,
+        "stage": "after_editing",
+        "issues": [
+          {
+            "field": "sections[0].body",
+            "text": "1"
+          },
+          {
+            "field": "sections[0].body",
+            "text": "0"
+          },
+          {
+            "field": "sections[0].body",
+            "text": "1"
+          },
+          {
+            "field": "sections[0].body",
+            "text": "1"
+          },
+          {
+            "field": "sections[0].body",
+            "text": "0"
+          },
+          {
+            "field": "sections[0].body",
+            "text": "0"
+          }
+        ],
+        "status": "passed"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24066,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1108,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 25174
+        },
+        "estimated_usd": 0.0113992,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T22:34:09.683178+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10517,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 509,
+          "output_tokens_details": {
+            "reasoning_tokens": 195
+          },
+          "total_tokens": 11026
+        },
+        "estimated_usd": 0.01017825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T22:34:13.548767+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2912,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 493,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3405
+        },
+        "estimated_usd": 0.0019536,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T22:34:18.572548+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4345,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 550,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4895
+        },
+        "estimated_usd": 0.002618,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T22:34:25.825336+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2508,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 537,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3045
+        },
+        "estimated_usd": 0.0018624,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T22:34:30.677577+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16714,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 576,
+          "output_tokens_details": {
+            "reasoning_tokens": 246
+          },
+          "total_tokens": 17290
+        },
+        "estimated_usd": 0.0151275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T22:34:36.813622+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T22:34:00.393259+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T22:34:10.468724+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T22:34:13.551277+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T22:34:20.058964+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T22:34:25.827054+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T22:34:32.965021+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04313895,
+    "estimated_total_usd": 0.04313895,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -334,10 +334,15 @@
       "board": "free",
       "topic": "편의성과 선택 다양성 사이 균형 잡는 선물용 상품권 선택법",
       "run_id": "42113642435"
+    },
+    {
+      "board": "purchase",
+      "topic": "처음 구매하는 사람을 위한 종이형과 모바일형 상품권 배송지·수신처 입력법",
+      "run_id": "42122413397"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "42118821531",
+  "last_board": "purchase",
+  "last_run_id": "42122413397",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

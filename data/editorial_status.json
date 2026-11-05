@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T22:33:57.310318+00:00",
+  "generatedAt": "2026-11-05T22:34:37.084989+00:00",
   "dateKst": "2026-11-06",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 3,
   "attempts": 9,
-  "held": 5,
+  "held": 6,
   "errors": 0,
-  "knownSubtotalUsd": 0.50652875,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5496677,
+  "estimatedTotalUsd": 0.5496677,
   "records": [
     {
       "runId": "42053541936",
@@ -118,21 +118,21 @@
     },
     {
       "runId": "42122413397",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "처음 구매하는 사람을 위한 종이형과 모바일형 상품권 배송지·수신처 입력법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-05T22:32:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04313895,
+      "knownSubtotalUsd": 0.04313895
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-06T08:03:56.441281+09:00",
+    "cooldownMinutes": 30
   }
 }
