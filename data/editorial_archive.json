@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T21:33:53.427733+00:00",
+  "generatedAt": "2026-11-05T21:34:23.391697+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3243,14 +3243,14 @@
       "runId": "42113642435",
       "dateKst": "2026-11-06",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "free",
+      "topic": "편의성과 선택 다양성 사이 균형 잡는 선물용 상품권 선택법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0416143,
+      "knownSubtotalUsd": 0.0416143
     },
     {
       "id": "post:purchase:2561",
@@ -15045,13 +15045,57 @@
     {
       "entryId": "run:42113642435",
       "dateKst": "2026-11-06",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-05T21:34:01.418422+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0104928,
+      "knownSubtotalUsd": 0.0104928,
+      "requests": 1,
+      "inputTokens": 24148,
+      "outputTokens": 521
+    },
+    {
+      "entryId": "run:42113642435",
+      "dateKst": "2026-11-06",
+      "recordedAt": "2026-11-05T21:34:05.090609+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0084645,
+      "knownSubtotalUsd": 0.0084645,
+      "requests": 1,
+      "inputTokens": 8430,
+      "outputTokens": 476
+    },
+    {
+      "entryId": "run:42113642435",
+      "dateKst": "2026-11-06",
+      "recordedAt": "2026-11-05T21:34:10.762523+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0019828,
+      "knownSubtotalUsd": 0.0019828,
+      "requests": 1,
+      "inputTokens": 2901,
+      "outputTokens": 514
+    },
+    {
+      "entryId": "run:42113642435",
+      "dateKst": "2026-11-06",
+      "recordedAt": "2026-11-05T21:34:16.361337+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0040932,
+      "knownSubtotalUsd": 0.0040932,
+      "requests": 1,
+      "inputTokens": 7985,
+      "outputTokens": 562
+    },
+    {
+      "entryId": "run:42113642435",
+      "dateKst": "2026-11-06",
+      "recordedAt": "2026-11-05T21:34:22.998113+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.016581,
+      "knownSubtotalUsd": 0.016581,
+      "requests": 1,
+      "inputTokens": 18592,
+      "outputTokens": 586
     },
     {
       "entryId": "post:purchase:2561",

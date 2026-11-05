@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T21:33:53.397209+00:00",
+  "generatedAt": "2026-11-05T21:34:23.361166+00:00",
   "dateKst": "2026-11-06",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 7,
-  "held": 4,
+  "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.35485055,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.39646485,
+  "estimatedTotalUsd": 0.39646485,
   "records": [
     {
       "runId": "42053541936",
@@ -92,21 +92,21 @@
     },
     {
       "runId": "42113642435",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "free",
+      "topic": "편의성과 선택 다양성 사이 균형 잡는 선물용 상품권 선택법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-05T21:32:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0416143,
+      "knownSubtotalUsd": 0.0416143
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-06T07:03:53.036662+09:00",
+    "cooldownMinutes": 30
   }
 }

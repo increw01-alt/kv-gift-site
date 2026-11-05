@@ -329,10 +329,15 @@
       "board": "sale",
       "topic": "사용한 상품권과 사용하지 않은 상품권 효과적 분류법",
       "run_id": "42082877841"
+    },
+    {
+      "board": "free",
+      "topic": "편의성과 선택 다양성 사이 균형 잡는 선물용 상품권 선택법",
+      "run_id": "42113642435"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "42112880050",
+  "last_board": "free",
+  "last_run_id": "42113642435",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
