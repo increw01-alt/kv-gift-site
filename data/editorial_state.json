@@ -324,10 +324,15 @@
       "board": "gc_information",
       "topic": "상품권 금액 용어의 정확한 이해와 실제 사용 계획 세우기",
       "run_id": "42077318993"
+    },
+    {
+      "board": "sale",
+      "topic": "사용한 상품권과 사용하지 않은 상품권 효과적 분류법",
+      "run_id": "42082877841"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "42077318993",
+  "last_board": "sale",
+  "last_run_id": "42082877841",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
