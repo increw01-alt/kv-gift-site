@@ -1344,5 +1344,18 @@
     "publication_mode": "automatic",
     "run_id": "42112880050",
     "usage_file": "data/editorial_runs/2026-11-06/42112880050.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 46,
+    "topic": "상품권 실물 보관 장소와 손상 예방법",
+    "drafted_at": "2026-11-06",
+    "automation": true,
+    "search_intent": "종이 상품권을 어디에 두고 어떻게 관리해야 훼손과 분실을 줄일지 알고 싶은 질문",
+    "image_scene": "서랍 안에 종이 상품권을 투명 보관 슬리브에 넣고 옆에 작은 제습제와 온습도계가 함께 놓여 있으며, 한 사람이 보관 상태를 점검하며 정리하는 장면",
+    "image_alt": "서랍 안에서 종이 상품권을 투명 슬리브에 넣고 제습제와 온습도계를 함께 두어 보관 상태를 점검하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42118821531",
+    "usage_file": "data/editorial_runs/2026-11-06/42118821531.json"
   }
 ]

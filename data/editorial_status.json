@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T22:08:50.032610+00:00",
+  "generatedAt": "2026-11-05T22:09:54.337589+00:00",
   "dateKst": "2026-11-06",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 8,
   "held": 5,
   "errors": 0,
-  "knownSubtotalUsd": 0.39646485,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.50652875,
+  "estimatedTotalUsd": 0.50652875,
   "records": [
     {
       "runId": "42053541936",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "42118821531",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "상품권 실물 보관 장소와 손상 예방법",
+      "url": "https://kv-gift.co.kr/board/gc_tip/46",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-05T22:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1100639,
+      "knownSubtotalUsd": 0.1100639
     }
   ],
   "topicRetry": {
