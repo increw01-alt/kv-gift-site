@@ -1,18 +1,20 @@
 {
   "run_id": "42077318993",
   "date_kst": "2026-11-06",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "상품권 금액 용어의 정확한 이해와 실제 사용 계획 세우기",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T17:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 액면가·판매가·잔액의 뜻을 구분하고 구매 전 비교, 사용 시 잔액 확인으로 이어지는 설명이 기존 글 '[상품권 금액에 맞춰 사용해야 할까?]' 및 관련 금액 비교 글들과 핵심 질문·해결 절차가 같습니다. / 본문의 구성도 용어 설명 → 비교 → 사용 계획 점검으로 기존 답을 그대로 적용해도 해결되는 수준이라 새 독자 상황이나 새로운 판단 기준이 충분히 드러나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42077318993",
@@ -22,15 +24,201 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T02:43:52.617376+09:00"
+      "attempt_started_at": "2026-11-06T02:43:52.617376+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": []
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "상품권 금액 용어의 정확한 이해와 실제 사용 계획 세우기",
+        "source_id": "",
+        "reader_problem": "상품권 구매와 사용 시 각각의 금액 용어(액면가, 판매가, 잔액 등)를 혼동하여 실제 사용 가능한 금액과 계획 수립이 어렵다",
+        "distinct_angle": "기존 단순 용어 설명과 달리, 실제 계산과 비교에 초점을 맞춰 단계별 점검 목록과 계산표를 제공해 독자가 스스로 정확한 금액 비교와 계획을 완성하도록 돕는다",
+        "reader_situation": "상품권 구매자 또는 사용자로서 액면가, 판매가, 잔액 등 금액 개념을 명확히 이해하고 실제 구매와 사용 계획을 체계적으로 세우려는 상황",
+        "deliverable": "액면가, 판매가, 잔액 개념과 차이점이 명확히 정리된 비교표, 금액 계산 과정 및 점검 절차가 포함된 실사용 계획 수립 체크리스트",
+        "task_id": "",
+        "outline": [
+          "액면가, 판매가, 잔액 각 용어의 정확한 개념과 차이점 이해하기",
+          "상품권 구매 시 각 금액 항목 간 관계를 체계적으로 비교하는 계산표 작성하기",
+          "실제 상품권 사용 시 각 금액을 단계별로 점검하며 정확한 결제 계획 세우기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글 /board/gc_tip/32는 상품권을 쓰기 전 종류·사용 조건·잔액·유효기간을 확인하고 사용 계획을 세우는 방법을 다뤘지만, 이번 후보는 액면가·판매가·잔액이라는 금액 용어를 구분하고 실제 구매/사용에서 숫자를 계산해 비교하는 데 초점을 둡니다. 즉, 단순한 사용 전 점검이 아니라 각 금액 항목을 표로 대조하고 실제 결제 가능 금액과 계획 금액을 스스로 산출하는 구체적 계산 도구를 새로 제공합니다.",
+        "screen_rejections": []
+      },
+      "board": "gc_information",
+      "topic": "상품권 금액 용어의 정확한 이해와 실제 사용 계획 세우기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-05T14:39:42Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24037,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 303,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24340
+        },
+        "estimated_usd": 0.0100996,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T17:43:59.308557+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 7036,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 317,
+          "output_tokens_details": {
+            "reasoning_tokens": 152
+          },
+          "total_tokens": 7353
+        },
+        "estimated_usd": 0.0067035,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T17:44:02.808284+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2797,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3244
+        },
+        "estimated_usd": 0.001834,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T17:44:06.275370+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4795,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 445,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5240
+        },
+        "estimated_usd": 0.00263,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T17:44:11.420342+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16146,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 435,
+          "output_tokens_details": {
+            "reasoning_tokens": 144
+          },
+          "total_tokens": 16581
+        },
+        "estimated_usd": 0.014067,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T17:44:17.735443+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T17:43:55.135279+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T17:43:59.498918+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T17:44:02.810824+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T17:44:07.654314+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T17:44:13.580987+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0353341,
+    "estimated_total_usd": 0.0353341,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

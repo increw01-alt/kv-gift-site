@@ -319,10 +319,15 @@
       "board": "gc_information",
       "topic": "종이형·모바일 상품권 배송지와 수신 연락처 입력 구분법",
       "run_id": "41976270441"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 금액 용어의 정확한 이해와 실제 사용 계획 세우기",
+      "run_id": "42077318993"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "42059466562",
+  "last_board": "gc_information",
+  "last_run_id": "42077318993",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
