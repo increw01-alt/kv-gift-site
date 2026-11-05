@@ -1,18 +1,20 @@
 {
   "run_id": "42042039344",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T14:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 후보 0은 상품권을 목적/보관 위치로 분류하고 앱 이름 변경을 확인하는 내용이 기존 글 /board/gc_tip/43, /board/gc_tip/31과 겹칩니다. 후보 1은 장바구니 옵션 변경 전후를 기록하고 최종 주문을 대조하는 방식이 기존 글 /board/purchase/2567, /board/general_notice/60의 확인·변경 비교 절차와 같습니다. 후보 2는 여러 수신자에게 금액을 용도별로 배분하는 기준과 배분표 작성이 /board/purchase/2576과 동일합니다. 후보 3은 물건 부피와 매장 위치를 고려한 동선 계획이 /board/gc_tip/42와 동일합니다. 기존 답으로 처리되지 않는 새 질문이나 구체적 해결 단계가 확인되지 않아 본문 생성 전 보류가 맞습니다. / 0번: /board/gc_tip/43이 이미 상품권 여러 개를 구매 목적과 보관 장소별로 구분하고, 알아보기 쉬운 제목을 붙이며, 앱에서 이름 변경 기능을 확인하는 방법을 해결했습니다. 후보도 같은 분류 기준과 앱별 이름 변경 활용을 반복해 새 해결 문제가 없습니다. / 1번: /board/purchase/2567이 이미 여러 장 구매 시 주문 내역을 종류·수량·용도 기준으로 정리하고, 주문 전에 확인할 항목을 점검하는 방법을 다뤘습니다. /board/general_notice/60도 이전 내용과 수정 내용을 구분해 비교하는 절차를 설명합니다. 후보의 최초 장바구니 기록, 변경 내역 점검, 최종 주문 대조는 이 기존 답을 그대로 적용해도 해결되는 범위라 중복입니다. / 2번: /board/purchase/2576이 이미 여러 수신자에게 상품권 금액을 용도별로 나누고, 우선순위와 최소 단위를 정해 배분표를 작성하는 방법을 해결했습니다. 후보도 전체 금액 파악, 우선순위 설정, 배분표 작성이라는 같은 질문과 절차를 반복합니다. / 3번: /board/gc_tip/42가 이미 외출 중 상품권으로 구매할 물건의 부피와 매장 위치를 함께 고려해 이동 동선을 계획하는 방법을 다뤘습니다. 후보도 부피 분류, 매장 위치 지도화, 최소 동선 계산을 그대로 반복해 새로운 해결 내용이 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42042039344",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T23:08:54.931439+09:00"
+      "attempt_started_at": "2026-11-05T23:08:54.931439+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "여러 상품권을 목적과 보관 위치 기준으로 명확히 나누는 체계적 분류법",
+          "source_id": "",
+          "reader_problem": "비슷한 이름의 상품권들이 많아 각각의 용도와 보관 위치를 구분하지 못해 무질서하고 시간이 낭비되는 문제",
+          "distinct_angle": "기존 단순 분류 안내에서 벗어나 개인별 맞춤 구분 기준과 앱 환경별 이름 변경 활용법을 통합해 체계적 분류와 식별을 돕는다",
+          "reader_situation": "상품권을 여러 개 보유하며 맞춤 분류 기준을 세우고 각 상품권을 앱에서 효과적으로 관리, 빠르게 인지하려는 사용자 상황",
+          "deliverable": "용도와 보관 위치를 포함한 분류 기준 리스트, 실용적 개인 메모 예시, 이름 변경 지원 앱별 특징 정리 및 단계별 적용 안내서",
+          "task_id": "",
+          "outline": [
+            "상품권별 구매 목적과 보관 위치에 따른 구체적 분류 기준 설정하기",
+            "상품권 코드 대신 누구나 알아보기 쉬운 개인 메모 제목 작성법 실습하기",
+            "주요 상품권 앱별 이름 변경 기능 및 관리 한계 파악과 실제 적용법 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 후 최종 주문 내역과 최초 선택 일치 여부의 꼼꼼 점검법",
+          "source_id": "",
+          "reader_problem": "여러 차례 상품권 옵션을 수정하면서도 최종 주문이 처음 원하는 내용과 정확히 일치하는지 확인하는 방법이 없어 주문 오류가 발생하기 쉬움",
+          "distinct_angle": "기존 단순 확인 안내에서 벗어나 최초 옵션 기록부터 상세 변경 내역 점검, 실제 대조표 활용까지 포함된 체계적 주문 점검법을 제공한다",
+          "reader_situation": "상품권을 대량 또는 꼼꼼히 주문하며 다수 옵션 변경 후 최종 주문 전에 모든 변경 사항과 원래 의도를 정확히 비교하고 싶어 하는 구매자",
+          "deliverable": "처음 장바구니 옵션 기록 양식, 상세 변경 내역 점검 절차 매뉴얼, 최종 주문 전 대조 점검표와 구체 행동 지침서가 포함된 실용 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "장바구니에 최초 담긴 상품권 및 옵션을 체계적으로 기록하는 방법 익히기",
+            "옵션 변경 시마다 변경 내역을 세밀히 점검하는 확인 절차 배우기",
+            "최종 주문 직전 원래 의도와 현재 옵션 대조 점검 및 실수 예방 행동 실습하기"
+          ]
+        },
+        {
+          "topic": "복수 수신자에게 맞춘 상품권 금액 배분 계획과 실행 기준 확립",
+          "source_id": "",
+          "reader_problem": "한꺼번에 구매한 상품권을 가족이나 팀원 여러 명에게 용도와 필요에 따라 어떻게 합리적으로 배분해야 하는지 기준과 절차를 몰라 어려움이 있음",
+          "distinct_angle": "기존 단순 분배 방법 안내 대신 용도별 우선순위 설정, 최소 배분 단위 개념 도입과 실제 실행 계획까지 체계적 배분 절차를 총괄한다",
+          "reader_situation": "여러 사람에게 상품권을 맞춤 용도로 배분하며 금액과 종류를 명확히 계획하여 정확하게 실행하고자 하는 이용자",
+          "deliverable": "여러 수신자용 금액 배분표 양식, 용도별 우선순위 및 최소 배분 단위 설정 가이드, 수신자별 배분 실행 절차와 구체적 시행 지침서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적을 명확히 파악하기",
+            "용도별 우선순위 설정 및 최소 배분 단위를 구체적으로 정하기",
+            "수신자별 금액 배분표 작성과 배분 실행 절차 단계별 안내하기"
+          ]
+        },
+        {
+          "topic": "여러 매장 방문 시 상품권 활용을 위한 물품 부피 및 매장 위치 고려 구매 동선 최적화",
+          "source_id": "",
+          "reader_problem": "상품권으로 여러 매장을 방문해 구매할 때, 물품 부피와 매장 위치를 동시에 고려해 효율적 구매 순서와 이동 경로를 계획하기 어려움",
+          "distinct_angle": "기존 단순 위치 안내가 아닌 부피 우선순위 설정과 지도 활용, 최소 동선 계산법 및 순서 결정으로 실제 구매에 효과적인 동선 계획법을 제시한다",
+          "reader_situation": "상품권을 활용해 여러 매장을 방문하며, 구매 물품 부피와 매장 위치를 고려해 편리하고 경제적인 이동과 구매 순서를 직접 계획하려는 이용자",
+          "deliverable": "물품 부피별 우선순위 목록, 매장 위치를 지도에 표시한 최소 이동 경로 계획표, 효율적 구매와 동선 반영 상품권 사용 순서 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권 구매 물품을 부피별로 구분해 우선순위를 설정하기",
+            "매장 위치를 지도로 표시하고 최소한의 이동 경로를 구성하는 법 배우기",
+            "최적 동선 계획에 맞게 상품권 사용 순서 결정 및 실제 구매 일정 수립하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23997,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1116,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 25113
+        },
+        "estimated_usd": 0.0113844,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T14:09:08.116941+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12486,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 816,
+          "output_tokens_details": {
+            "reasoning_tokens": 232
+          },
+          "total_tokens": 13302
+        },
+        "estimated_usd": 0.0130365,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T14:09:13.589679+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T14:08:58.109283+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T14:09:08.946009+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0244209,
+    "estimated_total_usd": 0.0244209,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
