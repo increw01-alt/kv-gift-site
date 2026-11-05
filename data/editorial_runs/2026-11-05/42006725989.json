@@ -1,18 +1,20 @@
 {
   "run_id": "42006725989",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T09:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 후보 0은 이용 안내 문서의 글자 크기와 배열로 가독성을 높이는 방법이 기존 글 /board/general_notice/67, /board/general_notice/60과 같고, 후보 1은 선물 대신 함께할 시간을 제안할 때 일정·이동 부담을 자연스럽게 묻는 대화법이 /board/sense/22, /board/sense/13, /board/free/474와 중복됩니다. 후보 2는 여러 수신자에게 상품권 금액을 용도별로 배분하는 기준과 실행이 /board/purchase/2576과 동일합니다. 기존 답만으로 처리되지 않는 새 판단이나 행동이 확인되지 않아 보류가 맞습니다. / 0번: 기존 공개 글 /board/general_notice/67이 이미 ‘이용 안내 문서의 글자 크기와 배열 방식 개선으로 가독성 높이기’를 다뤘고, /board/general_notice/60도 문의 내용의 이전·변경 구분을 설명합니다. 후보는 글자 크기 선정, 읽기 순서 설계, 점검 체크리스트라는 동일한 해결 절차를 반복해 새 해결 문제가 없습니다. / 1번: 기존 공개 글 /board/sense/22가 이미 ‘선물할 시간 제안 시 부담 없이 상대 일정과 이동 부담 확인하는 대화법’을 해결했고, /board/sense/13과 /board/free/474도 선물 관련 부담 없는 대화법을 다룹니다. 후보는 참여 의사, 일정, 이동 부담을 부드럽게 묻는 같은 흐름을 반복하므로 중복입니다. / 2번: 기존 공개 글 /board/purchase/2576이 이미 ‘여러 수신자에게 상품권 금액을 용도에 맞게 배분하는 기준 설정과 실행’을 다뤘습니다. 후보도 전체 금액 파악, 용도 분류, 우선순위와 최소 단위 설정, 배분표 작성이라는 동일한 질문·절차를 재서술한 수준이라 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "42006725989",
@@ -22,15 +24,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T18:58:49.772373+09:00"
+      "attempt_started_at": "2026-11-05T18:58:49.772373+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "이용 안내 문서의 글자 크기와 배치 개선을 통한 가독성 확보 방법",
+          "source_id": "",
+          "reader_problem": "이용 안내 문서 글자 크기와 배치 방식이 비효율적이라 정보 파악에 어려움을 겪어 효과적인 안내 이용이 힘듦",
+          "distinct_angle": "글자 크기와 배열이 독자의 자연스러운 읽기 흐름에 맞춰 설계되도록 구체적인 기준과 체크리스트를 제공하여 실무적 검토와 개선까지 안내함",
+          "reader_situation": "서비스 안내 문서 작성자 또는 첫 이용자, 시력이 약한 이용자가 안내문 가독성을 높이고자 할 때",
+          "deliverable": "안내문서별 적정 글자 크기 기준, 자연스러운 읽기 순서 설계 방법, 적용 후 점검 및 개선 체크리스트를 포함한 가독성 개선 실용 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "필수 안내 항목별 적절한 글자 크기 선정 기준 파악하기",
+            "독자 자연스러운 읽기 흐름에 맞춘 안내문 배치 및 읽기 순서 설계 실습",
+            "글자 크기와 배열 변경 후 검토 위한 점검 및 지속 개선 체크리스트 작성법 익히기"
+          ]
+        },
+        {
+          "topic": "물건 선물 대신 함께할 시간 제안 시 일정과 이동 부담을 자연스럽게 확인하는 대화법",
+          "source_id": "",
+          "reader_problem": "선물 대신 시간을 제안할 때 상대방 일정, 이동 거리, 준비 부담을 부담 없이 묻고 자연스럽게 조율하기 어려움",
+          "distinct_angle": "구체적인 질문 흐름도와 상대 편의를 고려한 조율 기준표, 실제 예시 문장을 함께 제시하여 실제 대화에 바로 활용 가능하도록 안내함",
+          "reader_situation": "선물 대신 뜻깊은 시간 제안을 하며 상대 일정과 이동 부담을 세분화해 부담 없이 밟아 보고 조율하려는 이용자",
+          "deliverable": "활동 참여 의사, 일정 부담, 이동 거리별 단계적 질문 흐름도, 상대방 편의를 위한 조율 기준표와 자연스러운 대화 예시 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "활동 참여 의사를 부담 없이 묻는 적절한 질문 문장 만들기",
+            "일정 부담 관련 구체적 확인 방법과 대화 예시 학습",
+            "이동 거리와 준비 부담 등을 고려한 자연스러운 질문 흐름 설계 및 대화 모범 사례 익히기"
+          ]
+        },
+        {
+          "topic": "여러 수신자에게 상품권 금액을 용도에 맞게 합리적으로 배분하는 기준 설정과 실행",
+          "source_id": "",
+          "reader_problem": "여러 수신자에게 상품권을 용도에 따라 어떻게 합리적으로 금액을 분배할지 기준과 절차를 몰라 계획 수립이 어렵다",
+          "distinct_angle": "전체 구매 금액과 수신자별 용도 파악, 우선순위 설정, 최소 단위 결정, 배분표 작성과 실행 절차를 구체적으로 안내해 독자가 직접 계획표를 완성하도록 지원함",
+          "reader_situation": "한 번에 구매한 상품권을 가족이나 팀원 등 여러 명에게 용도 맞춰 합리적으로 나눠주고, 배분 계획을 꼼꼼히 세우려는 이용자",
+          "deliverable": "수신자별 용도 분류 포함 금액 배분표 양식, 용도별 우선순위와 최소 배분 단위 설정 가이드, 배분 실천 절차 안내서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적 정확히 파악하기",
+            "용도별 우선순위 및 최소 배분 단위 구체적으로 결정하기",
+            "수신자별 금액 배분표 작성 및 배분 계획 단계별 실행하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23967,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 820,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24787
+        },
+        "estimated_usd": 0.0108988,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T09:58:59.947024+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10798,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 550,
+          "output_tokens_details": {
+            "reasoning_tokens": 63
+          },
+          "total_tokens": 11348
+        },
+        "estimated_usd": 0.0105735,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T09:59:04.777336+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T09:58:52.385031+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T09:59:00.478300+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0214723,
+    "estimated_total_usd": 0.0214723,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
