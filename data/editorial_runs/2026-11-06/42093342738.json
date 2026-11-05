@@ -1,18 +1,20 @@
 {
   "run_id": "42093342738",
   "date_kst": "2026-11-06",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T19:22:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 기존 공개 글과 질문·독자 상황·해결 절차가 사실상 같습니다. 새로 필요한 판단 기준이나 기존 답으로는 처리되지 않는 구체적 해결 단계가 확인되지 않아 보류가 맞습니다. / 0번: 기존 공개 글 /board/general_notice/54가 이미 공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 삭제해 개인정보 노출을 막는 방법을 해결했습니다. 후보도 공용 기기에서 상품권 관련 파일을 안전하게 삭제하고 재확인하는 절차라 동일합니다. / 1번: 기존 공개 글 /board/gc_tip/42가 이미 외출 중 상품권으로 구매할 물건의 부피와 매장 위치를 함께 고려해 방문 순서와 이동 동선을 계획하는 방법을 다뤘습니다. 후보도 부피·매장 위치·동선 계획이라는 같은 해결 절차를 반복합니다. / 2번: 기존 공개 글 /board/sense/21가 이미 선물할 물건의 수와 부피를 줄이고, 받은 선물을 용도와 보관 장소별로 분류·기록해 관리 부담을 낮추는 방법을 해결했습니다. 후보도 선물용 상품권/물건의 수량·부피 부담을 줄이는 분류·관리법이라 중복입니다. / 3번: 기존 공개 글 /board/purchase/2576가 이미 여러 수신자에게 상품권 금액을 용도별로 나누고 우선순위와 최소 단위를 정해 배분표로 실행하는 방법을 해결했습니다. 후보도 여러 명에게 금액을 용도별로 배분하는 기준과 실행 절차라 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "42093342738",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T04:23:49.290566+09:00"
+      "attempt_started_at": "2026-11-06T04:23:49.290566+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "공용 기기에서 상품권 관련 파일 안전하게 삭제하고 개인정보 노출 예방하기",
+          "source_id": "",
+          "reader_problem": "도서관, 회사 등 공용 컴퓨터나 스마트기기 사용 후 상품권 결제 정보와 영수증 파일을 안전하게 삭제하고 점검하는 방법을 몰라 개인정보와 상품권 정보 노출 위험이 우려됨",
+          "distinct_angle": "기존 안내들이 파일 삭제 일반 절차나 개인정보 보호 인식에 머무는 반면, 이번 글은 공용 기기 특성에 맞춘 구체적 삭제 장소 확인, 단계별 안전 삭제 방법, 삭제 후 재확인 및 개인정보 보호 습관화 전략을 제시해 실질적 행동 지침을 제공함",
+          "reader_situation": "공용 기기에서 상품권 결제 정보를 다룬 뒤 다운로드된 파일을 안전하게 삭제하고, 삭제 후 재확인을 통해 보안 사고를 막으려는 이용자 및 안내 담당자",
+          "deliverable": "공용 컴퓨터 및 스마트기기 사용 후 상품권 관련 파일 안전 삭제 절차 매뉴얼, 삭제 후 재확인 방법, 개인정보 보호 위한 습관화 체크리스트",
+          "task_id": "",
+          "outline": [
+            "공용 기기 사용 시 개인정보 및 파일 노출 위험과 영향 체계적으로 이해하기",
+            "다운로드된 상품권 관련 파일의 저장 위치 확인 및 안전 삭제 절차 익히기",
+            "파일 삭제 후 재확인 방법과 개인정보 노출 예방 습관화 절차 실천하기"
+          ]
+        },
+        {
+          "topic": "여러 매장 방문 시 상품권 물품 부피와 매장 위치 고려해 효율적 구매 및 동선 계획하기",
+          "source_id": "",
+          "reader_problem": "상품권을 활용해 여러 매장을 방문하여 구매할 때, 각 물품의 부피와 매장 위치를 함께 고려해 가장 편리하고 경제적인 구매 순서 및 이동 경로를 계획하는 방법을 몰라 어려움을 겪음",
+          "distinct_angle": "기존 안내들이 상품권 개별 사용처 안내에 집중하는 대신, 이번 글은 부피별 우선순위 설정, 매장 위치 지도를 활용한 최소 이동 경로 계획, 동선을 고려한 상품권 사용 순서 결정 등 실용적 구매 동선 설계 방법을 구체적으로 안내함",
+          "reader_situation": "여러 매장과 상품권을 활용한 장보기 계획에서 물품 부피와 매장 위치를 동시에 고려해 효율적이고 편리한 구매 및 이동 계획을 직접 수립하려는 사용자",
+          "deliverable": "부피별 우선순위 목록, 매장 위치 지도 및 최소 이동 경로 계산표, 부피와 동선을 반영한 상품권 사용 순서 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "상품권 구매 대상 물품을 부피별로 구분해 우선순위 설정하기",
+            "매장 위치를 지도에 표시하고 최소 이동 경로 구성법 배우기",
+            "효율적인 구매와 동선을 고려한 상품권 사용 순서 계획 및 실행법 익히기"
+          ]
+        },
+        {
+          "topic": "선물용 상품권과 물건 수·부피 부담 낮추기 위한 체계적 분류와 관리법",
+          "source_id": "",
+          "reader_problem": "선물용 상품권이나 물건을 많이 준비하면서 관리와 보관 공간 부담이 커져 효용과 만족도가 떨어지고 번거로움이 증가함",
+          "distinct_angle": "일반적인 선물 관리 안내를 넘어, 선물할 물품 수량과 부피 최소화 기준 설정, 용도별·보관 장소별 세분화된 분류 및 기록 방법, 부담 감소를 위한 단순화 조치 및 생활 속 적용 전략을 구체적으로 제공함",
+          "reader_situation": "선물용 상품권이나 물품을 여러 개 준비하며 보관과 관리 부담을 줄이고 확실한 정리 체계를 마련하려는 개인 또는 조직 담당자",
+          "deliverable": "선물 수량·부피 제한 기준, 용도별 보관 위치 분류표 작성법, 단순화 및 실생활 적용 가능한 관리 및 정리 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "선물할 물품 수량과 부피에 대한 최소화 기준 명확히 설정하기",
+            "받은 선물을 용도별과 보관 장소별로 체계적으로 분류하고 기록하는 방법 배우기",
+            "관리 부담을 줄이는 단순화 조치 및 일상 생활에 적용하는 구체적인 실천법 안내하기"
+          ]
+        },
+        {
+          "topic": "여러 명에게 상품권 금액을 용도별로 합리적 배분하는 기준과 실행 절차",
+          "source_id": "",
+          "reader_problem": "한 번에 구매한 상품권을 가족 or 팀 등 여러 수신자에게 맞춤 용도로 금액과 종류를 합리적으로 배분하는 구체적 기준과 단계별 실행 방법을 몰라 어려움이 있음",
+          "distinct_angle": "기존 배분 안내가 단순 목록 작성에 그친 반면, 이번 글은 수신자별 예상 용도 파악, 용도별 우선순위 및 최소 배분 단위 설정, 단계별 금액 배분표 작성과 계획 실행 절차까지 체계적이며 실무에 바로 적용할 수 있는 가이드라인을 제시함",
+          "reader_situation": "여러 수신자에게 상품권을 용도에 맞춰 적절하게 배분하고 정확하고 체계적으로 전달 계획 및 실행을 원하는 구매자 또는 운영자",
+          "deliverable": "수신자별 용도 분류를 포함한 금액 배분표 양식, 용도별 우선순위 및 최소 배분 단위 설정 안내, 단계별 배분 실행 절차와 구체적 시행 지침서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 용도 정확히 파악하기",
+            "각 용도별 우선순위 및 최소 배분 단위를 구체적으로 설정하기",
+            "수신자별 금액 배분표 작성 및 단계별 배분 계획 실행 절차 안내하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24084,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1259,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 25343
+        },
+        "estimated_usd": 0.011648,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T19:24:02.413648+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12772,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 515,
+          "output_tokens_details": {
+            "reasoning_tokens": 118
+          },
+          "total_tokens": 13287
+        },
+        "estimated_usd": 0.0118965,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T19:24:06.527818+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T19:23:51.750713+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T19:24:03.135885+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0235445,
+    "estimated_total_usd": 0.0235445,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
