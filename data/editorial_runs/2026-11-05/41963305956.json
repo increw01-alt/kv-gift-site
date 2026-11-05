@@ -1,18 +1,20 @@
 {
   "run_id": "41963305956",
   "date_kst": "2026-11-05",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T03:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 그대로 반복합니다. 0번은 /board/gc_tip/29가 이미 ‘상품권 구매 시 카드 실적과 포인트 적립을 각각 확인하는 방법’을 다뤘고, 후보도 결제 시 포인트 사용·적립 여부를 따로 확인하라는 동일한 판단 문제입니다. 1번은 /board/general_notice/54가 이미 ‘공용 기기에서 상품권을 확인한 뒤 로그아웃하고 다운로드 파일을 점검하는 방법’을 해결했고, 후보도 공용 컴퓨터 사용 후 파일 삭제·재확인이라는 같은 행동 순서입니다. 2번은 /board/sense/22가 이미 ‘함께할 시간을 제안할 때 상대 일정과 이동 부담을 부담 없이 확인하는 대화법’을 다뤘고, 후보도 일정·이동 부담을 자연스럽게 묻는 동일한 대화 문제입니다. 새로 필요한 독자 상황이나 기존 답으로는 처리되지 않는 구체적 해결 내용이 확인되지 않아 보류가 맞습니다. / 0번: 기존 공개 글 /board/gc_tip/29가 이미 상품권 구매 시 카드 실적과 포인트 적립을 각각 확인하는 절차를 해결했습니다. 후보도 결제 화면에서 포인트 사용 여부와 적립 가능 여부를 구분해 확인하라는 같은 질문·해결 순서를 반복하므로 중복입니다. / 1번: 기존 공개 글 /board/general_notice/54가 이미 공용 기기에서 상품권 확인 후 로그아웃과 다운로드 파일 삭제를 안내했습니다. 후보도 공용 컴퓨터에서 다운로드 파일 위치 확인, 삭제, 재확인이라는 동일한 문제를 다루므로 중복입니다. / 2번: 기존 공개 글 /board/sense/22가 이미 함께할 시간을 제안할 때 상대 일정과 이동 부담을 부담 없이 확인하는 대화법을 해결했습니다. 후보도 활동 참여 의사, 일정, 이동 거리와 준비 부담을 자연스럽게 묻는 같은 흐름이어서 새 해결 문제가 확인되지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "41963305956",
@@ -22,15 +24,127 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-05T12:43:42.320355+09:00"
+      "attempt_started_at": "2026-11-05T12:43:42.320355+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권과 일반 카드 포인트의 결제·적립 구분과 혜택 확인법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 포인트 결제와 결제 후 적립되는 포인트를 혼동하여 정확한 결제 계획과 예상 혜택 확인이 어렵다.",
+          "distinct_angle": "기존 일반적 결제 안내에서 벗어나, 결제 상태별 포인트 변화 확인 절차와 실제 주문 화면에서의 점검 단계 중심으로 설명하며 고객 스스로 혜택 유무를 판단할 수 있는 체크리스트 제공.",
+          "reader_situation": "상품권 구매 과정에서 포인트를 사용하거나 적립하는 두 경우의 차이를 명확히 이해하고, 결제 전 포인트 잔액과 혜택 예상, 결제 후 포인트 적립 여부까지 세밀히 확인하려는 사용자.",
+          "deliverable": "포인트 사용과 적립 차이 이해를 돕는 비교표 및 체크리스트, 결제 전후 포인트 상태 확인 절차 실무 매뉴얼, 예상 혜택 계산 가이드.",
+          "task_id": "",
+          "outline": [
+            "포인트 결제와 적립의 개념 및 프로세스 상세 이해하기",
+            "주문 화면과 결제 내역에서 포인트 적용 상태를 점검하는 방법 익히기",
+            "예상 혜택 산출 및 결제 후 포인트 적립 결과 확인과 대비 행동 준비하기"
+          ]
+        },
+        {
+          "topic": "공용 컴퓨터에서 상품권 결제 후 개인정보 안전 삭제 방법",
+          "source_id": "",
+          "reader_problem": "공공장소나 여러 사람이 사용하는 컴퓨터에서 상품권 결제 후 다운로드한 파일을 삭제하지 않아 개인정보 및 상품권 정보 노출 위험이 있다.",
+          "distinct_angle": "기존 안전 안내와 별개로, 실제 공용 컴퓨터 환경에서 파일 위치 확인부터 삭제 후 재확인까지 단계별 행동 지침과 점검 체크리스트로 실무 적용이 가능한 가이드 제공.",
+          "reader_situation": "도서관, 회사 등 공용 컴퓨터를 사용해 상품권 결제 관련 파일을 취급한 후 안전하게 다운로드 파일을 제거하고, 개인정보 노출을 막기 위한 점검과 습관화 절차를 배우고자 하는 이용자.",
+          "deliverable": "공용 컴퓨터 파일 위치 확인법, 단계별 안전 삭제 매뉴얼, 삭제 후 점검 및 개인정보 보호 습관화 가이드, 실천용 체크리스트.",
+          "task_id": "",
+          "outline": [
+            "공용 컴퓨터 이용 시 개인정보 노출 위험과 영향 체계적 이해하기",
+            "상품권 관련 파일 다운로드 위치 탐색 및 안전 삭제 절차 실습하기",
+            "파일 삭제 후 재확인과 개인정보 침해 예방을 위한 습관화 방안 실천하기"
+          ]
+        },
+        {
+          "topic": "시간 선물 제안 시 상대 일정과 이동 부담 자연스러운 확인법",
+          "source_id": "",
+          "reader_problem": "물건 선물 대신 함께할 시간을 제안할 때 상대방의 일정과 이동 거리, 준비 부담을 부담 없이 확인하고 자연스럽게 조율하기 어렵다.",
+          "distinct_angle": "기존 물리적 선물 중심 안내에서 벗어나, 시간 선물 제안에 특화된 단계별 질문 흐름도와 상대방 상황 고려 조율 기준표, 실생활 대화 예시를 중심으로 한 실용적인 소통법 제공.",
+          "reader_situation": "선물용 물건 대신 의미 있는 시간을 제안하며 상대방의 일정, 이동 거리, 준비 부담 정도를 부담 없이 확인하고 대화를 통해 자연스럽게 조율하고자 하는 이용자.",
+          "deliverable": "활동 참여 의사 및 일정·이동 부담 확인을 위한 질문 흐름도, 조율 기준과 대화 예시 수록 매뉴얼, 실제 적용 가능한 소통 문구 모음.",
+          "task_id": "",
+          "outline": [
+            "부담 없이 활동 참여 의사를 묻는 적절한 질문 표현 만들기",
+            "상대 일정 부담과 이동 거리 확인법 및 예시 학습하기",
+            "상대방 편의를 고려한 자연스러운 질문 흐름 설계 및 대화 모범 사례 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 23757,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1157,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24914
+        },
+        "estimated_usd": 0.011354,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T03:43:53.320398+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10348,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 706,
+          "output_tokens_details": {
+            "reasoning_tokens": 232
+          },
+          "total_tokens": 11054
+        },
+        "estimated_usd": 0.010938,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T03:43:58.008555+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T03:43:44.498421+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T03:43:53.669367+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.022292,
+    "estimated_total_usd": 0.022292,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
