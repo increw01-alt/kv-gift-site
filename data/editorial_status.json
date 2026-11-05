@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T23:08:53.121251+00:00",
+  "generatedAt": "2026-11-05T23:09:22.407672+00:00",
   "dateKst": "2026-11-06",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 3,
   "attempts": 10,
-  "held": 6,
+  "held": 7,
   "errors": 0,
-  "knownSubtotalUsd": 0.5496677,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5871886,
+  "estimatedTotalUsd": 0.5871886,
   "records": [
     {
       "runId": "42053541936",
@@ -131,21 +131,21 @@
     },
     {
       "runId": "42127210392",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "지류, 모바일, 교환권의 상태 전환과 관리 방법 구분",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-05T23:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0375209,
+      "knownSubtotalUsd": 0.0375209
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 2,
+    "retryAfter": "2026-11-06T09:08:52.813663+09:00",
+    "cooldownMinutes": 60
   }
 }

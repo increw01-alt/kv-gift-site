@@ -339,10 +339,15 @@
       "board": "purchase",
       "topic": "처음 구매하는 사람을 위한 종이형과 모바일형 상품권 배송지·수신처 입력법",
       "run_id": "42122413397"
+    },
+    {
+      "board": "gc_information",
+      "topic": "지류, 모바일, 교환권의 상태 전환과 관리 방법 구분",
+      "run_id": "42127210392"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "42122413397",
+  "last_board": "gc_information",
+  "last_run_id": "42127210392",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

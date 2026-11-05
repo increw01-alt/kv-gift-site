@@ -1,18 +1,20 @@
 {
   "run_id": "42127210392",
   "date_kst": "2026-11-06",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "지류, 모바일, 교환권의 상태 전환과 관리 방법 구분",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-05T23:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 지류·모바일·교환권의 차이와 사용 전 확인 항목을 설명하는 구조가 기존 상품권 종류별 기본 정보 글들과 핵심 질문이 겹칩니다. / 상태 전환과 관리 방법을 말하지만 실제 본문은 각 유형의 정의, 유효기간·손상·표시 확인처럼 기존의 사용 전 점검 안내를 다시 풀어쓴 수준입니다. / 교환권까지 포함했다고 해도 독자가 해결하려는 문제는 상품권 유형 구분과 관리 점검으로 같아, 새 절차나 사례가 충분히 구현되지 않았습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42127210392",
@@ -22,15 +24,218 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T08:08:52.813663+09:00"
+      "attempt_started_at": "2026-11-06T08:08:52.813663+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 발행사, 판매처, 사용처 역할 정확히 구분하기",
+          "source_id": "",
+          "reader_problem": "상품권 구매와 사용 시 발행사, 판매처, 사용처의 각각 역할과 책임 혼동 문제로 올바른 구매·사용 결정이 어려움",
+          "distinct_angle": "기존 일반 안내와 달리 각 참여자의 역할을 명확히 구분하고 시각적 관계도를 제공하며 실제 구매·사용 단계 확인 점검을 포함한 실무형 설명서",
+          "reader_situation": "상품권을 처음 구매하거나 여러 업체 상품권을 비교하며, 참가자별 역할과 책임 범위를 분명히 알고 의사결정을 하려는 독자",
+          "deliverable": "발행사, 판매처, 사용처별 역할과 권한 관계를 나타내는 시각적 역할도와 실제 구매·사용 단계별 확인 점검 리스트 및 사례 중심 설명 자료",
+          "task_id": "",
+          "outline": [
+            "발행사, 판매처, 사용처의 기본 역할과 책임 범위 상세 분류하기",
+            "각 역할별 실제 구매·사용 단계에서 반드시 확인할 점 도출하기",
+            "시각적 역할 관계도 그리기 및 상황별 역할 구분 사례와 함께 설명하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "지류, 모바일, 교환권의 상태 전환과 관리 방법 구분",
+        "source_id": "",
+        "reader_problem": "상품권 종류별 상태 전환과 관리 방법이 명확하지 않아 혼동하거나 잘못된 사용으로 오류가 발생함",
+        "distinct_angle": "기존 단순 개념 설명을 넘어서 각 상품권 유형별 상태 전환 절차와 구체적 관리 행동 지침, 그리고 실제 사례를 들어 차별화된 맞춤형 안내",
+        "reader_situation": "상품권 종류별 상태(지류, 모바일, 교환권)를 정확히 알고 효율적 관리 및 오류 예방을 희망하는 사용자",
+        "deliverable": "상품권 유형별 상태 전환 흐름도, 각 전환별 관리 절차 및 주의사항 정리, 실무 적용 가능한 점검 체크리스트와 사례 자료",
+        "task_id": "",
+        "outline": [
+          "지류, 모바일, 교환권 각 유형별 상태 정의 및 차이 이해하기",
+          "상태 전환 과정별 필요한 점검 행동과 관리 절차 익히기",
+          "전환별 실제 상황 사례 및 체크리스트로 관리 실패 방지 대책 마련하기"
+        ],
+        "novelty_reason": "1번이 더 구체적이고 새롭습니다. 가장 가까운 기존 글 /board/gc_information/5는 모바일 교환권과 지류상품권의 차이와 사용 전 확인 항목을 다뤘지만, 1번은 여기에 교환권까지 포함해 지류·모바일·교환권의 상태 전환 흐름과 전환 단계별 관리 행동을 설명하려는 점이 다릅니다. 특히 유형별로 언제 어떤 방식으로 보관·전환·점검해야 하는지까지 다루려는 구조라, 단순 개념 구분을 넘는 실무형 안내로 볼 수 있습니다.",
+        "screen_rejections": [
+          "0번은 /board/purchase/2563이 이미 상품권의 발행 기관과 사용처를 구분해 보고, 구매 전에 발행사명과 공식 사용처를 확인하는 흐름을 해결한 글과 핵심 질문이 겹칩니다. 이번 후보도 발행사·판매처·사용처의 역할과 책임을 구분해 구매·사용 판단을 돕는 구조라, 기존 답을 그대로 적용해도 해결되는 범위가 큽니다."
+        ]
+      },
+      "board": "gc_information",
+      "topic": "지류, 모바일, 교환권의 상태 전환과 관리 방법 구분",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-05T14:39:42Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24021,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 501,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 24522
+        },
+        "estimated_usd": 0.01041,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T23:09:02.321009+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8638,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 598,
+          "output_tokens_details": {
+            "reasoning_tokens": 325
+          },
+          "total_tokens": 9236
+        },
+        "estimated_usd": 0.0091695,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T23:09:06.725360+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 2847,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 405,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3252
+        },
+        "estimated_usd": 0.0017868,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T23:09:11.021430+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4144,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 460,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4604
+        },
+        "estimated_usd": 0.0023936,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-05T23:09:17.748402+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 15678,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 445,
+          "output_tokens_details": {
+            "reasoning_tokens": 81
+          },
+          "total_tokens": 16123
+        },
+        "estimated_usd": 0.013761,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-05T23:09:22.072936+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T23:08:55.817969+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T23:09:02.582301+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T23:09:06.727685+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-05T23:09:12.071982+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-05T23:09:19.391841+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0375209,
+    "estimated_total_usd": 0.0375209,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
