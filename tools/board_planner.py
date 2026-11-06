@@ -8,6 +8,8 @@ from board_writing_brief import WRITING_BRIEF_RULES, brief_schema, validate_brie
 from board_angle_rules import ANGLE_RULES
 from board_topic_pool import pending_plans, pool_update, expansion_focus, REFILL_BELOW
 from board_hold_reasons import TOPIC_DUPLICATE
+from board_topic_supply import (coverage_index, same_problem, rank_distinct, covered_examples,
+                                problem_text, supply_diagnostics)
 
 
 class PlanningHeld(NoTopic):
@@ -49,6 +51,8 @@ def planning_material(root, context, board, day):
     relevance = sorted(rows, key=lambda x: max(
         (similarity(q, x['title']) for q in queries), default=0), reverse=True)[:45]
     history = read_json(root/'data/editorial_history.json')
+    public_paths = {str(x.get('run_id')): f"/board/{x['board']}/{x['id']}"
+                    for x in history if x.get('run_id') and x.get('id') is not None}
     recent_titles = [x['topic'] for x in history[-90:]]
     # Curated reader tasks are ideas, not customer quotes or verified business facts.
     task_path = root/'tools/board_reader_tasks.json'
@@ -59,13 +63,16 @@ def planning_material(root, context, board, day):
         saved = (record.get('api_usage') or {}).get('context') or {}
         selected = saved.get('topic_plan')
         if selected:
-            plans.append({**selected, 'status': record.get('status')})
+            plans.append({**selected, 'status': record.get('status'),
+                          **({'path': public_paths[str(record.get('run_id'))]}
+                             if record.get('status') == 'published' and str(record.get('run_id')) in public_paths else {})})
         plans.extend({**p, 'status': 'held'} for p in saved.get('rejected_topic_plans', []))
     used_tasks = {p.get('task_id') for p in plans}
     tasks = [t for t in tasks if t['board'] == board and t['id'] not in used_tasks]
     # Expose actual solved problems, not just titles and generic profile instructions.
-    covered = [{k: p.get(k) for k in ('reader_problem', 'reader_situation', 'deliverable', 'outline', 'status')}
-               for p in plans[-90:]]
+    covered = [{k: p[k] for k in ('topic', 'path', 'task_id', 'direction_id', 'reader_problem',
+                                'reader_situation', 'deliverable', 'outline', 'status') if k in p}
+               for p in plans]
     return {'reader_questions': {**context, 'questions': questions} if context else None,
             'unused_reader_tasks': tasks, 'covered_reader_problems': covered,
             'recent_source_ids_to_avoid': sorted(attempted),
@@ -73,15 +80,17 @@ def planning_material(root, context, board, day):
             'related_existing_titles': [x['title'] for x in relevance]}, rows
 
 
-def validate_candidates(value, source_ids, fresh, task_ids=None):
+def validate_candidates(value, source_ids, fresh, task_ids=None, direction_ids=None):
     if not isinstance(value, dict) or set(value) != {'candidates'} or not isinstance(value['candidates'], list):
         raise ValueError('주제 기획 응답 구조 오류')
     result = []
     for item in value['candidates'][:6]:
         fields = {'topic', 'source_id', 'reader_problem', 'distinct_angle', 'outline'}
         angle_fields = {'reader_situation', 'deliverable'}
-        if not isinstance(item, dict) or set(item) not in (fields, fields | {'task_id'}, fields | {'task_id'} | angle_fields):
+        if not isinstance(item, dict) or set(item) - {'direction_id'} not in (fields, fields | {'task_id'}, fields | {'task_id'} | angle_fields):
             raise ValueError('주제 기획 항목 오류')
+        if item.get('direction_id', '') not in (direction_ids or set()) | {''}:
+            raise ValueError('허용되지 않은 새 질문 방향 ID')
         if item.get('task_id', '') not in (task_ids or set()) | {''}:
             raise ValueError('허용되지 않은 독자 질문 ID')
         if item['source_id'] not in source_ids | {''}:
@@ -105,23 +114,44 @@ def validate_candidates(value, source_ids, fresh, task_ids=None):
 def choose_plan(board, profile, context, titles, day, root, model, review_model, ask, text_input, usage, fresh, on_pool=None):
     material, existing = planning_material(root, context, board, day)
     review_feedback = material['recent_rejections']
+    all_plans = material['covered_reader_problems']
+    index = coverage_index(all_plans, existing)
     # Anchor the creative request to genuinely unused assignments. Long rejected
     # drafts otherwise become examples to imitate, despite negative instructions.
-    anchors = [task for task in material['unused_reader_tasks'] if fresh(task['question'])]
-    anchors = sorted(anchors, key=lambda task: max(
-        (similarity(task['question'], row['title']) for row in existing), default=0))[:4]
+    tasks = [task for task in material['unused_reader_tasks'] if fresh(task['question'])
+             and not any(same_problem(task, p) for p in all_plans)]
+    anchors = rank_distinct(tasks, index)
+    allowed = {x['id'] for x in (material['reader_questions'] or {}).get('questions', [])}
     if anchors:
         material = {**material, 'unused_reader_tasks': anchors,
-                    'covered_reader_problems': [p for p in material['covered_reader_problems']
-                                               if p.get('status') == 'published'][-30:],
                     'recent_rejections': [], 'reader_questions': None}
-    allowed = {x['id'] for x in (material['reader_questions'] or {}).get('questions', [])}
-    task_ids = {x['id'] for x in material['unused_reader_tasks']}
-    queued = [p for p in pending_plans(root, board)
+    task_ids = {x['id'] for x in tasks}
+    raw_queue = pending_plans(root, board)
+    # A valid queued assignment must not disappear just because this request's
+    # four anchors differ. Only actual consumed/rejected work is removed.
+    queued = [p for p in raw_queue
               if p.get('source_id', '') in allowed | {''} and p.get('task_id', '') in task_ids | {''}]
+    queued = [p for p in queued if not any(same_problem(p, old) for old in all_plans)]
+    queued_direction_ids = {p['direction_id'] for p in queued if p.get('direction_id')}
     queued = [p for start in range(0, len(queued), 6)
-              for p in validate_candidates({'candidates': queued[start:start+6]}, allowed, fresh, task_ids)]
-    material['new_problem_directions'] = expansion_focus(root, board, day)
+              for p in validate_candidates({'candidates': queued[start:start+6]}, allowed, fresh, task_ids, queued_direction_ids)]
+    material['new_problem_directions'] = expansion_focus(root, board, day, all_plans, index)
+    directions = material['new_problem_directions']['directions']
+    direction_ids = {d['id'] for d in directions}
+    supply_queries = [problem_text(p) for p in [*anchors, *queued]] or [d['brief'] for d in directions]
+    material['covered_reader_problems'] = covered_examples(all_plans, supply_queries)
+    # Creative supply also needs the actual answer, not only the title. These
+    # excerpts never replace the larger independent pre/post-draft comparison.
+    answered = {}
+    for query in supply_queries[:4]:
+        for article in select_article_evidence(query, [p for p in existing if p['body']], limit=2):
+            answered[article['path']] = {**article, 'body': article['body'][:900]}
+    material['already_answered_articles'] = list(answered.values())
+    material['coverage_note'] = 'published만 실제 발행 이력이다. held는 재시도하지 않을 실패 방향이며 게시된 글로 인용하지 않는다.'
+    diagnostics = supply_diagnostics(tasks, anchors, all_plans, index, len(raw_queue)-len(queued), directions)
+    def update_pool(plans):
+        if on_pool:
+            on_pool({**pool_update(board, plans), 'supply': diagnostics})
     material['pending_topics_to_avoid_repeating'] = [p['topic'] for p in queued]
     if not anchors:
         # Long rejection narratives act as examples to imitate. Keep their meaning compact.
@@ -130,17 +160,20 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
     string = {'type': 'string'}
     item = {'type': 'object', 'additionalProperties': False,
             'required': ['topic', 'source_id', 'task_id', 'reader_problem', 'distinct_angle', 'outline',
-                         'reader_situation', 'deliverable'],
+                         'reader_situation', 'deliverable', 'direction_id'],
             'properties': {**{k: string for k in ('topic', 'source_id', 'reader_problem', 'distinct_angle')},
                            **{k: {'type': 'string', 'minLength': 12, 'maxLength': 180}
                               for k in ('reader_situation', 'deliverable')},
                            'source_id': {'type': 'string', 'enum': ['', *sorted(allowed)]},
                            'task_id': {'type': 'string', 'enum': ['', *sorted(task_ids)]},
+                           'direction_id': {'type': 'string', 'enum': ['', *sorted(direction_ids)]},
                            'outline': {'type': 'array', 'minItems': 3, 'maxItems': 3,
                                        'items': {'type': 'string', 'minLength': 10, 'maxLength': 180}}}}
     if anchors:
         item['properties']['topic'] = {'type': 'string', 'enum': [t['question'] for t in anchors]}
         item['properties']['task_id'] = {'type': 'string', 'enum': [t['id'] for t in anchors]}
+        item['properties']['source_id'] = {'type': 'string', 'enum': ['']}
+        item['properties']['direction_id'] = {'type': 'string', 'enum': ['']}
     proposed = {'candidates': []} if len(queued) >= REFILL_BELOW else ask(
         '한국어 게시판 기획자다. 본문을 쓰기 전에 서로 다른 독자 문제를 해결할 후보 최대 네 개를 기획한다. '
         '각 후보는 제목(topic), 관심 자료 ID(source_id), 독자의 구체적 문제(reader_problem), '
@@ -158,6 +191,7 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '과제마다 최대 한 후보만 만들며 모든 설명과 목차는 그 question과 deliverable에 직접 답한다. '
         '이전 글·보류 제목은 피해야 할 비교 자료이며 새 글의 예시나 작성할 주제가 아니다. '
         'covered_reader_problems에 이미 답한 문제와 실제 해결 절차가 같으면 제외한다. '
+        'already_answered_articles는 실제 공개된 운영팀 본문의 발췌다. 그 답을 적용하면 해결되는 질문은 새 후보로 쓰지 않는다. '
         '어느 준비 질문도 적절하지 않을 때만 task_id를 비우고 전혀 다른 문제를 제안한다. '
         'reader_situation에는 이번 글이 필요한 독자와 구체적인 결정 상황을, deliverable에는 읽고 완성할 비교 기준·문구·판단 결과를 적는다. '
         'distinct_angle에는 이미 다룬 일반 안내와 이번 해결 방법이 어떻게 다른지 적는다. '
@@ -165,6 +199,10 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '차별점이 없다면 candidates=[]다. 제목은 숫자·URL·HTML 없는 열두 자 이상 백 자 이하다.'
         '준비 과제를 모두 사용했다면 new_problem_directions를 참고해 새로운 질문을 보충한다. '
         '방향은 사실 자료나 정답이 아니며, 새로운 상황과 실제 결과물을 직접 설계한다. '
+        '준비 과제가 없을 때는 후보마다 서로 다른 new_problem_directions의 id를 direction_id로 사용한다. '
+        '방향 문구를 제목으로 반복하지 말고 그 안에서 아직 해결되지 않은 구체적 질문을 만든다. '
+        '준비 과제를 쓰는 경우 direction_id는 빈 문자열이다. '
+        'covered_reader_problems의 발행·보류 결과를 다른 게시판까지 비교하고 그 해결책을 다시 제안하지 않는다. '
         'pending_topics_to_avoid_repeating의 후보는 이미 대기 중이므로 새 후보로 반복하지 않는다.'
         + '\n\n' + ANGLE_RULES + '\n실제 본문 작성 제한 안에서 실행 가능한 기획만 만든다. '
         '숫자 예시나 미확인 정책을 빼면 차별점이 없어지는 기획은 제외한다.\n' + ARTICLE_TEXT_RULES,
@@ -172,22 +210,33 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         {'type': 'object', 'additionalProperties': False, 'required': ['candidates'],
          'properties': {'candidates': {'type': 'array', 'maxItems': 4, 'items': item}}},
         'distinct_reader_problems', 'topic', model, usage, 4200)
-    new_candidates = validate_candidates(proposed, allowed, fresh, task_ids)
-    by_topic = {}
-    for plan in [*queued, *new_candidates]:
-        by_topic.setdefault(plan['topic'], plan)
-    combined = list(by_topic.values())
+    new_candidates = validate_candidates(proposed, allowed, fresh, task_ids, direction_ids)
     if anchors:
         assignments = {task['id']: task for task in anchors}
-        combined = [plan for plan in combined if plan.get('task_id') in assignments
-                    and plan['topic'] == assignments[plan['task_id']]['question']]
+        new_candidates = [p for p in new_candidates if p.get('task_id') in assignments
+                          and p['topic'] == assignments[p['task_id']]['question']]
+    new_candidates = [p for p in new_candidates if not any(same_problem(p, old) for old in all_plans)]
+    # One new proposal per direction/task; no paid retry loop to refill the batch.
+    seen_assignments, distinct_candidates = set(), []
+    for p in new_candidates:
+        if not anchors and 'direction_id' in p and not p['direction_id']:
+            continue
+        key = p.get('task_id') or p.get('direction_id')
+        if key and key in seen_assignments:
+            continue
+        if key:
+            seen_assignments.add(key)
+        distinct_candidates.append(p)
+    by_topic = {}
+    for plan in [*queued, *distinct_candidates]:
+        by_topic.setdefault(plan['topic'], plan)
+    combined = list(by_topic.values())
     candidates = combined[:4]
-    if on_pool:
-        on_pool(pool_update(board, combined))
+    update_pool(combined)
     if not candidates:
         raise PlanningHeld(board, ['기존 글과 다른 독자 문제를 찾지 못했습니다. 본문·이미지를 생성하지 않습니다.'])
     comparisons, reference_articles = [], {}
-    task_targets = {task['id']: task for task in material['unused_reader_tasks']}
+    task_targets = {task['id']: task for task in tasks}
     for index, candidate in enumerate(candidates):
         query = ' '.join([candidate['topic'], candidate['reader_problem'], candidate.get('deliverable', ''), *candidate['outline']])
         nearby = select_article_evidence(query, [x for x in existing if x['body']])
@@ -250,13 +299,11 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
     selected_paths = set(comparisons[report['selected_index']]['compare_paths']) if report['selected_index'] >= 0 else set()
     writing_brief = validate_brief(report['writing_brief'], selected_paths, report['selected_index'] >= 0)
     if report['selected_index'] == -1:
-        if on_pool:
-            on_pool(pool_update(board, combined[4:]))
+        update_pool(combined[4:])
         raise PlanningHeld(board, [report['reason'], *report['rejections'][:6]], candidates)
     selected = candidates[report['selected_index']]
-    if on_pool:
-        consumed = {selected['topic'], *(candidates[i]['topic'] for i in rejected)}
-        on_pool(pool_update(board, [p for p in combined if p['topic'] not in consumed]))
+    consumed = {selected['topic'], *(candidates[i]['topic'] for i in rejected)}
+    update_pool([p for p in combined if p['topic'] not in consumed])
     return {**selected, 'novelty_reason': report['reason'], 'screen_rejections': report['rejections'],
             'writing_brief': writing_brief,
             'screened_out_plans': [candidates[i] for i in rejected]}
