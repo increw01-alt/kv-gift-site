@@ -1357,5 +1357,18 @@
     "publication_mode": "automatic",
     "run_id": "42118821531",
     "usage_file": "data/editorial_runs/2026-11-06/42118821531.json"
+  },
+  {
+    "board": "sense",
+    "id": 24,
+    "topic": "이동 거리와 이용 시간을 함께 고려한 생활 계획 세우기",
+    "drafted_at": "2026-11-06",
+    "automation": true,
+    "search_intent": "이동 거리와 시간을 함께 비교해 무리 없는 하루 일정을 짜는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 달력과 작은 메모지, 지하철 노선도, 손으로 그린 동선 지도가 함께 놓여 있고 한 사람이 병원·장보기·약속 시간을 각각 적은 뒤 화살표로 이동 순서를 조정하는 구도",
+    "image_alt": "달력과 동선 지도를 옆에 두고 병원, 장보기, 약속 시간을 적은 메모를 비교하며 하루 일정 순서를 조정하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42162164975",
+    "usage_file": "data/editorial_runs/2026-11-06/42162164975.json"
   }
 ]
