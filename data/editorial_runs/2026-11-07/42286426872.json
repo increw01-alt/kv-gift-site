@@ -3,16 +3,18 @@
   "date_kst": "2026-11-07",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-06T20:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "42286426872",
@@ -22,15 +24,132 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-07T05:14:00.047681+09:00"
+      "attempt_started_at": "2026-11-07T05:14:00.047681+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [
+          {
+            "topic": "상품권 판매 문의와 관계없는 추가 자료를 요청받으면 무엇부터 볼까요?",
+            "source_id": "",
+            "task_id": "supply-20261106-sale-unexpected-request",
+            "reader_problem": "판매 문의 범위를 벗어난 자료 요청을 받아 불필요한 개인정보나 보안에 민감한 자료를 곧바로 제공할지 결정하기 어려운 상황입니다.",
+            "distinct_angle": "일반 안내는 매입 절차 중심이지만, 이 글은 의도 파악과 제공 보류 분기 절차를 체계적으로 소개해 독자가 불필요한 정보 노출을 피하도록 돕습니다.",
+            "outline": [
+              "추가 자료 요청 시 요청 주체와 전달 경로 확인하기",
+              "요청 목적과 자료 범위 대조로 불필요 제공 방지하기",
+              "제공 결정 전 답변 받고 보안 유지하는 절차 수립하기"
+            ],
+            "reader_situation": "통상 안내받지 않은 문서, 사진, 개인정보 요청이 들어와 급하게 대응하려는 보유자.",
+            "deliverable": "요청 주체, 전달 경로, 자료 목적을 대조하는 확인표와, 답변 받기 전 자료 제공 보류 여부판단 체크리스트.",
+            "direction_id": ""
+          },
+          {
+            "topic": "전제가 서로 다른 상품권 견적은 어떤 항목을 맞춘 뒤 비교할까요?",
+            "source_id": "",
+            "task_id": "supply-20261106-sale-quote-basis",
+            "reader_problem": "품목 일부 대상과 전체 묶음 견적이 섞여 단순 금액 비교만으로 최적 조건을 판단하기 어려운 상황입니다.",
+            "distinct_angle": "기존 글은 정가 비교 중심이나, 이 글은 대상 범위·포함 항목·확인 상태를 맞춰 비교 대상 선정부터 보류까지 의사결정 절차를 집중해서 안내합니다.",
+            "outline": [
+              "견적 대상과 포함 항목 기본 정보 파악하기",
+              "확인된 범위와 상태를 견적별로 정리하기",
+              "범위와 상태가 일치하지 않은 견적은 비교보류 처리하기"
+            ],
+            "reader_situation": "여러 매입처 견적이 하나는 묶음, 하나는 일부만 확인돼 어떤 견적이 유리한지 근거 있게 판단하려는 판매자.",
+            "deliverable": "확인 범위·상태·포함 항목 체크 리스트와 비교 전환·보류 기준을 반영한 견적 비교 준비표.",
+            "direction_id": ""
+          },
+          {
+            "topic": "상태를 확인한 상품권과 아직 확인 중인 상품권을 어떻게 분리할까요?",
+            "source_id": "",
+            "task_id": "supply-20261106-sale-split-pending",
+            "reader_problem": "일부 상품권 상태만 확인되어 전체 상태로 오인 우려가 있어 미확인 상품권이 상담 합계에 포함돼 혼란을 줄 위험이 있습니다.",
+            "distinct_angle": "기존 글은 판매 전 상태 점검 중심인데, 본 글은 확인 완료분과 미확인분을 구분해 인계 및 상담 진행 시 혼선을 방지하는 작업 구역 분리법에 집중합니다.",
+            "outline": [
+              "확인 완료 상품권과 미확인 상품권 명확히 구분하기",
+              "미확인 상품권 합계 및 상담 대상 제외 원칙 세우기",
+              "상담 인계 시 분리된 작업 구역과 범위 명확히 알리기"
+            ],
+            "reader_situation": "판매 문의 중 일부 상품권 상태만 확인된 상태에서 전체가 같다고 추정되는 걸 방지하고자 하는 판매 담당자.",
+            "deliverable": "확인 완료 상품권과 미확인 상품권의 목록 분리표, 합계 계산 분리 지침서, 인계 시 확인 절차 문서.",
+            "direction_id": ""
+          },
+          {
+            "topic": "상품권 판매 문의 담당자가 바뀌면 결정 권한은 어떻게 나눠 전할까요?",
+            "source_id": "",
+            "task_id": "supply-20261106-sale-handover-owner",
+            "reader_problem": "공동 보유 상품권에서 문의 담당자 변경 시 새 담당자가 처분 권한까지 가진 것으로 오인되어 불필요한 책임 문제나 혼란이 발생할 수 있습니다.",
+            "distinct_angle": "일반 권한 안내와 달리, 본 글은 문의 전달 권한과 최종 처분 권한 분리 방법과 동의 절차 인수인계 문구 표준안을 제시합니다.",
+            "outline": [
+              "문의 담당자 변경 시 권한과 역할 분리 이해하기",
+              "권한 분리에 따른 공식 인계 문구 및 안내 작성하기",
+              "최종 결정 권한과 문의 진행 범위 명확히 표시하는 방법 익히기"
+            ],
+            "reader_situation": "공동 소유 상품권 문의 프로그램에서 담당자만 교체하며 새 담당자 권한 범위를 명확히 하고자 하는 관리자.",
+            "deliverable": "문의 전달 권한과 처분 권한 분리 기준표, 인계 메시지 예시, 승인 전 진행 범위 표시 문서.",
+            "direction_id": ""
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 6,
+          "selectedAssignments": [
+            "supply-20261106-sale-unexpected-request",
+            "supply-20261106-sale-quote-basis",
+            "supply-20261106-sale-split-pending",
+            "supply-20261106-sale-handover-owner"
+          ],
+          "coverageRecords": 431,
+          "coverageArticles": 119,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-646b693f14",
+            "sale-ecddaf57c8",
+            "sale-347dc67531",
+            "sale-e24e80a517"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25819,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2304
+          },
+          "output_tokens": 943,
+          "output_tokens_details": {
+            "reasoning_tokens": 255
+          },
+          "total_tokens": 26762
+        },
+        "estimated_usd": 0.02205255,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T20:14:11.225971+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T20:14:04.899100+00:00",
+        "usage_record_index": 0
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02205255,
+    "estimated_total_usd": 0.02205255,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
