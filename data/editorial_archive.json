@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T17:45:01.220862+00:00",
+  "generatedAt": "2026-11-06T17:46:45.451134+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3387,7 +3387,7 @@
       "board": "gc_information",
       "topic": "상품권 화면의 바코드와 그 아래 문자는 어떤 관계인가요?",
       "url": "https://kv-gift.co.kr/board/gc_information/17",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-06T17:46:45.425777+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1276896,
       "knownSubtotalUsd": 0.1276896
