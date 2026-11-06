@@ -1409,5 +1409,18 @@
     "publication_mode": "automatic",
     "run_id": "42287871211",
     "usage_file": "data/editorial_runs/2026-11-07/42287871211.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 68,
+    "topic": "넓은 안내 표를 읽을 때 행 제목과 열 제목을 함께 확인해 주세요",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "모바일에서 넓은 안내 표를 읽을 때 가려진 행·열 제목을 찾아 조건을 정확히 해석하는 방법",
+    "image_scene": "책상 위에 넓은 안내 표가 인쇄된 종이와 스마트폰이 나란히 놓여 있고, 한 사람이 화면을 좌우로 밀며 가려진 열 제목을 찾은 뒤 같은 행의 셀 값을 메모지에 옮겨 적어 조건을 맞춰 보는 구도",
+    "image_alt": "스마트폰으로 본 넓은 안내 표의 가려진 열 제목을 찾아가며 행과 열을 메모지에 함께 적어 조건을 확인하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42307381338",
+    "usage_file": "data/editorial_runs/2026-11-07/42307381338.json"
   }
 ]

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T22:48:46.121230+00:00",
+  "generatedAt": "2026-11-06T22:49:44.778459+00:00",
   "dateKst": "2026-11-07",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 10,
   "held": 0,
   "errors": 6,
-  "knownSubtotalUsd": 0.49443465,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.606392,
+  "estimatedTotalUsd": 0.606392,
   "records": [
     {
       "runId": "42241737960",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "42307381338",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "넓은 안내 표를 읽을 때 행 제목과 열 제목을 함께 확인해 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/68",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-06T22:47:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11195735,
+      "knownSubtotalUsd": 0.11195735
     }
   ],
   "topicRetry": {

@@ -1,17 +1,27 @@
 {
   "run_id": "42307381338",
   "date_kst": "2026-11-07",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "general_notice",
+  "topic": "넓은 안내 표를 읽을 때 행 제목과 열 제목을 함께 확인해 주세요",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/general_notice/68",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-06T22:47:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,317 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-07T07:48:45.939540+09:00"
+      "attempt_started_at": "2026-11-07T07:48:45.939540+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 6,
+          "selectedAssignments": [
+            "supply-20261106-general_notice-keyboard-focus",
+            "supply-20261106-general_notice-text-selection",
+            "supply-20261106-general_notice-wide-table",
+            "supply-20261106-general_notice-link-description"
+          ],
+          "coverageRecords": 434,
+          "coverageArticles": 120,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-cf141162c8",
+            "general_notice-50bee5625a",
+            "general_notice-6724f45795",
+            "general_notice-dd6c1436b7"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "키보드로 게시판 링크를 이동할 때 선택 표시를 살펴봐 주세요",
+          "source_id": "",
+          "task_id": "supply-20261106-general_notice-keyboard-focus",
+          "reader_problem": "마우스 없이 키보드로 게시판 링크를 따라가지만 현재 선택된 위치를 찾기 어려워 헤매는 이용자 문제",
+          "distinct_angle": "키보드 이동 시 한 링크씩 탐색하며 현재 위치 표시를 구별하는 실제 단계와 팁 제공에 집중한다",
+          "outline": [
+            "탭 키로 다음 링크 선택 위치 파악하기",
+            "이전 항목 이동으로 앞 링크 확인 방법 익히기",
+            "선택 위치 표시를 눈으로 확인하며 링크 실행하기"
+          ],
+          "reader_situation": "마우스를 못 쓰고 키보드 탭 이동과 이전 항목 이동 방법을 배우려는 사람",
+          "deliverable": "탭 키로 이동, 이전 항목으로 돌아가기, 링크 실행까지 각 단계별 선택 위치 표시를 느끼며 탐색하는 방법 안내",
+          "direction_id": ""
+        },
+        {
+          "topic": "안내 문장을 복사했다면 빠진 부분과 합쳐진 문장을 살펴봐 주세요",
+          "source_id": "",
+          "task_id": "supply-20261106-general_notice-text-selection",
+          "reader_problem": "코드, 줄바꿈, 각주 등으로 인해 복사한 안내 문장 일부가 빠지거나 합쳐져 의미가 달라지는 문제",
+          "distinct_angle": "원문과 복사본의 문장 경계 차이를 비교하며 부정 표현 누락이나 불필요 결합을 찾아내는 훈련 중심",
+          "outline": [
+            "원문과 복사한 문장의 경계 차이 인식하기",
+            "빠진 부정어와 불필요 결합 사례 찾기",
+            "텍스트 교정 연습으로 정확한 문장 복사 습관 익히기"
+          ],
+          "reader_situation": "화면에서 복사한 안내 문장의 정확성을 교정하고자 하는 이용자",
+          "deliverable": "원문의 문장 경계와 복사본 문장 경계를 하나씩 대조해 빠진 부정어, 합쳐진 문장 찾는 교정 사례와 연습 방법",
+          "direction_id": ""
+        },
+        {
+          "topic": "안내 링크를 공유할 때 여기 대신 내용을 알 수 있는 이름을 붙여 주세요",
+          "source_id": "",
+          "task_id": "supply-20261106-general_notice-link-description",
+          "reader_problem": "여러 링크를 ‘여기’로 적어 수신자가 어떤 내용인지 구별하기 어려움",
+          "distinct_angle": "가상의 링크 목록에서 목적과 연결 대상을 드러내는 짧고 명확한 설명으로 교체하는 전후 비교 예시 제시",
+          "outline": [
+            "문맥상 ‘여기’가 모호한 링크 문제 이해하기",
+            "링크 목적과 연결 대상을 알 수 있는 짧은 설명 작성법 익히기",
+            "가상 예시로 ‘여기’ 표현을 의미 있는 이름으로 바꾸는 전후 비교 연습하기"
+          ],
+          "reader_situation": "한 메시지에 여러 링크를 올릴 때 수신자가 바로 내용을 파악하도록 설명을 달려는 이용자",
+          "deliverable": "가상의 링크목록 예시에서 ‘여기’ 대신 정확한 목적과 대상이 드러나는 이름 붙이기 실습과 효과 설명",
+          "direction_id": ""
+        }
+      ],
+      "topic_plan": {
+        "topic": "넓은 안내 표를 읽을 때 행 제목과 열 제목을 함께 확인해 주세요",
+        "source_id": "",
+        "task_id": "supply-20261106-general_notice-wide-table",
+        "reader_problem": "넓은 표의 일부만 보이는 모바일 화면에서 행·열 제목을 놓쳐 셀의 조건을 제대로 이해하기 어려움",
+        "distinct_angle": "가상의 넓은 표 예시로 행과 열 제목을 대응해 읽는 단계별 연습 방법을 제시하는 점",
+        "outline": [
+          "가상의 넓은 표에서 행과 열 제목 함께 확인하기",
+          "가려진 열을 찾아 표 전체 조건 완성하기",
+          "행·열 제목을 짝지어 셀 조건 정확히 이해하기"
+        ],
+        "reader_situation": "모바일에서 표를 읽으며 행과 열 제목을 동시에 확인해 조건을 정확히 파악하려는 이용자",
+        "deliverable": "행·열 제목 짝짓기, 가려진 열 찾기, 조건 조합으로 셀값 해석을 연습하는 구체적 안내",
+        "direction_id": "",
+        "novelty_reason": "후보 둘은 넓은 표의 일부만 보이는 화면에서 행 제목과 열 제목을 짝지어 조건을 읽는 방법을 다뤄, 기존 공지의 링크·문구 확인형 안내와 다른 새로운 독자 문제를 다룹니다. 가장 가까운 기존 글들은 교환처나 조건을 확인하라는 수준이어서 표에서 가려진 열을 복원해 셀의 뜻을 해석하는 구체 절차까지는 제공하지 않았습니다. 따라서 이 후보가 가장 구체적이고 새 해결 단계를 갖춘 안건입니다.",
+        "screen_rejections": [
+          "0번은 키보드로 현재 선택 위치를 찾는 접근성 탐색 안내로 보이지만, 본문이 아직 없고 기존 공개 글과의 차별점을 구체적으로 확인하기 어렵습니다. 또한 비교 대상 중 키보드 이동이나 포커스 표시를 직접 다룬 공개 글이 제공되지 않아 중복 여부를 확정하기 어렵습니다.",
+          "1번은 복사한 안내 문장의 누락과 결합을 찾는 교정 주제로 보이지만, 제공된 기존 글들 가운데 문장 경계 복사 오류를 직접 다룬 공개 글이 확인되지 않아 새 방향인지 판단할 근거가 부족합니다.",
+          "3번은 링크를 '여기' 대신 설명적으로 부르자는 안내로 보이지만, 이미 공유 링크의 원문 확인과 미리보기 구분을 다룬 글들과 독자 상황이 가깝고, 단순한 표현 교체로 보일 여지가 있어 우선순위가 낮습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/48"
+          ],
+          "gap": "기존 안내는 표 전체의 조건을 확인하라고 말할 뿐, 모바일에서 한 번에 다 보이지 않는 표를 읽을 때 가려진 열을 어떻게 찾아 행과 열을 맞물려 해석할지까지는 다루지 않는다. 이번 글은 보이는 셀만 읽다가 조건을 잘못 짚는 상황에서, 행 제목과 열 제목을 짝지어 빈칸을 보완하고 셀의 뜻을 복원하는 판단법을 제시해야 한다.",
+          "example": "모바일에서 넓은 안내 표의 가운데 열이 화면 밖으로 잘려 보이지 않을 때를 가정해 보세요. 행 제목만 보고 값을 추측하지 말고, 옆으로 옮겨 열 제목을 먼저 찾은 뒤 같은 행의 셀을 다시 읽어 조건을 맞춰 보도록 안내합니다. 이렇게 하면 보이는 숫자나 문구가 아니라 제목 조합으로 뜻을 확인하게 됩니다.",
+          "result": "독자는 화면에 일부만 보이는 표에서도 행 제목과 열 제목을 함께 맞춰 읽고, 가려진 조건을 추측하지 않고 셀의 뜻을 스스로 복원할 수 있게 된다.",
+          "section_actions": [
+            "가려진 열을 찾기 전에 먼저 행 제목과 현재 보이는 열 제목을 나란히 적어 두고, 어떤 조건이 빠졌는지 먼저 드러내도록 한다.",
+            "같은 행을 좌우로 옮겨 보며 보이지 않는 열의 위치를 확인하고, 제목이 바뀔 때 셀의 뜻이 어떻게 달라지는지 비교한다.",
+            "행과 열 제목을 모두 확인한 뒤에만 셀의 조건을 해석하도록 정리해, 추측이 아닌 제목 조합으로 읽는 습관을 만든다."
+          ]
+        }
+      },
+      "board": "general_notice",
+      "topic": "넓은 안내 표를 읽을 때 행 제목과 열 제목을 함께 확인해 주세요",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-06T14:17:31Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "모바일에서 넓은 안내 표를 읽을 때 가려진 행·열 제목을 찾아 조건을 정확히 해석하는 방법"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 28585,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 28416
+          },
+          "output_tokens": 1027,
+          "output_tokens_details": {
+            "reasoning_tokens": 269
+          },
+          "total_tokens": 29612
+        },
+        "estimated_usd": 0.00687945,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T22:48:57.097147+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3537,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 392,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3929
+        },
+        "estimated_usd": 0.002042,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T22:49:00.906292+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 11232,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 541,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11773
+        },
+        "estimated_usd": 0.0053584,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T22:49:06.907820+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23157,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 353,
+          "output_tokens_details": {
+            "reasoning_tokens": 158
+          },
+          "total_tokens": 23510
+        },
+        "estimated_usd": 0.01895625,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T22:49:11.490127+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3595,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1099
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4967
+        },
+        "estimated_usd": 0.066623,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T22:49:39.947750+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 15225,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 151,
+          "output_tokens_details": {
+            "reasoning_tokens": 86
+          },
+          "total_tokens": 15376
+        },
+        "estimated_usd": 0.01209825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T22:49:43.772600+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T22:48:49.555672+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T22:48:57.099904+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T22:49:01.990246+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T22:49:08.587148+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-06T22:49:11.507870+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T22:49:41.037984+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11195735,
+    "estimated_total_usd": 0.11195735,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
