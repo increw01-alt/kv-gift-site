@@ -1396,5 +1396,18 @@
     "publication_mode": "automatic",
     "run_id": "42264158344",
     "usage_file": "data/editorial_runs/2026-11-07/42264158344.json"
+  },
+  {
+    "board": "sale",
+    "id": 3699,
+    "topic": "전제가 서로 다른 상품권 견적은 어떤 항목을 맞춘 뒤 비교할까요?",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "서로 다른 전제의 상품권 견적을 같은 기준으로 맞춰 비교할 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 서로 다른 견적서 두 장과 체크리스트, 계산기가 나란히 놓여 있고, 한 사람이 대상 범위와 포함 항목, 확인 상태를 각각 다른 색 펜으로 표시해 같은 기준인지 대조하는 구도",
+    "image_alt": "책상 위 견적서 두 장을 놓고 대상 범위와 확인 상태를 체크하며 비교 기준을 맞추는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42287871211",
+    "usage_file": "data/editorial_runs/2026-11-07/42287871211.json"
   }
 ]
