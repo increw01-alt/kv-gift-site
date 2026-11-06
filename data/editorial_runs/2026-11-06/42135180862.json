@@ -1,18 +1,20 @@
 {
   "run_id": "42135180862",
   "date_kst": "2026-11-06",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-06T00:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 기존 글이 이미 다룬 ‘상품권 상태 확인·개인정보 보호·주문/배분 정리’ 범주를 크게 벗어나지 않습니다. 특히 0번과 1번은 기존 판매/이용 안내의 상태 점검과 정보 보호 절차를 확장 서술한 수준이고, 2번과 3번은 각각 여러 장 주문 내역 정리와 수신자별 금액 배분 기준 글과 핵심 질문·해결 절차가 겹칩니다. 기존 답만으로 처리되지 않는 새 질문, 새로운 판단 기준, 구체적으로 다른 실행 단계가 본문 수준에서 확인되지 않아 보류가 맞습니다. / 0번: 기존 공개 글 /board/sale/3692가 이미 매입처에 문의하기 전 상품권 종류·상태를 확인하고, 개인정보 노출을 막고, 기록을 정리하는 절차를 다뤘습니다. 후보도 상태 점검, 증빙자료 준비, 비식별화, 안전한 전달이라는 같은 문제를 같은 순서로 풀고 있어 중복입니다. / 1번: 기존 공개 글 /board/general_notice/54와 /board/gc_tip/36이 이미 공용 기기에서 상품권 관련 파일을 확인한 뒤 로그아웃하고 다운로드 파일을 삭제하며 노출을 막는 방법을 해결했습니다. 후보의 안전 삭제·삭제 후 재검증도 그 연장선이라 새 해결 문제가 부족합니다. / 2번: 기존 공개 글 /board/purchase/2567이 이미 여러 장의 상품권 주문 내역을 정리하고 주문 전 수량·수령 방법·세부 내용을 점검하는 방법을 다뤘습니다. 후보는 여기에 옵션 변경 이력과 최종 대조를 덧붙였지만, 실제로는 같은 주문 확인 절차를 반복해 중복입니다. / 3번: 기존 공개 글 /board/purchase/2576이 이미 여러 수신자에게 용도에 맞춰 상품권 금액을 배분하는 기준, 우선순위 설정, 배분표 작성 절차를 설명했습니다. 후보의 용도별 배분 기준과 실행 절차는 같은 해결 과제를 거의 그대로 반복합니다."
+    ]
   },
   "api_usage": {
     "run_id": "42135180862",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T09:13:52.400972+09:00"
+      "attempt_started_at": "2026-11-06T09:13:52.400972+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 매입 상담 전 상태 점검과 개인정보 안전 절차",
+          "source_id": "",
+          "reader_problem": "여러 종류 상품권을 매입 상담 전에 상태와 증빙 자료를 정확히 준비하고 개인정보 노출 위험 없이 안전하게 처리하는 구체적 방법이 필요함",
+          "distinct_angle": "기존 안내가 일반적 상태와 문의 안내 중심인 데 비해, 본 글은 상태별 점검 항목, 구체 증빙자료 수집과 비식별화 절차, 안전한 개인정보 공개 범위 설정 및 전달 방법을 단계적으로 설명한다",
+          "reader_situation": "다양한 상품권을 여러 매입처에 상담 문의하려는 이용자로, 상담 전 상품권 상태와 증빙을 준비하며 개인정보 안전 절차를 체계적으로 익히고자 하는 상황",
+          "deliverable": "상품권 상태 점검 체크리스트, 증빙자료 유형별 안전 수집 및 비식별화 매뉴얼, 개인정보 공개 범위와 전달 절차를 포함한 상담 준비 문서",
+          "task_id": "",
+          "outline": [
+            "상품권 종류별 상태 점검 필수 항목과 기록법 단계별 익히기",
+            "증빙자료 종류별 수집 및 개인정보 비식별 처리 방법 실습하기",
+            "개인정보 최소 공개 원칙 설정과 안전한 상담 자료 전달 절차 구축하기"
+          ]
+        },
+        {
+          "topic": "공용 컴퓨터에서 상품권 관련 파일 안전 삭제 및 개인정보 보호",
+          "source_id": "",
+          "reader_problem": "공용 컴퓨터나 스마트기기에서 상품권 결제 정보와 파일을 다운받은 후 안전 삭제 방법과 삭제 확인 절차가 없어 개인정보 노출 위험이 큼",
+          "distinct_angle": "기존 안내가 단순 삭제 안내 중심인데, 본 글은 다운로드 위치 파악, 안전 삭제 단계, 삭제 후 재검증 절차와 개인정보보호 습관화까지 구체적 과정을 안내",
+          "reader_situation": "도서관, 회사 등 다수가 사용하는 공용 기기에서 상품권 관련 파일 처리를 마친 후 안전한 삭제 및 점검 절차를 익히고자 하는 이용자",
+          "deliverable": "공용 기기에서 상품권 파일 안전 삭제 매뉴얼, 삭제 후 재확인 방법, 개인정보보호 습관화 안내서와 체크리스트",
+          "task_id": "",
+          "outline": [
+            "공용 기기 사용 시 개인정보 노출 위험과 영향 이해하기",
+            "상품권 파일 다운로드 위치 탐색 및 안전 삭제 단계별 실습",
+            "삭제 후 이력 점검과 개인정보 보호를 위한 습관 형성 방안 실천하기"
+          ]
+        },
+        {
+          "topic": "상품권 장바구니 옵션 변경 내역 체계적 기록 및 최종 주문 대조 점검법",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니에서 옵션(금액, 수신자 등)을 여러 번 변경하면서 최종 주문 내역이 최초 의도와 정확히 일치하는지 확인하는 구체적 방법이 없음",
+          "distinct_angle": "기존 답변들이 단순 기록 정리나 문의 안내 수준이나, 본 글은 최초 옵션 기록, 변경 내역 상세 점검 절차, 최종 주문 직전 원본 대조 점검법을 실무적으로 자세히 설명한다",
+          "reader_situation": "대량 구매자 또는 꼼꼼한 개인 구매자로, 장바구니 옵션을 자주 수정하며 최종 주문 전 모든 변경 사항과 최초 의도를 구체적으로 비교하려는 경우",
+          "deliverable": "최초 옵션 및 변경 내역 기록 양식, 상세 점검 매뉴얼, 최종 주문 전 대조 체크리스트 및 실천 지침서",
+          "task_id": "",
+          "outline": [
+            "장바구니에 최초 담긴 상품권 및 옵션 체계적으로 기록하기",
+            "옵션 변경 시 변경 사항을 세밀히 점검하는 절차 익히기",
+            "최종 주문 전 최초 의도와 현재 옵션을 직접 대조 점검하고 오류 예방하기"
+          ]
+        },
+        {
+          "topic": "여러 수신자 맞춤 상품권 금액 배분 기준과 실행 절차",
+          "source_id": "",
+          "reader_problem": "여러 명에게 상품권을 용도와 필요에 맞게 합리적으로 금액과 종류를 배분하는 구체적 기준과 단계별 절차가 없어 계획 수립과 실행이 어려움",
+          "distinct_angle": "기존 안내는 배분 일반 안내 수준이나, 본 글은 전체 구매금액과 수신자별 예상 사용 목적 파악, 용도별 우선순위 설정, 수신자별 배분표 작성과 실행 절차를 체계적으로 제시한다",
+          "reader_situation": "가족, 팀 등 여러 수신자에게 상품권을 맞춤 용도로 나누고 정확한 배분 계획과 실행을 위한 구체적 기준과 절차를 알고자 하는 이용자",
+          "deliverable": "수신자별 용도 분류 포함 금액 배분표 양식, 용도별 우선순위 및 최소 배분 단위 설정 가이드, 단계별 배분 실행 절차 및 시행 지침서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적 정확히 파악하기",
+            "용도별 우선순위 및 최소 배분 단위 구체적으로 설정하기",
+            "수신자별 금액 배분표 작성 및 배분 실행 절차 단계별 안내하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24011,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1118,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 25129
+        },
+        "estimated_usd": 0.0113932,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T00:14:05.450592+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11441,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 754,
+          "output_tokens_details": {
+            "reasoning_tokens": 248
+          },
+          "total_tokens": 12195
+        },
+        "estimated_usd": 0.01197375,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T00:14:11.203966+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T00:13:55.273863+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T00:14:06.175431+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02336695,
+    "estimated_total_usd": 0.02336695,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
