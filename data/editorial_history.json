@@ -1370,5 +1370,18 @@
     "publication_mode": "automatic",
     "run_id": "42162164975",
     "usage_file": "data/editorial_runs/2026-11-06/42162164975.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2578,
+    "topic": "상품권 소개의 추천 문구와 확인 가능한 근거는 어떻게 나눠 읽을까요?",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "홍보 문구의 평가 표현과 실제 확인 가능한 조건을 나눠 읽는 기준을 알고 싶다",
+    "image_scene": "책상 위에 상품권 소개문 인쇄본과 공식 안내서가 나란히 놓여 있고, 한 사람이 형광펜으로 ‘추천·인기’ 같은 문구에는 원을 치고 ‘사용처·예외 조건’ 문장에는 밑줄을 긋고 있다. 옆에는 두 칸으로 나뉜 비교 메모지와 펜이 있어 평가 표현과 근거 문장을 분리해 정리하는 장면이다.",
+    "image_alt": "책상 위에서 상품권 소개문과 공식 안내서를 나란히 비교하며 평가 표현과 조건 문장을 따로 표시하는 모습이다.",
+    "publication_mode": "automatic",
+    "run_id": "42241737960",
+    "usage_file": "data/editorial_runs/2026-11-07/42241737960.json"
   }
 ]

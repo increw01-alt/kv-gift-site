@@ -1,17 +1,27 @@
 {
   "run_id": "42241737960",
   "date_kst": "2026-11-07",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "purchase",
+  "topic": "상품권 소개의 추천 문구와 확인 가능한 근거는 어떻게 나눠 읽을까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/purchase/2578",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-06T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,350 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-07T00:18:41.231202+09:00"
+      "attempt_started_at": "2026-11-07T00:18:41.231202+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 6,
+          "selectedAssignments": [
+            "supply-20261106-purchase-dependency-order",
+            "supply-20261106-purchase-wrapping-information",
+            "supply-20261106-purchase-incomparable-options",
+            "supply-20261106-purchase-ad-evidence"
+          ],
+          "coverageRecords": 423,
+          "coverageArticles": 117,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-6bf9948129",
+            "purchase-5aaa6701f9",
+            "purchase-3b03fbce3d",
+            "purchase-6f6d6db65b"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 선물 준비가 서로 얽혀 있을 때 무엇부터 정하면 좋을까요?",
+          "source_id": "",
+          "reader_problem": "상품권 선물 준비 과정에서 안내 문구와 포장 준비를 먼저 하고 나서 상품 선택이 변경되면서 수고가 늘어나고, 각 준비 단계가 서로 의존해 혼란스러운 상황을 겪고 있다.",
+          "distinct_angle": "준비 작업의 단계별 의존 관계와 확정 작업의 순서를 단계별 화살표 흐름으로 시각화하여, 되돌리기 어려운 작업을 뒤로 배치하는 구체적 작업 순서 안내를 제공한다.",
+          "reader_situation": "안내 문구와 포장 준비를 먼저 했으나, 상품 선택 변경으로 다시 작업하게 되어 효율적인 선물 준비 순서를 알고 싶어 하는 독자.",
+          "deliverable": "수신 방식 결정, 안내 문구 작성, 포장 준비, 상품 선택 확정 등 상품권 선물 준비 작업을 단계별로 연결하고, 되돌리기 어려운 확정 작업을 뒤에 배치한 작업 순서도와 단계별 체크리스트.",
+          "task_id": "supply-20261106-purchase-dependency-order",
+          "direction_id": "",
+          "outline": [
+            "상품권 선물 준비 작업 단계별 목록 작성과 상호 의존 관계 파악하기",
+            "의존 단계별 화살표 작업 흐름도 작성으로 작업 순서 시각화하기",
+            "확정 작업 뒤로 미루기: 되돌리기 어려운 단계 우선순위 조정 및 최종 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 겉포장을 버려도 필요한 안내가 남게 준비하려면?",
+          "source_id": "",
+          "reader_problem": "선물 상품권에서 인사말과 이용 안내가 포장에 혼재되어 있어 포장 일부를 버리면 필요한 안내가 사라질 위험이 있다.",
+          "distinct_angle": "포장, 인사 카드, 상품권 원본 안내를 기능별로 분리 배치하고, 포장을 떼어낸 상태로 안내 정보가 온전하게 수신자에게 전달되는지 모의 확인하는 절차를 구체적으로 안내한다.",
+          "reader_situation": "직접 전달하는 선물의 인사말과 이용 안내가 포장에 섞여 있어 수신자가 일부 포장을 버릴 경우 필요한 안내를 확보하고자 하는 상황.",
+          "deliverable": "포장 외부와 내부, 인사 카드, 상품권 원본 등 안내 자료 기능별 구분 후 배치표, 포장 제거 후 안내 보존 여부를 확인하는 모의 전달 점검 목록 및 절차 안내서.",
+          "task_id": "supply-20261106-purchase-wrapping-information",
+          "direction_id": "",
+          "outline": [
+            "포장, 인사말 카드, 이용 안내서 등의 안내 자료 기능별 구분과 분리 배치하기",
+            "포장 제거 후에도 수신자에게 필요한 안내가 보존되는지 모의 전달 점검하기",
+            "포장 관련 안내 내용을 수신자 친화적으로 재배열하고 최종 점검 절차 수행하기"
+          ]
+        },
+        {
+          "topic": "두 상품권 설명의 사용 범위가 다르면 같은 기준으로 비교하려면?",
+          "source_id": "",
+          "reader_problem": "상품권 후보 중 하나는 브랜드 전체 사용 가능 범위를 설명하고, 다른 후보는 특정 지점만 소개해 표면적으로 사용 범위가 달라 비교 대상이 되지 않는 상황이다.",
+          "distinct_angle": "설명의 사용 범위를 전체, 일부, 미확인으로 구분하고, 공통으로 확인된 범위 내에서만 후보를 비교하는 표를 작성하여 무리한 추정을 배제하는 비교법을 구체적으로 제시한다.",
+          "reader_situation": "브랜드 전체 이용 가능 범위와 일부 지점 한정 이용 범위가 혼재된 상품권 설명을 같은 기준으로 객관적 비교가 필요한 이용자.",
+          "deliverable": "전체 사용처, 일부 사용처, 미확인 구분 기준과 소통 문서, 공통 확인 범위에 기초해 비교 가능 항목만 선정한 비교표, 범위 추정 배제 지침서.",
+          "task_id": "supply-20261106-purchase-incomparable-options",
+          "direction_id": "",
+          "outline": [
+            "상품권 설명 내 사용 범위를 전체, 일부, 미확인 범주로 구분하는 기준 마련하기",
+            "각 후보의 사용 범위 중 공통으로 확인된 범위만 추려내기",
+            "공통 범위 내 조건만으로 객관적 비교표를 작성하고 무리한 추정 내용 제외하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 소개의 추천 문구와 확인 가능한 근거는 어떻게 나눠 읽을까요?",
+        "source_id": "",
+        "reader_problem": "홍보 문구의 '추천', '인기' 등 표현을 구체적인 이용 조건으로 오인해 상품권 선택 시 착오를 겪는 경우가 있다.",
+        "distinct_angle": "가상 사례로 추천 문구와 사실 확인 항목을 평가 표현과 근거 확인이 필요한 주장으로 분리하며, 실제 원문 근거가 있는 항목만 비교에 반영하는 연습법을 제공한다.",
+        "reader_situation": "추천 문구, 인기 표기 등 홍보 표현을 정확한 사실 정보와 구분하여 상품권 조건을 신중히 판단하려는 고객.",
+        "deliverable": "홍보 문구 내 평가 표현과 사실 확인 대상 주장 구분 지침, 분리 연습을 위한 가상 사례 문장, 실제 근거가 있는 항목만 사용하는 비교 체크리스트.",
+        "task_id": "supply-20261106-purchase-ad-evidence",
+        "direction_id": "",
+        "outline": [
+          "추천 및 홍보 문구와 객관적 사실 항목 구별하는 기준 익히기",
+          "가상의 상품권 소개 문장으로 평가 표현과 근거 확인 필요 문장 분리 연습하기",
+          "실제 근거가 확인된 항목만 분석과 비교에 반영하는 방법 적용하기"
+        ],
+        "novelty_reason": "후보 셋은 기존 글과 가장 가까운 질문이지만, 셋 중 후보 삼이 가장 새롭습니다. 기존의 관련 글들은 상품권 안내에서 적용 범위, 상태 구분, 문의 준비처럼 ‘문서의 조건을 어떻게 읽을지’에 집중했는데, 후보 삼은 홍보 문구의 평가 표현과 확인 가능한 근거를 분리해 읽는 방법을 중심으로 삼고 있습니다. 단순한 사용처 확인이나 상태 점검이 아니라, 추천·인기 같은 표현을 사실 주장과 나눠 비교하는 판단 도구를 제공하므로 가장 구체적이고 새로운 방향입니다.",
+        "screen_rejections": [
+          "후보 영은 상품권 선물 준비의 단계 순서를 화살표로 정리하는 내용인데, 기존 공개 글과 직접 겹치지는 않더라도 실제 해결 과제가 ‘준비 순서 정리’로 좁아져 새 판단 기준이 부족합니다. 또한 구매 게시판의 핵심인 상품 선택·판매자 확인·주문 준비보다 일반적인 작업 순서 안내에 가깝습니다.",
+          "후보 일은 포장과 안내 보존을 분리해 전달하는 절차를 다루지만, 기존 안내 글들의 정보 분리·문서 보강·문의 준비 방식과 매우 가까워 새 질문이 약합니다. 포장 일부를 버렸을 때 무엇이 남아야 하는지 확인하는 방식도 일반적인 안내 보존 점검을 반복하는 수준입니다.",
+          "후보 이는 사용 범위를 전체·일부·미확인으로 나눠 비교하는데, 이는 기존 공개 글들이 이미 다룬 발행사 안내 확인, 지점별 사용 가능 여부, 예외 조항 비교와 같은 축과 거의 같습니다. 공통 확인 범위만 남겨 비교하자는 결론도 기존의 조건 대조 방식에서 크게 벗어나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_information/12",
+            "/board/gc_information/15",
+            "/board/free/471"
+          ],
+          "gap": "홍보성 표현을 그대로 믿으면 조건 확인이 끝난 것으로 오해하기 쉬우니, 추천 문구와 사실 근거를 먼저 가르는 기준이 필요하다. 같은 소개문 안에서도 평가 표현은 참고만 하고, 실제 비교에는 원문에서 확인되는 사용 조건과 예외만 남기는 구체적 분리법을 알려 줘야 한다.",
+          "example": "상품권 소개문에 추천과 인기 표현이 섞여 있지만 사용처와 예외 문구가 따로 적혀 있는 경우, 먼저 표현의 성격을 나누고 실제 확인 가능한 조건만 추려서 비교하려는 상황.",
+          "result": "독자는 홍보 문구에 흔들리지 않고, 사실로 확인된 조건만 남겨 상품권을 비교하는 기준을 스스로 만들 수 있다.",
+          "section_actions": [
+            "홍보 문구에서 추천과 인기처럼 평가에 속하는 표현을 먼저 따로 표시하고, 사용 조건이나 제한처럼 확인 가능한 문장을 구분해 읽도록 안내한다.",
+            "가상의 소개문을 예로 들어 평가 표현과 사실 주장을 나누고, 원문에서 근거가 확인되는 항목만 비교표에 남기는 연습을 하게 한다.",
+            "비교표를 완성한 뒤에는 근거가 없는 문장은 후보에서 제외하고, 남은 조건만으로 선택 여부를 판단하는 마무리 점검 절차를 제시한다."
+          ]
+        }
+      },
+      "board": "purchase",
+      "topic": "상품권 소개의 추천 문구와 확인 가능한 근거는 어떻게 나눠 읽을까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-06T14:17:31Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "홍보 문구의 평가 표현과 실제 확인 가능한 조건을 나눠 읽는 기준을 알고 싶다"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15977,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1244,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17221
+        },
+        "estimated_usd": 0.0083812,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T15:18:56.739383+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30448,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1022,
+          "output_tokens_details": {
+            "reasoning_tokens": 271
+          },
+          "total_tokens": 31470
+        },
+        "estimated_usd": 0.027435,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T15:19:07.134204+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3589,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 493,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4082
+        },
+        "estimated_usd": 0.0022244,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T15:19:13.256936+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9364,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9890
+        },
+        "estimated_usd": 0.0045872,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T15:19:20.952663+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18420,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 307,
+          "output_tokens_details": {
+            "reasoning_tokens": 88
+          },
+          "total_tokens": 18727
+        },
+        "estimated_usd": 0.0151965,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T15:19:24.069722+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3599,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1103
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4971
+        },
+        "estimated_usd": 0.066643,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T15:19:53.500796+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10444,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 213,
+          "output_tokens_details": {
+            "reasoning_tokens": 148
+          },
+          "total_tokens": 10657
+        },
+        "estimated_usd": 0.0087915,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T15:19:57.656996+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T15:18:44.206580+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T15:18:57.154621+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T15:19:07.136844+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T15:19:14.028024+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T15:19:22.076878+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-06T15:19:24.085213+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T15:19:54.282195+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1332588,
+    "estimated_total_usd": 0.1332588,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
