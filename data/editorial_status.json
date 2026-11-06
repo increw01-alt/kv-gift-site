@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T17:43:47.897507+00:00",
+  "generatedAt": "2026-11-06T17:45:01.199941+00:00",
   "dateKst": "2026-11-07",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 2,
   "held": 0,
   "errors": 0,
-  "knownSubtotalUsd": 0.1332588,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2609484,
+  "estimatedTotalUsd": 0.2609484,
   "records": [
     {
       "runId": "42241737960",
@@ -27,16 +27,16 @@
     },
     {
       "runId": "42264158344",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "상품권 화면의 바코드와 그 아래 문자는 어떤 관계인가요?",
+      "url": "https://kv-gift.co.kr/board/gc_information/17",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-06T17:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1276896,
+      "knownSubtotalUsd": 0.1276896
     }
   ],
   "topicRetry": {

@@ -1383,5 +1383,18 @@
     "publication_mode": "automatic",
     "run_id": "42241737960",
     "usage_file": "data/editorial_runs/2026-11-07/42241737960.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 17,
+    "topic": "상품권 화면의 바코드와 그 아래 문자는 어떤 관계인가요?",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "바코드와 아래 문자가 같은 정보인지 다른 정보인지 구분하는 기준을 알고 싶다",
+    "image_scene": "책상 위에 스마트폰으로 띄운 상품권 화면이 있고, 화면 안의 바코드 아래에 짧은 숫자 문자열이 함께 보인다. 옆에는 돋보기와 메모지가 놓여 있으며, 한 사람이 바코드 영역과 문자 영역을 각각 손가락으로 짚어 보며 같은 항목인지 따로 표시하는 구도다.",
+    "image_alt": "상품권 화면의 바코드와 그 아래 숫자 문자를 손가락으로 각각 짚어 보며 같은 정보인지 확인하는 장면이다.",
+    "publication_mode": "automatic",
+    "run_id": "42264158344",
+    "usage_file": "data/editorial_runs/2026-11-07/42264158344.json"
   }
 ]
