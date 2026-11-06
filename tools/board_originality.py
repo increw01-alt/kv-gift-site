@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from urllib.parse import urlsplit
 from board_profiles import PROFILES
 from board_angle_rules import ANGLE_RULES
+from board_writing_brief import WRITING_BRIEF_RULES
 from board_hold_reasons import BODY_DUPLICATE, OTHER
 
 COPY_OVERLAP_THRESHOLD = .72
@@ -60,15 +61,20 @@ def existing_articles(root):
     return result
 
 
-def related_articles(topic, data, root, limit=12):
-    query = topic + ' ' + (data or {}).get('summary', '')
+def select_article_evidence(query, rows, limit=12):
+    """Use the same ranking and excerpt budget before and after drafting."""
     def rank(item):
         return max(similarity(query, item['title']) * 1.6,
                    similarity(query, item['title']+' '+item['body']))
+    rows = sorted(rows, key=rank, reverse=True)
+    return [{**x, 'body': x['body'][:1800]} for x in rows[:limit]]
+
+
+def related_articles(topic, data, root, limit=12):
+    query = topic + ' ' + (data or {}).get('summary', '')
     rows = [x for x in existing_articles(root)
             if (root/(x['path'].lstrip('/')+'.html')).is_file()]
-    rows.sort(key=rank, reverse=True)
-    return [{**x, 'body': x['body'][:1800]} for x in rows[:limit]]
+    return select_article_evidence(query, rows, limit)
 
 
 def reject_copy(data, root):
@@ -151,7 +157,9 @@ image_alt는 그 장면을 묘사한 자연스러운 한국어 문장이다. '�
 related_paths는 allowed_related_paths에서 그대로 선택한다. 주소를 새로 작성하거나 도메인·확장자·슬래시를 덧붙이지 않는다. 도움이 되는 다음 읽을거리만 최대 세 개, 없으면 빈 배열이다.
 자료에 있는 업체 조건을 현재 사실로 단정하지 않는다. 기존 제목과 본문은 검토 자료이지 출처 검증이 아니다.'''
         + '\n다음 기준 위반도 issues에 기록하고 unique=false로 보류한다.\n' + CARD_FACT_RULES
-        + '\n\n' + ANGLE_RULES,
+        + '\n\n' + ANGLE_RULES + '\n\n' + WRITING_BRIEF_RULES
+        + '\nwriting_brief의 예시·절별 행동·결과가 본문에서 빠졌다면 기획의 차별점 주장을 믿고 승인하지 않는다. '
+        '기존 답으로 되돌아가 중복이면 body_duplicate, 그 밖의 집필 기준 누락이면 other로 보류한다.',
         [text_input({'board': PROFILES[board], 'title': topic, 'article': data,
                      'allowed_related_paths': allowed_paths, 'topic_plan_to_verify_against_body': topic_plan,
                      'related_existing_articles': related, 'other_existing_titles': prior_titles(root)[-220:],

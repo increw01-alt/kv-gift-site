@@ -61,7 +61,8 @@ class SourcesTests(unittest.TestCase):
                        'distinct_angle':'카드 상품설명서의 제외 항목을 비교하는 과정',
                        'outline':['카드 상품설명서를 준비하는 단계','실적 제외 항목을 구분하는 단계','행사 안내와 별도로 비교하는 단계']}]}
             screen={'selected_index':0,'reason':'기존 안내와 구분되는 질문과 절차입니다.','rejections':[],'rejected_indices':[]}
-            with patch.object(board_editor,'ask_json',side_effect=[proposed,screen]) as api:
+            from planner_fixtures import PlannerMock
+            with patch.object(board_editor,'ask_json',new=PlannerMock(side_effect=[proposed,screen])) as api:
                 self.assertEqual(board_editor.select_topic('purchase',DAY,'model',lambda *x:None,root)[1],title)
             self.assertEqual(api.call_count,2)
             self.assertIn('reader_questions', api.call_args_list[0].args[1][0]['text'])

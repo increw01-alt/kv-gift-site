@@ -4,7 +4,8 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-from unittest.mock import Mock, patch
+from unittest.mock import patch
+from planner_fixtures import PlannerMock as Mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from board_drafts import ROOT, KST

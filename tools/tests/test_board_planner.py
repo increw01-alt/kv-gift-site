@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-from unittest.mock import Mock
+from planner_fixtures import PlannerMock as Mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from board_planner import choose_plan, PlanningHeld, planning_material, validate_candidates
