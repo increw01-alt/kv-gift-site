@@ -1,18 +1,20 @@
 {
   "run_id": "42162666057",
   "date_kst": "2026-11-06",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-06T04:27:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 그대로 반복합니다. 0번은 선물 계획을 비교표와 우선순위로 정리하는 방식이 이미 선물 효용·비용 비교 글과 당일/계획 사용 비교 글의 연장선이라 새 판단 기준이 부족합니다. 1번은 거리와 이동 시간을 함께 고려해 일정을 최적화하는 내용이 기존 생활상식 글과 동일하고, 2번은 여러 수신자에게 상품권 금액을 용도별로 배분하는 기준과 실행 절차가 기존 구매 안내 글과 사실상 같습니다. / 0번: /board/sense/23이 이미 선물 후보의 효용과 비용을 비교표로 정리해 우선순위를 정하는 방법을 다뤘고, /board/free/472도 상품권을 바로 쓰는 것과 계획적으로 쓰는 것의 장단점을 비교해 선택하는 흐름을 설명합니다. 후보는 비교표와 판단 흐름도만 바꾼 수준이라 기존 답으로 해결되는 문제와 같습니다. / 1번: /board/sense/24가 이미 이동 거리와 예상 소요 시간을 함께 적어 방문 순서와 동선을 조정하는 방법을 다뤘습니다. 후보도 거리와 시간 데이터를 모아 일정을 최적화하는 절차가 같아 새 질문이나 다른 해결 단계가 보이지 않습니다. / 2번: /board/purchase/2576이 이미 여러 수신자에게 상품권 금액을 배분할 때 전체 금액, 용도, 우선순위, 최소 단위를 정하고 배분표를 작성하는 방법을 다뤘습니다. 후보도 수신자별 용도 분류와 배분표 작성, 단계별 실행까지 같은 문제를 같은 순서로 풀고 있습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42162666057",
@@ -22,15 +24,141 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-06T13:28:48.967832+09:00"
+      "attempt_started_at": "2026-11-06T13:28:48.967832+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": []
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "선물 사용 계획을 스스로 바꾸는 구체적 판단 기준 세우기",
+          "source_id": "",
+          "reader_problem": "선물 계획 변경 상황에서 명확한 판단 기준 없이 여러 옵션 중 최선의 결정을 내리기 어려워 혼란스러운 독자 문제",
+          "distinct_angle": "기존 공개 글들과 달리, 여러 선물 변경안을 체계적으로 비교·우선순위화하는 평가표와 단계별 판단 흐름도를 직접 만들어 실행하는 방식을 제시해 독자가 스스로 합리적 결정을 구체적으로 실천할 수 있도록 한다.",
+          "reader_situation": "선물 계획 변경이 필요한 구체적 순간에 여러 대안을 평가하고 합리적 우선순위를 매겨 스스로 판단과 실행까지 직접 해보려는 이용자",
+          "deliverable": "상황별 선물 변경 판단용 비교표와 우선순위 설정 가이드, 판단 흐름도와 실행 점검 체크리스트를 포함한 실용 매뉴얼",
+          "task_id": "",
+          "outline": [
+            "선물 변경 상황별 고려할 판단 기준 목록 만들기",
+            "각 변경안의 장단점과 예상 효과를 표로 체계적으로 비교하기",
+            "판단 흐름도를 작성해 단계별 결정 과정과 실행 점검 체크리스트 설계하기"
+          ]
+        },
+        {
+          "topic": "생활 계획에 거리와 이동 시간을 함께 고려하는 일정 최적화 방법",
+          "source_id": "",
+          "reader_problem": "이동 거리뿐만 아니라 이동 소요 시간까지 함께 반영해 일상생활 일정과 동선을 최적화하는 실전 계획 방법을 몰라 어려움을 겪는 상황",
+          "distinct_angle": "일상 이동 루트를 거리와 예상 소요 시간 데이터를 융합하여 우선순위를 정하고, 이동 시간 기반 생활 루트 최적화 지도를 작성하는 구체적인 행동 지침과 활용 가이드를 제공해 실제 적용을 지원한다.",
+          "reader_situation": "출퇴근, 장보기, 약속 방문 등 다양한 일상 동선을 거리와 예상 걸리는 시간 모두 고려해 합리적으로 계획하고 싶은 직장인 또는 가정 주부",
+          "deliverable": "이동 거리·시간 통합 일정 우선순위표, 시간별 생활 루트 최적화 지도, 시간 관리와 이동 계획 통합 실행 가이드",
+          "task_id": "",
+          "outline": [
+            "일상 주요 이동 경로와 거리 데이터 체계적으로 수집하기",
+            "예상 소요 시간을 계산해 기록하고 거리 데이터와 융합하는 방법 익히기",
+            "거리와 시간 정보를 바탕으로 최적화된 일정과 동선을 상세하게 설계하고 활용하기"
+          ]
+        },
+        {
+          "topic": "여러 수신인의 용도별 상품권 금액 배분 기준과 단계별 실행 절차",
+          "source_id": "",
+          "reader_problem": "한 번에 구매한 상품권을 여러 수신자에게 용도에 맞게 적절히 배분하고 싶지만, 구체적 기준과 체계적 실행 절차가 없어 계획 수립이나 실행에 어려움을 겪음",
+          "distinct_angle": "기존 유사 안내에서 벗어나 수신자별 예상 사용 목적과 우선순위를 명확히 파악하여 최소 배분 단위를 세우고, 단계별로 분배표를 작성하고 실행하는 구체적 절차까지 도울 수 있는 실전 매뉴얼을 제공한다.",
+          "reader_situation": "가족, 팀 또는 단체 등 여러 명에게 상품권을 용도별 맞춤 배분 계획을 꼼꼼히 세우고 정확하게 실행하려는 이용자",
+          "deliverable": "수신자별 용도 분류 포함 금액 배분표 양식, 용도별 우선순위 및 최소 배분 단위 결정 가이드, 배분 실행 절차와 구체적인 단계별 지침서",
+          "task_id": "",
+          "outline": [
+            "전체 구매 금액과 수신자별 예상 사용 목적을 정확히 파악하기",
+            "용도별 우선순위와 최소 배분 단위를 구체화하여 설정하기",
+            "수신자별 금액 배분표를 작성하고 단계별 배분 실행 절차를 체계적으로 안내하기"
+          ]
+        },
+        {
+          "topic": "다양한 금액 용어(액면가·판매가·잔액) 이해와 실전 계산법 안내",
+          "source_id": "",
+          "reader_problem": "상품권 구매·사용 시 액면가, 판매가, 잔액 등의 용어를 혼동해 실제 쓸 수 있는 금액과 계획을 올바르게 세우기 어려움",
+          "distinct_angle": "이미 있는 기본 개념 안내와 달리, 각 용어 개념을 명확히 구분하고 실제 계산과 점검 절차를 단계별로 따라 해보며 실생활 계획에 바로 활용할 수 있는 체크리스트와 계산표 중심의 실용 자료를 제공한다.",
+          "reader_situation": "상품권 구매자와 사용자가 금액 용어를 분명하게 이해하고, 올바른 계산 방법으로 실전 구매 및 사용 계획을 수립하려는 사람",
+          "deliverable": "액면가·판매가·잔액 개념 비교표와 실전 산출 계산표, 단계별 금액 점검 체크리스트 및 해설 자료",
+          "task_id": "",
+          "outline": [
+            "각 금액 용어의 엄밀한 정의와 실제 의미를 명확하게 구분하기",
+            "상품권 구매 시 금액 관계를 체계적으로 비교하는 계산표 작성법 익히기",
+            "실제 사용 시 금액 점검 절차를 따라 정확한 결제 계획 수립하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 24964,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1151,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 26115
+        },
+        "estimated_usd": 0.0118272,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-06T04:28:58.920201+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 27519,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 561,
+          "output_tokens_details": {
+            "reasoning_tokens": 131
+          },
+          "total_tokens": 28080
+        },
+        "estimated_usd": 0.02316375,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-06T04:29:02.974942+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-06T04:28:51.434436+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-06T04:28:59.560933+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03499095,
+    "estimated_total_usd": 0.03499095,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
