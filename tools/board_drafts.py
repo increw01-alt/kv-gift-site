@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 from board_profiles import PROFILES, ROTATION
 from board_usage import begin_request
 from board_hold_reasons import HOLD_REASONS, TOPIC_DUPLICATE, OTHER
+from board_writing_brief import WRITING_BRIEF_RULES
 
 ROOT = Path(__file__).resolve().parents[1]
 AUTHOR = '한국상품권거래소 운영팀'
@@ -206,6 +207,7 @@ checks는 행동 중심의 짧은 항목 세 개로 각각 10~60자. 제목과 �
                      + '\n협회 소식의 확인 자료가 주어지면 그 안의 사실만 사용하고 새로운 사건이나 성과를 덧붙이지 않는다.')
     instructions += '\n\n' + ARTICLE_TEXT_RULES
     instructions += '\n\n' + ANGLE_RULES
+    instructions += '\n\n' + WRITING_BRIEF_RULES
     instructions += '\n검수된 topic_plan이 주어지면 reader_problem과 distinct_angle에 답하고 outline의 세 절을 따른다. 기존 글의 보편적 메모·상태 확인·문의 안내로 주제를 되돌리지 않는다.'
     payload = {'model': model, 'store': False, 'max_output_tokens': 2600,
                'instructions': instructions + '\n관심 질문 자료는 독자가 궁금해하는 주제를 고르기 위한 참고이며 사실의 근거가 아니다. '

@@ -2,8 +2,9 @@
 import datetime as dt
 import json
 import re
-from board_drafts import NoTopic, read_json
-from board_originality import existing_articles, similarity
+from board_drafts import NoTopic, read_json, ARTICLE_TEXT_RULES
+from board_originality import existing_articles, similarity, select_article_evidence
+from board_writing_brief import WRITING_BRIEF_RULES, brief_schema, validate_brief
 from board_angle_rules import ANGLE_RULES
 from board_topic_pool import pending_plans, pool_update, expansion_focus, REFILL_BELOW
 from board_hold_reasons import TOPIC_DUPLICATE
@@ -165,7 +166,8 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '준비 과제를 모두 사용했다면 new_problem_directions를 참고해 새로운 질문을 보충한다. '
         '방향은 사실 자료나 정답이 아니며, 새로운 상황과 실제 결과물을 직접 설계한다. '
         'pending_topics_to_avoid_repeating의 후보는 이미 대기 중이므로 새 후보로 반복하지 않는다.'
-        + '\n\n' + ANGLE_RULES,
+        + '\n\n' + ANGLE_RULES + '\n실제 본문 작성 제한 안에서 실행 가능한 기획만 만든다. '
+        '숫자 예시나 미확인 정책을 빼면 차별점이 없어지는 기획은 제외한다.\n' + ARTICLE_TEXT_RULES,
         [text_input({'profile': profile, **material})],
         {'type': 'object', 'additionalProperties': False, 'required': ['candidates'],
          'properties': {'candidates': {'type': 'array', 'maxItems': 4, 'items': item}}},
@@ -188,10 +190,9 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
     task_targets = {task['id']: task for task in material['unused_reader_tasks']}
     for index, candidate in enumerate(candidates):
         query = ' '.join([candidate['topic'], candidate['reader_problem'], candidate.get('deliverable', ''), *candidate['outline']])
-        nearby = sorted([x for x in existing if x['body']], key=lambda x: max(similarity(query, x['title'])*1.5,
-                          similarity(query, x['title']+' '+x['body'])), reverse=True)[:3]
+        nearby = select_article_evidence(query, [x for x in existing if x['body']])
         for row in nearby:
-            reference_articles[row['path']] = {**row, 'body': row['body'][:1500]}
+            reference_articles[row['path']] = row
         # An assignment is not an existing article. Only pass the selected task
         # to check fit, never the whole unpublished idea catalogue as evidence.
         target = task_targets.get(candidate.get('task_id'))
@@ -217,17 +218,25 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         '선택 이유에는 가장 가까운 기존 글이 다룬 문제와 새 글이 추가하는 구체적인 해결 내용을 함께 적는다. '
         '기존 글의 답을 그대로 적용해도 해결된다면 새 시점이나 비교표라는 이유로 통과시키지 않는다. '
         '새 해결 내용에는 기존 답만으로 처리되지 않는 구체적인 예시와 그때 달라지는 행동을 설명한다. '
-        '구체적인 차이를 설명할 수 없으면 selected_index=-1로 두고 본문 생성 전에 보류한다.'
-        + '\n\n' + ANGLE_RULES,
+        '구체적인 차이를 설명할 수 없으면 selected_index=-1로 두고 본문 생성 전에 보류한다. '
+        '승인한 후보에는 writing_brief를 직접 작성한다. compared_paths에는 해당 후보의 compare_paths에서 '
+        '실제로 비교한 가장 가까운 글을 고른다. 비교 글이 제공되면 최소 한 개를 포함한다. '
+        '기존 답을 적용해도 해결되지 않는 gap, 숫자 없이 실행 가능한 조건부 example, '
+        '각 절에서 구현할 서로 다른 section_actions 세 개와 result를 구체적으로 작성한다. '
+        'gap과 result, 각 section_actions 항목은 각각 열두 자 이상 이백사십 자 이하이며, '
+        'example은 스무 자 이상 사백 자 이하로 쓴다. '
+        '승인할 후보가 없으면 writing_brief=null이다. 작성 제한과 충돌해 이 예시를 구현할 수 없으면 보류한다.'
+        + '\n\n' + ANGLE_RULES + '\n\n' + ARTICLE_TEXT_RULES + '\n\n' + WRITING_BRIEF_RULES,
         [text_input({'profile': profile, 'comparisons': comparisons,
                      'existing_articles': list(reference_articles.values()),
                      'recent_rejections': review_feedback})],
-        {'type': 'object', 'additionalProperties': False, 'required': ['selected_index', 'reason', 'rejections', 'rejected_indices'],
+        {'type': 'object', 'additionalProperties': False, 'required': ['selected_index', 'reason', 'rejections', 'rejected_indices', 'writing_brief'],
          'properties': {'selected_index': {'type': 'integer'}, 'reason': string,
                         'rejected_indices': {'type': 'array', 'items': {'type': 'integer'}},
-                        'rejections': {'type': 'array', 'items': string}}},
-        'topic_novelty_screen', 'review', review_model, usage, 1800)
-    if (not isinstance(report, dict) or set(report) != {'selected_index', 'reason', 'rejections', 'rejected_indices'} or
+                        'rejections': {'type': 'array', 'items': string},
+                        'writing_brief': brief_schema(reference_articles)}},
+        'topic_novelty_screen', 'review', review_model, usage, 2600)
+    if (not isinstance(report, dict) or set(report) != {'selected_index', 'reason', 'rejections', 'rejected_indices', 'writing_brief'} or
         type(report['selected_index']) is not int or not -1 <= report['selected_index'] < len(candidates) or
         not isinstance(report['reason'], str) or not 5 <= len(report['reason']) <= 800 or
         not isinstance(report['rejections'], list) or
@@ -238,6 +247,8 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         any(type(i) is not int or not 0 <= i < len(candidates) for i in rejected) or
         len(set(rejected)) != len(rejected) or report['selected_index'] in rejected):
         raise ValueError('주제 사전 검수 탈락 후보 인덱스 오류')
+    selected_paths = set(comparisons[report['selected_index']]['compare_paths']) if report['selected_index'] >= 0 else set()
+    writing_brief = validate_brief(report['writing_brief'], selected_paths, report['selected_index'] >= 0)
     if report['selected_index'] == -1:
         if on_pool:
             on_pool(pool_update(board, combined[4:]))
@@ -247,4 +258,5 @@ def choose_plan(board, profile, context, titles, day, root, model, review_model,
         consumed = {selected['topic'], *(candidates[i]['topic'] for i in rejected)}
         on_pool(pool_update(board, [p for p in combined if p['topic'] not in consumed]))
     return {**selected, 'novelty_reason': report['reason'], 'screen_rejections': report['rejections'],
+            'writing_brief': writing_brief,
             'screened_out_plans': [candidates[i] for i in rejected]}

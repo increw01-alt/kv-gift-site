@@ -120,8 +120,9 @@ class CuratedSupplyTests(unittest.TestCase):
                                 'distinct_angle': task['deliverable'], 'deliverable': task['deliverable'],
                                 'outline': ['독자가 선택해야 하는 조건을 나누는 방법', '대안을 비교하고 결과물을 작성하는 방법',
                                             '결과에 따라 다음 행동을 정하는 방법']}]}
-                        return {'selected_index': 0, 'reason': '테스트용 독립 검수 통과 응답입니다.',
-                                'rejections': [], 'rejected_indices': []}
+                        from planner_fixtures import complete_report
+                        return complete_report({'selected_index': 0, 'reason': '테스트용 독립 검수 통과 응답입니다.',
+                                'rejections': [], 'rejected_indices': []}, content)
                     selected = choose_plan(board, PROFILES[board], None, [], DAY, root, 'draft', 'review',
                                            ask, text_input, lambda *a: None, lambda t: fresh_topic(t, self.titles))
                     self.assertTrue(selected['task_id'].startswith(PREFIX))

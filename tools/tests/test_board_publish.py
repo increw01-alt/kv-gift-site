@@ -17,6 +17,7 @@ from board_usage import estimate
 from editorial_settings import DEFAULT
 from board_planner import PlanningHeld, planning_material
 from test_board_drafts import fixture, example, DAY
+from planner_fixtures import PlannerMock
 
 NOW = dt.datetime(2026, 10, 21, 10, tzinfo=KST)
 
@@ -47,8 +48,8 @@ class EditorialTests(unittest.TestCase):
                 'reader_problem':'선물 전달 전에 상대의 선호를 어떻게 묻는지 알고 싶은 독자',
                 'distinct_angle':'대답하기 부담스럽지 않은 질문을 고르는 새로운 상황',
                 'outline':['선물의 목적부터 분리해서 질문하는 방법','상대방이 고르기 편한 선택지를 만드는 방법','대답을 재촉하지 않고 마무리하는 방법']} for title in (used,candidate)]}
-            with patch.object(editor,'ask_json',side_effect=[proposals,
-                    {'selected_index':0,'reason':'상대 취향을 묻는 새 질문을 해결합니다.','rejections':[],'rejected_indices':[]}]) as call:
+            with patch.object(editor,'ask_json',new=PlannerMock(side_effect=[proposals,
+                    {'selected_index':0,'reason':'상대 취향을 묻는 새 질문을 해결합니다.','rejections':[],'rejected_indices':[]}])) as call:
                 board,topic,brief=editor.select_topic('purchase',DAY,'gpt-4.1-mini',lambda *a:None,root)
             self.assertEqual((board,topic,brief),('purchase',candidate,None))
             self.assertEqual(call.call_count,2)
