@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T15:19:58.878583+00:00",
+  "generatedAt": "2026-11-06T15:57:06.905639+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3373,7 +3373,7 @@
       "board": "purchase",
       "topic": "상품권 소개의 추천 문구와 확인 가능한 근거는 어떻게 나눠 읽을까요?",
       "url": "https://kv-gift.co.kr/board/purchase/2578",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-06T15:57:06.866786+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1332588,
       "knownSubtotalUsd": 0.1332588
