@@ -1487,5 +1487,18 @@
     "publication_mode": "automatic",
     "run_id": "42398874747",
     "usage_file": "data/editorial_runs/2026-11-08/42398874747.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 69,
+    "topic": "안내를 읽는 중 설치나 권한 요청이 나오면 목적을 먼저 확인해 주세요",
+    "drafted_at": "2026-11-08",
+    "automation": true,
+    "search_intent": "안내를 읽는 중 뜬 설치·권한 요청의 목적을 원래 작업과 비교해 판단하고 불필요하면 안전하게 닫는 방법",
+    "image_scene": "책상 위에 안내문이 열린 스마트폰과 설치·권한 요청 창이 겹쳐 보이고, 옆에는 메모지에 ‘원래 읽던 안내’와 ‘요청 목적’ 두 칸을 나눠 적은 뒤 창을 닫을지 판단하는 장면",
+    "image_alt": "스마트폰으로 안내문을 읽다가 뜬 설치·권한 요청 창을 옆 메모지의 비교 항목과 함께 살펴보는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42409549905",
+    "usage_file": "data/editorial_runs/2026-11-08/42409549905.json"
   }
 ]

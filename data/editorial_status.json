@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T20:08:50.607545+00:00",
+  "generatedAt": "2026-11-07T20:09:48.572602+00:00",
   "dateKst": "2026-11-08",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 11,
   "held": 0,
   "errors": 8,
-  "knownSubtotalUsd": 0.3241023,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.45046655,
+  "estimatedTotalUsd": 0.45046655,
   "records": [
     {
       "runId": "42385690967",
@@ -144,16 +144,16 @@
     },
     {
       "runId": "42409549905",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "안내를 읽는 중 설치나 권한 요청이 나오면 목적을 먼저 확인해 주세요",
+      "url": "https://kv-gift.co.kr/board/general_notice/69",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-07T20:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12636425,
+      "knownSubtotalUsd": 0.12636425
     }
   ],
   "topicRetry": {
