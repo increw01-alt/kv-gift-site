@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T22:34:39.518815+00:00",
+  "generatedAt": "2026-11-07T22:35:43.057121+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3737,7 +3737,7 @@
       "board": "sense",
       "topic": "어려운 설명을 다른 사람에게 전할 때 정의와 예시를 어떻게 나눌까요?",
       "url": "https://kv-gift.co.kr/board/sense/26",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-07T22:35:43.035717+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1262798,
       "knownSubtotalUsd": 0.1262798
