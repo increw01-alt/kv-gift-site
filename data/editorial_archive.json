@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T15:42:10.719912+00:00",
+  "generatedAt": "2026-11-07T15:43:34.362645+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3653,7 +3653,7 @@
       "board": "gc_information",
       "topic": "안내가 수정된 날과 적용되는 기간은 왜 구분해서 읽을까요?",
       "url": "https://kv-gift.co.kr/board/gc_information/18",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-07T15:43:34.335656+00:00",
       "source": "github_schedule",
       "estimatedUsd": 0.10092125,
       "knownSubtotalUsd": 0.10092125
