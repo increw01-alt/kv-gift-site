@@ -1448,5 +1448,18 @@
     "publication_mode": "automatic",
     "run_id": "42333356655",
     "usage_file": "data/editorial_runs/2026-11-07/42333356655.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 47,
+    "topic": "색이 비슷한 상품권 보관함을 색상 외의 표식으로 구분하려면?",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "색이 비슷한 상품권 보관함을 어두운 곳에서도 헷갈리지 않게 표식으로 구분하는 방법",
+    "image_scene": "서랍장 앞에 색이 비슷한 보관함 두세 개가 나란히 놓여 있고, 한쪽은 앞면 위쪽에 큰 글자 라벨이 붙어 있으며 다른 쪽은 옆면에 도형 스티커가 붙어 있다. 옆에는 라벨지와 스티커 시안 메모, 작은 손전등이 함께 놓여 있어 어두운 환경에서 식별되는지 확인하는 장면이다.",
+    "image_alt": "서랍 앞에 비슷한 색의 보관함을 두고 앞면 글자 라벨과 옆면 도형 스티커로 구분하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42344234099",
+    "usage_file": "data/editorial_runs/2026-11-07/42344234099.json"
   }
 ]
