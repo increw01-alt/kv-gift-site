@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T00:59:59.395828+00:00",
+  "generatedAt": "2026-11-07T01:01:03.412440+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3513,7 +3513,7 @@
       "board": "sense",
       "topic": "중간에 멈춰야 하는 집안일은 어디서 끊는 것이 좋을까요?",
       "url": "https://kv-gift.co.kr/board/sense/25",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-07T01:01:03.374123+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.13252815,
       "knownSubtotalUsd": 0.13252815
