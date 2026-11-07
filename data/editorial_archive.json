@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T17:59:42.856584+00:00",
+  "generatedAt": "2026-11-07T18:00:47.039474+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3709,7 +3709,7 @@
       "board": "sale",
       "topic": "매입처의 추가 질문에 답을 모를 때 추측 없이 어떻게 답할까요?",
       "url": "https://kv-gift.co.kr/board/sale/3700",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-07T18:00:47.019081+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1103275,
       "knownSubtotalUsd": 0.1103275
