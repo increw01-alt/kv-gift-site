@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T03:19:41.694335+00:00",
+  "generatedAt": "2026-11-07T03:21:05.727656+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3527,7 +3527,7 @@
       "board": "free",
       "topic": "새 방법을 배울 때 설명을 듣는 것과 직접 보는 것은 어떻게 다를까요?",
       "url": "https://kv-gift.co.kr/board/free/481",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-07T03:21:05.708434+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1335004,
       "knownSubtotalUsd": 0.1335004
