@@ -1500,5 +1500,18 @@
     "publication_mode": "automatic",
     "run_id": "42409549905",
     "usage_file": "data/editorial_runs/2026-11-08/42409549905.json"
+  },
+  {
+    "board": "sense",
+    "id": 26,
+    "topic": "어려운 설명을 다른 사람에게 전할 때 정의와 예시를 어떻게 나눌까요?",
+    "drafted_at": "2026-11-08",
+    "automation": true,
+    "search_intent": "복잡한 개념을 남에게 설명할 때 핵심 정의와 실제 예, 경계 밖 예를 구분해 이해시키는 방법을 찾는 독자의 질문",
+    "image_scene": "책상 위에 한 장의 설명 메모가 펼쳐져 있고, 가운데에는 ‘정의’, 왼쪽에는 ‘해당 예’, 오른쪽에는 ‘비예시’라고 적힌 세 칸 카드가 나란히 놓여 있다. 한 사람이 형광펜으로 핵심 문장을 표시한 뒤 각 칸에 짧은 예문을 옮겨 적으며 개념의 경계를 정리하는 구도",
+    "image_alt": "책상 위에서 정의, 해당 예, 비예시를 나눠 적은 메모 카드를 보며 개념 설명을 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42421128707",
+    "usage_file": "data/editorial_runs/2026-11-08/42421128707.json"
   }
 ]

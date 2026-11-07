@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T22:33:44.940168+00:00",
+  "generatedAt": "2026-11-07T22:34:39.500601+00:00",
   "dateKst": "2026-11-08",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 3,
+  "published": 4,
   "verified": 3,
   "attempts": 12,
   "held": 0,
   "errors": 8,
-  "knownSubtotalUsd": 0.45046655,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.57674635,
+  "estimatedTotalUsd": 0.57674635,
   "records": [
     {
       "runId": "42385690967",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "42421128707",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "어려운 설명을 다른 사람에게 전할 때 정의와 예시를 어떻게 나눌까요?",
+      "url": "https://kv-gift.co.kr/board/sense/26",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-07T22:32:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1262798,
+      "knownSubtotalUsd": 0.1262798
     }
   ],
   "topicRetry": {
