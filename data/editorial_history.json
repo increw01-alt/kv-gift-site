@@ -1461,5 +1461,18 @@
     "publication_mode": "automatic",
     "run_id": "42344234099",
     "usage_file": "data/editorial_runs/2026-11-07/42344234099.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 18,
+    "topic": "안내가 수정된 날과 적용되는 기간은 왜 구분해서 읽을까요?",
+    "drafted_at": "2026-11-08",
+    "automation": true,
+    "search_intent": "안내문의 수정일과 실제 적용 시작일을 구분해 읽고, 조건이 언제부터 누구에게 해당하는지 판단하려는 질문",
+    "image_scene": "책상 위에 상품권 안내문 인쇄본이 펼쳐져 있고 상단의 수정 날짜에는 표시가, 본문 속 적용 시작 문구에는 형광펜 밑줄이 그어져 있다. 옆에는 시간축 메모 카드와 달력 메모지가 놓여 있어 수정 시점과 실제 적용 시점을 따로 비교하는 구도다.",
+    "image_alt": "안내문 상단의 수정 날짜와 본문 속 적용 시작 문구를 따로 표시해 시간축으로 비교하는 책상 장면",
+    "publication_mode": "automatic",
+    "run_id": "42387501219",
+    "usage_file": "data/editorial_runs/2026-11-08/42387501219.json"
   }
 ]

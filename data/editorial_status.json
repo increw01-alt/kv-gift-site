@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T15:41:11.406244+00:00",
+  "generatedAt": "2026-11-07T15:42:10.697349+00:00",
   "dateKst": "2026-11-08",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 6,
   "held": 0,
   "errors": 5,
-  "knownSubtotalUsd": 0.06209085,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1630121,
+  "estimatedTotalUsd": 0.1630121,
   "records": [
     {
       "runId": "42385690967",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "42387501219",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "안내가 수정된 날과 적용되는 기간은 왜 구분해서 읽을까요?",
+      "url": "https://kv-gift.co.kr/board/gc_information/18",
       "triggerEvent": "schedule",
       "triggerSource": "github_schedule",
       "scheduledAt": null,
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10092125,
+      "knownSubtotalUsd": 0.10092125
     }
   ],
   "topicRetry": {
