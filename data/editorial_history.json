@@ -1474,5 +1474,18 @@
     "publication_mode": "automatic",
     "run_id": "42387501219",
     "usage_file": "data/editorial_runs/2026-11-08/42387501219.json"
+  },
+  {
+    "board": "sale",
+    "id": 3700,
+    "topic": "매입처의 추가 질문에 답을 모를 때 추측 없이 어떻게 답할까요?",
+    "drafted_at": "2026-11-08",
+    "automation": true,
+    "search_intent": "매입처의 추가 질문에 바로 답하지 못할 때 확인된 사실과 미확인 항목을 나눠 추측 없이 답변을 구성하는 방법",
+    "image_scene": "책상 위에 상품권 실물과 체크 메모지가 놓여 있고, 메모지는 ‘확인됨’과 ‘미확인’ 두 칸으로 나뉘어 있다. 한 사람이 상품권의 겉면만 먼저 확인해 적고, 옆에는 다시 점검할 항목을 따로 적어 두는 장면",
+    "image_alt": "상품권 실물 옆에 확인된 내용과 미확인 내용을 나눠 적은 메모지를 두고 다시 점검할 항목을 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42398874747",
+    "usage_file": "data/editorial_runs/2026-11-08/42398874747.json"
   }
 ]

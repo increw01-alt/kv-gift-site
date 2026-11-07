@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T17:58:45.942057+00:00",
+  "generatedAt": "2026-11-07T17:59:42.840574+00:00",
   "dateKst": "2026-11-08",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 10,
   "held": 0,
   "errors": 8,
-  "knownSubtotalUsd": 0.2137748,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3241023,
+  "estimatedTotalUsd": 0.3241023,
   "records": [
     {
       "runId": "42385690967",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "42398874747",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sale",
+      "topic": "매입처의 추가 질문에 답을 모를 때 추측 없이 어떻게 답할까요?",
+      "url": "https://kv-gift.co.kr/board/sale/3700",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-07T17:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1103275,
+      "knownSubtotalUsd": 0.1103275
     }
   ],
   "topicRetry": {
