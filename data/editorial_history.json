@@ -1435,5 +1435,18 @@
     "publication_mode": "automatic",
     "run_id": "42321369096",
     "usage_file": "data/editorial_runs/2026-11-07/42321369096.json"
+  },
+  {
+    "board": "free",
+    "id": 481,
+    "topic": "새 방법을 배울 때 설명을 듣는 것과 직접 보는 것은 어떻게 다를까요?",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "설명만으로 막히는 학습 상황에서 시연과 직접 연습을 어떻게 바꿔 써야 하는지 알고 싶은 독자의 질문",
+    "image_scene": "책상 위에 ‘설명’, ‘시연’, ‘직접 연습’이라고 적힌 세 장의 질문 카드와 체크리스트 메모지가 놓여 있고, 한 사람이 카드들을 순서형 작업과 판단형 작업으로 나눠 배치한 뒤 연습 순서를 정리하는 구도",
+    "image_alt": "책상 위에 설명, 시연, 직접 연습 카드와 체크리스트를 놓고 학습 순서를 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42333356655",
+    "usage_file": "data/editorial_runs/2026-11-07/42333356655.json"
   }
 ]
