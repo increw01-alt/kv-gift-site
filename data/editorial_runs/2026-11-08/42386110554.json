@@ -3,16 +3,18 @@
   "date_kst": "2026-11-08",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-07T15:22:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "42386110554",
@@ -22,15 +24,100 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-08T00:23:56.288510+09:00"
+      "attempt_started_at": "2026-11-08T00:23:56.288510+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [
+          {
+            "topic": "상품권 분류명과 별칭을 같은 상품 이름으로 보면 왜 헷갈릴까요?",
+            "source_id": "",
+            "task_id": "supply-20261106-gc_information-category-alias",
+            "reader_problem": "일반적인 분류 이름과 사람들이 줄여 부르는 이름을 정식 상품명으로 혼동하여, 동일 별칭이 실제로는 다른 상품들에 붙을 수 있어 구분이 어렵다는 데 있습니다.",
+            "distinct_angle": "분류명, 정식 명칭, 별칭의 포함 관계를 가상의 상품명 예시로 설명하며, 같은 별칭이 동일 상품임을 보장하지 않는 점을 시각적 비교로 알기 쉽게 풀이합니다.",
+            "outline": [
+              "상품권 분류명과 별칭의 정의와 차이점 파악하기",
+              "가상의 상품명과 별칭으로 포함 관계 구성하기",
+              "동일 별칭이 다른 상품에 쓰일 수 있음을 확인하는 비교 표 작성하기"
+            ],
+            "reader_situation": "상품권 종류를 구분하려는데 제품명 대신 널리 쓰이는 별칭이 혼재되어 각기 다른 상품을 같은 이름이라 생각해 선택이 어려운 상황입니다.",
+            "deliverable": "가상의 상품권 분류도·정식 명칭·별칭 비교표를 직접 완성하는 안내서.",
+            "direction_id": ""
+          },
+          {
+            "topic": "안내가 수정된 날과 적용되는 기간은 왜 구분해서 읽을까요?",
+            "source_id": "",
+            "task_id": "supply-20261106-gc_information-updated-versus-effective",
+            "reader_problem": "상품권 안내 문서의 수정일이 조건이 즉시 적용되는 시점이라 오해하여, 실제 적용 범위와 시기를 잘못 판단하는 문제가 있습니다.",
+            "distinct_angle": "문서 작성·수정 시점과 내용 적용 시점이 서로 달라 시간 개념을 다차원 축에 놓고 이해하는 시간선 예시를 통해 차별화합니다.",
+            "outline": [
+              "안내문 수정 시점과 내용 적용 시점의 개념 구분하기",
+              "시간 축 예시를 활용한 두 시점의 관계 시각화하기",
+              "실제 안내문 읽기에서 시점 차이구별 방법 익히기"
+            ],
+            "reader_situation": "상품권 안내 수정 표시를 보고 변경된 내용이 공지 당일부터 바로 적용된다고 생각하는 이용자의 오해 해소가 필요합니다.",
+            "deliverable": "시간 개념 축을 구분한 가상의 적용 기간 도표와 읽기 요령 문장 완성 자료.",
+            "direction_id": ""
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 2,
+          "selectedAssignments": [
+            "supply-20261106-gc_information-category-alias",
+            "supply-20261106-gc_information-updated-versus-effective"
+          ],
+          "coverageRecords": 446,
+          "coverageArticles": 124,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-7522ac652e",
+            "gc_information-603f97842d",
+            "gc_information-f0f23d4707",
+            "gc_information-ea0a585402"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20675,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2176
+          },
+          "output_tokens": 796,
+          "output_tokens_details": {
+            "reasoning_tokens": 209
+          },
+          "total_tokens": 21471
+        },
+        "estimated_usd": 0.01761945,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-07T15:24:06.988846+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-07T15:24:00.027317+00:00",
+        "usage_record_index": 0
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01761945,
+    "estimated_total_usd": 0.01761945,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
