@@ -1422,5 +1422,18 @@
     "publication_mode": "automatic",
     "run_id": "42307381338",
     "usage_file": "data/editorial_runs/2026-11-07/42307381338.json"
+  },
+  {
+    "board": "sense",
+    "id": 25,
+    "topic": "중간에 멈춰야 하는 집안일은 어디서 끊는 것이 좋을까요?",
+    "drafted_at": "2026-11-07",
+    "automation": true,
+    "search_intent": "긴 집안일을 어디서 끊고 다음에 어떻게 다시 시작할지 정리하는 방법을 찾는 질문",
+    "image_scene": "주방 식탁 위에 정리 바구니, 걸레, 체크리스트 메모지, 연필이 놓여 있고 한 사람이 방별 작업표를 보며 ‘끝난 구역’과 ‘다음 구역’을 칸별로 표시하는 구도",
+    "image_alt": "주방 식탁 위에서 방별 집안일 체크리스트를 보며 끝난 구역과 다음 구역을 나눠 적는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42321369096",
+    "usage_file": "data/editorial_runs/2026-11-07/42321369096.json"
   }
 ]

@@ -1,17 +1,27 @@
 {
   "run_id": "42321369096",
   "date_kst": "2026-11-07",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sense",
+  "topic": "중간에 멈춰야 하는 집안일은 어디서 끊는 것이 좋을까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sense/25",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-07T00:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,348 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-07T09:58:55.522753+09:00"
+      "attempt_started_at": "2026-11-07T09:58:55.522753+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 6,
+          "selectedAssignments": [
+            "supply-20261106-sense-interruptible-work",
+            "supply-20261106-sense-shared-tool",
+            "supply-20261106-sense-tentative-event",
+            "supply-20261106-sense-fact-opinion"
+          ],
+          "coverageRecords": 438,
+          "coverageArticles": 121,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-5c4a5db337",
+            "sense-07089a422e",
+            "sense-131a66fcc8",
+            "sense-bc0cf30f7f"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "함께 쓰는 물건의 제자리와 사용 중 표시는 어떻게 다르게 할까요?",
+          "source_id": "",
+          "reader_problem": "공용 물건이 제자리에 없어지면 누가 사용하는지, 아니면 분실되었는지 구분하기 어렵고 사용 상황 표시 방법이 없어 혼란스러운 상황",
+          "distinct_angle": "물건의 제자리 표시와 임시 사용 중 표시를 분리하여 누구나 확인 가능한 생활 규칙을 설계하고, 감시나 개인정보 수집 없이 운영하는 방법",
+          "reader_situation": "공동 생활 공간에서 자주 쓰는 물건을 제자리와 사용 상태에 따라 구분해 두려 하지만 효과적인 표시법과 규칙이 없어 이용자 간 분쟁이나 혼란이 발생하는 사례",
+          "deliverable": "물건의 제자리 표시 시스템과 별도의 임시 사용 표시 도구 설계 및 되돌림 확인이 가능한 생활 규칙 안내",
+          "task_id": "supply-20261106-sense-shared-tool",
+          "direction_id": "",
+          "outline": [
+            "물건의 정석 위치와 임시 위치 구분법 만들기",
+            "사용 중임을 보여주는 명확한 표시 장치 개발하기",
+            "제자리로 돌려놓을 때 확인하는 생활 속 점검 규칙 확립하기"
+          ]
+        },
+        {
+          "topic": "미정인 약속을 확정 일정과 섞지 않으려면 어떻게 표시할까요?",
+          "source_id": "",
+          "reader_problem": "약속 날짜를 확정하지 않은 상태에서 가능한 시간만 전달했는데 상대가 확정된 약속으로 착각해 스케줄 혼선이 생기는 상황",
+          "distinct_angle": "약속 상태를 제안, 조율 중, 확정으로 구분해 시각적으로 구분 표시하고, 확정 확인 문장을 주고받는 구체적 대화 사례를 통한 해결법",
+          "reader_situation": "일정 조율 과정에서 아직 결정되지 않은 시간과 확정된 약속을 명확히 구분하지 못해 시간이 겹치거나 일정 누락 위험을 겪는 이용자",
+          "deliverable": "약속 상태별 표시 방법과 확인 문장 작성 예시를 포함한 대화 시뮬레이션 자료",
+          "task_id": "supply-20261106-sense-tentative-event",
+          "direction_id": "",
+          "outline": [
+            "확정 전 제안과 조율 중인 약속 상태 정의하기",
+            "각 상태를 구분하는 시각적 표시와 문장 구성법 익히기",
+            "확정 확인을 위한 모범 대화 예시 실습과 활용법"
+          ]
+        },
+        {
+          "topic": "메모에서 본 사실과 내 의견을 어떻게 구분해 쓸까요?",
+          "source_id": "",
+          "reader_problem": "관찰한 사실과 추측한 의견이 한 문장에 섞여 전달되어 메모를 읽는 사람이 판단하기 어려운 상황",
+          "distinct_angle": "일상 속 메모를 관찰, 해석, 확인할 점으로 명확히 분리해 다시 쓰는 연습으로 구분법을 체화하는 방법 제시",
+          "reader_situation": "업무나 생활 메모 작성 시 사실과 의견을 혼용하여 후속 조치나 해석에 혼동이 발생, 명확하게 나누고 싶은 이용자",
+          "deliverable": "사실과 의견이 분리된 전후 문장 연습 예시와 재작성 가이드 문서",
+          "task_id": "supply-20261106-sense-fact-opinion",
+          "direction_id": "",
+          "outline": [
+            "사실 관찰과 내 의견을 구분하는 기준 배우기",
+            "실제 메모 예시를 관찰, 해석, 확인할 점으로 분해하기",
+            "분리된 문장으로 다시 작성하는 연습과 효과적인 구분법 적용하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "중간에 멈춰야 하는 집안일은 어디서 끊는 것이 좋을까요?",
+        "source_id": "",
+        "reader_problem": "긴 집안일을 한 번에 끝내지 못해 중단할 때 어디에서 멈추고 다시 시작할지 방법을 몰라 작업 효율이 떨어지는 상황",
+        "distinct_angle": "집안일을 독립적인 완료 지점으로 나누고, 다음에 재개할 때 혼동 없이 시작할 수 있도록 쉽게 확인 가능한 분할 방식",
+        "reader_situation": "집안일을 여러 날에 걸쳐 해야 하는데, 중간에 멈춘 부분과 남은 할 일을 분명히 해 두지 않아 다음 작업 시 처음부터 다시 하거나 헷갈리는 이용자",
+        "deliverable": "작업 완료 지점 나누기, 재개 단서 적기, 남은 일 정리법을 단계별로 설명한 실천 안내서",
+        "task_id": "supply-20261106-sense-interruptible-work",
+        "direction_id": "",
+        "outline": [
+          "집안일 전체를 독립된 소단위 작업으로 분할하기",
+          "현재 진행 상황과 완료 지점을 명확히 표시하는 방법 배우기",
+          "중단 시 남은 일과 재개할 부분을 기록하는 실용적 정리법"
+        ],
+        "novelty_reason": "긴 집안일을 어디서 끊고 다음에 어떻게 다시 시작할지 정하는 문제로, 기존의 메시지·메모·상품권 정리 글과는 독자 상황과 해결 절차가 다릅니다. 가장 가까운 기존 글은 /board/sense/19이지만, 그 글은 할 일별 담당자와 완료 조건을 한 줄로 묶는 협업 메모에 초점이 있고, 이번 후보는 작업을 독립된 완료 지점으로 나누어 중단과 재개를 설계하는 것이 핵심이라 새 해결 내용이 있습니다.",
+        "screen_rejections": [
+          "첫째 후보는 공용 물건의 제자리와 사용 중 표시를 나누는 규칙을 만드는 내용으로, 기존의 물건 분류·상태 정리 글과 가까워 보이지만 실제로는 관리 대상이 물건이고 해결 목표가 분쟁 예방이라 중복으로 보지 않았습니다. 다만 이번 선정안보다 새 절차가 덜 선명합니다.",
+          "둘째 후보는 미정인 약속을 제안, 조율 중, 확정으로 구분하는 대화법으로, 일정 상태를 표시하는 문제는 분명하지만 기존의 문의 내용 구분이나 메시지 정리 글과 가까운 편이라 우선순위를 낮췄습니다.",
+          "셋째 후보는 메모에서 사실과 의견을 나누어 쓰는 방법으로, 기존의 메시지 정리나 문의 기록 구분 글과 일부 겹치지만 문장 재작성 훈련이라는 점에서 유효합니다. 다만 집안일 분할보다 주제의 새로움과 실행 단계가 조금 덜 구체적입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sense/19"
+          ],
+          "gap": "기존 글은 여러 할 일을 한 줄로 정리해 담당과 완료 조건을 분명히 하는 데 초점이 있지만, 이번 글은 긴 집안일을 중간에서 멈출 때 어디를 경계로 끊어야 다시 시작하기 쉬운지까지 정해야 합니다. 즉 작업 항목을 나누는 것과, 재개가 쉬운 중단 지점을 정하는 것은 다른 판단입니다.",
+          "example": "정리할 방이 많아서 한 번에 끝내기 어렵다면, 한 구역의 바닥 정리와 선반 비우기를 따로 묶고, 중간에 멈출 때는 이미 비운 곳을 기준으로 다음에 다시 시작하도록 적어 두는 상황을 다룹니다. 이때 남은 일과 재개할 지점이 함께 남아 있으면 처음부터 다시 훑지 않아도 됩니다.",
+          "result": "독자는 집안일을 멈춰도 헷갈리지 않도록 완료 지점과 재개 지점을 분리해 기록하고, 다음에 다시 시작할 때 어디부터 손대야 하는지 바로 정할 수 있게 됩니다.",
+          "section_actions": [
+            "작업을 공간이나 단계별로 나누고 각 묶음마다 끝났다고 볼 기준을 정한다",
+            "중단 직전에 마지막으로 끝낸 지점과 다음에 이어 할 지점을 따로 적어 둔다",
+            "남은 일은 다음 행동 순서대로 적고, 다시 시작할 때 첫 단계만 바로 보이게 정리한다"
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "중간에 멈춰야 하는 집안일은 어디서 끊는 것이 좋을까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-06T14:17:31Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "긴 집안일을 어디서 끊고 다음에 어떻게 다시 시작할지 정리하는 방법을 찾는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 14422,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1057,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15479
+        },
+        "estimated_usd": 0.00746,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-07T00:59:07.012782+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 29363,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 975,
+          "output_tokens_details": {
+            "reasoning_tokens": 252
+          },
+          "total_tokens": 30338
+        },
+        "estimated_usd": 0.02640975,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-07T00:59:12.979817+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3564,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 354,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3918
+        },
+        "estimated_usd": 0.001992,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-07T00:59:16.029145+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6814,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 493,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7307
+        },
+        "estimated_usd": 0.0035144,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-07T00:59:21.850559+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20570,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 262,
+          "output_tokens_details": {
+            "reasoning_tokens": 103
+          },
+          "total_tokens": 20832
+        },
+        "estimated_usd": 0.0166065,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-07T00:59:26.272283+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3544,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1048
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4916
+        },
+        "estimated_usd": 0.066368,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-07T00:59:54.032129+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12556,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 169,
+          "output_tokens_details": {
+            "reasoning_tokens": 104
+          },
+          "total_tokens": 12725
+        },
+        "estimated_usd": 0.0101775,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-07T00:59:57.983303+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-07T00:58:59.328657+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-07T00:59:07.676615+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-07T00:59:12.982987+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-07T00:59:17.378199+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-07T00:59:24.008219+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-07T00:59:26.294016+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-07T00:59:55.483968+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.13252815,
+    "estimated_total_usd": 0.13252815,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T00:58:55.801264+00:00",
+  "generatedAt": "2026-11-07T00:59:59.363677+00:00",
   "dateKst": "2026-11-07",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 4,
+  "published": 5,
   "verified": 4,
   "attempts": 11,
   "held": 0,
   "errors": 6,
-  "knownSubtotalUsd": 0.606392,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.73892015,
+  "estimatedTotalUsd": 0.73892015,
   "records": [
     {
       "runId": "42241737960",
@@ -144,16 +144,16 @@
     },
     {
       "runId": "42321369096",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "중간에 멈춰야 하는 집안일은 어디서 끊는 것이 좋을까요?",
+      "url": "https://kv-gift.co.kr/board/sense/25",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-07T00:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.13252815,
+      "knownSubtotalUsd": 0.13252815
     }
   ],
   "topicRetry": {
