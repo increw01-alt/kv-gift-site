@@ -361,8 +361,8 @@
       "run_id": "42444529270"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "42494090690",
+  "last_board": "sale",
+  "last_run_id": "42498739043",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -650,6 +650,22 @@
       "topic": "상품권 결제 전 할인쿠폰 적용 가능 여부와 상품권 제외 조건 깔끔하게 구분하는 방법",
       "date_kst": "2026-11-03",
       "run_id": "41567318455",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-record",
+      "board": "sale",
+      "topic": "상품권 환불 문의 시 주문·사용 여부 및 답변 이력 체계적 분류법",
+      "date_kst": "2026-11-09",
+      "run_id": "42498739043",
+      "status": "held"
+    },
+    {
+      "source_id": "sale-fee",
+      "board": "sale",
+      "topic": "상품권 매입 상담 금액 제시와 공제 항목 별도 기록 정리법",
+      "date_kst": "2026-11-09",
+      "run_id": "42498739043",
       "status": "held"
     }
   ]
