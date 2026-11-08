@@ -1,18 +1,20 @@
 {
   "run_id": "42534089972",
   "date_kst": "2026-11-09",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-08T23:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 /board/gc_tip/36이 이미 다룬 ‘바코드·번호를 노출하지 않고 상품권 사용 상태를 문의하는 방법’과 질문, 독자 상황, 해결 절차가 거의 같습니다. 기존 글도 안전한 정보 범위, 문의 문장 예시, 공개 게시판에 올리지 말아야 할 정보까지 구체적으로 안내하므로, 이번 후보만의 새 판단 기준이나 기존 답으로는 해결되지 않는 추가 단계가 확인되지 않습니다. / 0번은 /board/gc_tip/36이 이미 해결한 ‘상품권 사용 상태를 바코드·번호 노출 없이 문의하는 방법’과 동일한 질문을 반복합니다. 기존 글이 상품권 종류·구매처·사용 현황을 간단히 설명하는 문장과 민감 정보 비노출 원칙까지 제시하므로 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "42534089972",
@@ -22,15 +24,114 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-09T08:13:58.662637+09:00"
+      "attempt_started_at": "2026-11-09T08:13:58.662637+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 484,
+          "coverageArticles": 132,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-be8f258b08",
+            "sale-a002d2fe08",
+            "sale-ecddaf57c8",
+            "sale-b054376adc"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 사용 상태 문의 시 바코드·번호 노출 없이 상황 설명법",
+          "source_id": "barcode-privacy",
+          "reader_problem": "상품권의 바코드나 번호를 알려주지 않고 사용 상태를 문의하는 안전한 방법을 몰라 난감함",
+          "distinct_angle": "구체적 문의 문장과 안전한 정보 범위를 제시해 바코드 등 민감 정보 없이 상태를 설명하는 실제 표현법 안내",
+          "reader_situation": "보유 상품권 상태를 매입처 등에 묻되 바코드·번호를 노출하지 않고 문의하고자 하는 판매자",
+          "deliverable": "개인정보와 바코드 노출 없이 상태 문의 시 활용 가능한 상황 설명 문구 모음과 활용 가이드",
+          "task_id": "",
+          "direction_id": "sale-be8f258b08",
+          "outline": [
+            "상품권 번호 전체 대신 사용 가능한 정보 항목 알아보기",
+            "바코드 사진 제공 없이 상태 문의하는 안전한 문장 작성법 익히기",
+            "민감 정보 노출 없이 필요한 사용 상태를 설명하는 예시와 주의점"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15270,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 231,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15501
+        },
+        "estimated_usd": 0.0064776,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T23:14:04.231851+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12756,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 341,
+          "output_tokens_details": {
+            "reasoning_tokens": 118
+          },
+          "total_tokens": 13097
+        },
+        "estimated_usd": 0.0111015,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T23:14:06.505295+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T23:14:01.314607+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T23:14:04.417617+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0175791,
+    "estimated_total_usd": 0.0175791,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
