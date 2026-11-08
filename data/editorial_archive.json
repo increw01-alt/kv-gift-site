@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T00:59:53.246320+00:00",
+  "generatedAt": "2026-11-08T01:00:57.317601+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3751,7 +3751,7 @@
       "board": "free",
       "topic": "결과가 좋았던 선택은 판단 과정도 좋았던 선택일까요?",
       "url": "https://kv-gift.co.kr/board/free/482",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-08T01:00:57.269747+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1179512,
       "knownSubtotalUsd": 0.1179512
