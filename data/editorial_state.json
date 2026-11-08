@@ -359,10 +359,15 @@
       "board": "purchase",
       "topic": "예산·시간·수신자 선택권 갈등을 순서대로 해결하는 방법",
       "run_id": "42444529270"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 구매 한도와 카드 이용 한도를 혼동하지 않는 점검 방법",
+      "run_id": "42531195751"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "42518532125",
+  "last_board": "gc_information",
+  "last_run_id": "42531195751",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -722,6 +727,30 @@
       "topic": "상품권 구입 전 할부 선택과 카드 청구 안내를 따로 확인하는 실제 절차",
       "date_kst": "2026-11-09",
       "run_id": "42518532125",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-limit",
+      "board": "gc_information",
+      "topic": "상품권 구매 한도와 카드 이용 한도를 혼동하지 않는 점검 방법",
+      "date_kst": "2026-11-09",
+      "run_id": "42531195751",
+      "status": "held"
+    },
+    {
+      "source_id": "payment-date",
+      "board": "gc_information",
+      "topic": "결제한 날짜와 청구서의 날짜 차이, 비교할 기록은 무엇인가요?",
+      "date_kst": "2026-11-09",
+      "run_id": "42531195751",
+      "status": "held"
+    },
+    {
+      "source_id": "cancel-performance",
+      "board": "gc_information",
+      "topic": "상품권 결제 취소 후 카드 실적 반영 확인을 위한 기록 점검법",
+      "date_kst": "2026-11-09",
+      "run_id": "42531195751",
       "status": "held"
     }
   ]

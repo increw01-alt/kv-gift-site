@@ -1,18 +1,31 @@
 {
   "run_id": "42531195751",
   "date_kst": "2026-11-09",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "상품권 구매 한도와 카드 이용 한도를 혼동하지 않는 점검 방법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-08T22:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": false,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
+    "issues": [
+      "기존 게시글 제목 '[상품권 정보] 상품권 구매 한도와 카드 이용 한도 혼동 방지법'과 질문·해결 방향이 매우 비슷해 중복으로 보입니다."
+    ],
+    "holdReason": "body_duplicate"
   },
   "api_usage": {
     "run_id": "42531195751",
@@ -22,15 +35,313 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-09T07:38:57.957381+09:00"
+      "attempt_started_at": "2026-11-09T07:38:57.957381+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 480,
+          "coverageArticles": 132,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-7522ac652e",
+            "gc_information-603f97842d",
+            "gc_information-f0f23d4707",
+            "gc_information-83c32617c5"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "결제한 날짜와 청구서의 날짜 차이, 비교할 기록은 무엇인가요?",
+          "source_id": "payment-date",
+          "task_id": "",
+          "reader_problem": "상품권 결제 시 결제한 날짜와 카드 청구서에 나타난 날짜가 서로 달라 헷갈리는 상황에서 어떤 기록을 우선 확인해야 할지 몰라 혼란이 있습니다.",
+          "distinct_angle": "단순 결제 날짜 안내 외에 카드 승인 기록과 상품권 구매 기록의 기능 차이와 확인 절차를 상세 비교해 주며, 실제 화면에서 각 기록 위치를 찾고 해석하는 법을 단계별로 안내합니다.",
+          "outline": [
+            "상품권 결제시 기록되는 날짜 종류와 의미 구분하기",
+            "카드 승인 내역과 청구서 날짜 확인 방법 단계별 설명",
+            "실제 기록 비교 시 혼동 피하는 점검 표 활용법"
+          ],
+          "reader_situation": "상품권 구매 시 결제일과 카드 청구일이 달라 내역을 비교·대조해 정확하게 이해하고자 하는 사람.",
+          "deliverable": "결제 날짜와 청구 날짜 각각의 의미와 차이를 명확히 분류한 비교표와, 상품권 결제 내역과 카드 승인 기록을 올바르게 조회하는 구체적 절차를 담은 안내 자료.",
+          "direction_id": "gc_information-f0f23d4707"
+        },
+        {
+          "topic": "상품권 결제 취소 후 카드 실적 반영 확인을 위한 기록 점검법",
+          "source_id": "cancel-performance",
+          "task_id": "",
+          "reader_problem": "상품권 결제를 취소한 뒤, 카드 전월 실적 반영 여부와 취소 내역 확인이 어려워 정확한 실적 산정을 위해 어떤 기록을 자세히 살펴봐야 할지 모르는 상황입니다.",
+          "distinct_angle": "단순 취소 사실 안내를 넘어서 결제 취소의 카드 실적 반영 시점과 반영 기록 종류를 구분하고, 실거래 내역과 카드 명세서 흐름을 대조하는 구체적 점검 과정과 사례를 제시합니다.",
+          "outline": [
+            "상품권 결제 취소 시 카드 승인 취소 기록의 의미 파악",
+            "카드사 실적 반영 과정과 반영 시점 점검하기",
+            "취소 내역과 실적 기록을 대조하는 단계별 점검법"
+          ],
+          "reader_situation": "상품권 결제 취소 후 카드 실적에 제대로 반영되었는지 실적으로 확인하려는 사용자.",
+          "deliverable": "결제 취소 시 관련 카드 승인 취소 기록과 실적 반영 내역을 구분한 점검 기준과, 구체적인 확인 절차를 담은 실무용 설명 자료.",
+          "direction_id": "gc_information-603f97842d"
+        },
+        {
+          "topic": "상품권 결제일과 카드 청구일 불일치 시 기록 대조하는 구체 절차",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "상품권 결제 후 카드 청구서에 표시된 날짜가 달라 정확히 어떤 날짜 정보를 기준으로 확인하고 비교해야 하는지 구체적인 방법이 불분명해 혼란이 생깁니다.",
+          "distinct_angle": "카드 결제 거래 과정에서 결제 승인 기록과 카드 청구일의 서로 다른 역할을 상세히 설명하고, 상품권 결제 기록과 대조하는 명확한 점검 순서를 독자가 따라할 수 있도록 도식화하여 안내합니다.",
+          "outline": [
+            "카드 승인 기록과 카드 청구일의 개념적 차이 파악하기",
+            "상품권 결제 기록과 카드 청구 내역 비교 절차 도식화",
+            "비교 시 주의사항과 착오를 방지하는 체크리스트"
+          ],
+          "reader_situation": "상품권 구매 시 결제 날짜와 카드 청구 날짜가 불일치하는 상황에서 신뢰성 있는 기록을 확인하려는 독자.",
+          "deliverable": "결제일 관련 기록들 각각의 기능과 차이를 그림과 표로 구분 정리한 자료, 실제 카드 승인 내역과 청구 내역 비교 체크리스트 포함.",
+          "direction_id": "gc_information-83c32617c5"
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 구매 한도와 카드 이용 한도를 혼동하지 않는 점검 방법",
+        "source_id": "voucher-limit",
+        "task_id": "",
+        "reader_problem": "상품권 구매 한도와 카드 이용 한도가 다른 개념인데, 이를 혼동해 구매 계획이나 카드 사용 계획을 잘못 세우는 일이 많습니다.",
+        "distinct_angle": "일반적 한도 안내가 아닌 각 한도별 설정 주체와 확인 경로의 차이를 집중 설명하며, 구매 전과 구매 후 어느 정보를 어떻게 비교 점검할지 독자가 직접 기록·분류할 수 있는 도구를 제공합니다.",
+        "outline": [
+          "상품권 구매 한도의 설정 주체와 적용 범위 이해",
+          "카드 이용 한도 종류와 사용처별 차이 설명",
+          "두 한도 정보를 한눈에 비교·관리하는 기록 양식 작성법"
+        ],
+        "reader_situation": "상품권 구매 시 자기 카드한도와 상품권별 구매 한도를 각각 알고, 혼동 없이 관리하려는 이용자.",
+        "deliverable": "상품권 구매 한도와 카드사별 이용 한도의 차이와 관리 방법을 일목요연하게 나눈 설명 자료 및, 스스로 점검할 수 있는 비교 기록 양식.",
+        "direction_id": "gc_information-7522ac652e",
+        "novelty_reason": "가장 가까운 기존 글들은 상품권 구매와 카드 혜택, 또는 상품권 관련 정보의 기본 구분을 다뤘지만, 이 후보는 상품권 구매 한도와 카드 이용 한도를 서로 다른 설정 주체와 확인 경로로 나눠 점검하게 합니다. 기존 답을 그대로 적용해도 해결되는 중복 질문이 아니라, 구매 가능 범위와 카드 사용 범위를 따로 해석해야 하는 새로운 판단 문제가 있어 선택했습니다.",
+        "screen_rejections": [
+          "영번은 상품권 결제일과 카드 청구일, 승인 기록과 청구서의 날짜를 대조하는 절차가 기존 공개 글 /board/gc_tip/37과 /board/gc_information/8, /board/gc_information/11에서 이미 다뤄진 질문과 거의 같습니다. 이미 해결한 질문은 결제 시점의 날짜와 청구서 날짜가 다를 때 어떤 기록을 우선 비교할지 확인하는 방법입니다.",
+          "이번은 상품권 결제 취소 후 카드 실적 반영과 취소 기록 확인을 다루는데, 기존 공개 글 /board/gc_information/7이 이미 취소 내역 조회, 실적 제외 확인, 증빙 준비 절차를 해결했습니다. 이미 해결한 질문은 취소 후 실적과 혜택 반영 상태를 어떻게 점검할지입니다.",
+          "삼번은 상품권 결제일과 카드 청구일 불일치 시 기록 대조 절차로, 기존 공개 글 /board/gc_tip/37과 /board/gc_information/8이 이미 같은 질문과 확인 순서를 다뤘습니다. 이미 해결한 질문은 서로 다른 날짜가 찍힌 결제 기록과 청구 기록을 어떻게 비교할지입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/29",
+            "/board/gc_information/6"
+          ],
+          "gap": "기존 글은 카드 실적과 이벤트 기준, 또는 상품권의 기본 조건을 설명하지만, 상품권 구매 한도와 카드 이용 한도를 각각 누가 정하고 어디서 확인하는지 분리해 판단하는 방법은 다루지 않습니다. 한도라는 말이 같아도 적용 주체와 범위가 다를 때, 구매 가능 수량과 카드 승인 가능 범위를 따로 점검하는 절차가 필요합니다.",
+          "example": "상품권을 사려는 사람이 카드로 결제 가능한지 먼저 확인했는데, 카드사 기준과 상품권 판매처 기준이 서로 다르게 안내되는 상황을 떠올려 보세요. 이때는 한 문장으로 묶어 묻지 말고, 카드사에는 카드 사용 가능 범위를, 판매처에는 상품권 구매 제한을 따로 확인한 뒤 서로 다른 결과를 별도 기록으로 남겨야 합니다.",
+          "result": "독자는 상품권 구매 한도와 카드 이용 한도를 혼동하지 않고, 어떤 기준이 어디서 정해지는지 구분한 뒤 구매 전후에 각각 따로 확인하는 판단을 갖게 됩니다.",
+          "section_actions": [
+            "먼저 상품권 구매 한도와 카드 이용 한도를 구분해 적고, 각각의 기준을 정하는 주체가 누구인지 확인하도록 안내합니다.",
+            "다음으로 카드사 안내와 판매처 안내에서 한도 관련 문구를 따로 찾게 하여, 같은 한도처럼 보여도 적용 범위가 다른 지점을 비교하게 합니다.",
+            "마지막으로 구매 전에는 구매 가능 범위, 결제 후에는 실제 승인 결과를 따로 기록해 두도록 하여 두 한도를 섞지 않도록 정리합니다."
+          ]
+        }
+      },
+      "board": "gc_information",
+      "topic": "상품권 구매 한도와 카드 이용 한도를 혼동하지 않는 점검 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-08T13:24:57Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 구매 한도와 카드 이용 한도가 각각 어디서 정해지고 어떻게 따로 확인하는지 알고 싶은 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23281,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2176
+          },
+          "output_tokens": 984,
+          "output_tokens_details": {
+            "reasoning_tokens": 209
+          },
+          "total_tokens": 24265
+        },
+        "estimated_usd": 0.02041995,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T22:39:09.094420+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3638,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 422,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4060
+        },
+        "estimated_usd": 0.0021304,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T22:39:12.206627+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5015,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 513,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5528
+        },
+        "estimated_usd": 0.0028268,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T22:39:17.553456+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17033,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 401,
+          "output_tokens_details": {
+            "reasoning_tokens": 205
+          },
+          "total_tokens": 17434
+        },
+        "estimated_usd": 0.01457925,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T22:39:22.149955+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3561,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1065
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4933
+        },
+        "estimated_usd": 0.066453,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T22:39:53.628550+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8903,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 270,
+          "output_tokens_details": {
+            "reasoning_tokens": 161
+          },
+          "total_tokens": 9173
+        },
+        "estimated_usd": 0.00789225,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T22:39:58.671778+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T22:39:01.854652+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T22:39:09.097478+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T22:39:13.681295+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T22:39:19.787448+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-08T22:39:22.170395+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T22:39:55.103139+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11430165,
+    "estimated_total_usd": 0.11430165,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T22:38:58.167762+00:00",
+  "generatedAt": "2026-11-08T22:39:58.934470+00:00",
   "dateKst": "2026-11-09",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 3,
   "attempts": 13,
-  "held": 4,
+  "held": 5,
   "errors": 5,
-  "knownSubtotalUsd": 0.5299012,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.64420285,
+  "estimatedTotalUsd": 0.64420285,
   "records": [
     {
       "runId": "42494090690",
@@ -170,21 +170,21 @@
     },
     {
       "runId": "42531195751",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "상품권 구매 한도와 카드 이용 한도를 혼동하지 않는 점검 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-08T22:37:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11430165,
+      "knownSubtotalUsd": 0.11430165
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-09T08:08:57.957381+09:00",
+    "cooldownMinutes": 30
   }
 }
