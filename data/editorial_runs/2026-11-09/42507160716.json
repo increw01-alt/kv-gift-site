@@ -1,18 +1,20 @@
 {
   "run_id": "42507160716",
   "date_kst": "2026-11-09",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-08T17:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 셋 모두 기존 공개 글 /board/general_notice/50이 이미 다룬 ‘상품권 지급·환불 문자에서 낯선 링크를 먼저 확인하고, 공식 앱이나 홈페이지에서 주문·환불 내역을 대조한 뒤 의심되면 입력을 멈추는 절차’와 핵심 질문이 같습니다. 발신 번호, 도메인, 차단 조치, 공식 문의로 표현만 달라졌을 뿐, 기존 답만으로 해결되지 않는 새 판단 기준이나 다른 실행 단계가 본문 수준에서 확인되지 않습니다. / 0번은 발신 번호·메일 주소를 공식 채널과 대조하고 링크 주소 패턴을 점검하는 흐름이 /board/general_notice/50의 낯선 링크 확인과 공식 경로 대조를 사실상 반복합니다. 이미 해결한 질문은 상품권 안내 메시지의 링크를 누르기 전 진위를 확인하는 방법입니다. / 1번은 발신자 연락처 비교, URL 형식 확인, 차단과 문의까지 /board/general_notice/50의 의심 링크 대조·공식 문의 절차와 같습니다. 이미 해결한 질문은 메시지 속 링크를 열기 전 안전 여부를 판단하는 방법입니다. / 2번은 발신자 정보·링크 주소·예상 행동을 표로 정리하는 방식일 뿐, /board/general_notice/50이 다룬 주문 내역 대조와 추가 정보 요구 여부 확인을 다른 형식으로 재서술한 수준입니다. 이미 해결한 질문은 상품권 문자에서 링크와 개인정보 요구를 어떻게 점검할지입니다. / 3번은 발신 번호·도메인·발신 방식 특성 비교와 공식 문의·차단 안내가 /board/general_notice/50의 낯선 링크 검증, 원래 경로 확인, 의심 메시지 대응과 동일합니다. 이미 해결한 질문은 상품권 안내 메시지의 진위 판단 절차입니다."
+    ]
   },
   "api_usage": {
     "run_id": "42507160716",
@@ -22,15 +24,159 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-09T02:53:44.792274+09:00"
+      "attempt_started_at": "2026-11-09T02:53:44.792274+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 469,
+          "coverageArticles": 129,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-5c4a5db337",
+            "sense-131a66fcc8",
+            "sense-07089a422e",
+            "sense-bc0cf30f7f"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 링크 메시지 발신처 안전하게 확인하는 절차",
+          "source_id": "phishing-message",
+          "reader_problem": "상품권 관련 메시지 내 링크를 누르기 전에 발신 경로가 신뢰할 만한지 구체적으로 확인하는 방법을 몰라 개인정보 침해 우려가 있는 상황",
+          "distinct_angle": "기존 단순 의심 안내와 달리, 메시지 내 링크 클릭 전 발신 번호·주소·서비스명을 실제 공식 채널과 대조하는 구체적 점검 절차를 단계별로 안내하여 실생활에서 바로 검증 가능하도록 함",
+          "reader_situation": "경험 부족으로 의심스러운 문자나 메일 속 상품권 링크를 즉시 열지 않고, 발신자 신뢰도를 직접 판단해 사기 피해를 예방하려는 독자",
+          "deliverable": "발신자 번호와 메일 주소의 공식 채널 확인 방법, 의심 링크 URL 패턴 점검 체크리스트, 정품 여부 간단 비교용 문구 세트",
+          "task_id": "",
+          "direction_id": "sense-5c4a5db337",
+          "outline": [
+            "발신 번호 또는 메일 주소 공식 채널과 비교해 확인하기",
+            "링크 주소 내 의심 요소(오타, 이상한 도메인) 체크 요령",
+            "문자·메일 내용과 채널정보를 종합해 신뢰 여부 판단 기준 적용하기"
+          ]
+        },
+        {
+          "topic": "상품권 메시지 링크 열기 전 안전한 재확인 방법과 즉각 대응 팁",
+          "source_id": "phishing-message",
+          "reader_problem": "상품권 관련 문자나 메일 링크 클릭 전 발신 출처를 명확히 재확인하고, 불안감 없이 안전 여부를 판단하는 구체적 절차가 없어 불안한 상황",
+          "distinct_angle": "실제 사례를 활용해 단계별 확인 방법과, 의심될 때 바로 취할 수 있는 조치(발신자 차단, 공식 문의 안내)를 명확히 제시하여 기존 단순 주의사항과 차별화함",
+          "reader_situation": "상품권 안내 문자를 받았으나 사기 위험을 최소화하면서 링크를 열지 말아야 할지 나중에 다시 확인하고 싶은 이용자",
+          "deliverable": "발신자 연락처와 공식 홈페이지 비교 체크리스트, 의심 시 조치 목록, 안전 확인 후 사용할 수 있는 문장 예시 세트",
+          "task_id": "",
+          "direction_id": "sense-bc0cf30f7f",
+          "outline": [
+            "수신 문자 내 발신 번호와 공식 연락처 대조 방법",
+            "링크 클릭 전 URL 형식과 발신 내용 점검 절차",
+            "의심 시 취할 수 있는 차단과 문의 방법 안내"
+          ]
+        },
+        {
+          "topic": "상품권 문자 수신 후 개인정보·링크 안전 점검법",
+          "source_id": "phishing-message",
+          "reader_problem": "상품권 관련 문자에서 받은 링크 누르기 전 출처와 개인정보 위협 요소를 간단명료하게 점검하는 방법을 몰라 혼란스러움",
+          "distinct_angle": "상품권 메시지별 주요 점검 항목을 표 형태로 구성, 발신자 정보·링크 주소·예상 행동 세 가지 포인트별로 쉽게 확인하고 정리하는 체계적 점검법 안내 제공",
+          "reader_situation": "일상 중 상품권 메시지를 받았을 때 링크 클릭 전 빠르고 정확하게 발신 경로와 링크 안전성을 평가하고 대응하려는 독자",
+          "deliverable": "발신자 정보 비교 표, 안전 링크 확인 체크리스트, 정리한 점검 결과를 기록하는 간단 메모 예시",
+          "task_id": "",
+          "direction_id": "sense-07089a422e",
+          "outline": [
+            "발신자 전화번호 및 주소 정보 쉽게 확인하는 방법",
+            "링크 주소 주요 의심 패턴 및 정상 패턴 구분법",
+            "점검 항목별 결과를 기록하고 공유하는 실용적 정리법"
+          ]
+        },
+        {
+          "topic": "상품권 메시지 내 링크 클릭 전 발신자 진위 구분 실전 안내",
+          "source_id": "phishing-message",
+          "reader_problem": "상품권 관련 메시지가 정식 발신인지 가짜인지 판단 기준과 절차가 없어 클릭 전 진위를 알기 어려움",
+          "distinct_angle": "수신자 스스로 발신번호·도메인 이름·발신 방식별 특성을 비교해 판단하는 ‘진위 체크 리스트’를 제공해 기존 일반적 주의 문구보다 구체적이면서 실용적인 대처법을 제안",
+          "reader_situation": "평소 접하는 상품권 홍보나 경품 안내 메시지가 사기인지 혼동되며, 클릭 전 스스로 안전성을 빠르게 검증하고자 하는 독자",
+          "deliverable": "진위 확인 체크리스트 양식, 의심 시 비교할 공식 발신 예시, 대응 문구와 전화·홈페이지 문의 방법 설명",
+          "task_id": "",
+          "direction_id": "sense-131a66fcc8",
+          "outline": [
+            "발신 번호 공식 채널과 일치 여부 점검하기",
+            "링크 도메인 이름과 발신 방식 특징 분석하기",
+            "의심될 땐 즉각 공식 문의하고 메시지 차단하는 조치법 안내"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15654,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1082,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16736
+        },
+        "estimated_usd": 0.0079928,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T17:53:54.527504+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 26004,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 659,
+          "output_tokens_details": {
+            "reasoning_tokens": 206
+          },
+          "total_tokens": 26663
+        },
+        "estimated_usd": 0.0224685,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T17:53:59.461221+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T17:53:47.057416+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T17:53:54.899585+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0304613,
+    "estimated_total_usd": 0.0304613,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

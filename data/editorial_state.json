@@ -361,8 +361,8 @@
       "run_id": "42444529270"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "42501712571",
+  "last_board": "sense",
+  "last_run_id": "42507160716",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -666,6 +666,38 @@
       "topic": "상품권 매입 상담 금액 제시와 공제 항목 별도 기록 정리법",
       "date_kst": "2026-11-09",
       "run_id": "42498739043",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "sense",
+      "topic": "상품권 링크 메시지 발신처 안전하게 확인하는 절차",
+      "date_kst": "2026-11-09",
+      "run_id": "42507160716",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "sense",
+      "topic": "상품권 메시지 링크 열기 전 안전한 재확인 방법과 즉각 대응 팁",
+      "date_kst": "2026-11-09",
+      "run_id": "42507160716",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "sense",
+      "topic": "상품권 문자 수신 후 개인정보·링크 안전 점검법",
+      "date_kst": "2026-11-09",
+      "run_id": "42507160716",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "sense",
+      "topic": "상품권 메시지 내 링크 클릭 전 발신자 진위 구분 실전 안내",
+      "date_kst": "2026-11-09",
+      "run_id": "42507160716",
       "status": "held"
     }
   ]
