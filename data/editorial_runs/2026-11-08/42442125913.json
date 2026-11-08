@@ -1,18 +1,20 @@
 {
   "run_id": "42442125913",
   "date_kst": "2026-11-08",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_tip",
+  "topic": "교환 물품의 옵션을 함께 고를 수 없을 때 조합을 어떻게 줄여 볼까요?",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-08T03:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 교환 물품의 옵션을 하나씩 적고, 함께 고를 수 없는 조합을 제외해 가능한 조합만 남기는 흐름이 기존 글과 동일합니다. 핵심 질문과 해결 절차가 거의 같아 새 독자 문제로 보기 어렵습니다. / 본문이 옵션 목록 정리 → 불가능 조합 제거 → 최종 점검이라는 일반 절차만 반복하며, 새 판단 기준이나 구체적인 다른 예시가 충분히 드러나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42442125913",
@@ -22,15 +24,238 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-08T12:19:04.038771+09:00"
+      "attempt_started_at": "2026-11-08T12:19:04.038771+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 5,
+          "selectedAssignments": [
+            "supply-20261106-gc_tip-option-conflict",
+            "supply-20261106-gc_tip-installed-item-space",
+            "supply-20261106-gc_tip-interrupted-count",
+            "supply-20261106-gc_tip-return-to-screen"
+          ],
+          "coverageRecords": 458,
+          "coverageArticles": 129,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-e4ae922a60",
+            "gc_tip-f74ea4ac7c",
+            "gc_tip-d4d4f91b05",
+            "gc_tip-18e69e2f13"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "교환한 물품을 설치해 써야 한다면 개봉 전에 공간을 어떻게 잡을까요?",
+          "source_id": "",
+          "task_id": "supply-20261106-gc_tip-installed-item-space",
+          "reader_problem": "교환 물품 조립과 사용 준비를 위해 개봉 전 공간 확보와 작업 동선을 미리 계획하지 못해 설치가 지연되고 공간 효율이 떨어짐.",
+          "distinct_angle": "잡아야 할 공간을 실제 바닥 모형으로 나누어 배치하고 동작 여유 공간을 시험해보는 실제적 공간 배분 절차를 소개한다.",
+          "outline": [
+            "포장 개봉에 필요한 최소 공간 모형으로 가상 배치해 보기",
+            "설치 및 사용 공간 요구사항을 파악해 동선과 여유 공간 확보하기",
+            "배치안을 현장에 적용해 공간 부족이나 과잉 여부 점검하고 조정하기"
+          ],
+          "reader_situation": "크고 복잡한 교환 물품을 조립·설치해야 하며, 개봉 공간과 설치 공간을 한꺼번에 효율적으로 활용하고 싶은 독자.",
+          "deliverable": "포장 개봉 공간과 설치 사용 공간을 분리해 바닥 공간 모형을 활용해 미리 배치해 보는 구체적인 실습 방법과 체크리스트.",
+          "direction_id": ""
+        },
+        {
+          "topic": "상품권 안내를 읽다 다른 화면에 다녀오면 읽던 곳을 어떻게 찾을까요?",
+          "source_id": "",
+          "task_id": "supply-20261106-gc_tip-return-to-screen",
+          "reader_problem": "외부 안내로 이동했다 돌아왔을 때 원래 읽던 절과 선택 상태를 잃어버려 결제 과정 반복이나 혼란이 발생함.",
+          "distinct_angle": "절 제목과 선택값을 단서로 현재 화면 상태를 재인식하고 결제 직전 상태를 확실히 복원하는 실용적 재개 절차를 설명한다.",
+          "outline": [
+            "이전 화면 절 제목과 선택 상태 기록하기",
+            "복귀 후 자리 찾기 위한 화면 비교 및 상태 식별 절차 익히기",
+            "결제 전 선택 내용 점검 및 확정 전 최종 확인법 적용하기"
+          ],
+          "reader_situation": "상품권 안내와 주문 과정 중 외부 참고 링크 방문 후 본래 창으로 돌아와 이전 읽던 위치와 옵션을 빠짐없이 찾아야 하는 이용자.",
+          "deliverable": "읽던 부분과 선택한 옵션 정보를 기준으로 화면 상태 복원 방법, 재확인 체계, 오류 방지용 확인 리스트와 구체적 행동 지침.",
+          "direction_id": ""
+        }
+      ],
+      "topic_plan": {
+        "topic": "교환 물품의 옵션을 함께 고를 수 없을 때 조합을 어떻게 줄여 볼까요?",
+        "source_id": "",
+        "task_id": "supply-20261106-gc_tip-option-conflict",
+        "reader_problem": "물품 교환 시 크기와 구성 등 서로 영향을 주는 옵션 조합을 반복 선택해야 해 시간과 노력이 과도하게 소요됨.",
+        "distinct_angle": "화면 기능 추정 없이 단순 나열에서 불가능 조합을 단계적으로 제거하는 실질적인 가지치기 방법을 안내한다.",
+        "outline": [
+          "각 옵션별 선택 가능한 항목 목록 작성하기",
+          "옵션 간 호환 불가능 조합을 확인하며 불필요 항목 제외하기",
+          "가능 조합 기준으로 선택 과정 간소화해 최종 조합 정리하기"
+        ],
+        "reader_situation": "교환 절차에서 옵션들을 개별적으로 선택하는데 서로 호환되지 않는 조합 때문에 선택 과정을 효율적으로 줄일 방법을 모색하는 이용자.",
+        "deliverable": "표시된 옵션 선택지만 활용해 동시에 가능한 조합을 가려내고 불가능한 조합을 제외하는 구체적인 가지치기 과정과 체크리스트.",
+        "direction_id": "",
+        "novelty_reason": "후보 0은 교환 물품의 여러 옵션이 서로 충돌할 때, 표시된 선택지만으로 가능한 조합과 불가능한 조합을 가지치기하는 방법을 다룹니다. 기존 공개 글 중 가장 가까운 것은 /board/gc_tip/41의 용량 비교, /board/gc_tip/44의 구성품 대조이지만, 그 글들은 ‘무엇을 고를지’나 ‘무엇이 빠졌는지’를 확인하는 수준입니다. 이번 후보는 서로 영향을 주는 옵션을 먼저 걸러내고, 남는 조합만 시험해 보는 판단 절차를 새로 제시하므로 독자 문제와 해결 단계가 더 구체적입니다.",
+        "screen_rejections": [
+          "1번은 교환 물품을 개봉 전에 설치 공간으로 배분하는 내용이지만, /board/gc_tip/42의 부피와 동선 고려, /board/purchase/2575의 실측 비교와 해결 흐름이 겹쳐 공간 배치 점검이라는 핵심 절차가 이미 있습니다.",
+          "2번은 외부 안내를 보고 돌아왔을 때 읽던 위치와 선택 상태를 복원하는 내용이지만, /board/gc_tip/39, /board/gc_information/12, /board/gc_information/16처럼 안내를 읽고 다시 확인해 결제 직전 상태를 점검하는 절차와 가까워 새 판단 단계가 충분하지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/41",
+            "/board/gc_tip/44"
+          ],
+          "gap": "기존 글들은 개별 옵션의 의미를 확인하거나 받은 구성이 맞는지 대조하는 데 그칩니다. 이번 글은 옵션끼리 서로 충돌할 때, 표시된 선택지만으로 가능한 조합과 불가능한 조합을 미리 갈라내고 선택 횟수를 줄이는 방법을 새로 제시해야 합니다.",
+          "example": "어떤 물품은 색상과 크기를 같이 골라야 하는데, 한쪽을 선택하면 다른 쪽에서 일부 항목이 사라지는 상황이라면, 먼저 각 항목의 남는 선택지를 따로 적고 서로 함께 고를 수 없는 조합을 지운 뒤 남은 조합만 좁혀 봅니다.",
+          "result": "독자는 서로 간섭하는 옵션을 순서대로 걸러 내고, 가능한 조합만 남겨 최종 선택을 빠르게 확정하는 기준을 갖게 됩니다.",
+          "section_actions": [
+            "각 옵션별 남는 선택지를 따로 적어 서로 겹치는 범위를 먼저 파악한다.",
+            "함께 고를 수 없는 조합을 지워 가능 조합만 남기는 방식으로 선택 폭을 줄인다.",
+            "남은 조합을 다시 한 번 대조해 최종 선택 과정에서 같은 실수를 반복하지 않도록 정리한다."
+          ]
+        }
+      },
+      "board": "gc_tip",
+      "topic": "교환 물품의 옵션을 함께 고를 수 없을 때 조합을 어떻게 줄여 볼까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-07T13:01:35Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20214,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 837,
+          "output_tokens_details": {
+            "reasoning_tokens": 211
+          },
+          "total_tokens": 21051
+        },
+        "estimated_usd": 0.018927,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T03:19:14.952509+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3434,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 412,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3846
+        },
+        "estimated_usd": 0.0020328,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T03:19:18.203490+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 11675,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 436,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 12111
+        },
+        "estimated_usd": 0.0053676,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T03:19:22.868987+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23593,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 435,
+          "output_tokens_details": {
+            "reasoning_tokens": 157
+          },
+          "total_tokens": 24028
+        },
+        "estimated_usd": 0.01965225,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T03:19:28.683312+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T03:19:08.841833+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T03:19:14.955906+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T03:19:19.670157+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T03:19:25.101224+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04597965,
+    "estimated_total_usd": 0.04597965,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T03:19:04.356725+00:00",
+  "generatedAt": "2026-11-08T03:19:29.006939+00:00",
   "dateKst": "2026-11-08",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 5,
   "verified": 5,
   "attempts": 14,
-  "held": 0,
+  "held": 1,
   "errors": 8,
-  "knownSubtotalUsd": 0.69469755,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.7406772,
+  "estimatedTotalUsd": 0.7406772,
   "records": [
     {
       "runId": "42385690967",
@@ -183,21 +183,21 @@
     },
     {
       "runId": "42442125913",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "교환 물품의 옵션을 함께 고를 수 없을 때 조합을 어떻게 줄여 볼까요?",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-08T03:17:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04597965,
+      "knownSubtotalUsd": 0.04597965
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-08T12:49:04.038771+09:00",
+    "cooldownMinutes": 30
   }
 }

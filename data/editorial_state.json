@@ -349,10 +349,15 @@
       "board": "purchase",
       "topic": "놀라움을 남기면서 상품권 선물의 필수 조건만 물어보려면?",
       "run_id": "42354156254"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "교환 물품의 옵션을 함께 고를 수 없을 때 조합을 어떻게 줄여 볼까요?",
+      "run_id": "42442125913"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "42432142572",
+  "last_board": "gc_tip",
+  "last_run_id": "42442125913",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
