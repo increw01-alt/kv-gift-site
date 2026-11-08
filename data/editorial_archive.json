@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T20:10:07.832387+00:00",
+  "generatedAt": "2026-11-08T20:12:32.468392+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3933,7 +3933,7 @@
       "board": "purchase",
       "topic": "주문자와 결제 정보가 다를 때 꼭 숨겨야 할 정보와 확인해야 할 내용",
       "url": "https://kv-gift.co.kr/board/purchase/2579",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-08T20:12:32.426160+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1238347,
       "knownSubtotalUsd": 0.1238347
