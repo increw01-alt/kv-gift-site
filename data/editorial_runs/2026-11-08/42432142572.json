@@ -1,17 +1,27 @@
 {
   "run_id": "42432142572",
   "date_kst": "2026-11-08",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "free",
+  "topic": "결과가 좋았던 선택은 판단 과정도 좋았던 선택일까요?",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/free/482",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-08T00:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,303 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-08T09:58:56.573140+09:00"
+      "attempt_started_at": "2026-11-08T09:58:56.573140+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 5,
+          "selectedAssignments": [
+            "supply-20261106-free-outcome-process",
+            "supply-20261106-free-avoid-first",
+            "supply-20261106-free-delegate-decision",
+            "supply-20261106-free-equal-or-tailored"
+          ],
+          "coverageRecords": 455,
+          "coverageArticles": 128,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-bfc80eaf20",
+            "free-b65d41dcec",
+            "free-334ff31d35",
+            "free-911ea23e77"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "추천을 받을 때 좋아하는 것보다 피할 것을 먼저 말하면 어떨까요?",
+          "source_id": "",
+          "task_id": "supply-20261106-free-avoid-first",
+          "reader_problem": "원하는 점을 분명하게 설명하기 어려워 피하고 싶은 부분부터 이야기할 때와 좋아하는 점 중심으로 말할 때 받는 추천 결과 차이가 생기는 문제",
+          "distinct_angle": "좋은 점 우선과 피할 점 우선의 조건부 사례를 비교해 선호 목록과 제외 조건이 후보군 축소에 미치는 차별적 영향을 실질적으로 체험하며 판단 기준 마련",
+          "outline": [
+            "추천 전 선호 조건과 제외 조건 목록 작성하기",
+            "각 조건 우선순위에 따른 후보 추천 결과 비교",
+            "상황별 적합한 추천 요청 방식 선택 판단 기준 만들기"
+          ],
+          "reader_situation": "원하는 점을 명확히 표현하기 어려워 추천받을 때 피해야 할 요소부터 말하는 상황과 좋아하는 점부터 말하는 상황을 비교하는 독자 대상",
+          "deliverable": "선호 조건 목록과 제외 조건 목록을 활용해 후보 축소가 어떻게 달라지는지 비교하는 구체적 질문 예시와 설명",
+          "direction_id": ""
+        },
+        {
+          "topic": "결정을 맡기는 편이 나을 때와 직접 참여해야 할 때는 언제일까요?",
+          "source_id": "",
+          "task_id": "supply-20261106-free-delegate-decision",
+          "reader_problem": "모든 결정에 직접 참여하느라 피로하지만 위임해서 발생할 결과에 대한 걱정으로 위임 범위 설정에 어려움을 겪는 문제",
+          "distinct_angle": "되돌릴 수 있는 결정과 개인적 영향이 큰 결정을 분리해 위임 가능 범위를 조정하는 기준과 실천 과정을 운영팀 질문 형식으로 제시",
+          "outline": [
+            "결정별 되돌림 가능 여부 분류 이해하기",
+            "개인 영향이 큰 결정과 그렇지 않은 결정 나누기",
+            "위임 범위 설정을 위한 구체적 점검 질문 적용하기"
+          ],
+          "reader_situation": "결정 과정에 피로를 느끼면서도 중요한 선택에서는 직접 참여하지 않을까 걱정하는 사람으로 위임 범위 설정법을 찾고자 할 때",
+          "deliverable": "위임 여부 결정 시 되돌림 가능성과 개인 영향력 정도를 점검하는 질문 리스트와 판단틀",
+          "direction_id": ""
+        }
+      ],
+      "topic_plan": {
+        "topic": "결과가 좋았던 선택은 판단 과정도 좋았던 선택일까요?",
+        "source_id": "",
+        "task_id": "supply-20261106-free-outcome-process",
+        "reader_problem": "우연히 좋은 결과가 나온 선택을 반복하려 할 때 당시 판단 과정과 결과를 혼동해 합리적 의사결정과정을 점검하지 않는 문제",
+        "distinct_angle": "결과만 보고 판단 과정이 우수하다고 여기기 쉽지만 당시 알 수 있었던 정보와 결과를 분리해 객관적으로 당시의 판단 질을 평가하는 가상 사례를 통해 인지 오류를 방지하는 접근",
+        "outline": [
+          "과거 선택의 결과와 당시 가진 정보 분리하는 방법 익히기",
+          "결과의 우연과 판단 과정의 질 구분하는 가상 사례 검토하기",
+          "과거 판단 과정을 객관적으로 돌아보며 학습하는 절차 따라하기"
+        ],
+        "reader_situation": "좋은 결과를 반복하기 위해 과거 선택을 무작정 되풀이하려는 독자가 판단 과정과 결과를 각각 되돌아보고 싶을 때",
+        "deliverable": "가상 투자나 금융 사례를 제외한 영역에서 결과와 당시 정보 분리, 판단 과정 평가를 위한 질문 목록과 행동 흐름",
+        "direction_id": "",
+        "novelty_reason": "후보 가운데 가장 새 질문이 뚜렷합니다. 결과가 좋았던 선택을 다시 할지 판단할 때, 기존 글들은 주로 기록 정리·메시지 정리·선택지 비교를 다뤘지만, 이 후보는 ‘좋은 결과’와 ‘당시 알 수 있었던 정보’와 ‘판단 과정의 질’을 분리해 돌아보는 인지 점검을 중심에 둡니다. 그래서 단순한 추천 방식 비교나 결정 분담과 달리, 우연한 성과를 실력으로 오해하지 않도록 판단 자체를 재평가하는 새 해결이 있습니다.",
+        "screen_rejections": [
+          "후보 일번은 추천을 받을 때 좋아하는 점과 피할 점을 어떻게 먼저 말할지에 대한 질문이라, 이미 공개된 /board/free/477의 ‘선택지를 먼저 제시할지’와 /board/free/467의 ‘상황에 맞는 짧은 메시지 구성’처럼 요청 형식을 다루는 글과 해결 절차가 가깝습니다. 제외 조건과 선호 조건을 나누는 방식도 기존의 조건 정리 글과 크게 다르지 않아 새 판단 기준이 충분하지 않습니다.",
+          "후보 이번은 결정을 맡길지 직접 참여할지 나누는 내용이라, 이미 공개된 /board/free/480의 ‘늦게 나온 의견을 다시 논의할지’와 /board/general_notice/57의 ‘처음 이용할 때 무엇을 먼저 확인할지’처럼 기준을 세워 참여 범위를 정하는 글과 가까운 편입니다. 위임 가능 범위를 나누는 틀은 유효하지만, 새로 추가되는 해결 질문과 실행 단계가 상대적으로 약합니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sense/7",
+            "/board/gc_information/15",
+            "/board/gc_tip/33"
+          ],
+          "gap": "좋은 결과가 있었다는 사실만으로 그때의 판단 과정까지 좋았다고 단정하지 않도록, 당시 알 수 있었던 정보와 나중에 밝혀진 결과를 분리해 평가하는 기준이 필요하다.",
+          "example": "어떤 선택이 뜻밖에 잘 풀렸더라도, 그때는 선택지의 차이와 위험 신호를 충분히 비교하지 못했을 수 있다. 이런 경우에는 결과가 좋았다는 이유와 당시 판단이 타당했다는 이유를 나누어 적고, 나중에 알게 된 정보는 평가에서 잠시 제외한 뒤 다시 살펴본다.",
+          "result": "독자는 좋은 결과와 좋은 판단을 구분해 보고, 우연한 성과를 그대로 반복하는 대신 당시 정보 기준으로 선택 과정을 다시 평가할 수 있다.",
+          "section_actions": [
+            "첫 절에서는 당시 알 수 있었던 정보와 나중에 알게 된 결과를 나누어 적게 해 판단 기준을 분리한다.",
+            "둘째 절에서는 결과가 좋았던 이유가 실력인지 우연인지 따져 보게 해 같은 선택을 그대로 반복할지 잠시 멈추게 한다.",
+            "셋째 절에서는 다시 확인할 정보와 다음 선택 때 바꿀 행동을 정리하게 해, 결과가 아닌 과정 중심의 학습으로 이어지게 한다."
+          ]
+        }
+      },
+      "board": "free",
+      "topic": "결과가 좋았던 선택은 판단 과정도 좋았던 선택일까요?",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-07T13:01:35Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "좋은 결과를 낸 선택을 그대로 반복하기 전에 당시 정보와 판단 과정을 분리해 다시 평가하는 방법을 알고 싶다"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 26668,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1129,
+          "output_tokens_details": {
+            "reasoning_tokens": 419
+          },
+          "total_tokens": 27797
+        },
+        "estimated_usd": 0.0250815,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T00:59:08.049950+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3544,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 377,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3921
+        },
+        "estimated_usd": 0.0020208,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T00:59:11.364417+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8886,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 425,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9311
+        },
+        "estimated_usd": 0.0042344,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T00:59:16.339804+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16417,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 279,
+          "output_tokens_details": {
+            "reasoning_tokens": 119
+          },
+          "total_tokens": 16696
+        },
+        "estimated_usd": 0.01356825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T00:59:20.601618+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3468,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 972
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4840
+        },
+        "estimated_usd": 0.065988,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-08T00:59:47.495109+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8295,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 186,
+          "output_tokens_details": {
+            "reasoning_tokens": 121
+          },
+          "total_tokens": 8481
+        },
+        "estimated_usd": 0.00705825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T00:59:52.061565+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T00:59:00.269010+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T00:59:08.052794+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-08T00:59:12.463298+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T00:59:18.038277+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-08T00:59:20.619719+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T00:59:48.592998+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1179512,
+    "estimated_total_usd": 0.1179512,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

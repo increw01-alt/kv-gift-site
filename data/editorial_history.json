@@ -1513,5 +1513,18 @@
     "publication_mode": "automatic",
     "run_id": "42421128707",
     "usage_file": "data/editorial_runs/2026-11-08/42421128707.json"
+  },
+  {
+    "board": "free",
+    "id": 482,
+    "topic": "결과가 좋았던 선택은 판단 과정도 좋았던 선택일까요?",
+    "drafted_at": "2026-11-08",
+    "automation": true,
+    "search_intent": "좋은 결과를 낸 선택을 그대로 반복하기 전에 당시 정보와 판단 과정을 분리해 다시 평가하는 방법을 알고 싶다",
+    "image_scene": "책상 위에 선택 당시 메모지와 나중에 적은 결과 메모가 서로 다른 색으로 놓여 있고, 가운데에는 체크표가 있는 질문 카드와 펜이 배치된 구도에서 한 사람이 두 메모를 나눠 보며 판단 과정을 정리하는 장면",
+    "image_alt": "책상 위에 당시 정보 메모와 결과 메모를 따로 두고 판단 과정을 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42432142572",
+    "usage_file": "data/editorial_runs/2026-11-08/42432142572.json"
   }
 ]
