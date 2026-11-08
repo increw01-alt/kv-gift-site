@@ -361,8 +361,8 @@
       "run_id": "42444529270"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "42518081717",
+  "last_board": "purchase",
+  "last_run_id": "42518532125",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -698,6 +698,30 @@
       "topic": "상품권 메시지 내 링크 클릭 전 발신자 진위 구분 실전 안내",
       "date_kst": "2026-11-09",
       "run_id": "42507160716",
+      "status": "held"
+    },
+    {
+      "source_id": "payment-name",
+      "board": "purchase",
+      "topic": "주문자와 결제 정보가 다를 때 꼭 숨겨야 할 정보와 확인해야 할 내용",
+      "date_kst": "2026-11-09",
+      "run_id": "42518532125",
+      "status": "published"
+    },
+    {
+      "source_id": "culture-product",
+      "board": "purchase",
+      "topic": "컬쳐랜드 상품권 고를 때 상품명·발행사·사용 안내 정확히 구분하는 법",
+      "date_kst": "2026-11-09",
+      "run_id": "42518532125",
+      "status": "held"
+    },
+    {
+      "source_id": "installment-record",
+      "board": "purchase",
+      "topic": "상품권 구입 전 할부 선택과 카드 청구 안내를 따로 확인하는 실제 절차",
+      "date_kst": "2026-11-09",
+      "run_id": "42518532125",
       "status": "held"
     }
   ]

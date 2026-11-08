@@ -1552,5 +1552,18 @@
     "publication_mode": "automatic",
     "run_id": "42518081717",
     "usage_file": "data/editorial_runs/2026-11-09/42518081717.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2579,
+    "topic": "주문자와 결제 정보가 다를 때 꼭 숨겨야 할 정보와 확인해야 할 내용",
+    "drafted_at": "2026-11-09",
+    "automation": true,
+    "search_intent": "주문자와 결제자가 다를 때 개인정보를 어디까지 숨기고 어떤 정보만 남겨 결제 확인을 요청할지 알고 싶은 질문",
+    "image_scene": "책상 위에 주문 확인서와 결제 메모가 나란히 놓여 있고, 한 사람이 이름과 연락처가 적힌 부분은 가리고 주문번호와 결제 수단만 남겨 보며 문의 문장을 정리하는 장면",
+    "image_alt": "주문 확인서와 결제 메모를 나란히 두고 개인정보를 가리면서 문의에 필요한 정보만 남겨 적는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42518532125",
+    "usage_file": "data/editorial_runs/2026-11-09/42518532125.json"
   }
 ]
