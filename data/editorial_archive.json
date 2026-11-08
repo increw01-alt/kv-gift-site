@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T03:53:52.444623+00:00",
+  "generatedAt": "2026-11-08T03:54:23.558717+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -3775,14 +3775,14 @@
       "runId": "42444529270",
       "dateKst": "2026-11-08",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "예산·시간·수신자 선택권 갈등을 순서대로 해결하는 방법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05728275,
+      "knownSubtotalUsd": 0.05728275
     },
     {
       "id": "post:purchase:2561",
@@ -17161,13 +17161,57 @@
     {
       "entryId": "run:42444529270",
       "dateKst": "2026-11-08",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-08T03:54:02.147408+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0079348,
+      "knownSubtotalUsd": 0.0079348,
+      "requests": 1,
+      "inputTokens": 15617,
+      "outputTokens": 1055
+    },
+    {
+      "entryId": "run:42444529270",
+      "dateKst": "2026-11-08",
+      "recordedAt": "2026-11-08T03:54:09.368898+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.02695725,
+      "knownSubtotalUsd": 0.02695725,
+      "requests": 1,
+      "inputTokens": 28731,
+      "outputTokens": 1202
+    },
+    {
+      "entryId": "run:42444529270",
+      "dateKst": "2026-11-08",
+      "recordedAt": "2026-11-08T03:54:12.930565+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0022044,
+      "knownSubtotalUsd": 0.0022044,
+      "requests": 1,
+      "inputTokens": 3639,
+      "outputTokens": 468
+    },
+    {
+      "entryId": "run:42444529270",
+      "dateKst": "2026-11-08",
+      "recordedAt": "2026-11-08T03:54:17.428406+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0035528,
+      "knownSubtotalUsd": 0.0035528,
+      "requests": 1,
+      "inputTokens": 6678,
+      "outputTokens": 551
+    },
+    {
+      "entryId": "run:42444529270",
+      "dateKst": "2026-11-08",
+      "recordedAt": "2026-11-08T03:54:23.167092+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0166335,
+      "knownSubtotalUsd": 0.0166335,
+      "requests": 1,
+      "inputTokens": 18680,
+      "outputTokens": 583
     },
     {
       "entryId": "post:purchase:2561",

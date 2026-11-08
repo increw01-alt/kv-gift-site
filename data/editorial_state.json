@@ -354,10 +354,15 @@
       "board": "gc_tip",
       "topic": "교환 물품의 옵션을 함께 고를 수 없을 때 조합을 어떻게 줄여 볼까요?",
       "run_id": "42442125913"
+    },
+    {
+      "board": "purchase",
+      "topic": "예산·시간·수신자 선택권 갈등을 순서대로 해결하는 방법",
+      "run_id": "42444529270"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "42442125913",
+  "last_board": "purchase",
+  "last_run_id": "42444529270",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
