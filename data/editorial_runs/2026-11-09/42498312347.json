@@ -3,16 +3,18 @@
   "date_kst": "2026-11-09",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-08T16:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "42498312347",
@@ -22,15 +24,112 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-09T01:08:58.148248+09:00"
+      "attempt_started_at": "2026-11-09T01:08:58.148248+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [
+          {
+            "topic": "상품권 환불 문의 시 주문·사용 여부 및 답변 이력 체계적 분류법",
+            "source_id": "refund-record",
+            "task_id": "",
+            "reader_problem": "상품권 환불 문의 전 관련 주문 내역, 실제 사용 여부, 기존 문의 답변 이력을 꼼꼼히 구분하고 정리하는 구체적 방법을 알기 어려운 상황입니다.",
+            "distinct_angle": "기존 일반 분류 안내와 달리, 환불 문의별로 ‘주문 상태 확인’, ‘사용 여부 확인’, ‘답변 이력 관리’를 세 단계로 나누어 체계적으로 분류하고 실제 문의 문서 작성법과 예시 중심으로 다룹니다.",
+            "outline": [
+              "환불 문의 전 주문 기록과 관련 정보 정확히 파악하기",
+              "상품권 사용 여부 별로 자료 분류하고 관리하는 법 배우기",
+              "과거 환불 문의 및 답변 이력을 항목별로 정리하는 구체적 방법 익히기"
+            ],
+            "reader_situation": "환불 요청이나 문의 전 주문과 사용 기록을 명확히 구분해 작성하고, 과거 답변 이력을 함께 관리해 중복 문의 없이 정확한 환불 처리를 준비하려는 상품권 판매자 및 고객센터 이용자.",
+            "deliverable": "주문과 사용 정보, 기존 답변 이력을 별도 문서나 메모장에 구분해 작성하는 체크리스트와 실제 작성 예시 문서 양식.",
+            "direction_id": "sale-69484ecae0"
+          },
+          {
+            "topic": "상품권 매입 상담 금액 제시와 공제 항목 별도 기록 정리법",
+            "source_id": "sale-fee",
+            "task_id": "",
+            "reader_problem": "매입 상담에서 받은 제시 금액과 공제 내역을 별도로 기록하는 구체적인 방법과 양식을 몰라 체계적 비교가 어려워지는 문제입니다.",
+            "distinct_angle": "일반적인 상담 기록에서 한 발 더 나아가, ‘금액 제시’, ‘공제 항목’, ‘최종 계산’을 별도 칸으로 구분해 작성하는 현장 적용 가능한 양식을 제공하며 비교 및 검증 절차까지 안내합니다.",
+            "outline": [
+              "매입 상담 시 금액과 공제 항목을 별도로 구분해 기록하기",
+              "각 공제 항목의 세부내용과 금액 근거를 별도 문서에 정리하기",
+              "기록된 내용을 비교 검증해 최종 정산 금액 판단 방법 익히기"
+            ],
+            "reader_situation": "상품권 매입 상담 중 견적 금액과 공제 내용을 명확히 구분해 적고, 차후 비교 검증에 활용하려는 판매자 또는 상담 담당자.",
+            "deliverable": "상담 시 금액 제시와 공제 항목을 구분해 기록할 수 있는 표 양식, 절차별 비교 점검 체크리스트.",
+            "direction_id": "sale-347dc67531"
+          },
+          {
+            "topic": "매입 상담 후 결정 미정 시 문의 상태 표기로 혼선 방지하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "매입 상담이 진행됐으나 판매 여부가 확정되지 않아 문의 상태가 불분명해 상대방과 소통이 혼란스러운 문제입니다.",
+            "distinct_angle": "일반 문의 종료 방식과는 달리, 결정 미정 상태임을 공식적으로 알리는 문구와 일정 기간 후 상황 재확인 절차를 포함해 명확한 소통 흐름을 설계합니다.",
+            "outline": [
+              "문의 상태를 결정 미정으로 공식 표기하는 문구 만들기",
+              "상대방과 일정 기간 후 재확인 약속을 정리하는 방법",
+              "의사결정 상태를 투명히 알리고 혼선 없이 문의를 일시 종료하는 절차 이해하기"
+            ],
+            "reader_situation": "상품권 보유자가 매입 상담 후 즉시 판매를 결정하지 못했으나 문의를 명확하게 마무리짓고 일정 기간 내 재검토할 필요가 있는 경우.",
+            "deliverable": "문의 결정 미정 시 활용할 공식적 문자 예시와 예상 상황별 후속 조치 계획표.",
+            "direction_id": "sale-e24e80a517"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 465,
+          "coverageArticles": 129,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-e24e80a517",
+            "sale-69484ecae0",
+            "sale-be8f258b08"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20231,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 20096
+          },
+          "output_tokens": 925,
+          "output_tokens_details": {
+            "reasoning_tokens": 315
+          },
+          "total_tokens": 21156
+        },
+        "estimated_usd": 0.00577095,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-08T16:09:08.130168+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-08T16:09:01.989411+00:00",
+        "usage_record_index": 0
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.00577095,
+    "estimated_total_usd": 0.00577095,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
