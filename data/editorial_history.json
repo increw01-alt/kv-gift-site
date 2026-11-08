@@ -1539,5 +1539,18 @@
     "publication_mode": "automatic",
     "run_id": "42517654396",
     "usage_file": "data/editorial_runs/2026-11-09/42517654396.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 48,
+    "topic": "접힌 안내지의 조건이 떨어져 있을 때 어떤 문장끼리 연결해 읽을까요?",
+    "drafted_at": "2026-11-09",
+    "automation": true,
+    "search_intent": "접힌 안내지에서 떨어진 조건 문장을 지시어와 표시 기호로 연결해 읽는 방법",
+    "image_scene": "책상 위에 펼쳐 놓은 상품권 안내지의 앞면과 뒷면을 나란히 두고, 가운데에는 돋보기와 형광펜, ‘해당’ 표시와 별표가 적힌 메모지가 놓여 있다. 한 사람이 앞면 문장과 뒷면 각주 문장을 손가락으로 짚으며 같은 대상과 예외를 연결해 표시하는 구도다.",
+    "image_alt": "안내지 앞면과 뒷면의 조건 문장을 돋보기와 형광펜으로 연결해 읽는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42518081717",
+    "usage_file": "data/editorial_runs/2026-11-09/42518081717.json"
   }
 ]
