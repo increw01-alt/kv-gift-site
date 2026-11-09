@@ -3,16 +3,18 @@
   "date_kst": "2026-11-10",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-09T23:32:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "42721341989",
@@ -22,15 +24,158 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T08:33:58.282407+09:00"
+      "attempt_started_at": "2026-11-10T08:33:58.282407+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [
+          {
+            "topic": "상품권 안내 읽던 중 새 화면이 뜰 때 원위치 안전 복원법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "안내 내용을 읽다가 새 창이나 설치 화면이 뜨면 원래 보던 위치와 선택 상태를 잃어 당황하는 이용자를 위해, 안전하게 이전 위치로 돌아가는 구체 절차와 대응법 안내가 필요하다.",
+            "distinct_angle": "기존 일반 안내와 달리 실제 복원 행동과 선택 상태 비교, 권한 요청 처리 방법을 구체적으로 안내하여 안내 중단 시 혼란 완화에 초점.",
+            "outline": [
+              "안내 내 위치와 선택 상태 기록하는 방법 배우기",
+              "새 창 방문 후 현재와 이전 상태 비교 및 복원법 숙지하기",
+              "설치 및 권한 요청 시 당황하지 않고 안내문으로 복귀하는 구체 행동 실천하기"
+            ],
+            "reader_situation": "모바일이나 PC에서 안내문을 보다가 갑작스러운 팝업이나 설치 요청 등으로 읽던 위치를 잃어 다시 확인이 어려워지는 이용자.",
+            "deliverable": "읽던 위치 저장법과 외부 화면 다녀온 뒤 원위치 복원 절차, 권한 요청 화면 안전 대응 지침의 행동 가이드 문서.",
+            "direction_id": "general_notice-aaabcd4b83"
+          },
+          {
+            "topic": "키보드 사용자 위한 안내 링크 선택 위치 알기와 이동법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "마우스 없이 키보드로 게시판 링크를 이동하면서 현재 선택된 위치를 찾기 어려워 헤매는 이용자를 위해, 키보드 이용 시 링크 선택 위치 표시와 탐색 방법을 체계적으로 알려야 한다.",
+            "distinct_angle": "단순 안내가 아니라 실제 탭 키로 선택 위치 파악, 이전 항목 이동, 실행까지 단계별 탐색 행동을 강조한 실습 중심 가이드 제공.",
+            "outline": [
+              "탭 키로 다음 링크 선택 위치 감지법 익히기",
+              "시프트탭으로 이전 링크 돌아가기 방법 실습하기",
+              "선택 위치 표시에 집중해 링크 실행 절차 확인하기"
+            ],
+            "reader_situation": "마우스를 사용하지 않고 키보드 탭 및 시프트탭으로 웹 게시판 링크 이동을 배우려는 사용자.",
+            "deliverable": "키보드 탭 이동 시 현재 선택 위치 인지법, 이전 링크 확인법, 실행 시 선택 위치 표시 확인 행동 지침이 담긴 안내서.",
+            "direction_id": "general_notice-267ab13e4e"
+          },
+          {
+            "topic": "검색 글 수정 기록과 현재 본문 구분 읽기 요령 안내",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "검색 중 찾은 글의 수정 기록과 현재 본문 내용을 혼동해 정확한 최신 안내를 이해하지 못하는 이용자 문제 해결 방법이 부족하다.",
+            "distinct_angle": "기존 단순 설명과 달리 실제 수정 기록과 본문 내용 비교 및 최신화 판단법을 구체적 행동 단계로 안내하는 점 차별.",
+            "outline": [
+              "수정 기록과 본문 내용 차이 이해하기",
+              "검색 결과에서 최신 본문과 수정 이력 비교하는 방법 익히기",
+              "최신 버전 정보 확인과 판단 행동 단계 실습하기"
+            ],
+            "reader_situation": "인터넷 검색으로 안내를 찾을 때 글의 수정 기록과 현재 내용이 다를 수 있음을 인지하지 못해 정보 신뢰성 판단이 어려운 사용자.",
+            "deliverable": "수정 기록과 본문 동시에 열람해 차이점 비교하는 행동법과 최신 정보 확인 절차가 포함된 실용 가이드.",
+            "direction_id": "general_notice-6724f45795"
+          },
+          {
+            "topic": "이미지 없는 의미 있는 링크 설명 작성과 공유법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "정보를 공유할 때 이미지 첨부 없이도 어떤 내용인지 알 수 있도록 의미 있는 링크 설명을 만드는 구체적인 방법을 몰라 활용이 제한된다.",
+            "distinct_angle": "일반 안내가 아니라 링크 설명 작성법과 공유 시 수신자가 쉽게 이해하도록 하는 구체적 표현법과 예시 중심 실천 안내.",
+            "outline": [
+              "단순 링크와 의미 있는 설명 차이점 파악하기",
+              "목적과 연결 대상 담은 명확한 링크 설명 작성 요령 익히기",
+              "실제 예시로 ‘여기’ 링크를 구체적 설명으로 전환 연습하기"
+            ],
+            "reader_situation": "게시판이나 메신저에서 링크만 나열할 때 ‘여기’ 대신 목적과 내용을 정확히 전달해 공유 효율을 높이고 싶은 이용자.",
+            "deliverable": "‘여기’ 대신 의미 있는 설명으로 바꾸는 문장 작성법, 공유 예시, 효과 설명이 포함된 실전 매뉴얼.",
+            "direction_id": "general_notice-98b2d68a1d"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 500,
+          "coverageArticles": 133,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-6724f45795",
+            "general_notice-98b2d68a1d",
+            "general_notice-aaabcd4b83",
+            "general_notice-267ab13e4e"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 14661,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 997,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15658
+        },
+        "estimated_usd": 0.0074596,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T23:34:10.217946+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 28798,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1228,
+          "output_tokens_details": {
+            "reasoning_tokens": 505
+          },
+          "total_tokens": 30026
+        },
+        "estimated_usd": 0.0271245,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T23:34:17.108907+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T23:34:01.140788+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T23:34:10.811590+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0345841,
+    "estimated_total_usd": 0.0345841,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
