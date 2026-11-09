@@ -1,18 +1,20 @@
 {
   "run_id": "42539422195",
   "date_kst": "2026-11-09",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-09T00:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 거의 그대로 반복합니다. 첫 번째는 주문자와 결제 정보가 다를 때 숨길 정보와 최소 확인 항목을 구분하는 문제로, /board/purchase/2579가 같은 독자 상황과 답을 다뤘습니다. 두 번째는 문의용 화면 캡처에서 오류 문구만 남기고 개인정보를 제외하는 문제로, /board/general_notice/56과 /board/general_notice/42가 같은 확인 기준과 실행 절차를 이미 제시했습니다. 기존 답만으로 해결되지 않는 새 판단 기준이나 추가 단계가 확인되지 않아 보류합니다. / 0번은 /board/purchase/2579가 이미 해결한 ‘주문자와 결제 정보가 다를 때 숨겨야 할 정보와 확인해야 할 내용’과 동일합니다. 개인정보를 숨기고 주문 번호, 구매 상품명, 결제 수단 구분만 남기라는 핵심 질문과 답이 같아 새 해결 단계가 없습니다. / 1번은 /board/general_notice/56과 /board/general_notice/42가 이미 해결한 ‘문의 화면에서 오류 문구는 남기고 개인정보와 사용 정보는 가려서 캡처하는 방법’과 동일합니다. 오류 화면에서 필요한 정보와 제외할 부분을 나누는 절차가 기존 글과 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "42539422195",
@@ -22,15 +24,144 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-09T09:18:59.381321+09:00"
+      "attempt_started_at": "2026-11-09T09:18:59.381321+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 485,
+          "coverageArticles": 132,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-6724f45795",
+            "general_notice-50bee5625a",
+            "general_notice-5314ce870e",
+            "general_notice-d976b28d45"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "결제자와 주문자가 다를 때 개인정보 보호하며 안전하게 확인하는 방법",
+          "source_id": "",
+          "reader_problem": "주문자와 결제 정보가 달라도 개인정보 침해 없이 확인해야 할 정보를 구분하지 못해 문의 시 불필요한 개인정보 노출이나 혼선이 발생하는 문제",
+          "distinct_angle": "기존 글들은 단순 정보 나열에 그친 경향이 있으나, 본 글은 중요 정보와 비공개 정보를 명확히 구분하고, 안전하게 결제 여부를 확인하는 구체적 절차 및 대화법과 문서 작성 팁을 함께 안내한다는 점에서 차별화됨",
+          "reader_situation": "상품권 주문자는 결제자와 정보가 달라 개인 정보를 보호하면서도 필요한 결제 사실을 신속하고 명확하게 확인하려는 이용자",
+          "deliverable": "비공개로 유지할 개인정보 항목 정의표, 최소한의 정보 범위와 안전한 확인 절차 안내, 담당자와 개인정보 노출 없는 커뮤니케이션 구체법을 담은 실용 가이드",
+          "task_id": "",
+          "direction_id": "general_notice-d976b28d45",
+          "outline": [
+            "주문자와 결제자 개인정보 항목 중 비공개로 유지해야 할 정보 정의하기",
+            "결제 확인에 필요한 최소 정보 범위와 단계별 확인 절차 익히기",
+            "담당자와 안전하고 효율적인 의사소통을 위한 대화 및 문서 작성 팁 안내"
+          ]
+        },
+        {
+          "topic": "상품권 문의 첨부파일은 필요한 부분만 골라 개인정보 제외하고 준비하는 요령",
+          "source_id": "",
+          "reader_problem": "문의 시 첨부파일에 오류 화면 외에 불필요한 대화나 개인정보가 포함되어 상담의 정확성과 개인정보 보호에 어려움이 생기는 상황",
+          "distinct_angle": "기존 글들은 첨부파일 주의만 간단히 다루는 데 반해, 이번 글은 오류 화면에서 꼭 포함해야 할 정보와 제외할 부분을 구분하는 구체적 방법, 개인정보 보호법 관점에서 안전한 첨부 파일 준비법과 실제 캡처 범위 정하는 절차를 상세히 안내하는 점이 새로움",
+          "reader_situation": "오류 화면을 첨부해 문의하고자 하는 이용자가 어떤 화면과 정보만 캡처해 파일을 준비해야 하는지 혼란을 겪고 정확한 첨부 절차를 알고자 하는 경우",
+          "deliverable": "오류 화면에서 꼭 필요한 정보와 개인정보 또는 무관 내용 제외 기준, 적절한 파일 범위 선택 및 캡처·저장 실제 방법을 담은 실용 가이드와 예시 자료",
+          "task_id": "",
+          "direction_id": "general_notice-50bee5625a",
+          "outline": [
+            "오류 화면 내 문의에 꼭 필요한 정보 항목을 구분하는 방법 익히기",
+            "개인정보와 대화 내용 등 제외할 부분 식별 및 제거 노하우 안내",
+            "적절한 첨부파일을 선택하여 캡처·저장하는 실제 절차 단계별 안내"
+          ]
+        },
+        {
+          "topic": "모임에서 선물 취향을 부담 없이 비공개로 묻는 질문 설계법",
+          "source_id": "",
+          "reader_problem": "모임에서 선물 취향을 공개적으로 묻기 부담스러워서 비공개 방식이나 다른 편리한 질문 방법을 찾고자 하지만 구체적 설계와 비교 기준을 몰라 고민하는 상황",
+          "distinct_angle": "기존에는 공개나 비공개 방식 장단원 소개에 그쳤다면, 이번 글은 다양한 응답 방식별 편의성과 부담을 비교하고, 민감사항 없이 사용할 수 있는 구체적 질문 설계 원리 및 실제 질문 리스트 예시를 제공하는 실용 안내로 차별성 있음",
+          "reader_situation": "모임 선물 준비에서 최소한의 부담으로 자연스럽게 참여자의 선호를 파악하려는 주최자 또는 참여자",
+          "deliverable": "공개 질문과 비공개 답변 방식의 편리함과 부담 비교 분석, 민감 질문 없이 설계하는 원리, 실제 적용 가능한 질문 사례와 활용법 포함 안내 자료",
+          "task_id": "",
+          "direction_id": "general_notice-5314ce870e",
+          "outline": [
+            "공개 질문과 비공개 응답 방식의 장단점 및 부담 비교하기",
+            "민감한 사정을 요구하지 않는 무난한 질문 설계 원리 이해하기",
+            "실제 모임에서 사용할 수 있는 부담 없는 질문 리스트 제작과 활용법 적용하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15230,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1280,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16510
+        },
+        "estimated_usd": 0.00814,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T00:19:11.738663+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24012,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 481,
+          "output_tokens_details": {
+            "reasoning_tokens": 152
+          },
+          "total_tokens": 24493
+        },
+        "estimated_usd": 0.0201735,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T00:19:16.260687+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T00:19:02.371322+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T00:19:12.484922+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0283135,
+    "estimated_total_usd": 0.0283135,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
