@@ -1,18 +1,20 @@
 {
   "run_id": "42643246374",
   "date_kst": "2026-11-10",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sense",
+  "topic": "문서에서 사실과 의견 문장 분리하여 명확히 표현하는 법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-09T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 ‘메모에서 본 사실과 내 의견을 어떻게 구분해 쓸까요?’와 질문, 독자 상황, 해결 절차가 거의 같아 사실·의견 구분과 재작성 안내가 반복됩니다. / 문장을 사실과 의견으로 나누는 기준, 따로 정리하는 방식, 다시 쓰고 검토하는 순서가 기존 본문과 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "42643246374",
@@ -22,15 +24,280 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T00:19:02.812221+09:00"
+      "attempt_started_at": "2026-11-10T00:19:02.812221+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [
+          {
+            "topic": "공용 물건의 위치 표시와 사용 중 표시 체계화하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "같은 공동 물건인데 위치 표시와 사용 상태 표시가 불분명해 분실과 사용 중 구분이 어려움",
+            "distinct_angle": "단순 위치 표시가 아닌 임시 위치 및 사용 상태 표시를 구체적 규칙과 표시 수단으로 분리하여 분쟁 방지 해결",
+            "outline": [
+              "물건의 정상 위치와 임시 이동 위치 구분 규칙 마련하기",
+              "사용 중임을 알리는 명확하고 간단한 표시 방법 개발 및 적용하기",
+              "사용 후 제자리 배치 및 확인하는 점검 절차와 생활 규칙 정착하기"
+            ],
+            "reader_situation": "공동 생활 공간이나 사무실에서 여러 사람이 함께 쓰는 물품의 현재 위치와 사용 상황을 명확히 구분하고자 하는 관리자나 이용자",
+            "deliverable": "물건 제자리와 임시 위치 구분 규칙, 사용 중 표시 수단, 점검 및 되돌림 확실한 운영 지침",
+            "direction_id": "sense-56c6566f35"
+          },
+          {
+            "topic": "중요한 알림만 선별해 개인 일정에 효율적으로 관리하는 방법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "모든 알림을 켜서 스트레스 받거나 모두 꺼서 중요한 약속 놓치는 딜레마 해결할 방법 필요",
+            "distinct_angle": "알림 종류별 분류 후 중요도·긴급성 기준 우선순위 결정, 생활 맞춤 알림 확인 순서 시스템 구축 절차 안내",
+            "outline": [
+              "수신하는 알림들을 유형별로 체계적으로 분류하는 방법 익히기",
+              "중요성과 긴급성에 따라 알림을 구분하고 우선순위를 정하기",
+              "일상에서 알림을 효과적으로 확인하고 대응하는 개인별 관리 프로세스 만들기"
+            ],
+            "reader_situation": "일상에서 각종 알림을 모두 다 켜는 습관 때문에 피로감을 느끼거나 모두 꺼서 주요 연락을 놓치는 사용자",
+            "deliverable": "알림 종류 분류법, 중요도 기준 알림 필터링 체크리스트, 효과적 확인과 대응을 위한 개인 알림 관리 계획안",
+            "direction_id": "sense-46678bb4d0"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 488,
+          "coverageArticles": 132,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-d926083876",
+            "sense-56c6566f35",
+            "sense-7b5b6bc638",
+            "sense-46678bb4d0"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "복잡한 설명 전달 시 정의와 예시를 분리하는 효과적 전달법",
+          "source_id": "",
+          "reader_problem": "어려운 개념을 전달할 때 정의와 예시를 명확히 나누지 않아 상대가 이해와 적용에 어려움을 겪음",
+          "distinct_angle": "기존 단편적 예시 소개 대신 정의 간결 작성, 긍정·부정 예시 선정, 구분 전달 연습법을 함께 안내",
+          "reader_situation": "추상적 개념이나 복잡한 내용을 쉽게 풀어 다른 사람에게 설명하고자 노력하는 일반인 또는 교육자",
+          "deliverable": "간결 정의 작성법, 대표적 예와 반대 예 선정 기준, 구분 설명 연습 및 점검 가이드",
+          "task_id": "",
+          "direction_id": "sense-7b5b6bc638",
+          "outline": [
+            "정의를 쉽게 간결하게 작성하는 핵심 요령 익히기",
+            "정의에 부합하는 적절한 예와 경계가 분명한 반대 예 선정하기",
+            "정의와 예시를 구분해 명확히 전달하는 연습과 자기 점검법"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "문서에서 사실과 의견 문장 분리하여 명확히 표현하는 법",
+        "source_id": "",
+        "reader_problem": "메모나 기록에서 사실과 개인 의견이 섞여 전달되어 해석 혼란과 오해가 발생하는 문제",
+        "distinct_angle": "기존 단순 나열 안내에서 벗어나 실질 편집 과정 중심으로 문장 유형 구분법과 재작성 연습까지 구체적 절차 제공",
+        "reader_situation": "직장이나 개인 기록 작성 중 사실과 주관적 의견을 명확하게 나누어 메모를 개선하고자 하는 사용자",
+        "deliverable": "사실과 의견 문장을 구분하는 편집 기준, 표시 방법, 분리 재작성 샘플 연습 자료",
+        "task_id": "",
+        "direction_id": "sense-d926083876",
+        "outline": [
+          "문장별 사실과 의견 구분하는 명확한 기준 배우기",
+          "사실 중심 문장과 의견 중심 문장 따로 분리하는 편집 방법 실습",
+          "분리된 문장을 활용해 혼동 없이 전달하는 재작성과 검토 연습하기"
+        ],
+        "novelty_reason": "첫 번째 후보는 메모나 기록에서 사실과 의견이 섞이는 문제를 다루며, 문장 유형을 판별한 뒤 실제 문장을 다시 쓰는 편집 과정까지 넣고 있어 가장 구체적입니다. 가까운 기존 글들은 문의나 메시지에서 내용을 나누는 방식은 다뤘지만, 사실과 주관을 구분하는 판단 기준과 재작성 연습을 함께 제시하지는 않았습니다. 두 번째와 세 번째 후보는 기존 메시지 정리형 글과 해결 절차가 많이 겹치고, 네 번째 후보는 알림 분류와 우선순위 정리로 이미 있는 정리형 안내와 방향이 비슷합니다.",
+        "screen_rejections": [
+          "두 번째 후보는 공용 물건의 위치와 사용 중 표시를 나누는 구성은 실용적이지만, 기존 메시지 정리와 상태 표시 안내의 연장선에 있어 새 판단 기준이 충분히 드러나지 않습니다.",
+          "세 번째 후보는 정의와 예시를 분리하는 문제인데, 기존의 어려운 설명에서 정의와 예시를 나누는 방법을 다룬 글과 질문과 해결 절차가 거의 같습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/60",
+            "/board/sense/19"
+          ],
+          "gap": "기존 글은 내용을 구분해 적는 수준에 머물러 있어, 사실 문장과 의견 문장을 판별한 뒤 각각을 어떻게 다시 쓰는지까지는 충분히 다루지 않습니다. 이번 글은 문장에 담긴 정보의 성격을 먼저 가르고, 섞여 있는 문장을 실제 전달용 문장으로 바꾸는 판단과 편집 순서를 보완해야 합니다.",
+          "example": "회의 메모에 ‘자료가 늦게 와서 불편했고, 다음에는 미리 받으면 좋겠다’처럼 사실과 느낌이 함께 적힌 경우, 먼저 실제 있었던 일과 개인 판단을 따로 표시한 뒤 각각을 짧게 다시 써 보는 상황을 설명합니다. 이때 사실은 확인 가능한 일로, 의견은 느낀 점으로 나누어 적는 방식이 필요합니다.",
+          "result": "독자는 섞여 있던 문장을 사실과 의견으로 분리해 읽고, 필요하면 같은 내용을 오해가 적은 기록 문장으로 다시 쓸 수 있게 됩니다.",
+          "section_actions": [
+            "문장마다 확인 가능한 사실인지 개인 판단인지 먼저 가려 적고, 섞인 표현은 표시를 달리해 구분하는 방법을 익힙니다.",
+            "사실 문장은 짧고 검증 가능한 표현으로, 의견 문장은 느낀 점과 평가가 드러나게 다시 쓰는 연습을 합니다.",
+            "분리한 문장을 함께 놓고 읽어 보며 오해가 생길 만한 표현을 줄이고, 전달 목적에 맞는 최종 문장으로 다듬는 절차를 적용합니다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "문서에서 사실과 의견 문장 분리하여 명확히 표현하는 법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-09T09:58:03Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15165,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 960,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16125
+        },
+        "estimated_usd": 0.007602,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:19:15.390793+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30546,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1029,
+          "output_tokens_details": {
+            "reasoning_tokens": 387
+          },
+          "total_tokens": 31575
+        },
+        "estimated_usd": 0.02754,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T15:19:21.472276+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3440,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 475,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3915
+        },
+        "estimated_usd": 0.002136,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:19:25.758874+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7240,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 458,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7698
+        },
+        "estimated_usd": 0.0036288,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:19:33.019867+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18660,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 400,
+          "output_tokens_details": {
+            "reasoning_tokens": 146
+          },
+          "total_tokens": 19060
+        },
+        "estimated_usd": 0.015795,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T15:19:39.549142+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T15:19:05.792395+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T15:19:16.058899+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T15:19:21.475686+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T15:19:27.135388+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T15:19:35.228897+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0567018,
+    "estimated_total_usd": 0.0567018,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
