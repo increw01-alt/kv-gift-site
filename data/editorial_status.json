@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T15:54:03.767195+00:00",
+  "generatedAt": "2026-11-09T15:55:21.825667+00:00",
   "dateKst": "2026-11-10",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 2,
   "held": 1,
   "errors": 0,
-  "knownSubtotalUsd": 0.0567018,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.18735685,
+  "estimatedTotalUsd": 0.18735685,
   "records": [
     {
       "runId": "42643246374",
@@ -27,16 +27,16 @@
     },
     {
       "runId": "42649102968",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "공유 물품 사용 시 편의성 유지와 원상복구 책임 합의하기",
+      "url": "https://kv-gift.co.kr/board/free/484",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-09T15:52:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.13065505,
+      "knownSubtotalUsd": 0.13065505
     }
   ],
   "topicRetry": {

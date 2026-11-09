@@ -1565,5 +1565,18 @@
     "publication_mode": "automatic",
     "run_id": "42518532125",
     "usage_file": "data/editorial_runs/2026-11-09/42518532125.json"
+  },
+  {
+    "board": "free",
+    "id": 484,
+    "topic": "공유 물품 사용 시 편의성 유지와 원상복구 책임 합의하기",
+    "drafted_at": "2026-11-10",
+    "automation": true,
+    "search_intent": "공유 물품을 편하게 쓰면서 사용 후 원상복구 책임을 어디까지 나눌지 정리하려는 질문",
+    "image_scene": "공유 주방의 싱크대 옆에 질문 카드와 체크 메모지가 놓여 있고, 한 사람이 ‘사용 중 허용 행동’, ‘사용 후 복구 범위’, ‘예외 상황’이라고 적힌 세 장의 카드를 나란히 비교하며 정리하는 장면",
+    "image_alt": "공유 주방의 싱크대 옆에서 한 사람이 사용 중 허용 행동과 원상복구 범위를 적은 질문 카드를 비교하며 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42649102968",
+    "usage_file": "data/editorial_runs/2026-11-10/42649102968.json"
   }
 ]

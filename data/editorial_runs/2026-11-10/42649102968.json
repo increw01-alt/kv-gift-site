@@ -1,17 +1,27 @@
 {
   "run_id": "42649102968",
   "date_kst": "2026-11-10",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "free",
+  "topic": "공유 물품 사용 시 편의성 유지와 원상복구 책임 합의하기",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/free/484",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-09T15:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,343 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T00:54:03.548266+09:00"
+      "attempt_started_at": "2026-11-10T00:54:03.548266+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 490,
+          "coverageArticles": 132,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-b65d41dcec",
+            "free-33a0543960",
+            "free-e3b569a136",
+            "free-494c9616de"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "선물용 상품권 금액 배분 시 공정하고 손쉬운 기준 세우기",
+          "source_id": "",
+          "reader_problem": "여러 수신자에게 맞춰 여러 금액대 상품권을 선물할 때 공평성을 유지하며 결정하는 구체적 기준이나 방법을 모른다.",
+          "distinct_angle": "기존 글들이 단일 금액이나 단순 공평함 판단만 다루었으나, 이 글은 다양한 금액 조합을 공정하게 배분하는 방법과 실제 계획표를 직접 완성하도록 안내한다.",
+          "reader_situation": "모임이나 가족 등에서 각자 다른 필요와 예산에 맞춰 선물 금액을 조율하며, 공평함과 편리함을 잃지 않고 조정안을 짜려고 하는 독자.",
+          "deliverable": "여러 명 선물 대상자별 적절한 금액 배분표와 공평성 판단 질문표를 직접 완성하고, 최종 배분안을 결정하는 체계적 방법.",
+          "task_id": "",
+          "direction_id": "free-b65d41dcec",
+          "outline": [
+            "선물 대상자별 필요한 금액 범위와 예산 한도 기록하기",
+            "공평함 기준별 차이와 장점 단점 정리하기",
+            "각 기준에 따른 금액 배분표 양식을 만들어 실제 사례에 적용해 보기"
+          ]
+        },
+        {
+          "topic": "선물 계획에서 확정과 선택 여지를 남기는 부담 차이 비교",
+          "source_id": "",
+          "reader_problem": "선물 계획 과정에서 모든 내용을 미리 확정하는 것과 일부를 열어 두는 것 중 어떤 방식이 부담을 줄여주는지 판단하기 어렵다.",
+          "distinct_angle": "단순 계획법 설명을 넘어서, 확정 방식과 선택 여지 방식 각각의 심리적 부담과 실제 상황 적용 효과 비교를 구체적 질문과 표로 제시한다.",
+          "reader_situation": "단체 선물이나 가족 선물을 준비하면서 전체를 빠르고 명확히 확정할지, 개별 선택 기회를 두어 융통성을 높일지 결정하고 싶은 소비자.",
+          "deliverable": "확정 방식과 열린 선택 방식의 부담 정도를 비교 분석하는 질문지 및 상황별 의사결정 지원 표.",
+          "task_id": "",
+          "direction_id": "free-e3b569a136",
+          "outline": [
+            "확정 계획과 선택 여지 두 방식의 핵심 차이 질문 정리",
+            "각 방식이 가져오는 부담과 이점 실제 사례별 비교",
+            "독자 상황에 맞는 적합 방식 선택을 돕는 판단 기준 마련"
+          ]
+        },
+        {
+          "topic": "빠른 결정과 의견 수렴 충돌 시 현명한 결정권 배분 방법 모색",
+          "source_id": "",
+          "reader_problem": "의견이 많아 결정이 늦어지는데, 빠른 결정을 원하면서도 다수의 의견을 수렴하는 과정이 충돌해 어떤 결정권 분배가 좋을지 헷갈린다.",
+          "distinct_angle": "기존 글들은 단순 토론 진행법에 그쳤지만, 본 글은 충돌 상황별 적절한 결정권 위임 기준과 구체적 질문을 중심으로 실용적으로 안내한다.",
+          "reader_situation": "팀이나 가족, 모임에서 빠른 실행이 필요한 상황에서 의견 수렴과 신속 결정 간 균형 잡기를 고민하는 책임자와 참여자.",
+          "deliverable": "의견 충돌 상황별 결정권 위임 기준과 대화 질문 리스트, 그리고 권한 배분 후 조치 안내 계획서.",
+          "task_id": "",
+          "direction_id": "free-494c9616de",
+          "outline": [
+            "빠른 결정과 의견 수렴 충돌 유형별 문제점 분석",
+            "충돌 상황에 따른 결정권 위임 가능 기준 질문 도출",
+            "구체적 사례별 권한 배분과 조치 절차 설계 및 실습"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "공유 물품 사용 시 편의성 유지와 원상복구 책임 합의하기",
+        "source_id": "",
+        "reader_problem": "공동으로 쓰는 물건을 사용할 때 편리하게 쓰면서도 사용 후 원래 상태로 돌려놓는 책임 소재와 방법을 명확히 정하지 않아 자주 다툼이 생긴다.",
+        "distinct_angle": "기존 안내는 사용 규칙 설정에 초점을 뒀으나, 이번 글은 편리성 유지와 원상복구 책임을 함께 고려한 실용적 질문과 합의 문서 작성법으로 차별화한다.",
+        "reader_situation": "공유 사무실, 가족 집기, 모임 물품 등 공동 사용 물품을 효율적으로 사용하면서 책임 문제를 합리적이고 투명하게 처리하려는 상황의 독자.",
+        "deliverable": "사용 중 편리성 높이기와 사용 후 상태 복구 책임 범위를 정하는 합의서 초안과 책임 분배가 명확해지는 질문 리스트.",
+        "task_id": "",
+        "direction_id": "free-33a0543960",
+        "outline": [
+          "사용 편의를 높이는 구체적 행동과 규칙 목록 작성하기",
+          "사용 후 원상복구 책임과 범위 정리 질문 만들기",
+          "작성한 내용으로 실용적인 합의서 초안 및 책임 분담안 설계하기"
+        ],
+        "novelty_reason": "공유 물품을 쓸 때의 핵심 질문을 ‘편하게 쓰는 방법’에서 ‘사용 편의와 원상복구 책임을 함께 어떻게 합의할지’로 옮겨, 단순 이용 조건 점검이나 선물 후 사용 편의 안내와는 다른 결정을 요구합니다. 가장 가까운 기존 글은 선물받은 뒤 사용 편의를 높이는 안내였지만, 이번 후보는 공동 사용 중의 책임 범위와 복구 기준을 나눠 정하는 실무 단계까지 다룹니다.",
+        "screen_rejections": [
+          "영번은 여러 사람에게 상품권 금액을 어떻게 나눌지 정하는 문제로, 기존의 예산·용도·공평성 기준을 다시 묶은 수준입니다. 이미 해결한 질문은 여러 수신자에게 맞춰 금액을 배분하고 표로 정리하는 방법입니다.",
+          "이번은 확정 방식과 선택 여지를 비교해 부담을 줄이는 질문으로, 기존의 선물 선택권, 비교표, 부담 조정 안내와 질문과 절차가 거의 같습니다. 이미 해결한 질문은 선물 계획에서 닫힌 결정과 열린 선택을 어떻게 고를지 판단하는 방법입니다.",
+          "삼번은 빠른 결정과 의견 수렴이 충돌할 때 권한을 어떻게 나눌지 다루지만, 기존의 의견 조율과 우선 합의 기준, 재논의 조건 글들과 해결 순서가 겹칩니다. 이미 해결한 질문은 선물이나 의견 조율에서 합의 기준을 정하고 결정권을 배분하는 방법입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/free/470"
+          ],
+          "gap": "기존 글은 사용 전 조건 확인이나 사용 편의를 돕는 질문에 머뭅니다. 이번 글은 여러 사람이 함께 쓰는 물품에서 ‘얼마나 편하게 쓸 수 있는가’와 ‘쓴 뒤 어디까지 원래대로 돌려놓을 책임이 있는가’를 함께 정해, 사용 중 편의와 사후 복구 책임을 분리해 판단하게 해야 합니다.",
+          "example": "공유 공간에서 한 사람이 주방 도구를 자주 쓰지만, 사용 뒤 정리 정도가 사람마다 다를 때를 떠올려 보세요. 이때는 그냥 편하게 쓰는 규칙만 정하지 말고, 사용 중 허용되는 방식과 사용 뒤 복구 범위를 따로 적어 두는 편이 좋습니다.",
+          "result": "독자는 공동 사용 물품마다 편의 허용 범위와 원상복구 책임 범위를 나눠 정하고, 서로 다른 상황에서도 같은 기준으로 합의안을 만들 수 있습니다.",
+          "section_actions": [
+            "사용 중 편의에 필요한 허용 행동을 먼저 적고, 허용 이유와 제한 이유를 함께 구분해 적도록 돕는다.",
+            "사용 후 원상복구의 범위를 항목별로 나눠 적고, 누가 어디까지 맡는지 서로 확인하게 한다.",
+            "합의서 초안에 예외 상황과 재조정 기준을 넣어, 실제 사용 뒤에도 바로 적용할 수 있게 한다."
+          ]
+        }
+      },
+      "board": "free",
+      "topic": "공유 물품 사용 시 편의성 유지와 원상복구 책임 합의하기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-09T09:58:03Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "공유 물품을 편하게 쓰면서 사용 후 원상복구 책임을 어디까지 나눌지 정리하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15283,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1085,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16368
+        },
+        "estimated_usd": 0.0078492,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:54:17.471857+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 28245,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1064,
+          "output_tokens_details": {
+            "reasoning_tokens": 381
+          },
+          "total_tokens": 29309
+        },
+        "estimated_usd": 0.02597175,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T15:54:27.351432+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3537,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 492,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4029
+        },
+        "estimated_usd": 0.002202,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:54:34.464939+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7339,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 545,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7884
+        },
+        "estimated_usd": 0.0038076,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:54:40.098531+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18504,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 392,
+          "output_tokens_details": {
+            "reasoning_tokens": 221
+          },
+          "total_tokens": 18896
+        },
+        "estimated_usd": 0.015642,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T15:54:46.190238+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3602,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1106
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4974
+        },
+        "estimated_usd": 0.066658,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T15:55:15.296658+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 10328,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 173,
+          "output_tokens_details": {
+            "reasoning_tokens": 108
+          },
+          "total_tokens": 10501
+        },
+        "estimated_usd": 0.0085245,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T15:55:20.398311+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T15:54:06.568692+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T15:54:18.251920+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T15:54:27.354491+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T15:54:35.904577+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T15:54:42.326949+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-09T15:54:46.209947+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T15:55:16.777011+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.13065505,
+    "estimated_total_usd": 0.13065505,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
