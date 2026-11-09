@@ -1,18 +1,20 @@
 {
   "run_id": "42682794472",
   "date_kst": "2026-11-10",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-09T19:22:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 거의 그대로 반복합니다. 0번은 /board/gc_information/11이 다룬 ‘구매 영수증과 상품권 화면의 차이와 쓰임새’와 질문, 독자 상황, 활용 단계가 동일합니다. 1번은 /board/sale/3699와 /board/general_notice/53이 이미 다룬 ‘조건이 다른 안내를 같은 기준으로 비교하고, 판단을 보류한 뒤 문의 준비를 하는 방법’과 핵심 해결 흐름이 겹칩니다. 기존 답만으로 처리되지 않는 새 판단 기준이나 추가 실행 단계가 본문에서 확인되지 않아 선정할 수 없습니다. / 0번은 /board/gc_information/11이 이미 해결한 ‘구매 영수증과 상품권 화면의 역할과 쓰임새를 구분하는 방법’과 같습니다. 결제 내역 증빙과 사용 화면의 기능 차이를 설명하고 보관·활용 기준을 나누는 질문이 그대로 반복되어 새 해결 내용이 없습니다. / 1번은 /board/sale/3699가 이미 해결한 ‘서로 다른 조건의 견적이나 안내를 같은 기준으로 비교하고 조건이 다르면 보류하는 방법’과, /board/general_notice/53이 다룬 ‘답변이 다를 때 같은 주문과 상품인지 먼저 확인하는 방법’과 겹칩니다. 충돌 조건을 정리해 문의하라는 절차만 반복될 뿐, 기존 답으로는 해결되지 않는 별도 판단 기준이 보이지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42682794472",
@@ -22,15 +24,129 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T04:23:55.817836+09:00"
+      "attempt_started_at": "2026-11-10T04:23:55.817836+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 494,
+          "coverageArticles": 133,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-bb1dae521b",
+            "gc_information-cfcea2023c",
+            "gc_information-ea0a585402",
+            "gc_information-59dfa4f23c"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 구매 영수증과 상품권 화면 기능 차이 이해하기",
+          "source_id": "",
+          "reader_problem": "상품권 구매 후 받은 영수증과 상품권 화면의 역할과 사용 시기를 명확히 구분하지 못해 보관과 문의 등에서 혼란이 있음",
+          "distinct_angle": "기존 안내가 일반적 역할 설명에 그친 반면, 이번 글은 법적 증빙과 기능적 차이를 중심으로 실제 상황별 올바른 활용법과 보관법을 구체적 비교표와 사례로 제시함",
+          "reader_situation": "상품권 구매 직후 누구나 겪는 영수증과 상품권 화면 혼용 상황에서 각각 제대로 활용하고 싶은 신규 또는 재이용 고객",
+          "deliverable": "영수증과 상품권 화면의 법적·기능적 차이 개념도, 상황별 활용법과 보관법 비교표, 필수 확인 정보와 활용 체크 리스트",
+          "task_id": "",
+          "direction_id": "gc_information-ea0a585402",
+          "outline": [
+            "영수증과 상품권 화면의 법적 지위 및 증빙 역할 비교하기",
+            "각 상황별 상품권 화면과 영수증의 기능과 쓰임 확인하기",
+            "영수증과 화면 자료별 올바른 보관과 활용 실제 사례 분석 및 체크리스트 작성하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 조건 충돌 시 결정 보류와 문의 준비법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 화면에 서로 다른 조건 안내가 상충할 때 어떤 내용이 최종 조건인지 몰라 구매 결정을 보류하려 하지만 구체적 보류 방법과 문의 기준이 없어 혼란스러움",
+          "distinct_angle": "기존 게시물은 단순 충돌 사례 안내나 중단 시점 설명에 그쳤으나, 본 글은 충돌 조건별 정리 표와 한눈에 비교하는 시각화, 보류 의사 명확 전달을 위한 판매처 문의 예문과 매뉴얼까지 포함해 실무 활용도를 높임",
+          "reader_situation": "상품권을 구매하려다가 안내 조건이 이중・상충돼 정확한 조건 판단이 어려워 결정 보류 및 문의를 합리적으로 준비하려는 소비자",
+          "deliverable": "충돌 조건별 비교 색인표, 조건별 판단 보류 기준 체크리스트, 판매처 문의용 구체 대화문과 보류 의사 전달 매뉴얼",
+          "task_id": "",
+          "direction_id": "gc_information-bb1dae521b",
+          "outline": [
+            "상품권 구매 화면 내 충돌 조건별 안내 위치와 내용 체계적으로 색인하기",
+            "충돌하는 안내 내용을 한눈에 비교 정리하는 표 작성과 이해하기",
+            "판매처에 문의해 조건 명확화하고 구매 결정 보류 의사 효과적으로 전달하는 예문 작성과 방법 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15592,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1186,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16778
+        },
+        "estimated_usd": 0.0081344,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T19:24:09.839581+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17700,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 741,
+          "output_tokens_details": {
+            "reasoning_tokens": 368
+          },
+          "total_tokens": 18441
+        },
+        "estimated_usd": 0.0166095,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T19:24:14.596148+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T19:23:58.756511+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T19:24:10.365925+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0247439,
+    "estimated_total_usd": 0.0247439,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
