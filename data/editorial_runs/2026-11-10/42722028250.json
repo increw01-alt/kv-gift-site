@@ -1,18 +1,20 @@
 {
   "run_id": "42722028250",
   "date_kst": "2026-11-10",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "검색 글 수정 기록과 현재 본문 구분 읽기 요령 안내",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-09T23:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 검색 결과의 수정 기록과 현재 본문을 함께 비교해 최신 내용을 판단하는 흐름이 기존 글 '/board/general_notice/59'의 미리보기 문구와 본문 비교, '/board/general_notice/65'의 표시 정보와 실제 내용 구분, '/board/sense/7'의 메시지 내용을 정리해 찾는 방법과 해결 절차가 매우 비슷합니다. 독자가 해야 할 행동이 사실상 ‘두 위치의 문구를 비교하고 최신 기준을 확인한다’로 같아 새 질문과 새 판단 도구가 충분히 드러나지 않습니다. / 본문의 핵심 단계가 수정 기록 확인, 본문 읽기, 날짜 확인, 문의처 질문 준비로 이어져 기존 안내와 같은 정보 구분·비교 절차를 반복합니다. 독자 상황만 검색 글에서 본문으로 바뀌었을 뿐, 실제로 새롭게 해결해야 할 문제와 예시가 별도로 구현되지 않았습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42722028250",
@@ -22,15 +24,250 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T08:38:48.176267+09:00"
+      "attempt_started_at": "2026-11-10T08:38:48.176267+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 500,
+          "coverageArticles": 133,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-6724f45795",
+            "general_notice-98b2d68a1d",
+            "general_notice-aaabcd4b83",
+            "general_notice-267ab13e4e"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 안내 읽던 중 새 화면이 뜰 때 원위치 안전 복원법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "안내 내용을 읽다가 새 창이나 설치 화면이 뜨면 원래 보던 위치와 선택 상태를 잃어 당황하는 이용자를 위해, 안전하게 이전 위치로 돌아가는 구체 절차와 대응법 안내가 필요하다.",
+          "distinct_angle": "기존 일반 안내와 달리 실제 복원 행동과 선택 상태 비교, 권한 요청 처리 방법을 구체적으로 안내하여 안내 중단 시 혼란 완화에 초점.",
+          "outline": [
+            "안내 내 위치와 선택 상태 기록하는 방법 배우기",
+            "새 창 방문 후 현재와 이전 상태 비교 및 복원법 숙지하기",
+            "설치 및 권한 요청 시 당황하지 않고 안내문으로 복귀하는 구체 행동 실천하기"
+          ],
+          "reader_situation": "모바일이나 PC에서 안내문을 보다가 갑작스러운 팝업이나 설치 요청 등으로 읽던 위치를 잃어 다시 확인이 어려워지는 이용자.",
+          "deliverable": "읽던 위치 저장법과 외부 화면 다녀온 뒤 원위치 복원 절차, 권한 요청 화면 안전 대응 지침의 행동 가이드 문서.",
+          "direction_id": "general_notice-aaabcd4b83"
+        },
+        {
+          "topic": "키보드 사용자 위한 안내 링크 선택 위치 알기와 이동법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "마우스 없이 키보드로 게시판 링크를 이동하면서 현재 선택된 위치를 찾기 어려워 헤매는 이용자를 위해, 키보드 이용 시 링크 선택 위치 표시와 탐색 방법을 체계적으로 알려야 한다.",
+          "distinct_angle": "단순 안내가 아니라 실제 탭 키로 선택 위치 파악, 이전 항목 이동, 실행까지 단계별 탐색 행동을 강조한 실습 중심 가이드 제공.",
+          "outline": [
+            "탭 키로 다음 링크 선택 위치 감지법 익히기",
+            "시프트탭으로 이전 링크 돌아가기 방법 실습하기",
+            "선택 위치 표시에 집중해 링크 실행 절차 확인하기"
+          ],
+          "reader_situation": "마우스를 사용하지 않고 키보드 탭 및 시프트탭으로 웹 게시판 링크 이동을 배우려는 사용자.",
+          "deliverable": "키보드 탭 이동 시 현재 선택 위치 인지법, 이전 링크 확인법, 실행 시 선택 위치 표시 확인 행동 지침이 담긴 안내서.",
+          "direction_id": "general_notice-267ab13e4e"
+        },
+        {
+          "topic": "이미지 없는 의미 있는 링크 설명 작성과 공유법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "정보를 공유할 때 이미지 첨부 없이도 어떤 내용인지 알 수 있도록 의미 있는 링크 설명을 만드는 구체적인 방법을 몰라 활용이 제한된다.",
+          "distinct_angle": "일반 안내가 아니라 링크 설명 작성법과 공유 시 수신자가 쉽게 이해하도록 하는 구체적 표현법과 예시 중심 실천 안내.",
+          "outline": [
+            "단순 링크와 의미 있는 설명 차이점 파악하기",
+            "목적과 연결 대상 담은 명확한 링크 설명 작성 요령 익히기",
+            "실제 예시로 ‘여기’ 링크를 구체적 설명으로 전환 연습하기"
+          ],
+          "reader_situation": "게시판이나 메신저에서 링크만 나열할 때 ‘여기’ 대신 목적과 내용을 정확히 전달해 공유 효율을 높이고 싶은 이용자.",
+          "deliverable": "‘여기’ 대신 의미 있는 설명으로 바꾸는 문장 작성법, 공유 예시, 효과 설명이 포함된 실전 매뉴얼.",
+          "direction_id": "general_notice-98b2d68a1d"
+        }
+      ],
+      "topic_plan": {
+        "topic": "검색 글 수정 기록과 현재 본문 구분 읽기 요령 안내",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "검색 중 찾은 글의 수정 기록과 현재 본문 내용을 혼동해 정확한 최신 안내를 이해하지 못하는 이용자 문제 해결 방법이 부족하다.",
+        "distinct_angle": "기존 단순 설명과 달리 실제 수정 기록과 본문 내용 비교 및 최신화 판단법을 구체적 행동 단계로 안내하는 점 차별.",
+        "outline": [
+          "수정 기록과 본문 내용 차이 이해하기",
+          "검색 결과에서 최신 본문과 수정 이력 비교하는 방법 익히기",
+          "최신 버전 정보 확인과 판단 행동 단계 실습하기"
+        ],
+        "reader_situation": "인터넷 검색으로 안내를 찾을 때 글의 수정 기록과 현재 내용이 다를 수 있음을 인지하지 못해 정보 신뢰성 판단이 어려운 사용자.",
+        "deliverable": "수정 기록과 본문 동시에 열람해 차이점 비교하는 행동법과 최신 정보 확인 절차가 포함된 실용 가이드.",
+        "direction_id": "general_notice-6724f45795",
+        "novelty_reason": "후보 이는 검색 결과에서 보이는 수정 기록과 현재 본문을 서로 분리해 읽는 문제를 다루며, 기존 글들처럼 링크 미리보기나 문의 내용 수정, 메시지 정리만 반복하지 않습니다. 가장 가까운 기존 글인 /board/general_notice/59는 미리보기 문구와 실제 본문을 비교하는 내용이라서, 이번 후보의 핵심인 '수정 이력과 현재 본문이 다를 때 최신 안내를 어떻게 판별할지'까지는 해결하지 못합니다. 따라서 새 질문과 새 판단 기준이 분명한 후보 이를 선택합니다.",
+        "screen_rejections": [
+          "0번은 /board/general_notice/69가 이미 다룬 설치·권한 요청 화면이 뜰 때 요청 문구를 확인하고 원래 안내로 돌아가는 절차와 매우 가깝습니다. 여기에 원위치 복원과 선택 상태 확인이 붙어도, 같은 중단 화면을 처리하는 흐름이라 새 해결 문제로 보기 어렵습니다.",
+          "1번은 키보드 탭 이동 중 현재 선택 위치를 찾는 문제이지만, 제공된 기존 글들에서 같은 독자 상황과 질문을 직접 다룬 공개 글이 확인되지 않더라도 본문 수준의 차별점이 충분히 드러나지 않습니다. 탭 이동 안내는 일반적인 조작 설명으로 흘러가기 쉬워, 이번 자료만으로는 독립적인 새 해결 단계가 명확하지 않습니다.",
+          "3번은 링크를 이미지 없이 의미 있게 설명하는 방법이지만, /board/general_notice/55의 원문 링크와 확인 날짜 기록, /board/sense/14의 핵심 정보만 간결히 전달하는 안내와 겹치는 부분이 큽니다. 표현만 바꾸는 수준이면 중복으로 판단할 여지가 높습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/59",
+            "/board/general_notice/60",
+            "/board/sense/7"
+          ],
+          "gap": "기존 안내는 링크 미리보기나 문의 수정처럼 글 밖 요소를 읽는 법에 머뭅니다. 이번 글은 검색 결과에 보이는 수정 이력과 실제 본문이 다를 때, 어느 쪽을 현재 기준으로 삼아야 하는지 독자가 스스로 판단하도록 돕는 점이 다릅니다.",
+          "example": "검색으로 찾은 글의 수정 기록은 오래된 설명인데 본문은 이미 바뀐 경우처럼, 같은 페이지 안에서 두 정보가 서로 다르게 보일 때를 가정해 보세요. 이때는 기록 문구만 믿지 않고 본문의 현재 문장과 확인 시점을 함께 살피도록 안내합니다.",
+          "result": "독자는 수정 이력과 현재 본문을 구분해 읽고, 최신 안내를 판단한 뒤 필요한 경우 확인 질문까지 정리할 수 있습니다.",
+          "section_actions": [
+            "수정 이력과 본문이 각각 어디에 표시되는지 먼저 짚어 두고, 서로 다른 문장을 따로 적어 구분합니다.",
+            "본문의 현재 문장에 맞춰 적용 대상과 조건을 다시 읽고, 수정 기록은 참고 정보로만 남깁니다.",
+            "두 정보가 어긋나면 마지막 확인 시점을 메모한 뒤 담당자에게 현재 기준이 무엇인지 묻는 질문을 정리합니다."
+          ]
+        }
+      },
+      "board": "general_notice",
+      "topic": "검색 글 수정 기록과 현재 본문 구분 읽기 요령 안내",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-09T16:19:52Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 28794,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2304
+          },
+          "output_tokens": 1078,
+          "output_tokens_details": {
+            "reasoning_tokens": 352
+          },
+          "total_tokens": 29872
+        },
+        "estimated_usd": 0.0248913,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T23:38:57.792244+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3507,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3954
+        },
+        "estimated_usd": 0.002118,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T23:39:01.220886+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 10029,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 397,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10426
+        },
+        "estimated_usd": 0.0046468,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-09T23:39:05.883449+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 21401,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 488,
+          "output_tokens_details": {
+            "reasoning_tokens": 91
+          },
+          "total_tokens": 21889
+        },
+        "estimated_usd": 0.01824675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-09T23:39:12.043432+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T23:38:50.696947+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T23:38:57.794847+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-09T23:39:01.915952+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-09T23:39:06.997768+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04990285,
+    "estimated_total_usd": 0.04990285,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

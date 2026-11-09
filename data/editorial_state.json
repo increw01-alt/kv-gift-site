@@ -369,10 +369,15 @@
       "board": "sense",
       "topic": "문서에서 사실과 의견 문장 분리하여 명확히 표현하는 법",
       "run_id": "42643246374"
+    },
+    {
+      "board": "general_notice",
+      "topic": "검색 글 수정 기록과 현재 본문 구분 읽기 요령 안내",
+      "run_id": "42722028250"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "42702749622",
+  "last_board": "general_notice",
+  "last_run_id": "42722028250",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
