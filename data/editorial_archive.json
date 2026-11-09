@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T21:28:57.620946+00:00",
+  "generatedAt": "2026-11-09T21:29:14.510989+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4069,14 +4069,14 @@
       "runId": "42702749622",
       "dateKst": "2026-11-10",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
+      "status": "held",
+      "board": "sale",
       "topic": null,
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0293242,
+      "knownSubtotalUsd": 0.0293242
     },
     {
       "id": "post:purchase:2561",
@@ -18170,13 +18170,24 @@
     {
       "entryId": "run:42702749622",
       "dateKst": "2026-11-10",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-09T21:29:08.044323+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0077992,
+      "knownSubtotalUsd": 0.0077992,
+      "requests": 1,
+      "inputTokens": 15570,
+      "outputTokens": 982
+    },
+    {
+      "entryId": "run:42702749622",
+      "dateKst": "2026-11-10",
+      "recordedAt": "2026-11-09T21:29:14.168435+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.021525,
+      "knownSubtotalUsd": 0.021525,
+      "requests": 1,
+      "inputTokens": 24938,
+      "outputTokens": 627
     },
     {
       "entryId": "post:purchase:2561",
