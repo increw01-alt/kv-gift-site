@@ -1,18 +1,20 @@
 {
   "run_id": "42734786828",
   "date_kst": "2026-11-10",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "free",
+  "topic": "선물용 상품권 구매 시 편리함과 다양한 선택 사이 적절한 균형 잡는 의사결정 질문법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-10T01:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 편리함과 다양성의 우선순위를 정하는 방식이 기존 글의 ‘사용 장소·사용 환경·선택 폭 확인’과 같은 질문 구조로 풀려 있어, 독자가 실제로 해결하는 문제와 절차가 거의 같습니다. / 본문이 편리함과 다양성의 차이를 구분한다고 하지만, 실제 내용은 받는 사람의 사용처와 취향을 확인해 적합한 상품권을 고르는 일반적 안내를 반복하고 있습니다. / 선물용 상품권을 고를 때 무엇을 먼저 볼지 정하는 질문은 새롭지만, 제시된 절차와 예시가 기존 선택 기준 안내와 충분히 분리되지 않았습니다."
+    ]
   },
   "api_usage": {
     "run_id": "42734786828",
@@ -22,15 +24,281 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T10:18:49.933777+09:00"
+      "attempt_started_at": "2026-11-10T10:18:49.933777+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [
+          {
+            "topic": "여러 사람 선물 의견 조율 시 합의점 찾는 질문 개발과 우선순위 조정법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "모임이나 가족 선물 의견 충돌 시 효과적으로 참여자의 다양한 의견을 정리하고, 우선순위를 조율해 합의를 이끌어내는 기준을 알기 어렵다.",
+            "distinct_angle": "기존 단순 회의 방법과 달리 의견 정리 질문법, 선택 기준 추출·분류, 기준 기반 합의 도출 프로세스를 구체화해 실천 가능한 토론 정리법을 제안한다.",
+            "outline": [
+              "참여자 다양한 의견을 모두 포함하는 구체 질문 구성하기",
+              "모든 의견에서 핵심 선택 기준 추출 후 분류하기",
+              "추출한 기준을 활용해 효과적 합의점 찾고 정리하는 방법"
+            ],
+            "reader_situation": "여러 명이 동시에 의견을 내어 혼란스러운 중에서도 논리적 합의를 유도하고 우선순위를 결정해 실천하는 중재자 또는 주최자.",
+            "deliverable": "참여자 의견 포괄 질문표, 선택 기준 분류 시트, 기준 활용 합의 도출 매뉴얼.",
+            "direction_id": "free-9d7f9c3f7a"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 506,
+          "coverageArticles": 133,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-12c16f333b",
+            "free-9d7f9c3f7a",
+            "free-bfc80eaf20",
+            "free-ebd166c882"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "설명 듣기와 직접 보기 학습 방법 비교로 새 업무 습득 효과 높이는 법",
+          "source_id": "",
+          "reader_problem": "새로운 업무를 배울 때 단순 설명만 듣거나 직접 보는 것 중 어느 방식이 효과적인지 판단하기 어렵고, 상황에 맞는 적절한 학습 방법을 찾고 싶다.",
+          "distinct_angle": "기존 설명 중심 안내와 달리 업무 유형(순서 중심 대 판단 기준 중심)에 따라 시연, 설명, 직접 연습 학습법을 조합하는 구체 전략을 제시한다.",
+          "reader_situation": "직장에서 신기술이나 절차를 익혀야 하며, 설명 위주 학습과 실제 시연 혹은 체험 학습 중 무엇을 우선할지 고민하는 업무 담당자.",
+          "deliverable": "업무 유형별 적합 학습법 비교표, 단계별 학습 계획 작성 시트, 학습법 효과 개선 실천 가이드.",
+          "task_id": "",
+          "direction_id": "free-12c16f333b",
+          "outline": [
+            "업무를 순서 중심 작업과 판단 기준 중심 작업으로 구분하기",
+            "순서 익힐 때 시연 보고 따라 하기의 효과 분석",
+            "판단 기준 익힐 때 설명 듣기와 직접 적용 연습 조합법"
+          ]
+        },
+        {
+          "topic": "내 질문은 직접 물어야 할까, 스스로 찾아봐야 할까 판단하는 비용-시간 균형 기준",
+          "source_id": "",
+          "reader_problem": "간단한 의문을 바로 문의할지, 먼저 스스로 탐색할지 결정하는 기준이 없고 각 방법에 필요한 노력과 시간 대비 효과를 제대로 판단하지 못한다.",
+          "distinct_angle": "전통적 문의 안내와 달리 질문 선택 시 시간과 노력, 문의 비용 등 구체 효과·비용 균형을 수량화해 판단하는 방법을 체계적으로 제시한다.",
+          "reader_situation": "업무 처리나 지원 문의 담당자로서 질문 유형에 따라 적절히 자원 투입하고, 지나친 질문으로 업무 지연이나 중복을 방지하고자 할 때.",
+          "deliverable": "문의 결정용 비용-시간 대비 평가 차트, 질문 유형별 판단 체크리스트, 효율적 문의 시점 선택 안내문.",
+          "task_id": "",
+          "direction_id": "free-bfc80eaf20",
+          "outline": [
+            "질문 탐색과 직접 문의에 드는 노력과 시간을 항목별로 분석하기",
+            "비용 대비 효과 중심으로 질문 시점 판단 프레임 만들기",
+            "실제 업무에 적용할 질문 선택 체크리스트 구현하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "선물용 상품권 구매 시 편리함과 다양한 선택 사이 적절한 균형 잡는 의사결정 질문법",
+        "source_id": "",
+        "reader_problem": "선물용 상품권을 고를 때 편리성에 치중할지 다양한 옵션을 제공할지 우선순위 정하기 힘들어 결정을 미루는 문제",
+        "distinct_angle": "종전 단순 안내와 달리 편의성과 다양성을 구분하고, 사용 상황과 수신인 특성에 맞는 평가 방법 및 선택 우선순위 도구를 개발한다.",
+        "reader_situation": "다양한 옵션 중에서 선물받는 이를 배려해 편리함과 선택 폭 중 핵심 가치를 스스로 점검해 적합한 상품권을 고르려는 고객.",
+        "deliverable": "편의성과 선택다양성 평가 체크리스트, 상황별 우선질문 리스트, 평균적 선택 기준 흐름도.",
+        "task_id": "",
+        "direction_id": "free-ebd166c882",
+        "outline": [
+          "편의성과 선택 다양성 요소 명확히 구분 및 지표화하기",
+          "상황과 수신자 특성에 따른 선호 질문과 우선순위 매기기",
+          "평가 결과에 따른 합리적 선택 체계 구축하기"
+        ],
+        "novelty_reason": "세 후보 중에서는 선물용 상품권을 고를 때 편리함과 선택 폭을 어떻게 저울질할지에 초점이 있어, 기존의 사용처 확인이나 기기·환경 점검, 일반적인 질문 선택 기준보다 한 단계 다른 선택 문제를 다룹니다. 가장 가까운 기존 글은 선물 대상의 조건을 확인하는 글들이지만, 이번 후보는 받는 사람의 사용 편의와 선택 다양성 사이의 우선순위를 정하는 판단 도구를 제시하므로 차별점이 있습니다.",
+        "screen_rejections": [
+          "0번은 새 업무 습득에서 설명과 직접 보기를 어떻게 조합할지 묻는 기존 글과 질문 구조와 해결 순서가 거의 같아 중복입니다. 순서 중심 작업과 판단 기준 중심 작업을 나누고 시연·설명·연습을 조합하는 흐름이 이미 공개 글에 있습니다.",
+          "1번은 모르는 것을 바로 물을지 먼저 찾아볼지 판단하는 기존 글과 독자 상황, 질문, 해결 절차가 사실상 같습니다. 시간과 노력의 균형을 따져 문의 시점을 정하는 방식이 이미 해결되어 있어 새 판단 기준이 드러나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/free/470",
+            "/board/purchase/2564",
+            "/board/gc_tip/29"
+          ],
+          "gap": "기존 글들은 주로 사용 가능 조건, 전달 수단, 또는 일반적 선택 기준을 확인하는 데 그칩니다. 이번 글은 선물용 상품권에서 받는 사람이 느끼는 편리함과 실제로 고를 수 있는 폭을 서로 다른 기준으로 나누어 보고, 어떤 상황에서는 편의를, 어떤 상황에서는 선택 폭을 우선할지 판단하게 하는 점이 새롭습니다.",
+          "example": "받는 사람이 자주 가는 곳이 하나로 정해져 있어 빨리 쓰는 편이 중요한데, 동시에 여러 취향 중에서 직접 고르고 싶어 하는 경우라면 두 기준이 충돌합니다. 이때는 ‘받는 사람이 당장 쓰기 쉬운가’와 ‘받는 사람이 나중에 고를 수 있는 여지가 있는가’를 따로 적어 보고, 한쪽이 부족하면 다른 기준으로 보완할지 정합니다.",
+          "result": "독자는 선물용 상품권을 고를 때 편리함과 선택 다양성을 각각 따져 보고, 상대 상황에 맞는 우선순위를 스스로 정할 수 있습니다.",
+          "section_actions": [
+            "받는 사람이 실제로 바로 쓸 수 있는지와 고를 수 있는 범위가 얼마나 넓은지 각각 적어, 두 기준이 같은 말이 아님을 분리해 본다.",
+            "편리함이 필요한 상황과 선택 폭이 필요한 상황을 나눠 보며, 상대의 사용 습관과 선물 목적에 따라 어느 쪽을 먼저 볼지 정한다.",
+            "두 기준 중 하나가 약할 때는 보완 질문을 덧붙여 최종 선택을 정리하고, 선물 전에 확인할 핵심 질문을 한 줄로 남긴다."
+          ]
+        }
+      },
+      "board": "free",
+      "topic": "선물용 상품권 구매 시 편리함과 다양한 선택 사이 적절한 균형 잡는 의사결정 질문법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-09T16:19:52Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15150,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1082,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16232
+        },
+        "estimated_usd": 0.0077912,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T01:19:00.356176+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 31203,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1066,
+          "output_tokens_details": {
+            "reasoning_tokens": 388
+          },
+          "total_tokens": 32269
+        },
+        "estimated_usd": 0.02819925,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T01:19:08.997635+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3526,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 380,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3906
+        },
+        "estimated_usd": 0.0020184,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T01:19:12.415693+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5432,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 428,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5860
+        },
+        "estimated_usd": 0.0028576,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T01:19:16.312859+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18835,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 524,
+          "output_tokens_details": {
+            "reasoning_tokens": 195
+          },
+          "total_tokens": 19359
+        },
+        "estimated_usd": 0.01648425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T01:19:21.707742+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T01:18:52.463503+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T01:19:00.788976+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T01:19:09.103362+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T01:19:13.294008+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T01:19:17.641488+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0573507,
+    "estimated_total_usd": 0.0573507,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

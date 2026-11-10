@@ -379,10 +379,15 @@
       "board": "sense",
       "topic": "공용 물건의 위치 표시와 사용 중 표시 체계화하기",
       "run_id": "42726571731"
+    },
+    {
+      "board": "free",
+      "topic": "선물용 상품권 구매 시 편리함과 다양한 선택 사이 적절한 균형 잡는 의사결정 질문법",
+      "run_id": "42734786828"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "42726571731",
+  "last_board": "free",
+  "last_run_id": "42734786828",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
