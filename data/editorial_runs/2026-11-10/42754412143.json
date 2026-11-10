@@ -1,17 +1,27 @@
 {
   "run_id": "42754412143",
   "date_kst": "2026-11-10",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "gc_information",
+  "topic": "본인 확인 정보와 조회 정보 차이고 이해하기",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/gc_information/19",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-10T04:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,345 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-10T13:13:58.709136+09:00"
+      "attempt_started_at": "2026-11-10T13:13:58.709136+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 517,
+          "coverageArticles": 134,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-7522ac652e",
+            "gc_information-603f97842d",
+            "gc_information-f0f23d4707",
+            "gc_information-83c32617c5"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "안내문에서 가능·필수·제외 의미 구분해 이해하는 법",
+          "source_id": "",
+          "reader_problem": "상품권 안내에서 ‘가능’, ‘필수’, ‘제외’ 등 비슷해 보이는 표현이 실제로는 다른 의미를 가지는데, 이를 혼동해 사용 조건 판단이 어려움.",
+          "distinct_angle": "기존 글들은 기본 용어 설명이나 실제 조건 예시 중심인데, 이 후보는 안내문에 자주 쓰이는 핵심 용어를 논리적 구분 원리와 예문으로 체계적으로 익히고, 각 의미별 판단 방법과 확인 절차를 실제 독자가 직접 작성하는 체크리스트 형태로 제공한다.",
+          "reader_situation": "상품권 안내문이나 약관을 읽으면서 판매 조건이나 제약 내용이 서로 달라 어떻게 해석하고 적용해야 할지 막막한 이용자.",
+          "deliverable": "‘가능’, ‘필수’, ‘제외’ 등 안내 문장별 의미 구분 기준과 판단 절차를 정리한 체크리스트, 실제 안내문 예문과 비교해 적용하는 실습 예시, 자신만의 확인 기록 표 완성.",
+          "task_id": "",
+          "direction_id": "gc_information-83c32617c5",
+          "outline": [
+            "안내문에 자주 등장하는 ‘가능’, ‘필수’, ‘제외’ 의미와 쓰임 차이 분석하기",
+            "각 의미별 실제 판단 기준과 안내 문장 해석 절차 세우기",
+            "실제 안내문 예문과 상황을 활용해 독자 스스로 구분 기록체계 작성하기"
+          ]
+        },
+        {
+          "topic": "확정값·예시값·예상값 구분과 해석법 익히기",
+          "source_id": "",
+          "reader_problem": "상품권 관련 안내 시 확정된 값인지, 단순 예시인지, 예상한 값인지가 명확하지 않아 올바른 판단과 준비가 어렵다.",
+          "distinct_angle": "기존 자료들은 실제 상황에 적용되는값 설명에 초점을 맞췄으나, 이 글은 ‘확정값·예시값·예상값’의 차이에 집중해 논리적 구분 원리와 각 용어별 해석 시 유의점, 표기법 비교 도구 등 독자가 직접 작성 가능한 비교표를 제공해 차이를 명확히 인지하도록 한다.",
+          "reader_situation": "안내문과 안내 화면에서 보는 날짜·금액·조건 숫자가 어떤 의미인지 헷갈려 문의하거나 준비를 주저하는 이용자.",
+          "deliverable": "확정·예시·예상 값의 정의와 각 유형별 해석 절차를 정리한 안내문, 세 유형을 구분하는 독자용 세부 비교표와 적용 실습 사례 문서.",
+          "task_id": "",
+          "direction_id": "gc_information-603f97842d",
+          "outline": [
+            "확정값, 예시값, 예상값 개념과 안내문 내 구분 기준 설명하기",
+            "각 값 유형별 안내 문장 해석 유의사항과 체크포인트 도출하기",
+            "독자가 직접 작성하는 세 값 구분 비교표와 안내문 사례 적용 실습"
+          ]
+        },
+        {
+          "topic": "전체 집합과 부분 합계 다른 경우 누락 범위 찾는 연습",
+          "source_id": "",
+          "reader_problem": "여러 항목의 합계와 전체 집합 수치가 달라 어디가 누락되었는지 판단하기 어려움.",
+          "distinct_angle": "기존 자료들은 데이터 관리 일반 지침 중심이나, 본 후보는 상품권 관련 조건이나 안내 문서에서 숫자 합계 불일치 시 빠진 항목이나 범위를 추론하는 논리적 사고 방법과 점검 절차를 독자가 직접 작성하는 도구로 제공한다.",
+          "reader_situation": "복잡한 유효기간, 사용 가능 금액, 할인 조건 등의 수치가 불일치해 상품권 선택이나 사용 결정 전에 오류를 방지하고자 하는 이용자.",
+          "deliverable": "수치 불일치 시 누락 범위 추론 절차와 점검 항목 리스트, 독자 참여형 누락 추적 기록 양식, 사례별 점검법 안내 매뉴얼.",
+          "task_id": "",
+          "direction_id": "gc_information-7522ac652e",
+          "outline": [
+            "전체 수치와 부분 합계 차이가 발생하는 원리와 사례 익히기",
+            "누락 범위 추론과 점검 절차를 단계별로 분류하고 기록하기",
+            "자신의 사례에 적용 가능한 누락 찾기 점검표와 실습 적용하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "본인 확인 정보와 조회 정보 차이고 이해하기",
+        "source_id": "",
+        "reader_problem": "본인 확인 시 요구하는 정보와 단순 조회에 필요한 정보가 달라 혼동되고 요구 정보 노출에 대한 불안이 생김.",
+        "distinct_angle": "기존 안내는 개인 정보 보호 강조 중심이고 본인 확인 절차만 부분 설명에 그치지만, 본 후보는 ‘본인 확인용 정보’와 ‘조회용 정보’의 역할과 목적이 어떻게 다르고, 어떤 정보가 어느 절차에 적합한지 직접 분류 정리해 볼 수 있는 실용 문서와 사례 제공으로 독자 이해를 돕는다.",
+        "reader_situation": "상품권 문의나 약관 등에서 정보 요구가 다르다 보니, 자신이 어떤 정보만 제공해야 안전한지 판단이 필요한 이용자.",
+        "deliverable": "본인 여부 확인과 조회 절차에 적합한 정보 목록과 노출 이유 구분 정리표, 상황별 제공 정보 선택 가이드, 개인정보 공개 최소화 체크리스트와 문의 예문.",
+        "task_id": "",
+        "direction_id": "gc_information-f0f23d4707",
+        "outline": [
+          "본인 확인 절차와 조회 절차의 목적과 역할 차이 이해하기",
+          "절차별 요구 정보의 종류와 노출 목적을 구분해 정리하기",
+          "정보 노출 최소화 원칙과 독자를 위한 안전 문의 작성법 익히기"
+        ],
+        "novelty_reason": "본인 확인용 정보와 조회용 정보는 둘 다 정보를 요구하지만, 독자가 어떤 목적에 어떤 항목만 내어야 하는지 판단하는 기준이 달라 기존 글들의 개인정보 가리기나 문의 자료 준비와는 결이 다릅니다. 가장 가까운 글들은 민감정보 노출을 줄이는 방법을 다뤘지만, 이번 후보는 정보의 역할 자체를 나누어 제공 범위를 정하는 실용 기준을 제시하므로 새 해결 질문이 더 분명합니다.",
+        "screen_rejections": [
+          "0번은 안내문의 가능·필수·제외 같은 표현을 문장별로 해석하는 방식이 기존의 조건 문구 구분 글과 겹칩니다. 용어만 달라졌을 뿐, 안내문에서 조건을 읽고 메모하는 절차가 거의 같습니다.",
+          "1번은 확정값·예시값·예상값을 가르는 방식이 숫자와 조건을 구분해 읽는 기존 글들과 가까워 새 판단 도구가 충분히 분리되지 않습니다. 실제로는 값의 성격을 구분해 표로 옮기는 기존 비교형 안내와 중복됩니다.",
+          "3번은 전체와 부분의 합계 불일치를 보고 누락 범위를 추정하는 방식이 기존의 수량 대조·누락 찾기 글과 계산 검산 글의 연장선에 있습니다. 차이의 원인을 좁혀 가는 절차가 새롭다기보다 기존 점검 절차를 추상화한 수준입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/36",
+            "/board/general_notice/42",
+            "/board/purchase/2579"
+          ],
+          "gap": "기존 글은 개인정보를 숨기거나 문의 자료를 정리하는 데 초점이 있어, 독자가 지금 요구받는 정보가 본인 확인용인지 단순 조회용인지에 따라 어디까지 알려야 하는지 판단하는 기준은 따로 다루지 않습니다. 이번 글은 정보의 목적을 먼저 나누고, 같은 항목이라도 어떤 절차에서는 내어도 되고 어떤 절차에서는 줄여야 하는지 구분하게 해 주는 점이 새롭습니다.",
+          "example": "상담 창에서 이름과 연락처를 먼저 묻는 경우와, 보유 여부만 확인하려고 조회 정보를 요청하는 경우가 연달아 나오면, 독자는 같은 정보라도 모두 주지 말아야 하는지 헷갈릴 수 있습니다. 이때는 요청 목적을 먼저 묻고, 본인 확인이 필요한 항목과 조회에만 필요한 항목을 나눠 적어 보며 답을 준비합니다.",
+          "result": "독자는 문의나 조회 전에 어떤 정보는 본인 확인용으로, 어떤 정보는 조회용으로만 주면 되는지 스스로 구분하고, 불필요한 노출을 줄인 채 질문을 정리할 수 있습니다.",
+          "section_actions": [
+            "첫째 절에서는 본인 확인과 단순 조회의 목적이 어떻게 다른지 먼저 적어 두고, 각 절차에서 왜 다른 정보가 필요한지 구분한 뒤 문의 전 판단 기준을 만든다.",
+            "둘째 절에서는 자주 묻는 정보 항목을 목적별로 나누어 정리하고, 같은 항목이라도 확인에 필요한 경우와 조회에만 필요한 경우를 서로 다르게 배치해 본다.",
+            "셋째 절에서는 실제 문의 문장을 짧게 써 보며 꼭 필요한 정보만 남기고 나머지는 보류하는 방식으로 최종 점검해, 보내기 전 전달 범위를 확정한다."
+          ]
+        }
+      },
+      "board": "gc_information",
+      "topic": "본인 확인 정보와 조회 정보 차이고 이해하기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-09T16:19:52Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "본인 확인용 정보와 조회용 정보를 구분해 어디까지 알려야 하는지 판단하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 14697,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1249,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15946
+        },
+        "estimated_usd": 0.0078772,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T04:14:10.198069+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30015,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1169,
+          "output_tokens_details": {
+            "reasoning_tokens": 384
+          },
+          "total_tokens": 31184
+        },
+        "estimated_usd": 0.02777175,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T04:14:16.765009+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3630,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4077
+        },
+        "estimated_usd": 0.0021672,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T04:14:19.872507+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9462,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 458,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9920
+        },
+        "estimated_usd": 0.0045176,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T04:14:24.033073+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 21571,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 338,
+          "output_tokens_details": {
+            "reasoning_tokens": 128
+          },
+          "total_tokens": 21909
+        },
+        "estimated_usd": 0.01769925,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T04:14:28.863835+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3522,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1026
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4894
+        },
+        "estimated_usd": 0.066258,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T04:14:53.328296+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 13478,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 171,
+          "output_tokens_details": {
+            "reasoning_tokens": 106
+          },
+          "total_tokens": 13649
+        },
+        "estimated_usd": 0.010878,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T04:14:57.648226+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T04:14:01.363676+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T04:14:10.885478+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T04:14:16.768221+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T04:14:21.042248+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T04:14:25.890624+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-10T04:14:28.882645+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T04:14:54.519397+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.137169,
+    "estimated_total_usd": 0.137169,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

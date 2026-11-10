@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T04:13:58.905338+00:00",
+  "generatedAt": "2026-11-10T04:14:58.763006+00:00",
   "dateKst": "2026-11-10",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 15,
   "held": 9,
   "errors": 3,
-  "knownSubtotalUsd": 0.726048,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.863217,
+  "estimatedTotalUsd": 0.863217,
   "records": [
     {
       "runId": "42643246374",
@@ -196,16 +196,16 @@
     },
     {
       "runId": "42754412143",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "본인 확인 정보와 조회 정보 차이고 이해하기",
+      "url": "https://kv-gift.co.kr/board/gc_information/19",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-10T04:12:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.137169,
+      "knownSubtotalUsd": 0.137169
     }
   ],
   "topicRetry": {

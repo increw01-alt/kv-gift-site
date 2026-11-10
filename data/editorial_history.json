@@ -1591,5 +1591,18 @@
     "publication_mode": "automatic",
     "run_id": "42749616711",
     "usage_file": "data/editorial_runs/2026-11-10/42749616711.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 19,
+    "topic": "본인 확인 정보와 조회 정보 차이고 이해하기",
+    "drafted_at": "2026-11-10",
+    "automation": true,
+    "search_intent": "본인 확인용 정보와 조회용 정보를 구분해 어디까지 알려야 하는지 판단하려는 질문",
+    "image_scene": "책상 위에 두 개의 서류함이 나란히 놓여 있고, 왼쪽 서류함에는 ‘본인 확인’ 카드와 이름·신분 확인 항목이 적힌 메모가 들어 있으며 오른쪽 서류함에는 ‘조회’ 카드와 주문번호·상품권 번호 메모가 들어 있다. 가운데에는 두 칸으로 나뉜 정리 메모지와 펜이 놓여 있어 같은 정보라도 목적에 따라 나누어 보는 장면이다.",
+    "image_alt": "책상 위에서 본인 확인용 정보와 조회용 정보를 두 서류함으로 나누어 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "42754412143",
+    "usage_file": "data/editorial_runs/2026-11-10/42754412143.json"
   }
 ]
