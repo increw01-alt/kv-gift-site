@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T18:19:22.409547+00:00",
+  "generatedAt": "2026-11-10T18:20:03.341580+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4279,14 +4279,14 @@
       "runId": "42873768635",
       "dateKst": "2026-11-11",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "free",
+      "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04622245,
+      "knownSubtotalUsd": 0.04622245
     },
     {
       "id": "post:purchase:2561",
@@ -18908,13 +18908,57 @@
     {
       "entryId": "run:42873768635",
       "dateKst": "2026-11-11",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-10T18:19:35.376493+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0068084,
+      "knownSubtotalUsd": 0.0068084,
+      "requests": 1,
+      "inputTokens": 12553,
+      "outputTokens": 1117
+    },
+    {
+      "entryId": "run:42873768635",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-10T18:19:46.132628+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.01803525,
+      "knownSubtotalUsd": 0.01803525,
+      "requests": 1,
+      "inputTokens": 17657,
+      "outputTokens": 1065
+    },
+    {
+      "entryId": "run:42873768635",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-10T18:19:50.960911+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.002248,
+      "knownSubtotalUsd": 0.002248,
+      "requests": 1,
+      "inputTokens": 3588,
+      "outputTokens": 508
+    },
+    {
+      "entryId": "run:42873768635",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-10T18:19:56.769372+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0038848,
+      "knownSubtotalUsd": 0.0038848,
+      "requests": 1,
+      "inputTokens": 7580,
+      "outputTokens": 533
+    },
+    {
+      "entryId": "run:42873768635",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-10T18:20:03.014139+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.015246,
+      "knownSubtotalUsd": 0.015246,
+      "requests": 1,
+      "inputTokens": 16548,
+      "outputTokens": 630
     },
     {
       "entryId": "post:purchase:2561",

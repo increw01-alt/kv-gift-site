@@ -1,18 +1,20 @@
 {
   "run_id": "42873768635",
   "date_kst": "2026-11-11",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "free",
+  "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-10T18:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 편리성·다양성 우선순위를 정하는 흐름이 기존의 ‘받는 사람 취향과 사용 조건을 파악해 상품권을 고르는 방법’과 해결 절차가 거의 같습니다. / 본문이 자주 가는 매장/이용 빈도, 새로운 선택지 선호 여부를 묻고 비교표를 작성하는 수준이라 기존의 사용처 확인·취향 파악 글과 실질적으로 다른 판단 도구가 충분하지 않습니다. / 독자가 이 글을 읽고 얻는 결론이 ‘상대의 선호와 사용 조건을 확인해 상품권을 고른다’로 귀결되어, 이미 있는 상품권 선택 가이드를 그대로 적용해도 해결되는 범위입니다."
+    ]
   },
   "api_usage": {
     "run_id": "42873768635",
@@ -22,15 +24,249 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-11T03:19:22.020237+09:00"
+      "attempt_started_at": "2026-11-11T03:19:22.020237+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 524,
+          "coverageArticles": 136,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-b65d41dcec",
+            "free-9d7f9c3f7a",
+            "free-e0908a1a3a",
+            "free-911ea23e77"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "여러 사람 선물 의견 조율 시 합의점 찾는 질문 개발과 우선순위 조정법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "모임이나 가족 선물 의견 충돌 시 효과적으로 참여자의 다양한 의견을 정리하고, 우선순위를 조율해 합의를 이끌어내는 기준을 알기 어렵다.",
+          "distinct_angle": "기존 단순 회의 방법과 달리 의견 정리 질문법, 선택 기준 추출·분류, 기준 기반 합의 도출 프로세스를 구체화해 실천 가능한 토론 정리법을 제안한다.",
+          "outline": [
+            "참여자 다양한 의견을 모두 포함하는 구체 질문 구성하기",
+            "모든 의견에서 핵심 선택 기준 추출 후 분류하기",
+            "추출한 기준을 활용해 효과적 합의점 찾고 정리하는 방법"
+          ],
+          "reader_situation": "여러 명이 동시에 의견을 내어 혼란스러운 중에서도 논리적 합의를 유도하고 우선순위를 결정해 실천하는 중재자 또는 주최자.",
+          "deliverable": "참여자 의견 포괄 질문표, 선택 기준 분류 시트, 기준 활용 합의 도출 매뉴얼.",
+          "direction_id": "free-9d7f9c3f7a"
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
+        "source_id": "gift-choice",
+        "reader_problem": "상품권 선물 시 사용처 다양성과 편리성 중 어느 기준을 더 우선시할지 고민되어 판단이 어려움.",
+        "distinct_angle": "기존 글이 단순 사용처 확인에 그치는 것과 달리, 편리성(접근성·사용 간편함)과 다양성(선택 폭 넓음)을 구분해 상황별 우선순위 판단 질문과 스스로 완성할 평가표를 제공한다.",
+        "reader_situation": "여러 상품권 후보 중 받는 사람 상황과 선호에 맞게 편리성이나 다양성 중 하나의 기준에 근거해 최선의 선물을 고르고 싶은 독자.",
+        "deliverable": "편리성과 다양성 평가 비교표, 상황별 우선순위 판단 질문, 최종 선택 근거 문구 완성 안내서.",
+        "task_id": "",
+        "direction_id": "free-e0908a1a3a",
+        "outline": [
+          "편리성과 다양성 각각 주요 고려 요소 자세히 탐색하기",
+          "상황별 우선순위 기준 설정을 위한 질문 제작과 답변 분류하기",
+          "평가표 작성과 최종 상품권 선택 문구 직접 완성하기"
+        ],
+        "novelty_reason": "후보 하나는 선물 의견을 모으는 방법으로, 이미 공개된 선물 조율 글과 질문 구조와 실행 단계가 거의 같습니다. 다른 후보는 상품권 선물에서 편리함과 다양성을 서로 다른 판단축으로 나눠 비교하는 데 초점이 있어, 가장 가까운 기존 글인 받는 사람의 기기·사용환경 확인 글과는 다르게 독자가 직접 우선순위를 정하는 결정 도구를 제공합니다.",
+        "screen_rejections": [
+          "후보는 여러 사람의 선물 의견을 정리해 합의 기준을 만드는 내용으로, /board/free/473이 이미 다룬 받는 사람의 선호와 필요를 먼저 파악하고 기준을 우선순위로 정해 조율하는 질문과 해결 절차가 거의 같습니다. 또한 /board/purchase/2572가 이미 다룬 예산 초과 시 의견을 모아 조정안을 마련하는 흐름과도 겹쳐, 새 질문과 새 판단 도구가 충분히 드러나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/free/470",
+            "/board/sense/8",
+            "/board/purchase/2577"
+          ],
+          "gap": "기존 글들은 받는 사람의 기기나 사용환경, 사용 편의, 실제 지출 비교를 다뤘지만, 이번 글은 편리함과 다양성이 동시에 좋을 때 무엇을 먼저 택할지 정하는 기준을 따로 세우는 문제를 다룹니다. 같은 상품권 후보라도 자주 쓰는 사람에게는 간편한 쪽이 맞고, 선택 폭을 넓히고 싶은 경우에는 다양성이 더 중요할 수 있으므로, 둘 중 어느 축을 먼저 볼지 스스로 정하는 판단표가 필요합니다.",
+          "example": "받는 사람이 자주 쓰는 매장이 분명한데도 여러 곳에서 쓸 수 있다는 이유만으로 다른 상품권을 고르려 할 때, 먼저 편리함 항목에 해당하는 조건을 따로 적고 그다음 다양성 항목을 적어 비교해 보세요. 두 항목이 동시에 충족되지 않으면 실제로 자주 쓸 수 있는 쪽을 우선하고, 사용처가 넓어도 자주 쓰지 않을 가능성이 크면 선택을 미루는 식으로 판단합니다.",
+          "result": "독자는 편리함과 다양성을 같은 선상에서 막연히 비교하지 않고, 상황에 따라 어느 기준을 먼저 볼지 정한 뒤 상품권 후보를 일관된 기준으로 고를 수 있습니다.",
+          "section_actions": [
+            "첫 절에서는 편리함을 실제 사용 빈도와 접근성 중심으로 분해해 적고, 독자가 바로 써야 하는 상황인지부터 판별하게 합니다.",
+            "둘째 절에서는 다양성을 사용처의 폭과 대체 가능성 중심으로 나눠 적고, 선택지가 많은 것이 실제 이득이 되는 경우를 구별하게 합니다.",
+            "셋째 절에서는 두 기준을 같은 표에 놓고 우선순위를 정한 뒤, 현재 상황에 맞는 상품권을 하나로 좁히는 결론 문장을 완성하게 합니다."
+          ]
+        }
+      },
+      "board": "free",
+      "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-10T14:54:07Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12553,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1117,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13670
+        },
+        "estimated_usd": 0.0068084,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T18:19:35.376493+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17657,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1065,
+          "output_tokens_details": {
+            "reasoning_tokens": 377
+          },
+          "total_tokens": 18722
+        },
+        "estimated_usd": 0.01803525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T18:19:46.132628+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3588,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 508,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4096
+        },
+        "estimated_usd": 0.002248,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T18:19:50.960911+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7580,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 533,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8113
+        },
+        "estimated_usd": 0.0038848,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T18:19:56.769372+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16548,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 630,
+          "output_tokens_details": {
+            "reasoning_tokens": 261
+          },
+          "total_tokens": 17178
+        },
+        "estimated_usd": 0.015246,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T18:20:03.014139+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T18:19:25.596933+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T18:19:36.101730+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T18:19:46.135512+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T18:19:52.348296+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T18:19:59.355776+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04622245,
+    "estimated_total_usd": 0.04622245,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

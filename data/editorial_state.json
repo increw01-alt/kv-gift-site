@@ -384,10 +384,15 @@
       "board": "free",
       "topic": "선물용 상품권 구매 시 편리함과 다양한 선택 사이 적절한 균형 잡는 의사결정 질문법",
       "run_id": "42734786828"
+    },
+    {
+      "board": "free",
+      "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
+      "run_id": "42873768635"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "42867767926",
+  "last_board": "free",
+  "last_run_id": "42873768635",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -779,6 +784,14 @@
       "topic": "상품권 사용 상태 문의 시 바코드·번호 노출 없이 상황 설명법",
       "date_kst": "2026-11-09",
       "run_id": "42534089972",
+      "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "free",
+      "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
+      "date_kst": "2026-11-11",
+      "run_id": "42873768635",
       "status": "held"
     }
   ]
