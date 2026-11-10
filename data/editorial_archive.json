@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T04:14:58.792494+00:00",
+  "generatedAt": "2026-11-10T04:17:02.261931+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4199,7 +4199,7 @@
       "board": "gc_information",
       "topic": "본인 확인 정보와 조회 정보 차이고 이해하기",
       "url": "https://kv-gift.co.kr/board/gc_information/19",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-10T04:17:02.225714+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.137169,
       "knownSubtotalUsd": 0.137169
