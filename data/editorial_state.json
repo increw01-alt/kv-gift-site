@@ -389,10 +389,15 @@
       "board": "free",
       "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
       "run_id": "42873768635"
+    },
+    {
+      "board": "gc_information",
+      "topic": "모바일 상품권 교환 후 원 쿠폰과 교환 결과 구분 확인법",
+      "run_id": "42925625180"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "42905300846",
+  "last_board": "gc_information",
+  "last_run_id": "42925625180",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -792,6 +797,30 @@
       "topic": "상품권 다양한 사용처 고려해 편리성과 다양성 중 우선순위 정하기",
       "date_kst": "2026-11-11",
       "run_id": "42873768635",
+      "status": "held"
+    },
+    {
+      "source_id": "exchange-state",
+      "board": "gc_information",
+      "topic": "모바일 상품권 교환 후 원 쿠폰과 교환 결과 구분 확인법",
+      "date_kst": "2026-11-11",
+      "run_id": "42925625180",
+      "status": "held"
+    },
+    {
+      "source_id": "card-performance",
+      "board": "gc_information",
+      "topic": "상품권 결제 카드 실적과 이벤트 실적의 구분 기준",
+      "date_kst": "2026-11-11",
+      "run_id": "42925625180",
+      "status": "held"
+    },
+    {
+      "source_id": "partial-use",
+      "board": "gc_information",
+      "topic": "상품권 사용 후 잔액과 사용 이력 확인법 안내",
+      "date_kst": "2026-11-11",
+      "run_id": "42925625180",
       "status": "held"
     }
   ]

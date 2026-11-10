@@ -1,18 +1,20 @@
 {
   "run_id": "42925625180",
   "date_kst": "2026-11-11",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "모바일 상품권 교환 후 원 쿠폰과 교환 결과 구분 확인법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-10T23:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 교환 전 원 쿠폰과 교환 후 쿠폰이 함께 보일 때 상태 문구와 사용 버튼을 비교해 실제 사용 가능 대상을 가르는 절차가 기존 글과 같습니다. / 독자가 처한 상황, 확인 항목, 문의 준비 순서가 이미 공개된 '상품권 교환 후 원래 쿠폰과 교환 결과 정보 올바른 구분 가이드'와 사실상 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "42925625180",
@@ -22,15 +24,234 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-11T08:43:49.223437+09:00"
+      "attempt_started_at": "2026-11-11T08:43:49.223437+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 526,
+          "coverageArticles": 136,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-cfcea2023c",
+            "gc_information-59dfa4f23c",
+            "gc_information-46cb893488",
+            "gc_information-f6609f96b0"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 결제 카드 실적과 이벤트 실적의 구분 기준",
+          "source_id": "card-performance",
+          "task_id": "",
+          "reader_problem": "상품권을 카드로 결제할 때 카드 이용실적으로 인정되는 범위와 별도의 이벤트 실적으로 인정되는 경우를 혼동하여 결제 실적 관리를 정확히 하지 못함",
+          "distinct_angle": "기존 안내에서 단순 구분만 한 것을 넘어서 카드사 기준과 행사 주최자 기준을 명확히 분리하고, 각 단계별 확인 방법과 기록할 항목을 구체적으로 제안함",
+          "outline": [
+            "카드사별 상품권 결제 실적 인정 기준과 제외 항목 명확히 이해하기",
+            "이벤트 실적 인정 기준과 행사 주최자 확인 방법 배우기",
+            "실제 결제 내역과 명세서 표기 비교 후 각 실적 적용 여부 점검하기"
+          ],
+          "reader_situation": "상품권 카드 결제 시 카드 이용실적 인정 여부와 별도의 이벤트 실적 가능성을 구분하여 정확하게 확인하고 싶은 사용자",
+          "deliverable": "카드 실적 인정과 이벤트 실적 인정 각각의 확인 절차와 실제 사례를 기준으로 한 점검 리스트와 기록 양식",
+          "direction_id": "gc_information-cfcea2023c"
+        },
+        {
+          "topic": "상품권 사용 후 잔액과 사용 이력 확인법 안내",
+          "source_id": "partial-use",
+          "task_id": "",
+          "reader_problem": "남은 상품권 금액을 확인할 때 상품권 종류별로 잔액 확인 방법과 함께 사용 이력도 체계적으로 파악하는 방법을 몰라 혼란스러움",
+          "distinct_angle": "종류별 잔액 확인 절차와 별도로 사용 이력 관리까지 함께 다루면서, 실제 화면 예시와 기록 정리 방법을 제시하여 독자가 직접 비교 기록을 완성하도록 안내함",
+          "outline": [
+            "상품권 종류별 잔액 확인 방법 상세 소개하기",
+            "사용 이력 조회와 기록 정리 절차 익히기",
+            "잔액과 사용 이력 비교 후 계획 수립용 점검표 작성 실습하기"
+          ],
+          "reader_situation": "상품권 사용 후 남은 금액과 사용 이력을 명확히 파악하여 추후 계획을 세우려는 사용자",
+          "deliverable": "상품권 종류별 잔액 확인 절차, 사용 이력 점검 및 기록용 표준 양식, 화면별 표시 차이와 확인 포인트 정리문서",
+          "direction_id": "gc_information-46cb893488"
+        }
+      ],
+      "topic_plan": {
+        "topic": "모바일 상품권 교환 후 원 쿠폰과 교환 결과 구분 확인법",
+        "source_id": "exchange-state",
+        "task_id": "",
+        "reader_problem": "상품권을 교환한 뒤 모바일 쿠폰 화면에 원래 쿠폰과 교환 후 쿠폰이 함께 표시될 때 어떤 상태가 실제 사용 가능한 것인지 판단이 어려움",
+        "distinct_angle": "일상적 교환 사례를 바탕으로 원 쿠폰과 교환 결과의 상태 표시 차이를 상세 비교하고, 각 상태별 확인 행동과 문의 방법까지 포함하여 구분법을 제시함",
+        "outline": [
+          "교환 전 원 쿠폰과 교환 후 모바일 쿠폰 상태 유형 구분하기",
+          "각 상태별 화면 표시와 의미를 구체적으로 비교 검토하기",
+          "사용 가능 여부 판단 후 고객센터 문의 준비 및 질문 예시 익히기"
+        ],
+        "reader_situation": "교환권을 모바일 쿠폰으로 바꾼 뒤 화면에서 보이는 여러 쿠폰 상태를 정확히 파악하고 사용 준비 여부를 확인하려는 사용자",
+        "deliverable": "교환 전후 쿠폰 상태 차이표, 상태별 확인점검 목록, 혼동 방지용 화면 예시와 문의 질문 문구",
+        "direction_id": "gc_information-59dfa4f23c",
+        "novelty_reason": "후보는 모바일 쿠폰을 교환한 뒤 원래 쿠폰과 교환 결과가 함께 보이는 화면에서, 어떤 항목이 실제로 사용 가능한 상태인지 판별하는 문제를 다룹니다. 가장 가까운 기존 글들은 상품권 전달과 등록의 차이, 사용 상태와 문의 단계 구분, 화면 확인용 정보 정리에 머물러 있어, 교환 전후로 동시에 보이는 두 쿠폰의 상태를 비교해 실제 사용 가능 대상을 고르는 판단 절차는 충분히 다루지 않았습니다. 따라서 이 후보는 기존 답을 그대로 적용해도 해결되지 않는 구체적 구분 기준과 문의 준비가 추가된 새 방향으로 볼 수 있습니다.",
+        "screen_rejections": [
+          "0번은 카드로 상품권을 구매할 때 카드 실적과 이벤트 실적을 나누어 확인하는 기존 질문과 거의 같아, 카드사 기준과 행사 주최자 기준을 따로 읽는 절차가 이미 공개 글과 겹칩니다.",
+          "2번은 잔액 확인과 사용 이력 조회를 함께 정리하는 기존 질문과 동일한 흐름이라, 잔액과 기록을 분리해 조회하고 메모하는 방식이 기존 글로 충분히 해결됩니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_information/10",
+            "/board/gc_information/15",
+            "/board/purchase/2565"
+          ],
+          "gap": "기존 글은 전달된 쿠폰의 등록 여부나 사용 상태를 설명하지만, 교환 전 원 쿠폰과 교환 뒤 결과가 한 화면에 함께 보일 때 무엇이 실제 사용 대상인지 가려내는 기준은 다루지 않습니다. 이번 글은 같은 화면 안에서 두 상태를 비교해 사용 가능 대상과 보관용 대상을 나누는 판단법을 새로 제시해야 합니다.",
+          "example": "교환 전 쿠폰과 교환 후 쿠폰이 나란히 보이고, 둘 다 비슷한 이름과 상태 문구를 가지고 있어 헷갈리는 경우를 떠올려 보세요. 이때는 화면의 상태 문구와 등록 여부, 사용 버튼 유무를 각각 분리해 읽고, 실제 사용 대상인지 먼저 판별한 뒤 나머지는 보관용으로 남기는 방식이 필요합니다.",
+          "result": "독자가 교환 전후에 함께 보이는 쿠폰 중 실제 사용 가능한 대상을 먼저 가려내고, 헷갈리는 화면에서도 보관용 상태와 사용 준비 상태를 구분해 다음 행동을 정할 수 있게 됩니다.",
+          "section_actions": [
+            "첫 절에서는 원 쿠폰과 교환 결과의 표시 위치를 나누어 읽고, 각 항목의 상태 문구를 따로 적어 실제로 무엇이 남아 있는지 구분하게 합니다.",
+            "둘째 절에서는 사용 가능 여부를 가르는 화면 요소를 확인해, 등록 여부와 사용 버튼, 안내 문구를 비교한 뒤 바로 쓸 대상과 아직 보관할 대상을 분리하게 합니다.",
+            "셋째 절에서는 혼동이 남는 경우 문의할 때 필요한 정보만 정리해 전달하도록 하고, 어떤 화면에서 어떤 문구를 봤는지 구체적으로 설명해 다시 확인받게 합니다."
+          ]
+        }
+      },
+      "board": "gc_information",
+      "topic": "모바일 상품권 교환 후 원 쿠폰과 교환 결과 구분 확인법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-10T14:54:07Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24508,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 24320
+          },
+          "output_tokens": 903,
+          "output_tokens_details": {
+            "reasoning_tokens": 207
+          },
+          "total_tokens": 25411
+        },
+        "estimated_usd": 0.0060285,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T23:43:59.866342+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3568,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 485,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4053
+        },
+        "estimated_usd": 0.0022032,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T23:44:05.257757+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4476,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 557,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5033
+        },
+        "estimated_usd": 0.0026816,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-10T23:44:11.001597+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16534,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 429,
+          "output_tokens_details": {
+            "reasoning_tokens": 134
+          },
+          "total_tokens": 16963
+        },
+        "estimated_usd": 0.014331,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-10T23:44:16.527868+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T23:43:52.040483+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T23:43:59.868954+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-10T23:44:05.971309+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-10T23:44:12.109518+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0252443,
+    "estimated_total_usd": 0.0252443,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
