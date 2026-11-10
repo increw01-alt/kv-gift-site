@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T03:28:53.732060+00:00",
+  "generatedAt": "2026-11-10T03:29:52.645640+00:00",
   "dateKst": "2026-11-10",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 12,
   "held": 8,
   "errors": 2,
-  "knownSubtotalUsd": 0.55086805,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.6709882,
+  "estimatedTotalUsd": 0.6709882,
   "records": [
     {
       "runId": "42643246374",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "42749616711",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "물품 교환 후 조립·설치에 필요한 공간 마련과 작업 순서 체계적 배치하기",
+      "url": "https://kv-gift.co.kr/board/gc_tip/49",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-10T03:27:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12012015,
+      "knownSubtotalUsd": 0.12012015
     }
   ],
   "topicRetry": {

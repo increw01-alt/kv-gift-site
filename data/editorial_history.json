@@ -1578,5 +1578,18 @@
     "publication_mode": "automatic",
     "run_id": "42649102968",
     "usage_file": "data/editorial_runs/2026-11-10/42649102968.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 49,
+    "topic": "물품 교환 후 조립·설치에 필요한 공간 마련과 작업 순서 체계적 배치하기",
+    "drafted_at": "2026-11-10",
+    "automation": true,
+    "search_intent": "교환받은 큰 물품을 설치하기 전에 개봉 공간과 설치 순서를 나눠 계획하는 방법을 알고 싶은 질문",
+    "image_scene": "넓은 바닥에 큰 박스와 테이프, 자, 마스킹테이프가 놓여 있고 한 사람이 개봉할 자리와 완성품을 둘 자리를 각각 테이프로 표시하며 작업 동선을 화살표 메모로 정리하는 구도",
+    "image_alt": "바닥에 큰 박스가 놓인 공간에서 개봉 자리와 설치 자리를 따로 표시하며 작업 순서를 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "42749616711",
+    "usage_file": "data/editorial_runs/2026-11-10/42749616711.json"
   }
 ]
