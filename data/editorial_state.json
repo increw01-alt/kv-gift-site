@@ -374,10 +374,15 @@
       "board": "general_notice",
       "topic": "검색 글 수정 기록과 현재 본문 구분 읽기 요령 안내",
       "run_id": "42722028250"
+    },
+    {
+      "board": "sense",
+      "topic": "공용 물건의 위치 표시와 사용 중 표시 체계화하기",
+      "run_id": "42726571731"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "42722028250",
+  "last_board": "sense",
+  "last_run_id": "42726571731",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
