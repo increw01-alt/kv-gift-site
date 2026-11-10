@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T16:03:59.552463+00:00",
+  "generatedAt": "2026-11-10T16:05:04.011930+00:00",
   "dateKst": "2026-11-11",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 4,
   "held": 1,
   "errors": 2,
-  "knownSubtotalUsd": 0.0644569,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1643725,
+  "estimatedTotalUsd": 0.1643725,
   "records": [
     {
       "runId": "42842883618",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "42850648648",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "읽기 중 화면 밝기·입력 도구 바꿀 때 선택 이동 유지하는 절차 안내",
+      "url": "https://kv-gift.co.kr/board/general_notice/70",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-10T16:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0999156,
+      "knownSubtotalUsd": 0.0999156
     }
   ],
   "topicRetry": {

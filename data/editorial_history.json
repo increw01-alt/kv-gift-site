@@ -1604,5 +1604,18 @@
     "publication_mode": "automatic",
     "run_id": "42754412143",
     "usage_file": "data/editorial_runs/2026-11-10/42754412143.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 70,
+    "topic": "읽기 중 화면 밝기·입력 도구 바꿀 때 선택 이동 유지하는 절차 안내",
+    "drafted_at": "2026-11-11",
+    "automation": true,
+    "search_intent": "화면 밝기나 입력 도구가 바뀌어도 읽던 위치와 선택 상태를 잃지 않고 다시 찾는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 스마트폰 화면과 작은 메모장이 나란히 놓여 있고, 한 사람이 화면의 현재 문단과 선택된 항목을 손가락으로 짚은 뒤 메모장에 위치 단서를 적고 있다. 옆에는 외부 키보드와 밝기 조절 아이콘이 보이며, 환경이 바뀌기 전후의 위치를 비교해 복원하는 장면",
+    "image_alt": "스마트폰에서 읽던 위치를 메모해 두고 화면과 입력 도구가 바뀐 뒤 다시 같은 문단을 찾는 장면입니다.",
+    "publication_mode": "automatic",
+    "run_id": "42850648648",
+    "usage_file": "data/editorial_runs/2026-11-11/42850648648.json"
   }
 ]
