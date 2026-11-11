@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T05:34:13.002574+00:00",
+  "generatedAt": "2026-11-11T15:18:54.832292+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4413,6 +4413,20 @@
       "source": "cloudflare_cron",
       "estimatedUsd": 0.0290353,
       "knownSubtotalUsd": 0.0290353
+    },
+    {
+      "id": "run:43046954842",
+      "runId": "43046954842",
+      "dateKst": "2026-11-12",
+      "dateBasis": "run_day",
+      "status": "generating",
+      "board": null,
+      "topic": null,
+      "url": null,
+      "publicVerifiedAt": null,
+      "source": "cloudflare_cron",
+      "estimatedUsd": null,
+      "knownSubtotalUsd": 0
     },
     {
       "id": "post:purchase:2561",
@@ -19338,6 +19352,17 @@
       "requests": 1,
       "inputTokens": 25328,
       "outputTokens": 529
+    },
+    {
+      "entryId": "run:43046954842",
+      "dateKst": "2026-11-12",
+      "recordedAt": null,
+      "kind": "unrecorded",
+      "estimatedUsd": null,
+      "knownSubtotalUsd": 0,
+      "requests": 0,
+      "inputTokens": null,
+      "outputTokens": null
     },
     {
       "entryId": "post:purchase:2561",
