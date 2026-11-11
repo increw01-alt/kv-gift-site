@@ -1,18 +1,20 @@
 {
   "run_id": "42930237652",
   "date_kst": "2026-11-11",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "모바일상품권 이용 기한별 자신의 권리와 행위 정리법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T00:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 모바일상품권의 유효기간과 실제 이용 가능 기간을 구분하고, 만료 전·임박·경과 단계별로 확인과 조치를 정리하는 구조가 기존의 ‘모바일상품권 유효기간과 사용 기한 체계적 정리법’ 및 유사 글과 사실상 같습니다. / 핵심 질문과 해결 절차가 표시 기한 확인 → 문의처 확인 → 기록 정리로 반복되어, 제목만 달라진 중복 안내로 판단됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "42930237652",
@@ -22,15 +24,280 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-11T09:18:55.477968+09:00"
+      "attempt_started_at": "2026-11-11T09:18:55.477968+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 529,
+          "coverageArticles": 136,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-69484ecae0",
+            "sale-be8f258b08",
+            "sale-ecddaf57c8"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모바일상품권의 표시기한과 실제 이용기한 구분 정리법",
+          "source_id": "voucher-expiry",
+          "reader_problem": "모바일상품권에 적힌 유효기간과 실제로 사용할 수 있는 기간이 다를 수 있어 정확한 정보 정리가 필요합니다.",
+          "distinct_angle": "기존 글들이 상품권 상태 점검이나 판매 절차 중심인데, 이 글은 표시된 기간과 실제 이용 안내의 차이를 명확히 구분하고 체계적으로 확인 정리하는 방법을 제시합니다.",
+          "reader_situation": "모바일상품권의 기한 표시를 보고 구매 전후로 혼동을 겪거나, 판매 전 실제 사용 가능 기간을 명확히 파악하고자 하는 고객과 판매자.",
+          "deliverable": "표시 기한과 실제 이용 기한을 분리 정리한 비교 표와, 각각 확인해야 할 핵심 정보 목록, 문의 전 점검 체크리스트 문서.",
+          "task_id": "",
+          "direction_id": "sale-347dc67531",
+          "outline": [
+            "모바일상품권에 표기된 유효기간의 의미 정확히 이해하기",
+            "상품권 발행사와 매입처의 실제 이용 기한 차이 확인 절차",
+            "표시 기간과 실제 이용 기한 정보를 체계적으로 정리·비교하는 방법"
+          ]
+        },
+        {
+          "topic": "상품권 판매 문의 중 표시 기한과 이용기한 혼동 방지법",
+          "source_id": "voucher-expiry",
+          "reader_problem": "상품권에 표시된 기한과 실제 이용 기한 구분이 어려워 상담 과정에서 정확한 정보를 제공하기 힘든 상황입니다.",
+          "distinct_angle": "판매 전 오류 대응 안내와 달리, 상품권의 두 기한 정보를 혼동하지 않고 명확히 구분하는 상담 기록법과 안내 문구 작성 방법에 초점을 맞춥니다.",
+          "reader_situation": "상품권 판매 상담 시 표시된 기한과 실제 이용 가능한 기간이 다르다는 점을 명확히 전달하려는 판매 담당자.",
+          "deliverable": "상담 과정에서 표시 기간과 실제 이용 기한 정보를 분리해 기록할 수 있는 구분표 및 안내 문구 샘플, 업무 흐름 가이드.",
+          "task_id": "",
+          "direction_id": "sale-ecddaf57c8",
+          "outline": [
+            "표시 기한과 이용 기한 구분을 위한 상담 내용 구획 나누기",
+            "각 기한별 확인할 사항과 조건 제시하는 안내 문구 작성하기",
+            "혼동 방지 위한 상담 기록 관리 및 전달 절차 익히기"
+          ]
+        },
+        {
+          "topic": "모바일상품권의 시간 표시와 사용 안내를 동시에 기록하는 실무 매뉴얼",
+          "source_id": "voucher-expiry",
+          "reader_problem": "모바일상품권의 다양한 시간 표시법과 실제 사용 안내를 동시에 확인·기록할 방법이 없어 업무나 개인 관리에 어려움을 겪고 있습니다.",
+          "distinct_angle": "단순 확인 안내가 아닌, 실제 상담과 판매 실무에서 필요한 두 기간 정보를 동시에 체계적 기록하는 표준화된 매뉴얼을 제공합니다.",
+          "reader_situation": "상품권 판매업자 또는 개인 판매자가 표시 기간과 사용 안내를 동시에 점검·기록해 고객 문의나 자체 관리에 활용하려는 현장 상황.",
+          "deliverable": "표시 기한과 실제 이용 안내를 동시에 기록·대조할 수 있는 표준 양식과 점검 매뉴얼, 상담 사례별 적용 예시 문서.",
+          "task_id": "",
+          "direction_id": "sale-be8f258b08",
+          "outline": [
+            "모바일상품권 시간 표시에 관한 기본 규칙과 주요 유형 파악",
+            "표시 기한과 이용 안내를 동시에 정리하는 기록 양식 설계",
+            "실무 상담 상황에 적용하는 기록 및 비교 방법 사례로 익히기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "모바일상품권 이용 기한별 자신의 권리와 행위 정리법",
+        "source_id": "voucher-expiry",
+        "reader_problem": "사용할 수 있는 기간에 따른 모바일상품권 사용 준비와 권리 행사 조건을 정확히 이해하고 싶습니다.",
+        "distinct_angle": "종전 안내가 판매와 문의 기록 위주인 데 비해, 이 글은 이용 기간 단계별로 소비자가 할 수 있는 행동과 확인 사항 중심으로 구분하여 실질적인 대응을 돕습니다.",
+        "reader_situation": "모바일상품권 구매 이후 이용 기간에 따른 사용 가이드와 문제 발생 시 대응법을 명확히 알고 싶은 소비자.",
+        "deliverable": "유효기간 만료 전·만료 임박·만료 후 이용 가능 조건과 대응 절차를 표로 정리한 가이드 문서와 실천 체크리스트.",
+        "task_id": "",
+        "direction_id": "sale-69484ecae0",
+        "outline": [
+          "이용 기한별 모바일상품권 권리와 제한 사항 구분하기",
+          "각 기간별 이용 시 필요한 확인과 조치 사항 정리",
+          "문제 발생 시 소비자 대응 절차 및 문의 준비 체크리스트 만들기"
+        ],
+        "novelty_reason": "기존 공개 글들은 표시된 기간과 실제 이용 가능 기간을 구분해 적고, 발행사나 매입처에 확인할 항목을 묻는 수준까지는 이미 다뤘습니다. 반면 이 후보는 이용 기한의 단계별로 소비자가 지금 할 수 있는 행동, 가까운 시점의 확인, 기한 경과 뒤의 대응을 나눠 설명하려는 점이 달라서 가장 새롭습니다.",
+        "screen_rejections": [
+          "영역과 독자 상황은 다르지만, 표시된 기간과 실제 이용 기간을 구분해 기록하고 문의하는 흐름이 기존 '/board/general_notice/45'와 '/board/gc_tip/34'에서 이미 해결된 질문과 겹칩니다.",
+          "상담 기록법과 안내 문구 작성으로 바꿨지만, 결국 표시 기한과 실제 이용 기한을 나눠 적고 문의 준비를 하는 절차가 기존 판매·문의 글의 반복입니다.",
+          "표시 기한과 이용 안내를 동시에 기록하는 실무 매뉴얼은 형식만 바뀌었고, 실제 해결 단계는 기간 정보 대조와 문의 준비의 반복이라 새 판단 도구가 충분히 드러나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/45",
+            "/board/gc_tip/34"
+          ],
+          "gap": "기존 글은 기한의 이름을 구분하고 문의처를 확인하는 데 머뭅니다. 이 글은 이용 기한의 단계에 따라 지금 바로 할 일, 가까운 시점에 확인할 일, 이미 지난 뒤에 확인할 일의 기준을 나누어 독자가 상황별로 다른 행동을 고를 수 있게 해야 합니다.",
+          "example": "만료가 가까운 모바일상품권이 있는데 바로 쓰기 어렵고, 이미 지난 뒤인지도 헷갈리는 경우처럼, 같은 기한 정보라도 현재 상태에 따라 먼저 확인할 항목과 다음 행동이 달라질 때를 기준으로 설명합니다.",
+          "result": "독자는 자신의 상품권이 어떤 단계에 있는지 먼저 판단하고, 그 단계에 맞는 확인 순서와 문의 준비를 스스로 정리할 수 있습니다.",
+          "section_actions": [
+            "첫째 절에서는 표시된 기한과 실제 이용 가능 여부를 함께 읽는 기준을 정리해, 현재 단계가 무엇인지부터 가르는 방법을 보여 줍니다.",
+            "둘째 절에서는 만료 전과 만료 임박 상태에서 각각 어떤 정보를 먼저 확인하고 어떤 질문으로 문의할지, 상황별로 다른 준비 순서를 제시합니다.",
+            "셋째 절에서는 기한이 지난 뒤에는 무엇을 기록해 두고 어떤 결과를 받아 적어야 하는지, 이후 처리에 필요한 메모 방식과 전달 항목을 정리합니다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "모바일상품권 이용 기한별 자신의 권리와 행위 정리법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-10T14:54:07Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 14320,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1026,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15346
+        },
+        "estimated_usd": 0.0073696,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T00:19:15.651254+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23039,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1124,
+          "output_tokens_details": {
+            "reasoning_tokens": 516
+          },
+          "total_tokens": 24163
+        },
+        "estimated_usd": 0.02233725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T00:19:22.276632+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3468,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 412,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3880
+        },
+        "estimated_usd": 0.0020464,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T00:19:28.359404+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4277,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 593,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4870
+        },
+        "estimated_usd": 0.0026596,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T00:19:37.615171+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16434,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 418,
+          "output_tokens_details": {
+            "reasoning_tokens": 132
+          },
+          "total_tokens": 16852
+        },
+        "estimated_usd": 0.0142065,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T00:19:42.982331+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T00:18:58.323561+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T00:19:16.286850+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T00:19:22.279535+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T00:19:29.405912+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T00:19:39.279346+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04861935,
+    "estimated_total_usd": 0.04861935,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
