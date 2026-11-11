@@ -1,18 +1,20 @@
 {
   "run_id": "42952935193",
   "date_kst": "2026-11-11",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sense",
+  "topic": "불확실한 약속 일정 확정 전과 후 명확하게 구분하고 조율하는 방법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T03:27:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글들과 핵심 질문이 같습니다. 미확정 약속과 확정 약속을 구분해 표시하고, 상태별 표현과 다시 알리는 문장을 정리하는 해결 절차가 이미 같은 방향으로 다뤄졌습니다. / 본문의 예시와 체크 항목도 약속 상태를 따로 기록하고 표현을 나누며 확정 변경 시 갱신하는 방식으로 기존 답과 사실상 겹칩니다."
+    ]
   },
   "api_usage": {
     "run_id": "42952935193",
@@ -22,15 +24,281 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-11T12:29:00.113750+09:00"
+      "attempt_started_at": "2026-11-11T12:29:00.113750+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 537,
+          "coverageArticles": 136,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-5c4a5db337",
+            "sense-131a66fcc8",
+            "sense-07089a422e",
+            "sense-bc0cf30f7f"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "비슷한 물건이나 파일에 위치 변동 있어도 활용 가능한 분류 체계 만들기",
+          "source_id": "",
+          "reader_problem": "여러 장소에 흩어진 비슷한 물건과 파일을 찾을 때 위치가 바뀌어 혼란스럽고, 효과적인 분류 및 관리 방법이 없어 불편한 상태",
+          "distinct_angle": "기존 단순 정리법과 달리 위치 변동에도 분류 기준이 유지되고 직관적으로 찾을 수 있는 다차원 식별체계 설계",
+          "reader_situation": "책상, 서랍, 디지털 저장소 등 여러 공간에서 쓰는 비슷한 아이템 또는 파일이 자주 위치를 옮기는데도 혼동 없이 빠르게 찾아야 하는 상황",
+          "deliverable": "물리적·디지털 아이템 모두 적용 가능한 색상, 기호, 카테고리 조합과 위치 기록 양식을 포함한 분류 체계 매뉴얼",
+          "task_id": "",
+          "direction_id": "sense-5c4a5db337",
+          "outline": [
+            "비슷한 물건을 구분하는 핵심 요소와 기준 정하기",
+            "위치와 상태 변화를 동시에 기록하는 분류표 설계하기",
+            "분류체계 유지와 빠른 검색을 위한 데이터 관리 방법 익히기"
+          ]
+        },
+        {
+          "topic": "한 번에 끝나지 않는 집안일 효율적 중단 지점 설계하기",
+          "source_id": "",
+          "reader_problem": "긴 집안일을 여러 날 나누어 할 때 어디서 끊고 시작할지 정하지 않아 매번 어디까지 했는지 헷갈리고 일 효율이 떨어짐",
+          "distinct_angle": "기존 단순 공간 분할을 넘어 작업 흐름과 작업 단위성에 초점을 맞춘 중단 지점 선정법과 재개 메모 기술 안내",
+          "reader_situation": "청소, 정리 같은 작업을 하루에 다 못하고 며칠에 걸쳐 하는데 매번 작업 상황을 정확히 기록하지 않아 재개가 번거로운 경우",
+          "deliverable": "작업 단계별 중단 기준과 그 지점 기록법, 재개 시 진행 확인을 돕는 체크리스트와 효율적 작업 동기 부여법 안내서",
+          "task_id": "",
+          "direction_id": "sense-131a66fcc8",
+          "outline": [
+            "집안일 전체를 완결성 있는 소단위 작업으로 나누기",
+            "중단 시점 결정과 작업 내용 요약 메모 작성법 배우기",
+            "작업 재개 시 상황 확인과 진행 상태 점검 절차 실습하기"
+          ]
+        },
+        {
+          "topic": "자주 쓰는 물건 공간 배치로 꺼내고 되돌리기 동작 줄이는 방법",
+          "source_id": "",
+          "reader_problem": "사용 빈도가 높은 물건들을 제자리 밖에 두어 찾기가 불편하고, 원위치 복귀가 간편하지 않아 관리에 어려움이 있음",
+          "distinct_angle": "기존 단순 제자리 보관과 달리 손 닿기 쉬운 배치 원칙과 동선 최소화에 중점 둔 공간 설계 및 이용법 안내",
+          "reader_situation": "사무실, 가정 내 자주 사용하는 물건들이 흩어져 있거나 사용 후 놓는 장소가 일정치 않아 반복적인 검색과 이동이 많은 상황",
+          "deliverable": "동작 횟수를 줄이는 물건 배치원칙과 구역 구분 방법, 사용 후 신속한 원상복구 유도 체크리스트 포함 공간 배치 매뉴얼",
+          "task_id": "",
+          "direction_id": "sense-bc0cf30f7f",
+          "outline": [
+            "자주 쓰는 물건 사용 빈도와 동선 분석하기",
+            "최소한의 동작으로 꺼내고 되돌리는 배치 원칙 만들기",
+            "배치 유지와 원위치 확인을 위한 생활 규칙 설계하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "불확실한 약속 일정 확정 전과 후 명확하게 구분하고 조율하는 방법",
+        "source_id": "",
+        "reader_problem": "확정되지 않은 약속 시간을 확정된 일정과 구분하지 못해 상대가 혼동하고 일정 충돌이 발생하는 문제",
+        "distinct_angle": "확정 전 협의 상태와 확정 후 약속을 명확히 나누어 표시 및 소통하는 절차와 대화 문장 구성법 안내",
+        "reader_situation": "친구, 직장 동료 등과 일정 조율 시 가능한 시간과 최종 결정된 약속이 혼재되어 착오가 생기는 상황",
+        "deliverable": "약속 상태별 시각·언어 표시 방법과 유용한 대화 예시를 포함한 약속 조율 가이드 자료",
+        "task_id": "",
+        "direction_id": "sense-07089a422e",
+        "outline": [
+          "미확정 상태와 확정 상태 약속을 정의하고 구분하기",
+          "각 상태를 효과적으로 알리는 표시와 설명 문장 익히기",
+          "명확한 확정을 위한 모범 대화 예제 연습과 활용법"
+        ],
+        "novelty_reason": "후보 둘은 약속을 잡기 전의 미확정 상태와 확정된 상태를 구분해 전달하는 문제를 다뤄, 기존의 선물 취향 조율이나 메시지 정리 글과 달리 일정 충돌 예방이라는 별도 판단이 있습니다. 특히 상대에게 어떤 표현으로 미확정임을 밝히고, 확정된 약속만 따로 남겨 혼동을 줄이는 행동이 중심이라 새 해결 흐름이 드러납니다.",
+        "screen_rejections": [
+          "영점은 비슷한 물건과 파일을 색, 기호, 위치 기록으로 나눠 찾는 구조가 기존의 상품권 보관함 표식 구분, 여러 앱의 상품권 목록 정리와 같은 분류·기록 절차를 반복합니다. 위치가 바뀌어도 식별 체계를 유지한다는 주장 외에 기존 답으로는 처리되지 않는 새 판단 도구가 부족합니다.",
+          "일점은 집안일을 소단위로 나누고 중단 시점과 재개 메모를 남기는 방식이 기존의 여러 날에 걸친 집안일 끊는 지점 안내와 사실상 같습니다. 작업 흐름을 나누는 예시도 이미 공개된 작업 분할, 중단 메모, 재개 점검과 겹쳐 중복입니다.",
+          "삼점은 자주 쓰는 물건의 배치와 원위치 복귀를 줄이는 방식이 기존의 물건 배치, 동선 최소화, 사용 후 제자리 복귀 규칙과 같은 공간 설계 안내를 반복합니다. 결과적으로 독자가 하게 되는 일은 배치 기준 정하고 위치를 기록하는 것으로, 새 질문이 충분히 분리되지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/free/473",
+            "/board/free/475",
+            "/board/sense/7"
+          ],
+          "gap": "기존 글은 선물 취향이나 메시지 정리를 다루지만, 이 후보는 미확정 약속과 확정 약속을 한 대화 안에서 섞지 않도록 구분하는 방법이 핵심입니다. 확정 전의 가능 시간, 보류 중인 시간, 확정된 시간에 각각 다른 표현을 쓰는 기준이 필요해 기존 답만으로는 처리되지 않습니다.",
+          "example": "약속 후보 시간이 여러 개 남아 있는 상태에서 상대가 다시 묻는다면, 아직 정해지지 않은 시간과 이미 잡힌 시간을 말로 따로 나눠 적어 두고, 보류 중인 제안은 ‘검토 중’으로만 남겨 혼동을 줄이는 상황을 다룹니다.",
+          "result": "독자는 미확정 일정과 확정 일정의 표현을 분리해 적고, 상대가 헷갈리지 않도록 조율 문장을 구성하는 기준을 갖게 됩니다.",
+          "section_actions": [
+            "미확정 약속과 확정 약속을 따로 적어 구분 기준을 세웁니다.",
+            "상태별로 다른 표현을 써서 상대가 바로 이해할 문장을 만듭니다.",
+            "확정 여부가 바뀔 때마다 기록과 전달 문구를 함께 갱신합니다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "불확실한 약속 일정 확정 전과 후 명확하게 구분하고 조율하는 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-10T14:54:07Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15639,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1047,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16686
+        },
+        "estimated_usd": 0.0079308,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T03:29:11.432893+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 27875,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1014,
+          "output_tokens_details": {
+            "reasoning_tokens": 315
+          },
+          "total_tokens": 28889
+        },
+        "estimated_usd": 0.02546925,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T03:29:17.426270+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3507,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 411,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3918
+        },
+        "estimated_usd": 0.0020604,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T03:29:21.110781+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6472,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 460,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6932
+        },
+        "estimated_usd": 0.0033248,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T03:29:26.089085+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19491,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 448,
+          "output_tokens_details": {
+            "reasoning_tokens": 173
+          },
+          "total_tokens": 19939
+        },
+        "estimated_usd": 0.01663425,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T03:29:32.152606+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T03:29:02.949321+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T03:29:12.167204+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T03:29:17.429302+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T03:29:22.535537+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T03:29:28.328513+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0554195,
+    "estimated_total_usd": 0.0554195,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

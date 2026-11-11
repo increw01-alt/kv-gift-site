@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T03:29:00.354576+00:00",
+  "generatedAt": "2026-11-11T03:29:32.385662+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4391,14 +4391,14 @@
       "runId": "42952935193",
       "dateKst": "2026-11-11",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sense",
+      "topic": "불확실한 약속 일정 확정 전과 후 명확하게 구분하고 조율하는 방법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0554195,
+      "knownSubtotalUsd": 0.0554195
     },
     {
       "id": "post:purchase:2561",
@@ -19251,13 +19251,57 @@
     {
       "entryId": "run:42952935193",
       "dateKst": "2026-11-11",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-11T03:29:11.432893+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0079308,
+      "knownSubtotalUsd": 0.0079308,
+      "requests": 1,
+      "inputTokens": 15639,
+      "outputTokens": 1047
+    },
+    {
+      "entryId": "run:42952935193",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-11T03:29:17.426270+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.02546925,
+      "knownSubtotalUsd": 0.02546925,
+      "requests": 1,
+      "inputTokens": 27875,
+      "outputTokens": 1014
+    },
+    {
+      "entryId": "run:42952935193",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-11T03:29:21.110781+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0020604,
+      "knownSubtotalUsd": 0.0020604,
+      "requests": 1,
+      "inputTokens": 3507,
+      "outputTokens": 411
+    },
+    {
+      "entryId": "run:42952935193",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-11T03:29:26.089085+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0033248,
+      "knownSubtotalUsd": 0.0033248,
+      "requests": 1,
+      "inputTokens": 6472,
+      "outputTokens": 460
+    },
+    {
+      "entryId": "run:42952935193",
+      "dateKst": "2026-11-11",
+      "recordedAt": "2026-11-11T03:29:32.152606+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.01663425,
+      "knownSubtotalUsd": 0.01663425,
+      "requests": 1,
+      "inputTokens": 19491,
+      "outputTokens": 448
     },
     {
       "entryId": "post:purchase:2561",
