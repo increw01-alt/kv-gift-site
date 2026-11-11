@@ -1630,5 +1630,18 @@
     "publication_mode": "automatic",
     "run_id": "43054392802",
     "usage_file": "data/editorial_runs/2026-11-12/43054392802.json"
+  },
+  {
+    "board": "free",
+    "id": 485,
+    "topic": "빠른 결정과 다양한 의견 조율 시 합리적 결정권 배분 기준",
+    "drafted_at": "2026-11-12",
+    "automation": true,
+    "search_intent": "의견이 엇갈릴 때 누구에게 어디까지 결정권을 줄지 기준을 세우고 싶다",
+    "image_scene": "회의 테이블 위에 ‘속도 우선’, ‘숙의 우선’, ‘재확인 필요’라고 적힌 질문 카드와 메모지가 펼쳐져 있고, 한 사람이 쟁점을 칸별로 나눈 뒤 각 칸에 결정권자와 후속 확인 사항을 따로 적는 장면",
+    "image_alt": "회의 테이블 위에서 쟁점을 나눈 질문 카드와 메모지를 보며 결정권자와 재확인 사항을 따로 적는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43094388619",
+    "usage_file": "data/editorial_runs/2026-11-12/43094388619.json"
   }
 ]

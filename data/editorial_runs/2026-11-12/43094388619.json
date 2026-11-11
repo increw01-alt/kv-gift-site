@@ -1,17 +1,27 @@
 {
   "run_id": "43094388619",
   "date_kst": "2026-11-12",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "free",
+  "topic": "빠른 결정과 다양한 의견 조율 시 합리적 결정권 배분 기준",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/free/485",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T20:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,345 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-12T05:14:03.030597+09:00"
+      "attempt_started_at": "2026-11-12T05:14:03.030597+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 564,
+          "coverageArticles": 137,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-9d7f9c3f7a",
+            "free-494c9616de",
+            "free-ebd166c882",
+            "free-e0908a1a3a"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 결제 수단별 할인과 적립 혜택 꼼꼼 비교법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 신용카드, 체크카드, 포인트 등 결제 수단마다 달라지는 할인과 적립 조건을 정확히 이해하고 비교하는 게 어렵다.",
+          "distinct_angle": "결제 수단별 조건의 복잡성과 차이를 표로 체계화하면서 구매 전 독자가 직접 비교·점검하는 구체적 절차와 체크리스트를 제공한다.",
+          "reader_situation": "여러 카드와 포인트 결제 수단을 보유했으나 각각의 조건을 명확히 파악하지 못해 최적의 결제 방식을 결정하기 직전인 소비자.",
+          "deliverable": "주요 결제 수단별 할인과 적립 조건 비교표, 구매 시점 적용 조건 점검 리스트, 각 상품권과 카드 조합별 유리한 선택 기준표.",
+          "task_id": "",
+          "direction_id": "free-e0908a1a3a",
+          "outline": [
+            "상품권별 결제 수단 할인 및 적립 조건 상세 항목 파악하기",
+            "상품권 종류 및 금액에 적합한 최적 결제 수단 조합 시뮬레이션 실습하기",
+            "결제 전 현장에서 조건 재확인하며 할인과 적립 적용 여부 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 전달 시 직접 고르는 즐거움과 선택권 양쪽 고려법",
+          "source_id": "",
+          "reader_problem": "선물용 상품권 고를 때 내 손으로 직접 골라 선물하는 즐거움을 우선할지, 받는 사람이 선택할 수 있도록 자유를 주는 게 좋을지 판단하기 어렵다.",
+          "distinct_angle": "선물할 때 주는 사람과 받는 사람 상황을 다르게 바라보며, 직접 구매의 장점과 선택권 부여의 효과를 질문과 비교 중심으로 다룬다.",
+          "reader_situation": "선물 수신자의 취향과 상황을 충분히 고려하면서도 선물 준비를 하는 자기 의사표현과 선택지를 찾으려는 이용자.",
+          "deliverable": "직접 고름과 선택권 제공 장단점 비교 질문지, 상황별 적절한 선물 방식 선택 상담 안내서, 관련 메시지와 포장 아이디어 리스트.",
+          "task_id": "",
+          "direction_id": "free-9d7f9c3f7a",
+          "outline": [
+            "직접 고르는 선물의 정서적 가치와 장점 점검하기",
+            "선택권 부여가 수신자 만족에 미치는 영향과 상황별 고려사항 묻기",
+            "자신과 상대 상황에 맞는 선물 방식 결정 지원용 질문지 완성하기"
+          ]
+        },
+        {
+          "topic": "스마트폰 익숙하지 않은 분을 위한 상품권 비교 포인트",
+          "source_id": "",
+          "reader_problem": "스마트폰 사용에 익숙하지 않은 분께 선물할 상품권을 고르길 원하지만, 어떤 비교 기준으로 접근해야 할지 막막하다.",
+          "distinct_angle": "수신자의 스마트폰 지원 범위, 대리 사용 가능성, 실제 사용 편의성 등 구체적 환경을 중심으로 단계별 질문과 비교 기준을 설계한다.",
+          "reader_situation": "연세 많거나 스마트폰 사용 어려운 가족·친지에게 적합한 상품권을 실속 있게 고르려는 선물 준비자.",
+          "deliverable": "스마트폰 지원 범위 점검표, 대리 사용 가능 여부 및 사용 편의성 비교 질문지, 알맞은 상품권 유형과 전달 방식 선택 안내문.",
+          "task_id": "",
+          "direction_id": "free-ebd166c882",
+          "outline": [
+            "수신자의 스마트폰 기기와 서비스 지원 범위 꼼꼼히 확인하기",
+            "대리 사용 가능성과 사용 절차 편리성 비교 질문 만들기",
+            "환경에 맞는 상품권 유형과 전달 방법 결정을 위한 비교 기준 점검하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "빠른 결정과 다양한 의견 조율 시 합리적 결정권 배분 기준",
+        "source_id": "",
+        "reader_problem": "의견이 많고 다양해 결정 지연이 발생하는데, 신속한 실행과 다양한 의견 수렴 필요성을 동시에 만족시키는 결정권 배분이 어려워 혼란스럽다.",
+        "distinct_angle": "의견 수렴과 빠른 결정 충돌 상황별로 결정권 위임 기준을 설정하고, 대화 질문 목록과 구체적 권한 분배 절차를 만들어 실행 방향을 제시한다.",
+        "reader_situation": "팀·가족·모임 등에서 의견 차이가 있어 신속 결정이 필요하지만, 모두의 참여를 존중하며 권한 배분 방법을 찾는 책임자나 참여자.",
+        "deliverable": "충돌 유형별 결정권 위임 기준 질문 리스트, 사례별 권한 배분과 조치 절차, 결정권 분배 후 행동 계획 매뉴얼.",
+        "task_id": "",
+        "direction_id": "free-494c9616de",
+        "outline": [
+          "의견 충돌과 빠른 결정 간 문제 유형별 상황 분석하기",
+          "결정권 위임에 필요한 상황별 판단 질문과 기준 설정하기",
+          "구체적 사례에 맞춘 권한 배분 및 후속 조치 절차 설계해보기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글들이 다루는 질문은 선물 선택의 취향 비교, 질문 방식 선택, 안내 찾기 방식처럼 개인의 선택 기준을 묻는 수준인데, 후보 셋은 여러 사람의 의견이 충돌할 때 결정권을 어떻게 나누고 언제 위임할지 정하는 실행 기준까지 다룹니다. 즉 단순 비교가 아니라 권한 배분, 위임 범위, 후속 조치라는 다른 판단 도구를 제시하므로 중복성이 가장 낮습니다.",
+        "screen_rejections": [
+          "0번은 상품권 구매 시 결제 수단별 할인·적립 조건을 나눠 확인하고 비교표로 정리하는 흐름이 기존의 카드 실적·이벤트 실적 구분 글과 겹칩니다. 이미 해결한 질문은 카드 실적과 이벤트 기준을 따로 확인하는 것이어서, 결제 수단별 조건 비교로 바꿔도 같은 확인 절차를 반복합니다.",
+          "1번은 선물할 때 직접 고르는 즐거움과 받는 사람의 선택권을 비교하는 질문이 기존의 선물 취향·선택권 비교 글과 사실상 같습니다. 독자가 처한 상황도 선물 선택 전의 가치 판단으로 동일하고, 새 해결 단계나 별도 판단 도구가 충분히 드러나지 않습니다.",
+          "2번은 스마트폰 사용이 익숙하지 않은 수신자에게 맞는 상품권을 고르는 문제로, 기기 확인·사용환경 확인·대리 사용 가능성 점검이라는 절차가 기존의 받는 사람 기기와 사용환경 점검 글과 중복됩니다. 이미 해결한 질문은 사용 가능한 환경인지 확인하는 것이어서, 연령과 편의성만 바꾼 수준으로 보입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/free/477",
+            "/board/free/469",
+            "/board/free/476"
+          ],
+          "gap": "기존 글은 주로 개인의 선호를 묻거나 질문 방식을 고르는 수준이지만, 이 후보는 여러 사람의 의견이 충돌하는 상황에서 누가 어디까지 결정할 수 있는지, 급한 결정이 필요할 때도 어떤 권한은 남겨 두어야 하는지까지 나눠 설명해야 합니다. 단순한 선택 비교가 아니라 위임 범위와 사후 확인 기준이 있어야 실제 갈등을 정리할 수 있습니다.",
+          "example": "회의에서 한쪽은 바로 정해야 한다고 하고 다른 쪽은 더 듣자고 할 때, 먼저 전체 의견을 다 받는지 아니면 핵심 쟁점만 남기고 마무리할지 구분해 볼 수 있는 상황입니다. 이때 누구에게 최종 판단을 맡길지와 나중에 다시 확인할 항목을 따로 적어 두면, 속도와 참여를 함께 챙길 수 있습니다.",
+          "result": "독자는 갈등 상황을 빠른 결정이 필요한 경우와 더 논의해야 하는 경우로 나누고, 각 경우에 맞는 권한 배분과 후속 확인 기준을 스스로 정리하게 됩니다.",
+          "section_actions": [
+            "의견이 갈린 쟁점을 속도 우선과 숙의 우선으로 나눠 적고, 각 항목마다 즉시 결정이 필요한지 먼저 판단하게 한다.",
+            "최종 결정권을 맡길 사람과 함께 남겨 둘 확인 사항을 분리해 적어, 위임 뒤에도 다시 검토해야 할 범위를 분명히 하게 한다.",
+            "결정 후 실행과 재확인이 필요한 단계를 따로 정리해, 합의가 끝난 뒤에도 혼선 없이 후속 조치를 이어가게 한다."
+          ]
+        }
+      },
+      "board": "free",
+      "topic": "빠른 결정과 다양한 의견 조율 시 합리적 결정권 배분 기준",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-11T14:23:21Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "의견이 엇갈릴 때 누구에게 어디까지 결정권을 줄지 기준을 세우고 싶다"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15456,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1093,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16549
+        },
+        "estimated_usd": 0.0079312,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T20:14:17.342685+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 28647,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1067,
+          "output_tokens_details": {
+            "reasoning_tokens": 265
+          },
+          "total_tokens": 29714
+        },
+        "estimated_usd": 0.02628675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T20:14:25.768612+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3641,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 336,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3977
+        },
+        "estimated_usd": 0.001994,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T20:14:28.691770+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8239,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 510,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8749
+        },
+        "estimated_usd": 0.0041116,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T20:14:35.087429+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 22121,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 348,
+          "output_tokens_details": {
+            "reasoning_tokens": 167
+          },
+          "total_tokens": 22469
+        },
+        "estimated_usd": 0.01815675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T20:14:39.505130+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3565,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1069
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4937
+        },
+        "estimated_usd": 0.066473,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T20:15:08.177624+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14102,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 187,
+          "output_tokens_details": {
+            "reasoning_tokens": 122
+          },
+          "total_tokens": 14289
+        },
+        "estimated_usd": 0.011418,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T20:15:12.317325+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T20:14:06.117291+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T20:14:18.114697+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T20:14:25.771837+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T20:14:30.093927+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T20:14:37.317742+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-11T20:14:39.525916+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T20:15:09.638528+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1363713,
+    "estimated_total_usd": 0.1363713,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
