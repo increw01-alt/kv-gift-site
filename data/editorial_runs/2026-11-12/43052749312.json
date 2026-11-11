@@ -3,16 +3,18 @@
   "date_kst": "2026-11-12",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T15:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "43052749312",
@@ -22,15 +24,158 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-12T00:54:01.741798+09:00"
+      "attempt_started_at": "2026-11-12T00:54:01.741798+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [
+          {
+            "topic": "상품권 장바구니 옵션 수정 후 원래 의도와 일치하는지 점검하는 절차",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "장바구니에서 상품권 옵션을 여러 차례 바꾼 뒤, 최종 주문 내역이 처음 의도한 대상과 옵션과 정확히 맞는지 확인하는 방법이 없다 보니 주문 착오 걱정이 크다.",
+            "distinct_angle": "기존 단순 확인 안내와 달리, 최초 선택 내용 기록부터 변경 내역 세부 점검과 최종 주문 직전 대조 검증 절차를 체계적으로 안내하여 실수를 막는 구체적 행동 가이드를 제시한다.",
+            "outline": [
+              "처음 담긴 상품권 대상 및 옵션을 체계적으로 기록하는 방법 배우기",
+              "옵션 변경 시마다 변경 내역을 상세하게 확인하는 점검 절차 마련하기",
+              "최종 주문 직전 원래 의도한 대상과 현재 주문 내역 일치 여부를 구체적으로 대조 점검하기"
+            ],
+            "reader_situation": "상품권을 자주 다르게 옵션 조정하는 구매자가, 주문 전 자신이 처음 선택한 내용과 현재 주문 내역을 꼼꼼히 비교하려는 상황.",
+            "deliverable": "원래 선택 내용 기록법, 변경 시마다 수정 내용 세밀히 확인하는 점검 절차, 최종 주문 전 의도 대상과 옵션 일치 여부를 대조하는 상세 점검 목록과 실천 매뉴얼.",
+            "direction_id": "purchase-5aaa6701f9"
+          },
+          {
+            "topic": "상품권 구매 조건 충돌 시 필수 조건부터 확정해 후보 제거하는 절차",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "여러 구매 희망 조건이 서로 충돌하여 모든 장점을 합산 비교하기 어렵고, 필수 조건을 먼저 확정해 후보군을 순차적으로 줄이는 판단 흐름이 불명확하다.",
+            "distinct_angle": "기존 단순 조건 비교를 넘어서 필수와 우대 조건을 엄격히 구분하고, 필수 미충족 조건으로 후보를 체계적으로 제거하는 판단 흐름도와 적용 사례를 구체적으로 제시한다.",
+            "outline": [
+              "필수 조건과 우대 조건을 구분하고 정의하는 방법 배우기",
+              "필수 조건 미충족 시 후보를 우선 제거하는 의사결정 흐름 확립하기",
+              "남은 후보를 우대 조건으로 비교해 최종 선택하는 적용법 익히기"
+            ],
+            "reader_situation": "마음에 드는 브랜드 또는 조건과 필요한 사용 조건이 충돌해 단순 비교보다 우선 필수 조건을 정해 구매 후보를 효율적으로 줄이려는 독자.",
+            "deliverable": "필수 조건과 우대 조건을 분류하고 정의하는 기준표, 필수 미충족 후보부터 우선 제거하는 의사결정 나무 설계, 단계별 후보 제거 기준과 실제 적용 사례 자료.",
+            "direction_id": "purchase-6f6d6db65b"
+          },
+          {
+            "topic": "상품권 선물 포장 벗길 때 안내 내용 분리와 보존 점검법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "선물 상품권에서 인사말과 이용 안내 문구가 포장과 내부 자료에 섞여 있어, 겉포장을 버리면 중요한 안내가 사라질 위험이 있다.",
+            "distinct_angle": "기존 안내 문서 단순 정리와 달리 포장 외부, 내부, 인사 카드, 상품권 원본 등 안내 자료 기능별로 엄격히 분리 및 배치하고, 포장 제거 후 안내 보존 여부를 모의 전달 점검해 문제 발생을 사전 예방한다.",
+            "outline": [
+              "포장, 인사말 카드, 이용 안내서 등 안내 자료를 기능별로 구분하고 분리 배치하기",
+              "포장 일부 제거 후 안내 내용이 보존되는지 모의 전달 점검 절차 수행하기",
+              "최종 안내 자료를 수신자 친화적으로 재배열하고 점검 절차를 체계적으로 실행하기"
+            ],
+            "reader_situation": "직접 선물 전달 시 인사말과 이용 안내가 포장에 혼재되어 수신자가 일부 포장을 버릴 경우에도 필요한 안내가 남도록 대비하려는 이용자.",
+            "deliverable": "안내 자료 기능별 구분과 분리 배치 도표, 포장 제거 후 안내 보존 여부를 점검하는 모의 전달 체크리스트, 최종 안내 재배열과 점검 절차 안내서.",
+            "direction_id": "purchase-f7b2f0a802"
+          },
+          {
+            "topic": "서로 다른 적용 대상 가진 동일 용어가 포함된 상품권 설명 구분법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "여러 후보 상품권 설명에서 동일한 용어가 각기 다른 적용 대상(예: 브랜드 전체 또는 특정 지점)을 가리켜 객관적 비교가 혼란스러워진다.",
+            "distinct_angle": "기존 단순 용어 해석과 달리, 핵심 용어별 적용 대상 범위를 체계적으로 분리하고, 서로 다른 대상임을 판단해 비교 대상 항목을 명확히 선별하는 기준과 실무 가이드를 제공한다.",
+            "outline": [
+              "상품권 설명 내 핵심 용어별 적용 대상 범위를 체계적으로 분리하기",
+              "같은 단어여도 서로 다른 적용 대상을 가진 항목을 구분하는 세부 기준 마련하기",
+              "분리 기준에 따라 비교 대상이 될 수 있는 항목만 선정해 목록 작성하는 법 설명하기"
+            ],
+            "reader_situation": "브랜드 전체 또는 일부 지점 한정 조건이 섞인 상품권 후보 설명을 동일 용어로 읽어 객관적 비교 기준 설정이 어려운 구매자.",
+            "deliverable": "설명 내 주요 용어와 그 대상 범위를 분리하는 방법, 같은 단어지만 다른 대상임을 구분하는 기준표, 분리 대상에 따른 비교 항목 선정과 목록 작성 매뉴얼.",
+            "direction_id": "purchase-3b03fbce3d"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 547,
+          "coverageArticles": 136,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-f7b2f0a802",
+            "purchase-6f6d6db65b",
+            "purchase-5aaa6701f9",
+            "purchase-3b03fbce3d"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16256,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1271,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17527
+        },
+        "estimated_usd": 0.008536,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T15:54:14.400232+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30983,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1255,
+          "output_tokens_details": {
+            "reasoning_tokens": 490
+          },
+          "total_tokens": 32238
+        },
+        "estimated_usd": 0.02888475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T15:54:23.835289+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T15:54:04.719790+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T15:54:15.267858+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03742075,
+    "estimated_total_usd": 0.03742075,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
