@@ -1,18 +1,20 @@
 {
   "run_id": "42938543872",
   "date_kst": "2026-11-11",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T01:22:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 본문 수준에서 반복합니다. 후보 영점은 키보드로 이동한 현재 위치를 확인한다는 점에서 화면 상태 변화 후 위치를 복원하는 기존 안내와 거의 같고, 후보 일점은 수정 기록과 본문을 나란히 비교해 최신 여부를 판단하는 흐름이 미리보기와 본문 구분 안내와 겹칩니다. 후보 삼점은 문의에 넣을 공개·비공개 정보를 나누는 방식이 기존의 본인 확인용 정보와 조회용 정보 구분, 문의 전 준비 항목 안내와 실질적으로 같습니다. 기존 답으로도 해결되는 범위라 새 질문과 새 판단 도구가 충분히 드러나지 않아 보류합니다. / 영점은 현재 선택 위치를 눈으로 확인하고 이전 위치로 돌아가는 절차가 기존의 화면 밝기·입력 도구 변경 후 위치 기록과 복원 안내와 사실상 같습니다. 독자가 처한 상황만 키보드 이동으로 바뀌었을 뿐, 확인 항목과 실행 순서가 새롭게 분리되지 않았습니다. / 일점은 수정 기록과 본문을 비교해 최신 버전을 판별한다는 핵심이 기존의 미리보기 문구와 실제 본문을 구분하고 게시일·수정일을 확인하는 안내와 중복됩니다. 새 해결 질문이나 기존 답으로는 처리되지 않는 추가 행동이 확인되지 않습니다. / 이점은 함께 시간을 보내자는 제안과 일정·이동 부담 확인을 다루어, 이미 공개된 선물 제안 대화법과 동일한 독자 상황과 해결 흐름입니다. 상대의 부담을 묻고 조율하는 질문 순서가 그대로 반복되어 새 방향으로 보기 어렵습니다. / 삼점은 공개 문의와 비공개 문의에 넣을 정보를 구분하는 내용인데, 이미 공개된 문의 안내에서 상품명·구매처·현재 상태를 나누고 본인 확인용 정보와 조회용 정보를 구분하는 절차가 제시되어 있습니다. 문의처 구분과 정보 분리라는 핵심 행동이 겹쳐 새 해결 내용이 부족합니다."
+    ]
   },
   "api_usage": {
     "run_id": "42938543872",
@@ -22,15 +24,159 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-11T10:24:00.548363+09:00"
+      "attempt_started_at": "2026-11-11T10:24:00.548363+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 533,
+          "coverageArticles": 136,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-221bccf6aa",
+            "general_notice-d976b28d45",
+            "general_notice-6724f45795",
+            "general_notice-dd6c1436b7"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "키보드만으로 링크 이동 시 현재 선택 위치 정확히 인지하고 탐색하는 법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "키보드 탭 이동 중 현재 선택된 링크 위치가 불분명해 헤매는 이용자가 원활히 위치를 알며 차례대로 탐색하지 못하는 문제",
+          "distinct_angle": "기존 글에서 단순 탭 이동 안내를 한정했으나, 이번 후보는 선택 상태 변화 인지법, 위치 시각화, 단계별 탐색과 실행 확인을 종합적으로 설명함",
+          "outline": [
+            "탭 키로 이동 시 포커스 위치 시각적 확인법 익히기",
+            "시프트+탭 조합으로 이전 위치 확인하고 비교하기",
+            "현재 선택 위치 집중하며 링크 실행과 탐색 순서 점검 실습하기"
+          ],
+          "reader_situation": "마우스를 사용하지 않고 키보드 단독으로 게시판이나 웹 화면 내 링크 이동 시 현재 위치를 확실히 알고 탐색하려는 이용자",
+          "deliverable": "키보드 탭 이동 시 실제 선택 위치 감지 방법, 이전 항목 복귀와 선택 위치 눈으로 확인하는 행동 지침과 단계별 링크 실행 절차를 담은 안내서",
+          "direction_id": "general_notice-221bccf6aa"
+        },
+        {
+          "topic": "검색 결과에서 수정 기록과 본문 최신 버전 구분 읽는 법",
+          "source_id": "",
+          "reader_problem": "인터넷에서 찾은 안내 글 수정 기록과 현재 본문을 혼동해 올바른 최신 정보를 확인하지 못하는 문제를 해결하고 싶다.",
+          "distinct_angle": "기존에는 단순히 최신 여부를 강조했으나, 이번에는 수정 기록과 본문 내용을 나란히 비교하는 구체적 행동 절차와 읽기 팁을 제공한다.",
+          "reader_situation": "검색 결과에서 글 여러 버전을 접하며, 수정 내역과 본문 차이를 알기 어려워 신뢰 가능한 안내판단 위해 비교 방법을 알고 싶은 이용자.",
+          "deliverable": "수정 기록과 본문 비교표 작성법, 검색 시 최신 본문 찾기 행동 단계, 차이점 파악과 최신 정보 판별 체크리스트 포함 가이드.",
+          "task_id": "",
+          "direction_id": "general_notice-6724f45795",
+          "outline": [
+            "글 수정 기록과 본문 내용 차이 이해하기",
+            "검색 화면에서 최신 본문과 수정 이력 나란히 비교하는 방법 익히기",
+            "수정 기록 분석 후 최신 정보 판단과 확인 절차 실습하기"
+          ]
+        },
+        {
+          "topic": "선물 대신 함께할 시간 제안 시 부담 없이 일정과 이동 조율하기",
+          "source_id": "",
+          "reader_problem": "물건 선물 대신 시간을 함께 보내고 싶은데 상대방의 일정, 이동 거리 부담을 부담 없게 묻고 조율하는 구체적 절차가 어려워 당황한다.",
+          "distinct_angle": "기존 선물 아이디어 제안과 달리, 활동 의사부터 일정, 이동 부담까지 단계별 순서와 표현법으로 부담 없이 소통하는 대화 흐름도를 제공한다.",
+          "reader_situation": "친구나 가족에게 모임이나 활동 시간을 선물하려 하며, 상대 부담을 최소화하면서 자연스레 일정을 맞추고자 하는 이용자.",
+          "deliverable": "활동 참여 의사 묻기, 일정 부담 확인법, 이동 거리 부담 고려한 자연스러운 질문-flow와 선택 기준 표가 담긴 실전 대화 매뉴얼.",
+          "task_id": "",
+          "direction_id": "general_notice-221bccf6aa",
+          "outline": [
+            "먼저 활동 참여 의사를 부담 없이 묻기 위한 표현 만들기",
+            "상대 일정 부담 정도를 자연스럽게 확인하는 질문법 익히기",
+            "이동 거리 및 준비 부담을 고려해 상황별 질문 흐름도 그리기"
+          ]
+        },
+        {
+          "topic": "공개 문의와 비공개 문의에 맞는 정보 구분하고 효율적 처리법",
+          "source_id": "",
+          "reader_problem": "상품권 문의 시 어떤 정보는 공개해야 하고 어떤 정보는 비공개로 처리해야 하는지 구분이 막연해 안전성과 효율성을 동시에 지키는 방법이 불명확하다.",
+          "distinct_angle": "기존 단순 문의 방법 안내와 다르게 공개/비공개 적합 정보를 사례별 구분하고, 각 유형에 맞는 단계별 처리 절차와 유의사항을 구체적으로 제시한다.",
+          "reader_situation": "상품권 관련 문제로 고객센터나 판매처에 문의할 때 정보 공개 범위를 정확히 가려야 하며, 안전하면서도 효율적인 문의 응대 절차를 알고 싶은 사용자.",
+          "deliverable": "문의 상황별 공개 및 비공개 정보 기준표, 각 경우에 따른 실제 문의 작성 및 전달 행동 가이드, 안전성 점검 체크리스트 포함 문서.",
+          "task_id": "",
+          "direction_id": "general_notice-d976b28d45",
+          "outline": [
+            "공개 문의와 비공개 문의에 적합한 정보 항목 분류하기",
+            "각 정보 유형별 문의 시 행동 절차와 전달 방법 명확히 하기",
+            "효율적이고 안전한 문의 처리 위해 주의사항과 체크리스트 활용하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12592,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1054,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13646
+        },
+        "estimated_usd": 0.0067232,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T01:24:11.940338+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 31443,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 681,
+          "output_tokens_details": {
+            "reasoning_tokens": 175
+          },
+          "total_tokens": 32124
+        },
+        "estimated_usd": 0.02664675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T01:24:16.621650+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T01:24:03.804466+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T01:24:12.668170+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03336995,
+    "estimated_total_usd": 0.03336995,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
