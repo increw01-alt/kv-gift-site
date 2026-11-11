@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T19:23:50.874292+00:00",
+  "generatedAt": "2026-11-11T19:24:22.779817+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4503,14 +4503,14 @@
       "runId": "43086673792",
       "dateKst": "2026-11-12",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "general_notice",
+      "topic": "읽기 순서가 복잡한 표와 접힌 문단에서 놓친 행렬 및 조건을 탐지하는 점검법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0389108,
+      "knownSubtotalUsd": 0.0389108
     },
     {
       "id": "post:purchase:2561",
@@ -19638,13 +19638,57 @@
     {
       "entryId": "run:43086673792",
       "dateKst": "2026-11-12",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-11T19:24:02.455287+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0078612,
+      "knownSubtotalUsd": 0.0078612,
+      "requests": 1,
+      "inputTokens": 14737,
+      "outputTokens": 1229
+    },
+    {
+      "entryId": "run:43086673792",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:24:09.318145+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.021834,
+      "knownSubtotalUsd": 0.021834,
+      "requests": 1,
+      "inputTokens": 24414,
+      "outputTokens": 783
+    },
+    {
+      "entryId": "run:43086673792",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:24:13.322097+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0021224,
+      "knownSubtotalUsd": 0.0021224,
+      "requests": 1,
+      "inputTokens": 3482,
+      "outputTokens": 456
+    },
+    {
+      "entryId": "run:43086673792",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:24:18.594595+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0050768,
+      "knownSubtotalUsd": 0.0050768,
+      "requests": 1,
+      "inputTokens": 10664,
+      "outputTokens": 507
+    },
+    {
+      "entryId": "run:43086673792",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:24:22.466094+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0020164,
+      "knownSubtotalUsd": 0.0020164,
+      "requests": 1,
+      "inputTokens": 3005,
+      "outputTokens": 509
     },
     {
       "entryId": "post:purchase:2561",

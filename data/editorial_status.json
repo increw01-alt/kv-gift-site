@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T19:23:50.854650+00:00",
+  "generatedAt": "2026-11-11T19:24:22.759663+00:00",
   "dateKst": "2026-11-12",
   "dailyTarget": 10,
   "attemptLimit": 15,
@@ -8,9 +8,9 @@
   "verified": 1,
   "attempts": 7,
   "held": 3,
-  "errors": 2,
-  "knownSubtotalUsd": 0.29081095,
-  "estimatedTotalUsd": null,
+  "errors": 3,
+  "knownSubtotalUsd": 0.32972175,
+  "estimatedTotalUsd": 0.32972175,
   "records": [
     {
       "runId": "43046954842",
@@ -92,16 +92,16 @@
     },
     {
       "runId": "43086673792",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "error",
+      "board": "general_notice",
+      "topic": "읽기 순서가 복잡한 표와 접힌 문단에서 놓친 행렬 및 조건을 탐지하는 점검법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-11T19:22:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0389108,
+      "knownSubtotalUsd": 0.0389108
     }
   ],
   "topicRetry": {

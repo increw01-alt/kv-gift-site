@@ -409,10 +409,15 @@
       "board": "gc_information",
       "topic": "액면가, 판매가, 잔액 용어 차이와 실제 금액 판단 절차 안내",
       "run_id": "43070821410"
+    },
+    {
+      "board": "general_notice",
+      "topic": "읽기 순서가 복잡한 표와 접힌 문단에서 놓친 행렬 및 조건을 탐지하는 점검법",
+      "run_id": "43086673792"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "43076429677",
+  "last_board": "general_notice",
+  "last_run_id": "43086673792",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
