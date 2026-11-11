@@ -414,10 +414,15 @@
       "board": "general_notice",
       "topic": "읽기 순서가 복잡한 표와 접힌 문단에서 놓친 행렬 및 조건을 탐지하는 점검법",
       "run_id": "43086673792"
+    },
+    {
+      "board": "sense",
+      "topic": "문서에서 사실과 의견 문장 구분해 명확히 작성하는 법",
+      "run_id": "43089001082"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "43086673792",
+  "last_board": "sense",
+  "last_run_id": "43089001082",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

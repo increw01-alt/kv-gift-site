@@ -1,18 +1,20 @@
 {
   "run_id": "43089001082",
   "date_kst": "2026-11-12",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sense",
+  "topic": "문서에서 사실과 의견 문장 구분해 명확히 작성하는 법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T19:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글의 질문과 해결 절차가 같습니다. 문장이나 메모에서 사실과 의견을 구분하는 기준을 세우고, 표시한 뒤 다시 쓰는 흐름이 이미 다른 글의 핵심 답과 겹칩니다. / 제목만 달리했을 뿐 독자가 해결하려는 문제와 결과물이 동일합니다. 사실문과 의견문을 나눠 오해를 줄이는 방법을 설명하는 점에서 새 판단 도구가 추가되지 않았습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43089001082",
@@ -22,15 +24,248 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-12T04:38:49.640380+09:00"
+      "attempt_started_at": "2026-11-12T04:38:49.640380+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 560,
+          "coverageArticles": 137,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-d926083876",
+            "sense-46678bb4d0",
+            "sense-7b5b6bc638",
+            "sense-f4c99bf696"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "중요 연락은 놓치지 않고 불필요 알림은 줄이는 개인 알림 분류법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "모든 알림을 한꺼번에 켜거나 꺼서 불필요 알림으로 스트레스 받고 중요한 연락을 놓치는 딜레마",
+          "distinct_angle": "일상 알림을 유형별로 체계 분류하고, 중요도와 긴급성 기준으로 필터링하는 개인 맞춤 관리법 구체 제안",
+          "outline": [
+            "수신 알림을 종류와 성격별로 체계적으로 분류하는 방법 확인하기",
+            "중요도와 긴급성을 기준으로 알림 우선순위 정하기",
+            "개인 생활에서 효과적인 알림 확인과 대응 절차 설계하기"
+          ],
+          "reader_situation": "일상에서 알림 전체 on/off로 피로감을 느끼거나 약속·소식 누락이 걱정되는 사용자",
+          "deliverable": "알림 유형별 분류법, 필터링을 위한 중요도 기준표, 우선순위 설정과 처리 순서 체크리스트",
+          "direction_id": "sense-46678bb4d0"
+        },
+        {
+          "topic": "어려운 설명 명확 전달 위한 정의와 예시 분리 기술",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "복잡하거나 추상적 개념을 설명할 때 정의와 예시가 뒤섞여 받아들이는 사람이 이해 및 활용에 어려움 겪음",
+          "distinct_angle": "정의는 짧고 핵심적으로, 적합 사례와 명확히 다른 반례를 구분해 보여주는 구체적 방법과 연습법 제공",
+          "outline": [
+            "핵심을 담은 쉽고 짧은 정의 작성 요령 배우기",
+            "정의에 딱 맞는 사례와 긍정·부정 예시 명확히 선정하기",
+            "분리된 정의와 예시로 효과적 설명법 연습과 자기 점검하기"
+          ],
+          "reader_situation": "어려운 개념을 쉽게 전달하고자 하지만 정의와 예시 분리가 어려운 일반인이나 교육자",
+          "deliverable": "간결 정의 작성법, 사례와 비사례 선정 가이드, 구분해 설명하는 점검과 연습 자료",
+          "direction_id": "sense-7b5b6bc638"
+        },
+        {
+          "topic": "모임 참여 유형에 따른 역할과 책임 체계적 배분 가이드",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "모임이나 팀에서 여러 참여 방식이 섞여 역할과 책임 분배가 명확하지 않아 업무 혼란과 누락 발생하는 상황",
+          "distinct_angle": "참여 유형별 역할 분류와 책임 범위 체계적 정리, 수행 조건 및 완료 기준 분리 작성, 실제 분배 시뮬레이션 포함",
+          "outline": [
+            "참여 방식별 역할 유형과 책임 범위를 상세히 분류하기",
+            "역할 수행 조건과 완료 기준을 분리 작성해 참여자별 책임 명확화하기",
+            "작성 자료를 활용해 모임 역할 분배 및 진행 상황 관리 실습하기"
+          ],
+          "reader_situation": "모임 운영자 또는 참여자가 다양한 역할을 명확히 분배하고 책임 범위를 구체화하고자 하는 경우",
+          "deliverable": "참여 유형별 역할표, 책임과 완료조건 체크리스트, 역할 분배 및 관리 실제 적용 매뉴얼과 예시",
+          "direction_id": "sense-f4c99bf696"
+        }
+      ],
+      "topic_plan": {
+        "topic": "문서에서 사실과 의견 문장 구분해 명확히 작성하는 법",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "문서나 메모 작성 시 사실과 개인 의견이 섞여 표현되어 오해와 혼란이 발생하는 문제",
+        "distinct_angle": "기존 안내와 달리 문장별 구분 기준과 표시 방법을 구체적으로 제시하고, 분리 편집과 재작성 실습을 포함한 단계별 실행 안내 제공",
+        "outline": [
+          "문장 단위로 사실과 의견을 구분하는 명확한 기준 이해하기",
+          "사실 중심 문장과 의견 중심 문장을 따로 분리ㆍ표시하는 편집 방법 익히기",
+          "구분된 문장 활용해 혼동 없이 전달하는 재작성 및 검토 실습하기"
+        ],
+        "reader_situation": "직장이나 일상 기록에서 사실과 의견을 명확히 나눠 메모를 개선하고자 하는 사용자",
+        "deliverable": "문장별 사실과 의견 구분 기준, 편집법, 분리 재작성 예시 및 연습 가이드",
+        "direction_id": "sense-d926083876",
+        "novelty_reason": "문서 작성에서 사실과 의견을 나누는 문제는 기존의 문의 수정·변경점 구분 글과 겉으로 비슷하지만, 이번 후보는 문장 자체를 사실문과 의견문으로 판별해 분리하고 다시 재작성하는 방법까지 다룹니다. 가장 가까운 기존 글인 /board/general_notice/60은 이전 문의와 수정 내용을 나누어 적는 절차에 머물러 있어, 이번 글이 제시하는 문장 단위 판별 기준과 재편집 실습은 별도의 해결 도구로 볼 수 있습니다.",
+        "screen_rejections": [
+          "후보 일점은 알림을 종류와 중요도로 나누는 방식이 기존의 메시지 분류·정리 글들과 해결 절차가 겹쳐 새 판단 도구가 부족합니다.",
+          "후보 이점은 정의와 예시를 분리하는 주제가 이미 공개된 설명 구분 글과 거의 같아, 핵심 질문과 연습 흐름이 중복됩니다.",
+          "후보 삼점은 역할과 완료 조건을 나누는 방식이 기존의 할 일·담당자·완료 조건 구분 안내와 사실상 동일합니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/60"
+          ],
+          "gap": "기존 글은 이전 내용과 수정 내용을 나누어 적는 법을 설명하지만, 이번 글은 한 문장 안에서 사실과 의견을 먼저 판별하고, 섞인 메모를 문장 단위로 다시 쪼개 재작성하는 판단과 편집 방법이 필요합니다.",
+          "example": "회의 메모에 \"진행이 너무 느렸다\"와 \"자료가 늦게 도착했다\"가 함께 적혔다면, 무엇이 관찰된 사실이고 무엇이 느낀 점인지 먼저 나누어 적은 뒤, 전달용 문장에서는 사실만 남기고 의견은 별도 메모로 옮겨 써야 합니다. 이때 독자는 같은 문장을 두 방식으로 다시 써 보며 혼동을 줄일 수 있습니다.",
+          "result": "독자는 메모나 문서를 읽고 각 문장이 사실인지 의견인지 구분한 뒤, 필요한 부분만 남겨 오해 없이 다시 쓰는 정리본을 완성합니다.",
+          "section_actions": [
+            "문장마다 관찰한 내용과 판단한 내용을 가려내는 기준을 먼저 정리해, 섞인 문장을 구분 가능한 상태로 만든다.",
+            "사실문과 의견문을 서로 다른 표시로 옮겨 적어, 같은 메모 안에서도 읽는 순서를 명확히 나눈다.",
+            "구분한 문장을 다시 합쳐 짧은 전달문으로 재작성하고, 읽는 사람이 오해할 만한 의견 표현이 남았는지 점검한다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "문서에서 사실과 의견 문장 구분해 명확히 작성하는 법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-11T14:23:21Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 29689,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 29568
+          },
+          "output_tokens": 856,
+          "output_tokens_details": {
+            "reasoning_tokens": 244
+          },
+          "total_tokens": 30545
+        },
+        "estimated_usd": 0.00616035,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T19:39:00.327161+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3415,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3862
+        },
+        "estimated_usd": 0.0020812,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T19:39:06.565541+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 10293,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 484,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10777
+        },
+        "estimated_usd": 0.0048916,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T19:39:11.097665+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16332,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 497,
+          "output_tokens_details": {
+            "reasoning_tokens": 248
+          },
+          "total_tokens": 16829
+        },
+        "estimated_usd": 0.0144855,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T19:39:15.360101+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T19:38:52.399461+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T19:39:00.329946+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T19:39:07.391575+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T19:39:12.426351+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02761865,
+    "estimated_total_usd": 0.02761865,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

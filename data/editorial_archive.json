@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T19:38:49.848370+00:00",
+  "generatedAt": "2026-11-11T19:39:15.650371+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4545,14 +4545,14 @@
       "runId": "43089001082",
       "dateKst": "2026-11-12",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sense",
+      "topic": "문서에서 사실과 의견 문장 구분해 명확히 작성하는 법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.02761865,
+      "knownSubtotalUsd": 0.02761865
     },
     {
       "id": "post:purchase:2561",
@@ -19768,13 +19768,46 @@
     {
       "entryId": "run:43089001082",
       "dateKst": "2026-11-12",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-11T19:39:00.327161+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.00616035,
+      "knownSubtotalUsd": 0.00616035,
+      "requests": 1,
+      "inputTokens": 29689,
+      "outputTokens": 856
+    },
+    {
+      "entryId": "run:43089001082",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:39:06.565541+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0020812,
+      "knownSubtotalUsd": 0.0020812,
+      "requests": 1,
+      "inputTokens": 3415,
+      "outputTokens": 447
+    },
+    {
+      "entryId": "run:43089001082",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:39:11.097665+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0048916,
+      "knownSubtotalUsd": 0.0048916,
+      "requests": 1,
+      "inputTokens": 10293,
+      "outputTokens": 484
+    },
+    {
+      "entryId": "run:43089001082",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T19:39:15.360101+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0144855,
+      "knownSubtotalUsd": 0.0144855,
+      "requests": 1,
+      "inputTokens": 16332,
+      "outputTokens": 497
     },
     {
       "entryId": "post:purchase:2561",
