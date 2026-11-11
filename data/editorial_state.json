@@ -404,10 +404,15 @@
       "board": "sense",
       "topic": "불확실한 약속 일정 확정 전과 후 명확하게 구분하고 조율하는 방법",
       "run_id": "42952935193"
+    },
+    {
+      "board": "gc_information",
+      "topic": "액면가, 판매가, 잔액 용어 차이와 실제 금액 판단 절차 안내",
+      "run_id": "43070821410"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "43054392802",
+  "last_board": "gc_information",
+  "last_run_id": "43070821410",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
