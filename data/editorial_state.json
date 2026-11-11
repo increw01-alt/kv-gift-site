@@ -419,10 +419,15 @@
       "board": "sense",
       "topic": "문서에서 사실과 의견 문장 구분해 명확히 작성하는 법",
       "run_id": "43089001082"
+    },
+    {
+      "board": "purchase",
+      "topic": "선물 시 취향 우선 질문 범위 정하는 실전 선택법",
+      "run_id": "43104014146"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "43099080955",
+  "last_board": "purchase",
+  "last_run_id": "43104014146",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
