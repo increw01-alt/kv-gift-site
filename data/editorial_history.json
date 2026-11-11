@@ -1617,5 +1617,18 @@
     "publication_mode": "automatic",
     "run_id": "42850648648",
     "usage_file": "data/editorial_runs/2026-11-11/42850648648.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2580,
+    "topic": "상품권 선물 포장 벗길 때 안내 내용 분리와 보존 점검법",
+    "drafted_at": "2026-11-12",
+    "automation": true,
+    "search_intent": "선물 포장을 벗겨도 사용 안내가 사라지지 않도록 문구를 역할별로 나누고 보존하는 방법",
+    "image_scene": "책상 위에 선물 포장지, 인사말 카드, 별도 안내서, 상품권 본체가 나란히 놓여 있고, 한 사람이 포장 겉면과 내부 안내를 분리해 보관함에 옮기며 포장을 일부 벗긴 뒤에도 필수 문구가 남는지 확인하는 장면",
+    "image_alt": "책상 위에서 선물 포장지와 인사말 카드, 안내서를 역할별로 나눠 놓고 포장을 벗긴 뒤에도 필요한 안내가 남는지 확인하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43054392802",
+    "usage_file": "data/editorial_runs/2026-11-12/43054392802.json"
   }
 ]

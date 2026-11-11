@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T16:04:00.443337+00:00",
+  "generatedAt": "2026-11-11T16:05:01.734371+00:00",
   "dateKst": "2026-11-12",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 4,
   "held": 1,
   "errors": 2,
-  "knownSubtotalUsd": 0.09116475,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.1968755,
+  "estimatedTotalUsd": 0.1968755,
   "records": [
     {
       "runId": "43046954842",
@@ -53,16 +53,16 @@
     },
     {
       "runId": "43054392802",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "상품권 선물 포장 벗길 때 안내 내용 분리와 보존 점검법",
+      "url": "https://kv-gift.co.kr/board/purchase/2580",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-11T16:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.10571075,
+      "knownSubtotalUsd": 0.10571075
     }
   ],
   "topicRetry": {
