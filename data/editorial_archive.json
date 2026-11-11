@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T21:38:50.549908+00:00",
+  "generatedAt": "2026-11-11T21:39:21.597274+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4601,14 +4601,14 @@
       "runId": "43104754512",
       "dateKst": "2026-11-12",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "접수된 사실과 실제 처리 결과 구분 위한 증거 성격 이해",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05357225,
+      "knownSubtotalUsd": 0.05357225
     },
     {
       "id": "post:purchase:2561",
@@ -20022,13 +20022,57 @@
     {
       "entryId": "run:43104754512",
       "dateKst": "2026-11-12",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-11T21:39:00.869093+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0069912,
+      "knownSubtotalUsd": 0.0069912,
+      "requests": 1,
+      "inputTokens": 12946,
+      "outputTokens": 1133
+    },
+    {
+      "entryId": "run:43104754512",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T21:39:07.402365+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.02443875,
+      "knownSubtotalUsd": 0.02443875,
+      "requests": 1,
+      "inputTokens": 25913,
+      "outputTokens": 1112
+    },
+    {
+      "entryId": "run:43104754512",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T21:39:10.549194+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.002074,
+      "knownSubtotalUsd": 0.002074,
+      "requests": 1,
+      "inputTokens": 3493,
+      "outputTokens": 423
+    },
+    {
+      "entryId": "run:43104754512",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T21:39:16.040198+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0032488,
+      "knownSubtotalUsd": 0.0032488,
+      "requests": 1,
+      "inputTokens": 6278,
+      "outputTokens": 461
+    },
+    {
+      "entryId": "run:43104754512",
+      "dateKst": "2026-11-12",
+      "recordedAt": "2026-11-11T21:39:21.336038+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0168195,
+      "knownSubtotalUsd": 0.0168195,
+      "requests": 1,
+      "inputTokens": 19456,
+      "outputTokens": 495
     },
     {
       "entryId": "post:purchase:2561",

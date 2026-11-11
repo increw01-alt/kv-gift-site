@@ -1,18 +1,20 @@
 {
   "run_id": "43104754512",
   "date_kst": "2026-11-12",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "접수된 사실과 실제 처리 결과 구분 위한 증거 성격 이해",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-11T21:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 접수된 사실과 처리 결과를 나눠 적고 표로 정리하는 핵심 해결 절차가 기존의 문의 기록 구분 글들과 동일합니다. / 독자가 얻는 결과도 사실/추정/처리 결과를 분리해 교차표로 정리하는 방식으로, 기존 글의 답을 그대로 적용해도 이번 질문이 해결됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "43104754512",
@@ -22,15 +24,297 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-12T06:38:50.215824+09:00"
+      "attempt_started_at": "2026-11-12T06:38:50.215824+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [
+          {
+            "topic": "안내문 내 가능·필수·제외 문장 구분과 논리 차이 이해하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권 안내문에서 '가능', '필수', '제외' 등 비슷해 보이는 문장이 각각 다르게 해석되어 혼란스럽고, 올바른 이용 판단을 위한 구별법이 부족합니다.",
+            "distinct_angle": "일반 안내 문장 설명과 차별화해, 각 문장이 가진 논리적 의미와 활용 실례를 체계적으로 구분하여 문장별 판단 기준표를 작성해 독자가 명확히 적용할 수 있게 합니다.",
+            "outline": [
+              "가능·필수·제외 문장 의미 및 논리 관계 상세 설명",
+              "대표 안내 문장 유형별 판단 기준 및 예시 구분",
+              "실제 안내문에서 문장 분리와 판단 기준표 작성 실습"
+            ],
+            "reader_situation": "상품권 사용 조건을 꼼꼼히 분석하는 사용자, 판매자, 상담원이 안내 문장별 의미 차이를 정확히 이해하고자 하는 상태입니다.",
+            "deliverable": "상품권 안내문에서 주요 조건 문장의 논리적 의미별 분류 기준과 문장별 적용 실습용 판단 기준표",
+            "direction_id": "gc_information-83c32617c5"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 574,
+          "coverageArticles": 138,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-bb1dae521b",
+            "gc_information-cfcea2023c",
+            "gc_information-7522ac652e",
+            "gc_information-83c32617c5"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "한 상품 이름과 별칭 구분 및 다른 상품과 관계를 명확히 이해하는 방법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "상품권 이름이나 별칭이 같거나 비슷해 실제로 다른 상품인지 혼동되며, 명확한 구분 기준과 서로 다른 상품 관계를 파악하기 어렵다.",
+          "distinct_angle": "단순 이름 비교를 넘어 상품의 발행사, 용도, 유효 범위 등 세부 속성별로 구분하는 개념도와 차별화된 표시 방법을 제시한다.",
+          "outline": [
+            "상품권 명칭과 별칭의 정의 및 차이점 구분하기",
+            "발행사, 용도, 유효 지역 등 추가 속성별 유사 상품 비교 체계 세우기",
+            "구분 기준을 기반으로 한 실무 라벨링 및 표기법 개발 및 적용 방법"
+          ],
+          "reader_situation": "상품권 이름 중복 혹은 유사 명칭이 많아 실무에서 구별 기준을 마련해야 하는 운영자나 구매자가, 명확한 분별 체계를 만들고자 하는 상황.",
+          "deliverable": "상품권 이름과 속성 항목별 구분 기준 개념도, 유사 이름 상품권 식별 시 활용할 체크리스트, 구분 사례를 토대로 한 실무용 라벨링 및 안내 설계 지침서.",
+          "direction_id": "gc_information-bb1dae521b"
+        },
+        {
+          "topic": "한 상품 이름·별칭과 다른 상품 관계 명확히 구분하는 법",
+          "source_id": "",
+          "reader_problem": "상품권 이름과 별칭이 혼재해 동일한 이름이 서로 다른 상품을 가리킬 때, 정확한 구분 방법과 관계 이해가 부족해 혼란이 생깁니다.",
+          "distinct_angle": "기존의 단순 명칭 구분 안내와 달리, 여러 상품 사이의 포괄 관계와 별칭 사용 방식을 개념도와 표로 명확히 분석하고, 독자가 직접 해당 표를 완성하며 이해하는 참여형 해결법입니다.",
+          "reader_situation": "상품권을 비교하거나 선택해야 하는 이용자가 상품별 이름과 별칭, 포함 관계를 직접 정리해봐야 하는 상황으로, 체계적 개념 구분이 요구됩니다.",
+          "deliverable": "상품권 이름과 별칭, 서로 다른 상품 간 포함 관계를 한눈에 파악할 수 있는 개념도 및 표 작성 안내서",
+          "task_id": "",
+          "direction_id": "gc_information-bb1dae521b",
+          "outline": [
+            "상품권 이름, 별칭, 분류 용어의 정의와 차이 명확히 알기",
+            "가상의 여러 상품권 이름과 별칭에 따른 포함 관계 구성 실습",
+            "별칭이 여러 상품에 쓰일 때의 구분법과 비교 표 작성 연습"
+          ]
+        },
+        {
+          "topic": "전체 집합과 일부 항목 합계 차이에서 빠진 범위 찾기 개념 연습",
+          "source_id": "",
+          "reader_problem": "상품권 견적이나 분류 결과에서 전체 집합과 일부 항목 합계가 다를 때, 빠진 부분이나 누락 범위를 찾는 구체적인 판단 기준과 방법을 몰라 문제 해결이 어렵습니다.",
+          "distinct_angle": "단순 합계 비교를 넘어서, 누락 항목 탐색을 위한 체계적 점검 항목 구성과 범위별 분류 연습을 통해 실제 상품권 분류·견적 사례에 적용 가능한 방법을 직접 학습합니다.",
+          "reader_situation": "상품권 매입 상담, 견적 비교, 분류 결과 점검 등에서 빠진 대상이 의심될 때, 이용자가 누락 범위 탐색 절차를 체계적으로 익히고자 하는 상황입니다.",
+          "deliverable": "전체 대비 누락 부분을 확인하는 체크리스트와 분류 표 작성법 포함한 범위 차이 탐색 안내자료",
+          "task_id": "",
+          "direction_id": "gc_information-7522ac652e",
+          "outline": [
+            "전체 집합과 부분 합계 개념 및 차이 발생 이유 알기",
+            "누락 범위 점검을 위한 구체적 항목별 확인 리스트 구성",
+            "실제 사례에 적용하는 누락 범위 추적과 분류표 작성 실습"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "접수된 사실과 실제 처리 결과 구분 위한 증거 성격 이해",
+        "source_id": "",
+        "reader_problem": "상품권 관련 문의 시 접수된 사실 정보와 상담·처리 결과가 혼합되어, 각 기록의 증거 가치와 성격 구분이 어렵고, 정확한 상황 판단에 혼란이 발생합니다.",
+        "distinct_angle": "기존 문의 기록 단순 정리와 다르게, 접수 사실과 처리 결과를 구분하는 증거의 역할과 정보 유형별 특성을 심층 설명하며, 독자가 이를 토대로 교차표를 작성해 직접 적용해보는 방법을 안내합니다.",
+        "reader_situation": "상품권 문의 이력이나 상담 기록을 다루는 고객지원 담당자나 이용자가 각 기록의 의미와 역할을 분명히 이해하고 싶어 하는 상태입니다.",
+        "deliverable": "접수 사실과 처리 결과 기록을 구분하는 증거 성격별 항목과 교차 분류표 작성법 안내서",
+        "task_id": "",
+        "direction_id": "gc_information-cfcea2023c",
+        "outline": [
+          "문의 접수 기록과 처리 결과 기록의 차이와 증거 가치 설명",
+          "증거 성격별 주요 정보 항목 분류 및 구분 기준 정리",
+          "실제 상담 기록에 적용할 교차 분류표 작성 단계별 가이드"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 문의 기록을 나누는 안내와 정보 구분 안내이지만, 이 후보는 접수된 사실과 처리 결과를 ‘기록의 성격’으로 나누어 보고 교차표로 정리하는 새로운 판단 도구를 제시합니다. 단순히 문의 내용을 분리하는 수준을 넘어서, 어느 항목이 확인 사실이고 어느 항목이 처리 결과인지 증거 가치까지 구분하도록 이끈다는 점에서 상대적으로 새롭습니다.",
+        "screen_rejections": [
+          "이름·별칭·포괄 관계를 표로 정리하는 흐름이 기존의 상품명과 사용처, 발행사 구분 안내와 거의 같아 새 질문이 충분하지 않습니다.",
+          "별칭이 여러 상품에 쓰일 때의 포함 관계를 설명하는 점이 기존의 상품명과 발행사 구분, 이름이 비슷할 때의 사용처 확인과 중복됩니다.",
+          "전체 집합과 일부 합계의 차이를 찾는 구조는 기존의 묶음 구성품 누락 확인이나 견적 범위 비교와 해결 단계가 겹쳐 독자 문제와 결과물이 너무 비슷합니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/61",
+            "/board/gc_information/19",
+            "/board/gc_information/11"
+          ],
+          "gap": "기존 글들은 문의를 항목별로 나누거나 필요한 정보와 조회 정보를 구분하는 데 그칩니다. 이 글은 접수된 사실과 실제 처리 결과를 같은 문서 안에서 어떤 성격의 증거로 분리해 읽어야 하는지, 그리고 혼합 기록을 교차표로 다시 정리해 판단 근거를 만드는 방법까지 다뤄야 합니다.",
+          "example": "상담 기록에 접수 사실과 처리 결과가 한 문단에 섞여 있어, 독자가 무엇이 처음 접수 내용이고 무엇이 후속 판단인지 헷갈리는 상황을 떠올려 보세요. 이때 기록을 그대로 옮기지 말고 사실, 확인 결과, 남은 쟁점으로 나눠 적은 뒤 서로 다른 색이나 표식으로 구분하면 다음 문의에서 같은 내용을 다시 묻지 않고도 흐름을 이어 갈 수 있습니다.",
+          "result": "독자는 혼합된 상담 기록을 사실과 처리 결과로 구분해 읽고, 어떤 내용이 확인된 사실인지와 어떤 부분이 아직 판단 중인지 스스로 정리할 수 있게 됩니다.",
+          "section_actions": [
+            "접수된 발언과 처리 결과를 먼저 분리해 적고, 각 문장이 무엇을 뜻하는지 바로 옆에 짧게 덧붙입니다.",
+            "사실, 추정, 확정 결과를 서로 다른 묶음으로 나누어 적어, 같은 문장 안에 두 성격이 섞이지 않게 정리합니다.",
+            "나눈 기록을 바탕으로 교차표를 완성해 다음 문의 때 무엇을 다시 확인해야 하는지 한눈에 보이도록 만듭니다."
+          ]
+        }
+      },
+      "board": "gc_information",
+      "topic": "접수된 사실과 실제 처리 결과 구분 위한 증거 성격 이해",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-11T14:23:21Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12946,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1133,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 14079
+        },
+        "estimated_usd": 0.0069912,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T21:39:00.869093+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25913,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1112,
+          "output_tokens_details": {
+            "reasoning_tokens": 449
+          },
+          "total_tokens": 27025
+        },
+        "estimated_usd": 0.02443875,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T21:39:07.402365+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3493,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 423,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3916
+        },
+        "estimated_usd": 0.002074,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T21:39:10.549194+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6278,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 461,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6739
+        },
+        "estimated_usd": 0.0032488,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-11T21:39:16.040198+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19456,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 495,
+          "output_tokens_details": {
+            "reasoning_tokens": 195
+          },
+          "total_tokens": 19951
+        },
+        "estimated_usd": 0.0168195,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-11T21:39:21.336038+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T21:38:52.522418+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T21:39:01.287757+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T21:39:07.471353+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-11T21:39:11.259599+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-11T21:39:17.175157+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.05357225,
+    "estimated_total_usd": 0.05357225,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -424,10 +424,15 @@
       "board": "purchase",
       "topic": "선물 시 취향 우선 질문 범위 정하는 실전 선택법",
       "run_id": "43104014146"
+    },
+    {
+      "board": "gc_information",
+      "topic": "접수된 사실과 실제 처리 결과 구분 위한 증거 성격 이해",
+      "run_id": "43104754512"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "43104014146",
+  "last_board": "gc_information",
+  "last_run_id": "43104754512",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

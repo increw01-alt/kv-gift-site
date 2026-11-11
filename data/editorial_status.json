@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T21:38:50.527366+00:00",
+  "generatedAt": "2026-11-11T21:39:21.575050+00:00",
   "dateKst": "2026-11-12",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 14,
-  "held": 5,
+  "held": 6,
   "errors": 6,
-  "knownSubtotalUsd": 0.61417625,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.6677485,
+  "estimatedTotalUsd": 0.6677485,
   "records": [
     {
       "runId": "43046954842",
@@ -183,21 +183,21 @@
     },
     {
       "runId": "43104754512",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "접수된 사실과 실제 처리 결과 구분 위한 증거 성격 이해",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-11T21:37:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05357225,
+      "knownSubtotalUsd": 0.05357225
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-12T07:08:50.215824+09:00",
+    "cooldownMinutes": 30
   }
 }
