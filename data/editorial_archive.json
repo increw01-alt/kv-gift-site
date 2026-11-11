@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T20:15:13.702070+00:00",
+  "generatedAt": "2026-11-11T20:16:58.046516+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4563,7 +4563,7 @@
       "board": "free",
       "topic": "빠른 결정과 다양한 의견 조율 시 합리적 결정권 배분 기준",
       "url": "https://kv-gift.co.kr/board/free/485",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-11T20:16:57.997407+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1363713,
       "knownSubtotalUsd": 0.1363713
