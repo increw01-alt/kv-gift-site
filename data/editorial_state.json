@@ -434,10 +434,15 @@
       "board": "sale",
       "topic": "안내 업무 범위 외 추가 자료 요청 시 요청 주체와 필요성 확인 절차",
       "run_id": "43247170513"
+    },
+    {
+      "board": "free",
+      "topic": "개별 맞춤 선물과 모두에게 같은 선물, 어떻게 공평한 선택을 할까요?",
+      "run_id": "43287859061"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "43265249431",
+  "last_board": "free",
+  "last_run_id": "43287859061",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
