@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T22:43:59.808295+00:00",
+  "generatedAt": "2026-11-12T22:45:11.892572+00:00",
   "dateKst": "2026-11-13",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 12,
   "held": 7,
   "errors": 4,
-  "knownSubtotalUsd": 0.3046329,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.42738655,
+  "estimatedTotalUsd": 0.42738655,
   "records": [
     {
       "runId": "43246272098",
@@ -157,16 +157,16 @@
     },
     {
       "runId": "43322444889",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sale",
+      "topic": "상품권 매입 후 기대와 실제 결과 차이에 따른 원인별 점검법",
+      "url": "https://kv-gift.co.kr/board/sale/3701",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-12T22:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12275365,
+      "knownSubtotalUsd": 0.12275365
     }
   ],
   "topicRetry": {

@@ -1,17 +1,27 @@
 {
   "run_id": "43322444889",
   "date_kst": "2026-11-13",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sale",
+  "topic": "상품권 매입 후 기대와 실제 결과 차이에 따른 원인별 점검법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sale/3701",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-12T22:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,329 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-13T07:43:59.587368+09:00"
+      "attempt_started_at": "2026-11-13T07:43:59.587368+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 597,
+          "coverageArticles": 138,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-a002d2fe08",
+            "sale-e24e80a517",
+            "sale-0f792e06e6"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "매입처 추가 질문 답변 시 추측 없이 정확한 정보 구분하기",
+          "source_id": "",
+          "reader_problem": "매입처의 추가 질문에 답을 모를 때 임의로 추측하거나 부정확하게 답변하지 않고, 확인된 사실과 미확인 사항을 명확히 구분해 안전하게 대응하려는 문제입니다.",
+          "distinct_angle": "기존 공개 글은 부분적인 예시와 일반 안내에 머물렀으나, 이번 글은 구체적인 구분 리스트 작성법과 조건부 답변 문구를 일상 대화체 형식으로 구분해 독자가 직접 작성하고 활용할 수 있는 실무적 대응 방법을 제시합니다.",
+          "reader_situation": "상품권 매입 상담 중 일부 상태가 불분명해 즉시 추측 없이 정확한 정보를 구분·전달하고, 추후 추가 확인 절차까지 계획하려는 판매자입니다.",
+          "deliverable": "확인 가능 사항과 미확인 사항을 분리한 기록 양식, 추측 없이 조건부 답변하는 문구 예시, 확인 후 재답변 준비 매뉴얼을 완성합니다.",
+          "task_id": "",
+          "direction_id": "sale-0f792e06e6",
+          "outline": [
+            "현재 확인된 상품권 상태를 구체적으로 기록하는 방법",
+            "확인하지 못한 항목을 명확히 구분하여 목록화하기",
+            "추측하지 않고 조건부로 답변하는 문장 작성법 익히기"
+          ]
+        },
+        {
+          "topic": "여러 장 종이상품권 재개 시 중단 지점 명확히 구분하고 관리하기",
+          "source_id": "",
+          "reader_problem": "종이상품권 여러 장을 세는 도중 작업이 중단돼 이미 센 부분과 미확인 부분이 헷갈리고, 어디서부터 다시 세야 할지 혼란스러운 상황입니다.",
+          "distinct_angle": "기존 글은 단순히 중단 후 기록 정리 중심이었지만 이번 글은 물리적 공간에서 미확인, 확인 중, 확인 완료 구역을 명확히 분리해 표시하는 배치법과, 이중 집계 및 누락 방지를 위한 구역별 관리 실천 방법을 상세 안내합니다.",
+          "reader_situation": "종이상품권 수량 집계 작업 도중 중단 후 손쉬운 재개를 위해 중단 위치별 구역 설정과 표시법을 활용해 혼동 없이 빠짐없이 세기를 원하는 판매자입니다.",
+          "deliverable": "미확인·확인 중·확인 완료 구역 구분 배치도와 중단 위치 표시 가이드, 누락과 중복 계산 방지를 위한 물리적 집계 관리표를 완성합니다.",
+          "task_id": "",
+          "direction_id": "sale-e24e80a517",
+          "outline": [
+            "중단 시점 주변을 미확인·확인 중·확인 완료 구역으로 분리 배치하기",
+            "중단 위치에 명확한 표식을 남겨 재집계 기준점으로 활용하기",
+            "구역 구분과 표시를 활용해 이중 집계·누락 방지하며 재개 과정 진행하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 매입 후 기대와 실제 결과 차이에 따른 원인별 점검법",
+        "source_id": "",
+        "reader_problem": "상품권 판매 예상과 매입처로부터 실제 확인된 정보 또는 결과에 차이가 생겨, 그 원인을 구체적으로 분석하고 해결 방향을 명확히 분류할 방법이 필요합니다.",
+        "distinct_angle": "기존 글들은 주로 매입 전 확인 위주지만 이번 글은 사후 점검 관점에서 잘못된 정보, 상태 변경, 매입처 처리 기준 등 다양한 원인별로 문제를 구분하는 구체적 점검표와 대응 절차 작성 안내를 제공합니다.",
+        "reader_situation": "상품권 판매 과정에서 기대했던 조건과 매입처에 전달받은 실제 조건이나 안내가 달라 혼선을 겪는 판매자가 문제 원인을 체계적으로 점검하고 구분해 재검토하려는 상황입니다.",
+        "deliverable": "원인별 문제 구분 점검 리스트, 각 원인 별 구체적 대응 절차 안내서, 문제별 기록과 문의 구분 방법 표준문서 작성 가이드를 완성합니다.",
+        "task_id": "",
+        "direction_id": "sale-347dc67531",
+        "outline": [
+          "판매 전 예상과 실제 매입 결과 차이의 주요 원인 유형 분류하기",
+          "각 원인별 점검과 확인 절차 구체적으로 정리하기",
+          "차이 원인별 기록 보관과 문의 대응 체계화 방법 설계하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 상품권 상태 이상이나 조건부 안내를 읽고 바로 문의하는 방식이었는데, 이 후보는 판매 뒤 기대와 실제 결과의 차이를 원인별로 되짚어 보고 잘못된 정보, 상태 변화, 매입처 기준 차이를 구분해 재점검하는 데 초점이 있습니다. 기존 답을 그대로 적용하면 끝나는 문의 준비가 아니라, 결과 불일치의 원인을 분류해 다음 행동을 정하는 점이 더 구체적입니다.",
+        "screen_rejections": [
+          "영번은 이미 공개된 매입 문의 답변 기록 글과 사실상 같은 문제입니다. 확인된 사실과 미확인 사항을 나눠 적고 추측 없이 재답변하는 절차가 /board/sale/3700과 동일해 새 해결 내용이 부족합니다.",
+          "일번은 작업 중단 지점과 재개 지점을 구분해 다시 세는 흐름이 /board/sense/25와 겹칩니다. 종이상품권이라는 대상만 바뀌었을 뿐 미확인·확인 중·확인 완료를 나누는 재집계 방식이 같아 중복입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sale/3693",
+            "/board/sale/3699",
+            "/board/sale/3697"
+          ],
+          "gap": "기존 글은 매입 전 상태 확인이나 조건 비교에 머물렀지만, 이 글은 판매 뒤에 기대한 조건과 실제 받은 안내가 어긋났을 때 원인을 잘못된 정보, 상태 변화, 매입처 판단으로 나눠 다시 점검하는 방법이 필요합니다.",
+          "example": "상담 때 들은 내용과 실제 정산 안내가 다르면, 먼저 내 기록이 잘못 옮겨 적힌 부분과 상대 답변의 조건 부분을 분리해 보고, 이어서 상품권 상태가 바뀐 적이 있는지, 마지막으로 매입처의 기준 설명이 바뀐 것인지 순서대로 확인합니다.",
+          "result": "독자는 차이의 원인을 한 묶음으로 보지 않고 구분해 기록하며, 어느 항목을 다시 묻고 어느 항목은 내부 기록을 고쳐야 하는지 정리할 수 있습니다.",
+          "section_actions": [
+            "첫째 절에서는 기대한 안내와 실제 받은 안내를 항목별로 나눠 적고, 어떤 부분이 달랐는지 독자가 바로 비교할 수 있게 정리하게 합니다.",
+            "둘째 절에서는 차이가 생긴 원인을 기록 오류, 상태 변화, 상대 기준 차이로 나눠 점검하고, 각각에 맞는 재확인 질문을 준비하게 합니다.",
+            "셋째 절에서는 점검 결과를 바탕으로 다시 문의할 내용과 수정할 기록을 분리해 두어, 다음 상담에서 같은 혼선을 줄이도록 합니다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "상품권 매입 후 기대와 실제 결과 차이에 따른 원인별 점검법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-12T15:15:28Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권 판매 뒤 안내 내용이 예상과 다를 때 기록 오류, 상태 변화, 매입처 기준 차이를 구분해 원인을 정리하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15809,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1294,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17103
+        },
+        "estimated_usd": 0.008394,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T22:44:12.988310+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 22241,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 928,
+          "output_tokens_details": {
+            "reasoning_tokens": 299
+          },
+          "total_tokens": 23169
+        },
+        "estimated_usd": 0.02085675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T22:44:21.127861+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3500,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 473,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3973
+        },
+        "estimated_usd": 0.0021568,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T22:44:25.236442+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4479,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 520,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4999
+        },
+        "estimated_usd": 0.0026236,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T22:44:30.785395+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16422,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 469,
+          "output_tokens_details": {
+            "reasoning_tokens": 283
+          },
+          "total_tokens": 16891
+        },
+        "estimated_usd": 0.014427,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T22:44:36.599692+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3559,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1063
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4931
+        },
+        "estimated_usd": 0.066443,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T22:45:04.689639+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8352,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 353,
+          "output_tokens_details": {
+            "reasoning_tokens": 288
+          },
+          "total_tokens": 8705
+        },
+        "estimated_usd": 0.0078525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T22:45:10.610362+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T22:44:02.262388+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T22:44:13.682558+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T22:44:21.131079+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T22:44:26.429692+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T22:44:32.628685+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-12T22:44:36.620551+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T22:45:05.955650+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.12275365,
+    "estimated_total_usd": 0.12275365,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

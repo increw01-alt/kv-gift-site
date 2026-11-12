@@ -1643,5 +1643,18 @@
     "publication_mode": "automatic",
     "run_id": "43094388619",
     "usage_file": "data/editorial_runs/2026-11-12/43094388619.json"
+  },
+  {
+    "board": "sale",
+    "id": 3701,
+    "topic": "상품권 매입 후 기대와 실제 결과 차이에 따른 원인별 점검법",
+    "drafted_at": "2026-11-13",
+    "automation": true,
+    "search_intent": "상품권 판매 뒤 안내 내용이 예상과 다를 때 기록 오류, 상태 변화, 매입처 기준 차이를 구분해 원인을 정리하려는 질문",
+    "image_scene": "책상 위에 상품권 실물과 상담 메모, 비교 체크리스트, 수정한 기록지가 나란히 놓여 있고 한 사람이 기대한 안내와 실제 안내를 항목별로 나눠 표시하며 차이 원인을 정리하는 장면",
+    "image_alt": "책상 위에서 상품권 실물과 상담 메모를 비교하며 기대한 안내와 실제 안내의 차이를 항목별로 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43322444889",
+    "usage_file": "data/editorial_runs/2026-11-13/43322444889.json"
   }
 ]
