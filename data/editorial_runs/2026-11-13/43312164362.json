@@ -1,18 +1,20 @@
 {
   "run_id": "43312164362",
   "date_kst": "2026-11-13",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-12T21:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 본문 수준에서 반복합니다. 0번과 3번은 안내문에서 가능·필수·제외 문장을 나눠 읽고 기준표를 만드는 흐름이 /board/gc_information/13, /board/gc_information/16, /board/gc_tip/48과 겹치며, 1번은 본인 확인 정보와 조회 정보를 구분해 최소한만 제공하는 절차가 /board/gc_information/19, /board/purchase/2579와 같습니다. 2번은 수정일과 실제 적용 시점을 분리해 읽는 핵심 질문이 /board/gc_information/18, /board/general_notice/55, /board/general_notice/59와 같아 새 해결 내용이 충분하지 않습니다. / 0번은 가능·필수·제외 문장을 논리적으로 분류하고 판단 기준표를 만드는 내용이 /board/gc_information/13의 등록처·사용처 구분, /board/gc_information/16의 주문 전체·품목 단위 구분, /board/gc_tip/48의 본문과 각주 연결 읽기처럼 기존 안내문 해석형 글과 같은 질문 구조입니다. 독자가 실제로 얻는 결과도 문장을 나눠 적고 기준표를 만드는 것으로 새 해결 도구가 아닙니다. / 1번은 본인 확인 정보와 조회 정보를 구분해 문의 목적에 맞게 전달하는 절차가 /board/gc_information/19의 본인 확인과 조회 정보 구분, /board/purchase/2579의 최소 정보만 제공하기와 사실상 같습니다. 정보의 용도만 바꾼 반복이라 중복입니다. / 2번은 안내문 수정일과 조건 적용 시점을 나눠 읽는 핵심 질문이 /board/gc_information/18의 수정 날짜와 실제 적용 시점 분리, /board/general_notice/55의 확인 날짜 기록, /board/general_notice/59의 게시일과 수정일 확인과 겹칩니다. 시간 축 시각화라는 표현만 다르고 해결 절차가 동일합니다. / 3번은 0번과 같은 주제를 반복하며, 가능·필수·제외 문장별 의미 차이와 안내문 활용법이라는 제목만 바꾼 형태입니다. 이미 /board/gc_information/13, /board/gc_information/16, /board/gc_tip/48이 다룬 안내문 문장 해석과 조건 분리 읽기를 다시 설명하는 수준입니다."
+    ]
   },
   "api_usage": {
     "run_id": "43312164362",
@@ -22,15 +24,175 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-13T06:38:50.832008+09:00"
+      "attempt_started_at": "2026-11-13T06:38:50.832008+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [
+          {
+            "topic": "확정 값·예시 값·예상 값의 증거 수준과 판단법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권 관련 정보에서 확정된 값과 예시, 예상 값이 혼재되어 이를 동일한 근거로 판단해 잘못된 결정을 내림",
+            "distinct_angle": "세 종류 값에 따른 증거 수준과 해석 방식을 분명히 구분하고, 독자가 이를 기준으로 판단 기준표와 판단 프로세스를 직접 완성하는 새로운 접근",
+            "outline": [
+              "확정 값, 예시 값, 예상 값 각각의 정의와 증거 수준 설명하기",
+              "세 값 유형별 판단법과 적용 순서 체계적 정리하기",
+              "독자가 직접 판단 기준 및 결과를 기록하는 실습 양식 완성하기"
+            ],
+            "reader_situation": "상품권 정보에서 숫자나 조건이 확정인지 예시인지 예상인지 구분이 어려워 신뢰할 수 있는 비교 기준을 세우려는 이용자",
+            "deliverable": "확정·예시·예상 값의 개념과 증거 수준 비교 표, 판단 순서 매뉴얼, 독자 맞춤 판단 결과 기록 양식과 적용 절차",
+            "direction_id": "gc_information-603f97842d"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 593,
+          "coverageArticles": 138,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-f0f23d4707",
+            "gc_information-ea0a585402",
+            "gc_information-83c32617c5",
+            "gc_information-603f97842d"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "안내문 내 가능·필수·제외 문장 구분과 논리 차이 이해하기",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "상품권 안내문에서 '가능', '필수', '제외' 등 비슷해 보이는 문장이 각각 다르게 해석되어 혼란스럽고, 올바른 이용 판단을 위한 구별법이 부족합니다.",
+          "distinct_angle": "일반 안내 문장 설명과 차별화해, 각 문장이 가진 논리적 의미와 활용 실례를 체계적으로 구분하여 문장별 판단 기준표를 작성해 독자가 명확히 적용할 수 있게 합니다.",
+          "outline": [
+            "가능·필수·제외 문장 의미 및 논리 관계 상세 설명",
+            "대표 안내 문장 유형별 판단 기준 및 예시 구분",
+            "실제 안내문에서 문장 분리와 판단 기준표 작성 실습"
+          ],
+          "reader_situation": "상품권 사용 조건을 꼼꼼히 분석하는 사용자, 판매자, 상담원이 안내 문장별 의미 차이를 정확히 이해하고자 하는 상태입니다.",
+          "deliverable": "상품권 안내문에서 주요 조건 문장의 논리적 의미별 분류 기준과 문장별 적용 실습용 판단 기준표",
+          "direction_id": "gc_information-83c32617c5"
+        },
+        {
+          "topic": "본인 확인 정보와 조회 정보의 차이와 활용법",
+          "source_id": "",
+          "reader_problem": "본인 확인에 사용하는 정보와 조회에 쓰는 정보가 각각 다른 역할을 하여, 두 가지 정보의 차이를 몰라 혼동하거나 잘못 활용하는 문제",
+          "distinct_angle": "일반적 개념 나열 대신, 구체적 상황에서 각 정보의 사용 목적과 절차를 비교해 직접 결과물을 완성하는 방식으로 설명",
+          "reader_situation": "상품권 구매나 문의 과정에서 본인 확인 절차와 정보 조회 절차를 혼동해 적절한 대응이나 준비물을 준비하지 못해 답답한 이용자",
+          "deliverable": "본인 확인 정보와 조회 정보를 구분하는 개념표, 사례별 올바른 정보 활용 흐름도, 독자 맞춤 상황별 선택·사용 지침서",
+          "task_id": "",
+          "direction_id": "gc_information-f0f23d4707",
+          "outline": [
+            "본인 확인 정보와 조회 정보의 정의와 목적 명확히 이해하기",
+            "구체적인 상품권 거래 상황별 두 정보 사용 절차 비교하기",
+            "독자가 직접 작성하는 정보 활용 상황별 체크리스트와 대응 방안 마련하기"
+          ]
+        },
+        {
+          "topic": "안내문의 정보 수정 시점과 조건 적용 기간 구분법",
+          "source_id": "",
+          "reader_problem": "안내 정보가 언제 수정되었는지와 그 정보가 실제 언제부터 적용되는지 간의 차이를 혼동해 조건 적용 시기를 잘못 판단하는 문제",
+          "distinct_angle": "추상적 개념이 아닌 시간 축 시각화와 실례 적용법으로 안내문 별 수정일과 적용일 분리를 직접 기록하며 이해하는 단계별 절차 소개",
+          "reader_situation": "상품권 안내 문서 수정 날짜를 확인하면서 곧바로 변경된 조건이 적용된다고 오해해 실사용 조건을 잘못 인지하는 사용자",
+          "deliverable": "수정 시점과 적용 기간의 개념 분리 도해, 안내문에서 시점 구분해 읽는 구체적 체크리스트, 실제 글 사례에 적용하는 기록 양식",
+          "task_id": "",
+          "direction_id": "gc_information-ea0a585402",
+          "outline": [
+            "정보 수정 날짜와 조건 적용 기간의 개념과 차이 짚어보기",
+            "시간 축 개념도를 활용해 서로 다른 시점 시각화 실습하기",
+            "실제 안내문 사례로 수정과 적용 시점 구분하며 체크리스트 완성하기"
+          ]
+        },
+        {
+          "topic": "가능·필수·제외 문장별 의미 차이와 안내문 활용법",
+          "source_id": "",
+          "reader_problem": "상품권 안내에서 ‘가능’, ‘필수’, ‘제외’ 등 문장 표현이 논리적으로 다른 의도를 가지지만 이를 혼동해 정확한 판단을 하지 못하는 문제",
+          "distinct_angle": "논리적 분류 기준과 문장별 적용 절차를 독자가 직접 만들면서 안내문의 표현 차이를 실전에서 바로 적용해 구분하는 실용적 접근법",
+          "reader_situation": "복잡한 상품권 안내문에서 각 표현의 의미를 정확히 구별하고 판단 기준을 직접 만들어 체계화하려는 독자",
+          "deliverable": "가능·필수·제외 각 표현별 의미 구분 및 판단 기준 체크리스트, 문장별 해석 절차 설계표, 실제 안내문 적용 연습용 기록지",
+          "task_id": "",
+          "direction_id": "gc_information-83c32617c5",
+          "outline": [
+            "‘가능’, ‘필수’, ‘제외’ 문장별 의미와 논리적 차이 분석하기",
+            "각 문장 유형에 맞는 판단 기준 단순화 및 해석 절차 설계하기",
+            "실제 안내문에서 문장별 표현 적용 연습과 개인 기록체계 작성하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12792,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1054,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13846
+        },
+        "estimated_usd": 0.0068032,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T21:39:01.390208+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24471,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 726,
+          "output_tokens_details": {
+            "reasoning_tokens": 141
+          },
+          "total_tokens": 25197
+        },
+        "estimated_usd": 0.02162025,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T21:39:07.141519+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T21:38:53.349945+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T21:39:01.783147+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02842345,
+    "estimated_total_usd": 0.02842345,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
