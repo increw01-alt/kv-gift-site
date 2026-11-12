@@ -444,10 +444,15 @@
       "board": "gc_tip",
       "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
       "run_id": "43293839504"
+    },
+    {
+      "board": "general_notice",
+      "topic": "키보드 사용자 위한 웹 안내 링크 이동 시 선택 위치 인지와 탐색법",
+      "run_id": "43323951970"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "43322444889",
+  "last_board": "general_notice",
+  "last_run_id": "43323951970",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
