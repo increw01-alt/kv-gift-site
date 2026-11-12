@@ -3,16 +3,18 @@
   "date_kst": "2026-11-13",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-12T20:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "43305488967",
@@ -22,15 +24,142 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-13T05:58:53.174681+09:00"
+      "attempt_started_at": "2026-11-13T05:58:53.174681+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [
+          {
+            "topic": "한정 예산과 수신자 선택권 균형 맞추는 의사결정 과정",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "예산·시간·수신자 선택권이 충돌할 때 신속하면서도 모두가 납득할 수 있는 구매 결정 프로세스를 설계하기 어려움",
+            "distinct_angle": "기존 단순 예산 관리 안내와 달리 의사결정 순서별 선택권 조정 방법과 실질적 충돌 해결 단계별 절차 제공",
+            "outline": [
+              "예산과 수신자 선택권 간 충돌 유형과 문제점 분석하기",
+              "의사결정 과정에서 균형 맞추기 위한 단계별 선택권 조정법 설계하기",
+              "실전에서 각 단계별 의사결정과 조율을 실행하는 구체적 방법 익히기"
+            ],
+            "reader_situation": "한정된 예산과 다양한 수신자 선호 사이에서 균형 잡힌 상품권 구매 결정을 체계적으로 진행하고자 하는 구매자",
+            "deliverable": "예산·수신자 선택권 관계 도식, 단계별 의사결정 흐름도, 각 단계별 조율 및 결정 방법 매뉴얼",
+            "direction_id": "purchase-6bf9948129"
+          },
+          {
+            "topic": "상충하는 조건 간 구매 우선순위로 합리적 후보 선정하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "구매 희망 조건이 서로 충돌할 때 어떤 조건을 먼저 판단하고 어떤 후보부터 체계적으로 제외해야 할지 방법을 몰라 망설이는 독자 문제",
+            "distinct_angle": "기존의 단순 조건 비교와 달리 필수 조건과 우대 조건 분류 후 단계별 후보 제거 절차와 판단 기준을 명확하게 제시함",
+            "outline": [
+              "모든 조건을 필수 조건과 우대 조건으로 구분하는 방법 습득하기",
+              "필수 조건 미충족 후보를 우선적으로 제거하는 절차 적용하기",
+              "남은 후보를 우대 조건 중심으로 비교 평가하며 최종 결정하기"
+            ],
+            "reader_situation": "필수 조건과 우대 조건이 충돌하여 모든 조건을 만족하기 어려운 상황에서 우선순위를 정해 최종 후보를 줄이고자 하는 구매자",
+            "deliverable": "필수·우대 조건 분류표, 후보 제거 판단 기준 매뉴얼, 단계별 의사결정 흐름도와 실천 가이드",
+            "direction_id": "purchase-6f6d6db65b"
+          },
+          {
+            "topic": "주문 확정 전 의존적 준비 작업 역순 일정 설계",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "주문을 확정하기 전에 서로 의존하는 여러 준비 작업을 어떤 순서로 관리해야 하는지 몰라 일정 조율과 실행이 어려운 문제",
+            "distinct_angle": "기존의 순차적 작업 안내와 달리 의존 관계가 복잡한 작업을 역순으로 계획하는 구체적 설계 방법을 소개함",
+            "outline": [
+              "주문 관련 준비 작업들을 목록화하고 의존 관계 파악하기",
+              "의존 관계를 고려해 작업 수행 순서를 역순으로 설계하기",
+              "설계한 역순 작업 일정을 실전에서 적용하며 조정하는 방법 익히기"
+            ],
+            "reader_situation": "상품권 주문과 관련된 여러 준비 작업이 서로 영향을 주어 적절한 작업 순서를 찾아 일정을 역으로 구성해야 하는 상황",
+            "deliverable": "의존 작업 목록과 역순 일정 설계 표, 단계별 준비 작업 계획서, 실전 적용 일정 관리 방법 안내서",
+            "direction_id": "purchase-5aaa6701f9"
+          },
+          {
+            "topic": "직접 전달 선물 내용물과 겉포장 안내 분리 시 혼동 방지 배치법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "직접 전달할 선물에서 내용물 안내와 겉포장 안내가 분리되어 있을 때 수신자가 혼동하지 않도록 안내를 효과적으로 배치하는 방법이 필요함",
+            "distinct_angle": "기존의 전반적 전달 안내와 달리 받는 이의 혼동을 최소화하는 분리 안내 배치 원칙과 실제 적용법을 구체적으로 제시함",
+            "outline": [
+              "선물 내용물과 겉포장 안내를 분리해 배치할 때 유의할 점 분석하기",
+              "수신자 혼동 방지용 안내 배치 원칙과 체크리스트 작성하기",
+              "실제 배치 사례를 통해 안내 문서 구성법과 적용 과정 실습하기"
+            ],
+            "reader_situation": "상품권 등 선물을 직접 전달하는 과정에서 안내 문서가 내용과 포장 설명으로 분리되어 수신자 이해를 돕고자 하는 구매자",
+            "deliverable": "분리 안내 배치 원칙, 실제 배치 사례와 함께 수신자 혼동 방지 체크리스트, 적용 가이드 문서",
+            "direction_id": "purchase-f7b2f0a802"
+          },
+          {
+            "topic": "예산·시간·수신자 선택권 상충 관계 의사결정 순서 안내",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "예산, 준비 시간, 수신자별 선택권이 복잡하게 얽혀 최우선 판단 기준과 의사결정 순서를 정하기 어려워 헷갈리는 상황",
+            "distinct_angle": "기존 안내와 달리 세 조건 간 상충 관계를 이해하고 가중치 부여, 우선순위를 체계적으로 정해 단계별 의사결정 흐름을 명확히 제시함",
+            "outline": [
+              "예산, 시간, 수신자 선택권 간 상호 영향 관계와 상충점 파악하기",
+              "각 조건별 중요도와 가중치 정하는 방법 배우기",
+              "가중치 기반 의사결정 순서 정리 및 실제 적용 행동 안내하기"
+            ],
+            "reader_situation": "한정된 예산과 촉박한 시간 속에서 여러 수신자의 다양한 요구를 고려해 합리적 구매 결정을 내려야 하는 독자",
+            "deliverable": "예산·시간·수신권 상충 관계 개념도, 조건별 가중치 산정 매뉴얼, 우선순위 기반 의사결정 순서도와 실행 안내서",
+            "direction_id": "purchase-6bf9948129"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 589,
+          "coverageArticles": 138,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-f7b2f0a802",
+            "purchase-5aaa6701f9",
+            "purchase-6f6d6db65b",
+            "purchase-6bf9948129"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 27675,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2304
+          },
+          "output_tokens": 1268,
+          "output_tokens_details": {
+            "reasoning_tokens": 488
+          },
+          "total_tokens": 28943
+        },
+        "estimated_usd": 0.02490705,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T20:59:05.643944+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T20:58:55.973107+00:00",
+        "usage_record_index": 0
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02490705,
+    "estimated_total_usd": 0.02490705,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
