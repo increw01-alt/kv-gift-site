@@ -3,16 +3,18 @@
   "date_kst": "2026-11-13",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-12T19:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "43286983826",
@@ -22,15 +24,158 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-13T04:09:00.453020+09:00"
+      "attempt_started_at": "2026-11-13T04:09:00.453020+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [
+          {
+            "topic": "개별 맞춤 선물과 모두에게 같은 선물, 어떻게 공평한 선택을 할까요?",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "모임에서 선물을 모두 같게 할지, 각자 필요에 맞게 다르게 할지 결정할 때 공정성 기준과 우선순위가 막막합니다.",
+            "distinct_angle": "기존의 단순 공정성 안내와 달리, 금액·선택권·필요 중심의 구체적 공평함 유형을 소개하고 독자가 직접 판단 기준을 세우는 행동 절차를 제공합니다.",
+            "outline": [
+              "공평함을 느끼는 서로 다른 기준 세 가지 소개와 구분하기",
+              "모두 같은 선물과 각자 다른 선물의 장단점 구체적으로 비교하기",
+              "금액·선택권·필요 기준으로 공평함 판단 질문과 우선순위 정하기"
+            ],
+            "reader_situation": "모임 주최자나 참여자가 상황별로 공평함의 기준을 정해 선물 방식을 결정해야 할 때.",
+            "deliverable": "금액·선택권·필요 중심 공평함 유형별 장단점 비교와 상황별 적용 질문 리스트, 판단 지침을 완성합니다.",
+            "direction_id": "free-b65d41dcec"
+          },
+          {
+            "topic": "설명 듣기와 직접 시연 학습, 새 업무 익힐 때 가장 효과적인 방법은?",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "새 업무를 배울 때 설명과 시연 중 어떤 방식을 주로 활용해야 하는지 판단하기 어려워 학습 전략을 세우기 힘듭니다.",
+            "distinct_angle": "단순 설명·시연 비교를 넘어서, 업무 유형별 필요한 학습 방식을 구분하고 실제 적용할 단계별 조합법과 전환 전략을 제공합니다.",
+            "outline": [
+              "업무를 순서 기반 작업과 판단 기준 기반 작업으로 구분하기",
+              "설명 듣기, 시연 보기, 직접 연습 특성 및 적합 상황 분석하기",
+              "학습 방식 조합과 전환 방법을 단계별로 계획하고 실천하기"
+            ],
+            "reader_situation": "새 기능이나 절차 습득 관련 업무 담당자가 상황별로 최적 학습 방법을 고르고 싶을 때.",
+            "deliverable": "업무 유형별 적합 학습법 비교표, 단계별 학습 계획 작성지, 효과 개선 실천 안내를 완성합니다.",
+            "direction_id": "free-12c16f333b"
+          },
+          {
+            "topic": "모르는 내용, 바로 질문할지 스스로 찾아볼지 시간과 비용 기준으로 판단하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "간단한 의문을 즉시 문의할지 먼저 스스로 탐색할지 비용과 시간 대비 효과를 기준으로 판단하지 못해 비효율적입니다.",
+            "distinct_angle": "기존 단순 기준 안내와 달리, 질문별 소요 시간과 노력, 기대 효과를 체계적으로 평가하는 도구와 체크리스트를 제공합니다.",
+            "outline": [
+              "질문 탐색 및 문의별 소요 노력·시간 구체적 분석하기",
+              "비용 대비 효과 중심 질문 시점 판단 프레임 제작하기",
+              "업무에 적용 가능한 질문 선택 체크리스트 작성 및 활용하기"
+            ],
+            "reader_situation": "업무나 지원 문의 담당자가 자원 투입을 적절히 조절하며 질문 처리 효율을 높이고자 할 때.",
+            "deliverable": "문의 결정용 비용·시간 평가 차트, 질문 유형별 판단 체크리스트, 효율적 문의 시점 선택 안내문을 작성합니다.",
+            "direction_id": "free-bfc80eaf20"
+          },
+          {
+            "topic": "과거 선택 결과와 당시 판단 과정, 우연과 질을 구분하는 질문은?",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "좋은 결과에만 집중해 당시 판단 과정이 합리적이었는지 점검하지 못해 반복 실패 우려가 있습니다.",
+            "distinct_angle": "일반 조언과 달리, 과거 상황 정보와 결과를 분리하는 구체적 방법과 가상 사례로 판단 과정의 질을 평가하는 실천 중심 절차를 안내합니다.",
+            "outline": [
+              "과거 선택 당시 정보와 결과를 분리하는 구별법 익히기",
+              "결과 우연과 판단 과정 질 차이를 보여주는 가상 사례 분석하기",
+              "과거 판단 과정 객관 평가와 학습 위한 행동 절차 진행하기"
+            ],
+            "reader_situation": "과거 성공한 선택을 되풀이하려는 독자가 판단 과정과 결과를 명확히 구분해 배우고 싶을 때.",
+            "deliverable": "정보·결과 분리법, 우연과 질 차별 가상 사례, 판단 과정 학습 질문 목록과 행동 흐름을 완성합니다.",
+            "direction_id": "free-911ea23e77"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 582,
+          "coverageArticles": 138,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-b65d41dcec",
+            "free-12c16f333b",
+            "free-bfc80eaf20",
+            "free-911ea23e77"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15535,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1004,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16539
+        },
+        "estimated_usd": 0.0078204,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T19:09:12.415408+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 29221,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 961,
+          "output_tokens_details": {
+            "reasoning_tokens": 287
+          },
+          "total_tokens": 30182
+        },
+        "estimated_usd": 0.02624025,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T19:09:21.008922+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T19:09:03.160942+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T19:09:13.007982+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03406065,
+    "estimated_total_usd": 0.03406065,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
