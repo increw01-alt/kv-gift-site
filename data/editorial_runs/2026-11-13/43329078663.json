@@ -3,16 +3,18 @@
   "date_kst": "2026-11-13",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-12T23:27:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "43329078663",
@@ -22,15 +24,128 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-13T08:28:58.020642+09:00"
+      "attempt_started_at": "2026-11-13T08:28:58.020642+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [
+          {
+            "topic": "불확실한 약속을 확정 일정과 분리해 대화 혼선을 줄이는 방법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "약속 일정이 확정되기 전과 확정 후 정보를 뒤섞어 상대가 혼란을 겪고, 일정이 겹치거나 누락되는 문제가 발생한다.",
+            "distinct_angle": "기존 일반 안내와 달리, 확정 전 약속과 확정 후 약속을 대화와 표시에서 명확히 구분하는 구체적인 시각표시와 문장 구성법을 체계적으로 제시한다.",
+            "outline": [
+              "확정되지 않은 약속과 확정된 약속의 상태 정의하기",
+              "각 상태를 명확히 구별하는 표시 방법과 문장 구성법 익히기",
+              "모범 대화 예시를 통해 확정 절차를 연습하고 혼선 줄이기"
+            ],
+            "reader_situation": "친구나 동료와 약속을 조율하는 과정에서 가능한 시간과 최종 확정된 약속이 혼재되어 착오가 생기는 상황이다.",
+            "deliverable": "약속 상태별 시각 및 언어적 표시 방법과 이를 활용한 명확한 약속 확정 대화 예시 및 활용 연습 자료를 제공한다.",
+            "direction_id": "sense-07089a422e"
+          },
+          {
+            "topic": "자주 쓰는 물건 공간 배치로 꺼내기와 원위치 동작 횟수 줄이기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "사용 빈도가 높은 물건들을 제자리에 두지 않고 흩어져 있어 꺼내고 다시 제자리에 놓는 동작 수가 많아 번거롭다.",
+            "distinct_angle": "기존 공간 정리 조언과 다르게 사용 빈도와 동선을 분석해 최소 동작 배치 원칙을 세우고, 배치 유지 생활 규칙으로 효율적인 원위치를 돕는 구체적 매뉴얼을 제시한다.",
+            "outline": [
+              "자주 사용하는 물건의 위치와 동선 분석하기",
+              "동작 횟수를 최소화하는 배치 원칙 설계하기",
+              "배치 유지·원위치 확인을 위한 생활 규칙 설계 및 실천 방법"
+            ],
+            "reader_situation": "사무실 또는 가정에서 자주 쓰는 물건들이 흩어져 있어 필요할 때마다 찾고 되돌리기 불편한 상황이다.",
+            "deliverable": "물건 사용 빈도와 동선 분석, 꺼내기·되돌리기 동작을 줄이는 배치 원칙, 원위치 유지 생활 규칙과 점검 체크리스트를 담은 공간 배치 매뉴얼.",
+            "direction_id": "sense-bc0cf30f7f"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 604,
+          "coverageArticles": 139,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-07089a422e",
+            "sense-d926083876",
+            "sense-131a66fcc8",
+            "sense-bc0cf30f7f"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16048,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 876,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16924
+        },
+        "estimated_usd": 0.0078208,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T23:29:07.920582+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20480,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 910,
+          "output_tokens_details": {
+            "reasoning_tokens": 245
+          },
+          "total_tokens": 21390
+        },
+        "estimated_usd": 0.019455,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T23:29:15.767922+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T23:29:01.012466+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T23:29:08.346864+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0272758,
+    "estimated_total_usd": 0.0272758,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
