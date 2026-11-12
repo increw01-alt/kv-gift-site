@@ -439,10 +439,15 @@
       "board": "free",
       "topic": "개별 맞춤 선물과 모두에게 같은 선물, 어떻게 공평한 선택을 할까요?",
       "run_id": "43287859061"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
+      "run_id": "43293839504"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "43287859061",
+  "last_board": "gc_tip",
+  "last_run_id": "43293839504",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

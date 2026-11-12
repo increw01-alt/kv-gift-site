@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T19:48:57.122780+00:00",
+  "generatedAt": "2026-11-12T19:49:34.948539+00:00",
   "dateKst": "2026-11-13",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 7,
-  "held": 4,
+  "held": 5,
   "errors": 2,
-  "knownSubtotalUsd": 0.15450155,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.21408335,
+  "estimatedTotalUsd": 0.21408335,
   "records": [
     {
       "runId": "43246272098",
@@ -92,21 +92,21 @@
     },
     {
       "runId": "43293839504",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-12T19:47:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0595818,
+      "knownSubtotalUsd": 0.0595818
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 2,
+    "retryAfter": "2026-11-13T05:48:56.773966+09:00",
+    "cooldownMinutes": 60
   }
 }

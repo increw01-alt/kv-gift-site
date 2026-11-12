@@ -1,18 +1,20 @@
 {
   "run_id": "43293839504",
   "date_kst": "2026-11-13",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_tip",
+  "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-12T19:47:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 동명이인 수신자를 구분하기 위한 최소 식별 정보 확인, 연락처 일부 확인, 채널 분리라는 핵심 질문과 해결 절차가 기존의 동명이인 수신자 식별·개인정보 최소화 안내와 사실상 같습니다. / 이름이 같은 수신자를 안전하게 확인한 뒤 전달하는 순서가 기존 글의 정보 노출 최소화/문의용 정보 구분과 같은 문제를 다른 표현으로 반복하고 있습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43293839504",
@@ -22,15 +24,281 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-13T04:48:56.773966+09:00"
+      "attempt_started_at": "2026-11-13T04:48:56.773966+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 585,
+          "coverageArticles": 138,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-67b3e3310b",
+            "gc_tip-41d96debcf",
+            "gc_tip-61534cc058",
+            "gc_tip-18e69e2f13"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 장바구니 옵션 변경 후 원래 의도와 최종 주문 내용을 꼼꼼히 대조하는 방법",
+          "source_id": "",
+          "reader_problem": "상품권 장바구니 내에서 금액, 수신자 등 다양한 옵션을 여러 차례 변경하는 과정에서 최종 주문 내역이 최초 의도와 정확히 일치하는지 체계적으로 확인하는 절차가 없어 주문 오류 걱정이 크다.",
+          "distinct_angle": "기존 글들의 단순 기록 및 확인 단계를 넘어서, 최초 담긴 옵션과 변경 내역을 효과적으로 기록하는 구체적 양식과, 변경 발생 시마다 상세 확인하는 점검 프로세스를 포함한 대조 점검 매뉴얼을 제시해 실전에서 바로 활용 가능한 표준화된 점검 체계를 완성한다.",
+          "reader_situation": "상품권을 대량 구매하거나 꼼꼼히 여러 번 옵션을 수정하는 개인 이용자가, 최종 주문 직전 모든 변경 내역과 최초 선택 내용을 구체적으로 비교해 오류를 방지하고 안전하게 주문하려는 상황.",
+          "deliverable": "최초 담긴 상품권 옵션 및 변경 내역을 기록하는 표준 양식, 변경 사항 발생 때마다 진행하는 점검 절차 매뉴얼, 최종 주문 전에 최초 의도와 현재 주문 내역을 대조하는 점검표와 실행 지침서, 이를 일목요연하게 정리한 실용 매뉴얼.",
+          "task_id": "",
+          "direction_id": "gc_tip-67b3e3310b",
+          "outline": [
+            "처음 장바구니에 담긴 상품권 대상과 옵션을 체계적으로 기록하는 방법 배우기",
+            "옵션 변경이 있을 때마다 변경 사항을 상세히 확인하는 점검 절차 마련하기",
+            "최종 주문 직전에 최초 선택 내역과 현재 주문 옵션을 꼼꼼히 대조 점검하는 방법 적용하기"
+          ]
+        },
+        {
+          "topic": "상품권으로 구매한 물품 용량 차이 있을 때 합리적 비교 기준 세우기",
+          "source_id": "",
+          "reader_problem": "상품권을 이용해 같은 상품이라도 용량이나 크기가 다른 제품을 구매할 때 포장 크기나 단위 기준만 보고 실제 사용량과 보관 가능성을 고려하지 않아 후회하는 경험이 많아지는 문제이다.",
+          "distinct_angle": "단순 상품 설명 비교를 넘어, 필요한 사용량과 빈도, 보관 환경 등 실사용 기준으로 상품들을 객관적으로 비교하는 구체적 판단 기준과 선택 과정을 단계별로 안내해 독자가 직접 효율적 상품 평가를 할 수 있도록 돕는다.",
+          "reader_situation": "여러 용량/포장 단위 상품 중 어떤 것을 구매할지 고민하는 이용자가, 상품권으로 구매할 때 실질적인 가치와 사용 편의성을 함께 고려해 합리적으로 선택하려는 상황.",
+          "deliverable": "필요한 용량과 사용 빈도 사전 파악법, 포장 크기에 현혹되지 않고 실제 소비 기준으로 상품을 비교하는 지침, 남은 양 보관 가능성 등 현실적 조건 점검 체크리스트와 사례를 담은 판단 가이드.",
+          "task_id": "",
+          "direction_id": "gc_tip-41d96debcf",
+          "outline": [
+            "필요한 용량과 사용 빈도 및 상황을 사전에 정확히 파악하기",
+            "포장 크기나 단위에만 의존하지 않고 실제 사용량 기준으로 상품 비교하기",
+            "남은 양의 보관 가능성과 장기간 사용 시 제약 등 현실적 변수 종합 평가하기"
+          ]
+        },
+        {
+          "topic": "상품권 구매 안내 여러 창 비교 시 서로 다른 옵션 혼동 방지 체계 이행법",
+          "source_id": "",
+          "reader_problem": "다수의 구매 안내 페이지를 동시에 띄워 비교하는 과정에서 비슷한 상품명과 옵션 때문에 서로 다른 옵션을 같은 상품으로 오인하는 착오가 빈번하게 일어난다.",
+          "distinct_angle": "상품권별 옵션과 주요 특징을 표 형식으로 체계적으로 정리하고, 각 창의 이름과 옵션을 매칭시키며 대조하는 구체적인 방법과 작성 요령, 작성한 비교표 활용법을 단계별로 상세히 안내해 실무에서 혼동을 줄인다.",
+          "reader_situation": "여러 판매 창에서 상품권 가격과 옵션을 비교하면서 각각의 조건을 명확히 파악하여 착오 없이 합리적으로 선택하려는 소비자.",
+          "deliverable": "상품별 핵심 옵션 항목 정의 및 리스트 작성법, 여러 창 간 상품명과 옵션을 일치시켜 표로 작성하는 방법, 완성된 비교표를 활용해 각 상품권 옵션을 분명히 구분·판단하는 점검 가이드.",
+          "task_id": "",
+          "direction_id": "gc_tip-18e69e2f13",
+          "outline": [
+            "비교 전 핵심 상품조건과 옵션 항목을 정의하여 리스트업하기",
+            "여러 창 별 상품명과 옵션을 매칭해 비교표로 정리하기",
+            "작성한 비교표를 통해 각 상품권 옵션을 명확히 구분하고 올바른 선택 판단하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
+        "source_id": "",
+        "reader_problem": "상품권 선물 과정에서 동일한 이름의 동명이인 수신자와 혼동되어 잘못 전달되는 사례가 발생하며, 개인정보 노출을 최소화하면서도 수신자를 정확히 확인할 절차 마련이 어렵다.",
+        "distinct_angle": "최소한의 식별 정보와 연락 채널 분리 확인 절차를 구체적으로 마련하고, 개인정보 보호 기준에 맞는 안전한 커뮤니케이션 전략과 체크리스트를 제공해 선물 전달 오류와 개인정보 노출 위험을 동시에 줄이는 방법을 제시한다.",
+        "reader_situation": "상품권을 선물하고자 하는 구매자가 정확한 수신자 식별에 어려움을 겪으며, 동시에 개인정보 과다 노출을 피하면서 안전하고 확실하게 선물을 전달하려는 상황.",
+        "deliverable": "동명이인 구별에 필요한 필수 최소 식별 정보 목록, 개인 연락처 일부 비공개 확인 절차 설계, 안전한 소통을 위한 수신자 확인 및 채널 분리 커뮤니케이션 전략, 이를 체계적으로 정리한 안내 문서.",
+        "task_id": "",
+        "direction_id": "gc_tip-61534cc058",
+        "outline": [
+          "동명이인 분별에 필요한 최소한의 식별 정보 항목 작성하기",
+          "연락처 일부 비공개 확인 절차와 개인정보 보호 방식 설계하기",
+          "안전하고 실용적인 수신자 확인 및 전달용 커뮤니케이션 채널 분리 전략 구축하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 주문자·결제자 정보 구분과 문의 화면 개인정보 보호를 다룬 /board/purchase/2579, /board/general_notice/56, /board/gc_information/19입니다. 그러나 이번 후보는 상품권 선물 과정에서 동명이인 수신자를 정확히 가려내는 절차와, 개인정보를 과다 노출하지 않으면서 채널을 분리해 확인하는 방법이 중심이라 독자가 해결해야 할 질문이 다릅니다. 기존 글은 ‘어떤 정보를 숨기고 무엇을 남길지’에 초점이 있지만, 이번 글은 ‘동명이인을 어떻게 구별하고 전달 오류를 어떻게 막을지’라는 추가 판단이 필요해 새 해결 도구가 있습니다.",
+        "screen_rejections": [
+          "0번은 /board/purchase/2567의 여러 장 주문 내역 정리, /board/purchase/2573의 본사용과 선물용 구분과 해결 절차가 겹칩니다. 최초 선택과 변경 내역 대조, 표 작성, 최종 주문 확인이라는 흐름이 이미 공개 글의 답으로 처리됩니다.",
+          "1번은 /board/gc_tip/41의 용량·사용 빈도·보관 여건 비교와 독자가 처한 상황이 같습니다. 포장 크기보다 실제 사용량과 보관 조건을 비교하는 기준을 세운다는 점에서 기존 글의 질문과 해결 순서가 반복됩니다.",
+          "3번은 /board/gc_tip/47의 보관함 구분, /board/purchase/2569의 이미지와 실제 상품명 대조, /board/general_notice/60의 이전 내용과 변경점 구분과 같은 ‘비슷한 항목을 표로 나눠 혼동을 줄이는’ 구조를 반복합니다. 창을 나눠 매칭하고 비교표를 만드는 정도로는 새 질문이 충분히 드러나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/purchase/2579",
+            "/board/general_notice/56",
+            "/board/gc_information/19"
+          ],
+          "gap": "기존 글들은 정보 노출을 줄이거나 문의용 정보를 구분하는 방법을 다루지만, 이번 글은 동명이인 수신자를 선물 단계에서 잘못 보내지 않게 구분하는 실무 절차가 필요합니다. 이름만 같고 나머지 정보는 비슷한 경우에 어떤 최소 식별 정보로 확인할지, 어디까지 물어보고 어디서 멈출지, 전달 채널을 어떻게 나눌지까지 정리해야 합니다.",
+          "example": "받는 사람 이름이 같은 두 명 중 한 사람에게만 상품권을 보내야 하지만, 전화번호나 상세 주소를 바로 묻기 부담스러운 상황이라면 먼저 관계를 확인할 수 있는 최소한의 단서와 전달 방식만 따로 요청하고, 확인이 끝난 뒤에만 최종 전달 경로를 정하는 식으로 진행합니다.",
+          "result": "읽은 뒤에는 동명이인 수신자를 구분하는 최소 확인 항목과 개인정보 노출을 줄이는 전달 순서를 스스로 정리할 수 있습니다.",
+          "section_actions": [
+            "첫 단계에서 이름이 같은 수신자를 구별할 최소 정보만 정리해, 과도한 개인정보를 요구하지 않고도 확인해야 할 항목을 줄여 둡니다.",
+            "중간 단계에서 연락 채널과 확인 질문을 분리해, 확인용 대화와 실제 전달용 메시지가 섞이지 않도록 절차를 나눕니다.",
+            "마지막 단계에서 최종 수신자 확인 뒤에만 전달 정보를 보내도록 정리해, 잘못된 상대에게 상품권이 넘어갈 가능성을 줄입니다."
+          ]
+        }
+      },
+      "board": "gc_tip",
+      "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-12T15:15:28Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16334,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1410,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17744
+        },
+        "estimated_usd": 0.0087896,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T19:49:11.215733+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30308,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 971,
+          "output_tokens_details": {
+            "reasoning_tokens": 162
+          },
+          "total_tokens": 31279
+        },
+        "estimated_usd": 0.0271005,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T19:49:20.221702+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3697,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 496,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4193
+        },
+        "estimated_usd": 0.0022724,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T19:49:24.046140+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7525,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8048
+        },
+        "estimated_usd": 0.0038468,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-12T19:49:30.053314+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20796,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 439,
+          "output_tokens_details": {
+            "reasoning_tokens": 148
+          },
+          "total_tokens": 21235
+        },
+        "estimated_usd": 0.0175725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-12T19:49:34.641910+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T19:48:59.846274+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T19:49:11.947690+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T19:49:20.224650+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-12T19:49:25.160692+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-12T19:49:31.790000+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0595818,
+    "estimated_total_usd": 0.0595818,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

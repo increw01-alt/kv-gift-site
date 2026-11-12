@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T19:48:57.153142+00:00",
+  "generatedAt": "2026-11-12T19:49:34.977848+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4713,14 +4713,14 @@
       "runId": "43293839504",
       "dateKst": "2026-11-13",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "상품권 선물시 동명이인 구별과 개인정보 보호를 위한 안전한 전달 절차",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0595818,
+      "knownSubtotalUsd": 0.0595818
     },
     {
       "id": "post:purchase:2561",
@@ -20365,13 +20365,57 @@
     {
       "entryId": "run:43293839504",
       "dateKst": "2026-11-13",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-12T19:49:11.215733+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0087896,
+      "knownSubtotalUsd": 0.0087896,
+      "requests": 1,
+      "inputTokens": 16334,
+      "outputTokens": 1410
+    },
+    {
+      "entryId": "run:43293839504",
+      "dateKst": "2026-11-13",
+      "recordedAt": "2026-11-12T19:49:20.221702+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0271005,
+      "knownSubtotalUsd": 0.0271005,
+      "requests": 1,
+      "inputTokens": 30308,
+      "outputTokens": 971
+    },
+    {
+      "entryId": "run:43293839504",
+      "dateKst": "2026-11-13",
+      "recordedAt": "2026-11-12T19:49:24.046140+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0022724,
+      "knownSubtotalUsd": 0.0022724,
+      "requests": 1,
+      "inputTokens": 3697,
+      "outputTokens": 496
+    },
+    {
+      "entryId": "run:43293839504",
+      "dateKst": "2026-11-13",
+      "recordedAt": "2026-11-12T19:49:30.053314+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0038468,
+      "knownSubtotalUsd": 0.0038468,
+      "requests": 1,
+      "inputTokens": 7525,
+      "outputTokens": 523
+    },
+    {
+      "entryId": "run:43293839504",
+      "dateKst": "2026-11-13",
+      "recordedAt": "2026-11-12T19:49:34.641910+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0175725,
+      "knownSubtotalUsd": 0.0175725,
+      "requests": 1,
+      "inputTokens": 20796,
+      "outputTokens": 439
     },
     {
       "entryId": "post:purchase:2561",
