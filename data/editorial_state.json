@@ -449,10 +449,15 @@
       "board": "general_notice",
       "topic": "키보드 사용자 위한 웹 안내 링크 이동 시 선택 위치 인지와 탐색법",
       "run_id": "43323951970"
+    },
+    {
+      "board": "purchase",
+      "topic": "신뢰할 수 있는 정보와 광고 표현 구분하며 상품권 설명 읽는 법",
+      "run_id": "43492449228"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "43481268869",
+  "last_board": "purchase",
+  "last_run_id": "43492449228",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

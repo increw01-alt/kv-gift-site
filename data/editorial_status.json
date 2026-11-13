@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T19:28:58.393945+00:00",
+  "generatedAt": "2026-11-13T19:29:30.509387+00:00",
   "dateKst": "2026-11-14",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 5,
-  "held": 2,
+  "held": 3,
   "errors": 1,
-  "knownSubtotalUsd": 0.1909236,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2331057,
+  "estimatedTotalUsd": 0.2331057,
   "records": [
     {
       "runId": "43451191156",
@@ -66,21 +66,21 @@
     },
     {
       "runId": "43492449228",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "신뢰할 수 있는 정보와 광고 표현 구분하며 상품권 설명 읽는 법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-13T19:27:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0421821,
+      "knownSubtotalUsd": 0.0421821
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-14T04:58:58.190175+09:00",
+    "cooldownMinutes": 30
   }
 }
