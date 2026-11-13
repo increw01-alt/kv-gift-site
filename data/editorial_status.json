@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T20:43:59.543601+00:00",
+  "generatedAt": "2026-11-13T20:45:09.571493+00:00",
   "dateKst": "2026-11-14",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 2,
+  "published": 3,
   "verified": 2,
   "attempts": 8,
   "held": 4,
   "errors": 1,
-  "knownSubtotalUsd": 0.41032465,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5378013,
+  "estimatedTotalUsd": 0.5378013,
   "records": [
     {
       "runId": "43451191156",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "43504098162",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "읽기 중 자동 완성 데이터와 직접 입력 내용 구분점검법",
+      "url": "https://kv-gift.co.kr/board/general_notice/71",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-13T20:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12747665,
+      "knownSubtotalUsd": 0.12747665
     }
   ],
   "topicRetry": {

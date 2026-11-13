@@ -1682,5 +1682,18 @@
     "publication_mode": "automatic",
     "run_id": "43497890199",
     "usage_file": "data/editorial_runs/2026-11-14/43497890199.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 71,
+    "topic": "읽기 중 자동 완성 데이터와 직접 입력 내용 구분점검법",
+    "drafted_at": "2026-11-14",
+    "automation": true,
+    "search_intent": "자동 완성으로 채워진 값과 직접 입력한 값을 제출 전에 구분해 오류를 줄이는 방법",
+    "image_scene": "책상 위에 노트북의 온라인 입력 화면과 옆의 메모지가 나란히 놓여 있고, 한 사람이 주소와 연락처 입력칸에 자동 완성된 값과 직접 쓴 값을 각각 색펜으로 표시해 비교하는 장면",
+    "image_alt": "노트북 입력 화면 옆 메모지에 자동 완성 값과 직접 입력한 값을 따로 적어 비교하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43504098162",
+    "usage_file": "data/editorial_runs/2026-11-14/43504098162.json"
   }
 ]
