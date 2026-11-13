@@ -1669,5 +1669,18 @@
     "publication_mode": "automatic",
     "run_id": "43451191156",
     "usage_file": "data/editorial_runs/2026-11-14/43451191156.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 20,
+    "topic": "지류·모바일·교환권 상태 변화와 구분법 익히기",
+    "drafted_at": "2026-11-14",
+    "automation": true,
+    "search_intent": "상품권이 지류·모바일·교환권 중 어떤 상태인지 먼저 나누고, 전환 단계별로 무엇을 확인해야 하는지 알고 싶은 질문",
+    "image_scene": "책상 위에 ‘교환권’, ‘지류’, ‘모바일’이라고 적힌 세 개의 카드와 상태를 옮겨 적는 메모지가 놓여 있고, 한 사람이 화살표로 연결된 흐름도 옆에서 현재 보유물이 어느 단계인지 표시하며 확인 순서를 정리하는 장면",
+    "image_alt": "책상 위에 교환권, 지류, 모바일 카드와 상태 흐름도를 펼쳐 두고 현재 단계와 확인 순서를 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43497890199",
+    "usage_file": "data/editorial_runs/2026-11-14/43497890199.json"
   }
 ]

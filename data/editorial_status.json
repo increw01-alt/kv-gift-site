@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T20:04:04.591056+00:00",
+  "generatedAt": "2026-11-13T20:05:24.916427+00:00",
   "dateKst": "2026-11-14",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 6,
   "held": 3,
   "errors": 1,
-  "knownSubtotalUsd": 0.2331057,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3609691,
+  "estimatedTotalUsd": 0.3609691,
   "records": [
     {
       "runId": "43451191156",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "43497890199",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_information",
+      "topic": "지류·모바일·교환권 상태 변화와 구분법 익히기",
+      "url": "https://kv-gift.co.kr/board/gc_information/20",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-13T20:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1278634,
+      "knownSubtotalUsd": 0.1278634
     }
   ],
   "topicRetry": {
