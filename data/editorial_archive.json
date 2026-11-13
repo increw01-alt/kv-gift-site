@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T17:44:34.045011+00:00",
+  "generatedAt": "2026-11-13T17:46:22.475114+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4843,7 +4843,7 @@
       "board": "sense",
       "topic": "불확실한 약속을 확정 일정과 분리해 대화 혼선을 줄이는 방법",
       "url": "https://kv-gift.co.kr/board/sense/27",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-13T17:46:22.450532+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1134074,
       "knownSubtotalUsd": 0.1134074
