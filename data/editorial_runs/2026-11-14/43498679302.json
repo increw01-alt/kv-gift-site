@@ -1,18 +1,20 @@
 {
   "run_id": "43498679302",
   "date_kst": "2026-11-14",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "상품권 일부 상태 미확인 시 확인 완료 부분과 보류 부분의 작업 흐름 관리",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-13T20:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 확인 완료분과 미확인분을 나눠 기록하고 합계에서 제외하며 인계 문서에 다음 확인 항목을 적는 절차가 기존의 상태 분리·기록 안내와 사실상 같습니다. / 독자가 처한 상황과 해결 방법이 ‘일부만 상태가 확인된 상품권을 분리 관리한다’로 동일해 새 질문이나 새 판단 도구가 드러나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43498679302",
@@ -22,15 +24,284 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T05:08:57.018361+09:00"
+      "attempt_started_at": "2026-11-14T05:08:57.018361+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 618,
+          "coverageArticles": 141,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-be8f258b08",
+            "sale-69484ecae0",
+            "sale-a002d2fe08",
+            "sale-ecddaf57c8"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 판매 중단 결정 후 문의 종료 및 보유 의사 명확히 알리기",
+          "source_id": "",
+          "reader_problem": "상품권 판매 상담 후 판매하지 않기로 결정했으나, 상대방과 문의 진행 상태가 불분명하여 혼란이 발생하는 문제입니다.",
+          "distinct_angle": "기존 글들은 판매 준비 과정이나 매입처 문의에 초점을 둔 반면, 이 글은 판매 거절 의사를 명확히 전달하고 상대방 상태를 확인해 문의를 원활히 종료하는 절차에 중점을 둡니다.",
+          "reader_situation": "상품권 판매 상담 중 판매하지 않기로 확정하여 문의를 정리하고, 상대가 추가 문의를 계속할 가능성을 대비해 명확한 종료와 확인 절차를 진행하려는 독자 상황입니다.",
+          "deliverable": "판매 중단 의사 전달 문구 샘플, 상대방 문의 진행 상태 확인 양식, 혼선 없는 문의 종료 절차 안내서.",
+          "task_id": "",
+          "direction_id": "sale-be8f258b08",
+          "outline": [
+            "판매하지 않기로 한 의사를 분명히 표현하는 방법을 익히기",
+            "상대방에게 문의 진행 상태를 확인하는 문구 작성법 배우기",
+            "예상치 못한 오해 방지를 위한 문의 종료 절차와 후속 대응 정리하기"
+          ]
+        },
+        {
+          "topic": "업무 범위 이외 추가 자료 요청 시 요청자 확인과 정보 제공 판단법",
+          "source_id": "",
+          "reader_problem": "상품권 판매 과정에서 범위를 벗어난 추가 자료 요청을 받았으나, 요청 주체와 자료 필요성을 파악하는 방법을 몰라 불필요하거나 위험한 정보 제공 가능성이 있습니다.",
+          "distinct_angle": "기존 글들이 상태 확인과 문의 대응에 치중한 반면, 이 글은 업무 범위 밖 요청 시 요청자 신원과 목적 파악, 보안 고려 점검 절차에 특화된 내용을 다룹니다.",
+          "reader_situation": "판매 상담 중 예상치 못한 추가 자료 요청이 발생했으며, 요청 주체와 목적을 체계적으로 확인해 적절한 정보 제공 여부를 판단하려는 판매 담당자 대상입니다.",
+          "deliverable": "추가 자료 요청 시 요청자 확인 체크리스트, 요청 목적 대비 자료 범위 대조표, 안전한 정보 제공 결정을 위한 보안 절차 안내서.",
+          "task_id": "",
+          "direction_id": "sale-69484ecae0",
+          "outline": [
+            "요청된 추가 자료의 요청자 및 전달 경로를 철저히 확인하기",
+            "요청 목적과 요구 자료 범위를 정확히 파악해 불필요 제공 방지하기",
+            "자료 제공 전 보안 유지와 대응 절차를 수립해 안전성을 확보하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 일부 상태 미확인 시 확인 완료 부분과 보류 부분의 작업 흐름 관리",
+        "source_id": "",
+        "reader_problem": "상품권 일부만 상태가 확인되어 전체 상태로 오해하기 쉽고, 미확인 상품권을 별도 관리하기 어려운 문제입니다.",
+        "distinct_angle": "기존 글에서는 전체 상태 확인이나 단순 상태 분리 방식을 다뤘으나, 이 글은 확인 완료 상품권과 보류 상품권 간 작업 구분과 별도 합계 계산 체계, 인계 문서 작성 절차에 중점을 둡니다.",
+        "reader_situation": "판매 담당자가 일부만 상태 확인한 상품권과 미확인 상품권을 명확히 구분하여 효율적으로 관리하며, 업무 인계 시 분명한 작업 범위를 알리고자 하는 상황입니다.",
+        "deliverable": "확인 완료와 미확인 상품권 목록 분리표, 합계 계산 방법 설명서, 분리 작업 범위 문서 작성 가이드.",
+        "task_id": "",
+        "direction_id": "sale-ecddaf57c8",
+        "outline": [
+          "확인 완료된 상품권만 별도 목록으로 분리하여 관리하기",
+          "미확인 상품권을 합계에서 제외하는 절차 적용하기",
+          "분리 목록과 작업 범위 문서로 명확한 인계 체계를 구축하기"
+        ],
+        "novelty_reason": "이 후보는 일부만 확인된 상품권을 확인 완료분과 보류분으로 나누고, 합계와 인계 문서를 따로 유지하는 절차를 다뤄서 기존의 상태 점검이나 오류 대응 글보다 한 단계 더 구체적입니다. 가장 가까운 기존 글은 상품권 상태 이상을 기록해 문의하는 /board/sale/3693과 여러 상품권을 분류해 정리하는 /board/gc_tip/33이지만, 둘 다 전체 상태 확인과 기록 정리에 머물러 있습니다. 이 후보는 미확인 항목을 합계에서 제외하고 작업 범위를 넘기지 않도록 관리하는 판단 기준을 추가해, 기존 답만으로는 처리되지 않는 업무 분리와 인계 문제를 새로 다룹니다.",
+        "screen_rejections": [
+          "0번은 판매 상담을 멈추는 의사 전달과 진행 상태 확인이 핵심으로, 이미 공개된 /board/sale/3694의 상담 중단 시점과 확인 사항과 질문·해결 절차가 사실상 같습니다.",
+          "1번은 추가 자료 요청의 요청자 확인과 제공 여부 판단이 핵심인데, /board/sale/3692의 개인정보 보호와 /board/gc_information/19의 본인 확인과 조회 정보 구분과 겹쳐 새 판단 도구가 충분히 드러나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sale/3693",
+            "/board/gc_tip/33"
+          ],
+          "gap": "기존 글은 상품권의 이상 상태를 기록하거나 여러 장을 분류하는 데 그칩니다. 이 글은 일부만 확인된 상품권이 섞였을 때, 확인 완료분과 미확인분을 분리해 합계와 인계 범위를 다르게 다루는 방법을 알려야 합니다.",
+          "example": "확인된 몇 장과 아직 상태가 불분명한 몇 장이 함께 들어온 상황이라면, 먼저 확인된 것만 따로 묶고 미확인분은 합계에서 빼 두세요. 이후 다른 사람이 이어서 볼 때는 보류 사유와 다음 확인 항목을 함께 적어 넘기면 됩니다.",
+          "result": "독자는 확인된 상품권만 바로 처리하고, 미확인 상품권은 별도 목록으로 남겨 업무 혼선을 줄이는 정리 기준을 갖게 됩니다.",
+          "section_actions": [
+            "확인된 상품권과 미확인 상품권을 서로 다른 목록으로 나누어 적고, 각 목록의 기준을 함께 표시한다.",
+            "미확인 상품권은 합계와 진행 현황에서 따로 빼 두어, 아직 확인되지 않은 수량이 완료분으로 섞이지 않게 한다.",
+            "인계할 때는 분리 사유와 다음 확인 항목을 함께 적어, 이어 받는 사람이 같은 기준으로 다시 점검하게 한다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "상품권 일부 상태 미확인 시 확인 완료 부분과 보류 부분의 작업 흐름 관리",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-13T14:35:37Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15726,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1128,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16854
+        },
+        "estimated_usd": 0.0080952,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T20:09:12.907267+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20755,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 889,
+          "output_tokens_details": {
+            "reasoning_tokens": 260
+          },
+          "total_tokens": 21644
+        },
+        "estimated_usd": 0.01956675,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T20:09:20.890056+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3475,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 539,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4014
+        },
+        "estimated_usd": 0.0022524,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T20:09:26.132126+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7673,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 610,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8283
+        },
+        "estimated_usd": 0.0040452,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T20:09:35.397912+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17366,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 527,
+          "output_tokens_details": {
+            "reasoning_tokens": 207
+          },
+          "total_tokens": 17893
+        },
+        "estimated_usd": 0.015396,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T20:09:41.594849+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T20:08:59.427139+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T20:09:13.483316+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T20:09:20.893039+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T20:09:27.237814+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T20:09:37.126977+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04935555,
+    "estimated_total_usd": 0.04935555,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

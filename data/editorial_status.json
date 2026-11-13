@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T20:08:57.205637+00:00",
+  "generatedAt": "2026-11-13T20:09:41.813325+00:00",
   "dateKst": "2026-11-14",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 7,
-  "held": 3,
+  "held": 4,
   "errors": 1,
-  "knownSubtotalUsd": 0.3609691,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.41032465,
+  "estimatedTotalUsd": 0.41032465,
   "records": [
     {
       "runId": "43451191156",
@@ -92,21 +92,21 @@
     },
     {
       "runId": "43498679302",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "상품권 일부 상태 미확인 시 확인 완료 부분과 보류 부분의 작업 흐름 관리",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-13T20:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04935555,
+      "knownSubtotalUsd": 0.04935555
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-14T05:38:57.018361+09:00",
+    "cooldownMinutes": 30
   }
 }
