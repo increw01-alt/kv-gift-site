@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T20:45:09.603053+00:00",
+  "generatedAt": "2026-11-13T20:46:33.926855+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -4941,7 +4941,7 @@
       "board": "general_notice",
       "topic": "읽기 중 자동 완성 데이터와 직접 입력 내용 구분점검법",
       "url": "https://kv-gift.co.kr/board/general_notice/71",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-13T20:46:33.778498+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.12747665,
       "knownSubtotalUsd": 0.12747665
