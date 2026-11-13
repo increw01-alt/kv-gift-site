@@ -1656,5 +1656,18 @@
     "publication_mode": "automatic",
     "run_id": "43322444889",
     "usage_file": "data/editorial_runs/2026-11-13/43322444889.json"
+  },
+  {
+    "board": "sense",
+    "id": 27,
+    "topic": "불확실한 약속을 확정 일정과 분리해 대화 혼선을 줄이는 방법",
+    "drafted_at": "2026-11-14",
+    "automation": true,
+    "search_intent": "약속 조율 중 임시안과 확정안을 구분해 혼선을 줄이고 싶은 질문",
+    "image_scene": "책상 위 달력과 메모지, 스마트폰 메시지 화면이 함께 놓여 있고 한 사람이 잠정 약속은 별도 칸에 적고 확정된 시간은 다른 칸에 옮겨 적으며 최종 일정을 정리하는 장면",
+    "image_alt": "달력 옆 메모지에 잠정 약속과 확정된 약속을 따로 적어 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43451191156",
+    "usage_file": "data/editorial_runs/2026-11-14/43451191156.json"
   }
 ]

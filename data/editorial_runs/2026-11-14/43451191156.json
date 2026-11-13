@@ -1,17 +1,27 @@
 {
   "run_id": "43451191156",
   "date_kst": "2026-11-14",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sense",
+  "topic": "불확실한 약속을 확정 일정과 분리해 대화 혼선을 줄이는 방법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sense/27",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-13T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,281 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T00:19:08.416972+09:00"
+      "attempt_started_at": "2026-11-14T00:19:08.416972+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 604,
+          "coverageArticles": 139,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-07089a422e",
+            "sense-d926083876",
+            "sense-131a66fcc8",
+            "sense-bc0cf30f7f"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "자주 쓰는 물건 공간 배치로 꺼내기와 원위치 동작 횟수 줄이기",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "사용 빈도가 높은 물건들을 제자리에 두지 않고 흩어져 있어 꺼내고 다시 제자리에 놓는 동작 수가 많아 번거롭다.",
+          "distinct_angle": "기존 공간 정리 조언과 다르게 사용 빈도와 동선을 분석해 최소 동작 배치 원칙을 세우고, 배치 유지 생활 규칙으로 효율적인 원위치를 돕는 구체적 매뉴얼을 제시한다.",
+          "outline": [
+            "자주 사용하는 물건의 위치와 동선 분석하기",
+            "동작 횟수를 최소화하는 배치 원칙 설계하기",
+            "배치 유지·원위치 확인을 위한 생활 규칙 설계 및 실천 방법"
+          ],
+          "reader_situation": "사무실 또는 가정에서 자주 쓰는 물건들이 흩어져 있어 필요할 때마다 찾고 되돌리기 불편한 상황이다.",
+          "deliverable": "물건 사용 빈도와 동선 분석, 꺼내기·되돌리기 동작을 줄이는 배치 원칙, 원위치 유지 생활 규칙과 점검 체크리스트를 담은 공간 배치 매뉴얼.",
+          "direction_id": "sense-bc0cf30f7f"
+        }
+      ],
+      "topic_plan": {
+        "topic": "불확실한 약속을 확정 일정과 분리해 대화 혼선을 줄이는 방법",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "약속 일정이 확정되기 전과 확정 후 정보를 뒤섞어 상대가 혼란을 겪고, 일정이 겹치거나 누락되는 문제가 발생한다.",
+        "distinct_angle": "기존 일반 안내와 달리, 확정 전 약속과 확정 후 약속을 대화와 표시에서 명확히 구분하는 구체적인 시각표시와 문장 구성법을 체계적으로 제시한다.",
+        "outline": [
+          "확정되지 않은 약속과 확정된 약속의 상태 정의하기",
+          "각 상태를 명확히 구별하는 표시 방법과 문장 구성법 익히기",
+          "모범 대화 예시를 통해 확정 절차를 연습하고 혼선 줄이기"
+        ],
+        "reader_situation": "친구나 동료와 약속을 조율하는 과정에서 가능한 시간과 최종 확정된 약속이 혼재되어 착오가 생기는 상황이다.",
+        "deliverable": "약속 상태별 시각 및 언어적 표시 방법과 이를 활용한 명확한 약속 확정 대화 예시 및 활용 연습 자료를 제공한다.",
+        "direction_id": "sense-07089a422e",
+        "novelty_reason": "확정 전 약속과 확정 후 약속을 대화와 표시에서 구분하는 문제는, 기존 글들이 다룬 문의 분리나 메시지 정리와 달리 ‘상태가 바뀌는 순간을 어떻게 문장과 표시로 선명하게 나누느냐’에 초점이 있습니다. 가장 가까운 기존 글은 주문이나 문의를 항목별로 나누어 적는 안내지만, 이번 후보는 같은 약속을 조율하는 과정에서 불확실한 일정과 최종 확정 일정을 섞지 않도록 상태 표지와 문장 구조를 설계하는 새 판단 도구를 제공합니다.",
+        "screen_rejections": [
+          "후보 하나는 자주 쓰는 물건의 배치와 원위치 동작을 줄이는 내용이지만, 이미 공개된 공간 정리·동선·배치 글들과 질문과 해결 절차가 매우 가깝습니다. 사용 빈도에 따라 배치하고, 꺼내기와 되돌리기 동작을 줄이며, 유지 규칙을 세우는 흐름이 기존의 동선 기반 정리와 사실상 겹쳐 새 해결 내용이 충분하지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/61",
+            "/board/sense/19"
+          ],
+          "gap": "기존 글들은 여러 항목을 분리해 적는 법은 알려 주지만, 아직 정해지지 않은 약속과 이미 확정된 약속을 같은 대화 안에서 혼동 없이 구별하는 기준은 충분히 다루지 않습니다. 이번 글은 약속의 상태를 말과 표시에서 먼저 나누고, 확정 전에는 가능성 표현을 쓰며 확정 후에는 최종 안내로 바꾸는 실제 문장 전환법을 제시해야 합니다.",
+          "example": "친구와 만나기로 했지만 시간 조율이 남아 있을 때는 ‘가능한 시간’과 ‘확정된 시간’을 같은 문장에 섞지 말고, 아직 정하지 못한 부분은 보류 표시로 남겨 두었다가 최종 합의가 끝난 뒤에만 확정 문장으로 바꾸는 상황을 다룬다.",
+          "result": "독자는 약속을 조율하는 메시지에서 임시안과 확정안을 구분해 적고, 혼선이 생기기 쉬운 대화를 정리된 최종 약속 안내로 바꿀 수 있다.",
+          "section_actions": [
+            "첫 절에서는 아직 확정되지 않은 약속과 최종 확정된 약속을 서로 다른 표현으로 나누어 적는 기준을 정리하고, 독자가 같은 문장 안에서 상태를 섞지 않게 한다.",
+            "둘째 절에서는 임시 약속과 확정 약속에 각각 맞는 말투와 표시 방식을 적용해, 상대가 지금 무엇이 보류이고 무엇이 결정됐는지 바로 알 수 있게 한다.",
+            "셋째 절에서는 예시 대화를 따라 확정 전 문장을 확정 후 문장으로 고쳐 쓰는 연습을 하게 해, 실제 메시지에서 혼선 없이 최종 일정만 남기도록 돕는다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "불확실한 약속을 확정 일정과 분리해 대화 혼선을 줄이는 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-13T14:35:37Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "약속 조율 중 임시안과 확정안을 구분해 혼선을 줄이고 싶은 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20478,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 969,
+          "output_tokens_details": {
+            "reasoning_tokens": 279
+          },
+          "total_tokens": 21447
+        },
+        "estimated_usd": 0.019719,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T15:19:17.926175+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3542,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 441,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3983
+        },
+        "estimated_usd": 0.0021224,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T15:19:23.906881+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5678,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 528,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6206
+        },
+        "estimated_usd": 0.003116,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T15:19:31.397973+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17243,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 285,
+          "output_tokens_details": {
+            "reasoning_tokens": 124
+          },
+          "total_tokens": 17528
+        },
+        "estimated_usd": 0.01421475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T15:19:37.162385+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3572,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1076
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4944
+        },
+        "estimated_usd": 0.066508,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T15:20:08.709610+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9073,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 205,
+          "output_tokens_details": {
+            "reasoning_tokens": 140
+          },
+          "total_tokens": 9278
+        },
+        "estimated_usd": 0.00772725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T15:20:30.178042+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T15:19:11.298524+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T15:19:17.928926+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T15:19:24.736118+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T15:19:32.696713+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-13T15:19:37.178350+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T15:20:09.583746+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1134074,
+    "estimated_total_usd": 0.1134074,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
