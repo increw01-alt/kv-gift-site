@@ -1,18 +1,20 @@
 {
   "run_id": "43481268869",
   "date_kst": "2026-11-14",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-13T18:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 기존 공개 글 /board/general_notice/70과 /board/general_notice/69가 이미 다룬 ‘읽기 중 설치·권한 요청이나 화면 변화가 생겼을 때 현재 위치와 선택 상태를 기록하고 원래 화면으로 복원하는 절차’와 질문, 독자 상황, 해결 순서가 사실상 같습니다. 기존 답만으로도 요청 목적을 판단하고 원래 안내 화면으로 돌아가는 문제가 해결되므로, 새 해결 내용으로 볼 수 있는 구체적 차이가 드러나지 않습니다. / 0번은 /board/general_notice/70의 ‘읽기 도중 화면 밝기·방향 전환·입력 도구 변경 시 현재 위치와 선택 상태를 기록하고 복원하는 절차’와 해결 순서가 같고, /board/general_notice/69의 ‘안내를 읽는 중 설치나 권한 요청이 뜨면 목적을 먼저 확인한 뒤 관련 없으면 닫고 돌아가는 절차’와도 같은 질문을 반복합니다. 읽던 위치를 메모하고 새 창 이후 비교·복원하는 내용은 기존 공개 글의 답으로 이미 처리되는 범위라 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "43481268869",
@@ -22,15 +24,118 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T03:18:57.170497+09:00"
+      "attempt_started_at": "2026-11-14T03:18:57.170497+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 610,
+          "coverageArticles": 140,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-f74ea4ac7c",
+            "gc_tip-d4d4f91b05",
+            "gc_tip-59f6a2cf62",
+            "gc_tip-84c7f844a6"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 안내 열람 도중 권한 요청 시 원래 위치 복원하는 안전 절차 안내",
+          "source_id": "",
+          "reader_problem": "사용자가 상품권 안내 문서 열람 도중 설치나 권한 요청 등 새 창이 뜨면 읽던 위치와 상태를 잃고 다시 찾기 어려워 당황하는 문제",
+          "distinct_angle": "기존 단순 안내와 달리 읽던 위치와 선택 상태를 구체적으로 기록하는 방법과, 새 창·권한 요청 발생 후 비교·복원 단계별 절차 및 대응 매뉴얼을 안내",
+          "reader_situation": "복잡한 환경에서 권한 요청 창 등장 시 당황하지 않고 원래 문서 내 위치와 상태를 안전하게 복원하려는 이용자 상황",
+          "deliverable": "읽던 안 위치 및 선택 상태 기록법, 새 창 방문 뒤 비교 및 복원 절차 안내서, 권한 요청 대응 행동 매뉴얼",
+          "task_id": "",
+          "direction_id": "gc_tip-f74ea4ac7c",
+          "outline": [
+            "현재 읽고 있는 안내 위치와 상태 구체적으로 기록하는 법 익히기",
+            "새 창·설치·권한 요청 이후 원래 상태와 위치 복원하는 단계별 절차 습득",
+            "권한 요청 중에도 당황하지 않고 안전하게 원래 안내 화면으로 복귀하는 대처법 실천하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15397,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1074,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16471
+        },
+        "estimated_usd": 0.0078772,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T18:19:17.044637+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12829,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 359,
+          "output_tokens_details": {
+            "reasoning_tokens": 74
+          },
+          "total_tokens": 13188
+        },
+        "estimated_usd": 0.01123725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T18:19:20.871511+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T18:19:00.254813+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T18:19:17.595037+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01911445,
+    "estimated_total_usd": 0.01911445,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
