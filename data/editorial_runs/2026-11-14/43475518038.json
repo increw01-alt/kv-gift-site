@@ -1,18 +1,20 @@
 {
   "run_id": "43475518038",
   "date_kst": "2026-11-14",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-13T17:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 본문 수준에서 반복합니다. 0번은 선택 당시 정보와 결과를 분리해 과거 판단을 평가하는 흐름이 /board/free/482와 같고, 1번은 빠른 결정과 의견 조율 속 결정권 배분 기준이 /board/free/485와 같습니다. 2번은 편의성과 선택 폭의 균형을 비교하는 판단 프레임이 /board/sense/23, /board/free/484와 겹치며, 3번은 여러 관점을 대조해 객관적 결론을 내는 방식이 /board/sense/7과 동일합니다. 기존 답만으로도 해결되는 범위라 새 판단 도구가 충분히 드러나지 않아 본문 생성 전 보류합니다. / 0번은 /board/free/482가 이미 다룬 '선택 당시 알고 있던 정보와 나중에 알게 된 결과를 구분해 판단 과정의 질을 평가하는 방법'과 핵심 질문, 해결 순서가 같습니다. 과거 상황 정보와 결과를 나눠 기록하고 우연과 판단 질을 구분하는 절차가 중복입니다. / 1번은 /board/free/485가 이미 다룬 '빠른 결정이 필요한 상황에서 의견을 나누고 결정권을 위임하는 기준'과 동일합니다. 긴급성 기준으로 빠른 결정을 우선하고 위임 범위를 정하는 해결 흐름이 그대로 반복됩니다. / 2번은 /board/sense/23과 /board/free/484가 이미 다룬 '상황별 효용과 비용, 편의성과 제약을 비교해 균형점을 정하는 방법'과 겹칩니다. 선택 폭과 편의의 트레이드오프를 표로 비교하고 최적점을 찾는 절차가 새롭지 않습니다. / 3번은 /board/sense/7이 이미 다룬 '메시지를 주제별로 나누고 핵심 문장을 정리해 나중에 쉽게 찾는 방법'과 마찬가지로 여러 정보를 분류·대조해 결론을 내리는 구조입니다. 상반된 관점을 비교해 객관적 결정을 돕는다는 핵심 질문이 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "43475518038",
@@ -22,15 +24,175 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T02:44:10.202694+09:00"
+      "attempt_started_at": "2026-11-14T02:44:10.202694+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [
+          {
+            "topic": "서로 다른 선택 기준들을 체계적으로 비교하는 운영팀 질문",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "여러 선택 기준이 혼재되어 우선순위가 불명확하고, 기준별 영향을 체계적으로 분석하지 못해 혼란 발생",
+            "distinct_angle": "일상적 조언이 아닌 실제 운영상의 복수 기준을 수치나 서술 기준으로 비교 검토하는 구체적 도구와 절차 제공",
+            "outline": [
+              "선택 기준별 특성과 측정 가능 지표 정의하기",
+              "복수 기준을 비교 및 평가하는 표준화된 절차 마련하기",
+              "우선순위 설정 및 실행 계획 수립, 효과 평가 방법 구축하기"
+            ],
+            "reader_situation": "운영팀이 다중 선택 기준을 종합적으로 분석하여 우선순위를 조정하고, 실행 가능한 판단 근거를 구축하고자 할 때",
+            "deliverable": "복수 선택 기준 비교 도표와 평가 절차 가이드, 우선순위 결정법 및 실행 가능성 분석표",
+            "direction_id": "free-e0908a1a3a"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 606,
+          "coverageArticles": 140,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-9d7f9c3f7a",
+            "free-494c9616de",
+            "free-ebd166c882",
+            "free-e0908a1a3a"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "과거 선택 결과와 당시 판단 과정, 우연과 질을 구분하는 질문은?",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "좋은 결과에만 집중해 당시 판단 과정이 합리적이었는지 점검하지 못해 반복 실패 우려가 있습니다.",
+          "distinct_angle": "일반 조언과 달리, 과거 상황 정보와 결과를 분리하는 구체적 방법과 가상 사례로 판단 과정의 질을 평가하는 실천 중심 절차를 안내합니다.",
+          "outline": [
+            "과거 선택 당시 정보와 결과를 분리하는 구별법 익히기",
+            "결과 우연과 판단 과정 질 차이를 보여주는 가상 사례 분석하기",
+            "과거 판단 과정 객관 평가와 학습 위한 행동 절차 진행하기"
+          ],
+          "reader_situation": "과거 성공한 선택을 되풀이하려는 독자가 판단 과정과 결과를 명확히 구분해 배우고 싶을 때.",
+          "deliverable": "정보·결과 분리법, 우연과 질 차별 가상 사례, 판단 과정 학습 질문 목록과 행동 흐름을 완성합니다.",
+          "direction_id": "free-911ea23e77"
+        },
+        {
+          "topic": "빠른 결정과 의견 수렴 충돌 시 결정권 위임 기준 세우기",
+          "source_id": "",
+          "reader_problem": "신속한 선택이 필요한 상황에서 다양한 의견이 달라 협의가 늦어지는 문제를 어떻게 합리적으로 처리할지 어려움을 겪음",
+          "distinct_angle": "기존의 일반적인 의사결정 가이드와 달리, 실제 빠른 판단이 요구되는 운영 상황에서 의견 충돌을 조율하는 구체적 상황과 권한 위임 기준을 제시함",
+          "reader_situation": "구성원 의견이 갈리는 상황에서 최종 결정권을 어느 시점과 누구에게 맡길지 합리적 기준과 절차 설정을 고민하는 운영팀",
+          "deliverable": "빠른 결정과 의견 수렴의 균형을 맞추기 위한 상황별 판단 기준표와 결정권 위임 절차 문서, 권한 배분 체크리스트",
+          "task_id": "",
+          "direction_id": "free-494c9616de",
+          "outline": [
+            "의견 충돌 상황 유형과 신속 결정 요구 정도 분석하기",
+            "결정권 위임 기준과 조건을 구체적으로 설정하는 방법 배우기",
+            "실제 사례별 결정권 배분 및 신속 결정 프로세스 설계와 점검하기"
+          ]
+        },
+        {
+          "topic": "편의성과 선택의 폭 사이에서 균형 잡는 운영팀의 선택 질문",
+          "source_id": "",
+          "reader_problem": "이용자 편의성을 높이려다 선택지가 너무 많아 결정이 어렵고, 선택폭을 줄이면 편의성이 떨어지는 문제의 현실적 딜레마",
+          "distinct_angle": "단순한 편의성 강조 대신 편의와 선택의 폭 간 실제 영향과 트레이드오프를 비교하고 해결하는 프레임워크 제공",
+          "reader_situation": "운영팀이 서비스 설계 시 활용할 편의성과 선택 폭 간 균형을 맞추는 구체적인 판단 기준과 비교 시나리오가 필요한 상황",
+          "deliverable": "편의성 확대와 선택 폭 제한이 각각 미치는 영향 비교표와 최적 균형점 도출을 위한 평가 문서, 조정 체크리스트",
+          "task_id": "",
+          "direction_id": "free-ebd166c882",
+          "outline": [
+            "편의성 및 선택 폭 개념과 장단점 명확히 이해하기",
+            "두 요소 간 영향을 비교하는 구체적 평가 기준 만들기",
+            "평가 결과를 토대로 최적 균형점 설정 및 적용 방안 수립하기"
+          ]
+        },
+        {
+          "topic": "여러 관점을 객관적으로 비교해 운영 결정에 활용하는 질문",
+          "source_id": "",
+          "reader_problem": "개인적 경험이나 편견에 치우쳐 객관적 비교 없이 일방적 판단을 내리는 문제를 극복하기 어려움",
+          "distinct_angle": "개인 경험에 의존하지 않고 최소한 두 가지 이상의 상반된 관점과 기준을 제시하여 객관적 분석을 촉진하는 질문 설계",
+          "reader_situation": "운영팀이 다양한 의견과 자료를 균형 있게 검토하고 실제 비교 분석을 통해 근거있는 결정을 내리고자 할 때",
+          "deliverable": "상반된 관점 비교표와 질문 목록, 객관적 비교 기반 의견 조율 프로세스 안내 자료",
+          "task_id": "",
+          "direction_id": "free-9d7f9c3f7a",
+          "outline": [
+            "주요 관점과 기준을 수집해 대조 리스트 작성하기",
+            "각 관점별 근거와 장단점을 객관적으로 평가하는 방법 익히기",
+            "비교 결과를 토대로 합리적 결론 도출 및 의사소통 전략 마련하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12557,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 994,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13551
+        },
+        "estimated_usd": 0.0066132,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T17:44:26.234532+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25724,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 721,
+          "output_tokens_details": {
+            "reasoning_tokens": 187
+          },
+          "total_tokens": 26445
+        },
+        "estimated_usd": 0.0225375,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T17:44:33.655175+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T17:44:13.647227+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T17:44:26.935229+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0291507,
+    "estimated_total_usd": 0.0291507,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
