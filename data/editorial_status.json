@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T23:53:58.017491+00:00",
+  "generatedAt": "2026-11-13T23:54:30.739537+00:00",
   "dateKst": "2026-11-14",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 3,
   "verified": 3,
   "attempts": 13,
-  "held": 6,
+  "held": 7,
   "errors": 3,
-  "knownSubtotalUsd": 0.6800907,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.72777555,
+  "estimatedTotalUsd": 0.72777555,
   "records": [
     {
       "runId": "43451191156",
@@ -170,21 +170,21 @@
     },
     {
       "runId": "43530348988",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "모바일 화면 상품권 선택 시 옵션값 유지 확인 실험",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-13T23:52:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04768485,
+      "knownSubtotalUsd": 0.04768485
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-14T09:23:57.797638+09:00",
+    "cooldownMinutes": 30
   }
 }

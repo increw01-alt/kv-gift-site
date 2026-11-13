@@ -1,18 +1,20 @@
 {
   "run_id": "43530348988",
   "date_kst": "2026-11-14",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_tip",
+  "topic": "모바일 화면 상품권 선택 시 옵션값 유지 확인 실험",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-13T23:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 모바일에서 상품권 옵션을 바꾼 뒤 선택값이 유지되는지 확인하는 절차가 기존의 ‘장바구니 옵션 변경 후 최종 주문 내역 점검’ 글과 핵심 질문·해결 순서가 같습니다. 화면 이동 전후에 선택 상태를 확인하고 초기화 여부를 기록한다는 점에서 본문 중복입니다. / 제목의 ‘옵션값 유지 확인 실험’은 새 표현이지만, 실제 본문은 옵션 변경 직후와 다른 화면 이동 후 값을 다시 확인하는 동일한 점검 절차를 반복합니다. 독자가 그대로 적용해도 기존 글로 해결되는 수준입니다."
+    ]
   },
   "api_usage": {
     "run_id": "43530348988",
@@ -22,15 +24,249 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T08:53:57.797638+09:00"
+      "attempt_started_at": "2026-11-14T08:53:57.797638+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [
+          {
+            "topic": "상품권 사용량 고려해 다음 구매량 조절하는 생활 실험법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권으로 구매한 물품을 다 사용한 뒤 실제 소모량이 예상과 다를 때, 다음 구매 시 적정 사용량을 판단하기 어려움",
+            "distinct_angle": "실제 소비량과 사용 빈도를 생활 속 관찰과 기록으로 확인해 다음 구매량을 조절하는 구체적 실험 절차와 판단 기준을 제시",
+            "outline": [
+              "상품권으로 구매한 물품의 실제 사용량과 빈도를 꼼꼼히 기록해 보기",
+              "기록한 사용 데이터를 분석해 다음 구매량을 합리적으로 산정하는 방법 익히기",
+              "소비 패턴에 맞춰 상품권 활용 계획을 조정하고 불필요 재고를 줄이는 실천법 적용하기"
+            ],
+            "reader_situation": "상품권으로 정기적 구매품을 구입해 사용하면서, 남은 물량 관리와 낭비 방지를 위해 실제 소비량을 측정하고 다음 주문에 반영하려는 이용자",
+            "deliverable": "소비량 측정 방법과 사용 빈도 기록, 다음 구매량 계산 방식, 낭비 줄이고 효율적 구매를 위한 체크리스트와 실천 방법 안내서",
+            "direction_id": "gc_tip-d4d4f91b05"
+          },
+          {
+            "topic": "상품권 교환 물품 옵션 간 양립 어려운 조합 제거 절차",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "교환 물품의 크기나 구성처럼 서로 영향을 주어 동시에 고를 수 없는 옵션 조합이 많아 선택지 조합 수가 지나치게 많고 복잡함",
+            "distinct_angle": "서로 양립할 수 없는 옵션 조합 규칙을 적용해 불가능한 경우를 단계별로 배제하며 최종 가능한 조합 수를 줄이는 구체적 가지치기 방법",
+            "outline": [
+              "각 옵션 항목별로 선택 가능한 조합 목록을 작성하여 체계적 정리하기",
+              "상호 배타적 옵션 조합을 식별하여 목록 중복과 불가능 조합 제거하기",
+              "최종까지 남은 가능한 옵션 조합을 기준으로 선택 과정을 간소화하며 정리하기"
+            ],
+            "reader_situation": "물품 교환 시 여러 옵션을 한꺼번에 고르는 중 옵션별 조합 불가능 여부를 체계적으로 확인해 시간과 노력을 줄이려는 독자",
+            "deliverable": "옵션별 조합 가능성 표 작성법, 불가능 조합 제거 절차, 단계별 가지치기 체크리스트와 최종 조합 정리법 포함 안내",
+            "direction_id": "gc_tip-18e69e2f13"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 631,
+          "coverageArticles": 142,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-d4d4f91b05",
+            "gc_tip-67b3e3310b",
+            "gc_tip-61534cc058",
+            "gc_tip-18e69e2f13"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 안내지 조건 분리하여 펼칠 때 빠진 내용 체크법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "인쇄된 종이나 디지털 안내지를 펼치다가 조건이나 중요한 문구가 떨어져 있어 어떤 문장이 쌍을 이루는지 헷갈리는 상황을 겪음",
+          "distinct_angle": "떨어진 조건 문장들을 쌍으로 다시 연결하고 안내지 전체 문단 구조에 맞게 대응시켜 읽는 체계적 방법과 예시를 보여 줌",
+          "outline": [
+            "살펴보는 안내지에서 조건과 설명이 떨어진 문장 표시해 목록화하기",
+            "문장과 문장, 조건과 설명이 맞물리는 쌍을 기준으로 연결 지어 보기",
+            "전체 안내 흐름 속에서 조건 쌍을 재배치하고 완전한 설명으로 점검하기"
+          ],
+          "reader_situation": "상품권 안내지 등 복잡한 문서에서 떨어진 조건과 설명이 따로 있어 쌍을 맞추고 전체 흐름을 이해해 정확히 읽고자 하는 독자",
+          "deliverable": "문장 연결 기준과 체크리스트, 떨어진 조건 재배치 실습용 지침과 대조 점검 목록이 포함된 안내서",
+          "direction_id": "gc_tip-67b3e3310b"
+        }
+      ],
+      "topic_plan": {
+        "topic": "모바일 화면 상품권 선택 시 옵션값 유지 확인 실험",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "작은 화면에서 여러 상품권 옵션을 조작하며 선택 값을 바꾸거나 이동할 때 잘 반영됐는지 확신하지 못해 잘못 주문할 걱정이 있음",
+        "distinct_angle": "실제 모바일 앱 등 사용 환경에서 옵션 조작 후 입력값이 유지되고 반영되는지 단계별로 실험하고 기록하는 방법과 오류 예방 절차를 자세히 안내",
+        "outline": [
+          "모바일 화면에서 각 옵션을 선택·변경하며 입력값 저장 상태 점검하기",
+          "변경 후 다른 화면 이동 또는 재진입 시 옵션 선택 값이 제대로 유지되는지 확인하기",
+          "옵션 값 미유지 시 문제점 기록 및 주문 오류 발생 가능성 줄이는 대응 방법 실습하기"
+        ],
+        "reader_situation": "스마트폰에서 상품권 옵션을 자주 변경하며 실시간으로 입력 상태가 남아있는지 테스트하고 정확한 주문 과정을 경험하려는 이용자",
+        "deliverable": "옵션 변경 후 값 보존 여부 확인 체크리스트, 실험 수행 순서와 관찰 포인트, 오류 발견 시 조치 행동 지침서",
+        "direction_id": "gc_tip-61534cc058",
+        "novelty_reason": "후보 둘은 작은 화면에서 옵션을 바꾼 뒤 선택값이 실제로 유지되는지 확인하고, 화면 이동이나 재진입 뒤에도 주문 오류를 막는 절차를 다룹니다. 가장 가까운 기존 글들은 상품권 조건 비교나 매장 사용 가능 여부 확인에 초점이 있어, 이번 글처럼 모바일 조작 후 값 보존을 점검하는 실행 단계는 다루지 않았습니다.",
+        "screen_rejections": [
+          "후보 하나는 안내지의 떨어진 조건 문장을 다시 연결해 읽는 방법으로, 기존의 예외·조건 문장 구분과 문장 연결 읽기 글들과 질문과 해결 절차가 거의 같습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/purchase/2577",
+            "/board/purchase/2571",
+            "/board/gc_tip/38"
+          ],
+          "gap": "기존 글은 상품권의 조건이나 사용 가능 여부를 확인하는 데 그쳤지만, 이 글은 모바일에서 옵션을 바꾼 뒤 값이 실제로 남는지 직접 확인하고, 화면 전환 뒤에도 선택 상태가 흔들릴 때 어떤 순서로 다시 점검할지까지 알려 줍니다.",
+          "example": "옵션을 고른 뒤 다른 화면을 잠깐 보고 돌아왔을 때 선택이 비어 보인다면, 바로 주문하지 말고 다시 열어 본 뒤 같은 값이 유지되는지 살펴보는 상황을 떠올리면 됩니다. 이때는 입력 직후와 재진입 후의 상태를 나눠 보고, 실제로 반영된 항목만 기준으로 다음 선택을 이어 가야 합니다.",
+          "result": "독자는 모바일 화면에서 옵션 유지 여부를 직접 점검하고, 재진입 뒤에도 값이 바뀌지 않는지 확인한 다음에 주문을 이어 가는 판단 기준을 갖게 됩니다.",
+          "section_actions": [
+            "옵션을 고른 직후 화면에 남은 선택값을 확인하고, 바뀐 항목이 있다면 그 지점부터 다시 고르는 순서를 정리한다.",
+            "다른 화면으로 이동했다가 돌아와 값이 유지되는지 살펴보고, 유지되지 않으면 주문 전에 다시 입력하는 기준을 세운다.",
+            "옵션이 사라지거나 초기화될 때는 어떤 조작 뒤에 변했는지 적어 두고, 같은 흐름에서 반복되는 오류를 피하는 점검표를 만든다."
+          ]
+        }
+      },
+      "board": "gc_tip",
+      "topic": "모바일 화면 상품권 선택 시 옵션값 유지 확인 실험",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-13T14:35:37Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30017,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 2304
+          },
+          "output_tokens": 1001,
+          "output_tokens_details": {
+            "reasoning_tokens": 471
+          },
+          "total_tokens": 31018
+        },
+        "estimated_usd": 0.02546205,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T23:54:13.849151+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3344,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 409,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3753
+        },
+        "estimated_usd": 0.001992,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T23:54:18.836543+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6384,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 492,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6876
+        },
+        "estimated_usd": 0.0033408,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T23:54:24.915471+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19328,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 532,
+          "output_tokens_details": {
+            "reasoning_tokens": 185
+          },
+          "total_tokens": 19860
+        },
+        "estimated_usd": 0.01689,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T23:54:30.459036+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T23:54:01.055543+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T23:54:13.852096+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T23:54:19.896839+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T23:54:26.624977+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04768485,
+    "estimated_total_usd": 0.04768485,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
