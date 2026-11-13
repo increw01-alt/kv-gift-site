@@ -1,18 +1,20 @@
 {
   "run_id": "43520169879",
   "date_kst": "2026-11-14",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sense",
+  "topic": "문서에서 사실 문장과 의견 문장 명확히 구분해 편집하는 방법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-13T22:32:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 사실 문장과 의견 문장을 구분하고, 의견을 표시한 뒤 근거 사실 옆에 다시 배치해 재작성하는 핵심 절차가 기존의 ‘메모에서 본 사실과 내 의견을 어떻게 구분해 쓸까요?’ 유형과 거의 같습니다. / 문장 속 사실·의견 분리, 표시, 재작성, 점검이라는 해결 순서가 기존 글과 동일해 독자가 기존 답을 그대로 적용해도 이번 질문이 해결됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "43520169879",
@@ -22,15 +24,264 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T07:34:11.198153+09:00"
+      "attempt_started_at": "2026-11-14T07:34:11.198153+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 624,
+          "coverageArticles": 142,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-d926083876",
+            "sense-131a66fcc8",
+            "sense-7b5b6bc638",
+            "sense-f4c99bf696"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "한 번에 끝내지 않는 집안일, 중단하기 좋은 지점 계획법",
+          "source_id": "",
+          "reader_problem": "긴 집안일을 여러 날 나누어 할 때 어디서 작업을 중단하고 시작할지 몰라 헷갈리고 효율이 떨어지는 문제",
+          "distinct_angle": "기존 글이 공간·단계별 나누기와 메모 방식을 안내한다면, 이번 글은 작업 단위 정하기, 중단 시점 의사결정 체크리스트, 재개 점검 절차까지 포함해 계획 설계법으로 차별화함",
+          "reader_situation": "여러 날에 나눠 집안일을 하는데 중간 멈춤과 재개를 체계적으로 계획해 작업 효율을 높이고 싶어 하는 이용자",
+          "deliverable": "집안일 작업 단위별 중단 기준, 중단 때 기록법, 재개 시점 확인 점검표 및 실천 가이드",
+          "task_id": "",
+          "direction_id": "sense-131a66fcc8",
+          "outline": [
+            "전체 집안일을 완결성 있는 소단위 작업으로 세분화하기",
+            "중단 시점 결정과 작업 완료 상황 간단 기록법 습득하기",
+            "재개 시 진행 사항 점검하는 확인 리스트와 재개 절차 실습하기"
+          ]
+        },
+        {
+          "topic": "복잡한 설명 전달 시 정의·이유·예시 분리해 이해 돕기",
+          "source_id": "",
+          "reader_problem": "복잡한 개념이나 어려운 설명을 그대로 전달해 상대가 정확히 이해하거나 실제 상황에 적용하지 못하는 어려움",
+          "distinct_angle": "기존 글이 정의와 예시 분리 위주이나 이번 글은 이 세 항목을 구별하는 구체적 연습법과 점검법을 제시해 설명 효과와 자기 점검 역량 강화에 초점",
+          "reader_situation": "추상적 개념을 쉽게 설명하려고 하나 정의, 이유, 예시를 어떻게 나눠서 전달해야 할지 고민하는 사람",
+          "deliverable": "짧고 명확한 정의 작성법, 이유·예시 선정 기준, 세 항목 분리 전달 연습과 점검을 위한 실습 자료",
+          "task_id": "",
+          "direction_id": "sense-7b5b6bc638",
+          "outline": [
+            "정의를 쉽고 간결하게 만드는 핵심 요령 익히기",
+            "이해 돕는 이유와 예시 적절히 선정하는 기준 파악하기",
+            "정의·이유·예시를 분리해 설명하고 점검하는 연습법 실천하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "문서에서 사실 문장과 의견 문장 명확히 구분해 편집하는 방법",
+        "source_id": "",
+        "reader_problem": "문서 작성 시 사실과 자신의 의견 문장이 섞여 전달되어 독자가 혼란을 겪고 오해가 발생하는 문제",
+        "distinct_angle": "기존 안내가 일반적 분리 기준과 점검법을 설명하는 반면, 이번 글은 구체적인 표시 방법과 재작성 예시를 중심으로 실전 편집법을 안내해 오해 줄이는 데 초점을 둠",
+        "reader_situation": "직장이나 일상 기록에서 메모나 문서 작성자가 사실 위주 문장과 의견 위주 문장을 확실히 나누고 싶어 하는 상황",
+        "deliverable": "사실과 의견 문장 분리 기준, 표시 방식, 분리 후 재작성 사례를 포함한 명확한 편집법 안내서",
+        "task_id": "",
+        "direction_id": "sense-d926083876",
+        "outline": [
+          "사실과 의견 문장 구분 위한 명확한 기준 이해하기",
+          "사실 문장은 그대로, 의견 문장은 별도 표시·구분하는 방법 배우기",
+          "분리 후 재작성 예시와 함께 혼동 없이 전달하는 편집 법 실습하기"
+        ],
+        "novelty_reason": "후보 가운데 가장 새롭습니다. 기존의 변경점 구분 안내나 메시지 정리 글과 일부 겹치지만, 이번 주제는 문서 안에서 사실 문장과 의견 문장을 구별해 편집하고 다시 쓰는 실전 기준에 초점이 있어 독자가 바로 적용할 편집 판단이 더 구체적입니다. 반면 다른 후보는 각각 집안일 중단 지점 관리와 정의·이유·예시 분리라는 기존 글의 질문 구조를 거의 그대로 반복합니다.",
+        "screen_rejections": [
+          "1번은 여러 날에 나눠 하는 집안일의 중단 지점과 재개 절차를 다뤄 기존의 중단 지점 메모와 재개 순서 안내와 사실상 같은 질문·해결 순서입니다. 작업 단위 나누기와 재개 점검표를 붙였지만, 이미 알려진 답을 적용해도 해결되는 범위를 넘지 못합니다.",
+          "2번은 정의, 이유, 예시를 나눠 설명하는 구조가 기존의 정의·예시 분리 안내와 거의 같습니다. 구체적 연습법을 덧붙였어도 핵심 질문과 판단 기준이 같아 새 해결 내용으로 보기 어렵습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/60",
+            "/board/sense/7"
+          ],
+          "gap": "기존 글은 문장이나 메시지를 구분해 정리하는 수준이지만, 이번 글은 사실과 의견이 섞인 문서를 실제로 어떻게 표시하고 다시 써서 오해를 줄일지까지 다룹니다. 특히 같은 문장 안에 사실과 해석이 함께 있을 때 어디를 사실로 남기고 어디를 의견으로 분리할지 판단하는 기준이 필요합니다.",
+          "example": "회의 메모에 ‘진행이 느렸다’와 ‘자료 전달이 늦었다’가 함께 적혀 있을 때, 앞 문장은 감상으로 따로 빼고 뒤 문장은 확인 가능한 사실로 남기는 상황을 예로 들 수 있습니다. 이때 독자는 표현을 고치기 전에 근거가 있는 문장과 추정이 섞인 문장을 먼저 나눠 봅니다.",
+          "result": "문서를 읽는 사람이 사실과 의견을 헷갈리지 않게 정리하고, 수정본에서도 확인 가능한 내용과 해석을 분리해 전달할 수 있게 됩니다.",
+          "section_actions": [
+            "사실로 확인할 수 있는 내용과 느낌·판단이 들어간 문장을 먼저 나누어 표시하고, 각 문장의 역할을 문서 안에서 다르게 보이게 정리합니다.",
+            "의견 문장을 바로 지우지 말고 근거가 되는 사실 문장 뒤에 붙여 재작성해, 읽는 사람이 판단과 사실을 분리해 따라오게 합니다.",
+            "완성본을 다시 읽으며 사실만으로도 전달되는 부분과 의견이 있어야 의미가 살아나는 부분을 구분해, 오해가 생길 문장을 끝까지 점검합니다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "문서에서 사실 문장과 의견 문장 명확히 구분해 편집하는 방법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-13T14:35:37Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15748,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1057,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16805
+        },
+        "estimated_usd": 0.0079904,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T22:34:25.895270+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 26494,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 899,
+          "output_tokens_details": {
+            "reasoning_tokens": 237
+          },
+          "total_tokens": 27393
+        },
+        "estimated_usd": 0.023916,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T22:34:40.332445+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3494,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 418,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3912
+        },
+        "estimated_usd": 0.0020664,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T22:34:45.117229+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 10602,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 612,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11214
+        },
+        "estimated_usd": 0.00522,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-13T22:34:58.727972+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20760,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 457,
+          "output_tokens_details": {
+            "reasoning_tokens": 175
+          },
+          "total_tokens": 21217
+        },
+        "estimated_usd": 0.0176265,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-13T22:35:16.802643+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T22:34:14.280617+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T22:34:26.551973+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T22:34:40.335610+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-13T22:34:46.606240+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-13T22:35:00.995805+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0568193,
+    "estimated_total_usd": 0.0568193,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
