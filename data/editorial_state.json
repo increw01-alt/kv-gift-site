@@ -469,10 +469,15 @@
       "board": "gc_tip",
       "topic": "모바일 화면 상품권 선택 시 옵션값 유지 확인 실험",
       "run_id": "43530348988"
+    },
+    {
+      "board": "purchase",
+      "topic": "주문 확정 전 의존 작업 역순 배치로 오류 없는 일정 설계하기",
+      "run_id": "43534361366"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "43530348988",
+  "last_board": "purchase",
+  "last_run_id": "43534361366",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

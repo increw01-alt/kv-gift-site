@@ -1,18 +1,32 @@
 {
   "run_id": "43534361366",
   "date_kst": "2026-11-14",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "주문 확정 전 의존 작업 역순 배치로 오류 없는 일정 설계하기",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-14T00:27:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "checks": {
+      "board_fit": false,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": false,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
+    "issues": [
+      "게시판 목적이 상품권 구매 전 확인·주문 준비 안내인데, 본문은 일반적인 작업 일정 설계로 주제가 맞지 않습니다.",
+      "기존 제목들과 해결 방식이 거의 같아, 주문 준비 항목을 역순으로 정리하는 중복 글로 보입니다."
+    ],
+    "holdReason": "body_duplicate"
   },
   "api_usage": {
     "run_id": "43534361366",
@@ -22,15 +36,360 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-14T09:29:02.996518+09:00"
+      "attempt_started_at": "2026-11-14T09:29:02.996518+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [
+          {
+            "topic": "여러 수신자 용도별로 상품권 금액 배분 기준 체계적으로 세우기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "한 번의 상품권 구매에서 여러 수신자에게 각각 다른 용도와 금액으로 배분할 때, 공평하고 명확한 배분 기준을 만들기 어렵다.",
+            "distinct_angle": "기존 안내가 단순 금액 분할이나 개별 연락처만 나열하는 데 그친 반면, 본문은 수신자별 용도 분석과 우선순위 결정, 배분 기준 설계 및 최종 분배 문구 작성까지 폭넓게 체계화한다.",
+            "outline": [
+              "수신자별 상품권 용도와 요구사항 상세 분석하기",
+              "용도와 우선순위를 기준으로 배분 원칙 설계하기",
+              "배분 결과를 명확히 전달하는 안내문 문구 작성과 검토"
+            ],
+            "reader_situation": "여러 사람에게 상품권을 한꺼번에 구매·선물하며 각 수신자의 용도나 요청에 맞춰 명확하고 공평한 금액 배분 기준을 마련하고 싶은 구매자.",
+            "deliverable": "수신자별 용도 유형 분류표, 배분 우선순위 판단 질문 리스트, 금액 배분 기준표 및 각각에 맞춘 안내문 문구 완성 예시.",
+            "direction_id": "purchase-973c196eed"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 633,
+          "coverageArticles": 142,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-3b03fbce3d",
+            "purchase-6f6d6db65b",
+            "purchase-5aaa6701f9",
+            "purchase-973c196eed"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "설명 항목별 적용 대상 달라 비교 어려울 때 항목 식별법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "여러 후보 설명에 같은 단어가 등장하지만 뜻이나 적용 대상이 달라 합리적인 비교 기준을 세우지 못하는 문제로 판단이 어렵다.",
+          "distinct_angle": "단어별 적용 맥락과 대상을 명확히 구분하는 점검 과정을 도입해 서로 다른 의미를 체계적으로 구분하고 비교 분석하는 방법을 안내한다.",
+          "outline": [
+            "후보 설명 속 주요 단어와 적용 대상 목록 작성하기",
+            "단어별 용례와 의미 차이 분석 및 구분점 점검법 습득하기",
+            "정확한 비교 기준을 위한 적용 대상별 조건 구분 및 표 작성하기"
+          ],
+          "reader_situation": "상품권 후보 비교 시 일상 언어와 전문 용어가 혼재된 설명에서 핵심 개념과 적용 범위를 올바르게 분리하려는 구매자.",
+          "deliverable": "설명별 용어 적용 대상 및 의미 구분표 양식, 비교 조건별 식별 점검 절차, 올바른 비교 기준 설정 매뉴얼.",
+          "direction_id": "purchase-3b03fbce3d"
+        },
+        {
+          "topic": "같은 단어 다른 적용 대상 분리로 비교 불가능 항목 명확히 구분하기",
+          "source_id": "",
+          "reader_problem": "여러 상품권 안내에서 동일한 용어가 각기 다른 적용 대상(예: 주문 전체와 개별 품목 등)을 가리켜 무엇이 객관적으로 비교 가능한 조건인지 식별하기 어렵다.",
+          "distinct_angle": "기존 글들이 단순히 용어 분리나 비교 표 작성에 머문 데 비해, 본문에서는 같은 단어가 섞인 혼재 항목 중 비교 가능 여부를 판단하는 신뢰성 있는 식별 절차와 구체적 분류 기준을 제시하여 실용적 분리 작업을 돕는다.",
+          "reader_situation": "브랜드 전체용과 개별 지점 한정, 주문 단위와 품목 단위 등 혼재된 조건을 가진 상품권 후보들을 상대적으로 객관적으로 비교하고 싶지만, 같은 단어의 다른 적용 대상 때문에 명확한 기준을 세우기 어려운 구매자.",
+          "deliverable": "동일 용어지만 서로 다른 적용 대상을 명확히 구분하는 기준표, 비교 가능 조건과 비교 불가능 조건 선별 매뉴얼, 그리고 이를 활용한 실제 분리 작업 체크리스트.",
+          "task_id": "",
+          "direction_id": "purchase-3b03fbce3d",
+          "outline": [
+            "중복되는 동일 용어가 적용되는 대상을 꼼꼼히 분석하는 방법",
+            "서로 다르나 혼재하는 적용 대상별 분류 기준을 상세히 세우기",
+            "분류 기준에 따라 비교 가능 항목과 제외 항목을 정확히 선별하는 절차"
+          ]
+        },
+        {
+          "topic": "서로 충돌하는 희망 조건에서 결정적 필수 조건으로 후보 걸러내기",
+          "source_id": "",
+          "reader_problem": "상품권 조건이 상충하는 여러 후보 중에서 양보할 수 없는 핵심 조건을 기준으로 객관적이고 체계적으로 후보를 배제하는 방법이 없다.",
+          "distinct_angle": "기존 글들이 조건 나열이나 단순 비교에 머문 반면, 본문은 이용자가 직접 우선순위에 따라 후보를 제거하는 구체적인 필수 조건 확인 프로세스와 배제 기준을 단계별로 안내한다.",
+          "reader_situation": "상품권 구매 시 여러 후보 조건이 충돌하여 확실히 양보할 수 없는 조건을 정해 후보군을 좁히고 싶으나 절차와 기준이 명확하지 않아 혼란스러운 구매자.",
+          "deliverable": "상충 조건을 분류해 우선순위를 정하는 기준, 양보할 수 없는 필수 조건 체크리스트, 후보 제거 과정을 기록하는 결과 문서 양식.",
+          "task_id": "",
+          "direction_id": "purchase-6f6d6db65b",
+          "outline": [
+            "후보 조건별 희망 사항과 충돌점 먼저 파악하기",
+            "최우선 필수 조건을 설정하고 목록에서 후보 제외하기",
+            "배제 과정을 기록하고 최종 후보를 직관적으로 정리하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "주문 확정 전 의존 작업 역순 배치로 오류 없는 일정 설계하기",
+        "source_id": "",
+        "reader_problem": "상품권 구매와 주문 준비에서 여러 작업이 서로 의존할 때, 올림차순 일정으로 진행하려다 실수가 발생하여 체계적이고 오류 없는 주문 확정 일정 짜기가 어렵다.",
+        "distinct_angle": "기존 안내가 단순히 순차 작업을 나열하는 반면, 본문은 작업 의존관계를 역순으로 분석하여 차질없이 준비 순서를 계획하는 구체적인 방법과 일정 설계 도구를 제시한다.",
+        "reader_situation": "상품권 주문 전 다양한 준비 작업이 서로 연결돼 있어 효율적으로 확인하고 실수 없이 체계적 일정으로 조율하고 싶은 구매 담당자.",
+        "deliverable": "주문 관련 준비 작업 역순 확인 체크리스트, 각 단계별 의존성 식별과 오류 예방 매뉴얼, 작업일정 역방향 설계 템플릿.",
+        "task_id": "",
+        "direction_id": "purchase-5aaa6701f9",
+        "outline": [
+          "작업별 의존 관계를 꼼꼼히 파악하는 방법",
+          "역순으로 작업 일정을 설계하는 구체적인 절차",
+          "작성한 역순 일정으로 오류를 점검하고 보완하는 방법"
+        ],
+        "novelty_reason": "기존 글들 가운데 가장 가까운 것은 주문 전 항목을 순서대로 정리하는 /board/purchase/2567과 준비 순서를 맞추는 /board/gc_tip/49이지만, 이번 후보는 단순한 준비 목록이 아니라 작업 사이의 의존 관계를 거꾸로 추적해 먼저 막아야 할 조건과 뒤로 미뤄도 되는 조건을 구분하는 점이 다릅니다. 즉, 같은 주문 준비라도 ‘무엇을 먼저 확인할지’가 아니라 ‘어떤 작업이 어떤 작업에 걸려 있는지’를 먼저 판별해 일정 자체를 다시 설계한다는 새 해결 도구가 있습니다.",
+        "screen_rejections": [
+          "영번은 기존의 등록처·사용처, 주문 전체·개별 품목처럼 적용 대상이 다른 용어를 구분하는 글들과 질문과 해결 절차가 거의 같습니다. 비교 기준을 세우고 표로 나누는 흐름이 이미 공개된 안내와 중복됩니다.",
+          "일번은 영번과 마찬가지로 같은 단어의 다른 적용 대상을 식별해 비교 가능 여부를 가르는 내용이라, 기존의 단위 구분과 예외 읽기 안내를 그대로 반복하는 수준입니다.",
+          "이번안은 충돌하는 조건 중 필수 조건으로 후보를 거르는 흐름이지만, 이미 공개된 조건 비교·제외 안내와 사실상 같은 판단 구조라 새 판단 도구가 드러나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/purchase/2567",
+            "/board/gc_tip/49"
+          ],
+          "gap": "기존 글은 주문 항목을 빠짐없이 적거나 준비 순서를 맞추는 수준에 머뭅니다. 이번 글은 준비 작업끼리 어떤 것이 선행되어야 다음 단계가 가능한지부터 거꾸로 따져, 막히는 지점을 먼저 찾고 일정 전체를 다시 짜는 방법을 다뤄야 합니다.",
+          "example": "결제 정보 확인이 끝나도 수신자 정보가 정리되지 않으면 주문을 넘길 수 없는 경우처럼, 앞 단계가 막히면 뒤 작업이 멈추는 상황에서 역순으로 점검해 보세요. 그러면 먼저 확정해야 할 항목과 나중에 확인해도 되는 항목이 갈라집니다.",
+          "result": "독자는 주문 전 작업들의 의존 관계를 구분해, 어떤 항목부터 확정하고 어떤 항목은 뒤로 미룰지 정한 뒤 오류 없이 일정표를 만들 수 있게 됩니다.",
+          "section_actions": [
+            "첫 절에서는 주문 준비 항목을 모두 적은 뒤 각 항목이 다음 단계에 어떤 영향을 주는지 연결해 보고, 먼저 막히는 항목을 표시하도록 안내한다.",
+            "둘째 절에서는 막히는 항목을 끝점으로 잡아 거꾸로 따라가며 선행 확인 순서를 다시 세우고, 각 단계가 가능해지는 조건을 분리해 적게 한다.",
+            "셋째 절에서는 역순으로 만든 일정과 실제 준비 가능 시점을 대조해 누락된 의존 관계를 보완하고, 실행 순서를 다시 정리하게 한다."
+          ]
+        }
+      },
+      "board": "purchase",
+      "topic": "주문 확정 전 의존 작업 역순 배치로 오류 없는 일정 설계하기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-13T14:35:37Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "주문 준비 작업의 선후 관계를 거꾸로 따져 막히는 지점을 먼저 찾고 일정표를 다시 짜려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12916,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1217,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 14133
+        },
+        "estimated_usd": 0.0071136,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T00:29:16.304816+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 26590,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 927,
+          "output_tokens_details": {
+            "reasoning_tokens": 236
+          },
+          "total_tokens": 27517
+        },
+        "estimated_usd": 0.024114,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T00:29:24.614247+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3517,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 432,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3949
+        },
+        "estimated_usd": 0.002098,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T00:29:28.646321+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6850,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 452,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7302
+        },
+        "estimated_usd": 0.0034632,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T00:29:33.190378+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17037,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 479,
+          "output_tokens_details": {
+            "reasoning_tokens": 310
+          },
+          "total_tokens": 17516
+        },
+        "estimated_usd": 0.01493325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T00:29:37.997410+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3482,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 986
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4854
+        },
+        "estimated_usd": 0.066058,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T00:30:04.874697+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8937,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 316,
+          "output_tokens_details": {
+            "reasoning_tokens": 189
+          },
+          "total_tokens": 9253
+        },
+        "estimated_usd": 0.00812475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T00:30:10.276923+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T00:29:05.331467+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T00:29:16.859113+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T00:29:24.617199+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T00:29:29.493856+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T00:29:34.492735+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-14T00:29:38.012465+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T00:30:05.752210+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1259048,
+    "estimated_total_usd": 0.1259048,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
