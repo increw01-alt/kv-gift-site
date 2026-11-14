@@ -1,18 +1,20 @@
 {
   "run_id": "43629937229",
   "date_kst": "2026-11-15",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-14T19:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 본문 수준에서 반복합니다. 후보 0은 공동 사용 물품의 허용 범위·원상복구 책임·합의서 작성이 /board/free/484와 거의 같고, 후보 1은 불확실한 약속과 확정 일정의 구분과 표시법이 /board/sense/27 및 /board/free/473과 겹칩니다. 후보 2도 확인된 정보와 미확인 정보를 나눠 추측 없이 답하고 재답변하는 흐름이 /board/sale/3700과 동일해서, 기존 답만으로도 해결되는 범위입니다. / 후보 0: /board/free/484가 이미 공동 사용 물품의 허용 행동 목록, 사용 후 복구 책임 분담, 합의서에 넣을 기준까지 다뤘습니다. 이번 후보도 같은 질문에 같은 실행 순서라 새 해결 도구가 없습니다. / 후보 1: /board/sense/27이 확정되지 않은 약속과 확정된 일정을 구분하고, 표시와 문장 표현으로 혼선을 줄이는 방법을 이미 설명합니다. 후보의 시각 표시와 대화 문장 구성도 같은 문제와 같은 답입니다. / 후보 2: /board/sale/3700이 이미 매입처 추가 질문에 대해 확인한 정보와 미확인 정보를 나누고, 추측하지 않으며, 나중에 다시 답변하는 절차를 다룹니다. 기록지와 조건부 문구 예시는 보조 형식일 뿐 질문과 해결 방식이 새롭지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43629937229",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-15T04:03:52.732092+09:00"
+      "attempt_started_at": "2026-11-15T04:03:52.732092+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 646,
+          "coverageArticles": 142,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-9d7f9c3f7a",
+            "free-494c9616de",
+            "free-911ea23e77",
+            "free-33a0543960"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "공유 물품 사용 편의와 원상복구 책임 함께 정하는 질문",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "공동 사용 물품을 쓰는 동안 허용 범위와 사용 후 원래 상태로 되돌릴 책임을 명확히 정하지 않아 분쟁 위험이 있습니다.",
+          "distinct_angle": "기존 글이 일반적 합의 필요성을 안내하는 데 그친 반면, 이 글은 구체적 허용·제한 행동 목록과 책임 분담 세부 내용을 대상으로 실제 합의서 작성법을 자세히 제시합니다.",
+          "outline": [
+            "사용 중 허용·제한 행동 구분해 목록화하기",
+            "사용 후 복구 책임 범위 세부 분담 정하기",
+            "합의서에 반영할 내용과 분쟁 해결 기준 포함 문서 작성하기"
+          ],
+          "reader_situation": "함께 쓰는 물품에 대해 사용 규칙과 복구 책임을 구체적으로 합의하고 문서화 하려는 운영팀이나 모임 주최자.",
+          "deliverable": "허용·제한 행동 목록 작성법, 책임 분담표와 사례, 예상 문제 대응 협의 기준 포함 합의서 작성 가이드.",
+          "direction_id": "free-33a0543960"
+        },
+        {
+          "topic": "불확실한 약속과 확정 일정 구분해 원활한 일정 조율하기",
+          "source_id": "",
+          "reader_problem": "확정되지 않은 약속 시간과 확정된 일정이 혼재되어 조율 과정에서 혼란과 일정 누락이 발생한다.",
+          "distinct_angle": "기존 안내가 일정 관리 방법 중심인 반면, 이 글은 약속의 불확정성과 확정성을 명확히 구분하고 이를 시각적 표시와 문장으로 표현하는 구체적 방법을 제시한다.",
+          "reader_situation": "친구나 직장 동료와 약속 조율 시 아직 확정되지 않은 시간과 확정된 시간을 명확히 구분하고자 하는 독자.",
+          "deliverable": "각 상태에 따른 시각 표시 가이드, 문장 구성법, 확정 약속 대화 예시와 연습 자료.",
+          "task_id": "",
+          "direction_id": "free-494c9616de",
+          "outline": [
+            "확정되지 않은 약속과 확정된 일정의 개념 정의 및 차이점 이해하기",
+            "효과적인 시각적 구분 표시법과 문장 표현법 학습하기",
+            "명확한 약속 확정 절차를 위한 대화 예시 학습과 실전 적용 연습"
+          ]
+        },
+        {
+          "topic": "매입처 추가 질문에 추측 없이 명확하게 대응하는 실무 절차",
+          "source_id": "",
+          "reader_problem": "매입처 추가 질문에 답변 불확실 시 추측이나 임의 대답 없이 확인 정보와 미확인 사항을 명확히 구분해 안전하게 대응해야 한다.",
+          "distinct_angle": "일반 안내와 달리 확인 정보와 미확인을 분리 기록하는 양식과 조건부 답변 문구 예시, 재답변 준비 매뉴얼까지 단계별 세밀 지침을 제공한다.",
+          "reader_situation": "상품권 매입 상담 중 일부 질문에 정확한 정보를 제공하는 데 어려움을 겪어 신뢰 유지하며 안전하게 대응하고자 하는 판매자.",
+          "deliverable": "확인 정보 및 미확인 사항 구분 기록지, 조건부 답변 문구 예시, 확인 이후 재답변 절차 안내서.",
+          "task_id": "",
+          "direction_id": "free-911ea23e77",
+          "outline": [
+            "현재 확인된 상품권 상태를 구분해 체계적으로 목록화하기",
+            "모르는 항목은 명확히 분리해 추후 점검할 수 있게 정리하기",
+            "추후 확인 후 답변하는 조건부 문장 작성법과 재답변 절차 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12544,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1042,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13586
+        },
+        "estimated_usd": 0.0066848,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T19:04:04.459511+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25345,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 528,
+          "output_tokens_details": {
+            "reasoning_tokens": 137
+          },
+          "total_tokens": 25873
+        },
+        "estimated_usd": 0.02138475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T19:04:08.091743+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T19:03:55.221454+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T19:04:04.852178+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02806955,
+    "estimated_total_usd": 0.02806955,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
