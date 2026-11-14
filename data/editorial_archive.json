@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-14T21:09:59.148694+00:00",
+  "generatedAt": "2026-11-14T21:11:43.535043+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5109,7 +5109,7 @@
       "board": "gc_tip",
       "topic": "상품권 사용량 고려해 다음 구매량 조절하는 생활 실험법",
       "url": "https://kv-gift.co.kr/board/gc_tip/50",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-14T21:11:43.498909+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11195405,
       "knownSubtotalUsd": 0.11195405
