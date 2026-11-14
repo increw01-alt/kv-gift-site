@@ -479,10 +479,15 @@
       "board": "gc_information",
       "topic": "확정값과 예시값, 예상값 구분과 판단 기준 세우기",
       "run_id": "43541247309"
+    },
+    {
+      "board": "sense",
+      "topic": "자주 쓰는 물건을 효율적으로 배치해 꺼내기와 제자리 복귀 동작 줄이기",
+      "run_id": "43618467968"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "43612546453",
+  "last_board": "sense",
+  "last_run_id": "43618467968",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
