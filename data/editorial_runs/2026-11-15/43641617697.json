@@ -1,18 +1,20 @@
 {
   "run_id": "43641617697",
   "date_kst": "2026-11-15",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-14T21:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 0은 기존 공개 글 /board/purchase/2576이 이미 다룬 ‘여러 수신자에게 상품권을 나눠 줄 때 용도별 우선순위와 최소 단위를 정해 배분 기준을 만드는 질문’과 해결 절차가 같습니다. 기존 글도 전체 금액과 수신자별 용도를 정리하고, 우선순위를 매긴 뒤 배분표로 정리하는 방식까지 설명하므로, 이번 후보가 추가하는 새 판단 도구나 새로운 해결 단계가 드러나지 않습니다. / 0번 후보는 /board/purchase/2576가 이미 같은 질문과 같은 해결 순서를 다룹니다. 수신자별 용도 분석, 우선순위 결정, 배분표 작성이라는 핵심 답이 그대로 겹쳐 새로 해결하는 문제를 확인할 수 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43641617697",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-15T06:13:49.807872+09:00"
+      "attempt_started_at": "2026-11-15T06:13:49.807872+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 651,
+          "coverageArticles": 143,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-be34e189f7",
+            "purchase-efaa383692",
+            "purchase-6bf9948129",
+            "purchase-82f484eeda"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "여러 수신자 용도별로 상품권 금액 배분 기준 체계적으로 세우기",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "한 번의 상품권 구매에서 여러 수신자에게 각각 다른 용도와 금액으로 배분할 때, 공평하고 명확한 배분 기준을 만들기 어렵다.",
+          "distinct_angle": "기존 안내가 단순 금액 분할이나 개별 연락처만 나열하는 데 그친 반면, 본문은 수신자별 용도 분석과 우선순위 결정, 배분 기준 설계 및 최종 분배 문구 작성까지 폭넓게 체계화한다.",
+          "outline": [
+            "수신자별 상품권 용도와 요구사항 상세 분석하기",
+            "용도와 우선순위를 기준으로 배분 원칙 설계하기",
+            "배분 결과를 명확히 전달하는 안내문 문구 작성과 검토"
+          ],
+          "reader_situation": "여러 사람에게 상품권을 한꺼번에 구매·선물하며 각 수신자의 용도나 요청에 맞춰 명확하고 공평한 금액 배분 기준을 마련하고 싶은 구매자.",
+          "deliverable": "수신자별 용도 유형 분류표, 배분 우선순위 판단 질문 리스트, 금액 배분 기준표 및 각각에 맞춘 안내문 문구 완성 예시.",
+          "direction_id": "purchase-973c196eed"
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12986,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 6,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 12992
+        },
+        "estimated_usd": 0.005204,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T21:13:54.210633+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 13056,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 252,
+          "output_tokens_details": {
+            "reasoning_tokens": 33
+          },
+          "total_tokens": 13308
+        },
+        "estimated_usd": 0.010926,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T21:13:55.916392+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T21:13:52.048767+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T21:13:54.243694+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01613,
+    "estimated_total_usd": 0.01613,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
