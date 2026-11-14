@@ -1695,5 +1695,18 @@
     "publication_mode": "automatic",
     "run_id": "43504098162",
     "usage_file": "data/editorial_runs/2026-11-14/43504098162.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 50,
+    "topic": "상품권 사용량 고려해 다음 구매량 조절하는 생활 실험법",
+    "drafted_at": "2026-11-15",
+    "automation": true,
+    "search_intent": "상품권으로 산 물건의 실제 소모량과 사용 간격을 기록해 다음 구매량을 줄이거나 늘릴 기준을 세우려는 질문",
+    "image_scene": "주방 조리대 위에 거의 비어 가는 세제 용기와 계량컵, 메모장, 스마트폰 메모 화면이 함께 놓여 있고 한 사람이 사용한 날짜와 남은 양을 적어 다음 구매량을 계산하는 장면",
+    "image_alt": "주방 조리대에서 세제의 남은 양과 사용 날짜를 메모하며 다음 구매량을 계산하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43641162737",
+    "usage_file": "data/editorial_runs/2026-11-15/43641162737.json"
   }
 ]

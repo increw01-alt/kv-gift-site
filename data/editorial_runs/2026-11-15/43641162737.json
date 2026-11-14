@@ -1,17 +1,27 @@
 {
   "run_id": "43641162737",
   "date_kst": "2026-11-15",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "gc_tip",
+  "topic": "상품권 사용량 고려해 다음 구매량 조절하는 생활 실험법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/gc_tip/50",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-14T21:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,301 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-15T06:08:59.379589+09:00"
+      "attempt_started_at": "2026-11-15T06:08:59.379589+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 649,
+          "coverageArticles": 142,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-f74ea4ac7c",
+            "gc_tip-d4d4f91b05",
+            "gc_tip-18e69e2f13",
+            "gc_tip-59f6a2cf62"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 교환 물품 옵션 간 양립 어려운 조합 제거 절차",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "교환 물품의 크기나 구성처럼 서로 영향을 주어 동시에 고를 수 없는 옵션 조합이 많아 선택지 조합 수가 지나치게 많고 복잡함",
+          "distinct_angle": "서로 양립할 수 없는 옵션 조합 규칙을 적용해 불가능한 경우를 단계별로 배제하며 최종 가능한 조합 수를 줄이는 구체적 가지치기 방법",
+          "outline": [
+            "각 옵션 항목별로 선택 가능한 조합 목록을 작성하여 체계적 정리하기",
+            "상호 배타적 옵션 조합을 식별하여 목록 중복과 불가능 조합 제거하기",
+            "최종까지 남은 가능한 옵션 조합을 기준으로 선택 과정을 간소화하며 정리하기"
+          ],
+          "reader_situation": "물품 교환 시 여러 옵션을 한꺼번에 고르는 중 옵션별 조합 불가능 여부를 체계적으로 확인해 시간과 노력을 줄이려는 독자",
+          "deliverable": "옵션별 조합 가능성 표 작성법, 불가능 조합 제거 절차, 단계별 가지치기 체크리스트와 최종 조합 정리법 포함 안내",
+          "direction_id": "gc_tip-18e69e2f13"
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 사용량 고려해 다음 구매량 조절하는 생활 실험법",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "상품권으로 구매한 물품을 다 사용한 뒤 실제 소모량이 예상과 다를 때, 다음 구매 시 적정 사용량을 판단하기 어려움",
+        "distinct_angle": "실제 소비량과 사용 빈도를 생활 속 관찰과 기록으로 확인해 다음 구매량을 조절하는 구체적 실험 절차와 판단 기준을 제시",
+        "outline": [
+          "상품권으로 구매한 물품의 실제 사용량과 빈도를 꼼꼼히 기록해 보기",
+          "기록한 사용 데이터를 분석해 다음 구매량을 합리적으로 산정하는 방법 익히기",
+          "소비 패턴에 맞춰 상품권 활용 계획을 조정하고 불필요 재고를 줄이는 실천법 적용하기"
+        ],
+        "reader_situation": "상품권으로 정기적 구매품을 구입해 사용하면서, 남은 물량 관리와 낭비 방지를 위해 실제 소비량을 측정하고 다음 주문에 반영하려는 이용자",
+        "deliverable": "소비량 측정 방법과 사용 빈도 기록, 다음 구매량 계산 방식, 낭비 줄이고 효율적 구매를 위한 체크리스트와 실천 방법 안내서",
+        "direction_id": "gc_tip-d4d4f91b05",
+        "novelty_reason": "후보 0은 기존 글이 다룬 ‘사용 습관을 보고 용량을 고르는 방법’보다 한 단계 더 들어가, 실제로 다 쓴 뒤의 소비량과 사용 빈도를 기록해 다음 구매량을 조절하는 실행 절차를 제시합니다. 가장 가까운 기존 글 /board/gc_tip/41은 비교 기준을 세우는 수준이고, /board/gc_tip/35는 사용 후 기록 정리에 그쳐서, 이번 후보처럼 관찰 기간을 두고 다음 구매량을 산정하는 판단 도구까지는 다루지 않습니다. 반면 후보 1은 조합 불가능 옵션을 거르는 아이디어는 새롭지만, 본문 구조가 너무 추상적이라 독자가 바로 실행할 구체적 예시와 결과물이 부족합니다.",
+        "screen_rejections": [
+          "후보 1은 옵션 조합 가지치기라는 방향은 다르지만, 실제로 어떤 조합을 먼저 지우고 어떤 기준으로 최종 선택 수를 줄이는지 본문 수준의 구체성이 약합니다. 비교 가능한 기존 글이 직접 겹치지는 않지만, 독자가 얻는 실행 단계와 결과물이 충분히 선명하지 않아 우선순위에서 밀립니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/41",
+            "/board/gc_tip/35"
+          ],
+          "gap": "기존 글은 사용 습관을 바탕으로 용량을 고르거나, 사용 후 기록을 남기는 수준입니다. 이번 글은 실제 소비량이 예상과 다를 때, 기록한 사용 빈도와 소모 속도를 근거로 다음 구매량을 다시 정하는 방법을 다룹니다.",
+          "example": "평소보다 빨리 줄어드는 물품이 있어도 추측만 하지 않고, 사용한 뒤 남은 양과 사용 간격을 함께 적어 둔 뒤 다음 구매 전에 기준을 다시 잡는 상황을 생각해 보세요.",
+          "result": "독자는 자신의 실제 소비 패턴을 확인한 뒤 다음 구매량을 줄이거나 늘릴지 판단하고, 남는 재고를 줄이는 계획까지 세울 수 있습니다.",
+          "section_actions": [
+            "첫째 절에서는 사용한 뒤 남은 양과 사용 간격을 함께 적어 실제 소모 흐름을 확인하게 한다.",
+            "둘째 절에서는 기록을 바탕으로 자주 쓰는 품목과 가끔 쓰는 품목을 나누어 다음 구매량 판단 기준을 세우게 한다.",
+            "셋째 절에서는 예상보다 빨리 닳는 경우와 오래 남는 경우를 나눠 다음 주문에서 조절할 행동을 정리하게 한다."
+          ]
+        }
+      },
+      "board": "gc_tip",
+      "topic": "상품권 사용량 고려해 다음 구매량 조절하는 생활 실험법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-14T13:32:03Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "상품권으로 산 물건의 실제 소모량과 사용 간격을 기록해 다음 구매량을 줄이거나 늘릴 기준을 세우려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18373,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 853,
+          "output_tokens_details": {
+            "reasoning_tokens": 272
+          },
+          "total_tokens": 19226
+        },
+        "estimated_usd": 0.01761825,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T21:09:08.818379+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3419,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 446,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3865
+        },
+        "estimated_usd": 0.0020812,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T21:09:13.948463+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5548,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 504,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6052
+        },
+        "estimated_usd": 0.0030256,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T21:09:18.998074+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16848,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 572,
+          "output_tokens_details": {
+            "reasoning_tokens": 406
+          },
+          "total_tokens": 17420
+        },
+        "estimated_usd": 0.01521,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T21:09:25.078246+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3534,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1038
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4906
+        },
+        "estimated_usd": 0.066318,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-14T21:09:53.056414+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 8732,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 256,
+          "output_tokens_details": {
+            "reasoning_tokens": 191
+          },
+          "total_tokens": 8988
+        },
+        "estimated_usd": 0.007701,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-14T21:09:57.880524+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T21:09:02.765695+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T21:09:08.919047+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-14T21:09:15.010630+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T21:09:20.667390+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-14T21:09:25.095507+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-14T21:09:54.137730+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.11195405,
+    "estimated_total_usd": 0.11195405,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
