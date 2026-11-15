@@ -1,18 +1,20 @@
 {
   "run_id": "43750179791",
   "date_kst": "2026-11-16",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T19:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 상품권으로 주문한 물건을 다른 날 수령할 때 무엇을 미리 준비하고, 어떻게 전달을 확인하고, 수령 후 무엇을 점검할지를 다룹니다. 이는 공개 글 /board/gc_tip/40이 이미 다룬 ‘여러 날에 나눠 수령할 때 필요한 준비물, 수령 안내문과 주문번호 정리, 날짜별 준비물 구분’과 질문과 해결 순서가 사실상 같습니다. 본문에서 새로 추가되는 구체적 판단 도구나 기존 답으로는 처리되지 않는 차이가 확인되지 않아 중복으로 보류합니다. / 0번 후보: /board/gc_tip/40에서 이미 ‘상품권으로 결제한 주문을 며칠에 나눠서 수령할 때 결제한 상품권 종류와 수량, 수령 안내문, 주문번호를 나눠 챙기고 날짜별 준비물을 구분하는 방법’을 해결했습니다. 이번 후보도 수령일 분리 주문의 준비물 목록, 전달 확인, 수령 후 점검이라는 동일한 질문과 절차를 반복해 새 해결 내용이 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43750179791",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-16T04:03:52.638260+09:00"
+      "attempt_started_at": "2026-11-16T04:03:52.638260+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 691,
+          "coverageArticles": 145,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-f74ea4ac7c",
+            "gc_tip-18e69e2f13",
+            "gc_tip-84c7f844a6",
+            "gc_tip-e4ae922a60"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권으로 주문한 물건을 다른 날 찾을 때 준비 절차와 챙길 것",
+          "source_id": "",
+          "reader_problem": "상품권으로 주문한 물건을 언제 다른 날 수령할 때 무엇을 미리 준비하고 챙겨야 하는지 모른다.",
+          "distinct_angle": "기존 상품권 주문과 사용 안내에서 다루지 않은, 수령일 분리 주문 시 필요한 준비물 목록과 전달 확인 절차, 물건 수령 후 해야 할 점검 방법을 체계적으로 안내한다.",
+          "reader_situation": "상품권으로 주문한 물건을 수령일을 달리할 때, 누락 없이 원활한 수령을 위해 사전 준비를 꼼꼼히 하려는 이용자.",
+          "deliverable": "수령일 분리 주문 체크리스트, 준비물과 전달 사항 정리표, 수령 후 점검 및 확정 절차 안내서.",
+          "task_id": "",
+          "direction_id": "gc_tip-e4ae922a60",
+          "outline": [
+            "상품권 주문 시 수령일 분리 가능 여부와 준비물 확인하기",
+            "받는 사람과 수령 장소 정보를 정확히 전달하고 확인하기",
+            "물건 수령 후 포장 및 구성품 이상 여부를 점검하는 절차 실천하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15519,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1053,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16572
+        },
+        "estimated_usd": 0.0078924,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T19:04:05.800654+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 13650,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 399,
+          "output_tokens_details": {
+            "reasoning_tokens": 117
+          },
+          "total_tokens": 14049
+        },
+        "estimated_usd": 0.012033,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T19:04:09.384026+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T19:03:55.028230+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T19:04:06.130349+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0199254,
+    "estimated_total_usd": 0.0199254,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
