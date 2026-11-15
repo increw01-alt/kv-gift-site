@@ -1,18 +1,20 @@
 {
   "run_id": "43761954008",
   "date_kst": "2026-11-16",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T21:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 순서를 본문 수준에서 반복합니다. 후보 영은 조건 충돌을 필수 조건과 우대 조건으로 나누고 기록하는 방식이 기존의 비교 기준 정리와 우선순위 배분 글들과 너무 가깝고, 후보 일은 작업 의존 관계를 역순 일정으로 배치하는 내용이 기존 일정 계획·중단 재개 글의 변형입니다. 후보 이은 액면가와 실제 지출을 표로 비교하는 핵심 질문이 이미 공개 글에서 해결돼 있어 새 판단 도구가 없습니다. / 0번 후보는 상품권 구매 후보들의 조건을 필수 조건과 우대 조건으로 분류해 제거한다는 점에서, 이미 공개된 /board/sale/3699의 서로 다른 조건의 견적을 같은 기준으로 맞춰 비교하는 질문과 해결 순서가 겹칩니다. 필수 조건 분리와 후보 제거 기록은 표현만 다를 뿐, 기존 글의 대상 범위·포함 항목·확인 상태를 맞춰 비교하는 절차를 새로 해결하지 못합니다. / 1번 후보는 준비 작업의 의존 관계를 적고 최종 확정부터 거꾸로 일정을 짜는 방식이 기존의 /board/sense/24 이동 거리와 시간 기준으로 일정을 배치하는 글, /board/sense/25 중단 지점과 재개 지점을 나누는 글과 같은 계획 조정 문제를 반복합니다. 역순 배치라는 형식만 추가됐을 뿐 독자가 새로 판단해야 할 구체적 차이가 드러나지 않습니다. / 2번 후보는 액면가가 다른 상품권의 실제 지출과 할인 효과를 비교표로 만드는 내용이 이미 공개된 /board/purchase/2577의 ‘액면가 다른 상품권 선택 시 실제 지출 비교 방법’과 질문, 계산 절차, 결과물까지 거의 같습니다. 기존 답만 적용해도 해결되는 문제라 새 글로 분리할 차별점이 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43761954008",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-16T06:09:02.145542+09:00"
+      "attempt_started_at": "2026-11-16T06:09:02.145542+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 692,
+          "coverageArticles": 145,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-6f6d6db65b",
+            "purchase-5aaa6701f9",
+            "purchase-82f484eeda",
+            "purchase-973c196eed"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "서로 다른 조건 충돌 시 핵심 필수 조건으로 구매 후보 체계적 제거하기",
+          "source_id": "",
+          "reader_problem": "상품권 구매 시 여러 후보 간 조건이 서로 충돌하여 모두 만족하는 선택이 어려운데, 반드시 양보할 수 없는 필수 조건을 기준으로 후보를 줄여 나가는 체계적 방법이 필요함",
+          "distinct_angle": "기존 일반 안내와 달리 복합 조건 간 우선순위를 차별화하여 필수 조건부터 명확하게 분류하고, 후보군 제거 절차와 기록 방식을 구체적으로 설계해 실전 적용 가능하도록 제안함",
+          "reader_situation": "복수 후보 조건 충돌로 우선순위 선정을 고민 중이며, 명확한 필수 조건 설정과 후보 제거 과정을 문서화해 최종 구매 결정에 적용하려는 구매자",
+          "deliverable": "필수·우대 조건 분류표 양식, 필수 조건 우선 적용 후 후보 제거 절차와 기록 양식, 단계별 후보 제거 판단 매뉴얼 및 적용 예시 자료",
+          "task_id": "",
+          "direction_id": "purchase-6f6d6db65b",
+          "outline": [
+            "구매 후보의 조건별 희망 사항과 충돌 점 파악·정리하기",
+            "비용·용도·효과 등 필수 조건과 우대 조건 명확히 구분하기",
+            "필수 조건 미충족 후보부터 순차적으로 체계적 제거 및 기록 절차 수행하기"
+          ]
+        },
+        {
+          "topic": "서로 의존하는 상품권 주문 준비 작업 역순 일정 설계법",
+          "source_id": "",
+          "reader_problem": "여러 주문 준비 작업이 서로 의존해 일정을 관리하기 어렵고, 작업 과중과 지연을 방지하기 위해 적절한 역순으로 일정 설계가 필요함",
+          "distinct_angle": "기존 단순 작업 나열과 달리 의존 관계와 소요 시간을 구체적 목록으로 정리하고, 최종 확정 작업부터 거꾸로 일정을 체계적으로 배치하는 방법과 실전 조정법을 안내함",
+          "reader_situation": "상품권 주문과 관련된 여러 준비 작업을 꼼꼼히 목록화하고, 작업 간 관계를 분석해 역순으로 효율적 일정표를 설계하고자 하는 구매자 및 관리자",
+          "deliverable": "작업별 의존 관계와 소요 시간 정리 목록표, 역순 일정 설계 모델, 단계별 일정 관리 및 조정 체크리스트와 실습 지침서",
+          "task_id": "",
+          "direction_id": "purchase-5aaa6701f9",
+          "outline": [
+            "준비 작업별 의존 관계 및 예상 소요 시간 면밀히 목록화하기",
+            "최종 주문 확정부터 시작하는 역순 일정 구성 방법 배우기",
+            "역순 일정표 작성 후 실제 일정 관리와 상황별 조정법 적용하기"
+          ]
+        },
+        {
+          "topic": "액면가 다를 때 상품권 실제 지출과 할인 비교표 작성법",
+          "source_id": "",
+          "reader_problem": "액면가와 할인률이 다른 상품권 사이 실제 지출 비용과 할인 효과를 명확한 비교 기준과 계산 절차 없이 판단하기 어려움",
+          "distinct_angle": "일반적인 액면가 정보 제공과 달리 실제 결제금액 산출, 할인 및 수수료 적용방법을 체계적으로 정리하고 체계적 비교표 작성과 개인 맞춤 최종 판정 기준을 제시함",
+          "reader_situation": "액면가가 상이한 여러 상품권을 비교하며 실제 지출 비용과 할인 효과를 객관적으로 계산해 가장 경제적인 선택 기준을 직접 완성하려는 소비자",
+          "deliverable": "액면가별 실제 지출 금액 산출 공식 및 계산 양식, 할인·수수료 반영 비교표, 개인 예산 맞춤 선택 판단 기준 정리서",
+          "task_id": "",
+          "direction_id": "purchase-82f484eeda",
+          "outline": [
+            "상품권 액면가와 실제 구매 가격 차이 이해하기",
+            "할인률, 수수료 등 추가 비용 요소를 포함한 지출 비용 계산법 익히기",
+            "계산 결과를 표로 정리해 개인별 최종 상품권 선택 기준 만드는 방법"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16116,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1208,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17324
+        },
+        "estimated_usd": 0.0083792,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T21:09:16.914115+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 26555,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 680,
+          "output_tokens_details": {
+            "reasoning_tokens": 204
+          },
+          "total_tokens": 27235
+        },
+        "estimated_usd": 0.02297625,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T21:09:22.128296+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T21:09:04.838919+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T21:09:17.503120+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03135545,
+    "estimated_total_usd": 0.03135545,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
