@@ -494,10 +494,15 @@
       "board": "purchase",
       "topic": "예산·시간·수신자 선택권 간 최적 의사결정 순서",
       "run_id": "43682611650"
+    },
+    {
+      "board": "general_notice",
+      "topic": "안내 화면에서 열린 새 창 출처 확인과 안전한 복귀 방법",
+      "run_id": "43729087252"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "43687787469",
+  "last_board": "general_notice",
+  "last_run_id": "43729087252",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
