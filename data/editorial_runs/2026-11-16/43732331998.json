@@ -1,18 +1,20 @@
 {
   "run_id": "43732331998",
   "date_kst": "2026-11-16",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sense",
+  "topic": "문서 내 사실 문장과 의견 문장 명확 구분으로 오해 줄이기",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T15:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 문서에서 사실 문장과 의견 문장을 구분하고 혼합 문장을 다시 쓰는 설명이 기존의 ‘메모에서 본 사실과 내 의견을 어떻게 구분해 쓸까요?’와 핵심 질문·해결 절차가 같습니다. / 사실·의견 판별 기준, 문장 분리 예시, 편집 후 재검수라는 흐름이 기존 글의 접수 사실·처리 결과 구분 방식과 비교해도 독자 결과가 거의 같습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43732331998",
@@ -22,15 +24,251 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-16T00:54:03.651334+09:00"
+      "attempt_started_at": "2026-11-16T00:54:03.651334+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 688,
+          "coverageArticles": 145,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-bc0cf30f7f",
+            "sense-07089a422e",
+            "sense-d926083876",
+            "sense-5c4a5db337"
+          ]
+        }
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "문서 내 사실 문장과 의견 문장 명확 구분으로 오해 줄이기",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "복잡한 안내나 문서에서 사실과 개인 견해가 섞여 있어 중요한 정보 해석 시 혼란과 오해가 생기는 상황",
+        "distinct_angle": "기존 단순 읽기와 해석법을 넘어 사실·의견 문장 기준 정의, 구분 연습과 실무용 편집 방법까지 구체적으로 구성한다.",
+        "outline": [
+          "문서에서 사실과 의견 문장 구분 기준 명확히 정의하기",
+          "구분 기준 적용해 혼합된 문장 분리 실습하기",
+          "분리된 문서 내용으로 오해 방지 편집 및 검수 절차 설계하기"
+        ],
+        "reader_situation": "문서 편집자, 업무 담당자 등 중요한 안내를 정확히 이해하고 불필요 혼선을 줄이고자 하는 독자",
+        "deliverable": "사실·의견 문장 구분 기준표, 구분 적용 실습 예시, 편집 시 오류 방지를 위한 점검 체크리스트와 절차",
+        "direction_id": "sense-d926083876",
+        "novelty_reason": "가장 가까운 기존 글인 /board/gc_information/21은 상담 기록에서 접수 사실과 처리 결과를 나누는 기록법에 초점이 있어, 문서 전체에서 사실 문장과 의견 문장을 판별해 문장을 다시 쓰고 검수하는 편집 절차까지는 다루지 않습니다. 이번 후보는 사실·의견의 기준 정의에 더해 혼합 문장을 직접 분리하고, 오해를 줄이도록 문서 문장을 손보는 실무형 절차를 제시하므로 새 해결 범위가 있습니다.",
+        "screen_rejections": [],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_information/21",
+            "/board/sense/7",
+            "/board/general_notice/60"
+          ],
+          "gap": "기존 글은 기록이나 메시지를 주제별로 나누는 수준에 머물러 있어, 복잡한 안내문에서 사실 문장과 의견 문장을 판별한 뒤 문장 단위로 다시 쓰고 검수하는 편집 절차는 충분히 다루지 못한다.",
+          "example": "어떤 안내문에 확인된 규정 설명과 작성자의 해석이 한 문단에 섞여 있을 때, 독자는 먼저 사실만 남길 문장과 의견으로 표시할 문장을 나눠 읽어야 한다. 그다음 문장 표현을 바꾸어 사실은 근거 문장으로, 의견은 추정이나 해석으로 따로 드러내면 오해를 줄일 수 있다.",
+          "result": "독자는 문서에서 사실과 의견을 구분해 표시하고, 혼합 문장을 정리한 뒤, 검수할 때 다시 섞이지 않도록 확인하는 기준을 갖게 된다.",
+          "section_actions": [
+            "첫 절에서는 사실 문장과 의견 문장의 판별 기준을 예시와 함께 정리해 문서에서 무엇을 근거로 볼지 먼저 정한다.",
+            "둘째 절에서는 섞인 문장을 사실과 의견으로 나누어 다시 적는 방법을 보여 주어, 독자가 바로 문장 단위로 손볼 수 있게 한다.",
+            "셋째 절에서는 편집 후 검수 순서를 제시해 문단 전체를 다시 읽으며 사실과 의견이 뒤섞이지 않았는지 점검하도록 돕는다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "문서 내 사실 문장과 의견 문장 명확 구분으로 오해 줄이기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-15T13:56:42Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 13099,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 6,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13105
+        },
+        "estimated_usd": 0.0052492,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T15:54:08.126064+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 13205,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 763,
+          "output_tokens_details": {
+            "reasoning_tokens": 261
+          },
+          "total_tokens": 13968
+        },
+        "estimated_usd": 0.01333725,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T15:54:13.350346+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3320,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 457,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3777
+        },
+        "estimated_usd": 0.0020592,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T15:54:18.588523+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9372,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 642,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10014
+        },
+        "estimated_usd": 0.004776,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T15:54:24.624265+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18910,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 494,
+          "output_tokens_details": {
+            "reasoning_tokens": 204
+          },
+          "total_tokens": 19404
+        },
+        "estimated_usd": 0.0164055,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T15:54:30.026073+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T15:54:06.299106+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T15:54:08.167819+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T15:54:13.378071+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T15:54:19.625006+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T15:54:26.309523+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04182715,
+    "estimated_total_usd": 0.04182715,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
