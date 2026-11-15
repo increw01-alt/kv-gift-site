@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T05:08:58.961793+00:00",
+  "generatedAt": "2026-11-15T05:10:04.004461+00:00",
   "dateKst": "2026-11-15",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 11,
   "held": 9,
   "errors": 0,
-  "knownSubtotalUsd": 0.3968199,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.53110505,
+  "estimatedTotalUsd": 0.53110505,
   "records": [
     {
       "runId": "43609416223",
@@ -144,16 +144,16 @@
     },
     {
       "runId": "43679738246",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "개별 맞춤 선물과 모두에게 같은 선물, 공평성 기준과 선택 정하기",
+      "url": "https://kv-gift.co.kr/board/free/486",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-15T05:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.13428515,
+      "knownSubtotalUsd": 0.13428515
     }
   ],
   "topicRetry": {

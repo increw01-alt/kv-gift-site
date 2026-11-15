@@ -1708,5 +1708,18 @@
     "publication_mode": "automatic",
     "run_id": "43641162737",
     "usage_file": "data/editorial_runs/2026-11-15/43641162737.json"
+  },
+  {
+    "board": "free",
+    "id": 486,
+    "topic": "개별 맞춤 선물과 모두에게 같은 선물, 공평성 기준과 선택 정하기",
+    "drafted_at": "2026-11-15",
+    "automation": true,
+    "search_intent": "모임 선물에서 모두에게 같은 방식과 개인 맞춤 방식 중 무엇이 더 공평한지, 금액·선택권·필요 기준으로 합의할 방법을 찾는 질문",
+    "image_scene": "책상 위에 ‘금액’, ‘선택권’, ‘필요’라고 적힌 세 장의 질문 카드와 선물 후보 메모지가 펼쳐져 있고, 한 사람이 각 카드 아래에 같은 선물과 맞춤 선물의 장단점을 나눠 적으며 우선순위를 정리하는 장면",
+    "image_alt": "책상 위에서 금액, 선택권, 필요가 적힌 질문 카드를 보며 같은 선물과 맞춤 선물의 공평성 기준을 비교하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "43679738246",
+    "usage_file": "data/editorial_runs/2026-11-15/43679738246.json"
   }
 ]
