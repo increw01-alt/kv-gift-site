@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T05:10:04.036978+00:00",
+  "generatedAt": "2026-11-15T05:12:08.614246+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5193,7 +5193,7 @@
       "board": "free",
       "topic": "개별 맞춤 선물과 모두에게 같은 선물, 공평성 기준과 선택 정하기",
       "url": "https://kv-gift.co.kr/board/free/486",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-15T05:12:08.576862+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.13428515,
       "knownSubtotalUsd": 0.13428515
