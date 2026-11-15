@@ -1,18 +1,20 @@
 {
   "run_id": "43738398583",
   "date_kst": "2026-11-16",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T16:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 순서를 본문 수준에서 반복합니다. 후보 영은 과거 선택의 결과와 당시 판단을 분리해 점검하고 질문 리스트로 평가하는 흐름이 /board/free/482와 사실상 같아 새 판단 도구가 없습니다. 후보 공은 선물 계획 변경 기준을 정하고 상황별 장단점을 비교해 우선순위를 세우는 내용이 /board/gc_tip/32, /board/purchase/2576, /board/sense/23, /board/free/486의 비교·배분·우선순위 정리와 겹쳐 독자가 새로 해결해야 할 질문이 드러나지 않습니다. / 0번 후보: 선물 계획 변경 기준을 목록화하고 우선순위와 흐름도로 정리하는 방식이 기존 공개 글 /board/gc_tip/32의 사용 계획 정리, /board/purchase/2576의 우선순위 배분, /board/sense/23의 비교표 기반 선택과 같은 문제를 다른 표현으로 반복합니다. 기존 답만으로도 처리 가능한 범위라 새 해결 단계가 없습니다. / 1번 후보: 과거 선택의 결과와 당시 판단 질을 분리해 보고 우연과 질을 구분하는 질문 리스트는 기존 공개 글 /board/free/482가 이미 다룬 질문과 해결 절차와 같습니다. 당시 정보 분리, 결과 분리, 판단 평가라는 핵심 흐름이 그대로 겹쳐 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "43738398583",
@@ -22,15 +24,137 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-16T01:58:51.863929+09:00"
+      "attempt_started_at": "2026-11-16T01:58:51.863929+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 689,
+          "coverageArticles": 145,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-494c9616de",
+            "free-911ea23e77",
+            "free-3e5599d02d",
+            "free-33a0543960"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "선물 사용 계획의 구체적 변경 기준 세우기",
+          "source_id": "",
+          "reader_problem": "선물 예정 용도나 상황 변화로 기존 계획을 바꿀지 명확한 판단 기준 없이 여러 대안 중 최선결정을 내리기 어려워 혼란이 있습니다.",
+          "distinct_angle": "지금까지 설명된 일반적 변경 안내와 달리, 상황별 고려 요소를 목록화하고 우선순위 매기기, 판단 단계별 흐름도 및 점검 체크리스트 작성법을 안내해 독자가 스스로 실천하게 합니다.",
+          "reader_situation": "선물 계획 변경 필요 시 여러 안의 상대적 장단점과 예상 효과를 체계적으로 비교·평가하며 우선순위까지 정해 실행하려는 사용자.",
+          "deliverable": "상황별 판단 기준 목록과 우선순위 설정 결과, 변경안별 비교표, 판단 단계별 흐름도, 실행 점검 체크리스트를 포함한 실용 매뉴얼.",
+          "task_id": "",
+          "direction_id": "free-3e5599d02d",
+          "outline": [
+            "선물 변경 상황 및 관련 판단 기준 구체적으로 목록화하기",
+            "각 변경안의 장단점과 예상 결과를 체계적으로 비교 분석하는 표 작성하기",
+            "판단 흐름도 만들고 단계별 결정과 실행 점검 체크리스트 설계하기"
+          ]
+        },
+        {
+          "topic": "과거 선택 결과와 당시 판단 질 구분하는 구체적 점검 질문",
+          "source_id": "",
+          "reader_problem": "좋은 결과에만 주목해 당시 판단 과정의 합리성 점검 없이 반복 결정에 위험을 내포합니다.",
+          "distinct_angle": "기존 단순 분리 안내를 넘어서, 결과와 당시 정보 분리 방법, 우연과 판단 질 구분 가상 사례 분석, 객관적 판단 평가를 위한 질문 리스트와 행위 절차를 제시해 스스로 학습하도록 돕습니다.",
+          "reader_situation": "긍정적 결과만 믿고 같은 선택을 반복하려 할 때, 결과와 판단 과정을 분리해 객관적으로 되돌아보고 개선하려는 독자.",
+          "deliverable": "과거 선택 당시 정보·결과 분리법, 우연과 질 구분 가상 사례, 판단 과정 객관평가용 질문 목록, 점검 행위 순서 포함 학습 도구.",
+          "task_id": "",
+          "direction_id": "free-911ea23e77",
+          "outline": [
+            "과거 선택 결과와 당시 정보 분리하는 구체적 방법 익히기",
+            "우연한 성공과 질 높은 판단 과정 차이점 보여주는 가상 사례 분석하기",
+            "객관적 평가를 위한 질문 목록 작성 및 학습용 점검 절차 따라하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16120,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1151,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17271
+        },
+        "estimated_usd": 0.0082896,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T16:59:05.159898+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19804,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 592,
+          "output_tokens_details": {
+            "reasoning_tokens": 231
+          },
+          "total_tokens": 20396
+        },
+        "estimated_usd": 0.017517,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T16:59:09.873811+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T16:58:54.053448+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T16:59:05.544212+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0258066,
+    "estimated_total_usd": 0.0258066,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
