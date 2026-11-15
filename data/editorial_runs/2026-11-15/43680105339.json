@@ -1,18 +1,20 @@
 {
   "run_id": "43680105339",
   "date_kst": "2026-11-15",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T05:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 순서를 본문 수준에서 반복합니다. 0번은 접힌 안내지의 문장 연결 기준을 묻는 내용으로 /board/gc_tip/48의 지시어·표시 기호로 조건을 연결하는 방법과 겹칩니다. 1번은 색상 대신 표식으로 보관함을 구분하는 방식이 /board/gc_tip/47의 위치·글자·도형 표식 설계와 동일합니다. 2번은 어려운 설명을 정의·이유·예시로 나누어 전달하는 방식이 /board/sense/26의 핵심 정의와 예시, 비예시 분리 절차와 같습니다. 기존 답만 적용해도 해결되는 범위라 새 글로 승인할 후보가 없습니다. / 0번은 /board/gc_tip/48이 이미 다룬 ‘분리된 조건 문장을 지시어와 표시 기호로 연결해 읽는 질문’과 해결 절차가 같습니다. 본문에 추가된 연결 기준도 기존 글의 문장 짝짓기와 재정리 순서를 반복해 새 판단 도구가 없습니다. / 1번은 /board/gc_tip/47이 이미 다룬 ‘색이 비슷한 보관함을 위치, 큰 글자, 도형 표식으로 구분하는 질문’과 같습니다. 색상 외 표식 설계와 유지 관리라는 실행 단계가 그대로 겹쳐 중복입니다. / 2번은 /board/sense/26이 이미 다룬 ‘어려운 설명을 정의와 예시로 나누어 전달하는 질문’과 해결 순서가 같습니다. 정의, 이유, 예시를 구분해 설명하는 방식은 기존 글의 핵심 답을 그대로 반복합니다."
+    ]
   },
   "api_usage": {
     "run_id": "43680105339",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-15T14:14:00.398943+09:00"
+      "attempt_started_at": "2026-11-15T14:14:00.398943+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 669,
+          "coverageArticles": 144,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-f74ea4ac7c",
+            "gc_tip-67b3e3310b",
+            "gc_tip-59f6a2cf62",
+            "gc_tip-41d96debcf"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 안내지 분리된 조건 문장 연결해 정확히 읽는 법",
+          "source_id": "",
+          "reader_problem": "상품권 안내지에 중요한 문장과 조건이 분리되어 있어 어떤 조건이 어떤 문장과 쌍을 이루는지 혼란스러워 정확한 내용 파악이 어렵다.",
+          "distinct_angle": "기존 안내분리 문제와 달리 안내지 내 문장 간 연결 신호와 표시 기호를 근거로 하여 떨어진 조건 쌍을 찾아내는 구체적인 독해 방법과 실습 지침을 담는다.",
+          "reader_situation": "종이 또는 전자 상품권 안내서를 읽는 독자가 분리된 조건 문장을 올바르게 연결해 전체 안내 흐름을 이해하고 정확한 조건 적용 범위를 알고자 하는 상황.",
+          "deliverable": "분리된 조건 문장 연결 기준과 체크리스트, 조건쌍 재배치 실습용 안내서, 완전한 조건 독해를 위한 단계별 점검 목록.",
+          "task_id": "",
+          "direction_id": "gc_tip-67b3e3310b",
+          "outline": [
+            "안내지에서 분리된 조건 문장 표시 및 목록화하기",
+            "문장별 지시어와 표시 기호로 조건 쌍 연결하기",
+            "전체 흐름 속 조건 쌍 재배치 후 완성도 점검하기"
+          ]
+        },
+        {
+          "topic": "색상 의존 줄이고 눈에 띄는 표식으로 상품권 보관함 구분하는 방법",
+          "source_id": "",
+          "reader_problem": "비슷한 색상의 상품권 보관함을 어두운 환경이나 공동 공간에서 색깔만으로 식별하기 어려워 잘못 꺼내는 실수를 하는 경우가 빈번하다.",
+          "distinct_angle": "기존 단순 색상 구분에서 벗어나 위치, 글자, 도형 등의 시각 요소를 활용한 개인 맞춤형 표식을 설계하는 방법과 유지 관리법을 상세히 설명한다.",
+          "reader_situation": "여러 비슷한 색상 상품권 보관함을 갖고 있는 개인·공동 이용자가 어두운 환경이나 타인의 도움 없이도 쉽게 정확히 구분하려는 상황.",
+          "deliverable": "색상 외에 표식 설계 기본 요소 안내, 맞춤형 표식 부착법 및 실습 가이드, 표식 유지·관리 및 혼동 방지 점검 체크리스트.",
+          "task_id": "",
+          "direction_id": "gc_tip-41d96debcf",
+          "outline": [
+            "색상 외 표식의 주요 요소(위치·크기·글자·도형) 이해하기",
+            "개별 보관함에 맞는 표식 디자인과 부착 실습하기",
+            "표식 유지 및 교체 관리 요령과 혼동 방지 전략 마련하기"
+          ]
+        },
+        {
+          "topic": "복잡한 상품권 안내문 쉽게 전달하는 정의·이유·예시 분리법 익히기",
+          "source_id": "",
+          "reader_problem": "복잡하고 긴 상품권 안내 내용을 이해했어도, 다른 사람에게 정의, 이유, 예시를 명확히 구분해 쉽게 설명하기 어려워 전달에 어려움을 겪는다.",
+          "distinct_angle": "기존 단순 정리와 달리 문장별 유형 구분법과 효과적 전달 방법을 연습할 수 있는 단계별 가이드 및 실제 재설명 시나리오를 제공한다.",
+          "reader_situation": "직장이나 일상에서 상품권 안내 내용을 다른 사람에게 쉽게 전달해야 하는데, 정의·이유·예시를 효율적으로 구분하고 전달하는 실전 연습이 필요한 독자.",
+          "deliverable": "정의·이유·예시 구분 기준표, 유형별 전달 특징 분석 자료, 실제 상황 적용용 문장 분리와 재설명 연습 시나리오.",
+          "task_id": "",
+          "direction_id": "gc_tip-59f6a2cf62",
+          "outline": [
+            "복잡한 문장에서 정의, 이유, 예시 문장 구별하기",
+            "각 유형별 특징과 효과적인 전달법 익히기",
+            "실제 대화에서 분리한 내용을 순서대로 설명 연습하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15934,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1152,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17086
+        },
+        "estimated_usd": 0.0082168,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T05:14:11.808033+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24148,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_30m_tokens": 0,
+              "ttl_12h_tokens": 0
+            }
+          },
+          "output_tokens": 506,
+          "output_tokens_details": {
+            "reasoning_tokens": 80
+          },
+          "total_tokens": 24654
+        },
+        "estimated_usd": 0.020388,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T05:14:17.835010+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T05:14:02.904148+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T05:14:12.376870+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0286048,
+    "estimated_total_usd": 0.0286048,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
