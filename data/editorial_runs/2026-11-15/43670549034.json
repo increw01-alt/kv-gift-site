@@ -1,18 +1,20 @@
 {
   "run_id": "43670549034",
   "date_kst": "2026-11-15",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T03:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 순서를 그대로 반복합니다. 알림 분류 후보는 메시지·알림을 주제별로 나누고 우선순위를 정하는 기존 글과 겹치고, 설명 분리 후보는 정의·이유·예시를 나누는 기존 글과 같습니다. 집안일 중단 지점 후보는 이미 동일한 질문을 다룬 글이 있어 새 판단 도구가 없습니다. / 0번은 /board/gc_tip/34와 /board/sense/7이 이미 다룬 알림 정리·분류, 중요도 설정, 기록 절차를 본문 수준에서 반복합니다. 독자가 처한 상황과 해결 단계가 같아 새 질문으로 보기 어렵습니다. / 1번은 /board/sense/26이 이미 설명에서 정의·이유·예시를 구분하고 비예시까지 함께 제시하는 방법을 다룹니다. 같은 분리 기준과 연습 순서를 반복해 새 해결 내용이 없습니다. / 2번은 /board/sense/25가 이미 집안일을 공간별·단계별로 나누고, 멈춘 지점과 재개 지점을 메모하는 방법을 안내합니다. 중단 시점과 재개 계획이라는 핵심 질문이 그대로 겹칩니다. / 3번은 0번과 동일한 알림 분류 주제를 다른 문장으로 바꾼 수준이며, /board/gc_tip/34와 /board/sense/7의 기존 답으로 충분히 해결됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "43670549034",
@@ -22,15 +24,183 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-15T12:04:06.498105+09:00"
+      "attempt_started_at": "2026-11-15T12:04:06.498105+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [
+          {
+            "topic": "문서 내 사실 문장과 의견 문장 명확 구분으로 오해 줄이기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "복잡한 안내나 문서에서 사실과 개인 견해가 섞여 있어 중요한 정보 해석 시 혼란과 오해가 생기는 상황",
+            "distinct_angle": "기존 단순 읽기와 해석법을 넘어 사실·의견 문장 기준 정의, 구분 연습과 실무용 편집 방법까지 구체적으로 구성한다.",
+            "outline": [
+              "문서에서 사실과 의견 문장 구분 기준 명확히 정의하기",
+              "구분 기준 적용해 혼합된 문장 분리 실습하기",
+              "분리된 문서 내용으로 오해 방지 편집 및 검수 절차 설계하기"
+            ],
+            "reader_situation": "문서 편집자, 업무 담당자 등 중요한 안내를 정확히 이해하고 불필요 혼선을 줄이고자 하는 독자",
+            "deliverable": "사실·의견 문장 구분 기준표, 구분 적용 실습 예시, 편집 시 오류 방지를 위한 점검 체크리스트와 절차",
+            "direction_id": "sense-d926083876"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 661,
+          "coverageArticles": 143,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-7b5b6bc638",
+            "sense-131a66fcc8",
+            "sense-46678bb4d0",
+            "sense-d926083876"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "필요한 연락은 챙기고 불필요한 알림은 줄이는 개인 알림 분류법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "모든 알림을 일괄 켜거나 꺼서 중요한 연락을 놓치거나 피로감을 느껴 스트레스를 받는 상황.",
+          "distinct_angle": "단순 알림 설정 방법과 달리 알림 종류별 체계적 분류, 중요도·긴급도 기준 우선순위 설정, 일상 속 효과적인 확인 및 대응 절차 설계에 초점을 둔다.",
+          "outline": [
+            "수신하는 알림을 종류 및 성격별로 명확히 분류하기",
+            "중요도와 긴급성 기준으로 알림 우선순위 체계화하기",
+            "일상에서 효과적으로 알림을 확인·대응하는 절차 설계하기"
+          ],
+          "reader_situation": "각종 알림을 모두 받거나 모두 차단하는 극단적 선택을 반복하며 정보 과부하와 중요한 알림 누락 사이에서 고민하는 사용자.",
+          "deliverable": "알림 유형별 분류표, 중요도 기준 우선순위 설정 시트, 대응 우선순위 체크리스트와 개인별 확인 절차 매뉴얼.",
+          "direction_id": "sense-46678bb4d0"
+        },
+        {
+          "topic": "복잡한 설명에서 정의·이유·예시 분리해 쉽게 전달하는 연습",
+          "source_id": "",
+          "reader_problem": "길고 어려운 설명을 이해는 했지만, 다른 사람에게 다시 설명하거나 전달하려면 어떻게 나누어 말해야 할지 몰라 막히는 독자 문제",
+          "distinct_angle": "기존 일반 안내가 단순 설명 위주라면 이번 글은 구체적 분리 기준과 연습용 예시를 제공해 실제 대화에서 재설명을 체계적으로 할 수 있도록 안내한다.",
+          "reader_situation": "전달력이 부족해 직장이나 일상에서 복잡한 내용을 명확히 분리해 말해주고자 하는 사람의 실전 연습 상황",
+          "deliverable": "명확한 정의·이유·예시 구분 기준표, 분리 연습 단계별 행동 가이드, 다른 사람에게 다시 설명하는 연습용 대본 예시",
+          "task_id": "",
+          "direction_id": "sense-7b5b6bc638",
+          "outline": [
+            "설명 내 정의, 이유, 예시 문장 구분 기준 명확히 세우기",
+            "분리한 문장 유형별 특징 살피고 효과적 전달 방법 익히기",
+            "실제 상황에서 정의·이유·예시 순서로 재설명하는 연습 시나리오 작성하기"
+          ]
+        },
+        {
+          "topic": "한 번에 끝나지 않는 집안일을 중단하기 좋은 지점 나누기",
+          "source_id": "",
+          "reader_problem": "집안일을 도중에 멈춰야 할 때 어디서 끊으면 나중에 다시 시작하기 쉽고 효율적인지 막막해 고민하는 사용자 문제",
+          "distinct_angle": "기존 단순 집안일 목록 정리와 달리, 집안일 특성별·시간대별 최적 중단 지점 기준과 재개 계획 수립법을 제시한다.",
+          "reader_situation": "분주한 일상에서 집안일 중간 중간 중단해야 할 때 부담 없이 효율적으로 다시 이어가는 전략이 필요한 가정주부, 직장인 등",
+          "deliverable": "집안일 유형별 적정 중단 지점 체크리스트, 중단 시 재개 계획용 기록지, 효율적 중단과 재개를 돕는 행동 가이드",
+          "task_id": "",
+          "direction_id": "sense-131a66fcc8",
+          "outline": [
+            "집안일 종류·특성별 중단해도 무리 없는 최적 구간 정하기",
+            "중단 시 남길 정보와 재개 계획 수립법 실습하기",
+            "중단 후 다시 시작할 때 혼란 없이 효율적 진행하는 단계별 방법 익히기"
+          ]
+        },
+        {
+          "topic": "중요 연락은 챙기면서 불필요 알림 줄이는 개인 알림 분류법",
+          "source_id": "",
+          "reader_problem": "알림을 모두 켜 피로감을 겪거나 모두 꺼 중요한 연락을 놓치는 스트레스 중 하나에만 치우친 독자 딜레마",
+          "distinct_angle": "기존 전원 켜기·끄기 조언과 달리 알림 유형별 체계적 분류, 중요도·긴급성 기준 우선순위 설정과 개인 맞춤 적용법을 상세 안내한다.",
+          "reader_situation": "일상생활에서 균형 잡힌 알림 관리가 어려워 스트레스와 놓침 걱정이 모두 있는 스마트폰 이용자와 직장인",
+          "deliverable": "알림 종류와 성격별 분류표, 중요도 우선순위 산정 기준표, 개인 맞춤 알림 확인 및 대응 체계 설계서",
+          "task_id": "",
+          "direction_id": "sense-46678bb4d0",
+          "outline": [
+            "수신 알림을 유형별로 체계적 분류·분석하기",
+            "중요도 및 긴급성 기준으로 알림 우선순위 체계 만들기",
+            "개인 생활에 적용할 맞춤 알림 확인과 대응 절차 설계하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 12621,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1083,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 13704
+        },
+        "estimated_usd": 0.0067812,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T03:04:18.451130+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 26972,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 562,
+          "output_tokens_details": {
+            "reasoning_tokens": 186
+          },
+          "total_tokens": 27534
+        },
+        "estimated_usd": 0.022758,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T03:04:23.829627+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T03:04:09.864868+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T03:04:19.006025+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0295392,
+    "estimated_total_usd": 0.0295392,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
