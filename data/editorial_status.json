@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T23:13:59.059014+00:00",
+  "generatedAt": "2026-11-15T23:14:33.115789+00:00",
   "dateKst": "2026-11-16",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 6,
-  "held": 5,
+  "held": 6,
   "errors": 0,
-  "knownSubtotalUsd": 0.1745924,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2287498,
+  "estimatedTotalUsd": 0.2287498,
   "records": [
     {
       "runId": "43729087252",
@@ -79,21 +79,21 @@
     },
     {
       "runId": "43773583183",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "전체 집합과 일부 항목 합계 불일치 시 누락 범위 파악과 점검 절차 사례 중심 학습",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-15T23:12:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0541574,
+      "knownSubtotalUsd": 0.0541574
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 6,
+    "retryAfter": "2026-11-16T10:13:58.887844+09:00",
+    "cooldownMinutes": 120
   }
 }

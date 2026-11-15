@@ -504,10 +504,15 @@
       "board": "sense",
       "topic": "문서 내 사실 문장과 의견 문장 명확 구분으로 오해 줄이기",
       "run_id": "43732331998"
+    },
+    {
+      "board": "gc_information",
+      "topic": "전체 집합과 일부 항목 합계 불일치 시 누락 범위 파악과 점검 절차 사례 중심 학습",
+      "run_id": "43773583183"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "43761954008",
+  "last_board": "gc_information",
+  "last_run_id": "43773583183",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
