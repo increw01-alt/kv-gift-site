@@ -489,10 +489,15 @@
       "board": "general_notice",
       "topic": "키보드만으로 링크 탐색 시 현재 선택 위치 확인과 순서 인지 완벽 가이드",
       "run_id": "43660784086"
+    },
+    {
+      "board": "purchase",
+      "topic": "예산·시간·수신자 선택권 간 최적 의사결정 순서",
+      "run_id": "43682611650"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "43680105339",
+  "last_board": "purchase",
+  "last_run_id": "43682611650",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

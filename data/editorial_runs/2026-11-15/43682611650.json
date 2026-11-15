@@ -1,18 +1,20 @@
 {
   "run_id": "43682611650",
   "date_kst": "2026-11-15",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "purchase",
+  "topic": "예산·시간·수신자 선택권 간 최적 의사결정 순서",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-15T05:47:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 제목과 본문이 모두 예산·시간·수신자 선택권의 우선순위를 정하는 같은 질문과 같은 실행 순서를 반복합니다. / 기존 글들(/board/free/466, /board/free/486, /board/purchase/2576)에서 이미 다룬 선택권 비교, 공평성 기준, 금액 배분 흐름과 사실상 겹칩니다. / 본문은 조건을 적어 비교하고 표로 정리하라는 일반 안내만 반복해, 이번 글만의 새 판단 도구나 사례가 드러나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43682611650",
@@ -22,15 +24,301 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-15T14:48:59.701464+09:00"
+      "attempt_started_at": "2026-11-15T14:48:59.701464+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 672,
+          "coverageArticles": 144,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-be34e189f7",
+            "purchase-efaa383692",
+            "purchase-3b03fbce3d",
+            "purchase-6bf9948129"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "신뢰할 수 있는 설명과 광고 문구 구분하는 방법",
+          "source_id": "",
+          "reader_problem": "상품권 안내의 추천 문구와 실제 조건을 혼동해 올바른 판단 기준을 세우기 어려운 문제",
+          "distinct_angle": "기존 공개된 일반 안내와 달리 가상의 사례를 통해 평가 표현과 근거 문장을 구분하는 실습 중심 해결법을 제시",
+          "reader_situation": "상품권 소개 문구를 접하면서 광고성 표현과 사실 확인 문장을 명확히 구분해 신중하게 조건을 평가하려는 구매자",
+          "deliverable": "평가 표현과 조건 문장 분리 연습 자료, 근거 있는 조건만 선별하는 체크리스트, 광고 문구 구별법 안내",
+          "task_id": "",
+          "direction_id": "purchase-be34e189f7",
+          "outline": [
+            "추천 및 광고 문구와 객관적 조건 문장 차이 이해하기",
+            "가상 상품권 문장으로 평가 표현과 조건 문장 나누기 연습하기",
+            "실제 비교표 작성 시 근거 있는 문장만 포함하는 방법 익히기"
+          ]
+        },
+        {
+          "topic": "선물용 상품권 취향 질문 범위 정하는 실전 방법",
+          "source_id": "",
+          "reader_problem": "선물의 놀라움은 살리고 받는 이의 필수 취향과 조건을 최소한으로 파악하는 질문 범위 선정의 어려움",
+          "distinct_angle": "기존 추상 안내와 달리 취향 질문 범위별 장단점을 비교하고 다양한 상황별 질문 설계법과 문장 예시를 제시",
+          "reader_situation": "선물할 상품권 구매 전 부담 없이 필수 취향을 효율적으로 확인하려는 구매자",
+          "deliverable": "취향 질문 범위별 장단점 비교표, 맞춤형 질문 설계 가이드, 실제 질문 문장 모음집",
+          "task_id": "",
+          "direction_id": "purchase-efaa383692",
+          "outline": [
+            "선물 효과와 놀라움 유지 위한 취향 질문 범위 유형 파악",
+            "각 질문 범위가 선물 만족도에 미치는 영향 분석",
+            "상황별 맞춤 취향 질문 범위 선택과 문장 설계법 실습"
+          ]
+        },
+        {
+          "topic": "동일 용어 다른 적용 대상 분리해 비교 가능한 조건 찾기",
+          "source_id": "",
+          "reader_problem": "상품권 설명에서 같은 단어가 서로 다른 조건 적용 대상을 가리켜 객관적 비교 기준 마련이 어렵다",
+          "distinct_angle": "일반적 비교법에서 더 나아가 용어별 적용 대상 분리 및 점검 기준과 실제 비교 가능 조건만을 선별하는 구체적 절차 안내",
+          "reader_situation": "여러 후보 상품권 설명을 상세히 분석해 명확한 비교 기준을 세우고자 하는 구매자",
+          "deliverable": "용어별 적용 대상 분리 기준표, 후보별 적용 범위 체크리스트, 비교 조건 선별 매뉴얼 및 분리 작업 체크리스트",
+          "task_id": "",
+          "direction_id": "purchase-3b03fbce3d",
+          "outline": [
+            "상품권 설명 내 핵심 용어와 적용 대상 체계적으로 분리하기",
+            "서로 다른 적용 대상을 가진 동일 용어 구분 기준 마련하기",
+            "분리 기준에 따른 비교 가능 조건 선별 및 목록 작성법 익히기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "예산·시간·수신자 선택권 간 최적 의사결정 순서",
+        "source_id": "",
+        "reader_problem": "예산과 시간, 수신자별 선택권이 서로 충돌할 때 효과적으로 판단 순서를 정하는 데 어려움",
+        "distinct_angle": "기존 안내와 달리 조건별 가중치 산정과 단계별 우선순위 평가표를 포함한 실행 매뉴얼로 구체적 의사결정 흐름을 안내함",
+        "reader_situation": "한정된 예산과 촉박한 시간, 다양한 수신자 요구를 균형 있게 고려해 구매 결정을 체계적으로 하고자 하는 독자",
+        "deliverable": "상충 관계 시각화 개념도, 조건별 가중치 산정법, 단계별 의사결정 순서도와 실행 안내서",
+        "task_id": "",
+        "direction_id": "purchase-6bf9948129",
+        "outline": [
+          "예산, 시간, 수신자 선택권 간 상호 영향과 충돌점 이해하기",
+          "각 조건별 중요도와 가중치 산정 방법 배우기",
+          "가중치 기반 의사결정 순서 설계 및 실제 적용 행동 안내"
+        ],
+        "novelty_reason": "예산과 시간, 수신자별 선택권이 서로 충돌할 때 어떤 순서로 우선순위를 정할지 다루는 점이 기존 글들과 다릅니다. 가장 가까운 기존 글들은 예산 배분이나 선물 선택권 중 한 축만 다뤘는데, 이번 후보는 세 조건을 함께 놓고 가중치를 정한 뒤 결정 순서를 만드는 실행 흐름이 추가되어 있습니다.",
+        "screen_rejections": [
+          "영문처럼 보이는 홍보 표현과 사실 확인 문장을 나누는 연습은 기존 공개 글 /board/purchase/2578의 평가 문구와 조건 문장을 구분하는 질문, 연습, 비교표 작성과 사실상 같습니다. 새 해결 단계가 없습니다.",
+          "선물용 상품권을 고를 때 받는 사람의 취향 질문 범위를 정하는 내용은 기존 공개 글 /board/free/470과 질문 범위가 다르지 않고, 질문을 줄이거나 늘리는 방식만 바뀐 수준입니다. 독자가 얻는 판단 도구가 새롭지 않습니다.",
+          "같은 용어가 서로 다른 적용 대상을 가리키는지 분리해 비교하는 흐름은 /board/gc_information/16과 /board/gc_tip/48에서 이미 다룬 주문 단위와 품목 단위 구분, 본문과 각주 연결 절차와 겹칩니다. 용어 분리표로 바꾸었을 뿐 핵심 해결 순서가 같습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/purchase/2576",
+            "/board/free/466",
+            "/board/sense/23"
+          ],
+          "gap": "기존 글은 예산 배분이나 선택권 비교처럼 한 가지 충돌 축만 다뤘습니다. 이번 글은 예산이 빠듯한데 시간도 부족하고, 받는 사람의 선택권까지 고려해야 할 때 무엇을 먼저 확정하고 무엇을 뒤로 미뤄야 하는지, 서로 다른 조건의 우선순위를 정하는 판단 기준이 부족한 독자를 돕습니다.",
+          "example": "선물 후보가 몇 가지 있는데 예산은 넉넉하지 않고 준비할 시간도 짧습니다. 받는 사람은 직접 고르는 것을 좋아하지만, 선물용으로 바로 전달해야 하는 상황이라면 먼저 시간 제약을 기준으로 고르고, 그다음 예산 안에서 선택권이 남는지 확인한 뒤 최종안을 정합니다.",
+          "result": "독자는 예산, 시간, 선택권이 충돌할 때 어떤 기준을 먼저 확인하고 어떤 조건은 조정 가능한지 구분해, 상황에 맞는 한 가지 구매 결정을 스스로 내릴 수 있습니다.",
+          "section_actions": [
+            "먼저 예산과 시간 제약을 따로 적고, 둘 중 무엇이 더 빡빡한지부터 판단하는 기준을 세운다.",
+            "받는 사람의 선택권이 꼭 필요한지, 아니면 선물 전달 속도가 더 중요한지 상황별로 나누어 검토한다.",
+            "세 조건을 같은 표에 두고 우선순위를 매겨, 최종적으로 포기할 조건과 유지할 조건을 구분한다."
+          ]
+        }
+      },
+      "board": "purchase",
+      "topic": "예산·시간·수신자 선택권 간 최적 의사결정 순서",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-14T13:32:03Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15776,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 941,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16717
+        },
+        "estimated_usd": 0.007816,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T05:49:11.018357+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 31620,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1003,
+          "output_tokens_details": {
+            "reasoning_tokens": 313
+          },
+          "total_tokens": 32623
+        },
+        "estimated_usd": 0.0282285,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T05:49:18.122856+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3490,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 523,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4013
+        },
+        "estimated_usd": 0.0022328,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T05:49:22.029371+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9945,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 575,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10520
+        },
+        "estimated_usd": 0.004898,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-15T05:49:26.937261+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19442,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 469,
+          "output_tokens_details": {
+            "reasoning_tokens": 166
+          },
+          "total_tokens": 19911
+        },
+        "estimated_usd": 0.016692,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-15T05:49:31.386660+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T05:49:02.086127+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T05:49:11.527370+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T05:49:18.125690+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-15T05:49:22.908606+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-15T05:49:28.249789+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0598673,
+    "estimated_total_usd": 0.0598673,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

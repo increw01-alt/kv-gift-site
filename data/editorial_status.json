@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T05:48:59.859376+00:00",
+  "generatedAt": "2026-11-15T05:49:31.550291+00:00",
   "dateKst": "2026-11-15",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 13,
-  "held": 10,
+  "held": 11,
   "errors": 0,
-  "knownSubtotalUsd": 0.55970985,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.61957715,
+  "estimatedTotalUsd": 0.61957715,
   "records": [
     {
       "runId": "43609416223",
@@ -170,21 +170,21 @@
     },
     {
       "runId": "43682611650",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "예산·시간·수신자 선택권 간 최적 의사결정 순서",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-15T05:47:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0598673,
+      "knownSubtotalUsd": 0.0598673
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 2,
+    "retryAfter": "2026-11-15T15:48:59.701464+09:00",
+    "cooldownMinutes": 60
   }
 }
