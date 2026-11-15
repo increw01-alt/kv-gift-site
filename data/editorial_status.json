@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T00:59:16.023241+00:00",
+  "generatedAt": "2026-11-15T00:59:51.801331+00:00",
   "dateKst": "2026-11-15",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 9,
-  "held": 7,
+  "held": 8,
   "errors": 0,
-  "knownSubtotalUsd": 0.30952575,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3672807,
+  "estimatedTotalUsd": 0.3672807,
   "records": [
     {
       "runId": "43609416223",
@@ -118,21 +118,21 @@
     },
     {
       "runId": "43660784086",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "키보드만으로 링크 탐색 시 현재 선택 위치 확인과 순서 인지 완벽 가이드",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-15T00:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05775495,
+      "knownSubtotalUsd": 0.05775495
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 4,
+    "retryAfter": "2026-11-15T11:59:15.772190+09:00",
+    "cooldownMinutes": 120
   }
 }

@@ -484,10 +484,15 @@
       "board": "sense",
       "topic": "자주 쓰는 물건을 효율적으로 배치해 꺼내기와 제자리 복귀 동작 줄이기",
       "run_id": "43618467968"
+    },
+    {
+      "board": "general_notice",
+      "topic": "키보드만으로 링크 탐색 시 현재 선택 위치 확인과 순서 인지 완벽 가이드",
+      "run_id": "43660784086"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "43650383977",
+  "last_board": "general_notice",
+  "last_run_id": "43660784086",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
