@@ -1721,5 +1721,18 @@
     "publication_mode": "automatic",
     "run_id": "43679738246",
     "usage_file": "data/editorial_runs/2026-11-15/43679738246.json"
+  },
+  {
+    "board": "gc_information",
+    "id": 21,
+    "topic": "상품권 문의 기록에서 접수 사실과 실제 처리 결과를 명확히 구분하는 법",
+    "drafted_at": "2026-11-15",
+    "automation": true,
+    "search_intent": "상품권 문의 기록에서 접수 사실과 처리 결과를 나눠 적고 증거 성격까지 정리하려는 질문",
+    "image_scene": "책상 위에 상담 메모지 두 장과 클립보드가 놓여 있고, 한 장에는 문의를 처음 받은 내용이 적혀 있으며 다른 장에는 처리 완료와 후속 안내가 적혀 있다. 가운데에는 사건별로 묶는 작은 분류함과 색깔 스티커가 있어, 한 사람이 문장을 접수 사실과 처리 결과로 나눠 붙이며 교차 분류표를 완성하는 구도",
+    "image_alt": "책상 위에서 상담 메모를 접수 사실과 처리 결과로 나눠 붙이고 교차 분류표를 만드는 장면",
+    "publication_mode": "automatic",
+    "run_id": "43687436011",
+    "usage_file": "data/editorial_runs/2026-11-15/43687436011.json"
   }
 ]
