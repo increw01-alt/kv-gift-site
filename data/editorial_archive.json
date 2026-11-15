@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T06:55:01.412540+00:00",
+  "generatedAt": "2026-11-15T06:56:25.018231+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5235,7 +5235,7 @@
       "board": "gc_information",
       "topic": "상품권 문의 기록에서 접수 사실과 실제 처리 결과를 명확히 구분하는 법",
       "url": "https://kv-gift.co.kr/board/gc_information/21",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-15T06:56:24.979952+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1335673,
       "knownSubtotalUsd": 0.1335673
