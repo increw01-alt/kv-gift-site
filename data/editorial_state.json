@@ -519,10 +519,15 @@
       "board": "purchase",
       "topic": "상품권 설명 내 동일 단어 적용 대상 구분해 객관적 비교하기",
       "run_id": "43806717549"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 안내에서 모든 조건 충족과 일부 조건 충족의 논리 체계 구분하기",
+      "run_id": "43905934288"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "43806717549",
+  "last_board": "gc_information",
+  "last_run_id": "43905934288",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
