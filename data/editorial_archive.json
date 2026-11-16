@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T04:49:45.218636+00:00",
+  "generatedAt": "2026-11-16T04:51:09.554169+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5431,7 +5431,7 @@
       "board": "gc_tip",
       "topic": "연결 끊김 후 중단된 상품권 구입 절차 안전 복구 방법",
       "url": "https://kv-gift.co.kr/board/gc_tip/51",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-16T04:51:09.521432+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.11806065,
       "knownSubtotalUsd": 0.11806065
