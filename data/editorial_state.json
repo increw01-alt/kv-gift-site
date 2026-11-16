@@ -526,8 +526,8 @@
       "run_id": "43905934288"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "43945680071",
+  "last_board": "free",
+  "last_run_id": "43966558165",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1007,6 +1007,14 @@
       "topic": "할인 혜택 취소 시 혜택 및 주문 내역 분리 확인법",
       "date_kst": "2026-11-12",
       "run_id": "43046954842",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "free",
+      "topic": "상품권 관련 메시지 링크 열기 전 발신 경로 안전하게 확인하기",
+      "date_kst": "2026-11-17",
+      "run_id": "43966558165",
       "status": "held"
     }
   ]
