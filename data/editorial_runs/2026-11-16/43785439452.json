@@ -1,18 +1,20 @@
 {
   "run_id": "43785439452",
   "date_kst": "2026-11-16",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "보유 목적과 사용할 계획을 대조하는 선택 기준",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-16T01:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 '[상품권팁] 상품권 사용 계획을 세울 때 필요한 것부터 고르는 방법'과 질문 구조가 같습니다. 목적별로 나누고 사용 계획을 적은 뒤 우선순위를 조정하는 흐름이 동일합니다. / 본문도 보유 목적 정리, 사용 계획 기록, 두 항목의 불일치 점검과 우선순위 조정으로 이어져 기존 글의 해결 절차를 그대로 적용해도 답이 됩니다. / 기획안에서 말한 '목적별 보유 현황표'와 '계획 일치 체크리스트'가 실제 본문에 충분히 구현되지 않아 새 판단 도구가 추가되었다고 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43785439452",
@@ -22,15 +24,300 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-16T10:19:00.465338+09:00"
+      "attempt_started_at": "2026-11-16T10:19:00.465338+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 699,
+          "coverageArticles": 145,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-be8f258b08",
+            "sale-69484ecae0",
+            "sale-0f792e06e6",
+            "sale-b054376adc"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "매입처의 추가 질문에 아직 답을 모를 때 추측과 확인 가능한 사실을 분리하는 대응",
+          "source_id": "",
+          "reader_problem": "상품권 매입 상담 중 매입처의 추가 질문에 즉답하기 어려운 상황에서, 추측 없이 현재 확인한 사실과 미확인 사항을 명확히 구분해 안전하고 신뢰감 있게 답변하는 방법이 필요합니다.",
+          "distinct_angle": "기존 게시글은 추측 없이 답변하는 일반 방법에 그친 반면, 이 글은 구체적으로 확인 가능한 사항과 미확인 사항 분리 방법, 조건부 답변 문구 작성법, 나중에 재답변하는 절차를 체계적으로 안내해 매입처와의 대화를 원활하게 진행하는 실전 대응을 중심으로 다룹니다.",
+          "reader_situation": "상품권 매입 상담 중 일부 상태에 관해 아직 파악이 안 되어 매입처 질문에 답이 미흡하거나 오해가 생길 수 있어 정확한 구분 기준과 이후 재확인 계획까지 세워 안전한 상담을 원하는 판매자.",
+          "deliverable": "확인한 사실과 미확인 사항을 분리해 기록하는 양식, 추측 없이 조건부 답변하는 문장 예시, 확인 후 재답변 준비 절차 안내.",
+          "task_id": "",
+          "direction_id": "sale-0f792e06e6",
+          "outline": [
+            "현재 확인한 상품권 상태를 구분해 정리하는 구체적인 방법",
+            "확인하지 못한 사항을 명확히 분리하고 목록으로 만드는 절차",
+            "추측 없이 조건부로 안전하게 답변하는 문장 작성법 익히기"
+          ]
+        },
+        {
+          "topic": "판매를 진행하지 않기로 결정한 뒤 문의를 종료하고 보유 계획으로 돌리는 정리",
+          "source_id": "",
+          "reader_problem": "상품권 판매 상담을 통해 매입 조건을 확인했으나 판매하지 않기로 결정한 후, 상대방과의 문의 진행 상황이 불분명해 혼란이 생기고 추후 문의 대응 계획도 모호한 상황입니다.",
+          "distinct_angle": "기존 글은 중단 시점과 확인 사항 안내에 집중했지만, 이번 기획은 명확한 판매 중단 의사 전달 문구, 상대 문의 상태 점검, 문의 종료 절차와 재개 가능성까지 고려한 체계적 정리법으로 판매 중단 후 커뮤니케이션 혼선을 최소화하는 실제 행동 지침을 소개합니다.",
+          "reader_situation": "상품권 판매 상담 중 판매 중단을 결정한 판매자 또는 상담 담당자로서 상대방에게 명확히 종료 의사를 알리고, 이후 예상치 못한 추가 문의 대응 과정도 체계적으로 관리하려는 상황.",
+          "deliverable": "판매 중단 의사 명확 전달 문구 샘플, 상대 문의 상태 확인 체크리스트, 문의 종료 절차 및 후속 대응 안내서.",
+          "task_id": "",
+          "direction_id": "sale-be8f258b08",
+          "outline": [
+            "판매하지 않기로 한 의사를 명확히 표현하고 문서화하는 방법",
+            "상대 문의 진행 상태를 점검하고 확인하는 절차",
+            "문의 종료 후 오해 없이 후속 대응을 마무리하는 방법"
+          ]
+        },
+        {
+          "topic": "안내된 업무 범위 밖의 요청을 받았을 때 정보를 추가 제공하기 전에 요청 주체를 확인하는 행동",
+          "source_id": "",
+          "reader_problem": "상품권 판매 상담 중 예상하지 못한 업무 범위 외 자료 요청을 받았을 때, 요청자의 신원과 자료 요청 목적을 정확히 파악하지 못해 불필요하거나 개인정보 노출 가능성이 있는 자료를 무심코 제공할 위험이 있습니다.",
+          "distinct_angle": "기존 글은 자료 요청 시 보안 절차를 일반적으로 설명하는데 그친 반면, 이번 기획은 요청 주체 확인 체크리스트, 자료 목적과 범위 대조, 단계별 보안 유지 절차를 상세히 안내해 실제 상담 상황에서 체계적이고 안전한 대응을 돕는 실무 중심 가이드 제공합니다.",
+          "reader_situation": "상품권 판매 상담을 담당하는 직원 또는 판매자로서 업무 범위 외 요구에 면밀히 대응해 불필요한 정보 유출이나 분쟁을 미연에 방지하려는 상황.",
+          "deliverable": "요청자 확인 체크리스트, 요청 목적별 자료 범위 대조표, 보안 유지 단계별 대응 매뉴얼.",
+          "task_id": "",
+          "direction_id": "sale-69484ecae0",
+          "outline": [
+            "자료 요청 시 요청 주체와 전달 경로 철저하게 확인하기",
+            "요청 목적과 요구 범위를 면밀히 대조해 불필요 자료 제공 차단하기",
+            "자료 제공 전 보안 관련 단계별 절차와 대응 방안 마련하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "보유 목적과 사용할 계획을 대조하는 선택 기준",
+        "source_id": "",
+        "reader_problem": "여러 가지 목적별로 보유한 상품권과 실제 예정된 사용 계획이 일치하는지 확인하기 어려워 관리 효율성과 합리적 소비 결정을 위한 명확한 기준이 부족한 문제입니다.",
+        "distinct_angle": "기존 글은 목적별 분류와 사용 계획 작성에 머무르는 반면, 이 기획은 목적별 보유 상품권 현황표 작성법, 예상 사용계획 상세 분류, 두 정보를 대조해 계획 일치 여부 점검 및 조정하는 실질적 관리 기준과 체크리스트를 만드는 방법을 구체적으로 안내합니다.",
+        "reader_situation": "개인이나 가족 단위로 다양한 상품권을 목적별로 보유하고, 예정된 사용 계획과 대조하며 합리적으로 관리하고자 하는 상황.",
+        "deliverable": "목적별 상품권 보유 현황표, 상세 사용 계획 기록서, 계획 일치 및 조정용 점검 체크리스트.",
+        "task_id": "",
+        "direction_id": "sale-b054376adc",
+        "outline": [
+          "상품권을 보유 목적별로 체계적으로 분류하고 정리하는 방법",
+          "예정된 사용 계획을 상세하게 기록하고 유형별로 구분하기",
+          "목적별 보유와 사용 계획을 대조해 일치 여부 점검 및 조정하기"
+        ],
+        "novelty_reason": "후보 셋은 모두 상품권을 정리하고 대조하는 흐름이지만, 세 번째 후보는 ‘보유 목적’과 ‘실제 사용할 계획’을 맞춰 보며 남겨 둘지 조정할지 판단하는 문제라서, 기존의 상태 확인·문의 기록·알림 정리 글과는 독자가 해야 할 결정이 다릅니다. 가장 가까운 기존 글은 보관·사용 계획 정리 쪽이지만, 이번 글은 분류나 메모를 넘어서 보유 목적과 사용 계획의 불일치 여부를 기준으로 재배치하는 판단까지 요구하므로 상대적으로 새로운 방향입니다.",
+        "screen_rejections": [
+          "영번은 매입 상담 중 모르는 질문에 확인한 사실과 미확인 사항을 나눠 답하는 방법으로, 공개 글 경로인 /board/sale/3700이 이미 같은 질문과 해결 순서를 다뤘습니다.",
+          "일번은 판매를 중단한 뒤 문의를 정리하는 흐름으로 /board/sale/3694의 상담 중단 시점 확인과 중단 의사 전달, 후속 기록 절차와 겹칩니다.",
+          "이번은 업무 범위 밖 요청에서 요청 주체를 확인하는 내용이지만, /board/gc_information/19가 이미 본인 확인용 정보와 조회용 정보를 나누어 필요한 정보만 확인하는 질문을 해결했습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/43",
+            "/board/gc_tip/32"
+          ],
+          "gap": "기존 글은 상품권을 용도별로 나누거나 사용 계획을 세우는 데 그치지만, 이번 글은 보유 목적과 실제 사용 계획이 어긋날 때 무엇을 남기고 무엇을 조정할지 판단하는 기준을 제시해야 합니다.",
+          "example": "예를 들어 외식용으로 따로 둔 상품권이 있는데, 실제로는 선물용으로 더 급하게 써야 할 상황이라면 단순 분류만으로는 부족합니다. 이때는 보유 목적, 현재 쓸 일, 대체 가능한 다른 상품권을 함께 보고 우선순위를 다시 정해야 합니다.",
+          "result": "독자는 보유 목적과 사용 계획을 함께 대조해, 그대로 둘 상품권과 우선순위를 바꿔 쓸 상품권을 구분할 수 있게 됩니다.",
+          "section_actions": [
+            "첫 절에서는 보유 목적을 적고 실제 사용 계획과 어긋나는 항목을 찾아, 그대로 유지할지 조정할지 첫 판단을 내리게 합니다.",
+            "둘째 절에서는 사용 계획의 시급함과 대체 가능성을 함께 적어, 어떤 상품권부터 먼저 쓸지 순서를 다시 정하게 합니다.",
+            "셋째 절에서는 조정한 기준을 짧게 기록해 두고, 다음에 비슷한 상황이 오면 같은 기준으로 다시 판단할 수 있게 합니다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "보유 목적과 사용할 계획을 대조하는 선택 기준",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-15T13:56:42Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15954,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1291,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17245
+        },
+        "estimated_usd": 0.0084472,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-16T01:19:14.011746+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25721,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 925,
+          "output_tokens_details": {
+            "reasoning_tokens": 283
+          },
+          "total_tokens": 26646
+        },
+        "estimated_usd": 0.02345325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-16T01:19:22.189769+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3491,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 379,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3870
+        },
+        "estimated_usd": 0.0020028,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-16T01:19:25.939532+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8747,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 420,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9167
+        },
+        "estimated_usd": 0.0041708,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-16T01:19:30.512766+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17377,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 505,
+          "output_tokens_details": {
+            "reasoning_tokens": 135
+          },
+          "total_tokens": 17882
+        },
+        "estimated_usd": 0.01530525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-16T01:19:35.526187+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-16T01:19:03.189458+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-16T01:19:14.742101+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-16T01:19:22.197599+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-16T01:19:26.984580+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-16T01:19:32.193183+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0533793,
+    "estimated_total_usd": 0.0533793,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

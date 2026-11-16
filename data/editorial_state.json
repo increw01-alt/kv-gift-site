@@ -509,10 +509,15 @@
       "board": "gc_information",
       "topic": "전체 집합과 일부 항목 합계 불일치 시 누락 범위 파악과 점검 절차 사례 중심 학습",
       "run_id": "43773583183"
+    },
+    {
+      "board": "sale",
+      "topic": "보유 목적과 사용할 계획을 대조하는 선택 기준",
+      "run_id": "43785439452"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "43773583183",
+  "last_board": "sale",
+  "last_run_id": "43785439452",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T01:19:00.680701+00:00",
+  "generatedAt": "2026-11-16T01:19:35.791156+00:00",
   "dateKst": "2026-11-16",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 7,
-  "held": 6,
+  "held": 7,
   "errors": 0,
-  "knownSubtotalUsd": 0.2287498,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2821291,
+  "estimatedTotalUsd": 0.2821291,
   "records": [
     {
       "runId": "43729087252",
@@ -92,21 +92,21 @@
     },
     {
       "runId": "43785439452",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "보유 목적과 사용할 계획을 대조하는 선택 기준",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-16T01:17:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0533793,
+      "knownSubtotalUsd": 0.0533793
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 7,
+    "retryAfter": "2026-11-16T12:19:00.465338+09:00",
+    "cooldownMinutes": 120
   }
 }
