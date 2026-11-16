@@ -3,16 +3,18 @@
   "date_kst": "2026-11-17",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-16T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "43894825975",
@@ -22,15 +24,116 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-17T01:14:01.657946+09:00"
+      "attempt_started_at": "2026-11-17T01:14:01.657946+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [
+          {
+            "topic": "상품권 종류, 이름, 분류 체계와 개념 도식 정리하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권 이름과 별칭이 겹치거나 포함 관계가 혼재되어 상품권별 구분과 관계 파악이 어렵다.",
+            "distinct_angle": "기존 단순 이름 구분 안내와 다르게, 구체적 개념도와 라벨링 원칙으로 이름·별칭·포함 관계를 시각화하고 실습 형태로 구성한다.",
+            "outline": [
+              "상품권 이름·별칭·분류 용어 개념과 차이 명확히 정의하기",
+              "여러 상품권의 포함 관계를 시각화하는 개념도 작성법과 실습",
+              "이름과 별칭이 중복될 때 구분 기준 정리 및 분류 표 작성 방법 익히기"
+            ],
+            "reader_situation": "상품권 운영자나 구매자가 다양한 이름과 별칭을 체계적으로 분류하고 표로 정리해 쉽게 대응하는 상황.",
+            "deliverable": "상품권 이름, 별칭, 분류 용어 정의 요약, 포함 관계를 보여주는 개념도 작성 템플릿 및 구분 체크리스트, 실무용 분류 표 샘플과 작성 지침서",
+            "direction_id": "gc_information-bb1dae521b"
+          },
+          {
+            "topic": "상품권 안내에서 모든 조건 충족과 일부 조건 충족의 논리 체계 구분하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "안내문에 여러 조건이 나열될 때 모두 충족인지 하나만 충족인지 혼동되어 조건 판단에 오류가 발생한다.",
+            "distinct_angle": "조건 논리의 기본 개념부터 적용 유형별 실제 판단 체계를 체크리스트와 비교 사례로 상세히 설명한다.",
+            "outline": [
+              "‘모든 조건 충족’ 논리와 실무적 해석 방법 설명하기",
+              "‘일부 조건만 충족’ 논리와 적용 사례 분석",
+              "조건별 판단 체크리스트 만들기와 가상 예제 적용 실습"
+            ],
+            "reader_situation": "상품권 모집 안내문 등 복합 조건 조건문의 의미를 정확히 이해해 조건 충족 판단을 명확히 하고자 하는 이용자.",
+            "deliverable": "‘모두 충족’과 ‘하나만 충족’ 조건 유형 정의서, 조건 논리 판단용 체크리스트, 실제 사례 기반 판단 흐름 비교표",
+            "direction_id": "gc_information-46cb893488"
+          },
+          {
+            "topic": "상품권 안내 숫자 중 확정값, 예시값, 예상값 구분과 해석법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권 안내 내 숫자가 확정된 값인지 예시인지 예상인지 구분이 어렵고 잘못 적용해 준비가 힘들다.",
+            "distinct_angle": "기존 단순 설명과 달리, 증거 수준별 개념과 해석 절차를 비교표와 작성을 통한 실습 중심으로 제공한다.",
+            "outline": [
+              "확정값, 예시값, 예상값 개념과 증거 수준 설명",
+              "각 값 유형별 안내 문장 해석 시 주의할 점과 판단 절차",
+              "독자가 직접 만드는 비교표와 안내문 사례 적용 실습"
+            ],
+            "reader_situation": "안내문과 화면 표시의 금액·기간·조건 숫자가 무엇을 의미하는지 명확하게 구분해 올바른 준비를 하려는 독자.",
+            "deliverable": "확정·예시·예상 값 개념 정의와 증거 수준 비교표, 판단 절차 가이드, 독자 작성용 비교표와 사례 실습 양식",
+            "direction_id": "gc_information-603f97842d"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 721,
+          "coverageArticles": 147,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-bb1dae521b",
+            "gc_information-cfcea2023c",
+            "gc_information-46cb893488",
+            "gc_information-603f97842d"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24897,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 855,
+          "output_tokens_details": {
+            "reasoning_tokens": 207
+          },
+          "total_tokens": 25752
+        },
+        "estimated_usd": 0.02252025,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-16T16:14:13.887604+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-16T16:14:05.883874+00:00",
+        "usage_record_index": 0
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02252025,
+    "estimated_total_usd": 0.02252025,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
