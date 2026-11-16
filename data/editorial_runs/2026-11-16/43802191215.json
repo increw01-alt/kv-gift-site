@@ -1,18 +1,20 @@
 {
   "run_id": "43802191215",
   "date_kst": "2026-11-16",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-16T04:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 모든 후보가 이미 공개된 글의 질문과 해결 절차를 본문 수준에서 반복합니다. 0번은 새 업무 학습에서 설명·시연·직접 연습을 조합하는 방식이 /board/free/481과 겹치고, 1번은 의견 수렴과 빠른 결정 사이에서 결정권을 나누는 기준이 /board/free/485, /board/free/473, /board/free/480과 사실상 같습니다. 2번은 맞춤 선물과 동일 선물의 공평성 기준 비교가 /board/free/486과 중복되고, 3번은 여러 관점을 비교해 편향을 줄이는 운영 결정법이 /board/free/482와 같은 문제를 다룹니다. 새로 해결하는 독립 질문이나 기존 답으로는 처리되지 않는 구체적 차이를 확인할 수 없어 보류합니다. / 0번은 새 업무를 익힐 때 설명과 시연을 어떻게 조합할지 묻는 질문과 단계별 학습 계획이 /board/free/481의 순서 중심 작업과 판단 기준 중심 작업을 구분해 설명·시연·직접 연습을 조합하는 해결 절차와 같습니다. / 1번은 의견 충돌 상황에서 빠른 결정과 의견 수렴을 어떻게 나눌지, 결정권을 어떻게 위임할지를 다루는데 /board/free/485가 이미 같은 질문을 긴급성·영향 범위·권한 배분 기준으로 해결했고 /board/free/473, /board/free/480도 합의 기준과 재논의 절차를 다뤘습니다. / 2번은 개별 맞춤 선물과 모두에게 같은 선물의 공평성 기준을 비교하는 내용으로 /board/free/486이 이미 동일한 공평성 기준, 장단점, 질문 리스트를 제시해 해결한 질문입니다. / 3번은 여러 관점을 객관적으로 비교해 개인 경험 편향을 줄이는 운영 결정법을 묻지만 /board/free/482가 이미 선택 당시 정보와 나중 결과를 분리하고 판단 과정을 평가하는 방식으로 같은 문제를 다뤘습니다."
+    ]
   },
   "api_usage": {
     "run_id": "43802191215",
@@ -22,15 +24,167 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-16T13:08:58.537993+09:00"
+      "attempt_started_at": "2026-11-16T13:08:58.537993+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 710,
+          "coverageArticles": 146,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-b65d41dcec",
+            "free-9d7f9c3f7a",
+            "free-12c16f333b",
+            "free-494c9616de"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "설명 학습과 시연 학습, 새 업무 익히기 최적 조합 고민하기",
+          "source_id": "",
+          "reader_problem": "새 업무를 배울 때 설명을 듣거나 실제 시연을 보는 것 중 어떤 학습법이 내 업무 이해와 적용에 가장 도움이 되는지 판단하기 어려움",
+          "distinct_angle": "기존 설명 또는 시연 단독 활용 안내와 달리, 업무 유형에 따른 상세 학습법 조합과 단계별 계획 수립법을 안내해 스스로 최적 학습법을 설계하도록 지원함",
+          "reader_situation": "신기술이나 절차를 익혀야 하는 업무 담당자가 업무별 특성에 맞게 설명과 시연 학습법을 조합해 효율적으로 습득하려는 상황",
+          "deliverable": "업무 유형별 적합 학습법 비교표, 단계별 학습 계획표, 학습 효과 개선을 위한 실천 가이드",
+          "task_id": "",
+          "direction_id": "free-12c16f333b",
+          "outline": [
+            "업무를 순서 중심 작업과 판단 기준 중심 작업으로 구분해 보기",
+            "순서 익힐 때 시연 학습의 효과와 실제 적용법 살펴보기",
+            "판단 기준 익힐 때 설명 듣기와 직접 연습 조합법 및 단계별 학습 계획 세우기"
+          ]
+        },
+        {
+          "topic": "논의 지연 문제, 신속 결정과 의견 수렴 균형 맞출 때 결정권 위임 기준 세우기",
+          "source_id": "",
+          "reader_problem": "다양한 의견과 빠른 결정이 충돌하는 상황에서 합리적으로 결정권을 위임하고 의견을 수렴하는 기준과 절차를 찾기 어려움",
+          "distinct_angle": "기존 단일 의견 조율이나 신속 결정만 다룬 글과 달리, 상황별 충돌 유형 분석과 구체적 위임 질문 리스트, 실행 가능한 결정권 배분 절차 구성을 제시함",
+          "reader_situation": "팀이나 모임에서 의견이 다양해 빠른 의사결정과 충분한 의견 수렴 사이 균형 문제를 해결해야 하는 운영 책임자 혹은 참여자",
+          "deliverable": "충돌 유형별 결정권 위임 질문지, 사례별 권한 배분 절차 매뉴얼, 결정 후 행동 계획 문서",
+          "task_id": "",
+          "direction_id": "free-494c9616de",
+          "outline": [
+            "의견 충돌과 신속 결정 상황 유형별 문제점 분석하기",
+            "결정권 위임을 위한 구체적 상황 판단 질문과 기준 수립법 익히기",
+            "사례별 권한 분배 및 후속 조치 절차 설계 및 실행 시뮬레이션"
+          ]
+        },
+        {
+          "topic": "개별 맞춤 선물과 모두에게 동일 선물 중 공평성 기준 다각도 비교",
+          "source_id": "",
+          "reader_problem": "모임에서 개별 맞춤 선물과 동일한 선물 중 어느 쪽이 공평한지 판단하는 데 금액, 선택권, 필요 중 어떤 기준을 우선할지 혼란스러움",
+          "distinct_angle": "기존 단순 공평 안내를 넘어서 공평성 유형별 장단점과 구체 상황에 맞는 우선순위 설정 질문과 실제 판단 지침을 함께 제공함",
+          "reader_situation": "모임 주최자나 참여자가 선물 방식을 결정하며 각 공평성 기준의 의미와 상황별 적용법을 체계적으로 이해하려는 경우",
+          "deliverable": "공평성 유형 비교표, 우선순위 판단 질문 리스트, 상황별 적용 판단 가이드",
+          "task_id": "",
+          "direction_id": "free-b65d41dcec",
+          "outline": [
+            "공평성 기준 유형별 정의 및 차이점 명확히 이해하기",
+            "모두에게 동일 선물과 맞춤 선물 장단점 구체적으로 비교하기",
+            "금액·선택권·필요 기준 우선순위 정하는 질문과 판단 방법 실습하기"
+          ]
+        },
+        {
+          "topic": "여러 관점 객관적 비교로 개인 경험 편향 극복하는 운영 결정법",
+          "source_id": "",
+          "reader_problem": "운영 결정 시 개인 경험이나 편견에 치우치지 않고 여러 관점을 객관적으로 비교해 균형 잡힌 결정을 내리기 어려움",
+          "distinct_angle": "일방적 주관 판단 극복 방법 대신 주요 관점 수집, 객관적 평가 절차, 근거별 장단점 분석과 합리적 의견 조율 전략까지 단계별 안내 제공",
+          "reader_situation": "운영팀에서 다양한 의견과 정보를 객관적으로 평가·조율하여 일관되고 근거 있는 결정을 해야 하는 리더와 조율 담당자",
+          "deliverable": "관점 비교표, 객관적 평가 지침서, 합리적 의견 조율 및 결정 전략 안내서",
+          "task_id": "",
+          "direction_id": "free-9d7f9c3f7a",
+          "outline": [
+            "주요 관점과 판단 기준 수집해 비교 리스트 작성하기",
+            "각 관점별 근거와 장단점 객관적으로 평가하는 방법 익히기",
+            "비교 결과를 토대로 합리적 결론 도출과 의견 조율 전략 마련하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15862,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1086,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16948
+        },
+        "estimated_usd": 0.0080824,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-16T04:09:09.636969+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 31461,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 666,
+          "output_tokens_details": {
+            "reasoning_tokens": 166
+          },
+          "total_tokens": 32127
+        },
+        "estimated_usd": 0.02659275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-16T04:09:14.665942+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-16T04:09:01.138712+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-16T04:09:10.327357+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03467515,
+    "estimated_total_usd": 0.03467515,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
