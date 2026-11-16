@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T04:48:53.652009+00:00",
+  "generatedAt": "2026-11-16T04:49:45.190880+00:00",
   "dateKst": "2026-11-16",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 13,
   "held": 9,
   "errors": 2,
-  "knownSubtotalUsd": 0.5419668,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.66002745,
+  "estimatedTotalUsd": 0.66002745,
   "records": [
     {
       "runId": "43729087252",
@@ -170,16 +170,16 @@
     },
     {
       "runId": "43806228814",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "gc_tip",
+      "topic": "연결 끊김 후 중단된 상품권 구입 절차 안전 복구 방법",
+      "url": "https://kv-gift.co.kr/board/gc_tip/51",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-16T04:47:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.11806065,
+      "knownSubtotalUsd": 0.11806065
     }
   ],
   "topicRetry": {

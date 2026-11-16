@@ -1747,5 +1747,18 @@
     "publication_mode": "automatic",
     "run_id": "43801690686",
     "usage_file": "data/editorial_runs/2026-11-16/43801690686.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 51,
+    "topic": "연결 끊김 후 중단된 상품권 구입 절차 안전 복구 방법",
+    "drafted_at": "2026-11-16",
+    "automation": true,
+    "search_intent": "연결이 끊긴 뒤 상품권 구매를 어디서 다시 이어야 하는지 마지막 완료 단계 기준으로 복구 순서를 정리하려는 질문",
+    "image_scene": "책상 위에 상품권 구매 화면이 열린 노트북과 마지막으로 확인한 문구를 적는 메모지가 나란히 놓여 있다. 한 사람이 화면의 현재 단계와 메모의 완료 항목을 짚어 보며, 이어서 할 일과 건너뛸 일을 분리해 복구 순서를 정리하는 구도다.",
+    "image_alt": "상품권 구매 화면과 메모지를 함께 보며 마지막 완료 단계와 남은 단계를 구분해 적는 장면",
+    "publication_mode": "automatic",
+    "run_id": "43806228814",
+    "usage_file": "data/editorial_runs/2026-11-16/43806228814.json"
   }
 ]
