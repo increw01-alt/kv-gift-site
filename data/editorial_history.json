@@ -1734,5 +1734,18 @@
     "publication_mode": "automatic",
     "run_id": "43687436011",
     "usage_file": "data/editorial_runs/2026-11-15/43687436011.json"
+  },
+  {
+    "board": "sense",
+    "id": 28,
+    "topic": "자주 쓰는 물건 동작 줄이는 공간 배치법",
+    "drafted_at": "2026-11-16",
+    "automation": true,
+    "search_intent": "자주 쓰는 물건을 꺼내고 되돌리는 동작을 줄이도록 책상이나 집 안 배치를 다시 짜고 싶은 독자의 질문",
+    "image_scene": "책상 위에 펜꽂이, 메모지, 작은 서류 트레이가 놓여 있고 한 사람이 자주 쓰는 펜과 메모지를 손이 가장 먼저 닿는 앞쪽 칸에 두고, 덜 쓰는 물건은 뒤쪽 트레이로 옮기며 배치 순서를 조정하는 구도",
+    "image_alt": "책상 앞쪽에 자주 쓰는 펜과 메모지를 두고, 덜 쓰는 물건은 뒤쪽 트레이로 옮겨 동작을 줄이는 장면",
+    "publication_mode": "automatic",
+    "run_id": "43801690686",
+    "usage_file": "data/editorial_runs/2026-11-16/43801690686.json"
   }
 ]
