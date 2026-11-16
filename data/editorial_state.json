@@ -514,10 +514,15 @@
       "board": "sale",
       "topic": "보유 목적과 사용할 계획을 대조하는 선택 기준",
       "run_id": "43785439452"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 설명 내 동일 단어 적용 대상 구분해 객관적 비교하기",
+      "run_id": "43806717549"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "43806228814",
+  "last_board": "purchase",
+  "last_run_id": "43806717549",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
