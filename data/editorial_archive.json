@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T00:10:17.206372+00:00",
+  "generatedAt": "2026-11-17T00:11:42.355293+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5557,7 +5557,7 @@
       "board": "gc_tip",
       "topic": "큰 글씨와 소리 안내 등 다양한 감각으로 상품권 정보 전달 연습",
       "url": "https://kv-gift.co.kr/board/gc_tip/52",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-17T00:11:42.314283+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.12386315,
       "knownSubtotalUsd": 0.12386315
