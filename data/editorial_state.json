@@ -526,8 +526,8 @@
       "run_id": "43905934288"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "43966558165",
+  "last_board": "gc_tip",
+  "last_run_id": "43985104162",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1015,6 +1015,14 @@
       "topic": "상품권 관련 메시지 링크 열기 전 발신 경로 안전하게 확인하기",
       "date_kst": "2026-11-17",
       "run_id": "43966558165",
+      "status": "held"
+    },
+    {
+      "source_id": "cancel-performance",
+      "board": "gc_tip",
+      "topic": "상품권 결제 취소 후 카드 실적 반영 내역 확인용 기록 관리 체계",
+      "date_kst": "2026-11-17",
+      "run_id": "43985104162",
       "status": "held"
     }
   ]

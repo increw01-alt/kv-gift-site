@@ -1760,5 +1760,18 @@
     "publication_mode": "automatic",
     "run_id": "43806228814",
     "usage_file": "data/editorial_runs/2026-11-16/43806228814.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 52,
+    "topic": "큰 글씨와 소리 안내 등 다양한 감각으로 상품권 정보 전달 연습",
+    "drafted_at": "2026-11-17",
+    "automation": true,
+    "search_intent": "큰 글씨와 음성 안내를 함께 써서 상품권 정보를 더 잘 읽고, 나에게 맞는 확인 방법을 정하려는 질문",
+    "image_scene": "책상 위에 스마트폰의 글자 크기 설정 화면과 확대된 상품권 안내 페이지가 나란히 보이고, 옆에는 이어폰과 체크 메모지가 놓여 있다. 한 사람이 화면을 확대해 항목을 읽은 뒤 음성 안내를 다시 들어 보며, 두 방식에서 같은 정보를 확인하는 장면",
+    "image_alt": "스마트폰 글자 크기 설정과 확대된 안내 화면을 함께 보며 이어폰으로 음성 안내를 확인하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "43985104162",
+    "usage_file": "data/editorial_runs/2026-11-17/43985104162.json"
   }
 ]
