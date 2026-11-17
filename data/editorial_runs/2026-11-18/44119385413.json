@@ -1,18 +1,20 @@
 {
   "run_id": "44119385413",
   "date_kst": "2026-11-18",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-17T15:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 이미 공개된 글이 다룬 질문과 해결 절차를 그대로 반복합니다. 후보 영은 비슷한 이름의 상품권을 명칭·발행사·사용처로 구분하는 기존 안내와 같고, 후보 이응은 수정일과 적용 시점을 나누어 읽는 기존 안내와 같습니다. 후보 이는 안내문 문장 해석 기준을 세우는 흐름이 기존 예외·조건 읽기 글과 겹치며, 후보 삼은 지류·모바일·교환권의 상태 변화와 관리법을 이미 설명한 글과 중복됩니다. 새 해결 내용으로 독자 행동이 달라진다고 볼 구체적 차이를 확인할 수 없어 본문 생성 전 보류합니다. / 0번은 /board/purchase/2568과 /board/purchase/2563이 이미 해결한 ‘비슷한 이름의 상품권을 발행사와 사용처 기준으로 구분하는 방법’을 반복합니다. 명칭, 발행사, 사용처를 대조해 구분하는 독자가 처한 질문과 해결 단계가 같아 독립 주제로 보기 어렵습니다. / 1번은 /board/gc_information/18이 이미 다룬 ‘안내문에 표시된 수정 날짜와 실제 조건 적용 시점을 구분해 읽는 방법’을 반복합니다. 수정일과 적용 시작 문구를 함께 확인하는 절차가 같아 새 해결 내용이 충분하지 않습니다. / 2번은 /board/gc_tip/48과 /board/gc_information/12, /board/gc_information/16이 이미 다룬 ‘조건 문장과 예외 문장을 구분해 읽는 방법’을 반복합니다. 가능·필수·제외의 문장 해석 순서가 기존 답과 겹칩니다. / 3번은 /board/gc_information/20이 이미 해결한 ‘지류·모바일·교환권의 형태와 상태 변화, 각 상태별 확인과 관리법’을 반복합니다. 유형 구분과 상태 점검 흐름이 같아 새 질문이나 별도의 판단 도구가 드러나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44119385413",
@@ -22,15 +24,167 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-18T00:54:07.599928+09:00"
+      "attempt_started_at": "2026-11-18T00:54:07.599928+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 744,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-59dfa4f23c",
+            "gc_information-83c32617c5",
+            "gc_information-b9d8d185b2",
+            "gc_information-ea0a585402"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "동일한 이름처럼 보이는 상품권을 혼동 없이 구별하는 자세한 기준 마련",
+          "source_id": "",
+          "reader_problem": "겉보기나 이름이 비슷한 여러 상품권을 용도별로 구분하는 명확한 기준이 없어 사용할 때 혼란이 있습니다.",
+          "distinct_angle": "기존 안내는 상품권 기본 정보 제공에 그치지만, 이번 글은 실생활에서 직접 적용 가능한 분류 체크리스트와 작성법, 보관 위치까지 포함해 체계적으로 구분하는 구체적 가이드를 제시합니다.",
+          "reader_situation": "비슷한 이름 상품권을 보유하거나 선물용·자기용 등 용도별로 구분해 보관하고자 하는 사용자로, 혼동 없이 빠르게 구별하는 실전 방법이 필요합니다.",
+          "deliverable": "상품권별 명칭, 발행사, 사용처 등 구분 기준 리스트, 실전 적용 체크리스트 예시와 분류 결과표, 보관 및 관리 방법 안내서.",
+          "task_id": "",
+          "direction_id": "gc_information-b9d8d185b2",
+          "outline": [
+            "상품권 명칭과 발행사별 기본 정보 수집하고 비교 기준 만들기",
+            "상품권 사용처 및 유효 범위로 구분 항목 설계와 체크리스트 작성하기",
+            "분류 결과표 작성법과 보관 위치 표시로 실무 적용법 익히기"
+          ]
+        },
+        {
+          "topic": "안내문 날짜 읽기: 수정 시점과 적용 기간 확실히 구분하는 실용 가이드",
+          "source_id": "",
+          "reader_problem": "안내 문서 수정일과 실제 조건 적용 기간이 달라서, 날짜를 혼동해 언제부터 조건이 적용되는지 잘못 판단하는 불편이 많습니다.",
+          "distinct_angle": "기존 글은 시간 개념 차이 설명에 집중한 반면, 이번 글은 날짜별 확인 절차를 체크리스트로 안내하고, 판단 실습용 시간축 도표 예제로 독자가 직접 적용해 보는 데 중점을 둡니다.",
+          "reader_situation": "상품권 안내 문서의 수정 날짜 표시를 보고 조건이 즉시 달라진다고 오해하여 정확한 적용 시점 판단이 필요한 이용자.",
+          "deliverable": "수정일과 적용 기간 개념 구분 시간축 개념도, 날짜별 항목 확인 체크리스트, 실제 안내문에 적용하는 실습 기록 양식.",
+          "task_id": "",
+          "direction_id": "gc_information-ea0a585402",
+          "outline": [
+            "안내문 수정 날짜와 조건 적용 기간의 시간 개념 차이 이해하기",
+            "시간 축 위에 두 날짜 시각화해 관계 파악 실습하기",
+            "안내 문서에서 두 날짜를 구분해 정확히 읽는 단계별 절차 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 안내문 내 ‘가능’, ‘필수’, ‘제외’ 문장별 차이와 해석 기준 세우기",
+          "source_id": "",
+          "reader_problem": "상품권 안내에서 자주 쓰이는 ‘가능’, ‘필수’, ‘제외’ 문장이 비슷해 보이나 각각 다른 논리와 해석 기준이 필요한데 이를 구분하지 못해 조건 이해 혼란이 발생합니다.",
+          "distinct_angle": "기존 안내는 각 표현 뜻을 간략하게 소개하는 데 그치지만, 이번 글은 문장별 논리 차이와 단계별 해석 절차를 설계해 실제 안내문 적용 연습 및 개인 판단 기록 시스템까지 완성하도록 돕습니다.",
+          "reader_situation": "복잡한 상품권 안내문에서 조건 문장별 의미 차이를 정확히 파악해 자신만의 판단 기준과 해석 절차를 만들려는 사용자.",
+          "deliverable": "‘가능’, ‘필수’, ‘제외’ 표현의 논리 의미 분석도, 판단 기준 및 해석 절차 설계표, 안내문 예시 적용 연습 기록지와 작성 안내서.",
+          "task_id": "",
+          "direction_id": "gc_information-83c32617c5",
+          "outline": [
+            "‘가능’, ‘필수’, ‘제외’ 문장별 의미와 논리 차이 자세히 분석하기",
+            "각 표현에 맞는 판단 기준과 단계별 해석 절차 설계하기",
+            "실제 안내문 예시로 적용 연습하고 개인 기록체계 완성하기"
+          ]
+        },
+        {
+          "topic": "상품권 지류, 모바일, 교환권 각 유형별 상태 변화와 관리법 정확 구분",
+          "source_id": "",
+          "reader_problem": "지류, 모바일, 교환권 상품권이 각기 다른 상태 변화 과정을 거치는데 이 차이를 정확히 몰라 사용 오류와 관리 미비가 발생하고 있습니다.",
+          "distinct_angle": "기존 글은 상태 변화 기본 설명 위주지만, 이번 글은 상태별 점검 행동과 관리 절차를 체계적으로 정리한 점검표와 실제 사례까지 포함해 현장 적용 가능성을 높였습니다.",
+          "reader_situation": "각 상품권 유형별 상태 변화 단계와 그때마다 필요한 구체적 점검 및 관리 방법을 익혀 오류 없이 안전하게 관리하려는 이용자.",
+          "deliverable": "상품권 유형별 상태 변화 흐름도, 단계별 점검·관리 행동 목록, 오류 예방 체크리스트와 실제 사례 해설 자료.",
+          "task_id": "",
+          "direction_id": "gc_information-59dfa4f23c",
+          "outline": [
+            "지류, 모바일, 교환권 유형별 상태 정의와 차이점 명확히 파악하기",
+            "상태 전환 각 단계에서 수행할 점검 행동과 관리 절차 익히기",
+            "실제 사례별 상태 변화 점검과 오류 예방 체크리스트 활용법 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15909,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1181,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17090
+        },
+        "estimated_usd": 0.0082532,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-17T15:54:20.436126+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 29369,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 678,
+          "output_tokens_details": {
+            "reasoning_tokens": 188
+          },
+          "total_tokens": 30047
+        },
+        "estimated_usd": 0.02507775,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-17T15:54:25.867585+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-17T15:54:10.500894+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-17T15:54:20.957403+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03333095,
+    "estimated_total_usd": 0.03333095,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
