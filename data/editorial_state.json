@@ -524,10 +524,15 @@
       "board": "gc_information",
       "topic": "상품권 안내에서 모든 조건 충족과 일부 조건 충족의 논리 체계 구분하기",
       "run_id": "43905934288"
+    },
+    {
+      "board": "sense",
+      "topic": "공동 사용하는 물건의 제자리와 사용 중 표시 관리법",
+      "run_id": "44028335160"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "44013837503",
+  "last_board": "sense",
+  "last_run_id": "44028335160",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

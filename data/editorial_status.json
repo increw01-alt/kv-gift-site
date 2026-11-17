@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T06:03:55.626672+00:00",
+  "generatedAt": "2026-11-17T06:04:30.523185+00:00",
   "dateKst": "2026-11-17",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 12,
-  "held": 9,
+  "held": 10,
   "errors": 1,
-  "knownSubtotalUsd": 0.31554525,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3655064,
+  "estimatedTotalUsd": 0.3655064,
   "records": [
     {
       "runId": "43894825975",
@@ -157,21 +157,21 @@
     },
     {
       "runId": "44028335160",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sense",
+      "topic": "공동 사용하는 물건의 제자리와 사용 중 표시 관리법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-17T06:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04996115,
+      "knownSubtotalUsd": 0.04996115
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 5,
+    "retryAfter": "2026-11-17T17:03:55.327759+09:00",
+    "cooldownMinutes": 120
   }
 }
