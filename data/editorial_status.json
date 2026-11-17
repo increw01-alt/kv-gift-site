@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T16:58:59.562769+00:00",
+  "generatedAt": "2026-11-17T16:59:41.464658+00:00",
   "dateKst": "2026-11-18",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 3,
-  "held": 2,
+  "held": 3,
   "errors": 0,
-  "knownSubtotalUsd": 0.05491145,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.11065945,
+  "estimatedTotalUsd": 0.11065945,
   "records": [
     {
       "runId": "44112706111",
@@ -40,21 +40,21 @@
     },
     {
       "runId": "44131707011",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "실물 상품권 여러 장 세기 중단 시 중복 계산 방지용 물리적 배치법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-17T16:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.055748,
+      "knownSubtotalUsd": 0.055748
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 3,
+    "retryAfter": "2026-11-18T03:58:59.243091+09:00",
+    "cooldownMinutes": 120
   }
 }
