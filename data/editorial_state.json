@@ -526,8 +526,8 @@
       "run_id": "43905934288"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "43990530530",
+  "last_board": "sale",
+  "last_run_id": "43998883964",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1055,6 +1055,14 @@
       "topic": "상품권 결제일과 카드 청구일 다를 때 기록별 비교 점검법",
       "date_kst": "2026-11-17",
       "run_id": "43990530530",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-record",
+      "board": "sale",
+      "topic": "환불 문의 전 상품권 주문·사용 내역 구분 정리법",
+      "date_kst": "2026-11-17",
+      "run_id": "43998883964",
       "status": "held"
     }
   ]
