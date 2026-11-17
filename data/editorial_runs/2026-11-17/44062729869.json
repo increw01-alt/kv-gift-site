@@ -1,18 +1,20 @@
 {
   "run_id": "44062729869",
   "date_kst": "2026-11-17",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-17T10:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 0은 기존 공개 글 /board/gc_tip/36이 이미 다룬 ‘비밀번호·바코드 노출 없이 상품권 사용 상태를 문의하는 절차’를 그대로 반복합니다. 문의 목적을 안전하게 말하는 표현, 구매처·구매 시기 같은 대체 정보 제시, 고객센터 문의 순서가 모두 겹쳐 기존 답을 그대로 적용해도 이번 질문이 해결됩니다. / 0번은 /board/gc_tip/36이 이미 해결한 ‘상품권 사용 상태를 문의할 때 바코드와 번호를 노출하지 않고 필요한 정보를 전달하는 방법’을 반복합니다. 질문과 해결 단계, 독자가 해야 할 행동이 같아 독립 주제로 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44062729869",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-17T19:14:08.941827+09:00"
+      "attempt_started_at": "2026-11-17T19:14:08.941827+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 740,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-84c7f844a6",
+            "gc_tip-e4ae922a60",
+            "gc_tip-d4d4f91b05",
+            "gc_tip-61534cc058"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 사용 상태 문의 시 바코드와 번호 보호하는 표현법",
+          "source_id": "barcode-privacy",
+          "reader_problem": "상품권 사용 상태를 확인하려고 할 때 바코드 및 상품권 번호를 노출하지 않고 문의하는 방법을 몰라 개인정보 유출 걱정이 있는 독자",
+          "distinct_angle": "바코드나 상품권 번호를 구체적으로 언급하지 않고 상황을 설명하는 안전한 문장 예시와 전화 및 온라인 문의 시 단계별 표현법 제공",
+          "reader_situation": "상품권 사용 현황을 고객센터에 문의할 때 개인 정보 노출을 최소화하면서도 필요한 정보를 효과적으로 전달하려는 이용자",
+          "deliverable": "바코드와 번호 노출 없이 문의 시 사용할 구체적 문구, 상황 설명 예시, 고객센터 문의 절차 안내 매뉴얼",
+          "task_id": "",
+          "direction_id": "gc_tip-e4ae922a60",
+          "outline": [
+            "문의 목적을 간략히 설명하는 안전한 표현 문장 만들기",
+            "바코드나 번호 대신 상품권 구매 시기 및 구입처 등 대체 정보로 상황 설명하기",
+            "문의 과정에서 개인정보 최소화하며 추가 질문 대응하는 방법 익히기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15886,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 258,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16144
+        },
+        "estimated_usd": 0.0067672,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-17T10:14:17.280286+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12059,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 237,
+          "output_tokens_details": {
+            "reasoning_tokens": 46
+          },
+          "total_tokens": 12296
+        },
+        "estimated_usd": 0.01011075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-17T10:14:19.912519+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-17T10:14:12.586807+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-17T10:14:17.500318+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01687795,
+    "estimated_total_usd": 0.01687795,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

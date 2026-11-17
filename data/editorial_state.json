@@ -531,8 +531,8 @@
       "run_id": "44028335160"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "44044123232",
+  "last_board": "gc_tip",
+  "last_run_id": "44062729869",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1068,6 +1068,14 @@
       "topic": "환불 문의 전 상품권 주문·사용 내역 구분 정리법",
       "date_kst": "2026-11-17",
       "run_id": "43998883964",
+      "status": "held"
+    },
+    {
+      "source_id": "barcode-privacy",
+      "board": "gc_tip",
+      "topic": "상품권 사용 상태 문의 시 바코드와 번호 보호하는 표현법",
+      "date_kst": "2026-11-17",
+      "run_id": "44062729869",
       "status": "held"
     }
   ]
