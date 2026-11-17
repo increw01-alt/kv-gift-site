@@ -1,18 +1,20 @@
 {
   "run_id": "44194294520",
   "date_kst": "2026-11-18",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-17T22:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 반복합니다. 선물 후 사용 계획은 /board/free/472와 /board/gc_tip/32, /board/gc_tip/33의 범위와 겹치고, 수신자 정보 보호와 동명이인 구분은 /board/sense/8과 /board/free/471의 확인 절차를 그대로 따릅니다. 보관함 표식 설계는 /board/gc_tip/47과 동일한 색상 외 식별 관리이며, 옵션 조합 제거는 /board/purchase/2571과 /board/gc_tip/38, /board/gc_tip/39의 조건 분리와 중복됩니다. 기존 답을 그대로 적용해도 이번 질문이 해결되므로 새 독립 주제로 보기 어렵습니다. / 0번은 /board/free/472의 ‘상품권 받은 후 당장 사용과 계획적 사용의 장단점 분석’과 질문이 같고, 즉시 사용과 계획적 사용을 비교해 사용 시점을 정하는 흐름도 같습니다. /board/gc_tip/32와 /board/gc_tip/33이 이미 상품권 정보 확인, 사용 계획, 기록 관리까지 다뤄서 새 해결 내용이 충분하지 않습니다. / 1번은 /board/sense/8의 ‘상품권 선물 후 받는 사람의 사용 편의 높이기 팁’과 /board/free/471의 수신자 확인·전달 조건 점검 흐름을 반복합니다. 개인정보를 최소화해 수신자를 구분하라는 핵심도 기존 안내와 겹쳐 독립 주제로 보기 어렵습니다. / 2번은 /board/gc_tip/47의 ‘색이 비슷한 상품권 보관함을 색상 외의 표식으로 구분하려면?’과 동일하게 보관함 식별 표식을 만드는 주제입니다. 글자, 도형, 위치를 조합하는 관리 방식도 이미 해결된 문제라 새 해결 내용이 부족합니다. / 3번은 /board/purchase/2571의 ‘브랜드별 상품권 지점 사용 가능 여부 확인법’과 /board/gc_tip/39의 복합 결제 확인 흐름, /board/gc_tip/38의 조건 확인 흐름과 겹칩니다. 동시에 고를 수 없는 옵션을 줄이는 절차는 이미 공개된 비교·제외 안내와 실질적으로 같습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44194294520",
@@ -22,15 +24,167 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-18T07:54:01.525323+09:00"
+      "attempt_started_at": "2026-11-18T07:54:01.525323+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 760,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-f74ea4ac7c",
+            "gc_tip-67b3e3310b",
+            "gc_tip-41d96debcf",
+            "gc_tip-18e69e2f13"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "선물용 상품권을 받은 뒤 바로 사용 계획 세우는 방법",
+          "source_id": "",
+          "reader_problem": "받은 선물용 상품권을 언제 어떻게 사용하는 게 가장 효율적인지 감을 잡기 어려워 사용하는 시점과 방식에 부담을 느끼는 문제",
+          "distinct_angle": "기존 팁이 선물 전달 시 질문법이나 포장 안내에 집중하는 데 반해, 본 후보는 선물 후 실제 사용 시점과 계획을 세워 최대한 낭비 없이 활용하는 구체적 실행법을 제시한다",
+          "reader_situation": "선물 받은 상품권을 가진 사람이 사용 시점과 용도 선택을 고민하며, 지금 바로 쓸지 계획적으로 분할 사용할지 판단하고 싶어 하는 상황",
+          "deliverable": "개별 상품권 사용 시점별 장단점 비교 기준표, 사용 용도별 계획표 작성법, 감각적인 사용 유예 시기 설정과 기록 노하우 포함 가이드",
+          "task_id": "",
+          "direction_id": "gc_tip-41d96debcf",
+          "outline": [
+            "선물 받은 상품권의 종류와 사용 가능한 시기 정확히 파악하기",
+            "즉시 사용과 계획적 사용의 각각 이점 및 단점 상세 비교하기",
+            "개인 생활 패턴과 소비 계획에 맞는 사용 시점과 분할 사용 전략 세우기"
+          ]
+        },
+        {
+          "topic": "상품권 선물 후 수신자 정보 보호하며 동명이인 구분하는 절차",
+          "source_id": "",
+          "reader_problem": "동명이인 대상자에게 상품권을 선물할 때 개인정보를 과도하게 노출하지 않고, 정확하게 수신자를 확정하는 방법이 어려운 점",
+          "distinct_angle": "기존 안내는 선물 질문 항목이나 전달 방식에 초점을 두나, 본 후보는 개인정보 보호를 최우선으로 하며 최소 정보만으로 수신자 구분과 확정하는 방법을 단계별로 제시함",
+          "reader_situation": "엄격한 개인정보 보호가 필요한 구매자가 비슷한 이름 수신자 사이에서 수신자 확인 체계와 통신 채널 분리를 동시에 실행하려는 실제 구매 상황",
+          "deliverable": "개인정보 최소 수집 원칙에 따른 동명이인 구별 정보 목록, 개인정보 비공개 확인 절차별 체크리스트, 안전한 연락 및 전달 구조 설계 문서",
+          "task_id": "",
+          "direction_id": "gc_tip-f74ea4ac7c",
+          "outline": [
+            "수신자 식별 시 최소한으로 필요한 정보 항목 선별하기",
+            "개인정보 보호 원칙에 따른 연락처 일부 비공개 확인 절차 설계하기",
+            "별도 전달 채널 마련과 안전한 의사소통 체계 구축하기"
+          ]
+        },
+        {
+          "topic": "상품권 보관함 색상 이외 구분 방법 설계하기",
+          "source_id": "",
+          "reader_problem": "보관중인 상품권 보관함 색상이 비슷해 혼란을 겪는 독자들이 색상 외에 식별할 개인별 표식을 만드는 구체적 방법이 부족하여 관리 어려움",
+          "distinct_angle": "기존에 단순 색상 구분만 설명하는 데 반해, 본 글은 개별 식별이 가능한 다양한 표식 설계법과 실제 적용 가능한 재료 선택 및 제작 절차를 상세히 안내함",
+          "reader_situation": "상품권 다량 보유자가 색상만으로는 구분이 어렵고 눈에 띄면서도 간편하게 만들 수 있는 개인 표식을 고민하는 중",
+          "deliverable": "색상 분류를 보완하는 개인 표식 목록, 만들기 쉬운 표식 소재 및 재료 선정법, 보관함별 표식 부착 및 관리 매뉴얼",
+          "task_id": "",
+          "direction_id": "gc_tip-67b3e3310b",
+          "outline": [
+            "기존 색상 구분의 한계점 분석하기",
+            "종이·스티커·고리 등 다양한 표식 소재 조사 및 선정하기",
+            "선택한 표식 부착 위치 정하고 주기적 상태 점검하는 관리법"
+          ]
+        },
+        {
+          "topic": "교환 상품 옵션 중 동시에 고를 수 없는 조합 제거 실무 가이드",
+          "source_id": "",
+          "reader_problem": "교환 물품에서 크기나 구성 등 서로 영향을 주어 동시에 선택이 불가능한 옵션 조합이 많아 비효율적 반복 선택에 시간과 노력이 과도하게 소요되는 문제",
+          "distinct_angle": "기존에는 불가능한 옵션을 큰 범위서 단순 제외하는 법에 치중된 데 반해 본 글은 단계별 가지치기 절차와 상호 호환성 매트릭스 정리법, 실전 체크리스트를 제공하여 조합 수를 효과적으로 줄임",
+          "reader_situation": "교환 물품 다중 옵션 설정 중 여러 조합 검토 단계에서 반복적 시도와 오류를 줄이려 체계적 조합 검증 절차를 요구하는 독자",
+          "deliverable": "옵션별 조합 가능 여부 표시 매트릭스, 단계별 불가능 조합 제거 체크리스트, 최종 조합 추출 및 선택 정리 가이드",
+          "task_id": "",
+          "direction_id": "gc_tip-18e69e2f13",
+          "outline": [
+            "모든 옵션을 목록화한 후 가능한 조합 후보 생성하기",
+            "호환 불가 옵션 쌍을 식별하여 매트릭스를 작성하고 불가능 조합 걸러내기",
+            "남은 조합을 토대로 실제 선택 과정 단순화하고 최종 조합 확인하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15994,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1155,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17149
+        },
+        "estimated_usd": 0.0082456,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-17T22:54:14.682609+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30893,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 698,
+          "output_tokens_details": {
+            "reasoning_tokens": 143
+          },
+          "total_tokens": 31591
+        },
+        "estimated_usd": 0.02631075,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-17T22:54:21.067459+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-17T22:54:03.937690+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-17T22:54:15.276721+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03455635,
+    "estimated_total_usd": 0.03455635,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
