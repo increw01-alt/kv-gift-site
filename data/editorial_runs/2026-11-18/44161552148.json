@@ -1,18 +1,20 @@
 {
   "run_id": "44161552148",
   "date_kst": "2026-11-18",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-17T19:42:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 기존 공개 글의 질문과 해결 절차를 그대로 반복해 새 독립 주제로 보기 어렵습니다. 0번은 장별 계산과 묶음 계산의 차이, 반올림 위치, 합계 검산이라는 핵심이 이미 공개된 판매 글과 겹치고, 1번은 세기 중단 지점을 표시해 다시 이어 세는 방식이 기존 중단·재개 안내와 같습니다. / 0번은 /board/sale/3698가 이미 다룬 ‘장별 계산과 묶음 계산을 비교해 반올림 차이를 확인하고 검산하는 방법’을 반복합니다. 질문이 상품권 여러 장의 합계를 정확히 계산하는 것으로 같고, 단계별 점검표라는 형식만 더했을 뿐 새 해결 내용이 충분하지 않습니다. / 1번은 /board/sale/3692와 최근 보류 이력이 이미 다룬 ‘중단된 작업의 위치를 표시하고 미확인·확인 중·확인 완료로 나눠 다시 이어서 처리하는 방법’을 반복합니다. 중단 지점에 표식을 두고 중복 집계를 막는 핵심 절차가 기존 안내와 사실상 같습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44161552148",
@@ -22,15 +24,137 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-18T04:44:21.654550+09:00"
+      "attempt_started_at": "2026-11-18T04:44:21.654550+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 756,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-07089a422e",
+            "sense-bc0cf30f7f",
+            "sense-46678bb4d0",
+            "sense-d926083876"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 한 장 금액과 여러 장 합계 계산 오류 예방법",
+          "source_id": "",
+          "reader_problem": "상품권 단가와 총 합계를 계산할 때 숫자나 계산 순서에서 실수를 자주 발생시켜 최종 금액이 틀리는 상황",
+          "distinct_angle": "기존 단순 계산법 안내와 달리, 단계별 점검표와 실제 오류 사례 해설로 실수를 예방하는 구체적 실무 매뉴얼 제공",
+          "reader_situation": "상품권 금액 산출과 합산에서 실수를 줄이고 정확한 확인 절차를 고민하는 구매자 및 업무 담당자",
+          "deliverable": "상품권 단가 산정 절차와 필수 확인점, 실제 오류 사례 분석, 계산 단계별 점검표 및 표준 합산 매뉴얼",
+          "task_id": "",
+          "direction_id": "sense-bc0cf30f7f",
+          "outline": [
+            "상품권 단가 산정의 필수 확인 사항 꼼꼼히 숙지하기",
+            "다수 장 합산 과정에서 자주 발생하는 계산 오류 유형과 해결책 분석하기",
+            "계산 과정별로 점검표를 만들어 실수 방지와 정확성 확보하기"
+          ]
+        },
+        {
+          "topic": "상품권 여러 장 중단된 세기 작업 안전하게 이어서 진행하기",
+          "source_id": "",
+          "reader_problem": "상품권 여러 장을 세던 중 작업을 중단하여 이미 센 부분과 미처 확인하지 않은 부분이 헷갈려 중복 집계 또는 누락 우려가 있는 상황",
+          "distinct_angle": "기존 단순 구역 나누기 안내와 달리 중단 위치별 물리적 표시법과 현장 적용 매뉴얼, 이중 집계 방지 체크리스트를 구체 제공",
+          "reader_situation": "상품권 세기 중단 후 다시 작업을 신속하고 정확하게 이어가야 하는 판매자 및 물류 담당자",
+          "deliverable": "중단 위치별 미확인·확인 중·확인 완료 구역 구분 배치도, 물리적 표지 사용법, 중복 집계·누락 방지 실무 점검 체크리스트",
+          "task_id": "",
+          "direction_id": "sense-07089a422e",
+          "outline": [
+            "세기 중단 위치를 기준으로 세 구역으로 명확하게 공간 분리하기",
+            "중단 지점에 물리적 표식이나 태그 부착해 재집계 기준점 만들기",
+            "구역별 집계 현황 확인 절차와 중복 집계·누락 방지 실무 점검하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16154,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1058,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17212
+        },
+        "estimated_usd": 0.0081544,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-17T19:44:35.923770+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19223,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 448,
+          "output_tokens_details": {
+            "reasoning_tokens": 153
+          },
+          "total_tokens": 19671
+        },
+        "estimated_usd": 0.01643325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-17T19:44:41.096454+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-17T19:44:25.378419+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-17T19:44:36.643385+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02458765,
+    "estimated_total_usd": 0.02458765,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
