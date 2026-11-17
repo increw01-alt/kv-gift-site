@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T19:09:14.053261+00:00",
+  "generatedAt": "2026-11-17T19:09:46.050549+00:00",
   "dateKst": "2026-11-18",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 5,
-  "held": 3,
+  "held": 4,
   "errors": 1,
-  "knownSubtotalUsd": 0.14328975,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.18914805,
+  "estimatedTotalUsd": 0.18914805,
   "records": [
     {
       "runId": "44112706111",
@@ -66,21 +66,21 @@
     },
     {
       "runId": "44155260856",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "인터넷에서 찾은 안내문 수정 기록과 최신 본문 구분하여 신뢰성 있게 읽는 방법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-17T19:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0458583,
+      "knownSubtotalUsd": 0.0458583
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-18T04:39:13.671051+09:00",
+    "cooldownMinutes": 30
   }
 }
