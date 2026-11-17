@@ -531,8 +531,8 @@
       "run_id": "44028335160"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "44062729869",
+  "last_board": "purchase",
+  "last_run_id": "44112706111",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1076,6 +1076,22 @@
       "topic": "상품권 사용 상태 문의 시 바코드와 번호 보호하는 표현법",
       "date_kst": "2026-11-17",
       "run_id": "44062729869",
+      "status": "held"
+    },
+    {
+      "source_id": "payment-name",
+      "board": "purchase",
+      "topic": "주문자와 결제자가 다를 때 꼭 숨겨야 할 민감 정보와 꼭 확인할 사항",
+      "date_kst": "2026-11-18",
+      "run_id": "44112706111",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-limit",
+      "board": "purchase",
+      "topic": "상품권 구매 한도와 카드 이용 한도 혼동 없이 확인하는 핵심 기준",
+      "date_kst": "2026-11-18",
+      "run_id": "44112706111",
       "status": "held"
     }
   ]
