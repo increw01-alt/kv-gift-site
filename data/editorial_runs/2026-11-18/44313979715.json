@@ -1,18 +1,20 @@
 {
   "run_id": "44313979715",
   "date_kst": "2026-11-18",
-  "board": null,
+  "board": "gc_tip",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-18T13:27:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 이미 공개된 글이 같은 질문과 해결 절차를 다루고 있습니다. 후보 0은 큰 글씨·음성 안내를 직접 써 보고 비교하는 흐름이 /board/gc_tip/52와 같고, 후보 1은 교환 후 개봉·설치 공간을 나누고 동선을 배치하는 방식이 /board/gc_tip/49와 같습니다. 후보 2는 실제 사용량과 빈도를 기록해 다음 구매량을 조절하는 절차가 /board/gc_tip/50과 사실상 동일합니다. 기존 답을 그대로 적용해도 이번 질문이 해결되므로 새 독립 주제로 보기 어렵습니다. / 0번은 /board/gc_tip/52가 이미 다룬 ‘큰 글씨와 화면 확대, 음성 안내를 직접 설정해 보고 자신에게 맞는 전달 방식을 고르는 방법’을 반복합니다. 질문과 실행 순서가 같아 새 해결 내용이 없습니다. / 1번은 /board/gc_tip/49가 이미 다룬 ‘교환받은 큰 물품의 개봉 공간과 설치 공간을 나누고 동선을 정해 조정하는 방법’과 중복됩니다. 공간 표시, 작업 순서 계획, 현장 조정의 핵심 절차가 같습니다. / 2번은 /board/gc_tip/50이 이미 다룬 ‘상품권으로 구매한 물품의 실제 사용량과 빈도를 기록해 다음 구매량을 조절하는 방법’을 그대로 반복합니다. 기록, 분석, 구매량 조정의 해결 단계가 동일합니다."
+    ]
   },
   "api_usage": {
     "run_id": "44313979715",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-18T22:29:04.405477+09:00"
+      "attempt_started_at": "2026-11-18T22:29:04.405477+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 782,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-84c7f844a6",
+            "gc_tip-e4ae922a60",
+            "gc_tip-59f6a2cf62",
+            "gc_tip-d4d4f91b05"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "큰 글씨와 음성 안내를 활용한 상품권 정보 전달 실습 방법",
+          "source_id": "",
+          "reader_problem": "상품권 안내 정보가 눈이나 귀에 어려움을 겪는 이용자에게 큰 글씨, 화면 확대, 음성 안내 등 다양하게 정보를 효과적으로 전달하는 방법을 몰라 불편함이 있음",
+          "distinct_angle": "기존 단일 접근성 기능 소개와 달리 본문은 각각의 기능 사용법 실습과 감각별 비교 평가, 개인별 맞춤 활용 전략 수립까지 직접 해보는 연습 방안 중심",
+          "reader_situation": "시력이 약하거나 음성 안내가 필요한 사용자로, 각 접근성 기능을 실제로 써보고 자신에게 가장 잘 맞는 정보 확인 방식을 찾으려는 이용자",
+          "deliverable": "큰 글씨 확대 설정 매뉴얼, 음성 안내 사용법과 주요 신호 해석법, 감각별 전달 효과 평가 표, 개인 맞춤 정보 전달 방식 선택 안내서",
+          "task_id": "",
+          "direction_id": "gc_tip-59f6a2cf62",
+          "outline": [
+            "기기별 큰 글씨 및 화면 확대 설정을 직접 해보고 조절하는 방법 단계별 따라하기",
+            "음성 안내 기능 활성화 후 듣기와 소리 신호별 의미 파악 실습",
+            "각 방식 사용 경험을 기록하고 효과와 불편함을 평가하여 개인 맞춤 정보 전달 전략 수립하기"
+          ]
+        },
+        {
+          "topic": "상품권 상품 교환 후 조립·설치 준비 공간과 순서 실전 배치",
+          "source_id": "",
+          "reader_problem": "교환받은 대형 상품을 설치하기 전 개봉 공간 확보와 순서 계획 부재로 작업 지연과 공간 낭비 문제 발생",
+          "distinct_angle": "설치 동선과 공간 실측 중심 설명과 달리 본 글은 포장 크기 모형 배치, 설치 공간 요구 파악, 현장 적용 점검 및 조정까지 실천 가능한 공간 배치 체험 위주 안내",
+          "reader_situation": "큰 물품 교환 후 설치를 앞두고 한정된 공간에서 개봉·설치 공간 구획과 작업 효율을 높이고자 실제 공간 배치와 순서 계획이 필요한 이용자",
+          "deliverable": "포장 개봉과 설치 공간 분리 배치 실습용 모형과 체크리스트, 동선과 부품 배치 계획서, 현장 점검 후 공간 부족과 과잉 조정 매뉴얼",
+          "task_id": "",
+          "direction_id": "gc_tip-e4ae922a60",
+          "outline": [
+            "포장 개봉에 필요한 최소 바닥 면적을 모형이나 매트로 표시해 가상 공간을 미리 확보해 보기",
+            "설치 공간 요구 사항 점검과 동선을 고려해 작업 공간과 부품 배치 계획하기",
+            "계획을 현장에 직접 적용해 공간 적정성 확인 후 부족 또는 남음 여부 점검 및 재배치 조정하기"
+          ]
+        },
+        {
+          "topic": "상품권 소비량 실측에 따른 다음 구매량 합리적 조절법",
+          "source_id": "",
+          "reader_problem": "상품권으로 구매한 물품 실제 사용량이 구매 예상과 차이나 다음 구매 적정 수량 판단이 어려움",
+          "distinct_angle": "기존 단순 구매 기록과 달리 실사용량 기록, 빈도 분석, 소비 패턴 반영해 다음 구매량을 생활 실험하듯 검증하며 조절하는 체계적 방법 소개",
+          "reader_situation": "상품권 구매 후 물품을 일정 기간 사용해보며 실제 소비량을 꼼꼼히 기록·분석하고 낭비 없이 다음 구매량을 체계적으로 조절하려는 이용자",
+          "deliverable": "상품권 물품별 사용량과 사용 빈도 기록표, 소비 데이터 기반 수량 산출 방법, 낭비 최소화하는 구매 조절 체크리스트와 생활 실험 가이드",
+          "task_id": "",
+          "direction_id": "gc_tip-d4d4f91b05",
+          "outline": [
+            "상품권 구매 물품의 사용 기간 동안 남은 양과 사용 빈도 직접 기록해 소비 패턴 파악하기",
+            "기록 데이터를 바탕으로 다음 구매량 산출 기준과 조절법 익히기",
+            "소비 변화에 따른 구매 계획 수정과 낭비 방지 실천법을 일상에 적용해 보기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15674,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1232,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16906
+        },
+        "estimated_usd": 0.0082408,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-18T13:29:22.539461+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24614,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 455,
+          "output_tokens_details": {
+            "reasoning_tokens": 83
+          },
+          "total_tokens": 25069
+        },
+        "estimated_usd": 0.020508,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-18T13:29:27.258608+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-18T13:29:07.716690+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-18T13:29:23.252841+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0287488,
+    "estimated_total_usd": 0.0287488,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
