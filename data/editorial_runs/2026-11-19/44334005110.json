@@ -1,18 +1,20 @@
 {
   "run_id": "44334005110",
   "date_kst": "2026-11-19",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-18T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 모바일 상품권의 표시 기한과 실제 이용 가능 기간을 구분해 확인하는 방법을 다루는데, 이는 공개 글 /board/general_notice/45가 이미 ‘교환 기한과 사용 기한을 구분하고 연장 문의처를 확인하는 절차’를 설명했고, /board/gc_tip/34도 ‘유효 기간을 확인해 일정에 기록하고 알림을 설정하는 방법’을 다뤘습니다. 기존 답을 그대로 적용해도 이번 질문이 해결되므로 새 독립 주제로 보기 어렵습니다. / 0번은 /board/general_notice/45가 이미 다룬 ‘교환 기한과 사용 기한을 구분해 어떤 기한인지 먼저 확인하고, 발행업체에 연장 가능 여부를 묻는 방법’과 핵심 질문과 해결 순서가 같습니다. 표시 기한과 실제 이용 기한을 나누어 읽는 점검 방식도 /board/gc_tip/34의 유효 기간 확인·기록 절차와 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "44334005110",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-19T00:19:22.105765+09:00"
+      "attempt_started_at": "2026-11-19T00:19:22.105765+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 785,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-6bf9948129",
+            "purchase-6f6d6db65b",
+            "purchase-5aaa6701f9",
+            "purchase-82f484eeda"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모바일 상품권 유효기간과 실제 이용 안내 정리법",
+          "source_id": "voucher-expiry",
+          "reader_problem": "모바일 상품권 안내에 표시된 유효기간과 실제 사용할 수 있는 기간 안내가 달라 헷갈리며, 확인할 수 있는 기준 정리가 부재함",
+          "distinct_angle": "표시 기한과 실제 이용 기한을 구분하여 각각 어떤 안내를 보고 확인해야 하는지 단계별 절차와 확인 항목을 제시함",
+          "reader_situation": "모바일로 받은 상품권 유효기간 정보를 읽다가 표시된 기간과 실제 사용 가능 기간 차이를 확인하고, 정확히 안내서를 정리해 보려는 이용자",
+          "deliverable": "유효기간 표시와 실제 이용 가능 기간 비교 체크리스트, 발행사별 안내 문구와 확인해야 할 권리 조건 정리, 최종 확인용 체크포인트 문서",
+          "task_id": "",
+          "direction_id": "purchase-5aaa6701f9",
+          "outline": [
+            "모바일 상품권 안내서에서 표시된 유효기간 이해와 조건별 차이 점검하기",
+            "발행사별 실사용 기간 안내와 예외 사항 확인법 익히기",
+            "표시된 유효기간과 실제 사용 안내를 한눈에 볼 수 있도록 정리하는 양식 작성하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15770,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 814,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16584
+        },
+        "estimated_usd": 0.0076104,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-18T15:19:37.116576+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12546,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 342,
+          "output_tokens_details": {
+            "reasoning_tokens": 86
+          },
+          "total_tokens": 12888
+        },
+        "estimated_usd": 0.0109485,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-18T15:19:42.830190+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-18T15:19:25.551920+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-18T15:19:37.586756+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0185589,
+    "estimated_total_usd": 0.0185589,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

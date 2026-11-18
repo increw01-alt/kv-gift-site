@@ -556,8 +556,8 @@
       "run_id": "44274605956"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "44313979715",
+  "last_board": "purchase",
+  "last_run_id": "44334005110",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1117,6 +1117,14 @@
       "topic": "상품권 구매 한도와 카드 이용 한도 혼동 없이 확인하는 핵심 기준",
       "date_kst": "2026-11-18",
       "run_id": "44112706111",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-expiry",
+      "board": "purchase",
+      "topic": "모바일 상품권 유효기간과 실제 이용 안내 정리법",
+      "date_kst": "2026-11-19",
+      "run_id": "44334005110",
       "status": "held"
     }
   ]
