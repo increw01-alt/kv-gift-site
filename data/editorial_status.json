@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T09:18:59.043942+00:00",
+  "generatedAt": "2026-11-18T09:19:41.638879+00:00",
   "dateKst": "2026-11-18",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 13,
-  "held": 11,
+  "held": 12,
   "errors": 1,
-  "knownSubtotalUsd": 0.4411945,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.49291485,
+  "estimatedTotalUsd": 0.49291485,
   "records": [
     {
       "runId": "44112706111",
@@ -170,21 +170,21 @@
     },
     {
       "runId": "44274605956",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sense",
+      "topic": "문서 작성 중 사실 문장과 의견 문장 명확히 구분하는 편집법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-18T09:17:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05172035,
+      "knownSubtotalUsd": 0.05172035
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 9,
+    "retryAfter": "2026-11-18T20:18:58.856646+09:00",
+    "cooldownMinutes": 120
   }
 }
