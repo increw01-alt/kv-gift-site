@@ -1,18 +1,20 @@
 {
   "run_id": "44294179296",
   "date_kst": "2026-11-18",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-18T11:22:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 그대로 반복해, 기존 답을 그대로 적용해도 이번 질문이 해결됩니다. 후보 영은 문의 시점 판단을 묻는 /board/free/483과 핵심 질문과 실행 순서가 같고, 후보 이는 결과와 판단 과정을 분리해 보는 /board/free/482와 질문이 겹치며, 후보 이는 비교 기준을 세워 객관적 결정을 돕는 /board/free/485·/board/free/486의 범위를 벗어나지 못합니다. 새로 추가되는 구체적 판단 도구와 독자 행동 차이를 충분히 확인할 수 없어 보류합니다. / 0번은 /board/free/483의 ‘모르는 것을 바로 물을지 먼저 찾아볼지 어떤 기준으로 정할까요?’와 질문이 사실상 같습니다. 시간과 노력의 비용을 따져 스스로 찾을지 문의할지 정하는 흐름도 같아서, 기존 답만으로도 해결됩니다. / 1번은 /board/free/482의 ‘결과가 좋았던 선택은 판단 과정도 좋았던 선택일까요?’와 핵심 질문이 같습니다. 당시 정보와 결과를 나누고 판단 과정을 점검하는 절차가 이미 공개되어 있어, 우연과 판단의 질을 구분하는 새 해결 내용이 충분하지 않습니다. / 2번은 /board/free/485와 /board/free/486이 다룬 ‘의견 조율 기준과 공평성 기준 비교’와 같은 축에 있습니다. 여러 관점을 모아 비교표와 기준을 세운다는 해결 방식이 기존 글의 비교·우선순위 정하기와 겹쳐 독립 주제로 보기 어렵습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44294179296",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-18T20:23:52.605151+09:00"
+      "attempt_started_at": "2026-11-18T20:23:52.605151+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 779,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-9d7f9c3f7a",
+            "free-494c9616de",
+            "free-bfc80eaf20",
+            "free-911ea23e77"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모르는 정보 즉시 문의와 자체 탐색 판단 시 비용과 시간 고려 기준",
+          "source_id": "",
+          "reader_problem": "간단하지만 잘 모르는 정보를 바로 문의할지, 먼저 스스로 찾아볼지 시간과 노력 등의 비용 대비 효율적 선택 기준이 없어 반복적으로 비효율적인 질문 방식이 이어집니다.",
+          "distinct_angle": "기존 콘텐츠는 문의 시점의 일반 원칙을 안내하지만, 본 글은 질문 별로 필요한 실제 탐색 및 문의 비용과 예상 시간 분석을 포함하여 독자가 직접 판단 프레임을 작성하고 실무에 적용할 수 있도록 지원합니다.",
+          "reader_situation": "업무상 다수 문의를 처리하며 자원과 시간을 현명하게 배분하려는 지원·운영 담당자, 질문 유형별 효율적 처리 기준을 체계적으로 세워 적용하려는 상황.",
+          "deliverable": "질문 대상별 탐색 및 문의 소요 시간·노력 분석표, 비용 대비 효과 판단 프레임워크, 질문 유형별 적용 체크리스트와 효율성 평가용 안내 자료.",
+          "task_id": "",
+          "direction_id": "free-bfc80eaf20",
+          "outline": [
+            "질문별 탐색과 문의에 필요한 시간과 노력 상세 분석하기",
+            "비용 대비 효과 중심으로 문의 시점 결정하는 판단체계 설계하기",
+            "업무 적용 가능한 질문 유형별 선택 체크리스트 작성 및 활용 방안 마련하기"
+          ]
+        },
+        {
+          "topic": "과거 선택 결과에서 우연과 판단 과정 질 구분하는 객관적 점검 질문",
+          "source_id": "",
+          "reader_problem": "좋은 결과가 나온 과거 선택을 단순 반복하려 할 때 결과의 우연과 판단 과정의 합리성을 구분하지 못해 반복 실패 위험이 존재합니다.",
+          "distinct_angle": "기존 글에서는 결과와 판단을 일반적으로 분리하지만, 해당 글은 구체적 사례를 통한 행동 점검 질문 목록과 정보 분리 실습으로 독자가 자신의 판단 질을 체계적으로 평가하고 학습용 점검 절차를 작성하도록 돕습니다.",
+          "reader_situation": "긍정적 결과에 의존한 무분별한 반복 결정 대신, 과거 판단 과정의 질을 객관적으로 평가하고 개선하려는 의도를 가진 의사결정자가 필요로 합니다.",
+          "deliverable": "과거 선택 당시 정보와 결과를 구분하는 법, 우연과 질 구분 가상 사례 분석, 판단 과정 평가용 질문 목록과 점검 절차 흐름도 및 실천 가이드.",
+          "task_id": "",
+          "direction_id": "free-911ea23e77",
+          "outline": [
+            "과거 선택 당시 보유 정보와 결과 분리하는 구체적 방법 익히기",
+            "우연한 성공과 합리적 판단 구분에 도움이 되는 가상 사례 상세 분석하기",
+            "판단 과정 점검을 위한 질문 목록 작성과 객관적 평가 절차 학습하기"
+          ]
+        },
+        {
+          "topic": "여러 관점 비교로 개인 경험 편향 극복하며 객관적 운영 결정 내리기",
+          "source_id": "",
+          "reader_problem": "운영 결정 과정에서 개인 경험이나 선호에 치우쳐 객관적 비교 없이 판단함으로써 편향된 결정을 내리기 어렵습니다.",
+          "distinct_angle": "이전 글들은 관점 비교 원칙만 다루지만, 본 글은 다양한 관점과 근거를 직접 수집해 비교 리스트를 만들고 평가 기준으로 각 관점의 장단점을 체계적으로 분석하는 방법을 안내해 독자가 실제 비교표와 결정 전략을 완성하게 합니다.",
+          "reader_situation": "운영팀 리더 및 조율 담당자가 다양한 의견을 균형 있게 수집하고 객관적 근거 기반으로 결정을 내려 안정적이고 합리적인 운영 성과를 내고자 할 때.",
+          "deliverable": "주요 관점 비교 리스트, 객관적 평가 기준과 질문지, 평가 절차 매뉴얼, 의견 조율 및 합리적 결정 전략 문서.",
+          "task_id": "",
+          "direction_id": "free-9d7f9c3f7a",
+          "outline": [
+            "주요 관점과 판단 기준 수집 및 대조 리스트 만들기",
+            "각 관점별 근거와 장단점 객관적 평가 방법 습득",
+            "비교 결과 바탕 합리적 결론 도출과 의견 조율 전략 수립"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15887,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1242,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17129
+        },
+        "estimated_usd": 0.008342,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-18T11:24:06.457045+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25511,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 800,
+          "output_tokens_details": {
+            "reasoning_tokens": 392
+          },
+          "total_tokens": 26311
+        },
+        "estimated_usd": 0.02273325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-18T11:24:10.747220+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-18T11:23:55.025709+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-18T11:24:06.860085+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03107525,
+    "estimated_total_usd": 0.03107525,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
