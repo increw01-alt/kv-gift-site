@@ -1773,5 +1773,18 @@
     "publication_mode": "automatic",
     "run_id": "43985104162",
     "usage_file": "data/editorial_runs/2026-11-17/43985104162.json"
+  },
+  {
+    "board": "free",
+    "id": 487,
+    "topic": "선물용 상품권 선택 시 브랜드 인지도와 사용 편의성 우선순위 결정 질문",
+    "drafted_at": "2026-11-19",
+    "automation": true,
+    "search_intent": "선물용 상품권을 고를 때 브랜드 선호와 실제 사용 편의 중 무엇을 먼저 볼지 우선순위를 정하는 방법",
+    "image_scene": "책상 위에 ‘브랜드 인지도’와 ‘사용 편의성’이라고 적힌 두 장의 질문 카드, 우선순위 순서를 적는 메모지, 그리고 상품권 후보 카드가 나란히 놓여 있다. 한 사람이 카드 두 장을 저울처럼 좌우에 두고 메모지에 먼저 볼 기준과 나중에 볼 기준을 나눠 적는 구도",
+    "image_alt": "책상 위에서 브랜드 인지도 카드와 사용 편의성 카드를 저울처럼 비교하며 우선순위를 정리하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "44406010456",
+    "usage_file": "data/editorial_runs/2026-11-19/44406010456.json"
   }
 ]

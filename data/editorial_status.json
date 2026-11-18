@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T21:54:06.001880+00:00",
+  "generatedAt": "2026-11-18T21:55:15.968521+00:00",
   "dateKst": "2026-11-19",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 8,
   "held": 5,
   "errors": 2,
-  "knownSubtotalUsd": 0.1132569,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.2346445,
+  "estimatedTotalUsd": 0.2346445,
   "records": [
     {
       "runId": "44334005110",
@@ -105,16 +105,16 @@
     },
     {
       "runId": "44406010456",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "free",
+      "topic": "선물용 상품권 선택 시 브랜드 인지도와 사용 편의성 우선순위 결정 질문",
+      "url": "https://kv-gift.co.kr/board/free/487",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-18T21:52:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.1213876,
+      "knownSubtotalUsd": 0.1213876
     }
   ],
   "topicRetry": {
