@@ -3,16 +3,18 @@
   "date_kst": "2026-11-19",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-18T21:47:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "44405162589",
@@ -22,15 +24,151 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-19T06:49:10.766918+09:00"
+      "attempt_started_at": "2026-11-19T06:49:10.766918+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [
+          {
+            "topic": "선물용 상품권 선택 시 브랜드 인지도와 사용 편의성 우선순위 결정 질문",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "선물 선택 시 브랜드 인지도가 우선인지 사용 편의성이 더 중요한지 우선순위 판단이 어려움.",
+            "distinct_angle": "브랜드와 사용 편의성을 따로 구분해 각각의 선택 요소를 비교 분석하고 독자 스스로 우선순위를 정할 수 있게 돕는다.",
+            "outline": [
+              "브랜드 인지도와 사용 편의성 각 핵심 요소 탐색하기",
+              "생활 환경과 사용 방식에 따른 기준별 비교 분석하기",
+              "상황별 우선순위 판단을 위한 구체적 질문 만들기"
+            ],
+            "reader_situation": "선물 구매 전 브랜드와 사용 편의성 기준 중 무엇을 먼저 고려할지 결정하고 싶을 때.",
+            "deliverable": "브랜드 인지도와 실제 사용 편의성 주요 요소 비교 질문 목록과 상황별 적용 포인트 정리.",
+            "direction_id": "free-e3b569a136"
+          },
+          {
+            "topic": "여럿이 선물할 때 의견 수렴과 우선 합의 기준 정리 질문",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "여러 명이 선물 의견을 낼 때 의견이 많고 합의 기준이 명확하지 않아 결정하기 어렵다.",
+            "distinct_angle": "모든 의견을 효과적으로 정리하고 핵심 선택 기준을 추출하여 우선 합의 방식으로 접근하는 구체적 절차를 제시한다.",
+            "outline": [
+              "다양한 의견을 모두 기록하고 분류하는 질문 방식 만들기",
+              "선택 기준을 추출해 우선순위별 분류하기",
+              "추출한 기준 바탕으로 합의 방향 및 절차 설계하기"
+            ],
+            "reader_situation": "여럿이 함께 선물을 준비하며 다양한 의견을 체계적으로 수렴하고 합의하려는 상황.",
+            "deliverable": "참여자의 의견 분류와 핵심 선택 기준 추출용 질문 리스트 및 합의 도출 과정 안내 자료.",
+            "direction_id": "free-494c9616de"
+          },
+          {
+            "topic": "모바일 상품권 선물 시 받는 사람 사용 편의와 전달 방식 고려 질문",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "모바일 상품권을 선물할 때 수신자가 쉽게 사용하도록 전달 방식과 사용 환경을 배려하는 법이 혼란스럽다.",
+            "distinct_angle": "사용자 환경과 전달 매체별로 구분하여 상품권 등록부터 사용까지의 편의 개선 요소를 구체적으로 점검한다.",
+            "outline": [
+              "사용자 환경별 등록 절차별 편의성 점검하기",
+              "전달 방식(문자, 앱, 종이 안내 등)별 장단점 비교",
+              "편의 향상 위해 선택할 최적 전달 방식 질문 구성"
+            ],
+            "reader_situation": "모바일 상품권을 선물하면서 받는 사람이 헷갈리지 않고 편리하게 등록 사용하도록 지원하려는 상황.",
+            "deliverable": "등록·사용 과정별 사용자 편의성 항목 점검표와 전달 방식별 비교 판단을 돕는 질문 리스트.",
+            "direction_id": "free-33a0543960"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 788,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-494c9616de",
+            "free-33a0543960",
+            "free-e3b569a136",
+            "free-334ff31d35"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15888,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 873,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16761
+        },
+        "estimated_usd": 0.007752,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-18T21:49:22.826533+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25814,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 868,
+          "output_tokens_details": {
+            "reasoning_tokens": 244
+          },
+          "total_tokens": 26682
+        },
+        "estimated_usd": 0.0232665,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-18T21:49:31.025925+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-18T21:49:14.179960+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-18T21:49:23.657431+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0310185,
+    "estimated_total_usd": 0.0310185,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
