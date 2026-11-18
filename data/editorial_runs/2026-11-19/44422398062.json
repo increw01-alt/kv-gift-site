@@ -1,18 +1,20 @@
 {
   "run_id": "44422398062",
   "date_kst": "2026-11-19",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-18T23:37:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 상품권 사용 뒤 잔액과 사용 이력을 함께 확인하는 방법을 다루는데, 이미 공개된 /board/gc_information/9가 같은 질문과 해결 절차를 설명합니다. 기존 글도 발행사 화면에서 잔액을 확인하고 사용 이력을 조회한 뒤 두 정보를 함께 비교해 관리하라고 안내하므로, 기존 답만으로 이번 질문이 해결됩니다. / 0번은 /board/gc_information/9가 이미 다룬 ‘사용 후 남은 금액을 확인하고 같은 맥락에서 사용 이력을 조회해 함께 관리하는 방법’과 핵심 질문과 해결 순서가 같습니다. 잔액 확인 화면과 사용 기록 조회 경로를 따로 찾거나 함께 비교하는 흐름도 동일해, 새 해결 내용이 충분하지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44422398062",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-19T08:39:06.120805+09:00"
+      "attempt_started_at": "2026-11-19T08:39:06.120805+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 791,
+          "coverageArticles": 149,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-83c32617c5",
+            "gc_information-7522ac652e",
+            "gc_information-603f97842d",
+            "gc_information-b9d8d185b2"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "사용 뒤 남은 금액과 사용 이력을 함께 확인하는 상품권 종류별 관리법",
+          "source_id": "partial-use",
+          "reader_problem": "상품권을 사용한 후 남은 금액을 확인하고, 같은 화면에서 사용 이력도 함께 확인하는 구체적인 방법을 몰라 불편한 상황",
+          "distinct_angle": "기존 글에서는 잔액 확인과 사용 이력을 별개로 다루거나 일반적인 안내에 그쳤지만, 이번 글은 종류별 상품권의 잔액과 사용 기록 확인 절차를 한데 모아 비교하며 구체적인 행동 순서와 확인 화면 위치까지 알려준다",
+          "reader_situation": "다양한 종류의 상품권을 가지고 있고, 사용 후 잔액을 바로 확인해야 하거나 잔액과 사용 내역을 동시에 확인하여 다음 사용 계획까지 세우려는 사용자",
+          "deliverable": "상품권 종류별 잔액 확인과 사용 이력 조회 방법 목록, 실제 확인 화면에서 찾을 항목과 절차 안내, 독자 스스로 확인 기록을 작성하는 체크리스트 양식",
+          "task_id": "",
+          "direction_id": "gc_information-603f97842d",
+          "outline": [
+            "상품권 종류별 잔액 확인 가능한 위치와 방법 정리",
+            "상품권별 사용 이력 확인 절차와 화면에서 찾는 법 소개",
+            "잔액과 사용 이력을 함께 관리하기 위한 체크리스트와 기록지 작성법 안내"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15585,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 305,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15890
+        },
+        "estimated_usd": 0.006722,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-18T23:39:13.961522+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12142,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 286,
+          "output_tokens_details": {
+            "reasoning_tokens": 78
+          },
+          "total_tokens": 12428
+        },
+        "estimated_usd": 0.0103935,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-18T23:39:16.256576+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-18T23:39:09.265661+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-18T23:39:14.201006+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0171155,
+    "estimated_total_usd": 0.0171155,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

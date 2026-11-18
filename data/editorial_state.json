@@ -556,8 +556,8 @@
       "run_id": "44274605956"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "44412614691",
+  "last_board": "gc_information",
+  "last_run_id": "44422398062",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1141,6 +1141,14 @@
       "topic": "상품권 교환 후 원본 쿠폰과 교환 결과의 상태 동시 표시 이해와 처리 방법",
       "date_kst": "2026-11-19",
       "run_id": "44341671455",
+      "status": "held"
+    },
+    {
+      "source_id": "partial-use",
+      "board": "gc_information",
+      "topic": "사용 뒤 남은 금액과 사용 이력을 함께 확인하는 상품권 종류별 관리법",
+      "date_kst": "2026-11-19",
+      "run_id": "44422398062",
       "status": "held"
     }
   ]
