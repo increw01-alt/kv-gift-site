@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T21:55:16.009537+00:00",
+  "generatedAt": "2026-11-18T21:57:02.150716+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5991,7 +5991,7 @@
       "board": "free",
       "topic": "선물용 상품권 선택 시 브랜드 인지도와 사용 편의성 우선순위 결정 질문",
       "url": "https://kv-gift.co.kr/board/free/487",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-18T21:57:02.103455+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1213876,
       "knownSubtotalUsd": 0.1213876
