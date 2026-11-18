@@ -539,10 +539,15 @@
       "board": "general_notice",
       "topic": "인터넷에서 찾은 안내문 수정 기록과 최신 본문 구분하여 신뢰성 있게 읽는 방법",
       "run_id": "44155260856"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 구매 전 필수 조건 확인 질문 범위 정하는 방법",
+      "run_id": "44212090901"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "44194294520",
+  "last_board": "purchase",
+  "last_run_id": "44212090901",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

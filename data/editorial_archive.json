@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T00:59:06.178135+00:00",
+  "generatedAt": "2026-11-18T00:59:43.733450+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -5791,14 +5791,14 @@
       "runId": "44212090901",
       "dateKst": "2026-11-18",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "purchase",
+      "topic": "상품권 구매 전 필수 조건 확인 질문 범위 정하는 방법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0533787,
+      "knownSubtotalUsd": 0.0533787
     },
     {
       "id": "post:purchase:2561",
@@ -24171,13 +24171,57 @@
     {
       "entryId": "run:44212090901",
       "dateKst": "2026-11-18",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-18T00:59:19.653907+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0079424,
+      "knownSubtotalUsd": 0.0079424,
+      "requests": 1,
+      "inputTokens": 15732,
+      "outputTokens": 1031
+    },
+    {
+      "entryId": "run:44212090901",
+      "dateKst": "2026-11-18",
+      "recordedAt": "2026-11-18T00:59:24.991169+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0251175,
+      "knownSubtotalUsd": 0.0251175,
+      "requests": 1,
+      "inputTokens": 27964,
+      "outputTokens": 921
+    },
+    {
+      "entryId": "run:44212090901",
+      "dateKst": "2026-11-18",
+      "recordedAt": "2026-11-18T00:59:29.387075+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.002086,
+      "knownSubtotalUsd": 0.002086,
+      "requests": 1,
+      "inputTokens": 3423,
+      "outputTokens": 448
+    },
+    {
+      "entryId": "run:44212090901",
+      "dateKst": "2026-11-18",
+      "recordedAt": "2026-11-18T00:59:37.873176+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0031608,
+      "knownSubtotalUsd": 0.0031608,
+      "requests": 1,
+      "inputTokens": 5998,
+      "outputTokens": 476
+    },
+    {
+      "entryId": "run:44212090901",
+      "dateKst": "2026-11-18",
+      "recordedAt": "2026-11-18T00:59:43.443507+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.015072,
+      "knownSubtotalUsd": 0.015072,
+      "requests": 1,
+      "inputTokens": 16988,
+      "outputTokens": 518
     },
     {
       "entryId": "post:purchase:2561",
