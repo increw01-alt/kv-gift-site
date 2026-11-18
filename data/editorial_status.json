@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T03:04:05.516122+00:00",
+  "generatedAt": "2026-11-18T03:04:47.236904+00:00",
   "dateKst": "2026-11-18",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 10,
-  "held": 8,
+  "held": 9,
   "errors": 1,
-  "knownSubtotalUsd": 0.3268724,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3778269,
+  "estimatedTotalUsd": 0.3778269,
   "records": [
     {
       "runId": "44112706111",
@@ -131,21 +131,21 @@
     },
     {
       "runId": "44227615763",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "상품권 이름, 별칭, 분류의 차이점과 서로 다른 상품 구분법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-18T03:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0509545,
+      "knownSubtotalUsd": 0.0509545
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 6,
+    "retryAfter": "2026-11-18T14:04:05.327534+09:00",
+    "cooldownMinutes": 120
   }
 }
