@@ -1,18 +1,20 @@
 {
   "run_id": "44257129965",
   "date_kst": "2026-11-18",
-  "board": null,
+  "board": "general_notice",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-18T07:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 이미 공개된 이용 안내의 질문과 해결 절차를 그대로 반복합니다. 후보 영과 후보 일은 /board/general_notice/69가 다룬 설치·권한 요청 화면의 목적 확인과 원래 화면 복귀 절차를 거의 그대로 옮긴 수준이고, 후보 이는 /board/general_notice/71의 자동 완성 값과 직접 입력 값 구분 점검을 사실상 동일하게 반복합니다. 새로 추가되는 판단 기준이나 독자가 달라지는 실행 단계가 충분하지 않아 본문 생성 전에 보류합니다. / 0번은 /board/general_notice/69의 ‘설치나 권한 요청 화면의 목적을 원래 안내와 비교해 판단하고, 관련 없으면 닫아 돌아가는 절차’를 거의 그대로 반복합니다. 새 화면의 출처를 비교한다고 했지만, 실제로는 요청 문구와 원래 안내를 대조해 돌아가는 기존 답만으로도 해결됩니다. / 1번은 /board/general_notice/69와 같은 질문 구조입니다. 설치·권한 요청 문구를 읽고 원래 작업과 비교해 승인 여부를 정한 뒤 거절하고 복귀하는 흐름이 이미 공개되어 있어 독립 주제로 보기 어렵습니다. / 2번은 /board/general_notice/71의 ‘자동 완성 데이터와 직접 입력 내용을 구분해 제출 전 점검하는 방법’을 그대로 반복합니다. 점검표를 추가했을 뿐, 기존 답만으로 해결되지 않는 새로운 판단이나 행동이 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44257129965",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-18T16:14:14.236491+09:00"
+      "attempt_started_at": "2026-11-18T16:14:14.236491+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 773,
+          "coverageArticles": 148,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-aaabcd4b83",
+            "general_notice-5314ce870e",
+            "general_notice-dd6c1436b7",
+            "general_notice-50bee5625a"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "읽기 중 열린 새 화면이 원래 안내와 다른 출처인지 확인하는 행동",
+          "source_id": "",
+          "reader_problem": "안내문을 보던 중 새 창이나 팝업으로 다른 화면이 열려 해당 화면이 신뢰할 수 있는 출처인지 판단하지 못해 혼란스러운 문제",
+          "distinct_angle": "기존 \"설치나 권한 요청 목적 확인\" 안내와 달리 새로 열린 창의 출처를 구체적으로 비교·판단하는 방법과 안전 복귀 절차를 중심으로 설명",
+          "reader_situation": "새 탭이나 팝업이 열려 원래 안내와 다를 수 있는 출처별 차이를 신속하게 구별하여 안전하게 이용 안내로 돌아가려는 이용자",
+          "deliverable": "새 화면 출처 확인 방법과 출처 불명 시 취해야 할 안전 조치, 안전하게 원래 안내로 복귀하는 단계별 행동 지침서",
+          "task_id": "",
+          "direction_id": "general_notice-aaabcd4b83",
+          "outline": [
+            "새 창이나 팝업이 열린 출처와 원래 안내 문서 출처를 비교하는 구체적 절차 알기",
+            "출처 불분명하거나 의심스러운 경우 취할 안전 대응 행동 숙지하기",
+            "새 창 닫고 원래 안내 위치와 선택 상태를 안전하게 복원하는 단계별 복귀 방법 실천하기"
+          ]
+        },
+        {
+          "topic": "파일 실행 전 설치·알림·권한 요청 내용을 읽고 원래 작업과 비교하는 이용 안내",
+          "source_id": "",
+          "reader_problem": "파일 실행 직전 나타나는 설치나 권한 요청 팝업 문구를 원래 하려던 작업 내용과 비교 판단하지 못해 부적절한 승인이나 혼란이 발생하는 문제",
+          "distinct_angle": "기존 단순 권한 요청 확인에서 한 걸음 더 나아가 요청 문구와 원래 안내를 나란히 비교해 판단하는 구체 절차와 거절 후 복귀 행동을 상세히 안내",
+          "reader_situation": "파일이나 안내를 실행하기 전에 요청 창 문구를 원래 안내 내용과 정확히 비교하여 승인 여부를 단계별로 결정하고 안전하게 복귀하려는 이용자",
+          "deliverable": "설치 및 권한 요청 문구와 안내 내용의 비교 판단법, 승인·거절 결정 절차, 거절 후 원래 작업 화면으로 복귀하는 단계별 행동 매뉴얼",
+          "task_id": "",
+          "direction_id": "general_notice-5314ce870e",
+          "outline": [
+            "설치·권한 요청 문구와 원래 안내 내용을 나란히 비교해 판단하는 구체적 방법 익히기",
+            "요청 목적 판단 후 승인 또는 거절 결정 절차 상세 안내",
+            "거절 시 원래 작업 화면으로 안전히 복귀하며 필요 시 문의 기록하는 행동 절차 실천하기"
+          ]
+        },
+        {
+          "topic": "브라우저 자동 입력 데이터와 사용자가 직접 입력한 내용 구분 점검 습관 만들기",
+          "source_id": "",
+          "reader_problem": "자동 완성으로 채워진 이전 입력값과 직접 새로 입력한 내용을 구분하지 않고 그대로 제출해 오류가 발생하는 경우의 예방 방법이 부족한 문제",
+          "distinct_angle": "기존 자동 완성 기능 설명을 넘어서 자동 입력과 직접 입력 값을 비교·식별하는 실제 점검 노하우와 제출 전 분리 확인용 점검표 작성법을 중심으로 전달",
+          "reader_situation": "웹 양식에 자동 완성 기능으로 넣어진 옛 데이터와 새로 입력한 내용을 각각 구분하여 제출 전 꼼꼼히 점검하고 오류 없이 전송하려는 이용자",
+          "deliverable": "자동 완성 데이터와 직접 입력 데이터를 비교 식별하는 점검 방법, 제출 전 전 항목 분리 확인용 점검표 작성 및 활용법 등 구체적 실천 안내",
+          "task_id": "",
+          "direction_id": "general_notice-dd6c1436b7",
+          "outline": [
+            "브라우저 자동 완성 기능과 이전 입력값 특성 구체적으로 이해하기",
+            "자동 완성으로 입력된 데이터와 직접 입력한 값을 구분하는 실제 점검법 익히기",
+            "점검표를 작성하여 제출 전 전체 입력 내용을 체계적으로 비교·검토하는 습관 형성하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16191,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1204,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17395
+        },
+        "estimated_usd": 0.0084028,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-18T07:14:38.355636+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24985,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 512,
+          "output_tokens_details": {
+            "reasoning_tokens": 159
+          },
+          "total_tokens": 25497
+        },
+        "estimated_usd": 0.02104275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-18T07:14:43.309561+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-18T07:14:17.745756+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-18T07:14:39.239535+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02944555,
+    "estimated_total_usd": 0.02944555,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
