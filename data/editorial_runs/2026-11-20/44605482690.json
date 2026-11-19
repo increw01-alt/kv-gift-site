@@ -1,18 +1,20 @@
 {
   "run_id": "44605482690",
   "date_kst": "2026-11-20",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-19T20:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 '[이용 안내] 공유된 안내 링크의 미리보기 문구와 실제 본문 구분법'과 핵심 질문이 겹칩니다. 이번 글도 링크를 열기 전후의 문구 이해를 다루며, 독자가 해야 하는 판단과 해결 절차가 사실상 같습니다. / 제목은 '의미 있는 링크 설명 작성과 활용법'으로 바뀌었지만 본문은 여전히 링크 앞에 목적과 대상을 적어 오해를 줄이자는 동일한 작성 요령을 반복합니다. 새롭고 다른 문제 해결 절차가 충분히 보이지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44605482690",
@@ -22,15 +24,299 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-20T05:09:06.305103+09:00"
+      "attempt_started_at": "2026-11-20T05:09:06.305103+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 808,
+          "coverageArticles": 150,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-dd6c1436b7",
+            "general_notice-50bee5625a",
+            "general_notice-5314ce870e",
+            "general_notice-98b2d68a1d"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "브라우저 자동 완성 데이터와 직접 입력 내용을 구분해 오류 방지하는 점검 습관",
+          "source_id": "",
+          "reader_problem": "자동 완성으로 채워진 옛 데이터와 새로 입력한 내용을 구분하지 못해 잘못 제출하는 실수를 반복하는 문제",
+          "distinct_angle": "브라우저 자동 완성 기능의 작동 방식을 이해하고, 사용자가 직접 입력한 데이터와 자동 입력 데이터를 비교하여 체크표 활용으로 제출 전 오류를 적극 예방하는 구체적 점검 습관 형성에 집중",
+          "reader_situation": "온라인 양식 작성 시 자동 완성된 이전 입력값과 그냥 입력한 새 데이터를 각각 구별하여 제출 전 총체적 비교 검토와 분리 확인 절차를 체계적으로 실천하려는 이용자",
+          "deliverable": "자동 완성 데이터와 직접 입력 데이터 구분법, 제출 전 점검표 작성 및 활용법, 오류 예방용 구체적인 점검 절차 매뉴얼",
+          "task_id": "",
+          "direction_id": "general_notice-dd6c1436b7",
+          "outline": [
+            "브라우저 자동 완성 기능과 입력 데이터 자동 저장 방식 이해하기",
+            "자동 완성 데이터와 새로 입력한 내용 구분하는 방법 실습하기",
+            "점검표로 제출 전 전체 입력값 비교 확인하는 습관 형성하기"
+          ]
+        },
+        {
+          "topic": "복잡한 안내 표와 접힌 문단에서 조건 누락 없이 빠진 행열을 찾아내는 체계적 점검법",
+          "source_id": "",
+          "reader_problem": "복잡한 안내표와 접힌 문단에서 자신이 확인하지 못한 조건이나 빠진 행·열을 스스로 찾아내고 정확히 기록하여 누락 점검하는 방법이 부족함",
+          "distinct_angle": "안내문 내 표 행과 열, 접힌 문단 구조를 상세 이해하고, 대조·비교 점검 기법과 기록 체계화를 통해 스스로 놓친 조건을 정확히 찾아내는 실습 중심 점검법 제시",
+          "reader_situation": "복잡한 표와 접힌 문단이 포함된 안내문을 읽으면서 빠뜨린 조건 범위와 누락 가능성을 체계적으로 대조하고, 기록과 재확인 절차를 수행하려는 이용자",
+          "deliverable": "행·열과 접힌 문단 구조 해설, 누락 범위 점검법, 놓친 조건 기록 및 체계적 보완 실습 가이드",
+          "task_id": "",
+          "direction_id": "general_notice-50bee5625a",
+          "outline": [
+            "안내문 내 표의 행·열 구조와 접힌 문단 특징 자세히 이해하기",
+            "대조 비교 점검으로 누락 가능성 있는 범위 찾는 방법 익히기",
+            "체계적 기록과 재확인으로 점검 누락 없는 실습 수행하기"
+          ]
+        },
+        {
+          "topic": "파일 실행 전 설치·알림·권한 요청 문구를 원래 작업과 비교해 판단하는 안전 대응 안내",
+          "source_id": "",
+          "reader_problem": "파일 열기 전 갑자기 나타나는 설치·알림·권한 요청창의 문구와 본래 작업 의도를 비교 판단하지 못해 부적절한 승인과 혼란이 발생하는 문제",
+          "distinct_angle": "요청 문구를 원래 의도 중인 작업 내용과 나란히 비교하며 승인이나 거절 여부를 신중히 결정하는 구체적 절차와 거절 시 안전 복귀 방법 등 단계별 대응 매뉴얼 제공",
+          "reader_situation": "파일 실행 과정에서 뜨는 설치·권한 요청 화면 문구를 꼼꼼히 원래 작업과 대조해 그 목적을 정확히 판단하고, 승인·거절 및 거절 후 복귀 절차를 안전하게 실천하는 이용자",
+          "deliverable": "설치 및 권한 요청 문구와 작업 내용 비교 판단법, 승인·거절 결정 절차, 거절 후 원래 작업으로 안전 복귀하는 매뉴얼",
+          "task_id": "",
+          "direction_id": "general_notice-5314ce870e",
+          "outline": [
+            "설치·권한 요청 문구와 원래 안내 내용을 나란히 비교해 목적 판단하기",
+            "요청 목적에 따른 승인 또는 거절 결정 단계별 절차 안내",
+            "거절했을 때 원래 작업 화면으로 안전하게 복귀하며 필요 시 기록·문의 절차 실천하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
+        "source_id": "",
+        "reader_problem": "메신저나 게시판에서 링크를 ‘여기’ 등 애매한 표현으로만 공유해, 수신자가 링크 내용을 바로 이해하지 못해 공유 효율이 떨어지는 문제",
+        "distinct_angle": "일반적인 ‘여기’ 링크 대신 명확한 목적과 내용을 담은 의미 있는 링크 설명을 직접 작성하는 실전 매뉴얼을 제공하여 문맥파악 어려움을 극복하고 소통 효율을 높임",
+        "reader_situation": "여러 개 링크를 단순 나열하지 않고, 각 링크가 어떤 내용인지 수신자가 쉽게 알도록 구체적이고 간결한 설명을 달아 공유하려는 이용자",
+        "deliverable": "모호한 링크 표현 대신 목적과 대상을 포함한 명확한 설명문 작성법, 실제 예시비교, 효과적 소통을 위한 작성 실습 매뉴얼",
+        "task_id": "",
+        "direction_id": "general_notice-98b2d68a1d",
+        "outline": [
+          "애매한 ‘여기’ 표현으로 인한 문제점 인식하기",
+          "링크 목적과 연결 대상을 정확히 포함한 설명 작성법 익히기",
+          "실제 예시를 통해 ‘여기’ 링크를 의미 있는 표현으로 바꾸는 연습하기"
+        ],
+        "novelty_reason": "후보 셋은 각각 기존 글과 질문·절차가 사실상 겹칩니다. 자동 완성 구분은 /board/general_notice/71, 설치·권한 요청 판단은 /board/general_notice/69, 누락 행열 점검은 /board/general_notice/68과 이미 같은 독자 문제와 해결 순서를 다룹니다. 반면 후보 셋은 링크를 공유할 때 ‘여기’ 같은 빈 표현 대신, 수신자가 링크 목적과 대상을 바로 이해하도록 설명문을 직접 쓰는 방법에 초점이 있어 기존의 미리보기 문구 검증 글과는 해결 과제가 다릅니다. 미리보기와 본문을 비교해 진위를 확인하는 글이 아니라, 공유 문구 자체를 작성하는 판단 도구를 주는 점이 새롭습니다.",
+        "screen_rejections": [
+          "후보 영은 자동 완성된 옛 입력과 직접 입력을 구분해 제출 오류를 막는 절차로, /board/general_notice/71의 질문과 해결 단계가 거의 같습니다. 기존 글이 이미 항목별 구분, 메모, 제출 전 재확인을 다루므로 새 질문이 아닙니다.",
+          "후보 일은 넓은 안내표에서 행 제목과 열 제목을 함께 확인해 빠진 조건을 찾는 방법으로, /board/general_notice/68의 ‘행 제목과 열 제목을 짝지어 조건을 파악’하는 흐름과 같습니다. 독자가 해야 할 판단과 행동이 중복됩니다.",
+          "후보 이는 설치·알림·권한 요청 문구를 원래 작업과 비교해 목적을 판단하는 절차로, /board/general_notice/69의 요청 문구와 원래 안내 내용을 비교해 관련성을 판단하는 내용과 사실상 같습니다. 거절 후 돌아가는 단계까지 동일합니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/59"
+          ],
+          "gap": "기존 글은 공유된 링크를 열어 미리보기 문구와 실제 본문이 같은지 가려내는 데 집중합니다. 이번 글은 아예 공유 문구를 쓸 때, 링크의 대상과 목적을 먼저 드러내는 설명을 붙여 수신자가 링크를 열기 전에도 용도를 판단하게 만드는 방법을 다룹니다.",
+          "example": "메신저로 자료를 보낼 때 ‘여기 확인해 주세요’만 적으면 받는 사람이 무엇을 먼저 봐야 하는지 헷갈리는 상황에서, 링크 앞뒤에 대상과 용도를 함께 적는 방식으로 바꾸어 전달합니다.",
+          "result": "독자는 링크를 붙여 보낼 때 모호한 표현을 줄이고, 수신자가 제목과 설명만으로 링크의 목적을 파악하도록 문장을 구성할 수 있습니다.",
+          "section_actions": [
+            "링크 앞에 대상과 용도를 한 문장으로 붙여 어떤 내용을 보게 할지 먼저 밝힌다",
+            "수신자가 눌러야 하는 이유를 짧게 덧붙여 링크만으로는 보이지 않는 맥락을 보완한다",
+            "여러 링크를 보낼 때는 각 링크마다 설명을 달리 써서 목적이 섞이지 않게 정리한다"
+          ]
+        }
+      },
+      "board": "general_notice",
+      "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-19T15:45:01Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15762,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1199,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16961
+        },
+        "estimated_usd": 0.0082232,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-19T20:09:22.071202+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30540,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 889,
+          "output_tokens_details": {
+            "reasoning_tokens": 191
+          },
+          "total_tokens": 31429
+        },
+        "estimated_usd": 0.0269055,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-19T20:09:30.102990+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3538,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 416,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3954
+        },
+        "estimated_usd": 0.0020808,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-19T20:09:33.934438+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 9727,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 470,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 10197
+        },
+        "estimated_usd": 0.0046428,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-19T20:09:39.920586+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19265,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 443,
+          "output_tokens_details": {
+            "reasoning_tokens": 128
+          },
+          "total_tokens": 19708
+        },
+        "estimated_usd": 0.01644225,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-19T20:09:47.685169+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-19T20:09:09.385427+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-19T20:09:22.917320+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-19T20:09:30.106365+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-19T20:09:35.162884+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-19T20:09:41.800323+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.05829455,
+    "estimated_total_usd": 0.05829455,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

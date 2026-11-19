@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T20:09:06.592477+00:00",
+  "generatedAt": "2026-11-19T20:09:47.983779+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -6197,14 +6197,14 @@
       "runId": "44605482690",
       "dateKst": "2026-11-20",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05829455,
+      "knownSubtotalUsd": 0.05829455
     },
     {
       "id": "post:purchase:2561",
@@ -25413,13 +25413,57 @@
     {
       "entryId": "run:44605482690",
       "dateKst": "2026-11-20",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-19T20:09:22.071202+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0082232,
+      "knownSubtotalUsd": 0.0082232,
+      "requests": 1,
+      "inputTokens": 15762,
+      "outputTokens": 1199
+    },
+    {
+      "entryId": "run:44605482690",
+      "dateKst": "2026-11-20",
+      "recordedAt": "2026-11-19T20:09:30.102990+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0269055,
+      "knownSubtotalUsd": 0.0269055,
+      "requests": 1,
+      "inputTokens": 30540,
+      "outputTokens": 889
+    },
+    {
+      "entryId": "run:44605482690",
+      "dateKst": "2026-11-20",
+      "recordedAt": "2026-11-19T20:09:33.934438+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0020808,
+      "knownSubtotalUsd": 0.0020808,
+      "requests": 1,
+      "inputTokens": 3538,
+      "outputTokens": 416
+    },
+    {
+      "entryId": "run:44605482690",
+      "dateKst": "2026-11-20",
+      "recordedAt": "2026-11-19T20:09:39.920586+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0046428,
+      "knownSubtotalUsd": 0.0046428,
+      "requests": 1,
+      "inputTokens": 9727,
+      "outputTokens": 470
+    },
+    {
+      "entryId": "run:44605482690",
+      "dateKst": "2026-11-20",
+      "recordedAt": "2026-11-19T20:09:47.685169+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.01644225,
+      "knownSubtotalUsd": 0.01644225,
+      "requests": 1,
+      "inputTokens": 19265,
+      "outputTokens": 443
     },
     {
       "entryId": "post:purchase:2561",

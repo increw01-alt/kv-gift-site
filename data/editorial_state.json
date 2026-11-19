@@ -574,10 +574,15 @@
       "board": "sale",
       "topic": "종이상품권 여러 장 세기 작업 중단 후 정확한 재개를 위한 물리적 구역별 배치와 표시법",
       "run_id": "44594209750"
+    },
+    {
+      "board": "general_notice",
+      "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
+      "run_id": "44605482690"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "44594209750",
+  "last_board": "general_notice",
+  "last_run_id": "44605482690",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

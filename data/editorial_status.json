@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T20:09:06.549999+00:00",
+  "generatedAt": "2026-11-19T20:09:47.942677+00:00",
   "dateKst": "2026-11-20",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 8,
-  "held": 4,
+  "held": 5,
   "errors": 2,
-  "knownSubtotalUsd": 0.26682305,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3251176,
+  "estimatedTotalUsd": 0.3251176,
   "records": [
     {
       "runId": "44553205892",
@@ -105,21 +105,21 @@
     },
     {
       "runId": "44605482690",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "general_notice",
+      "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-19T20:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.05829455,
+      "knownSubtotalUsd": 0.05829455
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 3,
+    "retryAfter": "2026-11-20T07:09:06.305103+09:00",
+    "cooldownMinutes": 120
   }
 }
