@@ -579,10 +579,15 @@
       "board": "general_notice",
       "topic": "이미지 없이도 내용이 명확한 의미 있는 링크 설명 작성과 활용법",
       "run_id": "44605482690"
+    },
+    {
+      "board": "sense",
+      "topic": "온라인과 오프라인 사용 환경을 동시에 고려한 상품권 선택 가이드",
+      "run_id": "44626444454"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "44605482690",
+  "last_board": "sense",
+  "last_run_id": "44626444454",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

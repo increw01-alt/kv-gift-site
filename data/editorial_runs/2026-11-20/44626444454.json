@@ -1,18 +1,20 @@
 {
   "run_id": "44626444454",
   "date_kst": "2026-11-20",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sense",
+  "topic": "온라인과 오프라인 사용 환경을 동시에 고려한 상품권 선택 가이드",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-19T22:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 온라인과 오프라인을 함께 고려한 선택 가이드라고 했지만 본문은 각각의 사용 조건을 확인하고 발행사·판매처에 문의하라는 동일한 절차를 반복해, 기존의 환경 점검형 글과 해결 방식이 같습니다. / 병행 사용 가능 여부를 판단하는 새 기준이나 우선순위, 피해야 할 조합 같은 실제 선택 도구가 충분히 제시되지 않아 기존 답으로도 해결되는 내용입니다. / 제목은 새로 보여도 본문이 온라인/오프라인 사용 가능 여부 확인과 문의 중심으로 구성되어 있어, 기존의 사용환경 점검 글들과 핵심 질문이 중복됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "44626444454",
@@ -22,15 +24,269 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-20T07:14:04.949640+09:00"
+      "attempt_started_at": "2026-11-20T07:14:04.949640+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 812,
+          "coverageArticles": 150,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-07089a422e",
+            "sense-bc0cf30f7f",
+            "sense-46678bb4d0",
+            "sense-d926083876"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 선물 시 받는 사람의 사용 환경 점검 질문과 확인 절차",
+          "source_id": "",
+          "reader_problem": "선물용 상품권 구매 전 받는 사람이 어떤 기기와 서비스 환경에서 주로 사용하는지 구체적으로 알아야 실패 없는 선물이 가능하나 그 질문과 확인 절차를 몰라 난감하다.",
+          "distinct_angle": "기존 간단 사용 안내보다 구체적 질문 문항과 확인 절차, 체크리스트를 제공하여 받는 사람 사용환경 전반을 체계적으로 점검하는 방법을 설명한다.",
+          "reader_situation": "상품권 선물을 준비하며 받는 사람의 모바일 운영체제, 앱 설치 여부, 이용 가능 매장 등을 차근차근 체크해 맞춤 선물을 하려는 사용자.",
+          "deliverable": "사용 환경 확인용 질문 리스트, 점검 절차별 체크리스트, 맞춤형 상품권 선택 결정 과정 안내서.",
+          "task_id": "",
+          "direction_id": "sense-d926083876",
+          "outline": [
+            "받는 사람의 기기 종류별(안드로이드, 아이폰, 기타) 확인 질문 만들기",
+            "앱 및 결제 수단 호환성 점검 절차 설계하기",
+            "환경과 조건별 맞춤 상품권 선택 사례와 점검 가이드 작성하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "온라인과 오프라인 사용 환경을 동시에 고려한 상품권 선택 가이드",
+        "source_id": "",
+        "reader_problem": "온라인과 오프라인 모두 사용 가능한 상품권을 찾으려 하지만 각각의 장단점과 조건을 비교하기 어려워 최적 선택을 못 한다.",
+        "distinct_angle": "일반적으로 온라인 또는 오프라인 상품권을 따로 다룬 기존 글과 달리, 이 글은 두 환경의 조건·사용성·장단점을 구분해 비교하고 병행 사용 조건을 직접 점검하는 법을 구체적으로 설명한다.",
+        "reader_situation": "선물받는 이가 온라인과 매장 모두에서 쓸 가능성이 있는 경우로, 사용 범위와 혜택 조건을 한 번에 파악해 선택하려는 구매자.",
+        "deliverable": "온라인·오프라인 상품권 조건 비교표, 병행 사용 가능 여부 점검 체크리스트, 두 환경 모두 고려한 최종 선택 기준 문서.",
+        "task_id": "",
+        "direction_id": "sense-bc0cf30f7f",
+        "outline": [
+          "온라인 상품권과 오프라인 상품권 조건과 특성 분류하기",
+          "온라인과 오프라인에서 각각 체크할 주요 조건과 주의사항 점검하기",
+          "두 환경 모두 활용 가능한 상품권 추천 기준 만들기"
+        ],
+        "novelty_reason": "후보 영상을 비교하면, 첫 번째 후보는 온라인과 오프라인을 각각 따로 쓰는 경우가 아니라 두 환경을 함께 쓸 가능성이 있을 때 어떤 조건을 먼저 확인하고 어떻게 최종 선택할지에 초점이 있습니다. 가장 가까운 기존 글들은 지점 사용 가능 여부, 기기·사용환경 점검, 해외 사용 여부처럼 단일 환경 확인에 머무르며, 병행 사용 가능성에 따른 판단 순서와 선택 기준을 새로 제시하지는 않습니다. 따라서 기존 답만으로 바로 해결되는 중복은 아니고, 비교형 선택 기준을 구체화한 새 글로 볼 수 있습니다.",
+        "screen_rejections": [
+          "첫 번째 후보는 받는 사람의 기기·앱·결제 환경을 묻는 기존 글들과 핵심 질문과 해결 절차가 거의 같습니다. 질문 항목만 더 늘렸을 뿐, 선물 전 사용 환경을 확인하고 맞는 상품권을 고르는 흐름이 이미 공개된 글과 동일합니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/purchase/2571",
+            "/board/free/470",
+            "/board/free/471"
+          ],
+          "gap": "기존 글은 한 환경에서 쓸 수 있는지 확인하는 데 그칩니다. 이번 글은 온라인과 오프라인을 함께 고려해야 할 때, 어느 조건을 먼저 우선하고 어떤 조합은 피해야 하는지까지 정리해 독자가 실제 선택을 끝내도록 돕는 점이 다릅니다.",
+          "example": "받는 사람이 집에서는 앱으로 쓰고 밖에서는 매장에서도 쓰고 싶어 하는 경우를 떠올려 보세요. 이때는 둘 다 된다는 말만 믿지 말고, 각 환경에서 필요한 가입 절차와 실제 사용 흐름이 다르지 않은지 먼저 나눠 확인한 뒤, 둘 중 하나라도 막히는 조건이 있으면 병행형보다 단일 환경형을 고르는 식으로 판단합니다.",
+          "result": "독자가 온라인과 오프라인 조건을 따로 확인한 뒤 병행 사용 가능 여부와 우선 선택 기준을 스스로 정리할 수 있다.",
+          "section_actions": [
+            "첫째 절에서는 온라인과 오프라인에서 각각 필요한 조건을 분리해 적고, 공통점과 차이를 나눠보게 한다.",
+            "둘째 절에서는 두 환경을 함께 쓸 때 막히기 쉬운 지점을 먼저 점검해, 병행 사용이 실제로 가능한지 판단하게 한다.",
+            "셋째 절에서는 확인한 차이를 바탕으로 단일형과 병행형 중 어떤 상품권을 고를지 최종 기준표로 정리하게 한다."
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "온라인과 오프라인 사용 환경을 동시에 고려한 상품권 선택 가이드",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-19T15:45:01Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15966,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1042,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17008
+        },
+        "estimated_usd": 0.0080536,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-19T22:14:20.761196+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 15606,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 810,
+          "output_tokens_details": {
+            "reasoning_tokens": 226
+          },
+          "total_tokens": 16416
+        },
+        "estimated_usd": 0.0153495,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-19T22:14:28.971167+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3420,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 456,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3876
+        },
+        "estimated_usd": 0.0020976,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-19T22:14:41.613206+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7943,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 534,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8477
+        },
+        "estimated_usd": 0.0040316,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-19T22:14:48.160210+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19102,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 609,
+          "output_tokens_details": {
+            "reasoning_tokens": 251
+          },
+          "total_tokens": 19711
+        },
+        "estimated_usd": 0.017067,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-19T22:14:55.638370+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-19T22:14:08.488183+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-19T22:14:21.447902+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-19T22:14:28.974482+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-19T22:14:42.838126+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-19T22:14:50.018904+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0465993,
+    "estimated_total_usd": 0.0465993,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
