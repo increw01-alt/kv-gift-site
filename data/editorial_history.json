@@ -1786,5 +1786,18 @@
     "publication_mode": "automatic",
     "run_id": "44406010456",
     "usage_file": "data/editorial_runs/2026-11-19/44406010456.json"
+  },
+  {
+    "board": "gc_tip",
+    "id": 53,
+    "topic": "포인트 결제와 적립을 구분하는 구체 확인 방법",
+    "drafted_at": "2026-11-20",
+    "automation": true,
+    "search_intent": "포인트를 실제로 쓴 결제인지 사후 적립인지 화면과 명세에서 구분하는 방법을 알고 싶은 질문",
+    "image_scene": "책상 위에 결제 직후 화면이 띄워진 스마트폰과 영수증이 나란히 놓여 있고, 한 사람이 화면의 ‘사용’ 표시와 영수증의 ‘적립 예정’ 문구를 각각 다른 색 펜으로 표시하며 두 내역을 분리해 비교하는 구도",
+    "image_alt": "결제 화면과 영수증을 나란히 두고 포인트 사용 표시와 적립 예정 문구를 따로 표시해 비교하는 장면",
+    "publication_mode": "automatic",
+    "run_id": "44559790306",
+    "usage_file": "data/editorial_runs/2026-11-20/44559790306.json"
   }
 ]

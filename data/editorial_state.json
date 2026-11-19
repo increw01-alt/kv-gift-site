@@ -566,8 +566,8 @@
       "run_id": "44443891192"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "44553205892",
+  "last_board": "gc_tip",
+  "last_run_id": "44559790306",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1159,6 +1159,30 @@
       "topic": "사용 뒤 남은 금액과 사용 이력을 함께 확인하는 상품권 종류별 관리법",
       "date_kst": "2026-11-19",
       "run_id": "44422398062",
+      "status": "held"
+    },
+    {
+      "source_id": "point-payment",
+      "board": "gc_tip",
+      "topic": "포인트 결제와 적립을 구분하는 구체 확인 방법",
+      "date_kst": "2026-11-20",
+      "run_id": "44559790306",
+      "status": "published"
+    },
+    {
+      "source_id": "coupon-exclusion",
+      "board": "gc_tip",
+      "topic": "구매 전에 쿠폰 적용 대상과 상품권 제외 조건 정확히 가려내기",
+      "date_kst": "2026-11-20",
+      "run_id": "44559790306",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-benefit",
+      "board": "gc_tip",
+      "topic": "할인 혜택 받은 결제 취소 시 혜택 반환과 주문 내역 별도로 확인하기",
+      "date_kst": "2026-11-20",
+      "run_id": "44559790306",
       "status": "held"
     }
   ]
