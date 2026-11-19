@@ -569,10 +569,15 @@
       "board": "gc_information",
       "topic": "상품권 안내문에서 가능·필수·제외 문장 의미 차이 익히기",
       "run_id": "44588082114"
+    },
+    {
+      "board": "sale",
+      "topic": "종이상품권 여러 장 세기 작업 중단 후 정확한 재개를 위한 물리적 구역별 배치와 표시법",
+      "run_id": "44594209750"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "44588082114",
+  "last_board": "sale",
+  "last_run_id": "44594209750",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

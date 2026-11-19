@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T19:03:56.447062+00:00",
+  "generatedAt": "2026-11-19T19:04:36.228319+00:00",
   "dateKst": "2026-11-20",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 7,
-  "held": 3,
+  "held": 4,
   "errors": 2,
-  "knownSubtotalUsd": 0.22226675,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.26682305,
+  "estimatedTotalUsd": 0.26682305,
   "records": [
     {
       "runId": "44553205892",
@@ -92,21 +92,21 @@
     },
     {
       "runId": "44594209750",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "종이상품권 여러 장 세기 작업 중단 후 정확한 재개를 위한 물리적 구역별 배치와 표시법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-19T19:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0445563,
+      "knownSubtotalUsd": 0.0445563
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 2,
+    "retryAfter": "2026-11-20T05:03:56.147426+09:00",
+    "cooldownMinutes": 60
   }
 }
