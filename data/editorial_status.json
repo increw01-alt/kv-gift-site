@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T18:28:55.141577+00:00",
+  "generatedAt": "2026-11-19T18:29:26.943941+00:00",
   "dateKst": "2026-11-20",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 1,
   "verified": 1,
   "attempts": 6,
-  "held": 2,
+  "held": 3,
   "errors": 2,
-  "knownSubtotalUsd": 0.19165235,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.22226675,
+  "estimatedTotalUsd": 0.22226675,
   "records": [
     {
       "runId": "44553205892",
@@ -79,21 +79,21 @@
     },
     {
       "runId": "44588082114",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "상품권 안내문에서 가능·필수·제외 문장 의미 차이 익히기",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-19T18:27:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0306144,
+      "knownSubtotalUsd": 0.0306144
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-20T03:58:54.868271+09:00",
+    "cooldownMinutes": 30
   }
 }
