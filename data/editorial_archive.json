@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T15:55:22.420684+00:00",
+  "generatedAt": "2026-11-19T15:57:07.237861+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -6117,7 +6117,7 @@
       "board": "gc_tip",
       "topic": "포인트 결제와 적립을 구분하는 구체 확인 방법",
       "url": "https://kv-gift.co.kr/board/gc_tip/53",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-19T15:57:07.179095+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.12694055,
       "knownSubtotalUsd": 0.12694055
