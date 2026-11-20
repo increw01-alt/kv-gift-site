@@ -1,18 +1,20 @@
 {
   "run_id": "44839984896",
   "date_kst": "2026-11-21",
-  "board": null,
+  "board": "free",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-20T23:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글이 이미 다룬 질문과 해결 절차를 그대로 반복합니다. 0번은 과거 선택의 결과와 판단 과정을 분리해 점검하는 흐름이 /board/free/482와 사실상 같고, 1번은 선물 계획에서 확정과 선택 여지를 비교하는 방식이 /board/free/486, /board/free/476와 겹칩니다. 2번도 추천 요청에서 선호와 제외 조건을 나누는 절차가 /board/free/487, /board/sense/23과 같은 질문 구조라 새 해결 단계가 확인되지 않습니다. / 0번은 /board/free/482가 이미 다룬 ‘결과가 좋았던 선택의 판단 과정을 결과와 분리해 점검하는 방법’과 동일합니다. 선택 당시 알고 있던 정보와 나중 결과를 구분해 기록하고, 판단 질을 평가하는 절차가 그대로 겹칩니다. / 1번은 /board/free/486, /board/free/476가 이미 다룬 ‘선물 기준의 우선순위 비교와 공평성 판단’과 실질적으로 같습니다. 확정과 선택 여지를 나눠 부담을 비교한다는 설명이 기존의 같은/다른 선물 비교와 새로 구분되지 않습니다. / 2번은 /board/free/487, /board/sense/23이 이미 다룬 ‘추천 조건을 정리하고 우선순위를 정하는 방법’과 중복됩니다. 좋아하는 점과 피하고 싶은 점을 목록화해 추천 범위를 좁히는 흐름이 기존 안내와 같습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44839984896",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-21T08:53:55.040550+09:00"
+      "attempt_started_at": "2026-11-21T08:53:55.040550+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 846,
+          "coverageArticles": 152,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-911ea23e77",
+            "free-33a0543960",
+            "free-e3b569a136",
+            "free-334ff31d35"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "과거 선택 당시 결과와 판단 과정을 객관적으로 구분하는 점검 질문",
+          "source_id": "",
+          "reader_problem": "좋은 결과가 나온 과거 선택을 반복하려 할 때 결과의 우연 여부와 당시 판단 과정의 합리성을 분리해 평가하는 구체적인 어려움",
+          "distinct_angle": "기존 안내는 결과와 판단 모두를 함께 다루지만, 이번 글은 구분 점검 질문과 절차에 집중해 과거 선택을 객관적이고 구체적으로 되돌아보는 방법을 새롭게 제안함",
+          "reader_situation": "과거 좋은 결과를 단순 반복하지 않고, 당시 상황과 판단의 질을 분리해 검토하며 의사결정 능력 향상을 원하는 독자",
+          "deliverable": "과거 선택 검토를 위한 구체적 점검 질문 목록과 판단 질 구분 절차, 사례 기반 학습 흐름도 완성",
+          "task_id": "",
+          "direction_id": "free-911ea23e77",
+          "outline": [
+            "과거 선택의 결과와 당시 확보 정보 분리하는 구체적 기법 습득하기",
+            "우연한 성공과 합리적 판단 과정을 구분하는 사례 중심 분석 실습",
+            "평가용 질문 작성과 판단 과정 객관 평가 절차 체계적으로 익히기"
+          ]
+        },
+        {
+          "topic": "선물 계획에서 확정과 선택 여지 두 방식 부담 비교 및 최적 선택 질문",
+          "source_id": "",
+          "reader_problem": "모임이나 가족 선물 준비 시 모든 내용을 조기에 확정하거나 일부를 열어 둘 때 받는 부담과 융통성 차이가 뚜렷하지 않아 결정하기 어려움",
+          "distinct_angle": "기존는 부담 및 선택 관련 안내가 분산됐으나 이번 글은 두 방식 부담과 편의를 비교 분석하는 질문지 작성과 개인별 판단 기준 마련에 초점",
+          "reader_situation": "모임 선물 계획 시 선호에 따라 확정 정도를 조절하며 부담과 조율 편의 간 균형 있는 의사결정을 희망하는 소비자",
+          "deliverable": "확정 및 선택 여지 두 방식 부담 비교 질문지, 실제 사례별 이점 분석, 상황에 따른 적합 방식 판단 기준 표",
+          "task_id": "",
+          "direction_id": "free-e3b569a136",
+          "outline": [
+            "확정과 선택 여지 두 방식의 핵심 차이와 부담 관련 질문 항목 정리",
+            "실제 사례를 통해 두 방식별 부담과 장점 체계적으로 비교",
+            "독자의 상황에 맞는 최적 방식 선택 기준 개발 및 적용 방법 안내"
+          ]
+        },
+        {
+          "topic": "추천 요청 시 좋아하는 점과 피하고 싶은 점 중 우선 질문 방식 차별화",
+          "source_id": "",
+          "reader_problem": "추천 받으려 할 때 좋아하는 점부터 말할지, 피하고 싶은 점부터 이야기할지에 따라 추천 결과와 선택 후보 범위가 달라지는 문제",
+          "distinct_angle": "일반 안내는 추천 조건 나열을 권하지만 이 후보는 피할 점과 선호 조건을 각각 목록화해 추천 결과 축소 방식 차이점을 비교하는 구체적 질문 중심",
+          "reader_situation": "추천 선택 장면에서 자신의 선호와 제외 조건을 명확히 하며 각각 설명하는 방식을 비교해 최적의 추천 요청 방식을 찾고자 하는 독자",
+          "deliverable": "피해야 할 조건과 좋아하는 조건을 별도 목록으로 작성하는 방법, 조건 우선순위별 추천 후보 결과 비교 표와 판단 기준",
+          "task_id": "",
+          "direction_id": "free-334ff31d35",
+          "outline": [
+            "추천 전 좋아하는 점과 피할 점을 각각 목록화하고 우선순위 매기기",
+            "각 조건 우선순위에 따른 추천 결과 후보군 축소 과정 비교",
+            "상황에 맞는 추천 요청 방식 선택 판단 기준 구체화 및 적용"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16203,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1073,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17276
+        },
+        "estimated_usd": 0.008198,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T23:54:06.352999+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25313,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 535,
+          "output_tokens_details": {
+            "reasoning_tokens": 149
+          },
+          "total_tokens": 25848
+        },
+        "estimated_usd": 0.02139225,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T23:54:12.405646+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T23:53:57.604486+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T23:54:06.807148+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02959025,
+    "estimated_total_usd": 0.02959025,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
