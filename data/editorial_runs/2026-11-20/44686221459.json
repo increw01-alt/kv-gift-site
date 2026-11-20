@@ -1,18 +1,20 @@
 {
   "run_id": "44686221459",
   "date_kst": "2026-11-20",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "general_notice",
+  "topic": "읽기 중 열린 새 화면 출처와 원래 안내 비교 및 안전 복귀 절차 안내",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-20T06:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 새 창이나 팝업의 출처를 확인한 뒤, 의심되면 닫고 원래 안내로 복귀하는 핵심 질문과 해결 절차가 기존 '[이용 안내] 안내를 읽는 중 설치나 권한 요청이 나오면 목적을 먼저 확인해 주세요' 및 '[이용 안내] 읽기 중 화면 밝기·입력 도구 바꿀 때 선택 이동 유지하는 절차 안내'와 본문 수준에서 겹칩니다. / 화면 제목·안내 문구·기억한 문장으로 원래 위치를 복원하는 흐름이 기존 글의 '상태 변화 후 원래 위치 복원'과 사실상 같은 독자 상황을 다룹니다."
+    ]
   },
   "api_usage": {
     "run_id": "44686221459",
@@ -22,15 +24,250 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-20T15:13:53.042387+09:00"
+      "attempt_started_at": "2026-11-20T15:13:53.042387+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 824,
+          "coverageArticles": 151,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-e6a6456980",
+            "general_notice-d77f6bbe96",
+            "general_notice-d976b28d45",
+            "general_notice-aaabcd4b83"
+          ]
+        }
+      },
+      "rejected_topic_plans": [],
+      "topic_plan": {
+        "topic": "읽기 중 열린 새 화면 출처와 원래 안내 비교 및 안전 복귀 절차 안내",
+        "source_id": "",
+        "reader_problem": "이용 안내를 보던 중 새 창이나 팝업으로 다른 화면이 열려 해당 화면이 신뢰할 만한 출처인지 판단하지 못하고 원래 안내로 안전하게 돌아가는 방법을 몰라 당황하는 문제",
+        "distinct_angle": "기존 안내들은 새 창 출처 확인법을 단순 소개하거나 일반적 주의사항만 제시하지만, 이번 글은 출처별 화면 비교 절차와 출처 불명 시 안전 조치, 새 창 닫고 원 안내로 복귀하는 단계별 행동을 실제로 따라할 수 있는 구체적 행동 지침서로 다름",
+        "reader_situation": "새 탭이나 팝업이 예상치 않게 열려 원래 안내와 다를 수 있는 출처를 빠르게 구별해 안전하게 확인하고, 필요 시 새 창을 닫아 원래 안내 문서 위치와 선택 상태를 정확히 복원하려는 이용자",
+        "deliverable": "새 창 출처 비교 및 검증 방법, 출처 불명 시 단계별 안전 대응 행동, 새 창 닫은 뒤 원래 안내 위치와 상태를 안전하게 복구하는 상세 복귀 절차 매뉴얼",
+        "task_id": "",
+        "direction_id": "general_notice-aaabcd4b83",
+        "outline": [
+          "열린 새 창과 원래 안내 출처의 웹주소와 화면 요소 비교하는 구체 단계 익히기",
+          "출처 미확인이나 의심스러운 경우 취할 안전 대응 행동과 새 창 안전하게 닫는 방법 실습하기",
+          "닫은 새 창 이후 원래 안내 문서 위치와 선택 항목 복원하는 체계적 복귀 절차 단계별 실행법 배우기"
+        ],
+        "novelty_reason": "새 창이나 팝업이 뜬 뒤 그 화면의 출처를 확인하고, 원래 안내로 다시 돌아가는 절차를 다루는 점은 기존 글과 가장 가깝지만, 기존 글들은 요청 문구 판단이나 화면 위치 복원에 머물렀습니다. 이번 후보는 화면 주소와 요소를 대조해 출처를 가리고, 의심되면 닫은 뒤 원래 읽던 안내 위치까지 되돌리는 구체적 행동을 함께 제시해 더 좁고 실무적인 문제를 풉니다.",
+        "screen_rejections": [],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/69",
+            "/board/general_notice/70"
+          ],
+          "gap": "기존 글은 요청 문구가 원래 안내와 맞는지 보거나, 화면 상태가 바뀐 뒤 읽던 위치를 다시 찾는 방법까지는 다뤘습니다. 하지만 새 창이 어디서 열렸는지 출처를 화면 주소와 요소로 직접 대조하고, 출처가 불명확할 때 닫은 뒤 원래 안내의 위치와 선택 상태를 함께 복원하는 흐름은 충분히 다루지 않았습니다.",
+          "example": "읽던 안내 중 예상치 못한 새 창이 열렸는데, 표시된 주소와 화면 제목이 원래 안내와 다르게 보일 때는 먼저 현재 화면의 출처를 확인하고, 관련이 약하면 새 창을 닫은 뒤 방금 보던 문단과 항목으로 다시 돌아가야 합니다.",
+          "result": "독자는 새 창의 출처를 스스로 가려내고, 필요 없는 창을 정리한 다음, 원래 안내 문서의 읽던 지점과 선택 상태를 다시 이어 볼 수 있게 됩니다.",
+          "section_actions": [
+            "새 창이 열리면 먼저 주소와 화면 제목, 안내 문구를 원래 문서와 맞대어 출처가 같은지 확인한다.",
+            "출처가 흐리거나 안내와 맞지 않으면 입력이나 선택을 진행하지 말고 새 창을 닫을 판단을 먼저 한다.",
+            "창을 닫은 뒤에는 기억한 문장과 선택된 항목을 단서로 원래 안내의 위치와 상태를 다시 찾아 복원한다."
+          ]
+        }
+      },
+      "board": "general_notice",
+      "topic": "읽기 중 열린 새 화면 출처와 원래 안내 비교 및 안전 복귀 절차 안내",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-19T15:45:01Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15585,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 387,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 15972
+        },
+        "estimated_usd": 0.0068532,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T06:14:01.544434+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 11656,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 942,
+          "output_tokens_details": {
+            "reasoning_tokens": 449
+          },
+          "total_tokens": 12598
+        },
+        "estimated_usd": 0.012981,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T06:14:07.799109+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3433,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 447,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3880
+        },
+        "estimated_usd": 0.0020884,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T06:14:13.208947+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 7388,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 607,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7995
+        },
+        "estimated_usd": 0.0039264,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T06:14:20.494068+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20532,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 434,
+          "output_tokens_details": {
+            "reasoning_tokens": 79
+          },
+          "total_tokens": 20966
+        },
+        "estimated_usd": 0.017352,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T06:14:24.503977+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T06:13:55.411226+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T06:14:01.666496+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T06:14:07.804554+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T06:14:14.021480+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T06:14:21.610587+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.043201,
+    "estimated_total_usd": 0.043201,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

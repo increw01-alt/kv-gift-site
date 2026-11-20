@@ -599,10 +599,15 @@
       "board": "sale",
       "topic": "상품권 매입 상담에서 제시 금액과 실제 정산 내역 효과적 대조법",
       "run_id": "44672338441"
+    },
+    {
+      "board": "general_notice",
+      "topic": "읽기 중 열린 새 화면 출처와 원래 안내 비교 및 안전 복귀 절차 안내",
+      "run_id": "44686221459"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "44672338441",
+  "last_board": "general_notice",
+  "last_run_id": "44686221459",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
