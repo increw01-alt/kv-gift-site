@@ -594,10 +594,15 @@
       "board": "gc_information",
       "topic": "동일한 이름처럼 보이는 상품권을 구별하는 구체적 기준과 실전 분류법",
       "run_id": "44657980022"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 매입 상담에서 제시 금액과 실제 정산 내역 효과적 대조법",
+      "run_id": "44672338441"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "44657980022",
+  "last_board": "sale",
+  "last_run_id": "44672338441",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

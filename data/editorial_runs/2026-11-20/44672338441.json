@@ -1,18 +1,20 @@
 {
   "run_id": "44672338441",
   "date_kst": "2026-11-20",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "상품권 매입 상담에서 제시 금액과 실제 정산 내역 효과적 대조법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-20T04:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 상담에서 들은 제시 금액과 공제 항목을 항목별로 분리해 표로 비교하는 핵심 절차가 기존 글과 같습니다. / 실제 정산 내역을 옆에 놓고 이름 차이와 누락 항목을 확인한 뒤 질문 목록으로 정리하는 흐름도 기존 글의 기록·비교 안내를 거의 그대로 확장한 수준입니다."
+    ]
   },
   "api_usage": {
     "run_id": "44672338441",
@@ -22,15 +24,284 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-20T13:08:52.423079+09:00"
+      "attempt_started_at": "2026-11-20T13:08:52.423079+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 821,
+          "coverageArticles": 151,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-ecddaf57c8",
+            "sale-8a65f66626",
+            "sale-b054376adc"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 판매 전 상태 확인과 매입처 문의 절차 안내",
+          "source_id": "",
+          "reader_problem": "상품권 판매 전에 보유 상품권의 상태를 정확히 확인하고, 이를 근거로 매입처에 필요한 조건을 문의하는 절차가 명확하지 않아 혼란이 있을 수 있는 문제입니다.",
+          "distinct_angle": "기존에는 단순히 상품권 상태 확인이나 매입처 문의 방법을 안내했지만, 이번 글은 상태 확인 시 주의점과 문의 시 질문 항목을 구체적으로 구분해 실천 단계별로 안내하는 점에서 다릅니다.",
+          "reader_situation": "상품권을 판매하려는 개인이나 판매 담당자가 상품권 상태를 꼼꼼히 점검한 뒤, 매입처에 제시할 질문을 체계적으로 준비해 정확한 상담을 받고자 하는 상황입니다.",
+          "deliverable": "상품권 상태 점검 체크리스트, 매입처 문의 시 확인해야 할 질문 목록, 문의 전 기록 및 보호 방법 안내.",
+          "task_id": "",
+          "direction_id": "sale-ecddaf57c8",
+          "outline": [
+            "상품권 상태별 점검 항목과 주의할 부위 확인하기",
+            "매입처에 문의할 필수 조건과 질문 목록 준비하기",
+            "문의 후 기록과 개인정보 보호를 위한 조치 절차 마련하기"
+          ]
+        },
+        {
+          "topic": "보유 목적과 실제 사용 계획 대조를 통한 상품권 합리적 관리 기준 마련",
+          "source_id": "",
+          "reader_problem": "여러 목적별로 보유한 상품권과 실제 사용할 계획이 불일치하거나 대조가 어려워, 합리적 관리와 낭비 방지를 위한 명확한 기준 마련이 힘든 문제입니다.",
+          "distinct_angle": "기존 글에서는 목적별 보유 현황만 정리하는 수준이었으나, 본 글은 사용 계획 유형화와 목적별 대조 점검, 일치 여부 조정까지 구체적 실행 기준을 제시합니다.",
+          "reader_situation": "개인 또는 가족 단위로 다양한 상품권을 목적별로 분류하고, 실제 사용 계획과 일치하는지 비교해 우선순위를 조정하고 효율적으로 관리하려는 상황입니다.",
+          "deliverable": "목적별 상품권 보유 현황표, 상세 사용 계획 기록서, 계획 일치 및 조정용 점검 체크리스트.",
+          "task_id": "",
+          "direction_id": "sale-b054376adc",
+          "outline": [
+            "각 상품권을 보유 목적별로 체계적으로 분류하고 정리하기",
+            "예정된 사용 계획을 상세히 기록하고 유형별로 구분하기",
+            "목적별 실제 활용 계획과 일치 여부 점검 및 필요한 조정하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 매입 상담에서 제시 금액과 실제 정산 내역 효과적 대조법",
+        "source_id": "",
+        "reader_problem": "상품권 매입 상담 시 제시받는 금액과 실제 정산 내역을 항목별로 명확하게 구분하지 못해, 실제 손익을 신뢰성 있게 비교하기 어려운 문제입니다.",
+        "distinct_angle": "기존 글에서 금액 대조 방법을 간략히 안내한 반면, 본 후보는 표 양식 작성법과 직접 대조하는 구체 절차, 상담 결과 평가법을 단계별로 상세히 다룹니다.",
+        "reader_situation": "상품권 판매자 또는 담당자가 매입 상담 시 제시 금액과 공제 항목을 항목별로 기록해, 실제 정산 내역과 믿을 만하게 비교하며 판매 전략을 세우려는 상황입니다.",
+        "deliverable": "제시 금액과 공제 항목을 구분한 대조표 양식, 작성 및 점검 과정 설명서, 상담 신뢰성 평가 체크리스트.",
+        "task_id": "",
+        "direction_id": "sale-8a65f66626",
+        "outline": [
+          "매입 상담서 제시 금액과 공제 항목 구분 익히기",
+          "표준 대조표 양식 작성법과 직접 비교 절차 실습",
+          "대조 결과를 활용한 상담 신뢰성 평가와 조치 방안 수립"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 매입 상담에서 제시 금액과 공제내역을 따로 적는 안내와, 매입 후 기대와 실제 결과 차이를 원인별로 점검하는 글입니다. 이번 후보는 그 두 글 사이의 빈틈인 ‘상담에서 들은 제시 금액’과 ‘실제 정산 내역’을 항목별로 바로 맞대어 보는 흐름을 넣어, 단순 기록 분리보다 한 단계 더 나아간 대조 기준을 제시합니다. 상태 확인이나 일반 문의 정리보다 구체적인 비교표와 결과 판정이 중심이라 세 후보 중 가장 새롭습니다.",
+        "screen_rejections": [
+          "후보는 판매 전 상태 확인, 매입처 문의 항목, 기록 보호를 다시 묶은 구성으로 기존 판매 준비 글들과 해결 질문과 절차가 거의 같습니다. 상태 점검과 문의 항목 나누기만 반복되어 새 판단 기준이 충분하지 않습니다.",
+          "후보는 보유 목적과 실제 사용 계획을 대조하는 내용인데, 이미 상품권의 사용 계획 수립, 용도별 분류, 보유 현황 정리 글들이 같은 질문과 실행 순서를 다룹니다. 관리 표만 더하는 수준이라 중복성이 큽니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sale/3691",
+            "/board/sale/3701"
+          ],
+          "gap": "기존 글은 상담에서 받은 금액과 공제 항목을 따로 적거나, 매입 후 달라진 결과의 원인을 나누어 점검하는 데 그칩니다. 이번 글은 상담 때 들은 금액과 실제 정산 내역을 같은 항목 기준으로 맞대어 보고, 무엇이 빠졌는지와 어떤 부분을 다시 물어봐야 하는지까지 독자가 스스로 판정하도록 돕는 점이 다릅니다.",
+          "example": "상담 중에는 총 제시 금액만 들었는데 정산 내역을 받아 보니 공제 항목 이름이 다르게 적혀 있거나 일부가 빠져 보이는 경우를 떠올려 보세요. 이때는 항목 이름을 맞춰 적은 뒤, 서로 같은 항목인지부터 확인하고 다른 이름이면 같은 의미인지 추가로 묻는 방식으로 정리합니다.",
+          "result": "독자는 상담에서 들은 말과 실제 정산 내역을 한눈에 대조해 차이 항목을 가려내고, 다시 확인할 질문까지 정리한 상태로 상담을 마칠 수 있습니다.",
+          "section_actions": [
+            "상담에서 들은 제시 금액과 공제 항목을 같은 항목명으로 다시 적어 서로 대응되는 줄을 만든다.",
+            "정산 내역에 적힌 항목명과 상담 메모를 맞대어 같은 의미인지, 누락이나 이름 차이가 있는지 하나씩 확인한다.",
+            "차이가 난 항목만 따로 모아 다시 물어볼 질문으로 바꾸고, 다음 상담 때 바로 확인할 수 있게 정리한다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "상품권 매입 상담에서 제시 금액과 실제 정산 내역 효과적 대조법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-19T15:45:01Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15792,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1155,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16947
+        },
+        "estimated_usd": 0.0081648,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T04:09:11.802211+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 22970,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1019,
+          "output_tokens_details": {
+            "reasoning_tokens": 353
+          },
+          "total_tokens": 23989
+        },
+        "estimated_usd": 0.021813,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T04:09:20.011570+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3528,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 441,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3969
+        },
+        "estimated_usd": 0.0021168,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T04:09:23.930821+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5123,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 471,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5594
+        },
+        "estimated_usd": 0.0028028,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T04:09:29.634289+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17610,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 444,
+          "output_tokens_details": {
+            "reasoning_tokens": 163
+          },
+          "total_tokens": 18054
+        },
+        "estimated_usd": 0.0152055,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T04:09:33.974580+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T04:08:54.930540+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T04:09:12.273384+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T04:09:20.014725+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T04:09:24.676657+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T04:09:30.763441+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0501029,
+    "estimated_total_usd": 0.0501029,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
