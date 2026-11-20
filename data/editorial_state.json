@@ -606,8 +606,8 @@
       "run_id": "44686221459"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "44686221459",
+  "last_board": "sense",
+  "last_run_id": "44761867263",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1223,6 +1223,30 @@
       "topic": "할인 혜택 받은 결제 취소 시 혜택 반환과 주문 내역 별도로 확인하기",
       "date_kst": "2026-11-20",
       "run_id": "44559790306",
+      "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "sense",
+      "topic": "다양한 기기 사용자에게 맞는 상품권 선물 선택 가이드",
+      "date_kst": "2026-11-21",
+      "run_id": "44761867263",
+      "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "sense",
+      "topic": "선물 전 온라인 상품권 사용환경 사전 확인 노하우",
+      "date_kst": "2026-11-21",
+      "run_id": "44761867263",
+      "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "sense",
+      "topic": "모바일 상품권 선물로 받는 사람 편의 높이기 위한 준비 단계",
+      "date_kst": "2026-11-21",
+      "run_id": "44761867263",
       "status": "held"
     }
   ]
