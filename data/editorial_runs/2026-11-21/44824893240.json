@@ -1,18 +1,20 @@
 {
   "run_id": "44824893240",
   "date_kst": "2026-11-21",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "실물 상품권 세기 중단 후 중복 집계 방지용 구역 구분법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-20T21:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 실물 상품권을 중단된 상태에서 다시 세기 위한 구역 분리, 중단 표시, 재개 전 점검 절차가 기존의 ‘중단된 세기 작업을 안전하게 이어서 진행하는 방법’과 같은 해결 흐름입니다. / 독자가 처한 상황이 달라도 핵심 질문이 ‘어디까지 셌는지 복원하고 중복·누락을 막는 방법’으로 같아 본문 중복으로 보입니다."
+    ]
   },
   "api_usage": {
     "run_id": "44824893240",
@@ -22,15 +24,267 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-21T06:59:07.055987+09:00"
+      "attempt_started_at": "2026-11-21T06:59:07.055987+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 840,
+          "coverageArticles": 151,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-a002d2fe08",
+            "sale-e24e80a517",
+            "sale-646b693f14"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 판매 전 서로 다른 견적 조건 동일화와 비교 준비 과정",
+          "source_id": "",
+          "reader_problem": "여러 매입처에서 받은 상품권 견적이 묶음 단위, 포함 항목 등이 달라 단순 비교가 어려워 객관적이고 공정한 비교를 위한 조건 맞춤 방법이 필요합니다.",
+          "distinct_angle": "기존 글에서는 단순 견적 비교와 포함 품목 기록이 주를 이루었으나, 본 글은 견적 조건을 통일하는 절차와 점검 기준, 조건 차이 발생 시 대처법까지 체계적으로 다룹니다.",
+          "reader_situation": "상품권 판매자가 서로 다른 견적 조건을 받은 후 이를 공정하게 조정하고 비교 평가해 합리적인 판매 결정을 내리려는 과정에 있습니다.",
+          "deliverable": "견적 별 포함 품목 및 상태 정리표, 조건별 비교 가능성 평가 체크리스트, 조건 불일치 시 보류 및 재검토 매뉴얼.",
+          "task_id": "",
+          "direction_id": "sale-a002d2fe08",
+          "outline": [
+            "견적서별 포함 품목 및 제외 범위 상세 기록하기",
+            "조건별 비교 가능 여부와 평가 기준 명확히 구분하기",
+            "조건 차이 발견시 후보 제거 또는 비교 보류 절차 진행하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "실물 상품권 세기 중단 후 중복 집계 방지용 구역 구분법",
+        "source_id": "",
+        "reader_problem": "여러 장의 실물 상품권 세기 도중 작업을 중단해 확인된 부분과 미확인 부분을 구분하지 못해 중복 계산이나 집계 누락 위험이 있습니다.",
+        "distinct_angle": "기존 글들은 단순히 중단 표시를 조언하거나 집계 방법을 소개했으나, 본 글은 물리적 구역별 배치도와 태그 부착 등 세밀한 물리적 방법과 점검 체크리스트를 구체적으로 안내합니다.",
+        "reader_situation": "상품권 세기 작업을 중단한 판매자나 물류 담당자가 다시 작업을 이어가면서 정확히 중단 지점을 표시하고 집계를 체계적으로 관리하고자 하는 상황입니다.",
+        "deliverable": "미확인·확인 중·확인 완료 구역 분리 배치도, 중단 위치 표시 및 태그 부착 가이드, 이중 계산 방지 위한 점검 체크리스트.",
+        "task_id": "",
+        "direction_id": "sale-e24e80a517",
+        "outline": [
+          "중단 위치 전후로 미확인·확인 중·확인 완료 구역으로 명확히 구분해 배치하기",
+          "중단 지점에 육안 표시 또는 태그를 부착해 재집계 기준점 마련하기",
+          "분리 구역별 집계 현황 점검 및 중복 계산·누락 방지를 위한 실무 절차 실행하기"
+        ],
+        "novelty_reason": "첫 번째 후보는 기존 공개 글 '/board/sale/3699'가 이미 다룬 '서로 다른 조건의 상품권 견적에서 포함 항목과 확인 상태를 맞춰 비교하는 방법'을 거의 그대로 반복합니다. 반면 두 번째 후보는 실물 상품권을 세던 작업이 중단된 뒤, 미확인·확인 중·확인 완료 구역을 나누고 재개 기준점을 남겨 중복 집계를 막는 문제로, 기존 글들의 상태 구분이나 문의 기록 분리와는 독자 상황과 실제 행동이 다릅니다. 특히 기존 답만으로는 '어디까지 셌는지'를 물리적으로 복원하는 절차가 해결되지 않아 새 글로 분리할 만한 차이가 있습니다.",
+        "screen_rejections": [
+          "0번은 여러 매입처 견적의 묶음 단위와 포함 항목을 맞춰 비교하자는 내용으로, 이미 공개된 '/board/sale/3699'의 질문인 '전제가 서로 다른 상품권 견적은 어떤 항목을 맞춘 뒤 비교할까요?'와 해결 절차가 사실상 같습니다. 대상 범위, 포함 항목, 확인 상태를 정리해 같지 않으면 보류하라는 기존 답을 그대로 적용해도 이번 질문이 해결되므로 중복입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/51"
+          ],
+          "gap": "기존 글은 중단된 진행 상황을 다시 확인하거나 마지막 완료 단계를 적는 수준이지만, 이번 글은 실물 상품권을 세는 작업에서 확인된 묶음과 미확인 묶음을 물리적으로 분리해 두고, 중복 집계를 막기 위한 재개 기준점을 남기는 방법이 필요합니다. 단순 메모만으로는 세던 위치가 섞일 수 있어, 구역 나누기와 태그 기준을 함께 다뤄야 합니다.",
+          "example": "세던 도중 잠시 자리를 비워야 할 때, 이미 확인한 묶음과 아직 보지 않은 묶음을 같은 상자에 두면 다시 시작할 때 헷갈릴 수 있습니다. 이럴 때는 확인된 묶음은 한쪽에 따로 모으고, 아직 보지 않은 묶음은 다른 칸에 두며, 중단 지점에는 눈에 띄는 표시를 남겨 두는 식으로 정리합니다.",
+          "result": "작업을 다시 이어갈 때 확인 완료분과 미확인분을 헷갈리지 않고, 중복 세기나 누락 없이 이어서 집계할 수 있게 됩니다.",
+          "section_actions": [
+            "세던 묶음을 확인 전과 확인 후로 나눠 서로 섞이지 않게 두고, 다시 시작할 때 어떤 부분부터 이어야 하는지 바로 알아보게 한다.",
+            "중단된 지점에는 태그나 표시를 남겨 두어 마지막으로 확인한 묶음을 한눈에 찾게 하고, 같은 부분을 다시 세지 않게 한다.",
+            "재개 전에는 분리해 둔 구역을 차례로 훑어 남은 묶음만 다시 집계하고, 이미 끝난 구역은 다시 손대지 않도록 순서를 고정한다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "실물 상품권 세기 중단 후 중복 집계 방지용 구역 구분법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-20T15:27:39Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16190,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1199,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17389
+        },
+        "estimated_usd": 0.0083944,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T21:59:21.251430+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17702,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 900,
+          "output_tokens_details": {
+            "reasoning_tokens": 190
+          },
+          "total_tokens": 18602
+        },
+        "estimated_usd": 0.0173265,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T21:59:28.681096+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3605,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 457,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4062
+        },
+        "estimated_usd": 0.0021732,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T21:59:35.067148+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8228,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 546,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8774
+        },
+        "estimated_usd": 0.0041648,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-20T21:59:41.823169+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19511,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 551,
+          "output_tokens_details": {
+            "reasoning_tokens": 184
+          },
+          "total_tokens": 20062
+        },
+        "estimated_usd": 0.01711275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-20T21:59:47.827902+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T21:59:10.099952+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T21:59:22.003492+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T21:59:28.684348+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-20T21:59:36.516785+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-20T21:59:44.107337+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04917165,
+    "estimated_total_usd": 0.04917165,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
