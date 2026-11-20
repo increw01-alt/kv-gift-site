@@ -604,10 +604,15 @@
       "board": "general_notice",
       "topic": "읽기 중 열린 새 화면 출처와 원래 안내 비교 및 안전 복귀 절차 안내",
       "run_id": "44686221459"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "작은 화면에서 상품권 옵션 변경 시 선택 값 유지 여부 실험",
+      "run_id": "44778599560"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "44767712359",
+  "last_board": "gc_tip",
+  "last_run_id": "44778599560",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

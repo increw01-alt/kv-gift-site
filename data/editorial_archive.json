@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T16:59:04.085870+00:00",
+  "generatedAt": "2026-11-20T16:59:34.331055+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -6337,14 +6337,14 @@
       "runId": "44778599560",
       "dateKst": "2026-11-21",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_tip",
+      "topic": "작은 화면에서 상품권 옵션 변경 시 선택 값 유지 여부 실험",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0384298,
+      "knownSubtotalUsd": 0.0384298
     },
     {
       "id": "post:purchase:2561",
@@ -26015,13 +26015,57 @@
     {
       "entryId": "run:44778599560",
       "dateKst": "2026-11-21",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-20T16:59:08.734642+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0053896,
+      "knownSubtotalUsd": 0.0053896,
+      "requests": 1,
+      "inputTokens": 13450,
+      "outputTokens": 6
+    },
+    {
+      "entryId": "run:44778599560",
+      "dateKst": "2026-11-21",
+      "recordedAt": "2026-11-20T16:59:16.099185+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0129975,
+      "knownSubtotalUsd": 0.0129975,
+      "requests": 1,
+      "inputTokens": 12044,
+      "outputTokens": 881
+    },
+    {
+      "entryId": "run:44778599560",
+      "dateKst": "2026-11-21",
+      "recordedAt": "2026-11-20T16:59:21.085105+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0020892,
+      "knownSubtotalUsd": 0.0020892,
+      "requests": 1,
+      "inputTokens": 3427,
+      "outputTokens": 449
+    },
+    {
+      "entryId": "run:44778599560",
+      "dateKst": "2026-11-21",
+      "recordedAt": "2026-11-20T16:59:28.951509+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.003102,
+      "knownSubtotalUsd": 0.003102,
+      "requests": 1,
+      "inputTokens": 5843,
+      "outputTokens": 478
+    },
+    {
+      "entryId": "run:44778599560",
+      "dateKst": "2026-11-21",
+      "recordedAt": "2026-11-20T16:59:34.128480+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0148515,
+      "knownSubtotalUsd": 0.0148515,
+      "requests": 1,
+      "inputTokens": 17066,
+      "outputTokens": 456
     },
     {
       "entryId": "post:purchase:2561",
