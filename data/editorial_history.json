@@ -1812,5 +1812,18 @@
     "publication_mode": "automatic",
     "run_id": "44644728554",
     "usage_file": "data/editorial_runs/2026-11-20/44644728554.json"
+  },
+  {
+    "board": "sense",
+    "id": 29,
+    "topic": "여러 사람이 함께 쓰는 물건의 위치 표시와 사용 중 표시 관리법",
+    "drafted_at": "2026-11-21",
+    "automation": true,
+    "search_intent": "공동으로 쓰는 물건의 위치와 사용 중 상태를 헷갈리지 않게 나누어 관리하는 방법을 알고 싶은 질문",
+    "image_scene": "공용 책상 한쪽에 서랍 안의 정상 위치와 탁자 위의 임시 위치를 각각 표시한 작은 라벨이 붙어 있고, 옆에는 ‘사용 중’ 스티커와 체크 메모지가 놓여 있다. 한 사람이 물건을 탁자에서 서랍으로 옮기며 표식을 떼고 확인표에 표시하는 구도이다.",
+    "image_alt": "공용 책상에서 물건의 정상 위치와 임시 위치를 라벨로 나누고 사용 중 스티커를 붙였다가 떼는 장면",
+    "publication_mode": "automatic",
+    "run_id": "44839396167",
+    "usage_file": "data/editorial_runs/2026-11-21/44839396167.json"
   }
 ]
