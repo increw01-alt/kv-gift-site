@@ -584,10 +584,15 @@
       "board": "sense",
       "topic": "온라인과 오프라인 사용 환경을 동시에 고려한 상품권 선택 가이드",
       "run_id": "44626444454"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "상품권 교환 물품에서 선택 불가 옵션 조합 걸러내기 절차",
+      "run_id": "44645404682"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "44644728554",
+  "last_board": "gc_tip",
+  "last_run_id": "44645404682",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
