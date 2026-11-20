@@ -589,10 +589,15 @@
       "board": "gc_tip",
       "topic": "상품권 교환 물품에서 선택 불가 옵션 조합 걸러내기 절차",
       "run_id": "44645404682"
+    },
+    {
+      "board": "gc_information",
+      "topic": "동일한 이름처럼 보이는 상품권을 구별하는 구체적 기준과 실전 분류법",
+      "run_id": "44657980022"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "44650001367",
+  "last_board": "gc_information",
+  "last_run_id": "44657980022",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

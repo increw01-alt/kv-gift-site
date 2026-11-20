@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T02:03:58.985661+00:00",
+  "generatedAt": "2026-11-20T02:04:42.004534+00:00",
   "dateKst": "2026-11-20",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 13,
-  "held": 8,
+  "held": 9,
   "errors": 2,
-  "knownSubtotalUsd": 0.55358875,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.60729365,
+  "estimatedTotalUsd": 0.60729365,
   "records": [
     {
       "runId": "44553205892",
@@ -170,21 +170,21 @@
     },
     {
       "runId": "44657980022",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "동일한 이름처럼 보이는 상품권을 구별하는 구체적 기준과 실전 분류법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-20T02:02:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0537049,
+      "knownSubtotalUsd": 0.0537049
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 3,
+    "retryAfter": "2026-11-20T13:03:58.766862+09:00",
+    "cooldownMinutes": 120
   }
 }
