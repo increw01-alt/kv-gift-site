@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T00:20:30.901059+00:00",
+  "generatedAt": "2026-11-20T00:21:55.499605+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -6229,7 +6229,7 @@
       "board": "free",
       "topic": "스마트폰 익숙치 않은 수신자 위한 상품권 선택 비교와 판단 질문",
       "url": "https://kv-gift.co.kr/board/free/488",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-20T00:21:55.438882+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1204283,
       "knownSubtotalUsd": 0.1204283
