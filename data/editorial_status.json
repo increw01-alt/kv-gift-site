@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T19:14:05.147190+00:00",
+  "generatedAt": "2026-11-21T19:15:11.793679+00:00",
   "dateKst": "2026-11-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 6,
   "held": 3,
   "errors": 2,
-  "knownSubtotalUsd": 0.18678965,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.3153543,
+  "estimatedTotalUsd": 0.3153543,
   "records": [
     {
       "runId": "44918425054",
@@ -79,16 +79,16 @@
     },
     {
       "runId": "44939730375",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "general_notice",
+      "topic": "정보 공유 시 의미 있는 링크 설명 작성법",
+      "url": "https://kv-gift.co.kr/board/general_notice/72",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-21T19:12:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12856465,
+      "knownSubtotalUsd": 0.12856465
     }
   ],
   "topicRetry": {

@@ -1825,5 +1825,18 @@
     "publication_mode": "automatic",
     "run_id": "44839396167",
     "usage_file": "data/editorial_runs/2026-11-21/44839396167.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 72,
+    "topic": "정보 공유 시 의미 있는 링크 설명 작성법",
+    "drafted_at": "2026-11-22",
+    "automation": true,
+    "search_intent": "링크를 보낼 때 목적과 대상을 한 문장에 자연스럽게 넣어 수신자가 바로 이해하도록 쓰는 방법",
+    "image_scene": "책상 위에 메신저 작성 화면이 열린 노트북과 링크 초안 메모지가 놓여 있고, 옆에는 ‘자료 용도’, ‘대상’, ‘다음 행동’이라고 적은 작은 카드가 나란히 배치되어 있다. 한 사람이 링크 앞뒤 문구를 고치며 짧은 설명문을 한 줄로 정리하는 구도다.",
+    "image_alt": "메신저에 보낼 링크 설명을 적으면서 자료 용도와 대상, 다음 행동을 한 줄로 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "44939730375",
+    "usage_file": "data/editorial_runs/2026-11-22/44939730375.json"
   }
 ]

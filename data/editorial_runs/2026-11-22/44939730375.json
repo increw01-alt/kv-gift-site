@@ -1,17 +1,27 @@
 {
   "run_id": "44939730375",
   "date_kst": "2026-11-22",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "general_notice",
+  "topic": "정보 공유 시 의미 있는 링크 설명 작성법",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/general_notice/72",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-21T19:12:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,352 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-22T04:14:04.911237+09:00"
+      "attempt_started_at": "2026-11-22T04:14:04.911237+09:00",
+      "topic_pool_update": {
+        "board": "general_notice",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 858,
+          "coverageArticles": 152,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "general_notice-cf141162c8",
+            "general_notice-dd6c1436b7",
+            "general_notice-50bee5625a",
+            "general_notice-98b2d68a1d"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "브라우저 자동 입력과 직접 입력 데이터 구분 점검법",
+          "source_id": "",
+          "reader_problem": "온라인 양식 작성 시 브라우저 자동 완성으로 채워지는 이전 입력값과 사용자가 직접 입력한 내용을 구분하지 못해 제출 오류가 발생하는 문제",
+          "distinct_angle": "자동 완성 데이터를 눈으로 분리해 확인하는 방법과 제출 전 점검표를 직접 작성해 비교하는 습관 형성법을 구체적으로 안내한다. 기존 단순 기록법과 달리 점검표 작성과 대조 습관에 초점.",
+          "reader_situation": "웹 양식에 자동 완성으로 이전 값이 채워진 상태에서 실수 없이 새 입력 값과 구분 점검하며 제출하려는 사용자",
+          "deliverable": "자동 완성 데이터와 직접 입력 부분 비교 점검법, 제출 전 전체 입력값 대조용 점검표 작성 및 활용법 매뉴얼",
+          "task_id": "",
+          "direction_id": "general_notice-dd6c1436b7",
+          "outline": [
+            "브라우저 자동 완성 기능과 이전 입력값 특성 이해하기",
+            "자동 입력 데이터와 직접 입력 내용 분리 점검하는 실제 방법 배우기",
+            "점검표 작성해 제출 전 전체 입력값 체계적으로 검토하는 습관 만들기"
+          ]
+        },
+        {
+          "topic": "복잡한 안내 표와 접힌 문단의 누락 조건 체계적 점검법",
+          "source_id": "",
+          "reader_problem": "복잡한 안내 표와 접힌 문단에서 자신이 놓친 조건과 빠진 행·열을 꼼꼼히 찾아내고 기록하는 방법 부족",
+          "distinct_angle": "행·열 구조 파악에서부터 대조 점검법과 기록·재확인 절차를 단계별 실습 형태로 제공해 기존 단순 설명과 실천 중심으로 차별화",
+          "reader_situation": "복잡한 안내문을 읽으며 빠뜨린 조건이나 누락 범위를 체계적으로 탐색, 기록, 보완 절차를 익히려는 이용자",
+          "deliverable": "안내문 행·열 및 접힌 문단 구조 분석, 누락 범위 대조 점검법, 놓친 조건 기록과 보완 실습 가이드",
+          "task_id": "",
+          "direction_id": "general_notice-50bee5625a",
+          "outline": [
+            "안내문 내 표와 접힌 문단의 행·열 구조 자세히 이해하기",
+            "누락 가능 행·열 및 접힌 문단 범위 대조 점검법 익히기",
+            "놓친 조건 체계적으로 기록하고 보완하는 단계별 실습 진행하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "정보 공유 시 의미 있는 링크 설명 작성법",
+        "source_id": "",
+        "reader_problem": "메신저나 게시판에 단순 ‘여기’ 표현 링크만 올려 수신자가 내용을 바로 파악하기 어렵고 공유 효율이 떨어지는 문제",
+        "distinct_angle": "링크 목적과 대상을 간결하게 포함한 문장 작성법과 비교 예시, 실제 적용해보는 실전 매뉴얼을 제공해 기존 안내와 다른 실용 안내 강조",
+        "reader_situation": "여러 링크를 단순 나열하지 않고 각 링크 내용을 명확히 전달해 공유하려는 이용자",
+        "deliverable": "모호한 링크 대신 목적과 대상 구체적 설명 작성법, 실제 예시 변환 연습, 효과 있는 소통 매뉴얼",
+        "task_id": "",
+        "direction_id": "general_notice-98b2d68a1d",
+        "outline": [
+          "‘여기’ 같은 애매한 링크 표현 문제 인식하기",
+          "목적과 연결 대상을 포함한 명확한 링크 설명 작성법 익히기",
+          "실제 예시로 단순 링크를 의미 있는 설명으로 바꾸는 연습"
+        ],
+        "novelty_reason": "가장 가까운 기존 글들은 링크를 읽는 법이나 선물 안내를 말로 전할 때의 주의에 머뭅니다. 이번 후보는 링크를 보낸 뒤 수신자가 바로 이해하도록 목적과 대상을 함께 적는 문장을 어떻게 쓰는지에 중심이 있어, 기존 글의 질문을 그대로 반복하지 않습니다. 특히 공유 링크의 미리보기와 본문을 구분하는 글과 달리, 이 후보는 아예 전달 문구를 작성하는 실무를 다룹니다.",
+        "screen_rejections": [
+          "공개 경로 /board/general_notice/71의 질문은 자동 완성 값과 직접 입력 값을 제출 전에 구분해 점검하는 방법입니다. 이번 후보는 링크 설명 작성으로, 이미 해결한 질문인 입력값 출처 구분과 절차가 그대로 겹쳐 중복입니다.",
+          "공개 경로 /board/gc_tip/48과 /board/general_notice/59의 질문은 접힌 안내지나 공유 링크에서 본문과 조건, 미리보기와 실제 본문을 구분해 읽는 방법입니다. 이번 후보는 링크 문구를 새로 쓰는 안내처럼 보이지만, 실제 해결 절차가 정보의 대상과 조건을 구분해 읽는 방식과 가까워 새 판단 도구가 충분하지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/general_notice/59",
+            "/board/sense/14"
+          ],
+          "gap": "기존 글은 링크를 받았을 때 본문과 미리보기를 구분해 읽거나, 말로 선물 안내를 할 때 핵심만 전하는 방법을 다룹니다. 이번 글은 보낸 사람이 링크와 함께 남길 설명문을 어떻게 써야 수신자가 목적과 대상을 즉시 이해하는지, 그리고 짧은 문장 안에서 링크의 용도·대상·후속 행동을 어떻게 분리해 적는지에 새 초점을 둡니다.",
+          "example": "대화방에 자료를 보낼 때 이름만 붙여 두면 상대가 무엇을 먼저 봐야 하는지 헷갈립니다. 이럴 때는 링크 앞뒤에 용도와 대상을 함께 적고, 바로 해야 할 행동까지 한 줄로 나눠 써서 보내는 상황을 생각해 보세요.",
+          "result": "독자는 링크를 보낼 때 모호한 표현을 줄이고, 목적과 대상을 드러내는 설명문을 직접 작성할 수 있습니다. 받은 사람이 링크를 누르기 전에 무엇을 확인해야 하는지도 함께 전달하게 됩니다.",
+          "section_actions": [
+            "링크를 보내기 전에 그 자료의 용도와 읽을 사람을 먼저 나눠 적어, 설명문의 핵심이 한눈에 보이게 정리한다.",
+            "설명문에 링크의 목적과 대상, 그리고 필요한 경우 다음 행동을 함께 적어 수신자가 링크를 열기 전에 맥락을 알 수 있게 한다.",
+            "보낸 뒤에는 문구만 읽어도 오해가 생기지 않는지 다시 살펴, 모호한 표현이 있으면 대상이나 목적을 더 분명한 말로 바꾼다."
+          ]
+        }
+      },
+      "board": "general_notice",
+      "topic": "정보 공유 시 의미 있는 링크 설명 작성법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-21T14:39:22Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "링크를 보낼 때 목적과 대상을 한 문장에 자연스럽게 넣어 수신자가 바로 이해하도록 쓰는 방법"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16193,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1047,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17240
+        },
+        "estimated_usd": 0.0081524,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T19:14:16.491879+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25142,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1003,
+          "output_tokens_details": {
+            "reasoning_tokens": 318
+          },
+          "total_tokens": 26145
+        },
+        "estimated_usd": 0.02337,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T19:14:23.734965+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3467,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 464,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3931
+        },
+        "estimated_usd": 0.0021292,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T19:14:27.486598+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 10568,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 501,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11069
+        },
+        "estimated_usd": 0.0050288,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T19:14:32.819196+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17842,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 421,
+          "output_tokens_details": {
+            "reasoning_tokens": 233
+          },
+          "total_tokens": 18263
+        },
+        "estimated_usd": 0.015276,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T19:14:37.897963+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3553,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1057
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 4925
+        },
+        "estimated_usd": 0.066413,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T19:15:05.986749+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9511,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 236,
+          "output_tokens_details": {
+            "reasoning_tokens": 171
+          },
+          "total_tokens": 9747
+        },
+        "estimated_usd": 0.00819525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T19:15:10.592506+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T19:14:07.867462+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T19:14:17.157404+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T19:14:23.738447+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T19:14:28.640988+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T19:14:34.672146+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-21T19:14:37.916374+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T19:15:07.190043+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.12856465,
+    "estimated_total_usd": 0.12856465,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
