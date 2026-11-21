@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T17:09:06.732120+00:00",
+  "generatedAt": "2026-11-21T17:09:42.029176+00:00",
   "dateKst": "2026-11-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 5,
-  "held": 2,
+  "held": 3,
   "errors": 2,
-  "knownSubtotalUsd": 0.13460065,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.18678965,
+  "estimatedTotalUsd": 0.18678965,
   "records": [
     {
       "runId": "44918425054",
@@ -66,21 +66,21 @@
     },
     {
       "runId": "44928348119",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "공동 보유 상품권 문의 담당자 바뀔 때 권한과 역할 명확히 분리하는 인계법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-21T17:07:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.052189,
+      "knownSubtotalUsd": 0.052189
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 3,
+    "retryAfter": "2026-11-22T04:09:06.535373+09:00",
+    "cooldownMinutes": 120
   }
 }

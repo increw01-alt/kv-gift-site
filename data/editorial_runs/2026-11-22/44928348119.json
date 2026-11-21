@@ -1,18 +1,20 @@
 {
   "run_id": "44928348119",
   "date_kst": "2026-11-22",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "공동 보유 상품권 문의 담당자 바뀔 때 권한과 역할 명확히 분리하는 인계법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-21T17:07:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글 ‘상품권 판매 문의 담당자가 바뀌면 결정 권한은 어떻게 나눠 전할까요?’와 핵심 질문, 독자 상황, 해결 절차가 같습니다. 문의 담당자와 최종 결정권을 구분하고 인계 문구를 쓰는 흐름이 본문 전체에서 동일합니다. / 제목만 바뀐 수준이 아니라 본문도 문의 권한·결정 권한 분리, 공식 인계 문구, 승인 전 진행 범위 표시를 같은 순서로 설명해 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "44928348119",
@@ -22,15 +24,284 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-22T02:09:06.535373+09:00"
+      "attempt_started_at": "2026-11-22T02:09:06.535373+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 855,
+          "coverageArticles": 152,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-ecddaf57c8",
+            "sale-255aa8468b",
+            "sale-646b693f14"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 일부 상태 미확인분 분리해 효율적으로 판매 준비하는 방법",
+          "source_id": "",
+          "reader_problem": "상태가 확인되지 않은 상품권과 확인 완료된 상품권을 혼용해 판매 준비 시 혼선이 발생하고 실제 금액 확인·정산에 어려움이 있습니다.",
+          "distinct_angle": "기존 중단 세기 절차와 달리, 미확인 상품권의 분리·관리와 합산 제외를 업무 인계용 문서와 함께 구체적으로 설계합니다.",
+          "reader_situation": "상품권 판매 담당자가 일부만 상태를 확인했거나 확인 중인 상품권을 명확히 구분해 관리하며, 인계 시 작업 범위도 체계적으로 전달해야 하는 상황.",
+          "deliverable": "확인 완료와 미확인 상품권 목록 분리표, 합산 계산에서 제외하는 관리 원칙 문서, 인계 문서 서식 가이드.",
+          "task_id": "",
+          "direction_id": "sale-ecddaf57c8",
+          "outline": [
+            "확인 완료된 상품권 목록과 미확인 상품권을 별도로 작성해 관리하기",
+            "미확인 상품권을 합산 범위에서 제외하는 단계별 관리 원칙 적용하기",
+            "업무 인계 시 분리된 작업 범위와 상태를 명확히 알리는 문서 작성법 익히기"
+          ]
+        },
+        {
+          "topic": "상품권 매입 전 기대와 실제 결과 차이 체계적 점검과 대응 방법",
+          "source_id": "",
+          "reader_problem": "매입 전에 기대했던 안내 내용과 실제 매입 후 경험 간 차이를 구분하지 못해 원인 파악과 적절한 대응이 어렵습니다.",
+          "distinct_angle": "기존 안내 비교를 넘어서 기록 오류, 상태 변경, 기준 변동 등 원인별 점검 체크리스트와 재문의 준비 체계 구축을 포함합니다.",
+          "reader_situation": "상품권 판매자가 매입 후 달라진 안내나 조건을 점검해 문제 원인을 분류하고 내부 기록과 재문의 준비를 체계적으로 하려는 상황.",
+          "deliverable": "차이 원인별 점검 체크리스트, 차이 결과 기록·분류 서식, 점검 후 재문의와 내부 수정 매뉴얼.",
+          "task_id": "",
+          "direction_id": "sale-347dc67531",
+          "outline": [
+            "판매 전 안내 내용과 실제 결과 차이 구분 및 기록하기",
+            "원인별 차이점(기록 오류, 상태 변화, 기준 변동) 점검하기",
+            "점검 내용 정리해 재문의 및 내부 기록 수정에 활용하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "공동 보유 상품권 문의 담당자 바뀔 때 권한과 역할 명확히 분리하는 인계법",
+        "source_id": "",
+        "reader_problem": "공동 보유 상품권 문의 담당자 변경 시 새 담당자가 처분 등 결정 권한을 가진 것으로 오해해 불필요한 책임과 혼란이 생깁니다.",
+        "distinct_angle": "기존 담당자 변경 안내와 달리 문의 권한과 처분 권한을 분리하는 구체 기준과 공식 인계 문구, 승인 전 진행 범위 표시까지 포함합니다.",
+        "reader_situation": "공동 소유 상품권 관리자가 문의 담당자를 교체할 때 새 담당자 권한 범위를 명확히 설정하고 체계적 인계 절차를 정립하려는 상황.",
+        "deliverable": "문의 및 결정 권한 분리 기준표, 공식 인계 문구 예시, 승인 전 진행 범위 표시 문서.",
+        "task_id": "",
+        "direction_id": "sale-646b693f14",
+        "outline": [
+          "문의 담당자 변경 시 권한과 역할 차이 명확히 이해하기",
+          "권한 분리에 따른 공식 인계 문구 작성법 익히기",
+          "최종 결정 권한과 문의 진행 범위를 분명히 표시·공유하는 방법 배우기"
+        ],
+        "novelty_reason": "공동 보유 상품권에서 문의 담당자와 처분·결정 권한을 분리하는 문제는 기존 판매 글들이 다룬 상태 확인, 기록 구분, 문의 준비와는 독자 상황과 판단이 다릅니다. 가장 가까운 기존 글들은 문의 내용을 어떻게 기록하고 무엇을 먼저 알려야 하는지에 머물러 있어, 새 글은 ‘누가 묻는가’와 ‘누가 결정하는가’를 분리해 인계 문구와 승인 전 진행 범위를 정리하는 구체적 절차를 추가할 수 있습니다.",
+        "screen_rejections": [
+          "공유된 상태와 미확인 상품권을 분리하는 흐름은 기존 판매 글의 확인 상태 구분, 합산 제외, 기록 정리와 거의 같아 새 판단 도구가 부족합니다. 가장 가까운 기존 글들이 이미 상품권 상태와 문의 기록을 분리해 적는 방법을 다루고 있어 중복입니다.",
+          "매입 전 기대와 실제 결과 차이를 점검하는 글은 기존 판매 글의 안내 비교, 차이 원인 분류, 재문의 준비와 해결 절차가 겹칩니다. 기록 오류·상태 변경·기준 변동을 점검하는 구조도 이미 공개 글에서 해결한 질문과 같습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_information/21",
+            "/board/general_notice/43"
+          ],
+          "gap": "기존 글은 문의 내용을 나누어 적거나 현재 상태를 먼저 알리는 방법까지는 다루지만, 공동 보유 상품권에서 문의 담당자와 최종 결정권을 나누어야 할 때 어떤 문구로 권한 범위를 못 박고 어디까지 진행해도 되는지 정하는 기준은 제시하지 못합니다.",
+          "example": "공동 보유자 가운데 한 사람이 상담 창구를 맡았지만, 다른 보유자의 허락 없이 매입 의사나 전달 확정까지 말하면 곤란한 상황이라면, 문의 담당자는 확인 가능한 사실만 전달하고 결정은 별도로 남겨 두는 식으로 역할을 나눠 적어야 합니다.",
+          "result": "독자는 문의 담당자 변경 시 말할 수 있는 범위와 결정해야 할 범위를 구분해 적고, 승인 전에는 어떤 진행도 확정으로 보지 않는 인계 기준을 만들게 됩니다.",
+          "section_actions": [
+            "문의 담당자와 결정권자를 따로 적어 두고, 각 사람이 말할 수 있는 범위를 한 줄씩 나눠 정리한다.",
+            "공식 인계 문구를 만들어 문의만 맡는 사람과 최종 결정을 하는 사람이 다르다는 점을 상대에게 분명히 알린다.",
+            "승인 전 진행 범위를 따로 표시해, 문의는 가능하지만 처분·전달 확정은 아직 아님을 기록과 대화에서 함께 남긴다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "공동 보유 상품권 문의 담당자 바뀔 때 권한과 역할 명확히 분리하는 인계법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-21T14:39:22Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15967,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1049,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17016
+        },
+        "estimated_usd": 0.0080652,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T17:09:18.277442+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23550,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 901,
+          "output_tokens_details": {
+            "reasoning_tokens": 276
+          },
+          "total_tokens": 24451
+        },
+        "estimated_usd": 0.021717,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T17:09:25.476373+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3462,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 456,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3918
+        },
+        "estimated_usd": 0.0021144,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T17:09:29.527801+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 8261,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 545,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8806
+        },
+        "estimated_usd": 0.0041764,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T17:09:35.907087+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 18734,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 459,
+          "output_tokens_details": {
+            "reasoning_tokens": 112
+          },
+          "total_tokens": 19193
+        },
+        "estimated_usd": 0.016116,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T17:09:41.834683+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T17:09:09.497942+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T17:09:19.194619+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T17:09:25.479873+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T17:09:31.066257+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T17:09:38.244523+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.052189,
+    "estimated_total_usd": 0.052189,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
