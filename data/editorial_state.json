@@ -614,10 +614,15 @@
       "board": "sale",
       "topic": "실물 상품권 세기 중단 후 중복 집계 방지용 구역 구분법",
       "run_id": "44824893240"
+    },
+    {
+      "board": "purchase",
+      "topic": "상품권 주문 전 준비 작업 간 의존 관계 파악과 역순 일정 설계법",
+      "run_id": "44919313689"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "44843994208",
+  "last_board": "purchase",
+  "last_run_id": "44919313689",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
