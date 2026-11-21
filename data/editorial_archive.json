@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T19:19:59.022671+00:00",
+  "generatedAt": "2026-11-21T19:22:04.180796+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -6607,7 +6607,7 @@
       "board": "sense",
       "topic": "사실과 의견 문장 명확히 구분해 문서 이해도 높이는 편집 방법",
       "url": "https://kv-gift.co.kr/board/sense/30",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-21T19:22:04.143746+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.13710965,
       "knownSubtotalUsd": 0.13710965
