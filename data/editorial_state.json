@@ -629,10 +629,15 @@
       "board": "sale",
       "topic": "공동 보유 상품권 문의 담당자 바뀔 때 권한과 역할 명확히 분리하는 인계법",
       "run_id": "44928348119"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 안내문의 가능·필수·제외 문장별 논리적 의미와 판단법",
+      "run_id": "44964306775"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "44953396336",
+  "last_board": "gc_information",
+  "last_run_id": "44964306775",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

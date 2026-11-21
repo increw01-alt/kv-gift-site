@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T23:58:53.855310+00:00",
+  "generatedAt": "2026-11-21T23:59:17.833898+00:00",
   "dateKst": "2026-11-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 12,
-  "held": 6,
+  "held": 7,
   "errors": 3,
-  "knownSubtotalUsd": 0.5501426,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.5954674,
+  "estimatedTotalUsd": 0.5954674,
   "records": [
     {
       "runId": "44918425054",
@@ -157,21 +157,21 @@
     },
     {
       "runId": "44964306775",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "gc_information",
+      "topic": "상품권 안내문의 가능·필수·제외 문장별 논리적 의미와 판단법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-21T23:57:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.0453248,
+      "knownSubtotalUsd": 0.0453248
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 1,
+    "retryAfter": "2026-11-22T09:28:53.477025+09:00",
+    "cooldownMinutes": 30
   }
 }

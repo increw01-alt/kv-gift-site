@@ -1,18 +1,20 @@
 {
   "run_id": "44964306775",
   "date_kst": "2026-11-22",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "상품권 안내문의 가능·필수·제외 문장별 논리적 의미와 판단법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-21T23:57:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글과 핵심 질문이 같고, ‘가능·필수·제외’ 문장을 나눠 조건을 읽는 해석 절차도 사실상 동일합니다. / 체크리스트와 기록지 구성만 달라졌을 뿐, 독자가 해야 할 판단 단계와 얻는 결론이 기존 글의 범위를 벗어나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44964306775",
@@ -22,15 +24,249 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-22T08:58:53.477025+09:00"
+      "attempt_started_at": "2026-11-22T08:58:53.477025+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 872,
+          "coverageArticles": 154,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-59dfa4f23c",
+            "gc_information-83c32617c5",
+            "gc_information-bb1dae521b",
+            "gc_information-cfcea2023c"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 유형별 상태 전환과 각 단계별 관리 절차 익히기",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "상품권의 지류, 모바일, 교환권별 상태 변화 흐름을 명확히 이해하지 못해 관리 과정에서 혼란과 오류가 발생하는 문제",
+          "distinct_angle": "기존 안내는 각 상품권 유형별 상태만 나열했으나, 본 글은 상태 전환 단계별 필요한 점검 행동과 실제 관리 절차를 구체적인 체크리스트와 사례 중심으로 제시해 실무 활용도를 높임",
+          "outline": [
+            "상품권 지류, 모바일, 교환권별 상태 정의와 주요 차이점 설명하기",
+            "상태 전환 각 단계에서 필요한 구체 점검 행동과 관리 절차 소개하기",
+            "실제 사례를 통한 상태 변화별 점검법과 오류 예방 체크리스트 활용법 익히기"
+          ],
+          "reader_situation": "상품권 관리 담당자나 자가관리 이용자가 세 가지 상품권 유형별 상태 변화를 단계별로 정확히 파악하고, 단계마다 점검과 관리 절차를 숙지하여 실무 오류를 예방하고자 하는 경우",
+          "deliverable": "상품권 지류·모바일·교환권별 상태 전환 과정도, 단계별 필수 점검 및 관리 체크리스트, 사례별 주의사항과 오류 예방 가이드",
+          "direction_id": "gc_information-59dfa4f23c"
+        },
+        {
+          "topic": "한 상품의 이름·별칭·분류 체계와 서로 다른 상품 관계 구분하기",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "상품권 이름과 별칭이 겹치거나 중복돼 서로 다른 상품인지 혼동되고, 명확한 구별 기준과 포함 관계 이해가 부족해 관리가 복잡함",
+          "distinct_angle": "기존 자료는 개념을 설명하는 데 집중한 반면, 본 글은 이름·별칭·분류 용어 차이를 명확히 구분하고, 포함 관계를 시각적으로 보여주는 개념도 작성법과 체크리스트, 실무 분류 표 작성법을 단계적으로 제시함",
+          "outline": [
+            "상품권 이름, 별칭, 분류 용어의 개념과 주요 차이를 명확히 정의하기",
+            "가상의 상품권 이름과 별칭을 활용해 포함 관계 개념도 작성과 실습하기",
+            "별칭이 중복될 때 구분 기준 정리 및 실무 분류 표 작성 전략 익히기"
+          ],
+          "reader_situation": "상품권 운영자, 구매자, 관리자가 여러 이름과 별칭을 체계적으로 분류하고 서로 다른 상품과의 관계를 명확히 파악해 혼란을 줄이고자 하는 상황",
+          "deliverable": "상품권 이름·별칭·분류 용어 정의 요약, 포함 관계 개념도 작성 템플릿, 별칭 구분 체크리스트, 분류 표 작성 실습 자료",
+          "direction_id": "gc_information-bb1dae521b"
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 안내문의 가능·필수·제외 문장별 논리적 의미와 판단법",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "상품권 안내 문서 내 ‘가능’, ‘필수’, ‘제외’ 등 문장 표현이 혼용되어 실제 의미 차이를 이해하지 못해 올바른 조건 판단이 어려움",
+        "distinct_angle": "기존 설명은 문장의 기본 의미만 안내했지만, 본 글은 문장별 논리적 관계를 구체 분석하고, 판단 기준 체크리스트와 안내문 적용 실습을 통해 독자가 직접 해석 절차를 체득하도록 구성함",
+        "outline": [
+          "상품권 안내문에서 ‘가능’, ‘필수’, ‘제외’ 문장 의미와 논리적 차이 상세히 설명하기",
+          "문장별 판단 기준 체크리스트 설계와 해석 절차 단계별 구체화하기",
+          "실제 안내문 예문 적용 연습과 독자 맞춤 기록체계 완성하기"
+        ],
+        "reader_situation": "상품권 안내문을 꼼꼼히 읽고 각각 문장의 의미 차이를 이해해 조건 해석과 사용 판단 근거를 명확히 세우려는 이용자, 판매자, 상담원",
+        "deliverable": "‘가능’, ‘필수’, ‘제외’ 조건별 의미 구분 체크리스트, 논리 구조 분석표, 안내문 적용 연습용 실무 해석 기록지",
+        "direction_id": "gc_information-83c32617c5",
+        "novelty_reason": "가장 가까운 기존 글들은 조건의 적용 범위나 안내문 항목을 구분하는 수준이었고, 이번 후보는 안내문에서 ‘가능’, ‘필수’, ‘제외’가 문장 안에서 어떤 논리 관계를 이루는지 해석하는 절차를 전면에 둡니다. 기존 글은 조건을 읽는 법을 알려 주지만, 이 후보는 서로 다른 표현이 함께 나올 때 어떤 문장이 허용인지, 어떤 문장이 의무인지, 어떤 문장이 예외인지 분리해 판단하는 도구를 추가합니다. 따라서 세 후보 중에서는 새 해결 단계가 가장 분명합니다.",
+        "screen_rejections": [
+          "0번은 기존 글 /board/gc_information/20에서 다룬 지류·모바일·교환권의 상태 구분과 관리 확인을 단계별 점검으로 다시 푸는 수준이라, 이미 해결한 질문인 상품권 상태 변화 확인과 관리 절차를 그대로 반복합니다.",
+          "2번은 기존 글 /board/purchase/2568과 /board/gc_information/4에서 다룬 이름·별칭·분류·발행사 구분과 사실상 같은 질문입니다. 다른 이름이 같은 상품인지, 포함 관계가 무엇인지 확인하는 흐름이 기존 답으로도 해결됩니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_information/16",
+            "/board/general_notice/52"
+          ],
+          "gap": "기존 글들은 조건이 어느 범위에 적용되는지 읽는 법은 다뤘지만, 안내문 안에서 ‘가능’, ‘필수’, ‘제외’가 한 문단에 함께 있을 때 문장 간 관계를 나눠 해석하는 방법은 다루지 않았습니다. 새 글은 허용, 의무, 예외가 섞인 문장을 분리해 어떤 조건을 먼저 확인하고 무엇을 보류해야 하는지까지 판단하게 해야 합니다.",
+          "example": "안내문에 어떤 이용 가능 항목과 반드시 지켜야 할 항목, 그리고 예외로 빠지는 항목이 함께 적혀 있어도, 문장마다 역할을 나눠 읽는 방법을 모르는 경우를 떠올려 보세요. 이때 먼저 허용 조건과 금지 조건을 갈라 적고, 이어서 예외 문장이 앞선 조건을 바꾸는지 따로 확인하면 해석이 흔들리지 않습니다.",
+          "result": "독자는 안내문에서 조건 문장을 문법과 논리 기준으로 나눠 읽고, 허용·의무·예외를 각각 구분한 뒤 실제 적용 여부를 스스로 판단할 수 있습니다.",
+          "section_actions": [
+            "조건 문장을 허용과 의무와 예외로 갈라 적고, 각 문장이 무엇을 요구하는지 먼저 분류한다.",
+            "앞뒤 문장 사이의 관계를 확인해 예외가 앞선 조건을 덮는지, 아니면 보완하는지 판단한다.",
+            "분류한 결과를 실제 안내 상황에 대입해 어떤 조건을 먼저 확인해야 하는지 최종 결론으로 정리한다."
+          ]
+        }
+      },
+      "board": "gc_information",
+      "topic": "상품권 안내문의 가능·필수·제외 문장별 논리적 의미와 판단법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-21T14:39:22Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 25532,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 2304
+          },
+          "output_tokens": 1030,
+          "output_tokens_details": {
+            "reasoning_tokens": 356
+          },
+          "total_tokens": 26562
+        },
+        "estimated_usd": 0.0222288,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T23:59:02.763783+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3547,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 524,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4071
+        },
+        "estimated_usd": 0.0022572,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T23:59:06.470319+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 6361,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 559,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6920
+        },
+        "estimated_usd": 0.0034388,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T23:59:12.723097+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 20392,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 468,
+          "output_tokens_details": {
+            "reasoning_tokens": 207
+          },
+          "total_tokens": 20860
+        },
+        "estimated_usd": 0.0174,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T23:59:17.474168+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T23:58:56.593608+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T23:59:02.767159+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T23:59:07.201773+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T23:59:13.817663+00:00",
+        "usage_record_index": 3
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0453248,
+    "estimated_total_usd": 0.0453248,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
