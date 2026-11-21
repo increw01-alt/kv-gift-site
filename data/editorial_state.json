@@ -619,10 +619,15 @@
       "board": "purchase",
       "topic": "상품권 주문 전 준비 작업 간 의존 관계 파악과 역순 일정 설계법",
       "run_id": "44919313689"
+    },
+    {
+      "board": "gc_information",
+      "topic": "여러 조건 중 모두 충족과 일부 충족 논리 구분과 실제 판단법",
+      "run_id": "44922400278"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "44919313689",
+  "last_board": "gc_information",
+  "last_run_id": "44922400278",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

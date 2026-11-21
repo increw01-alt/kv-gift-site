@@ -1,18 +1,20 @@
 {
   "run_id": "44922400278",
   "date_kst": "2026-11-22",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_information",
+  "topic": "여러 조건 중 모두 충족과 일부 충족 논리 구분과 실제 판단법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-21T16:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존 글과 같은 질문(‘모두 충족’과 ‘일부 충족’의 구분)과 같은 해결 절차(조건 문장 분리→연결어 확인→체크리스트로 판단)를 반복하고 있어 새 독자 질문이 충분히 다르지 않습니다. / 본문이 논리 유형 설명에 머물러 있어 기존 답을 그대로 적용해도 이번 질문이 해결되며, 조건 조합별로 다른 실제 판단 흐름이라는 새로운 결과물이 구현되지 않았습니다. / 동일 주제의 다른 제목들에서도 이미 ‘모두 충족/하나만 충족’ 구분을 다루고 있어 제목만 바꾼 중복 기획으로 판단됩니다."
+    ]
   },
   "api_usage": {
     "run_id": "44922400278",
@@ -22,15 +24,268 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-22T01:04:05.884020+09:00"
+      "attempt_started_at": "2026-11-22T01:04:05.884020+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 853,
+          "coverageArticles": 152,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-46cb893488",
+            "gc_information-7522ac652e",
+            "gc_information-603f97842d",
+            "gc_information-b9d8d185b2"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "비슷한 이름 상품권을 명확히 구분하는 세부 기준과 분류 절차",
+          "source_id": "",
+          "reader_problem": "이름과 외관이 비슷한 여러 상품권을 용도, 발행사, 사용처 등 구체 기준 없이 분류하려 혼동한다.",
+          "distinct_angle": "단순 명칭 구분을 넘어, 체계적 정보 수집과 체크리스트 작성, 분류 결과표 작성법을 포함해 실제 분류 업무에 적용 가능한 지침을 제공한다.",
+          "reader_situation": "여러 비슷한 상품권을 보유해 용도와 보관 위치를 명확히 구분하고 맞춤 관리를 하려는 이용자.",
+          "deliverable": "상품권별 명칭·발행사·사용처 등의 구분 기준 목록, 분류 체크리스트, 분류 결과표 작성과 실무 적용 가이드.",
+          "task_id": "",
+          "direction_id": "gc_information-b9d8d185b2",
+          "outline": [
+            "상품권 명칭과 발행사별 주요 정보 체계적으로 수집하기",
+            "사용처와 유효 범위 등 구분 항목 설계 및 체크리스트 작성하기",
+            "분류 결과표 작성과 분류 작업 실무에 적용하는 단계별 안내"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "여러 조건 중 모두 충족과 일부 충족 논리 구분과 실제 판단법",
+        "source_id": "",
+        "reader_problem": "상품권 안내에 복합 조건이 혼재돼 ‘모두 충족’인지 ‘하나만 충족’인지 명확히 구분하기 어려워 잘못 적용한다.",
+        "distinct_angle": "기존 글은 논리 유형별 설명에 그치지만, 이번 글은 조건 조합별 실제 적용사례와 체크리스트로 명확한 판단 흐름을 제공한다.",
+        "reader_situation": "복합 조건 안내 시 정확한 논리 적용을 익혀 상품권 선택과 사용 판단을 명확히 하려는 이용자.",
+        "deliverable": "‘모두 충족’과 ‘하나만 충족’ 조건 유형 정의서, 실제 적용사례 기반 논리판단 체크리스트, 가상 조건 예시 판단 흐름 비교표.",
+        "task_id": "",
+        "direction_id": "gc_information-46cb893488",
+        "outline": [
+          "‘모든 조건 충족’ 논리 구조와 안내문 해석 방법 자세히 알기",
+          "‘일부 조건 충족’ 조건 판단 기준과 실제 사례 분석하기",
+          "조건별 판단 체크리스트 작성과 가상 예제 적용 연습하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글들은 조건의 적용 범위나 문장 연결을 설명하지만, 이번 후보는 복합 조건에서 ‘모두 충족’과 ‘일부 충족’의 논리 자체를 구분하고, 안내문 문장을 실제 판단 흐름으로 바꾸는 방법을 다룹니다. 기존 답만으로도 단순 범위 확인은 가능하지만, 여러 조건이 함께 붙은 문구를 어떤 순서로 검사해야 하는지와 조건 조합별로 다른 결론이 나는 상황을 더 구체적으로 안내한다는 점이 새롭습니다.",
+        "screen_rejections": [
+          "후보 일번은 비슷한 이름의 상품권을 명칭, 발행사, 사용처로 나누어 분류하는 내용이라 기존 공개 글 /board/purchase/2568 이 이미 해결한 질문인 ‘비슷한 명칭의 상품권을 어떻게 구분하나’와 사실상 같습니다. 세부 기준과 결과표를 덧붙여도 핵심 해결 절차가 중복됩니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_information/16",
+            "/board/gc_information/13"
+          ],
+          "gap": "기존 글은 조건의 적용 범위나 문장 연결을 읽는 법은 알려 주지만, 여러 조건이 한 문장에 함께 붙을 때 무엇을 먼저 확인하고 어떤 조합에서 결론이 달라지는지는 충분히 다루지 않습니다. 이번 글은 ‘모두 만족해야 하는 조건’과 ‘여럿 중 하나만 맞아도 되는 조건’을 구분해 실제 판단 순서를 세우는 데 초점을 둡니다.",
+          "example": "안내문에 이용 대상, 등록 여부, 예외 문구가 함께 적혀 있어 어느 항목을 반드시 다 맞춰야 하는지 헷갈리는 경우를 떠올려 보세요. 이때는 문장 안에서 빠지면 안 되는 조건과 선택 조건을 따로 나누어 읽고, 예외 문구가 전체 규칙을 바꾸는지부터 먼저 살핍니다.",
+          "result": "독자는 복합 조건 문구를 읽을 때 모두 충족인지 일부 충족인지 먼저 가려내고, 예외와 기본 규칙을 분리해 최종 적용 여부를 스스로 판단할 수 있습니다.",
+          "section_actions": [
+            "첫째 절에서는 조건 문장을 기준 규칙과 예외 문장으로 나누어 적고, 각각이 전체 판단에 어떤 역할을 하는지 구분한다.",
+            "둘째 절에서는 모두 충족형과 일부 충족형을 같은 예시 안에서 비교해 보고, 결론이 달라지는 지점을 직접 표시한다.",
+            "셋째 절에서는 실제 안내문을 볼 때 먼저 확인할 순서와 혼동이 생겼을 때 되돌아갈 판단 기준을 정리한다."
+          ]
+        }
+      },
+      "board": "gc_information",
+      "topic": "여러 조건 중 모두 충족과 일부 충족 논리 구분과 실제 판단법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-21T14:39:22Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15989,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1057,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17046
+        },
+        "estimated_usd": 0.0080868,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T16:04:19.859163+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 16513,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 880,
+          "output_tokens_details": {
+            "reasoning_tokens": 261
+          },
+          "total_tokens": 17393
+        },
+        "estimated_usd": 0.01634475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T16:04:26.846577+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3437,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 513,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3950
+        },
+        "estimated_usd": 0.0021956,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T16:04:31.542644+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 11341,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 609,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11950
+        },
+        "estimated_usd": 0.0055108,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-21T16:04:37.706338+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17892,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 485,
+          "output_tokens_details": {
+            "reasoning_tokens": 107
+          },
+          "total_tokens": 18377
+        },
+        "estimated_usd": 0.0156015,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-21T16:04:42.374794+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T16:04:08.698716+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T16:04:20.537482+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T16:04:26.850100+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-21T16:04:32.823481+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-21T16:04:39.693922+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.04773945,
+    "estimated_total_usd": 0.04773945,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
