@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T19:18:54.481643+00:00",
+  "generatedAt": "2026-11-21T19:19:58.991353+00:00",
   "dateKst": "2026-11-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 1,
+  "published": 2,
   "verified": 1,
   "attempts": 7,
   "held": 3,
   "errors": 2,
-  "knownSubtotalUsd": 0.3153543,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.45246395,
+  "estimatedTotalUsd": 0.45246395,
   "records": [
     {
       "runId": "44918425054",
@@ -92,16 +92,16 @@
     },
     {
       "runId": "44940174620",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "sense",
+      "topic": "사실과 의견 문장 명확히 구분해 문서 이해도 높이는 편집 방법",
+      "url": "https://kv-gift.co.kr/board/sense/30",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-21T19:17:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.13710965,
+      "knownSubtotalUsd": 0.13710965
     }
   ],
   "topicRetry": {

@@ -1838,5 +1838,18 @@
     "publication_mode": "automatic",
     "run_id": "44939730375",
     "usage_file": "data/editorial_runs/2026-11-22/44939730375.json"
+  },
+  {
+    "board": "sense",
+    "id": 30,
+    "topic": "사실과 의견 문장 명확히 구분해 문서 이해도 높이는 편집 방법",
+    "drafted_at": "2026-11-22",
+    "automation": true,
+    "search_intent": "문서 문장마다 사실과 의견을 구분해 오해 없이 다시 쓰는 편집 기준을 알고 싶은 질문",
+    "image_scene": "책상 위에 회의 메모와 검토용 원고가 펼쳐져 있고, 한 사람이 문장마다 형광펜으로 사실과 의견을 다른 색으로 나눠 표시한 뒤 옆의 재작성 칸에 짧은 보고문을 다시 적는 장면",
+    "image_alt": "책상 위 원고에서 사실 문장과 의견 문장을 서로 다른 색으로 표시하고 다시 쓰는 장면",
+    "publication_mode": "automatic",
+    "run_id": "44940174620",
+    "usage_file": "data/editorial_runs/2026-11-22/44940174620.json"
   }
 ]
