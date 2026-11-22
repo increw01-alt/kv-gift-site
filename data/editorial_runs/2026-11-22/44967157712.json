@@ -1,18 +1,20 @@
 {
   "run_id": "44967157712",
   "date_kst": "2026-11-22",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "sale",
+  "topic": "상품권 판매 전 합산 금액 계산 실수 방지 가이드",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-22T00:32:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 상품권 여러 장의 단가와 합계를 적고 더한 뒤 누락·중복을 확인하는 절차가 기존의 합산 계산 실수 예방 글과 같은 질문·해결 방식입니다. / 본문이 단가를 분리해 기록하고 총합과 대조하라는 수준에 머물러 있어, 계산 단계별 새 판단 기준이나 기존 글과 다른 실제 절차가 드러나지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "44967157712",
@@ -22,15 +24,283 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-22T09:34:09.624767+09:00"
+      "attempt_started_at": "2026-11-22T09:34:09.624767+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 875,
+          "coverageArticles": 154,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-a002d2fe08",
+            "sale-e24e80a517",
+            "sale-255aa8468b",
+            "sale-1f7b41f6fa"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 판매 전 상태 기록과 매입처 문의 준비 절차",
+          "source_id": "",
+          "reader_problem": "상품권을 판매하려 하는데, 보유한 상품권의 상태를 어떻게 명확하게 확인하고 기록해야 할지 모르며, 매입처에 문의할 때 어떤 정보를 준비해야 하는지 혼란이 있다",
+          "distinct_angle": "보유 상품권 상태 점검과 기록 방법에 초점을 맞추고, 문의 전 매입처에 확인해야 할 필수 조건과 문의 기록의 체계적 관리 절차를 단계별로 안내한다. 기존 글들이 단순 안내나 매입률 집중에서 벗어나, 사전에 해야 할 구체적 점검과 기록 준비 과정에 초점을 둔다.",
+          "reader_situation": "여러 장의 상품권을 보유 중이며, 판매 전에 현재 상품권 상태를 정확히 파악하고, 매입처에 문의하기 전 정보를 사전에 체계적으로 준비하려는 이용자",
+          "deliverable": "상품권 상태별 체크리스트, 문의 전 점검과 기록 양식, 매입처 문의 전 준비 단계별 실행 지침서",
+          "task_id": "",
+          "direction_id": "sale-a002d2fe08",
+          "outline": [
+            "상품권 개별 상태를 꼼꼼히 점검하는 항목별 체크리스트 작성하기",
+            "매입처 문의 전 확인해야 할 필수 조건과 질문 목록 정리하기",
+            "문의 내용과 답변을 기록·관리하는 체계적 방법 및 보안 수칙 숙지하기"
+          ]
+        },
+        {
+          "topic": "상품권 매입 문의 기록과 정보 보호 관리법",
+          "source_id": "",
+          "reader_problem": "상품권 매입 상담을 받으면서 제시되는 조건과 답변을 정확하고 안전하게 기록하지 못해 나중에 혼돈이 생기거나 정보 유출 우려가 있다",
+          "distinct_angle": "단순 문의 기록이 아닌, 조건별 구분과 비공개 정보 보호를 포함한 안전한 기록 및 관리 방안을 중점적으로 다룬다. 기존 안내들이 주로 표 작성법에 머무른 것과 달리, 실제 적용할 수 있는 안전 관리와 기준 분류법까지 연결한 절차를 제공한다.",
+          "reader_situation": "상품권 매입 상담 중 받은 금액 제시와 조건을 명확히 구분해 기록하고, 개인정보와 상담 내용을 보호해 안전하게 관리해야 하는 판매 상담자 및 개인",
+          "deliverable": "조건별 상담 기록 양식과 분리 기준, 개인정보 보호 방침 요약, 기록 유지 및 파기 절차서",
+          "task_id": "",
+          "direction_id": "sale-e24e80a517",
+          "outline": [
+            "매입 상담 중 조건과 답변을 체계적으로 구분하는 기록 양식 작성법",
+            "상담 기록에 포함된 개인정보와 민감 정보를 안전하게 다루는 방법",
+            "기록 유지 기간과 파기사업 등 고객 정보 보호 및 실무 관리 절차 익히기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "상품권 판매 전 합산 금액 계산 실수 방지 가이드",
+        "source_id": "",
+        "reader_problem": "상품권 여러 장의 단가와 합계 금액 계산 과정에서 자주 실수를 하여 판매 결정을 어렵게 만드는 문제가 있다",
+        "distinct_angle": "상품권 금액 산정과 합산 단계별 필수 점검 사항과 오류 사례를 분석하고, 체크리스트와 표준화된 산출 절차를 통해 실수를 방지하는 구체적 방법을 제공한다. 기존 글과 달리 계산 단계별 단계적 확인법과 오류 사례 분석에 중점을 둔다.",
+        "reader_situation": "상품권 판매나 구매 시 각각 단가와 묶음 합산 금액 계산을 정확하게 해 오류를 줄이고자 하는 실무 담당자 및 개인 이용자",
+        "deliverable": "상품권 단가 산출과 합산 단계별 점검표, 잦은 계산 실수 사례 및 대응 방법, 표준 매뉴얼 양식",
+        "task_id": "",
+        "direction_id": "sale-255aa8468b",
+        "outline": [
+          "상품권 한 장 단가 산정 시 놓치기 쉬운 점검 사항 파악하기",
+          "여러 장 합산 과정에서 자주 발생하는 계산 오류 유형과 예방법 분석하기",
+          "단계별 점검표를 작성하여 실제 계산 과정에 적용하고 표준 절차로 익히기"
+        ],
+        "novelty_reason": "여러 장의 상품권을 더하는 과정에서 생기는 산술 실수와 검산 절차를 다루어, 상태 확인이나 상담 기록 정리 중심의 기존 글들과 질문이 다릅니다. 가장 가까운 기존 글은 계산 단위와 반올림 시점을 점검하는 내용이지만, 이번 후보는 장별 단가 확인, 합산 누락·중복 방지, 계산 오류 사례를 실제로 막는 절차까지 다뤄 더 구체적입니다.",
+        "screen_rejections": [
+          "상품권의 상태를 점검하고 매입처에 문의할 정보를 준비하는 흐름이 기존 공개 글 '/board/sale/3690', '/board/sale/3692', '/board/sale/3695', '/board/sale/3700'와 겹칩니다. 이미 해결한 질문은 '판매 전에 사용 여부와 상태를 어떻게 확인하고, 무엇을 문의해야 하는가'이므로 중복입니다.",
+          "상담 기록과 정보 보호를 분리해 정리하는 흐름이 기존 공개 글 '/board/sale/3697'과 '/board/gc_information/21'의 접수와 처리 결과 구분, 기록 분리 안내와 겹칩니다. 이미 해결한 질문은 '매입 상담 내용을 어떻게 구분해 기록하고 보호할 것인가'이므로 중복입니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sale/3698"
+          ],
+          "gap": "기존 글은 장별 계산과 묶음 계산의 차이, 반올림 시점, 결과 비교를 설명합니다. 이번 글은 그보다 한 단계 더 들어가 여러 장의 단가를 적는 과정에서 숫자를 잘못 옮기거나 한 장을 빠뜨리거나 같은 장을 두 번 더하는 실수를 어떻게 찾아내고 막을지까지 다룹니다. 즉, 계산 방식의 차이 설명이 아니라 실제 합산 입력과 검산 오류를 줄이는 절차가 새로 필요합니다.",
+          "example": "여러 장의 상품권을 각각 적어 둔 뒤 합계를 내는 상황에서, 한 장의 금액이 비슷해서 옮겨 적을 때 헷갈린다면 단가와 장수를 먼저 분리해 적고 다시 한 줄씩 대조해 보세요. 이때 합산 결과만 보지 말고 각 장의 금액이 모두 들어갔는지와 같은 금액이 중복 입력되지 않았는지를 함께 확인하면 계산 실수를 줄일 수 있습니다.",
+          "result": "독자는 장별 금액과 총합을 따로 검산해 누락과 중복을 줄이고, 판매 전에 스스로 계산 오류를 걸러낼 수 있습니다.",
+          "section_actions": [
+            "각 상품권의 단가와 장수를 분리해 적고, 합산 전에 빠진 장이 없는지 먼저 점검한다.",
+            "총합을 적은 뒤 각 장의 금액과 다시 맞춰 보며 같은 금액을 두 번 넣었는지 확인한다.",
+            "계산 과정에서 헷갈린 부분은 표시해 두고, 최종 합계와 비교해 수정한 뒤 문의할 수 있게 정리한다."
+          ]
+        }
+      },
+      "board": "sale",
+      "topic": "상품권 판매 전 합산 금액 계산 실수 방지 가이드",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-21T14:39:22Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15535,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1230,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16765
+        },
+        "estimated_usd": 0.008182,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T00:34:21.403321+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23822,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 897,
+          "output_tokens_details": {
+            "reasoning_tokens": 209
+          },
+          "total_tokens": 24719
+        },
+        "estimated_usd": 0.021903,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T00:34:27.211149+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3538,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 424,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3962
+        },
+        "estimated_usd": 0.0020936,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T00:34:30.615285+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 4327,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 533,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4860
+        },
+        "estimated_usd": 0.0025836,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T00:34:40.215104+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17462,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 490,
+          "output_tokens_details": {
+            "reasoning_tokens": 233
+          },
+          "total_tokens": 17952
+        },
+        "estimated_usd": 0.0153015,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T00:34:45.008790+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T00:34:12.162676+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T00:34:21.958547+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T00:34:27.213989+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T00:34:31.481079+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T00:34:41.543378+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0500637,
+    "estimated_total_usd": 0.0500637,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

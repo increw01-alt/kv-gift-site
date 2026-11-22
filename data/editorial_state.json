@@ -634,10 +634,15 @@
       "board": "gc_information",
       "topic": "상품권 안내문의 가능·필수·제외 문장별 논리적 의미와 판단법",
       "run_id": "44964306775"
+    },
+    {
+      "board": "sale",
+      "topic": "상품권 판매 전 합산 금액 계산 실수 방지 가이드",
+      "run_id": "44967157712"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "44964306775",
+  "last_board": "sale",
+  "last_run_id": "44967157712",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
