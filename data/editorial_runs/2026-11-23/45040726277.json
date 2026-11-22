@@ -1,18 +1,20 @@
 {
   "run_id": "45040726277",
   "date_kst": "2026-11-23",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "gc_tip",
+  "topic": "교환 물품 옵션 중 양립 불가 조합 체계적 제거법",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-22T15:52:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "본문 검수 보류: 기존의 ‘동시에 고를 수 없는 조합을 먼저 가려내는 방법’과 핵심 질문이 같고, 후보 목록화 → 불가능 조합 제거 → 최종 검토라는 해결 절차도 거의 동일합니다. / 본문이 색상·크기·부속품을 예로 든 일반적인 조합 정리와 매트릭스 표시에 그쳐, 기존 글의 조건 점검형 설명을 그대로 적용해도 답이 해결됩니다. / 새로운 판단 기준이나 실제 다른 문제 해결 단계가 추가되지 않아 제목만 바꾼 중복 글로 보입니다."
+    ]
   },
   "api_usage": {
     "run_id": "45040726277",
@@ -22,15 +24,285 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-23T00:54:05.139321+09:00"
+      "attempt_started_at": "2026-11-23T00:54:05.139321+09:00",
+      "topic_pool_update": {
+        "board": "gc_tip",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 888,
+          "coverageArticles": 154,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_tip-41d96debcf",
+            "gc_tip-18e69e2f13",
+            "gc_tip-e4ae922a60",
+            "gc_tip-59f6a2cf62"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 보관함 색상 외 개인 표식 만들기 실전 가이드",
+          "source_id": "",
+          "reader_problem": "상품권 보관함 색상이 비슷해 구분이 어렵고, 기존 색상 구분 외에 개인별로 용이하게 식별할 수 있는 표식 방법이 부족함",
+          "distinct_angle": "기존 색상 활용법을 넘어서 다양한 소재와 표식 부착 방법을 소개하고, 주기적 관리와 상태 점검까지 아우르는 구체적 실습 가이드를 제공함",
+          "reader_situation": "여러 상품권 보관함을 색상만으로 구분하기 어려워 눈에 띄면서도 간편한 개인 표식을 직접 만들고 체계적으로 관리하려는 이용자",
+          "deliverable": "보관함별로 사용할 수 있는 다양한 개인 표식 목록과 재료 선정법, 부착 위치 선정 및 관리 매뉴얼, 표식 지속 상태 점검용 체크리스트",
+          "task_id": "",
+          "direction_id": "gc_tip-41d96debcf",
+          "outline": [
+            "기존 색상 구분의 한계점 파악해 개선 필요성 이해하기",
+            "종이, 스티커, 고리 등 다양한 표식 소재 종류 조사 및 용도별 장단점 확인하기",
+            "선택한 표식 소재를 보관함에 부착할 위치 선정과 부착 후 주기적 상태 점검 방법 실습하기"
+          ]
+        },
+        {
+          "topic": "물품 교환 후 조립·설치 공간 배치와 작업 순서 실습",
+          "source_id": "",
+          "reader_problem": "교환받은 큰 물품을 설치 전에 공간 마련과 작업 순서 계획이 미흡해 작업 지연, 공간 낭비, 부품 혼란이 발생하는 문제",
+          "distinct_angle": "기존 공간 확보 안내에서 발전해 실제 바닥 모형 배치, 작업 동선 계획, 부품 순서 분류와 현장 적용 점검까지 구체화한 실습 중심 내용 제공",
+          "reader_situation": "큰 물품 교환 후 조립 및 설치 전 실제 공간을 효율적으로 배치하고 체계적 작업 순서를 계획하는 사용자",
+          "deliverable": "포장 개봉 공간과 설치 공간 분리 배치 모형 실습, 동선과 부품 구성별 작업 순서 계획표, 현장 적용 점검 점검표",
+          "task_id": "",
+          "direction_id": "gc_tip-e4ae922a60",
+          "outline": [
+            "포장 개봉에 필요한 최소 바닥 공간을 모형으로 가상 배치해 실제 공간 요구 파악하기",
+            "설치 장소의 크기와 동선을 고려해 작업 공간과 부품 배치 순서 계획하기",
+            "현장에 직접 가서 공간 배치 및 작업 동선 시범 적용 후 부족·과잉 여부 점검 및 재조정하기"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "교환 물품 옵션 중 양립 불가 조합 체계적 제거법",
+        "source_id": "",
+        "reader_problem": "교환 물품의 여러 옵션 조합 중에서 동시에 선택할 수 없는 경우가 많아 반복 선택과 오류가 많아 실질적 시간과 노력을 줄여야 하는 문제",
+        "distinct_angle": "기존 단순 목록화와 제거 절차에서 나아가 단계별 조합 후보 만들기, 배타적 옵션 매트릭스 작성, 실전 단순화와 확인 절차를 포함한 구체적 방법론 제공",
+        "reader_situation": "교환 절차에서 다수 옵션들을 선택할 때 불가능한 조합을 미리 걸러내어 선택 과정을 효율적으로 단축하고자 하는 구매자나 실무자",
+        "deliverable": "호환 여부 매트릭스, 단계별 조합 후보 생성 매뉴얼, 가지치기 체크리스트와 최종 가능한 옵션 조합 정리 자료",
+        "task_id": "",
+        "direction_id": "gc_tip-18e69e2f13",
+        "outline": [
+          "옵션별 모든 가능한 조합 후보를 목록화해 전체 조합 구조를 파악하기",
+          "옵션 간 호환 불가 조합을 식별해 매트릭스를 통해 불가능 조합을 철저히 제거하기",
+          "남은 조합을 바탕으로 선택 과정을 단순화하고 최종 조합을 확정하는 단계별 검증하기"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 교환 후 공간 배치나 이동 동선이 아니라, 상품권과 관련된 여러 선택지를 정리하고 확인하는 방식에 가깝습니다. 이 후보는 단순히 목록을 늘리는 수준이 아니라, 서로 양립할 수 없는 옵션을 먼저 걸러 내는 매트릭스와 가지치기 순서를 만들어 최종 조합을 확정하는 판단 도구를 제시합니다. 기존 글들의 ‘조건 확인’이나 ‘상태 점검’만으로는 바로 대체되지 않는 조합 배제 절차가 있어 새 해결 내용이 있습니다.",
+        "screen_rejections": [
+          "0번은 색상이 비슷한 보관함을 글자·도형·위치 표식으로 구분하고 관리하는 기존 글과 독자 상황, 질문, 해결 순서가 거의 같습니다. 표식 소재를 더 늘리거나 주기적 점검을 붙였을 뿐, 기존 답으로도 그대로 해결되는 중복입니다.",
+          "2번은 교환 후 큰 물품의 개봉 공간, 설치 공간, 동선을 미리 배치하는 기존 글과 동일한 문제를 다룹니다. 바닥 모형과 현장 재조정만 더했을 뿐, 공간 분리와 작업 순서 계획이라는 핵심 해법이 이미 공개 글과 같습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/sale/3692",
+            "/board/gc_tip/50",
+            "/board/gc_tip/38"
+          ],
+          "gap": "기존 글은 상품권 관련 상태 확인이나 단순 조건 점검에 머무릅니다. 이 후보는 서로 동시에 고를 수 없는 옵션을 먼저 판별하고, 남는 조합만 추려 최종 선택을 확정하는 절차가 필요하다는 점이 다릅니다.",
+          "example": "교환할 물품에서 색상, 크기, 부속품 선택이 서로 얽혀 있을 때, 어떤 조합이 가능한지 먼저 나누고 불가능한 조합은 바로 제외한 뒤 남은 경우만 다시 비교하는 상황.",
+          "result": "독자는 옵션을 한꺼번에 고르지 않고, 배타 조합을 먼저 제거한 뒤 가능한 조합만 남겨 최종 선택안을 정리할 수 있다.",
+          "section_actions": [
+            "첫 절에서는 옵션을 속성별로 나누고, 각 항목이 어떤 선택과 함께 쓰이는지 적어 조합의 기본 구조를 만든다.",
+            "둘째 절에서는 서로 같이 고를 수 없는 항목을 매트릭스로 표시해 불가능한 조합을 먼저 제거하고, 남는 후보만 추린다.",
+            "셋째 절에서는 남은 후보를 실제 선택 순서대로 다시 검토해, 누락된 조건이 없는지 확인한 뒤 최종 조합표를 완성한다."
+          ]
+        }
+      },
+      "board": "gc_tip",
+      "topic": "교환 물품 옵션 중 양립 불가 조합 체계적 제거법",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-22T14:35:14Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16183,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1204,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17387
+        },
+        "estimated_usd": 0.0083996,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:54:18.243224+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24383,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 727,
+          "output_tokens_details": {
+            "reasoning_tokens": 109
+          },
+          "total_tokens": 25110
+        },
+        "estimated_usd": 0.02155875,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T15:54:24.396627+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3472,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 423,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3895
+        },
+        "estimated_usd": 0.0020656,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:54:28.022315+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5031,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 540,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5571
+        },
+        "estimated_usd": 0.0028764,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:54:33.839380+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 19922,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 448,
+          "output_tokens_details": {
+            "reasoning_tokens": 135
+          },
+          "total_tokens": 20370
+        },
+        "estimated_usd": 0.0169575,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T15:54:38.686856+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T15:54:08.281242+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T15:54:19.023819+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T15:54:24.400121+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T15:54:29.493747+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T15:54:36.147349+00:00",
+        "usage_record_index": 4
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.05185785,
+    "estimated_total_usd": 0.05185785,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

@@ -649,10 +649,15 @@
       "board": "free",
       "topic": "추천받을 때 피하고 싶은 점 먼저 말하기와 좋아하는 점 먼저 말하기 차이",
       "run_id": "45037520404"
+    },
+    {
+      "board": "gc_tip",
+      "topic": "교환 물품 옵션 중 양립 불가 조합 체계적 제거법",
+      "run_id": "45040726277"
     }
   ],
-  "last_board": "free",
-  "last_run_id": "45037520404",
+  "last_board": "gc_tip",
+  "last_run_id": "45040726277",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
