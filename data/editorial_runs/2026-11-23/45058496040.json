@@ -1,18 +1,20 @@
 {
   "run_id": "45058496040",
   "date_kst": "2026-11-23",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-22T19:02:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보 0은 기존 공개 글 /board/gc_information/11이 이미 다룬 ‘구매 영수증과 상품권 화면의 차이와 쓰임새’를 같은 질문 구조와 같은 해결 절차로 설명합니다. 구매와 사용의 역할 구분, 각각의 확인 항목, 보관 방법까지 본문 핵심이 거의 일치해 새로 추가되는 구체적 해결 내용이 확인되지 않습니다. / 0번: /board/gc_information/11에서 이미 해결한 ‘구매 영수증과 상품권 화면의 역할 차이와 관리 방법’과 같은 질문입니다. 영수증은 결제 증빙, 화면은 사용 수단이라는 구분과 환불·사용 시점별 확인 및 보관 안내가 동일해 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "45058496040",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-23T04:04:06.050850+09:00"
+      "attempt_started_at": "2026-11-23T04:04:06.050850+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 891,
+          "coverageArticles": 154,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-46cb893488",
+            "gc_information-cfcea2023c",
+            "gc_information-7522ac652e",
+            "gc_information-603f97842d"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 구매 영수증과 사용 화면 차이와 관리법",
+          "source_id": "",
+          "reader_problem": "상품권 구매 영수증과 사용 시 제시하는 화면의 역할과 차이를 구분하지 못해 상황별 적절한 활용과 관리를 어렵게 한다.",
+          "distinct_angle": "구매와 사용의 목적·증거 역할 차이를 명확히 설명하고, 실제 활용 시점별로 두 자료를 어떻게 확인하고 기록해야 하는지를 구체적으로 안내",
+          "reader_situation": "상품권 구매 경험은 있지만 영수증과 증빙 화면의 용도와 관리법을 명확히 이해해 실수 없이 보관과 사용을 원하는 이용자",
+          "deliverable": "구매 영수증과 상품권 화면의 주요 기능 및 차별점 설명, 상황별 확인 사항 목록, 자료 보관과 활용 체크리스트",
+          "task_id": "",
+          "direction_id": "gc_information-cfcea2023c",
+          "outline": [
+            "구매 영수증과 상품권 화면의 역할과 차이점 상세 설명",
+            "각각의 자료를 관리하고 활용하는 실제 상황별 점검 사항",
+            "용어와 개념을 바탕으로 한 실용적 보관 및 사용 가이드"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15993,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1010,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17003
+        },
+        "estimated_usd": 0.0080132,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T19:04:17.670448+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12738,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 262,
+          "output_tokens_details": {
+            "reasoning_tokens": 59
+          },
+          "total_tokens": 13000
+        },
+        "estimated_usd": 0.0107325,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T19:04:20.949289+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T19:04:09.485959+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T19:04:18.330228+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0187457,
+    "estimated_total_usd": 0.0187457,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
