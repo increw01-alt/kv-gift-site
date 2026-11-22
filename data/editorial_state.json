@@ -644,10 +644,15 @@
       "board": "sense",
       "topic": "비슷한 물건이나 파일 위치 변화에 대응하는 분류 체계 만들기",
       "run_id": "44981881564"
+    },
+    {
+      "board": "free",
+      "topic": "추천받을 때 피하고 싶은 점 먼저 말하기와 좋아하는 점 먼저 말하기 차이",
+      "run_id": "45037520404"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "44981881564",
+  "last_board": "free",
+  "last_run_id": "45037520404",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

@@ -1,18 +1,32 @@
 {
   "run_id": "45037520404",
   "date_kst": "2026-11-23",
-  "board": null,
-  "topic": null,
-  "status": "generating",
+  "board": "free",
+  "topic": "추천받을 때 피하고 싶은 점 먼저 말하기와 좋아하는 점 먼저 말하기 차이",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "body_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-22T15:17:54.084Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": false,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
+    "issues": [
+      "기존 글과 같은 질문 구조와 해결 방식으로 보이며, ‘좋아하는 점/피하고 싶은 점’의 순서를 바꿔 추천 범위를 조절하는 내용이 거의 반복됩니다.",
+      "제목과 본문이 모두 추천 요청의 말하는 순서를 다루고 있어, 새 판단 도구나 다른 해결 단계가 충분히 드러나지 않습니다."
+    ],
+    "holdReason": "body_duplicate"
   },
   "api_usage": {
     "run_id": "45037520404",
@@ -22,15 +36,352 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-23T00:19:04.196380+09:00"
+      "attempt_started_at": "2026-11-23T00:19:04.196380+09:00",
+      "topic_pool_update": {
+        "board": "free",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 885,
+          "coverageArticles": 154,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "free-bfc80eaf20",
+            "free-33a0543960",
+            "free-e3b569a136",
+            "free-334ff31d35"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "공유 물품 사용 시 편의성과 원상복구 책임 명확히 합의하는 방법",
+          "source_id": "",
+          "reader_problem": "공동으로 사용하는 물품의 허용 행동과 사용 후 원래 상태로 돌려놓을 책임 범위를 구체적으로 정하지 않아 분쟁 가능성과 사용 불편함이 존재함",
+          "distinct_angle": "기존 글은 일반 안내에 머문 반면 본 기획은 허용·제한 행동 목록화와 책임 분담 세부 규정 작성, 예상 문제 대응 협의 기준까지 포함한 합의서 작성 실무에 초점",
+          "reader_situation": "공동 사용 물품의 이용 규칙과 사용 후 책임 분배를 구체적으로 문서화하고 분쟁 방지와 효율적 관리를 도모하고자 하는 운영팀이나 모임 주최자",
+          "deliverable": "허용 및 제한 행동 목록, 사용 후 책임 분담표와 사례, 분쟁 상황 대응 협의 기준을 포함한 합의서 작성 가이드와 실용적 질문 목록",
+          "task_id": "",
+          "direction_id": "free-33a0543960",
+          "outline": [
+            "사용 중 허용 및 제한 행동을 구분해 구체적 목록 만들기",
+            "사용 후 원상복구 책임과 범위를 항목별로 상세 분배하기",
+            "합의서 작성 시 반영할 내용과 분쟁 발생 시 대응 및 조정 기준 포함하기"
+          ]
+        },
+        {
+          "topic": "선물 계획에서 확정과 선택 여지를 두는 부담과 융통성 비교",
+          "source_id": "",
+          "reader_problem": "선물 준비 시 모든 사항을 미리 확정할지, 일부 선택 여지를 남길지에 따른 심리적 부담과 조율 편의성 차이를 명확히 판단하기 어려움",
+          "distinct_angle": "기존 글은 단순 비교에 그쳤다면 본 기획은 부담과 이점을 구체 사례별 분석하고 독자 개인 및 집단 상황에 맞춰 선택 기준과 적용법을 구체화하여 실제 결정 지원 도구 제공",
+          "reader_situation": "단체 혹은 가족 선물 준비시 어느 정도 계획을 확정할지 고민하며 부담 경감과 융통성 확보를 균형 있게 이루려는 소비자",
+          "deliverable": "확정·열린 선택 두 방식의 부담 정도 비교 질문지, 여러 실제 사례별 부담·이점 분석, 개인 상황별 적합 방식 선택 도구와 기준 표",
+          "task_id": "",
+          "direction_id": "free-e3b569a136",
+          "outline": [
+            "확정 계획과 열린 선택의 핵심 차이와 부담 관련 질문 정리",
+            "실제 사례를 통해 각 방식의 부담과 이점 비교·분석하기",
+            "독자 개별 상황에 따라 적합한 선택 방식을 결정하는 판단 기준 및 실천법 마련"
+          ]
+        }
+      ],
+      "topic_plan": {
+        "topic": "추천받을 때 피하고 싶은 점 먼저 말하기와 좋아하는 점 먼저 말하기 차이",
+        "source_id": "",
+        "reader_problem": "추천을 요청할 때 좋아하는 점부터 설명할지, 피하고 싶은 점부터 말할지에 따라 추천 결과가 달라져 최적의 요청 방식을 찾기 어려움",
+        "distinct_angle": "기존 안내가 선호 조건 중심 정리에 머문 반면, 본 후보는 조건 우선순위에 따라 추천 후보군 축소 과정을 단계별 비교해 추천 효과 차이를 실질적으로 분석함",
+        "reader_situation": "추천 요청 과정에서 자신의 선호와 제외 조건을 명확히 분리하여 각각 우선순위를 매겨 추천 결과 차이를 비교하고 싶어 하는 독자",
+        "deliverable": "선호 조건 목록과 제외 조건 목록을 각각 작성하고 우선순위별 후보 추천 결과를 비교한 표와 추천 요청 방식 선택을 위한 구체적 판단 기준",
+        "task_id": "",
+        "direction_id": "free-334ff31d35",
+        "outline": [
+          "추천 전 좋아하는 점과 피할 점을 목록으로 분리하고 우선순위 매기기",
+          "조건별 우선순위 변화에 따른 추천 후보군 축소 및 결과 비교 분석",
+          "상황에 맞게 추천 요청 방식을 선택할 수 있는 판단 기준 마련 및 적용"
+        ],
+        "novelty_reason": "가장 가까운 기존 글은 추천의 기준을 우선순위로 정리하는 흐름이지만, 이번 후보는 좋아하는 점을 먼저 말할지 피하고 싶은 점을 먼저 말할지에 따라 추천 후보가 어떻게 달라지는지, 그리고 조건을 먼저 제시할 때 후보군이 어떻게 좁아지는지까지 다룹니다. 기존 글은 선물 선택이나 공평성 판단에 머무르지만, 이 후보는 추천 요청의 질문 구성 자체를 바꾸는 실무적 판단을 제시해 새 해결 내용이 더 구체적입니다.",
+        "screen_rejections": [
+          "일반적인 공유 물품 합의 절차를 다루며, 허용 행동과 원상복구 책임을 나누는 기존 공개 글과 질문·해결 단계가 같습니다. 새 판단 기준이 더해지지 않아 중복입니다.",
+          "선물 계획에서 확정과 여지를 비교하는 구조가 기존 공개 글의 우선순위·공평성 판단과 유사하고, 독자가 새로 실행할 결정 도구가 충분히 다르지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/free/487",
+            "/board/sense/23"
+          ],
+          "gap": "기존 글은 선호 기준을 정리하는 수준이지만, 이번 글은 추천을 요청할 때 먼저 꺼내는 조건의 순서에 따라 상대가 후보를 좁히는 방식이 달라지는 점을 다룹니다. 좋아하는 점과 피하고 싶은 점을 어떤 순서로 말할지에 따라 얻는 추천의 폭과 정확도가 어떻게 달라지는지 구체적으로 판단하게 해야 합니다.",
+          "example": "상대에게 취향을 묻는 상황에서 막연히 좋아하는 것만 말하면 후보가 넓게 나오고, 피하고 싶은 점을 먼저 말하면 제외 범위가 빨리 정리됩니다. 두 방식 중 어느 쪽이 더 맞는지, 내가 원하는 답이 넓은 탐색인지 빠른 배제인지에 따라 고르는 예시로 설명합니다.",
+          "result": "독자는 추천 요청 전에 자신의 선호와 제외 조건의 말하는 순서를 정하고, 상황에 따라 후보를 넓게 받을지 먼저 좁힐지를 스스로 결정할 수 있게 됩니다.",
+          "section_actions": [
+            "추천 전에 좋아하는 점과 피하고 싶은 점을 각각 따로 적어, 어떤 조건이 더 먼저 말해져야 하는지 구분하게 한다.",
+            "조건의 순서를 바꾸었을 때 추천 범위가 어떻게 달라지는지 비교해, 원하는 답의 형태에 맞는 요청 방식을 고르게 한다.",
+            "마지막에 실제 질문 문장으로 정리해, 상대에게 바로 보낼 수 있는 추천 요청 문구를 완성하게 한다."
+          ]
+        }
+      },
+      "board": "free",
+      "topic": "추천받을 때 피하고 싶은 점 먼저 말하기와 좋아하는 점 먼저 말하기 차이",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-22T14:35:14Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "추천 요청에서 좋아하는 점과 피하고 싶은 점의 말하는 순서를 정해 더 맞는 후보를 받는 방법"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 16131,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1151,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17282
+        },
+        "estimated_usd": 0.008294,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:19:16.668719+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 24188,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 775,
+          "output_tokens_details": {
+            "reasoning_tokens": 166
+          },
+          "total_tokens": 24963
+        },
+        "estimated_usd": 0.0216285,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T15:19:21.683754+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3455,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 480,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3935
+        },
+        "estimated_usd": 0.00215,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:19:25.819705+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 5426,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 551,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5977
+        },
+        "estimated_usd": 0.003052,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:19:31.649489+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17099,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 429,
+          "output_tokens_details": {
+            "reasoning_tokens": 215
+          },
+          "total_tokens": 17528
+        },
+        "estimated_usd": 0.01475475,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T15:19:36.039009+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3639,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1143
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 5011
+        },
+        "estimated_usd": 0.066843,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-22T15:20:05.959572+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 9133,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 459,
+          "output_tokens_details": {
+            "reasoning_tokens": 313
+          },
+          "total_tokens": 9592
+        },
+        "estimated_usd": 0.00891525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-22T15:20:11.630201+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T15:19:06.779456+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T15:19:17.249934+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T15:19:21.686755+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-22T15:19:26.735218+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T15:19:33.027957+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-22T15:19:36.054283+00:00",
+        "usage_record_index": 5
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-22T15:20:06.917201+00:00",
+        "usage_record_index": 6
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1256375,
+    "estimated_total_usd": 0.1256375,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
