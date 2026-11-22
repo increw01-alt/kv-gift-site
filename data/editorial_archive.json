@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T03:44:08.055736+00:00",
+  "generatedAt": "2026-11-22T03:45:20.660008+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -6715,14 +6715,14 @@
       "runId": "44981881564",
       "dateKst": "2026-11-22",
       "dateBasis": "run_day",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sense",
+      "topic": "비슷한 물건이나 파일 위치 변화에 대응하는 분류 체계 만들기",
       "url": null,
       "publicVerifiedAt": null,
       "source": "cloudflare_cron",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12389985,
+      "knownSubtotalUsd": 0.12389985
     },
     {
       "id": "post:purchase:2561",
@@ -27273,13 +27273,79 @@
     {
       "entryId": "run:44981881564",
       "dateKst": "2026-11-22",
-      "recordedAt": null,
-      "kind": "unrecorded",
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0,
-      "requests": 0,
-      "inputTokens": null,
-      "outputTokens": null
+      "recordedAt": "2026-11-22T03:44:21.552682+00:00",
+      "kind": "topic",
+      "estimatedUsd": 0.0084376,
+      "knownSubtotalUsd": 0.0084376,
+      "requests": 1,
+      "inputTokens": 16158,
+      "outputTokens": 1234
+    },
+    {
+      "entryId": "run:44981881564",
+      "dateKst": "2026-11-22",
+      "recordedAt": "2026-11-22T03:44:28.996580+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.02110275,
+      "knownSubtotalUsd": 0.02110275,
+      "requests": 1,
+      "inputTokens": 21573,
+      "outputTokens": 1094
+    },
+    {
+      "entryId": "run:44981881564",
+      "dateKst": "2026-11-22",
+      "recordedAt": "2026-11-22T03:44:32.560590+00:00",
+      "kind": "text",
+      "estimatedUsd": 0.0021756,
+      "knownSubtotalUsd": 0.0021756,
+      "requests": 1,
+      "inputTokens": 3551,
+      "outputTokens": 472
+    },
+    {
+      "entryId": "run:44981881564",
+      "dateKst": "2026-11-22",
+      "recordedAt": "2026-11-22T03:44:38.031500+00:00",
+      "kind": "editing",
+      "estimatedUsd": 0.0044244,
+      "knownSubtotalUsd": 0.0044244,
+      "requests": 1,
+      "inputTokens": 9069,
+      "outputTokens": 498
+    },
+    {
+      "entryId": "run:44981881564",
+      "dateKst": "2026-11-22",
+      "recordedAt": "2026-11-22T03:44:42.120222+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.0137145,
+      "knownSubtotalUsd": 0.0137145,
+      "requests": 1,
+      "inputTokens": 16744,
+      "outputTokens": 257
+    },
+    {
+      "entryId": "run:44981881564",
+      "dateKst": "2026-11-22",
+      "recordedAt": "2026-11-22T03:45:15.160766+00:00",
+      "kind": "image",
+      "estimatedUsd": 0.066353,
+      "knownSubtotalUsd": 0.066353,
+      "requests": 1,
+      "inputTokens": 3541,
+      "outputTokens": 1372
+    },
+    {
+      "entryId": "run:44981881564",
+      "dateKst": "2026-11-22",
+      "recordedAt": "2026-11-22T03:45:20.341519+00:00",
+      "kind": "review",
+      "estimatedUsd": 0.007692,
+      "knownSubtotalUsd": 0.007692,
+      "requests": 1,
+      "inputTokens": 8450,
+      "outputTokens": 301
     },
     {
       "entryId": "post:purchase:2561",

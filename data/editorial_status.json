@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T03:44:07.992339+00:00",
+  "generatedAt": "2026-11-22T03:45:20.598323+00:00",
   "dateKst": "2026-11-22",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 2,
   "verified": 2,
   "attempts": 15,
-  "held": 9,
+  "held": 10,
   "errors": 3,
-  "knownSubtotalUsd": 0.67666955,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.8005694,
+  "estimatedTotalUsd": 0.8005694,
   "records": [
     {
       "runId": "44918425054",
@@ -196,21 +196,21 @@
     },
     {
       "runId": "44981881564",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sense",
+      "topic": "비슷한 물건이나 파일 위치 변화에 대응하는 분류 체계 만들기",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-22T03:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.12389985,
+      "knownSubtotalUsd": 0.12389985
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 4,
+    "retryAfter": "2026-11-22T14:44:07.714915+09:00",
+    "cooldownMinutes": 120
   }
 }

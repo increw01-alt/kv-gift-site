@@ -639,10 +639,15 @@
       "board": "sale",
       "topic": "상품권 판매 전 합산 금액 계산 실수 방지 가이드",
       "run_id": "44967157712"
+    },
+    {
+      "board": "sense",
+      "topic": "비슷한 물건이나 파일 위치 변화에 대응하는 분류 체계 만들기",
+      "run_id": "44981881564"
     }
   ],
-  "last_board": "general_notice",
-  "last_run_id": "44972354631",
+  "last_board": "sense",
+  "last_run_id": "44981881564",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
