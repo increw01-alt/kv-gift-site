@@ -1851,5 +1851,18 @@
     "publication_mode": "automatic",
     "run_id": "44940174620",
     "usage_file": "data/editorial_runs/2026-11-22/44940174620.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 73,
+    "topic": "본문 읽기 중 열린 새 화면 출처 확인과 안전 복귀 방법",
+    "drafted_at": "2026-11-23",
+    "automation": true,
+    "search_intent": "읽던 안내 중 갑자기 열린 새 화면의 출처를 주소와 화면 구성으로 가려내고, 의심되면 안전하게 닫은 뒤 원래 읽던 자리로 돌아가는 방법을 찾는 질문",
+    "image_scene": "책상 위에 안내문이 열린 노트북 화면과 옆에 새로 뜬 브라우저 창이 나란히 보이고, 한 사람이 두 화면의 주소 표시줄과 제목을 메모지에 적어 비교한 뒤 원래 문단 위치를 표시한 책갈피를 다시 찾아가는 장면",
+    "image_alt": "노트북에 열린 원래 안내문과 새 창의 주소를 나란히 비교하며, 한 사람이 메모지에 출처를 적고 책갈피로 읽던 위치를 되찾는 모습",
+    "publication_mode": "automatic",
+    "run_id": "45187494490",
+    "usage_file": "data/editorial_runs/2026-11-23/45187494490.json"
   }
 ]
