@@ -654,10 +654,15 @@
       "board": "gc_tip",
       "topic": "교환 물품 옵션 중 양립 불가 조합 체계적 제거법",
       "run_id": "45040726277"
+    },
+    {
+      "board": "sale",
+      "topic": "매입처 문의 후 상품권 기록과 정산 내용 체계적 관리법",
+      "run_id": "45167662904"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "45148800453",
+  "last_board": "sale",
+  "last_run_id": "45167662904",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",

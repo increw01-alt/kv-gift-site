@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T11:44:03.827074+00:00",
+  "generatedAt": "2026-11-23T11:44:45.613034+00:00",
   "dateKst": "2026-11-23",
   "dailyTarget": 10,
   "attemptLimit": 15,
   "published": 0,
   "verified": 0,
   "attempts": 12,
-  "held": 11,
+  "held": 12,
   "errors": 0,
-  "knownSubtotalUsd": 0.3258896,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.37554405,
+  "estimatedTotalUsd": 0.37554405,
   "records": [
     {
       "runId": "45037520404",
@@ -157,21 +157,21 @@
     },
     {
       "runId": "45167662904",
-      "status": "generating",
-      "board": null,
-      "topic": null,
+      "status": "held",
+      "board": "sale",
+      "topic": "매입처 문의 후 상품권 기록과 정산 내용 체계적 관리법",
       "url": null,
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-23T11:42:54.084Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.04965445,
+      "knownSubtotalUsd": 0.04965445
     }
   ],
   "topicRetry": {
-    "consecutiveTopicHolds": 0,
-    "retryAfter": null,
-    "cooldownMinutes": 0
+    "consecutiveTopicHolds": 12,
+    "retryAfter": "2026-11-23T22:44:03.618550+09:00",
+    "cooldownMinutes": 120
   }
 }
