@@ -661,8 +661,8 @@
       "run_id": "45167662904"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "45673700971",
+  "last_board": "purchase",
+  "last_run_id": "45684630801",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1302,6 +1302,14 @@
       "topic": "모바일 상품권 선물로 받는 사람 편의 높이기 위한 준비 단계",
       "date_kst": "2026-11-21",
       "run_id": "44761867263",
+      "status": "held"
+    },
+    {
+      "source_id": "installment-record",
+      "board": "purchase",
+      "topic": "상품권 결제 전 할부 선택과 카드 청구 안내 분별하기",
+      "date_kst": "2026-11-26",
+      "run_id": "45684630801",
       "status": "held"
     }
   ]
