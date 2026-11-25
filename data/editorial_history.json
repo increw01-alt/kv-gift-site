@@ -1864,5 +1864,18 @@
     "publication_mode": "automatic",
     "run_id": "45187494490",
     "usage_file": "data/editorial_runs/2026-11-23/45187494490.json"
+  },
+  {
+    "board": "sense",
+    "id": 31,
+    "topic": "중요 알림은 챙기고 불필요 알림은 줄이는 개인 알림 체계 세우기",
+    "drafted_at": "2026-11-26",
+    "automation": true,
+    "search_intent": "중요한 알림과 불필요한 알림을 구분해 나만의 확인 시간과 대응 순서를 정하려는 질문",
+    "image_scene": "책상 위에 스마트폰 알림 화면과 종이 메모지가 나란히 놓여 있고, 한 사람이 알림을 ‘즉시 처리’, ‘나중에 확인’, ‘참고만’ 세 칸으로 나눠 적은 뒤 알림별 확인 시간을 달력에 표시하는 장면",
+    "image_alt": "스마트폰 알림과 메모지를 옆에 두고 알림을 세 가지로 나눠 확인 시간을 정리하는 모습",
+    "publication_mode": "automatic",
+    "run_id": "45651845475",
+    "usage_file": "data/editorial_runs/2026-11-26/45651845475.json"
   }
 ]

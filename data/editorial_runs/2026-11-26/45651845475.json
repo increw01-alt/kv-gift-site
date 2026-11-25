@@ -1,17 +1,27 @@
 {
   "run_id": "45651845475",
   "date_kst": "2026-11-26",
-  "board": null,
-  "topic": null,
-  "status": "generating",
-  "url": null,
+  "board": "sense",
+  "topic": "중요 알림은 챙기고 불필요 알림은 줄이는 개인 알림 체계 세우기",
+  "status": "published",
+  "url": "https://kv-gift.co.kr/board/sense/31",
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-25T16:12:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "main 반영 후 Cloudflare 배포 확인 필요",
   "review": {
-    "approved": false,
+    "approved": true,
+    "checks": {
+      "board_fit": true,
+      "practical": true,
+      "natural_korean": true,
+      "no_unverified_claims": true,
+      "not_duplicate": true,
+      "image_matches": true,
+      "image_readable": true,
+      "logo_matches": true
+    },
     "issues": []
   },
   "api_usage": {
@@ -22,15 +32,316 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-26T01:13:38.518864+09:00"
+      "attempt_started_at": "2026-11-26T01:13:38.518864+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 907,
+          "coverageArticles": 155,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-46678bb4d0",
+            "sense-d926083876",
+            "sense-f4c99bf696",
+            "sense-3cdcba1b0a"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모임 진행 중 역할과 책임을 명확히 나누는 체계적 분배법",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "모임이나 프로젝트에서 업무와 책임 범위가 불명확해 누가 어떤 일을 언제까지 해야 하는지 혼란 발생",
+          "distinct_angle": "기존 역할 분배 안내는 일반적 분류 위주인데, 이번 글은 참여 방식별 역할 유형 상세 분류와 구체적인 완료 조건 분리 작성, 실무용 요청표 작성법까지 포함함",
+          "outline": [
+            "모임 참여 유형에 따라 역할과 책임 범위 세부 분류하기",
+            "각 역할별 수행 조건 및 완료 기준을 문서로 분리 작성하기",
+            "실제 요청표 작성법 배우고 모임에서 역할 분배와 진행 관리에 적용하기"
+          ],
+          "reader_situation": "모임 운영진과 참여자로서 다양한 업무를 명확히 맡기고 관리하며 진행 상황 점검이 필요한 사람들",
+          "deliverable": "참여 유형별 역할 분류표, 책임과 완료 조건 체크리스트, 역할 분배 요청표 양식과 작성 예시 포함한 실용적 매뉴얼",
+          "direction_id": "sense-f4c99bf696"
+        },
+        {
+          "topic": "한정된 예산 안에서 선물 쓰임새 기준으로 효용 비교 후 결정하기",
+          "source_id": "",
+          "task_id": "",
+          "reader_problem": "예산이 제한된 상황에서 다양한 선물의 쓰임새와 비용 대비 가치를 객관적으로 평가하는 구체 기준과 실용적 비교법 부재",
+          "distinct_angle": "기존 예산 선물 결정 팁과 다르게, 구체적인 효용 평가 항목과 비용 구성 요소를 분류하고, 점수 산정법과 비교표 작성, 최종 결정 가이드까지 단계별 안내",
+          "outline": [
+            "선물 후보군의 예상 쓰임새와 비용 구성 요소를 체계적으로 분류하기",
+            "효용을 점수화하고 비용과 비교해 객관적 평가 기준과 계산 방법 정립하기",
+            "비용 대비 효용 비교표 활용해 예산 내 최적 선물 리스트와 결정 절차 실행하기"
+          ],
+          "reader_situation": "정해진 예산 내에서 상품권과 실제 물품 선물을 비용과 쓰임새로 비교 평가해 최적 선물을 골라야 하는 개인",
+          "deliverable": "선물 후보별 효용과 비용 분류표, 객관적 효용 대비 비용 점수 계산법, 비교표 작성과 예산 내 최적 선물 결정 매뉴얼",
+          "direction_id": "sense-3cdcba1b0a"
+        }
+      ],
+      "topic_plan": {
+        "topic": "중요 알림은 챙기고 불필요 알림은 줄이는 개인 알림 체계 세우기",
+        "source_id": "",
+        "task_id": "",
+        "reader_problem": "긴급하거나 중요한 연락은 놓치고 싶지 않지만, 모든 알림을 켜면 스트레스가 심해 불필요한 알림 구분과 관리를 어려워함",
+        "distinct_angle": "기존 알림 관리 안내는 단순 일정 등록 위주이나, 본문은 알림 종류 분리와 개인 우선순위 설정, 실제 대응 절차까지 구체적 실천 과정을 안내함",
+        "outline": [
+          "수신하는 알림을 종류와 성격별로 체계적으로 목록화하기",
+          "알림의 중요도와 긴급성을 기준으로 우선순위 체계 설계하기",
+          "우선순위에 따라 실제 생활에서 알림을 확인하고 대응하는 절차 수립 및 실천하기"
+        ],
+        "reader_situation": "일상과 업무에서 스마트폰 및 앱 알림을 모두 켜거나 꺼서 피로와 누락 사이에서 고민하는 사용자",
+        "deliverable": "알림 유형별 분류표, 중요도 및 긴급성에 따른 우선순위 매기기 방법, 개인 맞춤 알림 확인과 대응 업무 프로세스 설계 매뉴얼",
+        "direction_id": "sense-46678bb4d0",
+        "novelty_reason": "후보 영점은 알림을 모으는 일반 설명이 아니라, 긴급 연락과 불필요 알림을 분리하고 개인 우선순위에 따라 확인·대응 절차를 만드는 점에서 새롭습니다. 가장 가까운 기존 글인 /board/gc_tip/34는 상품권 만료 알림을 일정 앱에 넣는 방식에 그쳐, 이번 후보처럼 알림의 종류를 나누고 중요도와 긴급성에 따라 서로 다른 대응 흐름을 설계하는 질문을 다루지 않습니다.",
+        "screen_rejections": [
+          "후보 일이 다루는 모임 역할 분배는 /board/sense/19와 /board/free/484가 이미 다룬 담당자·완료 조건 분리, 책임 범위 합의와 같은 해결 흐름과 겹칩니다. 역할 유형을 더 세분화했다는 주장만으로는 독자 질문과 실제 처리 단계가 달라졌다고 보기 어렵습니다.",
+          "후보 이는 /board/sense/23과 /board/purchase/2576이 이미 다룬 예산 안에서 선물의 효용과 비용을 비교하고 표로 정리해 고르는 방식과 같은 질문 구조입니다. 점수화와 비교표를 강조해도 기존 답만으로 해결 가능한 범위를 크게 벗어나지 않습니다."
+        ],
+        "writing_brief": {
+          "compared_paths": [
+            "/board/gc_tip/34"
+          ],
+          "gap": "기존 글은 특정 상품의 만료 알림을 일정에 넣어 놓치지 않게 하는 수준입니다. 이번 글은 알림 자체를 종류와 성격으로 나누고, 같은 알림이라도 즉시 처리할 것과 나중에 볼 것을 구분해 개인별 대응 순서를 정하는 데 초점을 둡니다.",
+          "example": "예를 들어 업무 메시지, 가족 연락, 앱 안내가 한꺼번에 들어오는 사람이라면, 모두 같은 방식으로 확인하지 말고 바로 답할 것과 묶어서 볼 것을 먼저 나눠야 합니다. 급한 연락은 즉시 확인하고, 반복 안내는 정해 둔 시간에만 보는 식으로 적용합니다.",
+          "result": "독자는 자신의 알림을 성격별로 분류하고, 각 알림에 대해 확인 시점과 대응 방법을 다르게 정한 개인 알림 체계를 완성하게 됩니다.",
+          "section_actions": [
+            "수신 알림을 즉시 처리형, 묶음 확인형, 참고 보관형으로 나누어 목록화하기",
+            "각 알림에 대해 중요한 정도와 급한 정도를 따로 적어 우선순위를 정하기",
+            "우선순위에 맞춰 확인 시간과 답변 방식, 보관 방식까지 한 흐름으로 정리하기"
+          ]
+        }
+      },
+      "board": "sense",
+      "topic": "중요 알림은 챙기고 불필요 알림은 줄이는 개인 알림 체계 세우기",
+      "source_reference": {
+        "kind": "anonymized_question_signals",
+        "checked_at": "2026-11-25T06:34:50Z",
+        "source_modified_at": "2026-10-23T03:18:53.766Z",
+        "source_sha256": "e381e21d233e3b572a165443ba4227fcdb4a7f1c2a5c518e3b261496b297fc71"
+      },
+      "search_intent": "중요한 알림과 불필요한 알림을 구분해 나만의 확인 시간과 대응 순서를 정하려는 질문"
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 23992,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 23808
+          },
+          "output_tokens": 791,
+          "output_tokens_details": {
+            "reasoning_tokens": 193
+          },
+          "total_tokens": 24783
+        },
+        "estimated_usd": 0.0054831,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-25T16:13:48.928488+00:00"
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 3461,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 507,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3968
+        },
+        "estimated_usd": 0.0021956,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-25T16:13:53.792656+00:00"
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 10592,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 591,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 11183
+        },
+        "estimated_usd": 0.0051824,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-25T16:14:05.335006+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 22897,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 345,
+          "output_tokens_details": {
+            "reasoning_tokens": 157
+          },
+          "total_tokens": 23242
+        },
+        "estimated_usd": 0.01872525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-25T16:14:09.103316+00:00"
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "usage": {
+          "input_tokens": 3650,
+          "input_tokens_details": {
+            "image_tokens": 2496,
+            "text_tokens": 1154
+          },
+          "output_tokens": 1372,
+          "output_tokens_details": {
+            "image_tokens": 1372,
+            "text_tokens": 0
+          },
+          "total_tokens": 5022
+        },
+        "estimated_usd": 0.066898,
+        "rates_usd_per_million_tokens": {
+          "text_input": 5.0,
+          "image_input": 8.0,
+          "output": 30.0
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-25T16:14:34.851324+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 14609,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 210,
+          "output_tokens_details": {
+            "reasoning_tokens": 145
+          },
+          "total_tokens": 14819
+        },
+        "estimated_usd": 0.01190175,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-25T16:14:39.744856+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-25T16:13:42.002383+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "text",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-25T16:13:48.931633+00:00",
+        "usage_record_index": 1
+      },
+      {
+        "kind": "editing",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-25T16:13:54.916908+00:00",
+        "usage_record_index": 2
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-25T16:14:07.067280+00:00",
+        "usage_record_index": 3
+      },
+      {
+        "kind": "image",
+        "model": "gpt-image-2",
+        "started_at_utc": "2026-11-25T16:14:09.120506+00:00",
+        "usage_record_index": 4
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-25T16:14:35.977872+00:00",
+        "usage_record_index": 5
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.1103861,
+    "estimated_total_usd": 0.1103861,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
