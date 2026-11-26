@@ -664,10 +664,15 @@
       "board": "gc_information",
       "topic": "상품권 구매 한도와 카드 이용 한도 구분하기",
       "run_id": "45847678590"
+    },
+    {
+      "board": "general_notice",
+      "topic": "공개 문의와 비공개 문의에 적합한 정보 구분법 및 효율적 처리 절차",
+      "run_id": "45866536042"
     }
   ],
-  "last_board": "sale",
-  "last_run_id": "45861299654",
+  "last_board": "general_notice",
+  "last_run_id": "45866536042",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
