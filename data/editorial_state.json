@@ -671,8 +671,8 @@
       "run_id": "45866536042"
     }
   ],
-  "last_board": "sense",
-  "last_run_id": "45875457828",
+  "last_board": "free",
+  "last_run_id": "45891224882",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1368,6 +1368,30 @@
       "topic": "상품권 문의 시 바코드번호 비공개로 구체 상황 설명하는 방법",
       "date_kst": "2026-11-27",
       "run_id": "45861299654",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "free",
+      "topic": "상품권 링크 클릭 전 발신자와 경로 재확인하는 구체 절차",
+      "date_kst": "2026-11-27",
+      "run_id": "45891224882",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "free",
+      "topic": "상품권 링크 클릭 전 발신 경로 신뢰성 판단 체크리스트 만들기",
+      "date_kst": "2026-11-27",
+      "run_id": "45891224882",
+      "status": "held"
+    },
+    {
+      "source_id": "phishing-message",
+      "board": "free",
+      "topic": "상품권 문자 링크 클릭 전 개인정보 보호와 발신자 재검증 방법",
+      "date_kst": "2026-11-27",
+      "run_id": "45891224882",
       "status": "held"
     }
   ]
