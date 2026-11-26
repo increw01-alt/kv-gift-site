@@ -666,8 +666,8 @@
       "run_id": "45847678590"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "45847678590",
+  "last_board": "sale",
+  "last_run_id": "45861299654",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1339,6 +1339,30 @@
       "topic": "결제 날짜와 카드 청구 날짜 비교 점검법",
       "date_kst": "2026-11-27",
       "run_id": "45847678590",
+      "status": "held"
+    },
+    {
+      "source_id": "exchange-state",
+      "board": "sale",
+      "topic": "상품권 교환 후 원본과 결과 쿠폰 상태 정확히 확인하기",
+      "date_kst": "2026-11-27",
+      "run_id": "45861299654",
+      "status": "held"
+    },
+    {
+      "source_id": "refund-record",
+      "board": "sale",
+      "topic": "상품권 환불 문의 전 주문·사용·답변 기록 체계적 정리법",
+      "date_kst": "2026-11-27",
+      "run_id": "45861299654",
+      "status": "held"
+    },
+    {
+      "source_id": "barcode-privacy",
+      "board": "sale",
+      "topic": "상품권 문의 시 바코드번호 비공개로 구체 상황 설명하는 방법",
+      "date_kst": "2026-11-27",
+      "run_id": "45861299654",
       "status": "held"
     }
   ]
