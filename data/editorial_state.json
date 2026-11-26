@@ -659,10 +659,15 @@
       "board": "sale",
       "topic": "매입처 문의 후 상품권 기록과 정산 내용 체계적 관리법",
       "run_id": "45167662904"
+    },
+    {
+      "board": "gc_information",
+      "topic": "상품권 구매 한도와 카드 이용 한도 구분하기",
+      "run_id": "45847678590"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "45684630801",
+  "last_board": "gc_information",
+  "last_run_id": "45847678590",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1310,6 +1315,30 @@
       "topic": "상품권 결제 전 할부 선택과 카드 청구 안내 분별하기",
       "date_kst": "2026-11-26",
       "run_id": "45684630801",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-limit",
+      "board": "gc_information",
+      "topic": "상품권 구매 한도와 카드 이용 한도 구분하기",
+      "date_kst": "2026-11-27",
+      "run_id": "45847678590",
+      "status": "held"
+    },
+    {
+      "source_id": "sale-fee",
+      "board": "gc_information",
+      "topic": "매입 상담에서 제시 금액과 공제 항목 기록 비교법",
+      "date_kst": "2026-11-27",
+      "run_id": "45847678590",
+      "status": "held"
+    },
+    {
+      "source_id": "payment-date",
+      "board": "gc_information",
+      "topic": "결제 날짜와 카드 청구 날짜 비교 점검법",
+      "date_kst": "2026-11-27",
+      "run_id": "45847678590",
       "status": "held"
     }
   ]
