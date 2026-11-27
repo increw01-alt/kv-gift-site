@@ -3,16 +3,18 @@
   "date_kst": "2026-11-28",
   "board": null,
   "topic": null,
-  "status": "generating",
+  "status": "error",
   "url": null,
   "holdReason": null,
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-27T15:52:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "ValueError: 집필 기준의 비교 글이 허용 목록과 다릅니다."
+    ]
   },
   "api_usage": {
     "run_id": "46028795480",
@@ -22,15 +24,166 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-28T00:53:30.546808+09:00"
+      "attempt_started_at": "2026-11-28T00:53:30.546808+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [
+          {
+            "topic": "예산·시간·수신자 선택권 간 상충 해결을 위한 의사결정 순서",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "한정된 예산과 촉박한 준비 시간, 다양한 수신자 요구가 서로 충돌할 때 합리적 우선순위를 정해 구매 결정을 체계적으로 내리는 방법을 모르는 이용자 문제",
+            "distinct_angle": "예산, 준비 시간, 수신자 선택권 사이의 상충 관계를 시각화하고 각 조건의 중요도에 따른 가중치를 산정하여, 실제 구매 시 단계별 의사결정 순서를 설계하고 적용하는 구체적 실행법을 제시한다. 기존 안내들과 달리 단순 설명이 아니라 실제 적용 가능한 순서를 완성하는 과정에 초점을 둔다.",
+            "outline": [
+              "예산, 시간, 수신자 선택권 간 상호 영향과 충돌 지점 파악하기",
+              "세 조건별 중요도 평가 및 가중치 산정 방법 실습하기",
+              "가중치 기반 의사결정 순서 설계와 실전 적용 안내하기"
+            ],
+            "reader_situation": "예산과 시간, 여러 수신자 요구가 동시에 어긋나 무엇을 우선적으로 해결해야 할지 정리하지 못해 구매를 미루거나 결정에 어려움을 겪는 구매자",
+            "deliverable": "조건별 영향 및 충돌 관계를 시각화한 개념도, 각 조건의 중요도 평가표, 가중치 기반 우선순위 산정법, 단계별 의사결정 흐름도와 실제 적용 행동 안내서",
+            "direction_id": "purchase-6bf9948129"
+          },
+          {
+            "topic": "취향 질문 범위 선정으로 선물 상품권의 놀라움과 만족 조화시키기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "받는 사람의 필수 취향만 묻고 싶지만 질문 범위를 잘못 설정해 선물의 기대 효과인 놀라움을 해치지 않을지 고민하는 독자",
+            "distinct_angle": "최소한의 필수 취향 질문 범위를 정하는 원칙과 단계별 질문 기법을 통해 답변 강요 없이도 받는 이의 조건을 추론·평가하는 새로운 질문 진행법을 소개한다. 기존 '필수 조건 묻기'와 달리 의사소통 부담 최소화와 추론 이용을 병행하는 점이 차별화 포인트다.",
+            "outline": [
+              "선물용 필수 조건 목록과 우선순위 체계 만들기",
+              "답변 유도 없이 필수 조건을 묻는 문장 구성법 익히기",
+              "조건 추론에 따른 평가 기준과 점검법 적용 연습하기"
+            ],
+            "reader_situation": "선물용 상품권 선택 전 받는 이의 취향과 조건을 최소한으로 사전에 파악해 구매 결정에 활용하고 싶으나 질문 범위와 문장 구성이 막막한 구매자",
+            "deliverable": "필수 조건 중심 질문 목록, 답변 유도 최소화 대화 기법, 조건 추론 및 점검 기준표",
+            "direction_id": "purchase-efaa383692"
+          },
+          {
+            "topic": "동일 용어 다른 적용 대상 분리로 상품권 비교 가능 항목 도출하기",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권 후보 설명에 동일 용어가 사용되지만 각기 다른 적용 대상(전체 브랜드 또는 개별 지점 등)을 가리켜 객관적 비교 및 판단이 어렵고 혼란스러운 이용자 문제",
+            "distinct_angle": "설명 중 핵심 용어별 적용 범위를 체계적으로 분리하는 기준을 새로 마련하고, 같은 단어라도 다른 적용 대상을 구분하는 절차와 실제 비교 가능 조건만 추출·정리하는 구체적 방법을 다룬다. 단순 용어 안내를 넘어 분리 후 비교 항목 작성도 포함한다.",
+            "outline": [
+              "상품권 설명 내 핵심 용어와 적용 대상 목록 정리하기",
+              "용어별 대상 차이를 구분하는 분리 기준 마련 및 점검법 배우기",
+              "분리 기준으로 비교 가능한 조건 선별 및 구체적 목록 작성법 익히기"
+            ],
+            "reader_situation": "상품권 후보 설명을 읽다가 동일 용어가 서로 다른 대상에 연결되어 객관적 비교기준 설정이 불가능해 합리적 선택 기준을 마련하려는 독자",
+            "deliverable": "용어별 적용 대상 분리 기준표, 후보별 적용 범위 체크 리스트, 비교 가능 조건 선별 및 목록 작성 매뉴얼",
+            "direction_id": "purchase-3b03fbce3d"
+          },
+          {
+            "topic": "양보 불가 필수 조건으로 상충하는 상품권 후보 체계적 제거법",
+            "source_id": "",
+            "task_id": "",
+            "reader_problem": "상품권 구매 시 여러 후보가 상충하는 조건을 가졌을 때, 반드시 지켜야 할 필수 조건을 확정해 후보군에서 빠르게 제외하는 구체적 판단 순서와 절차를 모르는 이용자 문제",
+            "distinct_angle": "구매 후보 조건을 필수·우대 조건으로 구분해 필수 조건 미충족 후보부터 우선 제거하는 의사결정 나무 설계와, 각 단계별 후보 제거 기준 및 기록 방법을 실제 적용 예시와 함께 제시한다. 기존 단순 조건 안내와 달리 단계적 기록과 판단 매뉴얼이 혁신적이다.",
+            "outline": [
+              "조건을 필수와 우대 조건으로 분류 및 정의하기",
+              "필수 조건 미충족 후보부터 제외하는 판단 흐름 구축하기",
+              "최종 선택을 위한 우대 조건 활용 방법 익히기"
+            ],
+            "reader_situation": "마음에 드는 브랜드나 조건과 필요한 사용 조건이 충돌, 필수 조건부터 우선 판단해 후보군을 줄이려 하지만 그 방법과 절차가 불명확한 소비자",
+            "deliverable": "필수·우대 조건 분류표와 의사결정 나무, 후보 제거 판단 기준서, 단계별 적용 사례 자료",
+            "direction_id": "purchase-6f6d6db65b"
+          }
+        ],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 921,
+          "coverageArticles": 156,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-efaa383692",
+            "purchase-3b03fbce3d",
+            "purchase-6bf9948129",
+            "purchase-6f6d6db65b"
+          ]
+        }
+      }
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "failed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15617,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1278,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16895
+        },
+        "estimated_usd": 0.0082916,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-27T15:53:51.448629+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30629,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1163,
+          "output_tokens_details": {
+            "reasoning_tokens": 411
+          },
+          "total_tokens": 31792
+        },
+        "estimated_usd": 0.02820525,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-27T15:54:00.545720+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-27T15:53:33.116504+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-27T15:53:51.972784+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.03649685,
+    "estimated_total_usd": 0.03649685,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
