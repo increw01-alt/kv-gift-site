@@ -1,18 +1,20 @@
 {
   "run_id": "46043357071",
   "date_kst": "2026-11-28",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-27T17:37:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 이번 판매 게시판의 핵심 질문과 맞지 않거나, 이미 공개된 글이 해결한 질문을 그대로 반복합니다. 0번은 상품권 보유 현황과 사용 계획을 대조하는 내용으로, 매입처 문의 전 상태 확인·문의·정산 내역 확인이라는 판매 안내의 문제와 직접 연결되지 않습니다. 1번은 매입처 추가 질문에 대해 확인된 사실과 미확인 사항을 나누어 답하는 방식인데, 이는 공개 경로 /board/sale/3700 이 이미 같은 질문과 해결 절차를 다룬 내용과 중복됩니다. / 0번은 상품권을 어떻게 쓸지에 대한 보유 현황 관리 글에 가깝고, 매입처 문의 전 상태 확인·기록·정산 내역 확인이라는 판매 안내의 실제 질문과 해결 절차가 다릅니다. 판매 게시판의 목적과 맞는 새 해결 단계도 드러나지 않아 부적합합니다. / 1번은 공개된 /board/sale/3700 이 이미 다룬 ‘매입처의 추가 질문에 답을 모를 때 확인한 정보와 미확인 정보를 구분하고, 추측 없이 다시 확인해 답변하는 방법’과 같은 질문을 반복합니다. 확인 사실 분리, 조건부 답변, 재확인 후 재전달이라는 절차가 이미 해결된 내용과 같아 중복입니다."
+    ]
   },
   "api_usage": {
     "run_id": "46043357071",
@@ -22,15 +24,137 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-28T02:38:31.272602+09:00"
+      "attempt_started_at": "2026-11-28T02:38:31.272602+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 926,
+          "coverageArticles": 156,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-ecddaf57c8",
+            "sale-e24e80a517",
+            "sale-b054376adc",
+            "sale-0f792e06e6"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "상품권 보유 현황과 실제 이용 계획 대조 정리법",
+          "source_id": "",
+          "reader_problem": "여러 목적별로 보유한 상품권과 실제 사용할 계획의 일치 여부를 확인하는 과정이 명확하지 않아 관리와 계획 수립이 어렵습니다.",
+          "distinct_angle": "보유 현황과 이용 계획을 대조할 수 있는 구체적인 표 작성법과 점검 절차를 새롭게 제시하여 실무 활용도를 높입니다.",
+          "reader_situation": "여러 가지 용도로 상품권을 보유 중인 소비자가 실제 사용 계획과 현황을 비교해 합리적인 관리 기준을 세우려는 상황.",
+          "deliverable": "보유 현황과 예정 사용 계획을 대조하는 체크리스트와 비교표 양식.",
+          "task_id": "",
+          "direction_id": "sale-b054376adc",
+          "outline": [
+            "상품권 보유 목적별 현황을 체계적으로 기록하기",
+            "예정된 사용 계획을 상세하게 유형별로 구분하기",
+            "목적별 보유와 사용 계획을 대조해 불일치 점검 및 조정하기"
+          ]
+        },
+        {
+          "topic": "매입처 문의 중 확인 불가 사항 분리와 안전 답변 작성법",
+          "source_id": "",
+          "reader_problem": "매입처의 추가 질문에 답을 모를 때 추측 없이 현재 확인한 사실과 미확인 사항을 명확히 구분하여 신뢰도 높은 답변을 하기가 어렵습니다.",
+          "distinct_angle": "확인한 정보와 미확인 정보를 효과적으로 분리 기록하고, 조건부로 안전하게 답변하는 실전 문장과 절차를 구체적으로 보여줍니다.",
+          "reader_situation": "상품권 매입 상담 중 일부 상태가 불분명해 정확히 확인된 사항과 모르는 부분을 나눠 솔직히 답변하려는 판매자.",
+          "deliverable": "확인된 내용과 미확인 사항을 분리 기록하는 양식, 추측 없는 조건부 답변 문구 예시, 재확인 후 답변 준비 절차 안내서.",
+          "task_id": "",
+          "direction_id": "sale-0f792e06e6",
+          "outline": [
+            "현재 확인한 상품권 상태 항목별로 정리하는 방법",
+            "미확인 사항을 분리해 목록화하고 구분하는 절차",
+            "조건부 답변 문장 작성법과 재확인 후 정보 갱신 안내하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15584,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 983,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16567
+        },
+        "estimated_usd": 0.0078064,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-27T17:38:46.528802+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 17509,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 468,
+          "output_tokens_details": {
+            "reasoning_tokens": 126
+          },
+          "total_tokens": 17977
+        },
+        "estimated_usd": 0.01523775,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-27T17:38:49.496299+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-27T17:38:33.669765+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-27T17:38:46.950184+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02304415,
+    "estimated_total_usd": 0.02304415,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
