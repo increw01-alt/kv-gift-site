@@ -676,8 +676,8 @@
       "run_id": "46029498486"
     }
   ],
-  "last_board": "purchase",
-  "last_run_id": "46029498486",
+  "last_board": "gc_information",
+  "last_run_id": "46034541923",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1397,6 +1397,22 @@
       "topic": "상품권 문자 링크 클릭 전 개인정보 보호와 발신자 재검증 방법",
       "date_kst": "2026-11-27",
       "run_id": "45891224882",
+      "status": "held"
+    },
+    {
+      "source_id": "point-payment",
+      "board": "gc_information",
+      "topic": "포인트 결제와 결제 후 포인트 적립 조건 구분하기",
+      "date_kst": "2026-11-28",
+      "run_id": "46034541923",
+      "status": "held"
+    },
+    {
+      "source_id": "cancel-performance",
+      "board": "gc_information",
+      "topic": "상품권 결제 취소 후 카드 실적 반영 내역 확인법",
+      "date_kst": "2026-11-28",
+      "run_id": "46034541923",
       "status": "held"
     }
   ]

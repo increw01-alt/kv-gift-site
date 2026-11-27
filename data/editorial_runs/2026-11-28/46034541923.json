@@ -1,18 +1,20 @@
 {
   "run_id": "46034541923",
   "date_kst": "2026-11-28",
-  "board": null,
+  "board": "gc_information",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-27T16:32:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 두 후보 모두 이미 공개된 글이 해결한 질문과 절차를 그대로 반복합니다. 후보 공통의 비교 글들인 /board/gc_tip/53, /board/gc_tip/29, /board/gc_information/6, /board/gc_information/7에서 이미 결제 단계 구분, 명세서 대조, 카드사 문의 기준까지 다루고 있어 새로 필요한 판단 단계가 보이지 않습니다. / 0번은 /board/gc_tip/53이 이미 다룬 ‘포인트 결제와 적립을 결제 화면과 거래 명세에서 어떻게 구분할지’와 같은 질문을 반복합니다. 포인트 사용과 적립 시점을 나누고 명세서를 대조하는 흐름이 기존 답과 같아 새 해결 내용이 없습니다. / 1번은 /board/gc_information/7이 이미 다룬 ‘상품권 결제 취소 후 카드 실적과 혜택 반영 여부를 어떻게 확인할지’와 같은 질문과 중복됩니다. 취소 내역, 명세서 대조, 카드사 문의 준비까지 기존 글이 이미 해결한 절차를 다시 설명합니다."
+    ]
   },
   "api_usage": {
     "run_id": "46034541923",
@@ -22,15 +24,137 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-28T01:33:36.199308+09:00"
+      "attempt_started_at": "2026-11-28T01:33:36.199308+09:00",
+      "topic_pool_update": {
+        "board": "gc_information",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 924,
+          "coverageArticles": 156,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "gc_information-83c32617c5",
+            "gc_information-cfcea2023c",
+            "gc_information-603f97842d",
+            "gc_information-1261f55c87"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "포인트 결제와 결제 후 포인트 적립 조건 구분하기",
+          "source_id": "point-payment",
+          "reader_problem": "포인트로 결제하는 상황과 결제 후 포인트를 적립받는 상황을 혼동해, 실제 결제 금액과 혜택 적용 기준을 잘못 이해하는 문제",
+          "distinct_angle": "단순 기능 안내를 넘어서 포인트 결제 시점과 적립 시점에 따른 각각의 조건 확인법과, 거래 명세서·포인트 내역에서 구분하는 실무 팁을 추가 제공",
+          "reader_situation": "충전한 포인트를 사용하는 것과 물품 구매 시 포인트 적립이 되는 조건을 명확히 알고, 결제 방식과 내역 확인을 정확하게 하려는 이용자",
+          "deliverable": "포인트 사용과 적립의 차이를 설명하는 실제 거래 내역 해석법, 결제 및 적립 조건별 체크포인트 정리 문서",
+          "task_id": "",
+          "direction_id": "gc_information-cfcea2023c",
+          "outline": [
+            "포인트 결제와 포인트 적립 기능의 기본 개념 정리",
+            "거래 내역과 명세서에서 두 상황 구분하는 법 안내",
+            "각 조건별 확인할 사항과 대응 절차 점검하기"
+          ]
+        },
+        {
+          "topic": "상품권 결제 취소 후 카드 실적 반영 내역 확인법",
+          "source_id": "cancel-performance",
+          "reader_problem": "상품권 결제 취소 시 카드 실적과 혜택 반영 여부 확인 방법이 불명확하여, 취소 후 실적이 제대로 반영됐는지 알기 어려운 문제",
+          "distinct_angle": "기존 단순 안내와 달리 취소 시점별로 카드 실적 변동 기록 비교법, 거래 명세서 검토 절차, 카드사 문의 시 구체적 확인 사항과 질문 리스트를 제공",
+          "reader_situation": "상품권 구매 후 결제를 취소했는데, 카드 실적과 혜택 여부가 반영되었는지 명확히 파악하고 취소 관련 문제 발생 시 대응 준비를 하려는 소비자",
+          "deliverable": "상품권 결제 취소 후 카드 실적 반영 여부를 체계적으로 확인하는 체크리스트와 카드사 문의용 질문 목록",
+          "task_id": "",
+          "direction_id": "gc_information-83c32617c5",
+          "outline": [
+            "상품권 결제 취소 시 카드 실적 변동 기록 살피기",
+            "취소 처리 내역과 카드 명세서 대조 절차 안내",
+            "카드사에 실적 반영 여부 확인할 때 활용할 구체적 질문 정리"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15707,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1121,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16828
+        },
+        "estimated_usd": 0.0080764,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-27T16:33:53.732513+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 15273,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 464,
+          "output_tokens_details": {
+            "reasoning_tokens": 181
+          },
+          "total_tokens": 15737
+        },
+        "estimated_usd": 0.01354275,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-27T16:33:56.868763+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-27T16:33:39.257374+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-27T16:33:54.112052+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.02161915,
+    "estimated_total_usd": 0.02161915,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
