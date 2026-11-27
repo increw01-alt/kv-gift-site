@@ -1,18 +1,20 @@
 {
   "run_id": "46072603194",
   "date_kst": "2026-11-28",
-  "board": null,
+  "board": "sense",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-27T21:47:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 네 후보 모두 기존 공개 글이 이미 해결한 질문과 절차를 반복합니다. 특히 후보별로 비슷한 분류, 시간·거리 계획, 집안일 중단 구간, 사실·의견 분리라는 핵심 질문이 각각 기존 글의 답과 거의 같아, 새로 필요한 판단 기준이나 다른 해결 결과를 확인할 수 없습니다. 기존 답만으로도 그대로 해결되는 수준이어서 본문 생성 전 보류가 맞습니다. / 0번은 /board/gc_tip/43, /board/gc_tip/47, /board/sense/28, /board/sense/29가 이미 다룬 비슷한 물건의 분류, 색상 외 표식, 위치 표시 관리와 같은 질문을 반복합니다. 색과 기호 조합으로 물건이나 파일을 구분하고 위치를 기록하는 절차가 기존 답과 같아 새 해결 내용이 없습니다. / 1번은 /board/sense/24가 이미 다룬 이동 거리와 이용 시간을 함께 고려한 생활 계획 세우기와 중복됩니다. 거리 중심 계획과 시간 중심 계획을 나눠 비교하는 구조가 같고, 체류 시간과 이동 시간을 합산해 동선을 짜는 방법도 기존 글의 답과 같습니다. / 2번은 /board/sense/25가 이미 다룬 여러 날에 나누는 집안일을 어디서 끊고 어떻게 재개할지 정리하는 방법과 같습니다. 작업 단위를 나누고 중단 시점과 재개 지점을 메모하는 흐름이 같아, 새로 필요한 판단 기준이나 별도 해결 단계가 보이지 않습니다. / 3번은 /board/sense/30과 /board/gc_information/21이 이미 다룬 사실과 의견 문장 분리, 접수 사실과 처리 결과 구분과 같은 질문을 반복합니다. 문장 단위로 분리해 다시 쓰는 편집법이 기존 답과 같아 차별점이 충분하지 않습니다."
+    ]
   },
   "api_usage": {
     "run_id": "46072603194",
@@ -22,15 +24,167 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-28T06:48:44.513813+09:00"
+      "attempt_started_at": "2026-11-28T06:48:44.513813+09:00",
+      "topic_pool_update": {
+        "board": "sense",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 929,
+          "coverageArticles": 156,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sense-5c4a5db337",
+            "sense-b17d7c52f6",
+            "sense-131a66fcc8",
+            "sense-d926083876"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "비슷한 물건과 파일 위치 변화에도 쉽게 찾는 분류 체계 만들기",
+          "source_id": "",
+          "reader_problem": "흩어진 비슷한 물건이나 파일이 자주 위치를 바꿔 혼란스러우며, 효과적 분류와 위치 관리 방법을 알지 못해 불편한 상황",
+          "distinct_angle": "물리적·디지털 공간 모두에 적용할 수 있도록 색상, 기호 조합과 위치 기록 실습 중심의 분류 체계 설계에 집중함",
+          "reader_situation": "책상, 서랍, 디지털 폴더 등 여러 공간에서 비슷한 아이템을 자주 이동시키는 직장인이나 개인 사용자",
+          "deliverable": "색상과 기호 조합 분류표 양식, 위치 및 상태 변동 기록표, 유지 관리 매뉴얼과 신속 검색용 단계별 체크리스트",
+          "task_id": "",
+          "direction_id": "sense-5c4a5db337",
+          "outline": [
+            "비슷한 물건과 파일의 구분을 위한 핵심 요소와 기준 정하기",
+            "위치와 상태 변화를 함께 기록하는 분류표 및 위치 추적 양식 설계하기",
+            "분류체계 유지 및 빠른 검색을 위한 데이터 관리와 점검 방법 익히기"
+          ]
+        },
+        {
+          "topic": "이동 거리와 이용 시간을 반영한 실용 생활 계획 세우기",
+          "source_id": "",
+          "reader_problem": "이동 거리뿐 아니라 실제 소요 시간까지 반영해 합리적 동선과 효율적 일정 계획 방법을 몰라 어려움을 겪는 상황",
+          "distinct_angle": "거리 중심 계획과 시간 중심 계획을 별도로 작성, 대조해 실제 체류 시간과 이동 시간까지 고려하는 생활 루트 최적화법을 제시함",
+          "reader_situation": "출퇴근, 장보기, 약속 등 일상 이동 경로를 거리와 소요 시간을 모두 고려해 계획하고 싶은 직장인이나 가정주부",
+          "deliverable": "이동 거리·시간 통합 일정 우선순위표, 시간별 동선 최적화 지도, 이동 시간 관리 통합 실행 가이드",
+          "task_id": "",
+          "direction_id": "sense-b17d7c52f6",
+          "outline": [
+            "주요 이동 경로와 거리 데이터를 체계적으로 수집하고 정리하기",
+            "이동 수단별 예상 소요 시간 및 체류 시간 계산과 기록 방법 익히기",
+            "거리와 시간 정보를 종합해 최적화된 일정과 동선 상세 계획 및 적용법"
+          ]
+        },
+        {
+          "topic": "한 번에 끝내기 어려운 집안일, 중단하기 좋은 구간 나누기 계획법",
+          "source_id": "",
+          "reader_problem": "집안일을 여러 날 나누어 할 때 어디서 중단하면 나중에 혼란 없고 효율적으로 재개할지 몰라 고민하는 문제",
+          "distinct_angle": "작업 단위를 완결된 소단위로 나누고, 간단한 기록법과 중단 시점 점검 리스트를 포함해 실제 행동 계획을 중심으로 설명함",
+          "reader_situation": "분산된 집안일을 체계적 중단과 재개 계획으로 효율을 높이고 싶은 가정주부, 직장인 등",
+          "deliverable": "작업 단계별 중단 기준과 기록법, 재개 시점 점검 체크리스트, 효율적 작업 동기 부여 및 재개 가이드",
+          "task_id": "",
+          "direction_id": "sense-131a66fcc8",
+          "outline": [
+            "집안일을 완결된 소단위 작업으로 체계적으로 나누기",
+            "중단 시점 결정과 작업 상태 요약 메모 작성법 익히기",
+            "재개 시 상황 확인과 진행 점검 체크리스트 실습과 재개 절차 배우기"
+          ]
+        },
+        {
+          "topic": "문서에서 사실과 의견 문장 분리해 오해 없이 명확히 전달하는 편집법",
+          "source_id": "",
+          "reader_problem": "문서 작성 시 사실과 개인 의견 문장이 혼재돼 독자가 혼란을 겪고 오해가 발생하는 문제",
+          "distinct_angle": "문장 단위로 사실과 의견을 명확히 구분하는 기준과 편집 표현법, 분리 후 재작성 실습에 초점을 맞춤",
+          "reader_situation": "업무 문서나 개인 메모에서 사실과 의견을 확실히 나누어 전달하고자 하는 작성자 및 편집자",
+          "deliverable": "사실과 의견 문장 구분 기준표, 별도 표시·편집법, 분리 후 재작성 사례 및 실습 자료",
+          "task_id": "",
+          "direction_id": "sense-d926083876",
+          "outline": [
+            "문장별 사실과 의견 구분을 위한 명확한 기준 학습",
+            "사실 문장과 의견 문장을 별도 표시・구분하는 편집 기법 익히기",
+            "분리된 문장 기반으로 재작성해 오해 없이 전달하는 편집법 실습"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15856,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1034,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16890
+        },
+        "estimated_usd": 0.0079968,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-27T21:49:13.025459+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 30912,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 619,
+          "output_tokens_details": {
+            "reasoning_tokens": 156
+          },
+          "total_tokens": 31531
+        },
+        "estimated_usd": 0.0259695,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-27T21:49:17.903055+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-27T21:48:47.687329+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-27T21:49:13.913340+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0339663,
+    "estimated_total_usd": 0.0339663,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
