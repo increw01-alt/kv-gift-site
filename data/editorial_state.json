@@ -669,10 +669,15 @@
       "board": "general_notice",
       "topic": "공개 문의와 비공개 문의에 적합한 정보 구분법 및 효율적 처리 절차",
       "run_id": "45866536042"
+    },
+    {
+      "board": "purchase",
+      "topic": "예산·시간·수신자 선택권 간 상충 해결을 위한 의사결정 순서",
+      "run_id": "46029498486"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "46023647885",
+  "last_board": "purchase",
+  "last_run_id": "46029498486",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
