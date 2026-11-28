@@ -1,18 +1,20 @@
 {
   "run_id": "46167924099",
   "date_kst": "2026-11-29",
-  "board": null,
+  "board": "purchase",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-28T16:57:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 후보는 공개 경로 /board/free/470과 /board/free/488이 이미 다룬 ‘선물용 상품권을 고를 때 받는 사람의 기기와 사용 환경을 확인해 맞는 상품권을 고르는 방법’과 같은 질문을 그대로 반복합니다. 기기 종류, 운영체제, 앱 설치 여부, 지원 플랫폼 점검, 선물 전 문의 절차까지 기존 글이 이미 해결했기 때문에 이번 글만의 새 판단 기준이나 추가 해결 단계가 확인되지 않습니다. / 0번은 /board/free/470, /board/free/488이 이미 해결한 ‘선물할 상품권의 기기 호환성과 사용 환경을 어떻게 확인하고 맞지 않으면 다른 상품권을 고를지’라는 질문을 다시 설명합니다. 모바일 앱 유무와 플랫폼 점검, 사전 문의라는 해결 절차도 같아 새 해결 내용이 없습니다."
+    ]
   },
   "api_usage": {
     "run_id": "46167924099",
@@ -22,15 +24,122 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-29T01:58:32.056217+09:00"
+      "attempt_started_at": "2026-11-29T01:58:32.056217+09:00",
+      "topic_pool_update": {
+        "board": "purchase",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 947,
+          "coverageArticles": 158,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "purchase-be34e189f7",
+            "purchase-5aaa6701f9",
+            "purchase-82f484eeda",
+            "purchase-973c196eed"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "선물용 상품권 선택 시 받는 사람 사용 환경과 기기 배려하기",
+          "source_id": "gift-choice",
+          "reader_problem": "선물할 상품권을 선택하면서 받는 사람의 모바일 환경이나 기기 적합성, 사용 편의성을 제대로 고려하지 못해 실사용에 불편함이 발생할 수 있음",
+          "distinct_angle": "기존 글은 선물 기본 안내나 추천 기준 위주이고, 이번 글은 상대방의 기기 종류 확인부터 모바일 앱 유무, 사용 가능한 플랫폼 점검과 함께, 실제 선물 전에 사전 문의 절차를 상세히 안내함",
+          "reader_situation": "모바일상품권 선물을 준비하며 받는 사람의 기기와 사용 환경을 직접 확인해 호환성을 높이고 사용 오류를 줄이려는 고객",
+          "deliverable": "선물용 상품권 사용 기기별 확인 체크리스트, 모바일 상품권 호환성 점검 방법, 사전 문의 및 확인 절차 매뉴얼",
+          "task_id": "",
+          "direction_id": "purchase-be34e189f7",
+          "outline": [
+            "받는 사람의 스마트폰 OS·앱 설치 여부 사전 확인하기",
+            "상품권 모바일 사용처와 지원 플랫폼 비교 점검하기",
+            "선물 전달 전 호환성 문의 및 예상 문제 해결 절차 안내하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15792,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1125,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16917
+        },
+        "estimated_usd": 0.0081168,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-28T16:58:51.857989+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 12511,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 325,
+          "output_tokens_details": {
+            "reasoning_tokens": 98
+          },
+          "total_tokens": 12836
+        },
+        "estimated_usd": 0.01084575,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-28T16:58:55.269571+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-28T16:58:34.550666+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-28T16:58:52.248167+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.01896255,
+    "estimated_total_usd": 0.01896255,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }

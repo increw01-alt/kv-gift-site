@@ -676,8 +676,8 @@
       "run_id": "46029498486"
     }
   ],
-  "last_board": "gc_tip",
-  "last_run_id": "46162184496",
+  "last_board": "purchase",
+  "last_run_id": "46167924099",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1437,6 +1437,14 @@
       "topic": "사용 후 남은 모바일상품권 금액과 이력 기록 체계 마련하기",
       "date_kst": "2026-11-28",
       "run_id": "46108821812",
+      "status": "held"
+    },
+    {
+      "source_id": "gift-choice",
+      "board": "purchase",
+      "topic": "선물용 상품권 선택 시 받는 사람 사용 환경과 기기 배려하기",
+      "date_kst": "2026-11-29",
+      "run_id": "46167924099",
       "status": "held"
     }
   ]
