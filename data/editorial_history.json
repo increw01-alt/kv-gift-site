@@ -1877,5 +1877,18 @@
     "publication_mode": "automatic",
     "run_id": "45651845475",
     "usage_file": "data/editorial_runs/2026-11-26/45651845475.json"
+  },
+  {
+    "board": "purchase",
+    "id": 2581,
+    "topic": "양보 불가 필수 조건으로 상충하는 상품권 후보 체계적 제거법",
+    "drafted_at": "2026-11-28",
+    "automation": true,
+    "search_intent": "서로 충돌하는 상품권 후보를 필수 조건부터 먼저 걸러 내는 판단 순서를 알고 싶은 질문",
+    "image_scene": "책상 위에 서로 다른 상품권 후보 카드 세 장과 ‘필수 조건 / 우대 조건 / 제외 사유’라고 적힌 메모지가 펼쳐져 있고, 한 사람이 각 카드에 체크 표시를 하며 탈락 후보를 옆 칸으로 밀어내는 구도",
+    "image_alt": "책상 위에서 상품권 후보 카드들을 필수 조건과 우대 조건으로 나누고, 맞지 않는 카드는 제외 사유 메모 옆으로 옮겨 놓는 장면",
+    "publication_mode": "automatic",
+    "run_id": "46105696513",
+    "usage_file": "data/editorial_runs/2026-11-28/46105696513.json"
   }
 ]

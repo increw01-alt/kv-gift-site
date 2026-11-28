@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T04:03:34.359529+00:00",
+  "generatedAt": "2026-11-28T04:04:56.364819+00:00",
   "dateKst": "2026-11-28",
   "dailyTarget": 10,
   "attemptLimit": 15,
-  "published": 0,
+  "published": 1,
   "verified": 0,
   "attempts": 10,
   "held": 8,
   "errors": 1,
-  "knownSubtotalUsd": 0.23344435,
-  "estimatedTotalUsd": null,
+  "knownSubtotalUsd": 0.34556335,
+  "estimatedTotalUsd": 0.34556335,
   "records": [
     {
       "runId": "46023647885",
@@ -131,16 +131,16 @@
     },
     {
       "runId": "46105696513",
-      "status": "generating",
-      "board": null,
-      "topic": null,
-      "url": null,
+      "status": "published",
+      "board": "purchase",
+      "topic": "양보 불가 필수 조건으로 상충하는 상품권 후보 체계적 제거법",
+      "url": "https://kv-gift.co.kr/board/purchase/2581",
       "triggerEvent": "workflow_dispatch",
       "triggerSource": "cloudflare_cron",
       "scheduledAt": "2026-11-28T04:02:54.000Z",
       "publicVerifiedAt": null,
-      "estimatedUsd": null,
-      "knownSubtotalUsd": 0
+      "estimatedUsd": 0.112119,
+      "knownSubtotalUsd": 0.112119
     }
   ],
   "topicRetry": {
