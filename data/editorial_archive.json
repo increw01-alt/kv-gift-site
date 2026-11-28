@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T05:50:08.782334+00:00",
+  "generatedAt": "2026-11-28T05:51:12.507433+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -7951,7 +7951,7 @@
       "board": "general_notice",
       "topic": "검색에서 발견한 글의 수정 기록과 현재 본문을 혼동하지 않는 읽기 방법",
       "url": "https://kv-gift.co.kr/board/general_notice/74",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-28T05:51:12.454859+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.1302897,
       "knownSubtotalUsd": 0.1302897
