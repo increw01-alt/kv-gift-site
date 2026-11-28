@@ -676,8 +676,8 @@
       "run_id": "46029498486"
     }
   ],
-  "last_board": "gc_information",
-  "last_run_id": "46106093526",
+  "last_board": "sale",
+  "last_run_id": "46108821812",
   "source_topic_attempts": [
     {
       "source_id": "barcode-privacy",
@@ -1421,6 +1421,22 @@
       "topic": "주문자와 결제 정보 불일치 시 필수 확인 및 숨겨야 할 정보 내용",
       "date_kst": "2026-11-28",
       "run_id": "46058623284",
+      "status": "held"
+    },
+    {
+      "source_id": "voucher-expiry",
+      "board": "sale",
+      "topic": "모바일상품권 유효기간과 실제 이용 조건 함께 정리하기",
+      "date_kst": "2026-11-28",
+      "run_id": "46108821812",
+      "status": "held"
+    },
+    {
+      "source_id": "partial-use",
+      "board": "sale",
+      "topic": "사용 후 남은 모바일상품권 금액과 이력 기록 체계 마련하기",
+      "date_kst": "2026-11-28",
+      "run_id": "46108821812",
       "status": "held"
     }
   ]

@@ -1,18 +1,20 @@
 {
   "run_id": "46108821812",
   "date_kst": "2026-11-28",
-  "board": null,
+  "board": "sale",
   "topic": null,
-  "status": "generating",
+  "status": "held",
   "url": null,
-  "holdReason": null,
+  "holdReason": "topic_duplicate",
   "trigger_event": "workflow_dispatch",
   "trigger_source": "cloudflare_cron",
   "scheduled_at": "2026-11-28T04:42:54.000Z",
-  "publication": "생성 시도 예약, 중단 시 사용량은 실행 Artifact 확인",
+  "publication": "게시하지 않음",
   "review": {
     "approved": false,
-    "issues": []
+    "issues": [
+      "주제 사전 검수 보류: 세 후보 모두 기존 공개 글과 독자가 처한 상황, 확인할 질문, 실제 해결 절차가 겹쳐 새로 추가되는 구체적 해결 내용이 확인되지 않았습니다. 후보 영 역 안에서 본문이 기존 답만으로 해결되는 수준이라 이번에는 보류가 맞습니다. / 0번은 /board/gc_information/9, /board/gc_tip/35, /board/gc_tip/33이 이미 다룬 잔액 확인·사용 이력 기록·통합 관리 흐름과 거의 같아, 표시 기한과 실제 이용 조건을 함께 정리하는 새 질문이 충분히 드러나지 않습니다. / 1번은 /board/gc_information/9와 /board/gc_tip/35가 이미 해결한 잔액 확인과 사용 기록 정리의 반복으로 보이며, 기존 답만으로도 같은 문제를 처리할 수 있어 중복입니다. / 2번은 /board/sale/3692, /board/sale/3693, /board/sale/3690이 이미 다룬 판매 전 상태 점검, 오류 유형 확인, 사진 기록, 매입처 문의 준비와 동일한 해결 절차를 반복합니다."
+    ]
   },
   "api_usage": {
     "run_id": "46108821812",
@@ -22,15 +24,152 @@
       "daily_limit": 10,
       "daily_attempt_limit": 15,
       "follow_schedule": true,
-      "attempt_started_at": "2026-11-28T13:43:51.662365+09:00"
+      "attempt_started_at": "2026-11-28T13:43:51.662365+09:00",
+      "topic_pool_update": {
+        "board": "sale",
+        "pending": [],
+        "supply": {
+          "version": 2,
+          "remainingAssignments": 0,
+          "selectedAssignments": [],
+          "coverageRecords": 938,
+          "coverageArticles": 157,
+          "stalePendingRemoved": 0,
+          "directionIds": [
+            "sale-347dc67531",
+            "sale-ecddaf57c8",
+            "sale-e24e80a517",
+            "sale-1f7b41f6fa"
+          ]
+        }
+      },
+      "rejected_topic_plans": [
+        {
+          "topic": "모바일상품권 유효기간과 실제 이용 조건 함께 정리하기",
+          "source_id": "voucher-expiry",
+          "reader_problem": "모바일상품권의 표시된 유효기간과 실제 사용할 수 있는 기간이 다를 수 있어 혼란스러워 이를 함께 확인하고 체계적으로 정리하는 방법이 필요하다",
+          "distinct_angle": "일반적으로 유효기간 안내만 제공되는 점과 달리 표시 기한과 실제 이용 가능 조건을 명확히 구분하여 비교할 수 있는 정리표 작성법을 안내한다",
+          "reader_situation": "모바일상품권 유효기간과 사용 조건을 정확히 알고 싶어 구매 전이나 사용 전에 혼란을 줄이고 싶어 하는 상품권 사용자",
+          "deliverable": "유효기간과 이용 조건을 병기한 비교 정리표, 표시 기한과 실제 소진 가능 기간 구분 가이드, 사용자별 확인 절차 매뉴얼",
+          "task_id": "",
+          "direction_id": "sale-347dc67531",
+          "outline": [
+            "모바일상품권에 표시된 유효기간과 실제 이용 조건 차이점 살펴보기",
+            "확인해야 할 주요 사용 조건 항목별 정리 및 표 작성하기",
+            "표준 비교 양식을 활용해 표시 기한과 실제 이용 기한 함께 관리하기"
+          ]
+        },
+        {
+          "topic": "사용 후 남은 모바일상품권 금액과 이력 기록 체계 마련하기",
+          "source_id": "partial-use",
+          "reader_problem": "상품권을 일부 사용한 후 남은 잔액과 사용 기록을 일목요연하게 확인하고 관리하는 구체적인 방식이 부족하다",
+          "distinct_angle": "일반적 잔액 확인 안내에서 나아가 권종별 잔액 표시법과 사용 기록 추적 체계를 통합해 쉽게 비교·관리할 방법을 제시한다",
+          "reader_situation": "부분 사용한 모바일상품권이나 복수 상품권의 잔액과 사용 이력을 한눈에 점검하고자 하는 개인 사용자 및 소규모 판매자",
+          "deliverable": "상품권 종류별 잔여 금액 확인표, 사용 이력 기록 양식과 체계, 잔액 및 이력 통합관리 실행 지침서",
+          "task_id": "",
+          "direction_id": "sale-1f7b41f6fa",
+          "outline": [
+            "상품권 종류별 잔액 확인 원리 및 표시 방식 정리",
+            "사용 이력 추적에 필요한 정보별 기록법 설계",
+            "잔액과 사용 이력을 통합하는 관리 체계 구축과 실무 적용법"
+          ]
+        },
+        {
+          "topic": "상품권 판매 전 상태 점검과 매입처 문의 대비 행동 지침",
+          "source_id": "",
+          "reader_problem": "상품권 판매 전 보유 상태를 객관적이고 체계적으로 점검하여 매입처에 정확한 문의를 할 수 있도록 준비가 필요함",
+          "distinct_angle": "단순 상태 확인을 넘어 사진 기록, 문제 유형별 분류, 매입처에 효과적으로 전달하는 구체적 절차와 커뮤니케이션 문구를 포함하여 안내한다",
+          "reader_situation": "자신이 가진 상품권 상태를 구체적으로 점검하고 그 결과를 체계적으로 기록해 신속하고 명확한 매입처 문의를 준비하는 판매자",
+          "deliverable": "상품권 상태별 점검 체크리스트, 상태별 사진 촬영 가이드, 매입처 문의 전 커뮤니케이션 준비 문서와 예시",
+          "task_id": "",
+          "direction_id": "sale-ecddaf57c8",
+          "outline": [
+            "상품권 상태별로 점검할 구체 항목과 유형 맞추기",
+            "문제 발견 시 증거 자료(사진 등) 체계적으로 기록하기",
+            "매입처에 문의할 때 정확하고 효과적인 설명법과 전달 준비하기"
+          ]
+        }
+      ]
     },
-    "status": "in_progress",
-    "records": [],
+    "status": "completed",
+    "records": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "usage": {
+          "input_tokens": 15479,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 1065,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 16544
+        },
+        "estimated_usd": 0.0078956,
+        "rates_usd_per_million_tokens": {
+          "input": 0.4,
+          "cached": 0.1,
+          "output": 1.6
+        },
+        "price_checked_on": "2026-10-20",
+        "price_source": "https://developers.openai.com/api/docs/pricing",
+        "recorded_at_utc": "2026-11-28T04:44:10.940724+00:00"
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "usage": {
+          "input_tokens": 22236,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cache_write_tokens_details": {
+              "ttl_12h_tokens": 0,
+              "ttl_30m_tokens": 0
+            },
+            "cached_tokens": 0
+          },
+          "output_tokens": 384,
+          "output_tokens_details": {
+            "reasoning_tokens": 92
+          },
+          "total_tokens": 22620
+        },
+        "estimated_usd": 0.018405,
+        "rates_usd_per_million_tokens": {
+          "input": 0.75,
+          "cached": 0.075,
+          "output": 4.5
+        },
+        "price_checked_on": "2026-10-21",
+        "price_source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+        "recorded_at_utc": "2026-11-28T04:44:15.531052+00:00"
+      }
+    ],
     "request_tracking_version": 1,
-    "requests": [],
-    "accounting_status": "in_progress",
-    "known_subtotal_usd": 0,
-    "estimated_total_usd": null,
+    "requests": [
+      {
+        "kind": "topic",
+        "model": "gpt-4.1-mini",
+        "started_at_utc": "2026-11-28T04:43:55.305252+00:00",
+        "usage_record_index": 0
+      },
+      {
+        "kind": "review",
+        "model": "gpt-5.4-mini",
+        "started_at_utc": "2026-11-28T04:44:11.812393+00:00",
+        "usage_record_index": 1
+      }
+    ],
+    "accounting_status": "complete",
+    "known_subtotal_usd": 0.0263006,
+    "estimated_total_usd": 0.0263006,
     "note": "단가 기준일은 price_checked_on. 실제 청구액 아님. 세금·환전 제외. 응답 없는 요청은 비용 확인 불가."
   }
 }
