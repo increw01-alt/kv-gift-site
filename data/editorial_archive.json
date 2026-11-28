@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-28T04:04:56.399999+00:00",
+  "generatedAt": "2026-11-28T04:06:00.455736+00:00",
   "coverageStart": "2026-10-19",
   "timezone": "Asia/Seoul",
   "records": [
@@ -7909,7 +7909,7 @@
       "board": "purchase",
       "topic": "양보 불가 필수 조건으로 상충하는 상품권 후보 체계적 제거법",
       "url": "https://kv-gift.co.kr/board/purchase/2581",
-      "publicVerifiedAt": null,
+      "publicVerifiedAt": "2026-11-28T04:06:00.419312+00:00",
       "source": "cloudflare_cron",
       "estimatedUsd": 0.112119,
       "knownSubtotalUsd": 0.112119
