@@ -1890,5 +1890,18 @@
     "publication_mode": "automatic",
     "run_id": "46105696513",
     "usage_file": "data/editorial_runs/2026-11-28/46105696513.json"
+  },
+  {
+    "board": "general_notice",
+    "id": 74,
+    "topic": "검색에서 발견한 글의 수정 기록과 현재 본문을 혼동하지 않는 읽기 방법",
+    "drafted_at": "2026-11-28",
+    "automation": true,
+    "search_intent": "검색 결과의 수정 이력과 현재 본문을 함께 대조해 최신 적용 내용을 고르는 방법",
+    "image_scene": "책상 위에 검색 결과가 열린 노트북 화면과 ‘수정 기록’, ‘현재 본문’이라고 적힌 두 장의 카드가 나란히 놓여 있다. 한 사람이 두 화면에서 달라진 문장을 형광펜으로 표시하고, 옆의 달력 메모지에 수정 시점과 적용 시점을 따로 적어 최신 내용을 고르는 장면이다.",
+    "image_alt": "검색 결과 화면의 수정 기록과 현재 본문을 나란히 비교하며 달라진 문장을 표시하고, 수정 시점과 적용 시점을 따로 메모하는 모습입니다.",
+    "publication_mode": "automatic",
+    "run_id": "46113715336",
+    "usage_file": "data/editorial_runs/2026-11-28/46113715336.json"
   }
 ]
